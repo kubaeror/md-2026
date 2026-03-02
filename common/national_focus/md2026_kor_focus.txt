@@ -1,0 +1,208 @@
+###################################
+# MD2026 South Korea (KOR) Focus Tree
+# 2026 Shared Focuses - Shield of Freedom
+###################################
+
+shared_focus = {
+	id = MD2026_KOR_shield_freedom
+	icon = GFX_focus_generic_korea
+	x = 38
+	y = 0
+	cost = 5
+	allow_branch = {
+		original_tag = KOR
+		date > 2025.12.31
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_KOR_shield_freedom"
+		add_political_power = 100
+		add_stability = 0.05
+	}
+}
+
+### North Korea Deterrence Branch ###
+shared_focus = {
+	id = MD2026_KOR_nk_deterrence
+	icon = GFX_goal_generic_fortify_city
+	x = -3
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_KOR_shield_freedom }
+	relative_position_id = MD2026_KOR_shield_freedom
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_KOR_nk_deterrence"
+		add_war_support = 0.10
+		add_opinion_modifier = { target = NKO modifier = embargo }
+	}
+}
+
+shared_focus = {
+	id = MD2026_KOR_kill_chain
+	icon = GFX_goal_generic_air_defense
+	x = -1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_KOR_nk_deterrence }
+	relative_position_id = MD2026_KOR_nk_deterrence
+	mutually_exclusive = { focus = MD2026_KOR_diplomatic_opening }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_KOR_kill_chain"
+		add_tech_bonus = {
+			name = MD2026_KOR_kill_chain
+			bonus = 1.0
+			uses = 2
+			category = rocketry
+		}
+		army_experience = 25
+	}
+}
+
+shared_focus = {
+	id = MD2026_KOR_diplomatic_opening
+	icon = GFX_goal_generic_improve_relations
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_KOR_nk_deterrence }
+	relative_position_id = MD2026_KOR_nk_deterrence
+	mutually_exclusive = { focus = MD2026_KOR_kill_chain }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_KOR_diplomatic_opening"
+		add_stability = 0.10
+		add_political_power = 75
+	}
+}
+
+### Defense Industry Branch ###
+shared_focus = {
+	id = MD2026_KOR_k_defense
+	icon = GFX_goal_generic_army_doctrines
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_KOR_shield_freedom }
+	relative_position_id = MD2026_KOR_shield_freedom
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_KOR_k_defense"
+		add_ideas = md2026_kor_k_defense
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+		}
+	}
+}
+
+shared_focus = {
+	id = MD2026_KOR_kf21
+	icon = GFX_goal_generic_air_fighter2
+	x = -1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_KOR_k_defense }
+	relative_position_id = MD2026_KOR_k_defense
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_KOR_kf21"
+		air_experience = 25
+		add_tech_bonus = {
+			name = MD2026_KOR_kf21
+			bonus = 1.0
+			uses = 2
+			category = light_air
+		}
+	}
+}
+
+shared_focus = {
+	id = MD2026_KOR_missile_arsenal
+	icon = GFX_goal_generic_build_tank
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_KOR_k_defense }
+	relative_position_id = MD2026_KOR_k_defense
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_KOR_missile_arsenal"
+		add_tech_bonus = {
+			name = MD2026_KOR_missile_arsenal
+			bonus = 1.0
+			uses = 2
+			category = rocketry
+		}
+	}
+}
+
+### Economic Branch ###
+shared_focus = {
+	id = MD2026_KOR_k_economy
+	icon = GFX_goal_generic_construct_civ_factory
+	x = 3
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_KOR_shield_freedom }
+	relative_position_id = MD2026_KOR_shield_freedom
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_KOR_k_economy"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+		}
+	}
+}
+
+shared_focus = {
+	id = MD2026_KOR_semiconductor
+	icon = GFX_focus_research
+	x = -1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_KOR_k_economy }
+	relative_position_id = MD2026_KOR_k_economy
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_KOR_semiconductor"
+		add_research_slot = 1
+		add_tech_bonus = {
+			name = MD2026_KOR_semiconductor
+			bonus = 1.0
+			uses = 2
+			category = electronics
+		}
+	}
+}
+
+shared_focus = {
+	id = MD2026_KOR_cultural_export
+	icon = GFX_goal_generic_consumer_goods
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_KOR_k_economy }
+	relative_position_id = MD2026_KOR_k_economy
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_KOR_cultural_export"
+		add_stability = 0.10
+		add_political_power = 75
+	}
+}
+
+### Alliance Branch ###
+shared_focus = {
+	id = MD2026_KOR_us_alliance
+	icon = GFX_goal_generic_alliance
+	x = 0
+	y = 3
+	cost = 10
+	prerequisite = { focus = MD2026_KOR_shield_freedom }
+	prerequisite = {
+		focus = MD2026_KOR_kill_chain
+		focus = MD2026_KOR_diplomatic_opening
+	}
+	relative_position_id = MD2026_KOR_shield_freedom
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_KOR_us_alliance"
+		add_opinion_modifier = { target = USA modifier = improved_relations }
+		USA = { add_opinion_modifier = { target = KOR modifier = improved_relations } }
+		add_political_power = 50
+	}
+}

@@ -1,0 +1,184 @@
+###################################
+# MD2026 Poland (POL) Focus Tree
+# 2026 Shared Focuses - Eastern Shield
+###################################
+
+shared_focus = {
+	id = MD2026_POL_eastern_shield
+	icon = GFX_focus_generic_poland
+	x = 38
+	y = 0
+	cost = 5
+	allow_branch = {
+		original_tag = POL
+		date > 2025.12.31
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_eastern_shield"
+		add_political_power = 100
+		add_war_support = 0.10
+	}
+}
+
+### Fortress Poland Branch ###
+shared_focus = {
+	id = MD2026_POL_fortress_poland
+	icon = GFX_goal_generic_fortify_city
+	x = -3
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_POL_eastern_shield }
+	relative_position_id = MD2026_POL_eastern_shield
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_fortress_poland"
+		add_ideas = md2026_pol_fortress_poland
+		# Fortify eastern border
+		92 = { add_building_construction = { type = bunker province = 3393 level = 3 instant_build = yes } }
+		97 = { add_building_construction = { type = bunker province = 6303 level = 3 instant_build = yes } }
+	}
+}
+
+shared_focus = {
+	id = MD2026_POL_shield_of_europe
+	icon = GFX_goal_generic_military_deal
+	x = -1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_POL_fortress_poland }
+	relative_position_id = MD2026_POL_fortress_poland
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_shield_of_europe"
+		add_war_support = 0.10
+		add_opinion_modifier = { target = USA modifier = improved_relations }
+		USA = { add_opinion_modifier = { target = POL modifier = improved_relations } }
+	}
+}
+
+shared_focus = {
+	id = MD2026_POL_patriot_batteries
+	icon = GFX_goal_generic_air_defense
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_POL_fortress_poland }
+	relative_position_id = MD2026_POL_fortress_poland
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_patriot_batteries"
+		add_tech_bonus = {
+			name = MD2026_POL_patriot_batteries
+			bonus = 1.0
+			uses = 2
+			category = cat_anti_air
+		}
+	}
+}
+
+### Army Modernization Branch ###
+shared_focus = {
+	id = MD2026_POL_army_modernization
+	icon = GFX_goal_generic_army_doctrines
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_POL_eastern_shield }
+	relative_position_id = MD2026_POL_eastern_shield
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_army_modernization"
+		army_experience = 25
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+		}
+	}
+}
+
+shared_focus = {
+	id = MD2026_POL_k2_tanks
+	icon = GFX_goal_generic_build_tank
+	x = -1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_POL_army_modernization }
+	relative_position_id = MD2026_POL_army_modernization
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_k2_tanks"
+		add_tech_bonus = {
+			name = MD2026_POL_k2_tanks
+			bonus = 1.0
+			uses = 2
+			category = armor
+		}
+		add_opinion_modifier = { target = KOR modifier = improved_relations }
+		KOR = { add_opinion_modifier = { target = POL modifier = improved_relations } }
+	}
+}
+
+shared_focus = {
+	id = MD2026_POL_himars
+	icon = GFX_goal_generic_army_artillery2
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_POL_army_modernization }
+	relative_position_id = MD2026_POL_army_modernization
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_himars"
+		add_tech_bonus = {
+			name = MD2026_POL_himars
+			bonus = 1.0
+			uses = 2
+			category = artillery
+		}
+	}
+}
+
+### EU Branch ###
+shared_focus = {
+	id = MD2026_POL_eu_powerhouse
+	icon = GFX_goal_generic_alliance
+	x = 3
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_POL_eastern_shield }
+	relative_position_id = MD2026_POL_eastern_shield
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_eu_powerhouse"
+		add_political_power = 100
+		add_stability = 0.05
+	}
+}
+
+shared_focus = {
+	id = MD2026_POL_visegrad
+	icon = GFX_goal_generic_national_unity
+	x = -1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_POL_eu_powerhouse }
+	relative_position_id = MD2026_POL_eu_powerhouse
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_visegrad"
+		add_opinion_modifier = { target = CZE modifier = improved_relations }
+		add_opinion_modifier = { target = HUN modifier = improved_relations }
+		add_opinion_modifier = { target = SLO modifier = improved_relations }
+		CZE = { add_opinion_modifier = { target = POL modifier = improved_relations } }
+		HUN = { add_opinion_modifier = { target = POL modifier = improved_relations } }
+	}
+}
+
+### Energy Branch ###
+shared_focus = {
+	id = MD2026_POL_energy_independence
+	icon = GFX_goal_generic_oil_refinery
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_POL_eu_powerhouse }
+	relative_position_id = MD2026_POL_eu_powerhouse
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_energy_independence"
+		add_stability = 0.05
+		add_resource = { type = oil amount = 3 state = 92 }
+	}
+}

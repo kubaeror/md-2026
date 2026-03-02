@@ -1,0 +1,193 @@
+###################################
+# MD2026 Japan (JAP) Focus Tree
+# 2026 Shared Focuses - Active Defense Era
+###################################
+
+shared_focus = {
+	id = MD2026_JAP_active_defense
+	icon = GFX_focus_generic_japan_pacific
+	x = 38
+	y = 0
+	cost = 5
+	allow_branch = {
+		original_tag = JAP
+		date > 2025.12.31
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_JAP_active_defense"
+		add_political_power = 100
+		add_war_support = 0.05
+	}
+}
+
+### Military Reform Branch ###
+shared_focus = {
+	id = MD2026_JAP_constitutional_reform
+	icon = GFX_goal_generic_demand_territory
+	x = -3
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_JAP_active_defense }
+	relative_position_id = MD2026_JAP_active_defense
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_JAP_constitutional_reform"
+		add_war_support = 0.10
+		add_stability = -0.05
+		add_ideas = md2026_jap_article_9_reform
+	}
+}
+
+shared_focus = {
+	id = MD2026_JAP_counterattack_capability
+	icon = GFX_goal_generic_army_doctrines
+	x = -1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_JAP_constitutional_reform }
+	relative_position_id = MD2026_JAP_constitutional_reform
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_JAP_counterattack_capability"
+		add_tech_bonus = {
+			name = MD2026_JAP_counterattack
+			bonus = 1.0
+			uses = 2
+			category = cat_battlefield_support
+		}
+		army_experience = 25
+	}
+}
+
+shared_focus = {
+	id = MD2026_JAP_pacific_shield
+	icon = GFX_goal_generic_navy_doctrines
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_JAP_constitutional_reform }
+	relative_position_id = MD2026_JAP_constitutional_reform
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_JAP_pacific_shield"
+		navy_experience = 25
+		add_tech_bonus = {
+			name = MD2026_JAP_pacific_shield
+			bonus = 1.0
+			uses = 2
+			category = naval_equipment
+		}
+	}
+}
+
+### Diplomatic Branch ###
+shared_focus = {
+	id = MD2026_JAP_indo_pacific
+	icon = GFX_goal_generic_alliance
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_JAP_active_defense }
+	relative_position_id = MD2026_JAP_active_defense
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_JAP_indo_pacific"
+		add_political_power = 75
+		add_opinion_modifier = { target = USA modifier = improved_relations }
+		add_opinion_modifier = { target = AST modifier = improved_relations }
+		add_opinion_modifier = { target = RAJ modifier = improved_relations }
+	}
+}
+
+shared_focus = {
+	id = MD2026_JAP_taiwan_contingency
+	icon = GFX_goal_generic_military_deal
+	x = -1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_JAP_indo_pacific }
+	relative_position_id = MD2026_JAP_indo_pacific
+	mutually_exclusive = { focus = MD2026_JAP_korea_reconciliation }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_JAP_taiwan_contingency"
+		add_war_support = 0.10
+		add_opinion_modifier = { target = TAI modifier = improved_relations }
+		TAI = { add_opinion_modifier = { target = JAP modifier = improved_relations } }
+		add_opinion_modifier = { target = CHI modifier = embargo }
+	}
+}
+
+shared_focus = {
+	id = MD2026_JAP_korea_reconciliation
+	icon = GFX_goal_generic_improve_relations
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_JAP_indo_pacific }
+	relative_position_id = MD2026_JAP_indo_pacific
+	mutually_exclusive = { focus = MD2026_JAP_taiwan_contingency }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_JAP_korea_reconciliation"
+		add_stability = 0.05
+		add_opinion_modifier = { target = KOR modifier = improved_relations }
+		KOR = { add_opinion_modifier = { target = JAP modifier = improved_relations } }
+	}
+}
+
+### Economic Branch ###
+shared_focus = {
+	id = MD2026_JAP_economic_revitalization
+	icon = GFX_goal_generic_construct_civ_factory
+	x = 3
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_JAP_active_defense }
+	relative_position_id = MD2026_JAP_active_defense
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_JAP_economic_revitalization"
+		add_ideas = md2026_jap_economic_stimulus
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+	}
+}
+
+shared_focus = {
+	id = MD2026_JAP_tech_sovereignty
+	icon = GFX_focus_research
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_JAP_economic_revitalization }
+	relative_position_id = MD2026_JAP_economic_revitalization
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_JAP_tech_sovereignty"
+		add_research_slot = 1
+		add_tech_bonus = {
+			name = MD2026_JAP_tech_sovereignty
+			bonus = 1.0
+			uses = 2
+			category = electronics
+		}
+	}
+}
+
+### Missile Defense Branch ###
+shared_focus = {
+	id = MD2026_JAP_missile_defense
+	icon = GFX_goal_generic_air_defense
+	x = 0
+	y = 2
+	cost = 10
+	prerequisite = { focus = MD2026_JAP_counterattack_capability }
+	prerequisite = { focus = MD2026_JAP_pacific_shield }
+	relative_position_id = MD2026_JAP_constitutional_reform
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_JAP_missile_defense"
+		add_tech_bonus = {
+			name = MD2026_JAP_missile_defense
+			bonus = 1.0
+			uses = 2
+			category = cat_anti_air
+		}
+		add_political_power = 50
+	}
+}

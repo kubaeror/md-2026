@@ -1,0 +1,192 @@
+###################################
+# MD2026 India (RAJ) Focus Tree
+# 2026 Shared Focuses - India's Century
+###################################
+
+shared_focus = {
+	id = MD2026_RAJ_indias_century
+	icon = GFX_focus_generic_india_trip_to_europe
+	x = 38
+	y = 0
+	cost = 5
+	allow_branch = {
+		original_tag = RAJ
+		date > 2025.12.31
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_RAJ_indias_century"
+		add_political_power = 100
+		add_stability = 0.05
+	}
+}
+
+### Economic Branch ###
+shared_focus = {
+	id = MD2026_RAJ_make_in_india
+	icon = GFX_goal_generic_construct_civ_factory
+	x = -3
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_RAJ_indias_century }
+	relative_position_id = MD2026_RAJ_indias_century
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_RAJ_make_in_india"
+		add_ideas = md2026_raj_make_in_india
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+	}
+}
+
+shared_focus = {
+	id = MD2026_RAJ_digital_india
+	icon = GFX_focus_research
+	x = -1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_RAJ_make_in_india }
+	relative_position_id = MD2026_RAJ_make_in_india
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_RAJ_digital_india"
+		add_research_slot = 1
+		add_tech_bonus = {
+			name = MD2026_RAJ_digital_india
+			bonus = 1.0
+			uses = 2
+			category = electronics
+		}
+	}
+}
+
+shared_focus = {
+	id = MD2026_RAJ_semiconductor_push
+	icon = GFX_goal_generic_construct_mil_factory
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_RAJ_make_in_india }
+	relative_position_id = MD2026_RAJ_make_in_india
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_RAJ_semiconductor_push"
+		add_political_power = 50
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+		}
+	}
+}
+
+### Diplomatic Branch ###
+shared_focus = {
+	id = MD2026_RAJ_strategic_autonomy
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_RAJ_indias_century }
+	relative_position_id = MD2026_RAJ_indias_century
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_RAJ_strategic_autonomy"
+		add_political_power = 75
+		add_war_support = 0.05
+	}
+}
+
+shared_focus = {
+	id = MD2026_RAJ_quad_deepening
+	icon = GFX_goal_generic_alliance
+	x = -1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_RAJ_strategic_autonomy }
+	relative_position_id = MD2026_RAJ_strategic_autonomy
+	mutually_exclusive = { focus = MD2026_RAJ_brics_balance }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_RAJ_quad_deepening"
+		add_opinion_modifier = { target = USA modifier = improved_relations }
+		add_opinion_modifier = { target = JAP modifier = improved_relations }
+		add_opinion_modifier = { target = AST modifier = improved_relations }
+		USA = { add_opinion_modifier = { target = RAJ modifier = improved_relations } }
+		JAP = { add_opinion_modifier = { target = RAJ modifier = improved_relations } }
+		AST = { add_opinion_modifier = { target = RAJ modifier = improved_relations } }
+	}
+}
+
+shared_focus = {
+	id = MD2026_RAJ_brics_balance
+	icon = GFX_goal_generic_trade
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_RAJ_strategic_autonomy }
+	relative_position_id = MD2026_RAJ_strategic_autonomy
+	mutually_exclusive = { focus = MD2026_RAJ_quad_deepening }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_RAJ_brics_balance"
+		add_opinion_modifier = { target = SOV modifier = improved_relations }
+		add_opinion_modifier = { target = CHI modifier = improved_relations }
+		add_opinion_modifier = { target = BRA modifier = improved_relations }
+		SOV = { add_opinion_modifier = { target = RAJ modifier = improved_relations } }
+		CHI = { add_opinion_modifier = { target = RAJ modifier = improved_relations } }
+	}
+}
+
+### Military Branch ###
+shared_focus = {
+	id = MD2026_RAJ_china_border
+	icon = GFX_goal_generic_fortify_city
+	x = 3
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_RAJ_indias_century }
+	relative_position_id = MD2026_RAJ_indias_century
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_RAJ_china_border"
+		add_war_support = 0.10
+		add_opinion_modifier = { target = CHI modifier = border_conflict }
+	}
+}
+
+shared_focus = {
+	id = MD2026_RAJ_military_modernization
+	icon = GFX_goal_generic_army_doctrines
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_RAJ_china_border }
+	relative_position_id = MD2026_RAJ_china_border
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_RAJ_military_modernization"
+		army_experience = 25
+		add_tech_bonus = {
+			name = MD2026_RAJ_military_modernization
+			bonus = 1.0
+			uses = 2
+			category = armor
+		}
+	}
+}
+
+### Space Branch ###
+shared_focus = {
+	id = MD2026_RAJ_space_power
+	icon = GFX_goal_generic_scientific_exchange
+	x = -1
+	y = 1
+	cost = 10
+	prerequisite = { focus = MD2026_RAJ_china_border }
+	relative_position_id = MD2026_RAJ_china_border
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_RAJ_space_power"
+		add_tech_bonus = {
+			name = MD2026_RAJ_space_power
+			bonus = 1.0
+			uses = 2
+			category = rocketry
+		}
+		add_political_power = 50
+	}
+}
