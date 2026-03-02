@@ -1,0 +1,310 @@
+##### Division Templates #####
+# Iran 2026 — Dual military: Artesh (regular) + IRGC (Sepah-e Pasdaran)
+
+division_template = {
+	name = "Lashkar-e Zerehi 2026"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Lashkar-e Mechanize 2026"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Tip-e Piade Nezam 2026"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Arty_Bat = { x = 2 y = 0 }
+		Arty_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Tip-e Chatrbaz 2026"
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Tofangdarane Daryayee 2026"
+	regiments = {
+		L_Marine_Bat = { x = 0 y = 0 }
+		L_Marine_Bat = { x = 0 y = 1 }
+		L_Marine_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "IRGC Division 2026"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Quds Force 2026"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		Special_Forces = { x = 0 y = 2 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+##### Units #####
+
+units = {
+	##### Artesh — Regular Army #####
+
+	# 16th Armored Division (Qazvin)
+	division = {
+		name = "16th Armoured Division"
+		location = 9059
+		division_template = "Lashkar-e Zerehi 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	# 81st Armored Division (Kerman)
+	division = {
+		name = "81st Armoured Division"
+		location = 8074
+		division_template = "Lashkar-e Zerehi 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	# 88th Armored Division (Zahedan)
+	division = {
+		name = "88th Armoured Division"
+		location = 14271
+		division_template = "Lashkar-e Zerehi 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	# 92nd Armored Division (Ahvaz)
+	division = {
+		name = "92nd Armoured Division"
+		location = 10454
+		division_template = "Lashkar-e Zerehi 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	# 21st Infantry Division (Tabriz)
+	division = {
+		name = "21st Infantry Division"
+		location = 3988
+		division_template = "Tip-e Piade Nezam 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.7
+	}
+	# 28th Mechanized Division (Sanandaj)
+	division = {
+		name = "28th Mechanized Division"
+		location = 2000
+		division_template = "Lashkar-e Mechanize 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	# 30th Infantry Division (Gorgan)
+	division = {
+		name = "30th Infantry Division"
+		location = 4609
+		division_template = "Tip-e Piade Nezam 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.7
+	}
+	# 58th Infantry Division (Shahrud)
+	division = {
+		name = "58th Infantry Division"
+		location = 10828
+		division_template = "Tip-e Piade Nezam 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.7
+	}
+	# 64th Infantry Division (Urmia)
+	division = {
+		name = "64th Infantry Division"
+		location = 4959
+		division_template = "Tip-e Piade Nezam 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.7
+	}
+	# 77th Infantry Division (Isfahan)
+	division = {
+		name = "77th Infantry Division"
+		location = 4618
+		division_template = "Tip-e Piade Nezam 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.7
+	}
+	# 55th Airborne Brigade
+	division = {
+		name = "55th Airborne Brigade"
+		location = 10768
+		division_template = "Tip-e Chatrbaz 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	# Marines (Artesh Navy)
+	division = {
+		name = "Artesh Marines"
+		location = 4580
+		division_template = "Tofangdarane Daryayee 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+
+	##### IRGC Ground Forces #####
+
+	# 1st IRGC Division (Tehran)
+	division = {
+		name = "1st Sarallah IRGC Division"
+		location = 1957
+		division_template = "IRGC Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# 5th IRGC Division (Hamadan)
+	division = {
+		name = "5th Nasr IRGC Division"
+		location = 3908
+		division_template = "IRGC Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# 8th IRGC Division (Isfahan)
+	division = {
+		name = "8th Najaf IRGC Division"
+		location = 4618
+		division_template = "IRGC Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# 10th IRGC Division (Shiraz)
+	division = {
+		name = "10th Seyyed al-Shuhada IRGC Division"
+		location = 829
+		division_template = "IRGC Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# 14th IRGC Division (Kermanshah)
+	division = {
+		name = "14th Imam Hossein IRGC Division"
+		location = 7602
+		division_template = "IRGC Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# 17th IRGC Division (Kurdistan)
+	division = {
+		name = "17th Ali ibn Abi Talib IRGC Division"
+		location = 4356
+		division_template = "IRGC Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# 19th IRGC Division (Khorasan)
+	division = {
+		name = "19th Fajr IRGC Division"
+		location = 8040
+		division_template = "IRGC Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# 25th IRGC Division (Sistan)
+	division = {
+		name = "25th Karbala IRGC Division"
+		location = 2026
+		division_template = "IRGC Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# IRGC Marines
+	division = {
+		name = "IRGC Naval Forces"
+		location = 5050
+		division_template = "Tofangdarane Daryayee 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+
+	##### Quds Force #####
+
+	# Quds Force
+	division = {
+		name = "Quds Force"
+		location = 1982
+		division_template = "Quds Force 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 10000
+		producer = PER
+	}
+}

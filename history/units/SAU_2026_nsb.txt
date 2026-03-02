@@ -1,0 +1,304 @@
+##### Division Templates #####
+
+division_template = {
+	name = "Armoured Brigade 2026"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Mechanized Brigade 2026"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Infantry Brigade 2026"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Airborne Brigade 2026"
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "National Guard Brigade 2026"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 0 y = 3 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Marine Regiment 2026"
+	regiments = {
+		L_Marine_Bat = { x = 0 y = 0 }
+		L_Marine_Bat = { x = 0 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Royal Guard 2026"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		armor_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+
+##### Units #####
+
+units = {
+	##### Royal Saudi Land Forces #####
+
+	# 4th Armoured Brigade
+	division = {
+		name = "4th Armoured Brigade"
+		location = 8101
+		division_template = "Armoured Brigade 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 8th Armoured Brigade
+	division = {
+		name = "8th Armoured Brigade"
+		location = 3339
+		division_template = "Armoured Brigade 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 12th Armoured Brigade
+	division = {
+		name = "12th Armoured Brigade"
+		location = 14398
+		division_template = "Armoured Brigade 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 6th Mechanized Brigade
+	division = {
+		name = "6th Mechanized Brigade"
+		location = 4974
+		division_template = "Mechanized Brigade 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 10th Mechanized Brigade
+	division = {
+		name = "10th Mechanized Brigade"
+		location = 5006
+		division_template = "Mechanized Brigade 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 11th Mechanized Brigade
+	division = {
+		name = "11th Mechanized Brigade"
+		location = 12455
+		division_template = "Mechanized Brigade 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 20th Mechanized Brigade
+	division = {
+		name = "20th Mechanized Brigade"
+		location = 8073
+		division_template = "Mechanized Brigade 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 2nd Airborne Brigade
+	division = {
+		name = "2nd Airborne Brigade"
+		location = 10815
+		division_template = "Airborne Brigade 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	# Royal Saudi Marines
+	division = {
+		name = "Royal Saudi Marines"
+		location = 8060
+		division_template = "Marine Regiment 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+
+	##### Saudi Arabian National Guard #####
+
+	# 1st SANG Brigade
+	division = {
+		name = "1st SANG Brigade 'Imam Muhammad ibn Saud'"
+		location = 10923
+		division_template = "National Guard Brigade 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 2nd SANG Brigade
+	division = {
+		name = "2nd SANG Brigade 'King Abdul Aziz'"
+		location = 10923
+		division_template = "National Guard Brigade 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 3rd SANG Brigade
+	division = {
+		name = "3rd SANG Brigade"
+		location = 3378
+		division_template = "National Guard Brigade 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 4th SANG Brigade
+	division = {
+		name = "4th SANG Brigade"
+		location = 5037
+		division_template = "National Guard Brigade 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 5th SANG Brigade
+	division = {
+		name = "5th SANG Brigade"
+		location = 10791
+		division_template = "National Guard Brigade 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 6th SANG Brigade
+	division = {
+		name = "6th SANG Brigade"
+		location = 10791
+		division_template = "National Guard Brigade 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 7th SANG Brigade
+	division = {
+		name = "7th SANG Brigade"
+		location = 12702
+		division_template = "National Guard Brigade 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 8th SANG Brigade
+	division = {
+		name = "8th SANG Brigade"
+		location = 12101
+		division_template = "National Guard Brigade 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 9th SANG Brigade
+	division = {
+		name = "9th SANG Brigade"
+		location = 12101
+		division_template = "National Guard Brigade 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 10th SANG Brigade
+	division = {
+		name = "10th SANG Brigade"
+		location = 5058
+		division_template = "National Guard Brigade 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 11th SANG Brigade
+	division = {
+		name = "11th SANG Brigade"
+		location = 4981
+		division_template = "National Guard Brigade 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 12th SANG Brigade
+	division = {
+		name = "12th SANG Brigade"
+		location = 4981
+		division_template = "National Guard Brigade 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+
+	##### Royal Guard #####
+
+	# Royal Guard Regiment
+	division = {
+		name = "Royal Guard Regiment"
+		location = 10923
+		division_template = "Royal Guard 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.95
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 5000
+		producer = SAU
+	}
+}

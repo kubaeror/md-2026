@@ -1,0 +1,295 @@
+##### Division Templates #####
+# North Korea 2026 — Large but outdated army, Soviet/Chinese equipment
+
+division_template = {
+	name = "Armored Division 2026"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		armor_Bat = { x = 0 y = 2 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Mechanized Division 2026"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+		SP_R_Arty_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Infantry Division 2026"
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+		L_Inf_Bat = { x = 1 y = 2 }
+		Arty_Bat = { x = 2 y = 0 }
+		Arty_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Artillery Division 2026"
+	regiments = {
+		SP_Arty_Bat = { x = 0 y = 0 }
+		SP_Arty_Bat = { x = 0 y = 1 }
+		SP_Arty_Bat = { x = 0 y = 2 }
+		SP_R_Arty_Bat = { x = 1 y = 0 }
+		SP_R_Arty_Bat = { x = 1 y = 1 }
+		SP_R_Arty_Bat = { x = 1 y = 2 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		combat_service_support_company = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Light Infantry Brigade 2026"
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 0 y = 3 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Sniper Brigade 2026"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		Special_Forces = { x = 0 y = 2 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+		L_Ranger_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+##### Units #####
+
+units = {
+	##### Forward Echelon — DMZ (4 Corps) #####
+
+	# 1st Corps - Kaesong
+	division = {
+		name = "1st Corps - 1st Infantry Division"
+		location = 3187
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "1st Corps - 3rd Infantry Division"
+		location = 3187
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	# 2nd Corps
+	division = {
+		name = "2nd Corps - 6th Infantry Division"
+		location = 9981
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "2nd Corps - 7th Infantry Division"
+		location = 9981
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	# 4th Corps
+	division = {
+		name = "4th Corps - 4th Infantry Division"
+		location = 3173
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "4th Corps - 26th Infantry Division"
+		location = 3173
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	# 5th Corps
+	division = {
+		name = "5th Corps - 12th Infantry Division"
+		location = 12040
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "5th Corps - 32nd Infantry Division"
+		location = 12040
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.6
+	}
+
+	##### Second Echelon — Mechanized/Armored #####
+
+	# 806th Mechanized Corps
+	division = {
+		name = "806th Mechanized Corps"
+		location = 10083
+		division_template = "Mechanized Division 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	# 815th Mechanized Corps
+	division = {
+		name = "815th Mechanized Corps"
+		location = 1003
+		division_template = "Mechanized Division 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	# 820th Armored Corps
+	division = {
+		name = "820th Armored Corps"
+		location = 3176
+		division_template = "Armored Division 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	# 108th Mechanized Corps
+	division = {
+		name = "108th Mechanized Corps"
+		location = 4052
+		division_template = "Mechanized Division 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+
+	##### Rear Echelon — Infantry #####
+
+	# Rear Corps Infantry
+	division = {
+		name = "8th Corps - Infantry Division"
+		location = 3981
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "9th Corps - Infantry Division"
+		location = 9790
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "10th Corps - Infantry Division"
+		location = 6928
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "12th Corps - Infantry Division"
+		location = 912
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+
+	##### Artillery Divisions (Long Range) #####
+
+	# Pyongyang Defence Artillery
+	division = {
+		name = "Pyongyang Defence Artillery Division"
+		location = 6822
+		division_template = "Artillery Division 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.65
+	}
+	# Forward Artillery Division
+	division = {
+		name = "620th Artillery Division"
+		location = 3187
+		division_template = "Artillery Division 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.65
+	}
+
+	##### Special Operations / Light Infantry #####
+
+	# SOF Command
+	division = {
+		name = "Special Operations Force - Sniper Bde 1"
+		location = 3191
+		division_template = "Sniper Brigade 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "Special Operations Force - Sniper Bde 2"
+		location = 6963
+		division_template = "Sniper Brigade 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.65
+	}
+	# Light Infantry Training Guidance Bureau
+	division = {
+		name = "Light Infantry Bde - West"
+		location = 3189
+		division_template = "Light Infantry Brigade 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Light Infantry Bde - East"
+		location = 848
+		division_template = "Light Infantry Brigade 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.6
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons3
+		amount = 15000
+		producer = NKO
+	}
+}

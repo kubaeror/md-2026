@@ -1,0 +1,270 @@
+##### Division Templates #####
+# Brazil 2026 — Large territory, mixed jungle/urban force
+
+division_template = {
+	name = "Brig. Cavalaria Blindada 2026"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Brig. Infantaria Mec. 2026"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Brigada Inf. Motorizada 2026"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Brigada Inf. Selva 2026"
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Ranger_Bat = { x = 0 y = 3 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Brigada Inf. Leve 2026"
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Brigada Para-quedista 2026"
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Brig. Operacoes Especiais 2026"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+##### Units #####
+
+units = {
+	##### Armored / Mechanized #####
+
+	# 1a Brigada de Cavalaria Blindada
+	division = {
+		name = "1a Brigada de Cavalaria Blindada"
+		location = 10980
+		division_template = "Brig. Cavalaria Blindada 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 2a Brigada de Cavalaria Blindada
+	division = {
+		name = "2a Brigada de Cavalaria Blindada"
+		location = 10432
+		division_template = "Brig. Cavalaria Blindada 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 3a Brigada de Infantaria Mecanizada
+	division = {
+		name = "3a Brigada de Infantaria Mecanizada"
+		location = 920
+		division_template = "Brig. Infantaria Mec. 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 5a Brigada de Cavalaria Blindada
+	division = {
+		name = "5a Brigada de Cavalaria Blindada"
+		location = 5214
+		division_template = "Brig. Cavalaria Blindada 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+
+	##### Motorized #####
+
+	# 4a Brigada de Infantaria Motorizada
+	division = {
+		name = "4a Brigada de Infantaria Motorizada"
+		location = 12919
+		division_template = "Brigada Inf. Motorizada 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 9a Brigada de Infantaria Motorizada
+	division = {
+		name = "9a Brigada de Infantaria Motorizada"
+		location = 6651
+		division_template = "Brigada Inf. Motorizada 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 10a Brigada de Infantaria Motorizada
+	division = {
+		name = "10a Brigada de Infantaria Motorizada"
+		location = 12939
+		division_template = "Brigada Inf. Motorizada 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 11a Brigada de Infantaria Motorizada
+	division = {
+		name = "11a Brigada de Infantaria Motorizada"
+		location = 4095
+		division_template = "Brigada Inf. Motorizada 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+
+	##### Light Infantry #####
+
+	# 6a Brigada de Infantaria Leve
+	division = {
+		name = "6a Brigada de Infantaria Leve"
+		location = 8189
+		division_template = "Brigada Inf. Leve 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+	# 15a Brigada de Infantaria Leve
+	division = {
+		name = "15a Brigada de Infantaria Leve"
+		location = 903
+		division_template = "Brigada Inf. Leve 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+
+	##### Jungle Brigades #####
+
+	# 1a Brigada de Infantaria de Selva
+	division = {
+		name = "1a Brigada de Infantaria de Selva"
+		location = 10933
+		division_template = "Brigada Inf. Selva 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+	# 2a Brigada de Infantaria de Selva
+	division = {
+		name = "2a Brigada de Infantaria de Selva"
+		location = 4436
+		division_template = "Brigada Inf. Selva 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+	# 16a Brigada de Infantaria de Selva
+	division = {
+		name = "16a Brigada de Infantaria de Selva"
+		location = 5168
+		division_template = "Brigada Inf. Selva 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+	# 17a Brigada de Infantaria de Selva
+	division = {
+		name = "17a Brigada de Infantaria de Selva"
+		location = 2111
+		division_template = "Brigada Inf. Selva 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+	# 23a Brigada de Infantaria de Selva
+	division = {
+		name = "23a Brigada de Infantaria de Selva"
+		location = 10405
+		division_template = "Brigada Inf. Selva 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+
+	##### Rapid Reaction #####
+
+	# Brigada de Infantaria Para-quedista
+	division = {
+		name = "Brigada de Infantaria Para-quedista"
+		location = 10360
+		division_template = "Brigada Para-quedista 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.85
+	}
+	# Brigada de Operacoes Especiais
+	division = {
+		name = "Brigada de Operacoes Especiais"
+		location = 10432
+		division_template = "Brig. Operacoes Especiais 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.85
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 5000
+		producer = BRA
+	}
+}

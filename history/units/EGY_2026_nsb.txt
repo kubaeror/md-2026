@@ -1,0 +1,283 @@
+##### Division Templates #####
+
+division_template = {
+	name = "Firqa Moudar'a 2026"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		armor_Bat = { x = 0 y = 2 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Firqa Mechaniqui 2026"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		armor_Bat = { x = 1 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Liwa Mushat 2026"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Liwa Alhawa Almahmul 2026"
+	regiments = {
+		L_Air_assault_Bat = { x = 0 y = 0 }
+		L_Air_assault_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		attack_helo_comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Liwa Midali 2026"
+	regiments = {
+		L_Marine_Bat = { x = 0 y = 0 }
+		L_Marine_Bat = { x = 0 y = 1 }
+		L_Marine_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Fawj Alquwwat Alkhasa 2026"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+##### Units #####
+
+units = {
+	##### Armoured Divisions #####
+
+	# 4th Armoured Division
+	division = {
+		name = "4th Armoured Division"
+		location = 10073
+		division_template = "Firqa Moudar'a 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 9th Armoured Division
+	division = {
+		name = "9th Armoured Division"
+		location = 11964
+		division_template = "Firqa Moudar'a 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 21st Armoured Division
+	division = {
+		name = "21st Armoured Division"
+		location = 4076
+		division_template = "Firqa Moudar'a 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 23rd Armoured Division
+	division = {
+		name = "23rd Armoured Division"
+		location = 4145
+		division_template = "Firqa Moudar'a 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+
+	##### Mechanized Divisions #####
+
+	# 2nd Mechanized Division
+	division = {
+		name = "2nd Mechanized Division"
+		location = 7164
+		division_template = "Firqa Mechaniqui 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 3rd Mechanized Division
+	division = {
+		name = "3rd Mechanized Division"
+		location = 11974
+		division_template = "Firqa Mechaniqui 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 6th Mechanized Division
+	division = {
+		name = "6th Mechanized Division"
+		location = 7144
+		division_template = "Firqa Mechaniqui 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 7th Mechanized Division
+	division = {
+		name = "7th Mechanized Division"
+		location = 12049
+		division_template = "Firqa Mechaniqui 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 18th Mechanized Division
+	division = {
+		name = "18th Mechanized Division"
+		location = 1155
+		division_template = "Firqa Mechaniqui 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 19th Mechanized Division
+	division = {
+		name = "19th Mechanized Division"
+		location = 9947
+		division_template = "Firqa Mechaniqui 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+
+	##### Infantry Brigades #####
+
+	# 11th Infantry Brigade
+	division = {
+		name = "11th Infantry Brigade"
+		location = 10005
+		division_template = "Liwa Mushat 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 22nd Infantry Brigade
+	division = {
+		name = "22nd Infantry Brigade"
+		location = 12002
+		division_template = "Liwa Mushat 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 33rd Infantry Brigade
+	division = {
+		name = "33rd Infantry Brigade"
+		location = 9957
+		division_template = "Liwa Mushat 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 116th Infantry Brigade
+	division = {
+		name = "116th Infantry Brigade"
+		location = 12889
+		division_template = "Liwa Mushat 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 112th Infantry Brigade
+	division = {
+		name = "112th Infantry Brigade"
+		location = 4073
+		division_template = "Liwa Mushat 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+
+	##### Rapid Deployment & Special Forces #####
+
+	# Air Assault Brigade
+	division = {
+		name = "Air Assault Brigade"
+		location = 12004
+		division_template = "Liwa Alhawa Almahmul 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.85
+	}
+	# 153rd Commando Group
+	division = {
+		name = "153rd Commando Group"
+		location = 7011
+		division_template = "Liwa Midali 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.85
+	}
+	# Unit 777
+	division = {
+		name = "Unit 777"
+		location = 3996
+		division_template = "Fawj Alquwwat Alkhasa 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+	}
+
+	##### Republican Guard #####
+
+	# Republican Guard 1st Brigade
+	division = {
+		name = "Republican Guard 1st Brigade"
+		location = 4055
+		division_template = "Firqa Moudar'a 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	# Republican Guard 2nd Brigade
+	division = {
+		name = "Republican Guard 2nd Brigade"
+		location = 1068
+		division_template = "Firqa Mechaniqui 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 8000
+		producer = EGY
+	}
+}

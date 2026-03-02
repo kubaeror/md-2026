@@ -1255,6 +1255,14 @@ capital = 405
 ##############################
 2026.1.1 = {
 
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "PER_2026_nsb"
+		else = {
+			set_oob = "PER_2000_nonnsb"
+		}
+	}
+
 	### GDP & Economic Variables ###
 	set_variable = { gdp_per_capita = 7.000 }
 	set_variable = { var = debt value = 45.000 }

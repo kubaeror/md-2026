@@ -1,0 +1,241 @@
+##### Division Templates #####
+
+division_template = {
+	name = "Brigata Corazzata 2026"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		Arm_Inf_Bat = { x = 1 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 2 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Arm_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Brigata Meccanizzata 2026"
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Brigata Alpina 2026"
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Brigata Paracadutisti 2026"
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Brigata Aeromobile 2026"
+	regiments = {
+		L_Air_assault_Bat = { x = 0 y = 0 }
+		L_Air_assault_Bat = { x = 0 y = 1 }
+		L_Air_assault_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		attack_helo_comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Brigata Marina 2026"
+	regiments = {
+		L_Marine_Bat = { x = 0 y = 0 }
+		L_Marine_Bat = { x = 0 y = 1 }
+		L_Marine_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Reggimento Forze Speciali 2026"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+##### Units #####
+
+units = {
+	##### Esercito Italiano #####
+
+	# 132a Brigata Corazzata 'Ariete'
+	division = {
+		name = "132a Brigata Corazzata 'Ariete'"
+		location = 6656
+		division_template = "Brigata Corazzata 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9
+	}
+	# Brigata di Cavalleria 'Pozzuolo del Friuli'
+	division = {
+		name = "Brigata di Cavalleria 'Pozzuolo del Friuli'"
+		location = 628
+		division_template = "Brigata Meccanizzata 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9
+	}
+	# Brigata Meccanizzata 'Sassari'
+	division = {
+		name = "Brigata Meccanizzata 'Sassari'"
+		location = 9772
+		division_template = "Brigata Meccanizzata 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.85
+	}
+	# Brigata Bersaglieri 'Garibaldi'
+	division = {
+		name = "Brigata Bersaglieri 'Garibaldi'"
+		location = 9826
+		division_template = "Brigata Meccanizzata 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.85
+	}
+	# Brigata Meccanizzata 'Pinerolo'
+	division = {
+		name = "Brigata Meccanizzata 'Pinerolo'"
+		location = 9784
+		division_template = "Brigata Meccanizzata 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# Brigata Meccanizzata 'Aosta'
+	division = {
+		name = "Brigata Meccanizzata 'Aosta'"
+		location = 4159
+		division_template = "Brigata Meccanizzata 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# Brigata Meccanizzata 'Granatieri di Sardegna'
+	division = {
+		name = "Brigata 'Granatieri di Sardegna'"
+		location = 9904
+		division_template = "Brigata Meccanizzata 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+
+	##### Brigata Alpina #####
+
+	# Brigata Alpina 'Taurinense'
+	division = {
+		name = "Brigata Alpina 'Taurinense'"
+		location = 6780
+		division_template = "Brigata Alpina 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9
+	}
+	# Brigata Alpina 'Julia'
+	division = {
+		name = "Brigata Alpina 'Julia'"
+		location = 316
+		division_template = "Brigata Alpina 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9
+	}
+	# Brigata Alpina 'Tridentina'
+	division = {
+		name = "Brigata Alpina 'Tridentina'"
+		location = 9630
+		division_template = "Brigata Alpina 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9
+	}
+
+	##### Forze Speciali e Proiezione #####
+
+	# Brigata Paracadutisti 'Folgore'
+	division = {
+		name = "Brigata Paracadutisti 'Folgore'"
+		location = 6946
+		division_template = "Brigata Paracadutisti 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+	}
+	# Brigata Aeromobile 'Friuli'
+	division = {
+		name = "Brigata Aeromobile 'Friuli'"
+		location = 6606
+		division_template = "Brigata Aeromobile 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+	}
+	# Brigata Marina 'San Marco'
+	division = {
+		name = "Brigata Marina 'San Marco'"
+		location = 11998
+		division_template = "Brigata Marina 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+	}
+	# 9° Reggimento 'Col Moschin' (SOF)
+	division = {
+		name = "9° Reggimento 'Col Moschin'"
+		location = 6946
+		division_template = "Reggimento Forze Speciali 2026"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.95
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 3000
+		producer = ITA
+	}
+}

@@ -1,0 +1,399 @@
+##### Division Templates #####
+# Ukraine 2026 — Wartime army, heavily expanded since 2022
+# Depleted by combat, mix of NATO-standard and Soviet-era equipment
+
+division_template = {
+	name = "Mekhanizovana Bryhada 2026"
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 1 }
+		armor_Bat = { x = 2 y = 0 }
+		SP_Arty_Bat = { x = 3 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		drone_tactical_company = { x = 0 y = 3 }
+		combat_service_support_company = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "Tankova Bryhada 2026"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		drone_tactical_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Pikhota Bryhada 2026"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		drone_tactical_company = { x = 0 y = 3 }
+		combat_service_support_company = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "Desantno-Shturmova Bryhada 2026"
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		drone_tactical_company = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Bryhada Morskoyi Pikhoty 2026"
+	regiments = {
+		L_Marine_Bat = { x = 0 y = 0 }
+		L_Marine_Bat = { x = 0 y = 1 }
+		L_Marine_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		drone_tactical_company = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Bryhada Spetspryznachennya 2026"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		drone_tactical_company = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Terytorialna Bryhada 2026"
+	regiments = {
+		Militia_Bat = { x = 0 y = 0 }
+		Militia_Bat = { x = 0 y = 1 }
+		Militia_Bat = { x = 0 y = 2 }
+		Militia_Bat = { x = 1 y = 0 }
+		Militia_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		combat_service_support_company = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Artyleriiska Bryhada 2026"
+	regiments = {
+		SP_Arty_Bat = { x = 0 y = 0 }
+		SP_Arty_Bat = { x = 0 y = 1 }
+		SP_R_Arty_Bat = { x = 1 y = 0 }
+		SP_R_Arty_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		combat_service_support_company = { x = 0 y = 1 }
+	}
+}
+
+##### Units #####
+# Frontline forces — depleted experience/equipment reflects 3 years of war
+
+units = {
+	##### Mechanized Brigades — Front Line #####
+
+	# 1st Separate Tank Brigade
+	division = {
+		name = "1st Separate Tank Brigade"
+		location = 11670
+		division_template = "Tankova Bryhada 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+	# 3rd Separate Tank Brigade
+	division = {
+		name = "3rd Separate Tank Brigade"
+		location = 6593
+		division_template = "Tankova Bryhada 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+	# 4th Tank Brigade
+	division = {
+		name = "4th Tank Brigade"
+		location = 11452
+		division_template = "Tankova Bryhada 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+	# 14th Mechanized Brigade
+	division = {
+		name = "14th Mechanized Brigade"
+		location = 6554
+		division_template = "Mekhanizovana Bryhada 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+	# 17th Mechanized Brigade
+	division = {
+		name = "17th Mechanized Brigade"
+		location = 3511
+		division_template = "Mekhanizovana Bryhada 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+	# 24th Mechanized Brigade
+	division = {
+		name = "24th Mechanized Brigade 'King Daniel'"
+		location = 6509
+		division_template = "Mekhanizovana Bryhada 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.6
+	}
+	# 47th Mechanized Brigade
+	division = {
+		name = "47th Mechanized Brigade 'Magura'"
+		location = 11464
+		division_template = "Mekhanizovana Bryhada 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.6
+	}
+	# 53rd Mechanized Brigade
+	division = {
+		name = "53rd Mechanized Brigade"
+		location = 6429
+		division_template = "Mekhanizovana Bryhada 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+	# 93rd Mechanized Brigade 'Kholodny Yar'
+	division = {
+		name = "93rd Mechanized Brigade 'Kholodny Yar'"
+		location = 14328
+		division_template = "Mekhanizovana Bryhada 2026"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.6
+	}
+
+	##### Infantry Brigades — Front Line #####
+
+	# 54th Motorized Brigade
+	division = {
+		name = "54th Motorized Brigade"
+		location = 9677
+		division_template = "Pikhota Bryhada 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+	# 63rd Motorized Brigade
+	division = {
+		name = "63rd Motorized Brigade"
+		location = 11691
+		division_template = "Pikhota Bryhada 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+	# 110th Motorized Brigade
+	division = {
+		name = "110th Mechanized Brigade"
+		location = 9548
+		division_template = "Pikhota Bryhada 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+	# 115th Motorized Brigade
+	division = {
+		name = "115th Mechanized Brigade"
+		location = 11683
+		division_template = "Pikhota Bryhada 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+
+	##### Air Assault & Airborne Brigades #####
+
+	# 25th Airborne Brigade
+	division = {
+		name = "25th Airborne Brigade 'Sicheslav'"
+		location = 9533
+		division_template = "Desantno-Shturmova Bryhada 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.6
+	}
+	# 46th Air Assault Brigade
+	division = {
+		name = "46th Airmobile Brigade"
+		location = 3704
+		division_template = "Desantno-Shturmova Bryhada 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+	# 77th Airmobile Brigade
+	division = {
+		name = "77th Airmobile Brigade"
+		location = 11670
+		division_template = "Desantno-Shturmova Bryhada 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+	# 82nd Air Assault Brigade
+	division = {
+		name = "82nd Air Assault Brigade"
+		location = 6593
+		division_template = "Desantno-Shturmova Bryhada 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+
+	##### Naval Infantry #####
+
+	# 35th Marine Brigade
+	division = {
+		name = "35th Marine Brigade"
+		location = 705
+		division_template = "Bryhada Morskoyi Pikhoty 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+	# 36th Marine Brigade
+	division = {
+		name = "36th Marine Brigade"
+		location = 3686
+		division_template = "Bryhada Morskoyi Pikhoty 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+	# 37th Marine Brigade
+	division = {
+		name = "37th Marine Brigade"
+		location = 11670
+		division_template = "Bryhada Morskoyi Pikhoty 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.5
+	}
+
+	##### Special Operations Forces #####
+
+	# SSO (Special Operations Forces Command)
+	division = {
+		name = "SSO Ukraine"
+		location = 525
+		division_template = "Bryhada Spetspryznachennya 2026"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.75
+	}
+	# GUR Special Forces
+	division = {
+		name = "GUR Special Units"
+		location = 525
+		division_template = "Bryhada Spetspryznachennya 2026"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.7
+	}
+
+	##### Territorial Defence #####
+
+	division = {
+		name = "101st TDF Brigade"
+		location = 3457
+		division_template = "Terytorialna Bryhada 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "112th TDF Brigade"
+		location = 525
+		division_template = "Terytorialna Bryhada 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "114th TDF Brigade"
+		location = 11703
+		division_template = "Terytorialna Bryhada 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "118th TDF Brigade"
+		location = 9680
+		division_template = "Terytorialna Bryhada 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+
+	##### Artillery Brigades #####
+
+	# 43rd Artillery Brigade
+	division = {
+		name = "43rd Artillery Brigade"
+		location = 11464
+		division_template = "Artyleriiska Bryhada 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+	# 44th Artillery Brigade
+	division = {
+		name = "44th Artillery Brigade"
+		location = 6554
+		division_template = "Artyleriiska Bryhada 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+	# 55th Artillery Brigade
+	division = {
+		name = "55th Artillery Brigade"
+		location = 14328
+		division_template = "Artyleriiska Bryhada 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 5000
+		producer = UKR
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 8000
+		producer = UKR
+	}
+}

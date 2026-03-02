@@ -1,0 +1,270 @@
+##### Division Templates #####
+# Taiwan (ROC) 2026 — Defensive posture, modern but compact
+
+division_template = {
+	name = "Armored Brigade 2026"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Mechanized Division 2026"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Infantry Division 2026"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		Arty_Bat = { x = 2 y = 0 }
+		Arty_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Marine Division 2026"
+	regiments = {
+		Mot_Marine_Bat = { x = 0 y = 0 }
+		Mot_Marine_Bat = { x = 0 y = 1 }
+		Mot_Marine_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Air Cavalry Brigade 2026"
+	regiments = {
+		L_Air_assault_Bat = { x = 0 y = 0 }
+		L_Air_assault_Bat = { x = 0 y = 1 }
+	}
+	support = {
+		attack_helo_comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Special Warfare Brigade 2026"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Reserve Infantry Division 2026"
+	regiments = {
+		Militia_Bat = { x = 0 y = 0 }
+		Militia_Bat = { x = 0 y = 1 }
+		Militia_Bat = { x = 0 y = 2 }
+		Militia_Bat = { x = 1 y = 0 }
+		Militia_Bat = { x = 1 y = 1 }
+		Militia_Bat = { x = 1 y = 2 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		combat_service_support_company = { x = 0 y = 1 }
+	}
+}
+
+##### Units #####
+
+units = {
+	##### Active Army #####
+
+	# 6th Army Corps — North
+	division = {
+		name = "6th Army - Armored Brigade"
+		location = 7186
+		division_template = "Armored Brigade 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "6th Army - Mechanized Division"
+		location = 7186
+		division_template = "Mechanized Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "6th Army - Infantry Division"
+		location = 7186
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.85
+	}
+
+	# 8th Army Corps — South
+	division = {
+		name = "8th Army - Armored Brigade"
+		location = 7214
+		division_template = "Armored Brigade 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "8th Army - Mechanized Division"
+		location = 7214
+		division_template = "Mechanized Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "8th Army - Infantry Division"
+		location = 7214
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.85
+	}
+
+	# 10th Army Corps — Central
+	division = {
+		name = "10th Army - Infantry Division"
+		location = 11959
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.85
+	}
+
+	##### Marines #####
+
+	# ROC Marine Corps
+	division = {
+		name = "66th Marine Brigade"
+		location = 13274
+		division_template = "Marine Division 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "99th Marine Brigade"
+		location = 13275
+		division_template = "Marine Division 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.9
+	}
+
+	##### Rapid Reaction / SOF #####
+
+	# Air Cavalry Brigade
+	division = {
+		name = "601st Air Cavalry Brigade"
+		location = 7186
+		division_template = "Air Cavalry Brigade 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.9
+	}
+	# Special Warfare Command
+	division = {
+		name = "Special Warfare Command"
+		location = 7214
+		division_template = "Special Warfare Brigade 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.9
+	}
+
+	##### Reserve Forces #####
+
+	division = {
+		name = "Reserve Infantry Division (North)"
+		location = 7186
+		division_template = "Reserve Infantry Division 2026"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Reserve Infantry Division (South)"
+		location = 7214
+		division_template = "Reserve Infantry Division 2026"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Reserve Infantry Division (Central)"
+		location = 11959
+		division_template = "Reserve Infantry Division 2026"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Reserve Infantry Division (East)"
+		location = 14608
+		division_template = "Reserve Infantry Division 2026"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+
+	##### Offshore Islands #####
+
+	division = {
+		name = "Kinmen Defense Command"
+		location = 12068
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "Penghu Defense Command"
+		location = 4096
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 5000
+		producer = TAI
+	}
+}

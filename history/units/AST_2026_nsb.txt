@@ -1,0 +1,157 @@
+##### Division Templates #####
+# Australia 2026 — Small professional force, high quality
+
+division_template = {
+	name = "Armoured Regiment 2026"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		Arm_Inf_Bat = { x = 1 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Arm_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Infantry Brigade 2026"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Commando Regiment 2026"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Reserve Brigade 2026"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+##### Units #####
+
+units = {
+	##### Regular Army #####
+
+	# 1st Brigade (Mechanized) — Darwin
+	division = {
+		name = "1st Brigade"
+		location = 12406
+		division_template = "Armoured Regiment 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.9
+	}
+	# 3rd Brigade (Parachute/Littoral) — Townsville
+	division = {
+		name = "3rd Brigade"
+		location = 7669
+		division_template = "Infantry Brigade 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.9
+	}
+	# 7th Brigade — Brisbane
+	division = {
+		name = "7th Brigade"
+		location = 7566
+		division_template = "Infantry Brigade 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9
+	}
+
+	##### SOF #####
+
+	# Special Operations Command
+	division = {
+		name = "Special Operations Command"
+		location = 4520
+		division_template = "Commando Regiment 2026"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.95
+	}
+
+	##### Reserves #####
+
+	# 2nd Division (Reserve) — NSW
+	division = {
+		name = "4th Brigade (Reserve)"
+		location = 7798
+		division_template = "Reserve Brigade 2026"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "5th Brigade (Reserve)"
+		location = 7798
+		division_template = "Reserve Brigade 2026"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "8th Brigade (Reserve)"
+		location = 12910
+		division_template = "Reserve Brigade 2026"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "9th Brigade (Reserve)"
+		location = 7566
+		division_template = "Reserve Brigade 2026"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "11th Brigade (Reserve)"
+		location = 7669
+		division_template = "Reserve Brigade 2026"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "13th Brigade (Reserve)"
+		location = 1652
+		division_template = "Reserve Brigade 2026"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 2000
+		producer = AST
+	}
+}
