@@ -1,0 +1,353 @@
+###################################
+# MD2026 BRICS+ Expansion Events
+# New members, alternative financial system, de-dollarization
+###################################
+
+add_namespace = md2026_brics
+add_namespace = md2026_brics_news
+
+###################################
+# md2026_brics.1 - BRICS+ Expansion Summit
+# Auto-fires for SOV or CHI (hosts)
+###################################
+country_event = {
+	id = md2026_brics.1
+	title = md2026_brics.1.t
+	desc = md2026_brics.1.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		date > 2026.6.1
+		NOT = { has_global_flag = md2026_brics_summit_held }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	# Option A: Push for rapid expansion
+	option = {
+		name = md2026_brics.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_brics.1.o1 executed"
+
+		add_political_power = 75
+		add_stability = 0.03
+
+		set_global_flag = md2026_brics_summit_held
+		set_global_flag = md2026_brics_expanded
+
+		add_opinion_modifier = { target = CHI modifier = improve_relation }
+		add_opinion_modifier = { target = RAJ modifier = improve_relation }
+		add_opinion_modifier = { target = BRA modifier = improve_relation }
+
+		# Notify potential new members
+		TUR = {
+			country_event = { id = md2026_brics.2 days = 7 }
+		}
+		RAJ = {
+			country_event = { id = md2026_brics.3 days = 7 }
+		}
+
+		hidden_effect = {
+			news_event = { id = md2026_brics_news.1 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 70
+		}
+	}
+
+	# Option B: Focus on economic cooperation within existing members
+	option = {
+		name = md2026_brics.1.o2
+		log = "[GetDateText]: [This.GetName]: md2026_brics.1.o2 executed"
+
+		add_political_power = 50
+		add_stability = 0.05
+
+		set_global_flag = md2026_brics_summit_held
+
+		add_opinion_modifier = { target = CHI modifier = improve_relation }
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+###################################
+# md2026_brics.2 - Turkey: BRICS Membership Offer
+# TUR decides whether to join BRICS+
+###################################
+country_event = {
+	id = md2026_brics.2
+	title = md2026_brics.2.t
+	desc = md2026_brics.2.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = TUR
+	}
+
+	# Option A: Join BRICS+
+	option = {
+		name = md2026_brics.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_brics.2.o1 executed"
+
+		add_political_power = 50
+		add_stability = -0.05
+
+		add_opinion_modifier = { target = SOV modifier = improve_relation }
+		add_opinion_modifier = { target = CHI modifier = improve_relation }
+
+		# NATO allies won't like this
+		every_country = {
+			limit = {
+				is_in_faction_with = TUR
+				NOT = { tag = TUR }
+			}
+			add_opinion_modifier = { target = TUR modifier = embargo }
+		}
+
+		set_country_flag = md2026_tur_joined_brics
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: Decline - stay focused on NATO/EU
+	option = {
+		name = md2026_brics.2.o2
+		log = "[GetDateText]: [This.GetName]: md2026_brics.2.o2 executed"
+
+		add_political_power = 25
+		add_stability = 0.03
+
+		add_opinion_modifier = { target = USA modifier = improve_relation }
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option C: Observer status only
+	option = {
+		name = md2026_brics.2.o3
+		log = "[GetDateText]: [This.GetName]: md2026_brics.2.o3 executed"
+
+		add_political_power = 25
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+###################################
+# md2026_brics.3 - India: BRICS+ Direction
+# RAJ weighs its role in expanded BRICS
+###################################
+country_event = {
+	id = md2026_brics.3
+	title = md2026_brics.3.t
+	desc = md2026_brics.3.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = RAJ
+	}
+
+	# Option A: Lead the economic agenda
+	option = {
+		name = md2026_brics.3.o1
+		log = "[GetDateText]: [This.GetName]: md2026_brics.3.o1 executed"
+
+		add_political_power = 100
+		add_stability = 0.05
+
+		add_opinion_modifier = { target = SOV modifier = improve_relation }
+		add_opinion_modifier = { target = BRA modifier = improve_relation }
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Balance between BRICS and Western alignment
+	option = {
+		name = md2026_brics.3.o2
+		log = "[GetDateText]: [This.GetName]: md2026_brics.3.o2 executed"
+
+		add_political_power = 50
+		add_stability = 0.03
+
+		add_opinion_modifier = { target = USA modifier = improve_relation }
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# md2026_brics.10 - De-Dollarization Initiative
+# Auto-fires if BRICS expanded
+###################################
+country_event = {
+	id = md2026_brics.10
+	title = md2026_brics.10.t
+	desc = md2026_brics.10.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		has_global_flag = md2026_brics_expanded
+		date > 2027.1.1
+		NOT = { has_global_flag = md2026_dedollarization }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	# Option A: Launch BRICS currency initiative
+	option = {
+		name = md2026_brics.10.o1
+		log = "[GetDateText]: [This.GetName]: md2026_brics.10.o1 executed"
+
+		add_political_power = 100
+		add_stability = 0.03
+
+		set_global_flag = md2026_dedollarization
+
+		USA = {
+			country_event = { id = md2026_brics.11 days = 14 }
+		}
+
+		hidden_effect = {
+			news_event = { id = md2026_brics_news.2 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Bilateral currency swaps instead
+	option = {
+		name = md2026_brics.10.o2
+		log = "[GetDateText]: [This.GetName]: md2026_brics.10.o2 executed"
+
+		add_political_power = 50
+
+		set_global_flag = md2026_dedollarization
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# md2026_brics.11 - USA: Response to De-Dollarization
+###################################
+country_event = {
+	id = md2026_brics.11
+	title = md2026_brics.11.t
+	desc = md2026_brics.11.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+	}
+
+	# Option A: Economic countermeasures - sanctions
+	option = {
+		name = md2026_brics.11.o1
+		log = "[GetDateText]: [This.GetName]: md2026_brics.11.o1 executed"
+
+		add_political_power = -50
+		add_stability = -0.05
+
+		add_opinion_modifier = { target = CHI modifier = embargo }
+		add_opinion_modifier = { target = SOV modifier = embargo }
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Strengthen dollar through domestic policy
+	option = {
+		name = md2026_brics.11.o2
+		log = "[GetDateText]: [This.GetName]: md2026_brics.11.o2 executed"
+
+		add_political_power = 50
+		add_stability = 0.03
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# NEWS EVENTS
+###################################
+
+# BRICS+ expansion summit
+news_event = {
+	id = md2026_brics_news.1
+	title = md2026_brics_news.1.t
+	desc = md2026_brics_news.1.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_brics_news.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_brics_news.1.o1 executed"
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+# De-dollarization initiative
+news_event = {
+	id = md2026_brics_news.2
+	title = md2026_brics_news.2.t
+	desc = md2026_brics_news.2.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_brics_news.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_brics_news.2.o1 executed"
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}

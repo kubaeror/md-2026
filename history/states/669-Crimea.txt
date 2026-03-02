@@ -1,0 +1,41 @@
+state = {
+	id = 669
+	name = "STATE_669"
+	manpower = 2637031
+	state_category = state_04
+
+	history = {
+		owner = UKR
+		add_core_of = UKR
+		add_core_of = CRM
+		victory_points = { 14328 2 } #Simferopol
+		victory_points = { 3686 4 } #Sevastopol
+		victory_points = { 9680 1 } #Kerch
+		victory_points = { 11649 1 } #Yevpatoria
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 1
+			offices = 1
+			air_base = 6
+			3686 = {
+				naval_base = 1
+			}
+		}
+
+		
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }		
+	}
+
+	provinces = {
+		705 3686 3722 6724 9677 9680 9718 11649 14328
+	}
+
+	# MD2026: Crimea annexed by Russia (2014)
+	2026.1.1 = {
+		owner = SOV
+		add_core_of = SOV
+	}
+}

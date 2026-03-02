@@ -1,0 +1,242 @@
+﻿capital = 133
+2000.1.1 = {
+	oob = "KOS_2000"
+	set_convoys = 5
+	set_cosmetic_tag = UN_KOS
+	set_country_flag = dynamic_flag
+
+	set_variable = { gdp_per_capita = 7.032 }
+
+	add_ideas = {
+		rampant_corruption
+		KOS_Land_Mines
+		KOS_Yugoslav_war_state
+		KOS_Ruined_Nations
+		KOS_bad_water_acces
+		KOS_ethnic_troubles
+		sunni
+		Non_State_Actor
+		stagnation
+		defence_01
+		edu_03
+		health_03
+		social_02
+		bureau_02
+		police_04
+		volunteer_army
+		volunteer_women
+		farmers
+		the_ulema
+		international_bankers
+		officer_military_school
+	}
+
+	set_country_flag = KOS_no_freedom
+	set_country_flag = KOS_albania_unity
+	#
+	# Kosovo - Albania unification mechanic (West Balkan Federation)
+	add_to_variable = { var = KOS_albania value = 0 }
+	clamp_variable = { var = KOS_albania min = 0 max = 1 }
+	# Serb Opinion mechanic
+	add_to_variable = { var = KOS_serbs value = 0.20 }
+	clamp_variable = { var = KOS_serbs min = 0 max = 1 }
+	#
+
+	# Influence Targets
+	add_to_array = { KOS.influence_targets = ALB } # Albania
+	add_to_array = { KOS.influence_targets = MNT } # Montenegro
+	add_to_array = { KOS.influence_targets = SER } # Serbia
+	add_to_array = { KOS.influence_targets = BOS } # Bosnia
+
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 100 }
+	add_to_array = { influence_array = FRA.id }
+	add_to_array = { influence_array_val = 10 }
+	add_to_array = { influence_array = GER.id }
+	add_to_array = { influence_array_val = 10 }
+	add_to_array = { influence_array = ALB.id }
+	add_to_array = { influence_array_val = 60 }
+	add_to_array = { influence_array = SER.id }
+	add_to_array = { influence_array_val = 10 }
+	startup_influence = yes
+
+	set_variable = { var = debt value = 2 }
+	set_variable = { var = treasury value = 1 }
+	set_variable = { var = int_investments value = 0 }
+	set_variable = { var = corporate_tax_rate value = 15 }
+	set_variable = { var = population_tax_rate value = 25 }
+
+	set_technology = {
+		integrated_transportation_system = 1
+		post_conventional_rail = 1
+		early_freight_locomotive = 1
+
+
+		combined_arms = 1
+		#For templates
+		infantry_weapons = 1
+		command_control_equipment = 1
+		Anti_tank_0 = 1
+		util_vehicle_0 = 1
+		Heavy_Anti_tank_0 = 1
+
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+
+		radar = 1
+		internet1 = 1
+		fuel_silos = 1
+
+		industrial_electrospun_polymeric_nanofibers = 1
+		multiwalled_carbon_nanotubes = 1
+		stereolitography = 1
+		early_3D_printers = 1
+		DNA_fingerprinting = 1
+		fuel_refining = 1
+		early_renewables = 1
+		renewables = 1
+		electrification_1 = 1
+		construction1 = 1
+	}
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			nsb_Anti_Air_0 = 1
+		}
+		else = {
+			set_technology = {
+				Anti_Air_0 = 1
+			}
+		}
+	}
+
+	set_popularities = {
+		democratic = 67.0
+		communism = 2.0
+		fascism = 0.0
+		neutrality = 31.0
+		nationalist = 0.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1997.11.17"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	### Party Popularities
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.47 } #conservatism
+	set_variable = { party_pop_array^2 = 0.2 } #liberalism
+	set_variable = { party_pop_array^3 = 0 } #socialism
+	set_variable = { party_pop_array^4 = 0.01 } #Communist-State
+	set_variable = { party_pop_array^5 = 0 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.31 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0.01 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+
+	### Ruling Party
+	add_to_array = { ruling_party = 1 }
+
+	startup_politics = yes
+
+	set_variable = { term_limit = 2 }
+	set_variable = { current_term = 1 }
+
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 384 }
+	}
+	set_variable = { overall_productivity = 384 }
+
+	recruit_character = KOS_sylejman_selimi
+	recruit_character = KOS_air_chief
+}
+##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 6.000 }
+	set_variable = { var = debt value = 3.000 }
+	set_variable = { var = treasury value = 2 }
+	set_variable = { var = corporate_tax_rate value = 10 }
+	set_variable = { var = population_tax_rate value = 10 }
+	set_variable = { var = int_investments value = 5 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 300 }
+	}
+	set_variable = { overall_productivity = 300 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 45.0
+		communism = 5.0
+		fascism = 0.0
+		neutrality = 15.0
+		nationalist = 35.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2021.2.14"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^3 = 0.500 }   #socialism (Vetevendosje)
+	set_variable = { party_pop_array^1 = 0.220 }   #conservatism (LDK)
+	set_variable = { party_pop_array^20 = 0.080 }   #Nat_Populism (PDK)
+	set_variable = { party_pop_array^2 = 0.050 }   #liberalism (AAK)
+	set_variable = { party_pop_array^14 = 0.050 }   #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
+	set_variable = { party_pop_array^18 = 0.030 }   #neutral_Social (Srpska Lista)
+	set_variable = { party_pop_array^4 = 0.020 }   #Communist-State
+
+	add_to_array = { ruling_party = 3 }             #socialism (Vetevendosje)
+
+	set_variable = { party_pop_elect_array^3 = 0.501 }  #Vetevendosje
+	set_variable = { party_pop_elect_array^1 = 0.127 }  #LDK
+	set_variable = { party_pop_elect_array^20 = 0.170 }  #PDK
+	set_variable = { party_pop_elect_array^2 = 0.073 }  #AAK
+
+	startup_politics = yes
+
+	### Country Leader: Albin Kurti ###
+	create_country_leader = {
+		name = "Albin Kurti"
+		picture = "gfx/leaders/KOS/Albin_Kurti.dds"
+		expire = "2025.2.14"
+		ideology = socialism
+		traits = {
+			western_socialism
+			career_politician
+			reformer
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+}

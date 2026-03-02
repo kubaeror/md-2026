@@ -1,0 +1,602 @@
+###################################
+# MD2026 Russia-Ukraine Events
+# Peace negotiations, ceasefire, war outcomes
+###################################
+
+add_namespace = md2026_ru_ukr
+add_namespace = md2026_ru_ukr_news
+
+###################################
+# md2026_ru_ukr.1 - Russia: Ceasefire Proposal
+# Triggered by SOV frozen_conflict focus or USA ukraine_peace_deal focus
+# SOV decides whether to propose a ceasefire to Ukraine
+###################################
+country_event = {
+	id = md2026_ru_ukr.1
+	title = md2026_ru_ukr.1.t
+	desc = md2026_ru_ukr.1.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		date > 2025.12.31
+		has_war_with = UKR
+	}
+
+	# Option A: Propose ceasefire on current lines
+	option = {
+		name = md2026_ru_ukr.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.1.o1 executed"
+
+		add_political_power = -25
+		add_stability = 0.05
+		set_country_flag = md2026_sov_proposed_ceasefire
+
+		UKR = {
+			country_event = { id = md2026_ru_ukr.2 days = 3 }
+		}
+
+		ai_chance = {
+			base = 60
+			modifier = {
+				factor = 2
+				surrender_progress > 0.15
+			}
+		}
+	}
+
+	# Option B: Continue the war, no negotiations
+	option = {
+		name = md2026_ru_ukr.1.o2
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.1.o2 executed"
+
+		add_war_support = 0.10
+		add_stability = -0.05
+
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 2
+				surrender_progress < 0.05
+			}
+		}
+	}
+}
+
+###################################
+# md2026_ru_ukr.2 - Ukraine: Russia Proposes Ceasefire
+# UKR decides whether to accept or reject
+###################################
+country_event = {
+	id = md2026_ru_ukr.2
+	title = md2026_ru_ukr.2.t
+	desc = md2026_ru_ukr.2.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = UKR
+	}
+
+	# Option A: Accept negotiations
+	option = {
+		name = md2026_ru_ukr.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.2.o1 executed"
+
+		add_political_power = -50
+		add_stability = 0.05
+		add_war_support = -0.10
+		set_country_flag = md2026_ukr_accepted_negotiations
+
+		SOV = {
+			country_event = { id = md2026_ru_ukr.3 days = 7 }
+		}
+
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 3
+				surrender_progress > 0.20
+			}
+			modifier = {
+				add = 20
+				NOT = { any_country = { is_in_faction_with = UKR } }
+			}
+		}
+	}
+
+	# Option B: Reject, continue fighting
+	option = {
+		name = md2026_ru_ukr.2.o2
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.2.o2 executed"
+
+		add_war_support = 0.15
+		add_stability = -0.05
+
+		hidden_effect = {
+			news_event = { id = md2026_ru_ukr_news.2 hours = 6 }
+		}
+
+		SOV = {
+			country_event = { id = md2026_ru_ukr.5 days = 3 }
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2
+				any_country = { is_in_faction_with = UKR }
+			}
+		}
+	}
+}
+
+###################################
+# md2026_ru_ukr.3 - Russia: Negotiate Terms
+# UKR accepted, SOV finalizes terms
+###################################
+country_event = {
+	id = md2026_ru_ukr.3
+	title = md2026_ru_ukr.3.t
+	desc = md2026_ru_ukr.3.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+	}
+
+	# Option A: Accept demilitarized zone, frozen conflict
+	option = {
+		name = md2026_ru_ukr.3.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.3.o1 executed"
+
+		add_political_power = 100
+		add_stability = 0.10
+		add_war_support = -0.15
+
+		set_country_flag = md2026_frozen_conflict_established
+
+		# White peace
+		white_peace = UKR
+
+		hidden_effect = {
+			news_event = { id = md2026_ru_ukr_news.1 hours = 6 }
+		}
+
+		UKR = {
+			country_event = { id = md2026_ru_ukr.4 days = 1 }
+		}
+
+		ai_chance = {
+			base = 70
+			modifier = {
+				factor = 2
+				surrender_progress > 0.10
+			}
+		}
+	}
+
+	# Option B: Demand full recognition of annexed territories, risk collapse
+	option = {
+		name = md2026_ru_ukr.3.o2
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.3.o2 executed"
+
+		add_political_power = -75
+		add_stability = -0.10
+		add_war_support = 0.05
+
+		hidden_effect = {
+			news_event = { id = md2026_ru_ukr_news.2 hours = 6 }
+		}
+
+		UKR = {
+			country_event = { id = md2026_ru_ukr.6 days = 3 }
+		}
+
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+
+###################################
+# md2026_ru_ukr.4 - Ukraine: Ceasefire Established
+# UKR is informed that ceasefire is in effect
+###################################
+country_event = {
+	id = md2026_ru_ukr.4
+	title = md2026_ru_ukr.4.t
+	desc = md2026_ru_ukr.4.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = UKR
+	}
+
+	# Option A: Focus on reconstruction
+	option = {
+		name = md2026_ru_ukr.4.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.4.o1 executed"
+
+		add_political_power = 75
+		add_stability = 0.10
+		add_war_support = -0.20
+
+		set_country_flag = md2026_frozen_conflict_established
+
+		ai_chance = {
+			base = 70
+		}
+	}
+
+	# Option B: This is only a pause - prepare for the next fight
+	option = {
+		name = md2026_ru_ukr.4.o2
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.4.o2 executed"
+
+		add_war_support = 0.10
+		add_stability = -0.05
+		army_experience = 25
+
+		set_country_flag = md2026_frozen_conflict_established
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+###################################
+# md2026_ru_ukr.5 - Russia: Ukraine Rejects Ceasefire
+# SOV learns UKR rejected proposal
+###################################
+country_event = {
+	id = md2026_ru_ukr.5
+	title = md2026_ru_ukr.5.t
+	desc = md2026_ru_ukr.5.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+	}
+
+	# Option A: Escalate the war
+	option = {
+		name = md2026_ru_ukr.5.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.5.o1 executed"
+
+		add_war_support = 0.15
+		add_stability = -0.10
+		add_manpower = 100000
+
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Option B: Maintain current strategy
+	option = {
+		name = md2026_ru_ukr.5.o2
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.5.o2 executed"
+
+		add_political_power = 25
+		add_stability = -0.03
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# md2026_ru_ukr.6 - Ukraine: Russia Demands Full Recognition
+# Negotiations collapse after SOV demands too much
+###################################
+country_event = {
+	id = md2026_ru_ukr.6
+	title = md2026_ru_ukr.6.t
+	desc = md2026_ru_ukr.6.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = UKR
+	}
+
+	# Option A: Rally the nation, war continues
+	option = {
+		name = md2026_ru_ukr.6.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.6.o1 executed"
+
+		add_war_support = 0.20
+		add_stability = 0.05
+		add_political_power = 50
+
+		ai_chance = {
+			base = 80
+		}
+	}
+
+	# Option B: Appeal to the international community
+	option = {
+		name = md2026_ru_ukr.6.o2
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.6.o2 executed"
+
+		add_political_power = 75
+		add_stability = 0.03
+
+		every_country = {
+			limit = {
+				is_in_faction_with = UKR
+			}
+			add_opinion_modifier = { target = UKR modifier = improve_relation }
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+###################################
+# md2026_ru_ukr.10 - Russia: US-Mediated Peace Process
+# Triggered by USA ukraine_peace_deal focus
+# SOV receives US proposal for settlement
+###################################
+country_event = {
+	id = md2026_ru_ukr.10
+	title = md2026_ru_ukr.10.t
+	desc = md2026_ru_ukr.10.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		has_war_with = UKR
+	}
+
+	# Option A: Accept US mediation
+	option = {
+		name = md2026_ru_ukr.10.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.10.o1 executed"
+
+		add_political_power = -50
+		add_stability = 0.05
+		add_opinion_modifier = { target = USA modifier = improve_relation }
+
+		set_country_flag = md2026_sov_accepted_us_mediation
+
+		UKR = {
+			country_event = { id = md2026_ru_ukr.11 days = 5 }
+		}
+
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 2
+				surrender_progress > 0.10
+			}
+		}
+	}
+
+	# Option B: Reject US interference
+	option = {
+		name = md2026_ru_ukr.10.o2
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.10.o2 executed"
+
+		add_political_power = 25
+		add_war_support = 0.05
+		add_opinion_modifier = { target = USA modifier = embargo }
+
+		USA = {
+			country_event = { id = md2026_ru_ukr.13 days = 3 }
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+###################################
+# md2026_ru_ukr.11 - Ukraine: US-Mediated Settlement Offer
+# UKR decides on US peace plan
+###################################
+country_event = {
+	id = md2026_ru_ukr.11
+	title = md2026_ru_ukr.11.t
+	desc = md2026_ru_ukr.11.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = UKR
+	}
+
+	# Option A: Accept the deal
+	option = {
+		name = md2026_ru_ukr.11.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.11.o1 executed"
+
+		add_political_power = -100
+		add_stability = -0.10
+		add_war_support = -0.20
+
+		white_peace = SOV
+
+		set_country_flag = md2026_us_mediated_peace
+
+		hidden_effect = {
+			news_event = { id = md2026_ru_ukr_news.3 hours = 6 }
+		}
+
+		USA = {
+			country_event = { id = md2026_ru_ukr.12 days = 1 }
+		}
+
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 3
+				surrender_progress > 0.25
+			}
+		}
+	}
+
+	# Option B: Reject - we will not surrender our territory
+	option = {
+		name = md2026_ru_ukr.11.o2
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.11.o2 executed"
+
+		add_war_support = 0.15
+		add_stability = 0.05
+		add_political_power = 50
+
+		USA = {
+			country_event = { id = md2026_ru_ukr.13 days = 3 }
+		}
+
+		ai_chance = {
+			base = 60
+		}
+	}
+}
+
+###################################
+# md2026_ru_ukr.12 - USA: Peace Deal Achieved
+# Diplomatic victory for the US
+###################################
+country_event = {
+	id = md2026_ru_ukr.12
+	title = md2026_ru_ukr.12.t
+	desc = md2026_ru_ukr.12.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_ru_ukr.12.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.12.o1 executed"
+
+		add_political_power = 200
+		add_stability = 0.10
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+###################################
+# md2026_ru_ukr.13 - USA: Peace Efforts Failed
+# Both sides or one side rejected the deal
+###################################
+country_event = {
+	id = md2026_ru_ukr.13
+	title = md2026_ru_ukr.13.t
+	desc = md2026_ru_ukr.13.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_ru_ukr.13.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.13.o1 executed"
+
+		add_political_power = -50
+		add_stability = -0.05
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+###################################
+# NEWS EVENTS
+###################################
+
+# Ceasefire declared between Russia and Ukraine
+news_event = {
+	id = md2026_ru_ukr_news.1
+	title = md2026_ru_ukr_news.1.t
+	desc = md2026_ru_ukr_news.1.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_ru_ukr_news.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr_news.1.o1 executed"
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+# Peace talks collapse - war continues
+news_event = {
+	id = md2026_ru_ukr_news.2
+	title = md2026_ru_ukr_news.2.t
+	desc = md2026_ru_ukr_news.2.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_ru_ukr_news.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr_news.2.o1 executed"
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+# US-mediated peace deal signed
+news_event = {
+	id = md2026_ru_ukr_news.3
+	title = md2026_ru_ukr_news.3.t
+	desc = md2026_ru_ukr_news.3.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_ru_ukr_news.3.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr_news.3.o1 executed"
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}

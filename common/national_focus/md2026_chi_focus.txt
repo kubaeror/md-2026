@@ -1,0 +1,240 @@
+### MD2026 China Focus Branch ###
+# Shared focuses for China's 2026 focus tree branch
+# Root focus at absolute x=38, y=0
+# Gated by date > 2025.12.31
+
+shared_focus = {
+	id = MD2026_CHI_great_rejuvenation
+	icon = peoples_liberation_army
+	x = 38
+	y = 0
+	allow_branch = {
+		original_tag = CHI
+		date > 2025.12.31
+	}
+	cost = 3.6
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_great_rejuvenation"
+		add_political_power = 100
+		add_stability = 0.05
+	}
+	ai_will_do = { base = 100 }
+}
+
+### TAIWAN BRANCH (left) ###
+
+shared_focus = {
+	id = MD2026_CHI_taiwan_question
+	icon = align_to_taiwan
+	x = -4
+	y = 1
+	relative_position_id = MD2026_CHI_great_rejuvenation
+	prerequisite = { focus = MD2026_CHI_great_rejuvenation }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_taiwan_question"
+		add_political_power = -50
+		add_war_support = 0.10
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = MD2026_CHI_taiwan_escalation
+	icon = attack_taiwan
+	x = -1
+	y = 1
+	relative_position_id = MD2026_CHI_taiwan_question
+	prerequisite = { focus = MD2026_CHI_taiwan_question }
+	mutually_exclusive = { focus = MD2026_CHI_taiwan_diplomacy }
+	will_lead_to_war_with = TAI
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_taiwan_escalation"
+		add_war_support = 0.20
+		add_stability = -0.15
+		create_wargoal = {
+			target = TAI
+			type = annex_everything
+		}
+		country_event = { id = md2026_taiwan.1 days = 14 }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = MD2026_CHI_taiwan_diplomacy
+	icon = trade_with_taiwan
+	x = 1
+	y = 1
+	relative_position_id = MD2026_CHI_taiwan_question
+	prerequisite = { focus = MD2026_CHI_taiwan_question }
+	mutually_exclusive = { focus = MD2026_CHI_taiwan_escalation }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_taiwan_diplomacy"
+		add_stability = 0.05
+		add_political_power = 50
+		add_opinion_modifier = { target = TAI modifier = improve_relation }
+	}
+	ai_will_do = { base = 60 }
+}
+
+### BELT & ROAD BRANCH (center-left) ###
+
+shared_focus = {
+	id = MD2026_CHI_belt_road_2
+	icon = china_bri
+	x = -1
+	y = 1
+	relative_position_id = MD2026_CHI_great_rejuvenation
+	prerequisite = { focus = MD2026_CHI_great_rejuvenation }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_TRADE }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_belt_road_2"
+		add_political_power = 75
+		add_opinion_modifier = { target = PAK modifier = improve_relation }
+		add_opinion_modifier = { target = KAZ modifier = improve_relation }
+	}
+	ai_will_do = { base = 80 }
+}
+
+shared_focus = {
+	id = MD2026_CHI_global_infrastructure
+	icon = focus_generic_population_growth
+	x = 0
+	y = 1
+	relative_position_id = MD2026_CHI_belt_road_2
+	prerequisite = { focus = MD2026_CHI_belt_road_2 }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_global_infrastructure"
+		add_political_power = 50
+		add_stability = 0.03
+	}
+	ai_will_do = { base = 60 }
+}
+
+### TECH DOMINANCE BRANCH (center-right) ###
+
+shared_focus = {
+	id = MD2026_CHI_tech_dominance
+	icon = economic_robots
+	x = 2
+	y = 1
+	relative_position_id = MD2026_CHI_great_rejuvenation
+	prerequisite = { focus = MD2026_CHI_great_rejuvenation }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_tech_dominance"
+		add_political_power = 50
+	}
+	ai_will_do = { base = 90 }
+}
+
+shared_focus = {
+	id = MD2026_CHI_semiconductor_war
+	icon = buy_microchips_taiwan
+	x = -1
+	y = 1
+	relative_position_id = MD2026_CHI_tech_dominance
+	prerequisite = { focus = MD2026_CHI_tech_dominance }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_semiconductor_war"
+		add_political_power = -25
+		add_stability = -0.03
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = MD2026_CHI_space_program
+	icon = generic_space
+	x = 1
+	y = 1
+	relative_position_id = MD2026_CHI_tech_dominance
+	prerequisite = { focus = MD2026_CHI_tech_dominance }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_space_program"
+		add_political_power = 75
+		air_experience = 25
+	}
+	ai_will_do = { base = 50 }
+}
+
+### NAVAL EXPANSION BRANCH (right) ###
+
+shared_focus = {
+	id = MD2026_CHI_naval_expansion
+	icon = carriers2
+	x = 5
+	y = 1
+	relative_position_id = MD2026_CHI_great_rejuvenation
+	prerequisite = { focus = MD2026_CHI_great_rejuvenation }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_naval_expansion"
+		navy_experience = 50
+		add_war_support = 0.05
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = MD2026_CHI_south_china_sea
+	icon = communist_navy
+	x = -1
+	y = 1
+	relative_position_id = MD2026_CHI_naval_expansion
+	prerequisite = { focus = MD2026_CHI_naval_expansion }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_south_china_sea"
+		add_war_support = 0.10
+		add_stability = -0.05
+		navy_experience = 25
+	}
+	ai_will_do = { base = 50 }
+}
+
+shared_focus = {
+	id = MD2026_CHI_blue_water_navy
+	icon = communist_army
+	x = 1
+	y = 1
+	relative_position_id = MD2026_CHI_naval_expansion
+	prerequisite = { focus = MD2026_CHI_naval_expansion }
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_blue_water_navy"
+		navy_experience = 50
+		add_political_power = 50
+	}
+	ai_will_do = { base = 40 }
+}

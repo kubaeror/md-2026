@@ -1,0 +1,270 @@
+### MD2026 Russia Focus Branch ###
+# Shared focuses for Russia's 2026 focus tree branch
+# Root focus at absolute x=38, y=0 (right side, avoiding existing content)
+# Gated by date > 2025.12.31
+
+shared_focus = {
+	id = MD2026_SOV_war_crossroads
+	icon = sov_zov_ukr
+	x = 38
+	y = 0
+	allow_branch = {
+		original_tag = SOV
+		date > 2025.12.31
+	}
+	cost = 3.6
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_war_crossroads"
+		add_political_power = 50
+		add_war_support = 0.05
+	}
+	ai_will_do = { base = 100 }
+}
+
+### WAR ESCALATION PATH (left branch) ###
+
+shared_focus = {
+	id = MD2026_SOV_escalation
+	icon = sov_nord_wind
+	x = -3
+	y = 1
+	relative_position_id = MD2026_SOV_war_crossroads
+	prerequisite = { focus = MD2026_SOV_war_crossroads }
+	mutually_exclusive = { focus = MD2026_SOV_frozen_conflict }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_escalation"
+		add_war_support = 0.10
+		add_stability = -0.10
+		add_manpower = 200000
+		army_experience = 25
+	}
+	ai_will_do = {
+		base = 40
+		modifier = {
+			factor = 2
+			has_war_with = UKR
+			surrender_progress < 0.1
+		}
+	}
+}
+
+shared_focus = {
+	id = MD2026_SOV_total_mobilization
+	icon = national_mobilization
+	x = -1
+	y = 1
+	relative_position_id = MD2026_SOV_escalation
+	prerequisite = { focus = MD2026_SOV_escalation }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_total_mobilization"
+		add_manpower = 500000
+		add_stability = -0.15
+		add_war_support = 0.10
+	}
+	ai_will_do = { base = 50 }
+}
+
+shared_focus = {
+	id = MD2026_SOV_nuclear_threats
+	icon = nuclear_science
+	x = 1
+	y = 1
+	relative_position_id = MD2026_SOV_escalation
+	prerequisite = { focus = MD2026_SOV_escalation }
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_nuclear_threats"
+		add_war_support = 0.15
+		add_stability = -0.20
+		add_political_power = -100
+		every_country = {
+			limit = {
+				is_in_faction_with = UKR
+			}
+			add_opinion_modifier = { target = SOV modifier = embargo }
+		}
+	}
+	ai_will_do = { base = 10 }
+}
+
+### FROZEN CONFLICT PATH (right of center) ###
+
+shared_focus = {
+	id = MD2026_SOV_frozen_conflict
+	icon = sov_referendum_south_ukr
+	x = 0
+	y = 1
+	relative_position_id = MD2026_SOV_war_crossroads
+	prerequisite = { focus = MD2026_SOV_war_crossroads }
+	mutually_exclusive = { focus = MD2026_SOV_escalation }
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_frozen_conflict"
+		add_stability = 0.10
+		add_political_power = 100
+		add_war_support = -0.10
+		country_event = { id = md2026_ru_ukr.1 days = 14 }
+	}
+	ai_will_do = {
+		base = 50
+		modifier = {
+			factor = 3
+			surrender_progress > 0.1
+		}
+	}
+}
+
+shared_focus = {
+	id = MD2026_SOV_consolidate_territories
+	icon = integrate_crimea_sov
+	x = 0
+	y = 1
+	relative_position_id = MD2026_SOV_frozen_conflict
+	prerequisite = { focus = MD2026_SOV_frozen_conflict }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_consolidate_territories"
+		add_stability = 0.05
+		add_political_power = 50
+	}
+	ai_will_do = { base = 70 }
+}
+
+### ECONOMIC AUTARKY BRANCH ###
+
+shared_focus = {
+	id = MD2026_SOV_economic_autarky
+	icon = russian_investments
+	x = 3
+	y = 1
+	relative_position_id = MD2026_SOV_war_crossroads
+	prerequisite = { focus = MD2026_SOV_war_crossroads }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_economic_autarky"
+		add_political_power = 50
+		add_stability = 0.03
+	}
+	ai_will_do = { base = 80 }
+}
+
+shared_focus = {
+	id = MD2026_SOV_import_substitution
+	icon = russian_ruble
+	x = -1
+	y = 1
+	relative_position_id = MD2026_SOV_economic_autarky
+	prerequisite = { focus = MD2026_SOV_economic_autarky }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_import_substitution"
+		add_stability = 0.05
+		random_owned_controlled_state = {
+			limit = { is_core_of = SOV }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = MD2026_SOV_sanctions_circumvention
+	icon = black_market
+	x = 1
+	y = 1
+	relative_position_id = MD2026_SOV_economic_autarky
+	prerequisite = { focus = MD2026_SOV_economic_autarky }
+	cost = 6.5
+
+	search_filters = { FOCUS_FILTER_TRADE }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_sanctions_circumvention"
+		add_political_power = 25
+	}
+	ai_will_do = { base = 50 }
+}
+
+### EASTERN PIVOT BRANCH ###
+
+shared_focus = {
+	id = MD2026_SOV_eastern_pivot
+	icon = big_papa_of_the_east
+	x = 6
+	y = 1
+	relative_position_id = MD2026_SOV_war_crossroads
+	prerequisite = { focus = MD2026_SOV_war_crossroads }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_eastern_pivot"
+		add_political_power = 50
+		add_opinion_modifier = { target = CHI modifier = improve_relation }
+		reverse_add_opinion_modifier = { target = CHI modifier = improve_relation }
+	}
+	ai_will_do = { base = 90 }
+}
+
+shared_focus = {
+	id = MD2026_SOV_china_trade
+	icon = align_to_china
+	x = -1
+	y = 1
+	relative_position_id = MD2026_SOV_eastern_pivot
+	prerequisite = { focus = MD2026_SOV_eastern_pivot }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_TRADE }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_china_trade"
+		add_opinion_modifier = { target = CHI modifier = improve_relation }
+		reverse_add_opinion_modifier = { target = CHI modifier = improve_relation }
+		add_political_power = 25
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = MD2026_SOV_brics_leadership
+	icon = expand_the_east_trade_cooperation
+	x = 1
+	y = 1
+	relative_position_id = MD2026_SOV_eastern_pivot
+	prerequisite = { focus = MD2026_SOV_eastern_pivot }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_brics_leadership"
+		add_political_power = 75
+		add_opinion_modifier = { target = RAJ modifier = improve_relation }
+		reverse_add_opinion_modifier = { target = RAJ modifier = improve_relation }
+		add_opinion_modifier = { target = BRA modifier = improve_relation }
+		reverse_add_opinion_modifier = { target = BRA modifier = improve_relation }
+		country_event = { id = md2026_brics.1 days = 30 }
+	}
+	ai_will_do = { base = 60 }
+}

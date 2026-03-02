@@ -1,0 +1,249 @@
+ideas = {
+	country = {
+
+		### RUSSIA ###
+
+		md2026_sov_western_sanctions = {
+			picture = embargo
+			allowed = { original_tag = SOV }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				has_country_flag = md2026_sanctions_lifted
+			}
+			modifier = {
+				industrial_capacity_factory = -0.15
+				trade_opinion_factor = -0.30
+				war_support_factor = 0.10
+				production_factory_max_efficiency_factor = -0.10
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		md2026_sov_war_mobilization = {
+			picture = national_mobilization
+			allowed = { original_tag = SOV }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				has_country_flag = md2026_sov_demobilized
+			}
+			modifier = {
+				conscription = 0.05
+				consumer_goods_factor = -0.10
+				army_attack_factor = 0.15
+				army_morale_factor = 0.10
+				stability_factor = -0.05
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+
+		### UKRAINE ###
+
+		md2026_ukr_western_military_aid = {
+			picture = foreign_capital
+			allowed = { original_tag = UKR }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				has_country_flag = md2026_ukr_aid_ended
+			}
+			modifier = {
+				army_org_factor = 0.10
+				army_defence_factor = 0.10
+				experience_gain_army = 0.05
+				training_time_factor = -0.15
+				custom_modifier_tooltip = md2026_ukr_western_aid_tt
+			}
+		}
+
+		md2026_ukr_defensive_mobilization = {
+			picture = volunteer_defenders
+			allowed = { original_tag = UKR }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				has_country_flag = md2026_ukr_demobilized
+			}
+			modifier = {
+				conscription = 0.03
+				army_defence_factor = 0.15
+				war_support_factor = 0.15
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		### USA ###
+
+		md2026_usa_political_polarization = {
+			picture = disjointed_government
+			allowed = { original_tag = USA }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.10
+				war_support_factor = 0.05
+				drift_defence_factor = -0.15
+			}
+		}
+
+		md2026_usa_america_first = {
+			picture = GENERIC_protectionism
+			allowed = { original_tag = USA }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				NOT = { has_government = nationalist }
+			}
+			modifier = {
+				consumer_goods_factor = 0.10
+				trade_opinion_factor = -0.15
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.03
+			}
+		}
+
+		### CHINA ###
+
+		md2026_chi_economic_slowdown = {
+			picture = financial_crisis
+			allowed = { original_tag = CHI }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = 0.05
+				stability_factor = -0.03
+				industrial_capacity_factory = -0.05
+			}
+		}
+
+		md2026_chi_military_modernization = {
+			picture = modernized_army
+			allowed = { original_tag = CHI }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				experience_gain_army = 0.01
+				experience_gain_navy = 0.01
+				experience_gain_air = 0.01
+				army_attack_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+
+		### GERMANY ###
+
+		md2026_ger_zeitenwende = {
+			picture = defense
+			allowed = { original_tag = GER }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+				}
+			}
+			modifier = {
+				Military_Spending_cost_factor = -2.0
+				production_speed_arms_factory_factor = 0.15
+				stability_factor = -0.05
+				conscription = 0.005
+			}
+		}
+
+		### UNITED KINGDOM ###
+
+		md2026_eng_post_brexit = {
+			picture = entrepot_trade
+			allowed = { original_tag = ENG }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = -0.05
+				stability_factor = 0.03
+				drift_defence_factor = 0.05
+				political_power_factor = -0.03
+			}
+		}
+
+		### ISRAEL ###
+
+		md2026_isr_wartime_footing = {
+			picture = reserve_divisions
+			allowed = { original_tag = ISR }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				has_country_flag = md2026_isr_peace
+			}
+			modifier = {
+				army_defence_factor = 0.20
+				war_support_factor = 0.10
+				stability_factor = -0.15
+				conscription = 0.02
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.10
+			}
+		}
+
+		### TURKEY ###
+
+		md2026_tur_erdogan_autocracy = {
+			picture = political_censorship
+			allowed = { original_tag = TUR }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				NOT = { has_government = communism }
+			}
+			modifier = {
+				political_power_factor = 0.10
+				democratic_drift = -0.05
+				stability_factor = -0.10
+				political_repression = 0.05
+				drift_defence_factor = 0.10
+			}
+		}
+
+		### IRAN ###
+
+		md2026_per_international_sanctions = {
+			picture = embargo
+			allowed = { original_tag = PER }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				has_country_flag = md2026_per_sanctions_lifted
+			}
+			modifier = {
+				trade_opinion_factor = -0.20
+				industrial_capacity_factory = -0.10
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.10
+			}
+		}
+
+		### NORTH KOREA ###
+
+		md2026_nko_total_isolation = {
+			picture = central_management
+			allowed = { original_tag = NKO }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = -0.50
+				conscription = 0.05
+				army_attack_factor = 0.20
+				consumer_goods_factor = 0.15
+				stability_factor = -0.10
+				production_factory_max_efficiency_factor = -0.30
+			}
+		}
+
+		### POLAND ###
+
+		md2026_pol_eastern_shield = {
+			picture = fortification2
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_bunker_factor = 0.15
+				army_defence_factor = 0.10
+				conscription = 0.005
+				war_support_factor = 0.05
+				Military_Spending_cost_factor = -1.0
+			}
+		}
+
+	}
+}

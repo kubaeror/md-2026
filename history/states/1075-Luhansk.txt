@@ -1,0 +1,35 @@
+state = {
+	id = 1075
+	name = "STATE_1075"
+	manpower = 1641156
+	resources = {
+		oil = 15
+	}
+	history = {
+		owner = UKR
+		add_core_of = UKR
+	
+		victory_points = { 9461 4 } #Luhansk
+		victory_points = { 6505 1 } #Alchevsk
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			air_base = 2
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.20 }		
+		
+	}
+	provinces = {
+		9446 9461 6505
+	}
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = state_03
+
+	# MD2026: Luhansk city under Russian control since 2014, annexed 2022
+	2026.1.1 = {
+		owner = SOV
+		add_core_of = SOV
+	}
+}

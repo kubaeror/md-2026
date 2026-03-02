@@ -1,0 +1,631 @@
+﻿capital = 96
+2000.1.1 = {
+	set_cosmetic_tag = POR
+	set_country_flag = dynamic_flag
+	set_country_flag = dynamic_rebel_flag
+	set_variable = { gdp_per_capita = 30.383 }
+
+
+
+
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_oob = "POR_2000_nsb"
+		else = {
+			set_oob = "POR_2000_nonnsb"
+		}
+	}
+	set_naval_oob = "POR_2000_naval_mtg"
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "POR_2000_bba"
+		else = {
+			set_air_oob = "POR_2000_nonbba"
+		}
+	}
+
+
+	add_ideas = {
+		#Economic Cycle
+		stagnation
+		#Corruption
+		medium_corruption
+		#Faction 1
+		landowners
+		#Faction 2
+		small_medium_business_owners
+		#Faction 3
+		Labour_Unions
+
+		#Bureacracy
+		bureau_02
+		#Military Spending
+		defence_02
+		#Internal Security
+		police_04
+		#Education budget
+		edu_03
+		#Health budget
+		health_04
+		#Social spending
+		social_05
+
+		#Trade Law
+		consumption_economy
+		#Conscription Law
+		volunteer_army
+		#Women in the military
+		volunteer_women
+		#Foreign Intervention Law
+		intervention_limited_interventionism
+		#Officer Training
+		officer_international_education
+
+		#Other
+		christian
+		EU_member
+		NATO_member
+		western_country
+		medium_far_right_movement
+		small_libertarian_movement
+		the_euro
+	}
+
+	# Influence System
+	add_to_array = { POR.influence_targets = SPR }
+	add_to_array = { POR.influence_targets = GUB }
+	add_to_array = { POR.influence_targets = AGL }
+	add_to_array = { POR.influence_targets = MOZ }
+	add_to_array = { POR.influence_targets = VER }
+	add_to_array = { POR.influence_targets = BRA }
+	add_to_array = { POR.influence_targets = TIM }
+
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 100 }
+	add_to_array = { influence_array = SPR.id }
+	add_to_array = { influence_array_val = 60 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 11 }
+	add_to_array = { influence_array = FRA.id }
+	add_to_array = { influence_array_val = 10 }
+	add_to_array = { influence_array = ENG.id }
+	add_to_array = { influence_array_val = 9 }
+	add_to_array = { influence_array = GER.id }
+	add_to_array = { influence_array_val = 5 }
+	add_to_array = { influence_array = CHI.id }
+	add_to_array = { influence_array_val = 7 }
+	add_to_array = { influence_array = SOV.id }
+	add_to_array = { influence_array_val = 2 }
+	startup_influence = yes
+
+	#Economics
+	set_variable = { var = debt value = 167.994 }
+	set_variable = { var = treasury value = 21 }
+	set_variable = { var = corporate_tax_rate value = 36 }
+	set_variable = { var = population_tax_rate value = 40 }
+	set_variable = { var = int_investments value = 24 }
+
+	set_variable = { landowners_opinion = 60 }
+	set_variable = { small_medium_business_owners = 75 }
+
+	add_opinion_modifier = { target = BEL modifier = EU_member_opinion }
+	reverse_add_opinion_modifier = { target = BEL modifier = EU_member_opinion }
+	add_opinion_modifier = { target = FRA modifier = EU_member_opinion }
+	reverse_add_opinion_modifier = { target = FRA modifier = EU_member_opinion }
+	add_opinion_modifier = { target = GER modifier = EU_member_opinion }
+	reverse_add_opinion_modifier = { target = GER modifier = EU_member_opinion }
+	add_opinion_modifier = { target = ITA modifier = EU_member_opinion }
+	reverse_add_opinion_modifier = { target = ITA modifier = EU_member_opinion }
+	add_opinion_modifier = { target = LUX modifier = EU_member_opinion }
+	reverse_add_opinion_modifier = { target = LUX modifier = EU_member_opinion }
+	add_opinion_modifier = { target = HOL modifier = EU_member_opinion }
+	reverse_add_opinion_modifier = { target = HOL modifier = EU_member_opinion }
+	add_opinion_modifier = { target = DEN modifier = EU_member_opinion }
+	reverse_add_opinion_modifier = { target = DEN modifier = EU_member_opinion }
+	add_opinion_modifier = { target = IRE modifier = EU_member_opinion }
+	reverse_add_opinion_modifier = { target = IRE modifier = EU_member_opinion }
+	add_opinion_modifier = { target = GRE modifier = EU_member_opinion }
+	reverse_add_opinion_modifier = { target = GRE modifier = EU_member_opinion }
+	add_opinion_modifier = { target = AUS modifier = EU_member_opinion }
+	reverse_add_opinion_modifier = { target = AUS modifier = EU_member_opinion }
+	add_opinion_modifier = { target = FIN modifier = EU_member_opinion }
+	reverse_add_opinion_modifier = { target = FIN modifier = EU_member_opinion }
+
+	#2000 NATO Relations
+	add_opinion_modifier = { target = BEL modifier = NATO_member_modifier }
+	reverse_add_opinion_modifier = { target = BEL modifier = NATO_member_modifier }
+	add_opinion_modifier = { target = ITA modifier = NATO_member_modifier }
+	reverse_add_opinion_modifier = { target = ITA modifier = NATO_member_modifier }
+	add_opinion_modifier = { target = SPR modifier = NATO_member_modifier }
+	reverse_add_opinion_modifier = { target = SPR modifier = NATO_member_modifier }
+
+	add_opinion_modifier = { target = BRA modifier = portuguese_speaking }
+	reverse_add_opinion_modifier = { target = BRA modifier = portuguese_speaking }
+	add_opinion_modifier = { target = AGL modifier = portuguese_speaking }
+	reverse_add_opinion_modifier = { target = AGL modifier = portuguese_speaking }
+	add_opinion_modifier = { target = MOZ modifier = portuguese_speaking }
+	reverse_add_opinion_modifier = { target = MOZ modifier = portuguese_speaking }
+	add_opinion_modifier = { target = GUB modifier = portuguese_speaking }
+	reverse_add_opinion_modifier = { target = GUB modifier = portuguese_speaking }
+	add_opinion_modifier = { target = VER modifier = portuguese_speaking }
+	reverse_add_opinion_modifier = { target = VER modifier = portuguese_speaking }
+	add_opinion_modifier = { target = SAO modifier = portuguese_speaking }
+	reverse_add_opinion_modifier = { target = SAO modifier = portuguese_speaking }
+
+	add_opinion_modifier = { target = KOR modifier = trade_mission }
+	reverse_add_opinion_modifier = { target = KOR modifier = trade_mission }
+	add_opinion_modifier = { target = FRA modifier = diplomatic_proximity }
+	reverse_add_opinion_modifier = { target = FRA modifier = diplomatic_proximity }
+	add_opinion_modifier = { target = SPR modifier = declaration_of_friendship }
+	reverse_add_opinion_modifier = { target = SPR modifier = declaration_of_friendship }
+
+	set_technology = {
+		integrated_transportation_system = 1
+		post_conventional_rail = 1
+		early_freight_locomotive = 1
+
+
+		superior_firepower = 1
+
+		#FBP m/961 (G3 made under license)
+		infantry_weapons = 1
+
+		night_vision_1 = 1
+		night_vision_2 = 1
+
+		#For templates
+
+		combat_eng_equipment = 1
+		command_control_equipment = 1
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+		util_vehicle_0 = 1
+
+
+
+		body_armor_1980 = 1
+
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+		microprocessors = 1
+		computing2 = 1
+		decryption2 = 1
+		encryption2 = 1
+
+		radar = 1
+		internet1 = 1 #1G
+		internet2 = 1
+		fuel_silos = 1
+
+		industrial_electrospun_polymeric_nanofibers = 1
+		multiwalled_carbon_nanotubes = 1
+		stereolitography = 1
+		early_3D_printers = 1
+		DNA_fingerprinting = 1
+		fuel_refining = 1
+		fuel_refining2 = 1
+		energy_efficiency = 1
+		energy_efficiency2 = 1
+		fuel_efficiency = 1
+		early_renewables = 1
+		renewables = 1
+		electrification_1 = 1
+		construction1 = 1
+		stronghold_building_1 = 1
+		land_fort_building_1 = 1
+		construction2 = 1
+	}
+
+		complete_special_project = sp:sp_helicopter_project
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+
+		set_technology = {
+			mbt_tech_ops = 1
+			mbt_tech = 1
+			early_cold_war_ammo = 1
+			defensive_systems = 1
+			nsb_gun_technology_1 = 1
+			nsb_artillery_ammo_1 = 1
+			nsb_special_ammo_0 = 1
+			nsb_AA_autocannon_0 = 1
+			nsb_SHORAD_missile_0 = 1
+
+			diesel_engine_tech = 1
+			tank_components_tech = 1
+			nsb_artillery_0 = 1
+
+			nsb_Anti_Air_0 = 1
+
+			helo_ops_tech = 1
+			nsb_attack_helicopter_tech_1 = 1
+			nsb_engine_tech_1 = 1
+			nsb_atgm_tech_1 = 1
+			nsb_multiple_atgm_tech_1 = 1
+			nsb_heavy_atgm_tech_1 = 1
+			nsb_rocket_pods_tech_1 = 1
+			nsb_gun_pods_tech_1 = 1
+			nsb_light_nose_gun_tech_1 = 1
+			nsb_defense_tech_1 = 1
+		}
+
+		create_equipment_variant = {
+			name = "Bravia Chaimite"
+			type = medium_tank_amphibious_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = afv_machine_gun
+				reload_type_slot = automatic_loading
+				ammunition_load_slot = machine_gun_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen1
+				engine_type_slot = tank_diesel_engine_gen1
+				special_type_slot_1 = afv_troop_capacity
+				special_type_slot_4 = tank_battlestation_1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 2
+			}
+		}
+
+		complete_special_project = sp:sp_armoured_vehicle_project
+
+		else = {
+			set_technology = {
+				MBT_1 = 1
+				Early_APC = 1
+				APC_1 = 1
+				IFV_1 = 1
+				artillery_0 = 1
+				SP_arty_0 = 1
+				Anti_Air_0 = 1
+				SP_Anti_Air_0 = 1
+				Rec_tank_0 = 1
+				attack_helicopter1 = 1
+			}
+		}
+	}
+	set_technology = {
+			corvette_hull_1 = 1
+			corvette_hull_2 = 1
+			corvette_hull_3 = 1
+
+			frigate_hull_1 = 1
+			frigate_hull_2 = 1
+			frigate_hull_3 = 1
+
+			destroyer_hull_1 = 1
+			destroyer_hull_2 = 1
+
+			cruiser_hull_1 = 1
+
+			attack_submarine_hull_1 = 1
+			attack_submarine_hull_2 = 1
+			attack_submarine_hull_3 = 1
+
+			missile_submarine_hull_1 = 1
+
+			aircraft_carrier_engineering = 1
+			aircraft_heli_engineering_1 = 1
+
+			tech_submarine_engineering = 1
+
+			tech_naval_systems_engineering = 1
+			tech_power_systems = 1
+			tech_power_systems_1 = 1
+
+			tech_combat_support_systems = 1
+			tech_fire_control = 1
+			tech_fire_control_1 = 1
+			tech_combat_radar = 1
+			tech_combat_radar_1 = 1
+			tech_combat_radar_2 = 1
+			tech_combat_sonar = 1
+			tech_combat_sonar_1 = 1
+			tech_combat_sonar_2 = 1
+
+			tech_early_naval_weapon_systems = 1
+			tech_naval_weapon_systems = 1
+			tech_light_guns = 1
+			tech_light_guns_1 = 1
+
+			tech_point_defense_system = 1
+			tech_point_defense_system_1 = 1
+			tech_point_defense_system_2 = 1
+			tech_point_defense_system_3 = 1
+
+			tech_turret_missiles_surface = 1
+			tech_turret_missiles_surface_1 = 1
+
+			tech_turret_missiles_aa = 1
+			tech_turret_missiles_aa_1 = 1
+
+			tech_vls_surface = 1
+			tech_vls_surface_1 = 1
+
+			tech_vls_aa = 1
+			tech_vls_aa_1 = 1
+
+			tech_torpedoes = 1
+			tech_torpedoes_1 = 1
+
+			tech_landing_craft = 1
+		}
+
+		#Vasco da Gama Class
+		create_equipment_variant = {
+			name = "Vasco da Gama Class"
+			type = frigate_hull_3
+			name_group = POR_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_jet_turbine_power
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_3
+				fixed_ship_auxillary_slot_2 = module_ciws_3
+				fixed_ship_auxillary_slot_1 = module_torpedoes_2
+				fixed_ship_auxillary_slot = module_fuel_tank
+				fixed_ship_battery_slot = module_76mm_gun_1
+				front_1_custom_slot = module_asm_2
+				rear_1_custom_slot = module_light_helipad_1
+			}
+		}
+		#Albacora Class
+		create_equipment_variant = {
+			name = "Albacora Class"
+			type = attack_submarine_hull_1
+			name_group = POR_SUBMARINES_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_sub_diesel_electric_power
+				fixed_ship_radar_slot = module_sonar_1
+				fixed_ship_auxillary_slot_3 = module_torpedoes_1
+				fixed_ship_auxillary_slot_2 = module_sub_esm_1
+				fixed_ship_auxillary_slot_1 = module_fuel_tank
+				fixed_ship_auxillary_slot = module_torpedoes_1
+				fixed_ship_battery_slot = module_anti_ship_torpedoes_1
+			}
+		}
+		#João Coutinho Class
+		create_equipment_variant = {
+			name = "João Coutinho Class"
+			type = corvette_hull_1
+			#name_group = POR_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_radar_2
+				fixed_ship_auxillary_slot = module_chain_gun
+				fixed_ship_battery_slot = module_76mm_gun_1
+				front_1_custom_slot = module_anti_submarine_mortar
+				rear_1_custom_slot = module_anti_submarine_mortar
+			}
+		}
+
+		complete_special_project = sp:sp_naval_vessel_project
+		complete_special_project = sp:sp_medium_naval_nuclear_engines
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+
+			early_airframe_designs = 1
+			gen_3_light = 1
+			gen_3_medium = 1
+
+			flying_wing_design = 1
+			variable_wing_design = 1
+
+			engines_2 = 1
+
+			refueling_1 = 1
+
+			avionics_1 = 1
+
+			awacs_1 = 1
+
+			redundant_1 = 1
+
+			early_weapons = 1
+			air_weapons_1 = 1
+			countermeasures_1 = 1
+
+			ag_weapons_1 = 1
+
+			naval_weapons_1 = 1
+			naval_weapons_2 = 1
+			special_mad_1 = 1
+			special_mad_2 = 1
+
+			tgp_recon_1 = 1
+
+
+
+			transport_helicopter1 = 1
+		nsb_transport_helicopter1 = 1
+			transport_helicopter2 = 1
+		nsb_transport_helicopter2 = 1
+		}
+
+		else = {
+
+			set_technology = {
+
+				early_fighter = 1
+				CV_MR_Fighter1 = 1
+				CV_MR_Fighter2 = 1
+
+				AS_Fighter1 = 1
+				AS_Fighter2 = 1
+
+				MR_Fighter1 = 1
+				MR_Fighter2 = 1
+				MR_upgrade_1 = 1
+
+				Strike_fighter1 = 1
+				Strike_fighter2 = 1
+
+				#Alpha Jet
+				L_Strike_fighter1 = 1
+				L_Strike_fighter2 = 1
+
+				early_bomber = 1
+
+				transport_plane1 = 1
+				transport_plane2 = 1
+
+				naval_plane1 = 1
+
+				awacs_plane1 = 1
+			}
+		}
+
+	}
+	set_popularities = {
+		democratic = 78.3
+		communism = 9.3
+		fascism = 0
+		neutrality = 12.1
+		nationalist = 0.3
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1999.10.10"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	### Party Popularities
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.331 } #conservatism
+	set_variable = { party_pop_array^2 = 0 } #liberalism
+	set_variable = { party_pop_array^3 = 0.452 } #socialism
+	set_variable = { party_pop_array^4 = 0.001 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.092 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.085 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0.004 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0.025 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0.007 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0.003 } #Monarchist
+
+	### Ruling Party
+	add_to_array = { ruling_party = 3 }
+
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "António Guterres"
+		picture = "POR_Antonio_Guterres.dds"
+		ideology = socialism
+		traits = {
+			western_socialism
+		}
+	}
+
+	recruit_character = POR_jose_nunes_da_fonseca
+	recruit_character = POR_vieira_matias
+	recruit_character = POR_mendes_cabecadas
+	recruit_character = POR_vidal_abreu
+	recruit_character = POR_joaquim_m_n_borrego
+	recruit_character = POR_artur_neves_pina_monteiro
+	recruit_character = POR_jose_manuel_lopes_dos_santos_correia
+
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 783 }
+	}
+	set_variable = { overall_productivity = 783 }
+}
+##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 28.000 }
+	set_variable = { var = debt value = 270.000 }
+	set_variable = { var = treasury value = 30 }
+	set_variable = { var = corporate_tax_rate value = 21 }
+	set_variable = { var = population_tax_rate value = 23 }
+	set_variable = { var = int_investments value = 60 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 850 }
+	}
+	set_variable = { overall_productivity = 850 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 60.0
+		communism = 5.0
+		fascism = 0.0
+		neutrality = 12.0
+		nationalist = 23.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2024.3.10"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^1 = 0.295 }   #conservatism (AD/PSD)
+	set_variable = { party_pop_array^3 = 0.280 }   #socialism (PS)
+	set_variable = { party_pop_array^20 = 0.180 }   #Nat_Populism (Chega)
+	set_variable = { party_pop_array^2 = 0.050 }   #liberalism (IL)
+	set_variable = { party_pop_array^4 = 0.040 }   #Communist-State (PCP)
+	set_variable = { party_pop_array^17 = 0.030 }   #Neutral_green (Livre)
+	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
+	set_variable = { party_pop_array^14 = 0.050 }   #Neutral_conservatism
+	set_variable = { party_pop_array^18 = 0.025 }   #neutral_Social
+
+	add_to_array = { ruling_party = 1 }             #conservatism (AD/PSD)
+
+	set_variable = { party_pop_elect_array^1 = 0.294 }  #AD/PSD
+	set_variable = { party_pop_elect_array^3 = 0.280 }  #PS
+	set_variable = { party_pop_elect_array^20 = 0.181 }  #Chega
+	set_variable = { party_pop_elect_array^2 = 0.050 }  #IL
+	set_variable = { party_pop_elect_array^4 = 0.036 }  #PCP
+	set_variable = { party_pop_elect_array^17 = 0.033 }  #Livre
+
+	startup_politics = yes
+
+	### Country Leader: Luis Montenegro ###
+	create_country_leader = {
+		name = "Luis Montenegro"
+		picture = "gfx/leaders/POR/Luis_Montenegro.dds"
+		expire = "2028.3.10"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+}

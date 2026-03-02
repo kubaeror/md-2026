@@ -1,0 +1,1327 @@
+capital = 405
+2000.1.1 = {
+	set_country_flag = generic_election_killswitch	#Will get special election event, active in both bookmarks
+	set_country_flag = is_IRAN	#Will disable the dynamic flags
+	set_cosmetic_tag = PER_AUTH_SS
+	set_country_flag = dynamic_flag
+	set_country_flag = dynamic_rebel_flag
+	set_country_flag = PER_president_khatami # Set starting president to Khatami
+	add_to_variable = { var = PER_election_var value = 1 }
+	clamp_variable = { var = PER_election_var min = 0 max = 48 }
+	add_to_variable = { var = PER_session_var value = 4 }
+	clamp_variable = { var = PER_session_var min = 0 max = 12 }
+	set_variable = { PER_majlis_seats^8 = 200 }
+	set_variable = { PER_majlis_seats^9 = 65 }
+	set_variable = { PER_majlis_seats_INDEPENDENT = 5 }
+	set_variable = { PER_majlis_total_seats = 270 }
+	set_variable = { gdp_per_capita = 11.026 }
+	#Crocu stuff
+	set_country_flag = country_has_mbt_0_templates
+	set_country_flag = country_has_afv_0_templates
+	set_country_flag = country_has_mbt_1_templates
+	set_country_flag = country_has_afv_1_templates
+	#AXIS Memebership not for the PFLP on start
+	set_country_flag = PFLP_not_scoped_support
+	# Balance of Power stuff
+	set_power_balance = {
+		id = PER_clergy_balance_of_power_category
+		set_default = yes
+	}
+
+	set_naval_oob = "PER_2000_naval_mtg"
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "PER_2000_bba"
+		else = {
+			set_air_oob = "PER_2000_nonbba"
+		}
+	}
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "PER_2000_nsb"
+		else = {
+			set_oob = "PER_2000_nonnsb"
+		}
+	}
+
+	add_ideas = {
+		shia
+		defence_03
+		edu_04
+		health_02
+		social_03
+		bureau_02
+		police_03
+		the_military
+		the_ulema
+		small_medium_business_owners
+		rampant_corruption
+		mixed_economy
+		PER_highly_entrenched_societal_norms
+		multi_ethnic_state_idea
+		birthplace_islamic_revolution
+		faction_resistance_axis_member
+		the_holy_defence
+		PER_khatami_idea
+		officer_military_academy
+		draft_army
+		intervention_limited_interventionism
+		slightly_regulated_immigration
+		nuclear_energy
+	}
+
+	# Dynamic Modifiers
+	add_dynamic_modifier = { modifier = PER_economy_modifier }
+	# Terrible Banking & Taxation
+	set_variable = { PER_interest_rate_multiplier_modifier = 2.00 }
+	set_variable = { PER_population_tax_income_multiplier_modifier = -0.20 }
+	set_variable = { PER_corporate_tax_factor = -0.15 }
+	set_variable = { PER_centralization_cost = 0.50 }
+	#Brian Drain
+	set_variable = { PER_migration_rate_value_factor = -0.20 }
+	set_variable = { PER_research_speed_factor = -0.30 }
+
+	add_dynamic_modifier = { modifier = PER_political_modifier }
+	# Crime & Corruption
+	set_variable = { PER_corruption_cost = 1.00 }
+	set_variable = { PER_police_cost_multiplier_modifier = -0.10 }
+	set_variable = { PER_productivity_growth = -0.20 }
+	# Political Assness
+	set_variable = { PER_political_power_factor = -0.15 }
+	# Artesh
+	add_dynamic_modifier = { modifier = PER_artesh_modifier }
+	set_variable = { PER_army_org_factor = -0.15 }
+	set_variable = { PER_land_doctrine_cost_factor = 0.50 }
+	set_variable = { PER_equipment_conversion_speed = -0.35 }
+	# Sanctions
+	add_dynamic_modifier = { modifier = PER_us_sanctions }
+	set_variable = { PER_sanction_trade_opinion_factor = -0.25 }
+	set_variable = { PER_sanction_oil_export_multiplier_modifier = -0.50 }
+	set_variable = { PER_sanction_trade_laws_cost_factor = 0.50 }
+	set_variable = { PER_sanction_improve_relations_maintain_cost_factor = 0.50 }
+	set_variable = { PER_sanction_productivity_growth_modifier = -0.15 }
+	set_variable = { PER_sanction_stability_factor = -0.10 }
+
+	set_variable = { PER_IRGC_communism_drift = 0.05 }
+
+	407 = {
+		add_dynamic_modifier = {
+			modifier = PER_azeri_separatism
+		}
+	}
+	401 = {
+		add_dynamic_modifier = {
+			modifier = PER_baloch_separatism
+		}
+	}
+	979 = {
+		add_dynamic_modifier = {
+			modifier = PER_kurd_separatism
+		}
+	}
+	408 = {
+		add_dynamic_modifier = {
+			modifier = PER_kurd_separatism
+		}
+	}
+	1139 = {
+		add_dynamic_modifier = {
+			modifier = PER_kurd_separatism
+		}
+	}
+	399 = {
+		add_dynamic_modifier = {
+			modifier = PER_ahvaz_separatism
+		}
+	}
+
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 544 }
+	}
+	set_variable = { overall_productivity = 544 }
+	create_faction_from_template = faction_template_aor
+	add_to_faction = HEZ
+
+	add_opinion_modifier = { target = SYR modifier = resistance_axis }
+	add_opinion_modifier = { target = HEZ modifier = resistance_axis }
+
+	add_opinion_modifier = { target = SAU modifier = strategic_rivals }
+	reverse_add_opinion_modifier = { target = SAU modifier = strategic_rivals }
+	add_opinion_modifier = { target = UAE modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = UAE modifier = large_commercial_relations }
+
+	add_opinion_modifier = { target = GER modifier = large_commercial_relations }
+	add_opinion_modifier = { target = ITA modifier = large_commercial_relations }
+	add_opinion_modifier = { target = KOR modifier = large_commercial_relations }
+	add_opinion_modifier = { target = RAJ modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = GER modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = ITA modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = KOR modifier = large_commercial_relations }
+	reverse_add_opinion_modifier = { target = RAJ modifier = large_commercial_relations }
+
+	add_opinion_modifier = { target = USA modifier = uss_vincennes }
+	add_opinion_modifier = { target = USA modifier = operation_praying_mantis }
+	add_opinion_modifier = { target = USA modifier = cia_coup_mossadeq }
+	add_opinion_modifier = { target = USA modifier = helped_iraqi_chemical_weapons }
+	add_opinion_modifier = { target = USA modifier = no_diplomatic_ties }
+	reverse_add_opinion_modifier = { target = USA modifier = no_diplomatic_ties }
+	reverse_add_opinion_modifier = { target = USA modifier = iran_hostage_crisis }
+	reverse_add_opinion_modifier = { target = USA modifier = beirut_bombing }
+
+	add_opinion_modifier = { target = ISR modifier = no_diplomatic_ties }
+	reverse_add_opinion_modifier = { target = ISR modifier = no_diplomatic_ties }
+	add_opinion_modifier = { target = ISR modifier = threat_to_our_independence }
+	reverse_add_opinion_modifier = { target = ISR modifier = threat_to_our_independence }
+	add_opinion_modifier = { target = ISR modifier = danger_to_national_security }
+	reverse_add_opinion_modifier = { target = ISR modifier = danger_to_national_security }
+
+	add_opinion_modifier = { target = FRA modifier = helped_iraqi_chemical_weapons }
+	add_opinion_modifier = { target = HOL modifier = helped_iraqi_chemical_weapons }
+	add_opinion_modifier = { target = ENG modifier = helped_iraqi_chemical_weapons }
+	add_opinion_modifier = { target = GER modifier = helped_iraqi_chemical_weapons }
+	add_opinion_modifier = { target = IRQ modifier = iraqi_chemical_weapons }
+
+	add_opinion_modifier = { target = SAU modifier = oppresses_shiites }
+	add_opinion_modifier = { target = BHR modifier = oppresses_shiites }
+	add_opinion_modifier = { target = IRQ modifier = oppresses_shiites }
+	add_opinion_modifier = { target = PAK modifier = oppresses_shiites }
+	reverse_add_opinion_modifier = { target = PAK modifier = oppresses_sunni }
+	reverse_add_opinion_modifier = { target = SAU modifier = oppresses_sunni }
+	reverse_add_opinion_modifier = { target = BHR modifier = oppresses_sunni }
+	reverse_add_opinion_modifier = { target = IRQ modifier = oppresses_sunni }
+	reverse_add_opinion_modifier = { target = KUW modifier = oppresses_sunni }
+	reverse_add_opinion_modifier = { target = QAT modifier = oppresses_sunni }
+	reverse_add_opinion_modifier = { target = EGY modifier = oppresses_sunni }
+	reverse_add_opinion_modifier = { target = JOR modifier = oppresses_sunni }
+
+	add_opinion_modifier = { target = RAJ modifier = historic_friends }
+	reverse_add_opinion_modifier = { target = RAJ modifier = historic_friends }
+	add_opinion_modifier = { target = MOR modifier = broke_off_diplomatic_relations }
+	reverse_add_opinion_modifier = { target = MOR modifier = broke_off_diplomatic_relations }
+
+	add_opinion_modifier = { target = ISR modifier = ISR_Arab_Conflict }
+	reverse_add_opinion_modifier = { target = ISR modifier = ISR_Arab_Conflict }
+	add_opinion_modifier = { target = ISR modifier = death_to_israel }
+	reverse_add_opinion_modifier = { target = ISR modifier = death_to_israel_ISR }
+
+	set_technology = {
+		COMSAT1 = 1
+
+		SPYSAT1 = 1
+
+		OLV1 = 1
+		OLV2 = 1
+		OLV3 = 1
+
+		nuclear_technology = 1
+		reactor1 = 1
+		reactor2 = 1
+		integrated_transportation_system = 1
+		post_conventional_rail = 1
+		early_freight_locomotive = 1
+
+
+		infantry_mass_assault = 1
+		night_vision_1 = 1
+
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+		special_forces = 1
+		combat_eng_equipment = 1
+
+		command_control_equipment = 1
+		command_control_equipment1 = 1
+
+		#Tosan
+
+		#Aras
+		util_vehicle_0 = 1
+
+		#Dehlavie AT (and Nafez)
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+		AT_upgrade_1 = 1
+		Anti_tank_1 = 1
+		Heavy_Anti_tank_1 = 1
+
+		#Misagh-2 and Bavar-373
+
+		#IAIO Toufan
+
+		transport_helicopter1 = 1
+		nsb_transport_helicopter1 = 1
+
+		camouflage = 1
+
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+
+		radar = 1
+		internet1 = 1 	#1G
+		internet2 = 1
+		fuel_silos = 1
+
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
+		DNA_fingerprinting = 1
+		fuel_refining = 1
+		early_renewables = 1
+		renewables = 1
+		electrification_1 = 1
+		construction1 = 1
+	}
+
+		complete_special_project = sp:sp_helicopter_project
+
+	if = { limit = { has_dlc = "Gotterdammerung" }
+		set_technology = {
+			ballistic_missile = 1
+
+			IRBM = 1
+			IRBM1 = 1
+			IRBM2 = 1
+			IRBM3 = 1
+			IRBM4 = 1
+
+			ICBM = 1
+			ICBM1 = 1
+			ICBM2 = 1
+
+			cruise_missile = 1
+
+			GLCM = 1
+			GLCM1 = 1
+
+			TEL_launched_missiles = 1
+			TEL_3 = 1
+			TEL_4 = 1
+
+			air_defense = 1
+
+			SAM = 1
+			SAM0 = 1
+			SAM1 = 1
+			SAM2 = 1
+			SAM3 = 1
+
+			hid_tech_missile_1 = 1
+			hid_tech_missile_2 = 1
+			hid_tech_missile_3 = 1
+			hid_tech_missile_4 = 1
+			hid_tech_missile_5 = 1
+			hid_tech_missile_6 = 1
+			hid_tech_missile_7 = 1
+		}
+
+		complete_special_project = sp:sp_space_program_gdm
+		complete_special_project = sp:sp_missile_project
+
+		set_variable = { num_launchers_set = 7 }
+
+		else = {
+			complete_special_project = sp:sp_space_program_non_gdm
+		}
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_technology = {
+			mbt_tech_ops = 1
+			mbt_tech = 1
+			early_cold_war_ammo = 1
+			defensive_systems = 1
+			nsb_gun_technology_1 = 1
+			nsb_artillery_ammo_1 = 1
+			nsb_special_ammo_0 = 1
+			nsb_AA_autocannon_0 = 1
+			nsb_SHORAD_missile_0 = 1
+			mbt_tech_1 = 1
+			defensive_systems_2 = 1
+			nsb_gun_technology_2 = 1
+			nsb_artillery_ammo_2 = 1
+			nsb_special_ammo_1 = 1
+			nsb_AA_autocannon_1 = 1
+			nsb_SHORAD_missile_1 = 1
+			tank_components_tech = 1
+			tank_components_tech_2 = 1
+			small_medium_gun_tech = 1
+			small_medium_gun_tech_2 = 1
+			medium_gun_tech = 1
+			medium_gun_tech_2 = 1
+			armor_tech = 1
+			armor_tech_2 = 1
+			era_tech = 1
+			diesel_engine_tech = 1
+			diesel_engine_tech_2 = 1
+			diesel_engine_tech_3 = 1
+			turbine_engine_tech = 1
+			turbine_engine_tech_2 = 1
+			nsb_artillery_0 = 1
+			nsb_Arty_upgrade_1 = 1
+			nsb_Anti_Air_0 = 1
+			helo_ops_tech = 1
+			nsb_attack_helicopter_tech_1 = 1
+			nsb_engine_tech_1 = 1
+			nsb_atgm_tech_1 = 1
+			nsb_multiple_atgm_tech_1 = 1
+			nsb_heavy_atgm_tech_1 = 1
+			nsb_rocket_pods_tech_1 = 1
+			nsb_gun_pods_tech_1 = 1
+			nsb_light_nose_gun_tech_1 = 1
+
+			nsb_defense_tech_1 = 1
+		}
+
+		 create_equipment_variant = {
+		 	name = "Safir-74"
+		 	type = medium_tank_chassis_0
+		 	parent_version = 0
+		 	modules = {
+		 		main_armament_slot = tank_small_medium_cannon
+				ammunition_load_slot = mixed_main_ammo_1
+		 		turret_type_slot = tank_soviet_turret
+		 		suspension_type_slot = tank_torsion_bar_suspension_medium
+		 		armor_type_slot = tank_steel_armor_gen1
+		 		engine_type_slot = tank_diesel_engine_gen2
+		 		reload_type_slot = manual_loading
+		 		special_type_slot_1 = empty
+		 		special_type_slot_4 = tank_battlestation_2
+		 		special_type_slot_6 = reactive_armor_gen1
+		 	}
+		 	upgrades = {
+		 		tank_nsb_armor_upgrade = 4
+		 	}
+		 	obsolete = yes
+		 	icon = "gfx/interface/technologies/PER/LAND/MBT2.dds"
+		 	model = "CHI_ZTZ59I_entity"
+		 }
+		 add_equipment_to_stockpile = {
+		 	type = medium_tank_chassis_0 #Safir-74
+		 	variant_name = "Safir-74"
+		 	amount = 238
+		 	producer = PER
+		 }
+
+		create_equipment_variant = {
+			name = "Zulfiqar"
+			type = medium_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_medium_cannon_2
+				ammunition_load_slot = mixed_main_ammo_2
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_composite_armor_gen1
+				engine_type_slot = tank_diesel_engine_gen3
+				reload_type_slot = automatic_loading
+				special_type_slot_1 = smoke_launchers
+				special_type_slot_2 = empty
+				special_type_slot_4 = tank_battlestation_2
+				special_type_slot_6 = reactive_armor_gen1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 3
+			}
+			icon = "gfx/interface/technologies/PER/LAND/Zulfiqar.dds"
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_chassis_1
+			variant_name = "Zulfiqar"
+			amount = 40
+		}
+		create_equipment_variant = {
+			name = "BMP-1"
+			type = medium_tank_flame_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = afv_assault_gun
+				reload_type_slot = automatic_loading
+				ammunition_load_slot = mixed_main_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen1
+				engine_type_slot = tank_diesel_engine_gen1
+				special_type_slot_1 = afv_atgm_gen1
+				special_type_slot_2 = smoke_launchers
+				special_type_slot_3 = afv_troop_capacity
+				special_type_slot_4 = tank_battlestation_1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 1
+			}
+			icon = "gfx/interface/technologies/PER/LAND/IFV1.dds"
+			model = "SOV_BMP1_entity"
+		}
+		create_equipment_variant = {
+			name = "Haidar"
+			type = medium_tank_amphibious_chassis_1
+			parent_version = 2
+			modules = {
+				main_armament_slot = afv_machine_gun
+				reload_type_slot = automatic_loading
+				ammunition_load_slot = machine_gun_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen1
+				engine_type_slot = afv_gasoline_engine_gen1
+				special_type_slot_2 = afv_troop_capacity
+				special_type_slot_1 = afv_gun_ports
+				special_type_slot_4 = tank_battlestation_1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 1
+			}
+			icon = "gfx/interface/technologies/PER/LAND/APC3.dds"
+			model = "btr80_vehicle_entity"
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_amphibious_chassis_1
+			variant_name = "Haidar"
+			amount = 50
+		}
+
+		create_equipment_variant = {
+			name = "Boragh"
+			type = medium_tank_amphibious_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = afv_machine_gun
+				reload_type_slot = automatic_loading
+				ammunition_load_slot = machine_gun_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen1
+				engine_type_slot = tank_diesel_engine_gen1
+				special_type_slot_2 = afv_troop_capacity
+				special_type_slot_1 = afv_gun_ports
+				special_type_slot_4 = tank_battlestation_1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 1
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/PER/LAND/IFV2.dds"
+			model = "SOV_BMP1_entity"
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_amphibious_chassis_1
+			variant_name = "Boragh"
+			amount = 40
+		}
+
+		create_equipment_variant = {
+			name = "M113"
+			type = medium_tank_amphibious_chassis_1
+			parent_version = 1
+			modules = {
+				main_armament_slot = afv_machine_gun
+				reload_type_slot = automatic_loading
+				ammunition_load_slot = machine_gun_ammo_1
+				turret_type_slot = tank_no_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				engine_type_slot = tank_diesel_engine_gen2
+				armor_type_slot = afv_alum_armor_gen1
+				special_type_slot_1 = afv_gun_ports
+				special_type_slot_2 = afv_troop_capacity
+				special_type_slot_3 = afv_reverse_doors
+				special_type_slot_4 = tank_battlestation_1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 2
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/PER/LAND/APC1.dds"
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_amphibious_chassis_1
+			variant_name = "M113"
+			amount = 20
+		}
+
+		create_equipment_variant = {
+			name = "Tosan"
+			type = medium_tank_destroyer_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = afv_assault_gun
+				ammunition_load_slot = mixed_main_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				engine_type_slot = tank_diesel_engine_gen3
+				armor_type_slot = afv_alum_armor_gen1
+				reload_type_slot = automatic_loading
+				secondary_armament_slot = empty
+				special_type_slot_2 = smoke_launchers
+				special_type_slot_4 = tank_battlestation_1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 1
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/PER/LAND/REC2.dds"
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_destroyer_chassis_1
+			variant_name = "Tosan"
+			amount = 10 #unknow numbers
+		}
+
+		create_equipment_variant = {
+			name = "IAIO Toufan I"
+			type = heavy_tank_chassis_0
+			parent_version = 0
+			modules = {
+				chassis_type_slot = helicopter_medium_chassis
+				helicopter_body_layout = gunship_layout
+				helicopter_body_mount_1 = helicopter_gun_pod_gen1
+				nose_gun_type_slot = helicopter_medium_nose_gun_gen1
+				armor_type_slot = helicopter_armor_gen1
+				engine_type_slot = helicopter_turbine_engine_gen1
+				defence_type_slot = flare_launchers
+				sensor_and_avionics_slot = sensors_and_avionics_gen_1
+				helicopter_body_mount_2 = helicopter_rocket_pod_gen1
+			}
+			upgrades = {
+				helicopter_nsb_upgrade = 3
+			}
+			icon = "gfx/interface/technologies/USA/AIR/AH0.dds"
+		}
+
+		create_equipment_variant = {
+			name = "Raad-1"
+			type = medium_tank_artillery_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = art_med_gun_gen1
+				reload_type_slot = automatic_loading
+				ammunition_load_slot = artillery_medium_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				engine_type_slot = tank_diesel_engine_gen1
+				special_type_slot_1 = empty
+				special_type_slot_4 = tank_battlestation_1
+			}
+			upgrades = {
+				tank_nsb_fire_upgrade = 1
+			}
+			icon = "gfx/interface/technologies/PER/LAND/SPG1.dds"
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_artillery_chassis_0
+			variant_name = "Raad-1"
+			amount = 60
+		}
+
+		 create_equipment_variant = {
+		 	name = "Fajr-1"
+		 	type = medium_tank_rocket_chassis_0
+		 	parent_version = 1
+		 	modules = {
+		 		main_armament_slot = art_med_rocket_gen1
+				turret_type_slot = tank_base_tank_turret
+				reload_type_slot = eight_missile_pack
+				ammunition_load_slot = artillery_medium_ammo_1
+		 		suspension_type_slot = tank_wheeled_suspension_medium
+		 		engine_type_slot = afv_gasoline_engine_gen2
+
+		 		special_type_slot_1 = fire_ammo_1
+		 		special_type_slot_4 = tank_battlestation_1
+		 	}
+		 	upgrades = {
+		 		tank_nsb_fire_upgrade = 1
+		 	}
+		 	obsolete = yes
+		 	icon = "GFX_medium_tank_artillery_chassis_0_t_r"
+		 }
+		 add_equipment_to_stockpile = {
+		 	type = medium_tank_rocket_chassis_0
+		 	variant_name = "Fajr-1"
+		 	amount = 857
+		 }
+
+		 create_equipment_variant = {
+		 	name = "Fajr-3"
+		 	type = medium_tank_rocket_chassis_0
+		 	parent_version = 2
+		 	modules = {
+		 		main_armament_slot = art_med_rocket_gen1
+				turret_type_slot = tank_base_tank_turret
+				reload_type_slot = eight_missile_pack
+				ammunition_load_slot = artillery_medium_ammo_1
+		 		suspension_type_slot = tank_wheeled_suspension_medium
+		 		engine_type_slot = afv_gasoline_engine_gen2
+
+		 		special_type_slot_1 = mine_ammo_1
+		 		special_type_slot_2 = cluster_ammo_1
+		 		special_type_slot_4 = tank_battlestation_1
+		 	}
+		 	upgrades = {
+		 		tank_nsb_fire_upgrade = 2
+		 	}
+		 	obsolete = yes
+		 	icon = "GFX_medium_tank_artillery_chassis_1_t_r"
+		 }
+		 add_equipment_to_stockpile = {
+		 	type = medium_tank_rocket_chassis_0
+		 	variant_name = "Fajr-3"
+		 	amount = 20
+		 }
+
+		create_equipment_variant = {
+			name = "Raad-2"
+			type = medium_tank_artillery_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = art_med_gun_gen1
+				reload_type_slot = automatic_loading
+				ammunition_load_slot = artillery_medium_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				engine_type_slot = tank_diesel_engine_gen2
+
+				special_type_slot_1 = empty
+				special_type_slot_2 = cluster_ammo_1
+				special_type_slot_3 = empty
+				special_type_slot_4 = tank_battlestation_1
+			}
+			upgrades = {
+				tank_nsb_fire_upgrade = 2
+			}
+			icon = "gfx/interface/technologies/PER/LAND/SPG2.dds"
+		}
+
+		complete_special_project = sp:sp_armoured_vehicle_project
+
+		else = {
+			set_technology = {
+				MBT_1 = 1
+				MBT_2 = 1
+				MBT_3 = 1
+				Early_APC = 1
+				APC_1 = 1
+				IFV_1 = 1
+				artillery_0 = 1
+				Arty_upgrade_1 = 1
+				SP_arty_0 = 1
+				SP_R_arty_0 = 1
+
+				SP_arty_1 = 1
+				SP_R_arty_1 = 1
+
+				Anti_Air_0 = 1
+				SP_Anti_Air_0 = 1
+				Rec_tank_0 = 1
+				attack_helicopter1 = 1
+			}
+		}
+	}
+	set_technology = {
+			corvette_hull_1 = 1
+			corvette_hull_2 = 1
+			corvette_hull_3 = 1
+
+			frigate_hull_1 = 1
+			frigate_hull_2 = 1
+
+			destroyer_hull_1 = 1
+
+			helicopter_operator_hull_1 = 1
+
+			attack_submarine_hull_1 = 1
+			attack_submarine_hull_2 = 1
+
+			aircraft_carrier_engineering = 1
+			aircraft_heli_engineering_1 = 1
+
+			tech_submarine_engineering = 1
+
+			tech_naval_systems_engineering = 1
+			tech_power_systems = 1
+
+			tech_combat_support_systems = 1
+			tech_fire_control = 1
+			tech_combat_radar = 1
+			tech_combat_radar_1 = 1
+			tech_combat_sonar = 1
+
+			tech_early_naval_weapon_systems = 1
+			tech_naval_weapon_systems = 1
+			tech_light_guns = 1
+
+			tech_point_defense_system = 1
+
+			tech_turret_missiles_surface = 1
+			tech_turret_missiles_aa = 1
+			tech_vls_surface = 1
+			tech_vls_aa = 1
+
+			tech_torpedoes = 1
+
+			tech_landing_craft = 1
+		}
+
+		#Bayandor Class https://en.wikipedia.org/wiki/Bayandor-class_corvette
+		create_equipment_variant = {
+			name = "Bayandor Class"
+			type = corvette_hull_1
+			name_group = PER_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_radar_1
+				fixed_ship_auxillary_slot = module_asm_1
+				fixed_ship_battery_slot = module_76mm_gun_1
+				front_1_custom_slot = module_torpedoes_1
+				rear_1_custom_slot = module_chain_gun
+
+			}
+		}
+		#Hamzeh Class https://en.wikipedia.org/wiki/IRIS_Hamzeh_(802) <----1935 lmao
+		create_equipment_variant = {
+			name = "Hamzeh Class"
+			type = corvette_hull_1
+			name_group = PER_DD_HISTORICAL
+			parent_version = 1
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_radar_1
+				fixed_ship_auxillary_slot = module_chain_gun
+				fixed_ship_battery_slot = module_76mm_gun_1
+				front_1_custom_slot = empty
+				rear_1_custom_slot = empty
+			}
+		}
+		#Kaman Class https://en.wikipedia.org/wiki/La_Combattante_IIa-class_fast_attack_craft#Kaman
+		create_equipment_variant = {
+			name = "Kaman Class"
+			type = corvette_hull_1
+			name_group = PER_DD_HISTORICAL
+			parent_version = 1
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_radar_1
+				fixed_ship_auxillary_slot = module_chain_gun
+				fixed_ship_battery_slot = module_76mm_gun_1
+				front_1_custom_slot = module_minelaying
+				rear_1_custom_slot = module_asm_1
+			}
+			icon = "gfx/interface/technologies/PER/NAV/CRV1_Kaman.dds"
+		}
+		#Sina Class https://en.wikipedia.org/wiki/Sina-class_fast_attack_craft
+		create_equipment_variant = {
+			name = "Sina Class"
+			type = corvette_hull_3
+			name_group = PER_DD_HISTORICAL
+			parent_version = 1
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_3
+				fixed_ship_auxillary_slot = module_asm_2
+				fixed_ship_battery_slot = module_76mm_gun_3
+				front_1_custom_slot = module_asm_2
+				rear_1_custom_slot = module_chain_gun
+			}
+			icon = "gfx/interface/technologies/PER/NAV/CRV1_Kaman.dds"
+		}
+		#Alvand Class https://en.wikipedia.org/wiki/Alvand-class_frigate
+		create_equipment_variant = {
+			name = "Alvand Class"
+			type = frigate_hull_1
+			name_group = PER_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_radar_1
+				fixed_ship_auxillary_slot_2 = module_asm_1
+				fixed_ship_auxillary_slot_1 = module_torpedoes_1
+				fixed_ship_auxillary_slot = module_chain_gun
+				fixed_ship_battery_slot = module_76mm_battery
+				front_1_custom_slot = module_chain_gun
+				rear_1_custom_slot = module_anti_submarine_mortar
+
+			}
+		}
+		#Hengam Class https://en.wikipedia.org/wiki/Hengam-class_landing_ship
+		create_equipment_variant = {
+			name = "Hengam Class"
+			type = helicopter_operator_hull_1
+			name_group = PER_CV_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_surface_diesel_power
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_1
+				fixed_ship_auxillary_slot_3 = empty
+				fixed_ship_auxillary_slot_2 = empty
+				fixed_ship_auxillary_slot = module_anti_submarine_mortar
+				fixed_ship_battery_slot = module_light_flight_deck_1
+				front_1_custom_slot = module_helipads_1
+				mid_1_custom_slot = empty
+				rear_1_custom_slot = empty
+			}
+		}
+
+		complete_special_project = sp:sp_naval_vessel_project
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+
+			early_airframe_designs = 1
+			gen_3_light = 1
+			gen_3_medium = 1
+
+			flying_wing_design = 1
+
+			engines_2 = 1
+
+			refueling_1 = 1
+
+			avionics_1 = 1
+
+			drone_1 = 1
+			suicide_drone_1 = 1
+
+			redundant_1 = 1
+
+			early_weapons = 1
+			air_weapons_1 = 1
+			countermeasures_1 = 1
+
+			ag_weapons_1 = 1
+
+			naval_weapons_1 = 1
+			special_mad_1 = 1
+
+		}
+
+		create_equipment_variant = { #dangerzone
+			name = "HESA F-14A Tomcat"
+			type = medium_plane_fighter_airframe_1
+			parent_version = 1
+			modules = {
+				fixed_main_weapon_slot = weap_a2a_hardpoint_1
+				fixed_gun_slot = weap_multi_gun_2
+				engine_type_slot = engine_jet_double_2
+				avionics_type_slot = avionics_manned_2
+				wingform_type_slot = wing_variable
+				special_slot_type_1 = spec_countermeasures_1
+				special_slot_type_2 = spec_refuel_3
+				fixed_auxiliary_weapon_slot_1 = weap_mp_light_hardpoint_1
+			}
+			upgrades = {
+				plane_bba_radar_upgrade = 2
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/PER/AIR/INT.dds"
+			model = "PER_F14A_entity"
+		}
+		create_equipment_variant = {
+			name = "HESA Azarakhsh"
+			type = small_plane_airframe_1
+			parent_version = 2
+			modules = {
+				fixed_main_weapon_slot = weap_a2a_hardpoint_1
+				fixed_gun_slot = weap_multi_gun_2
+				engine_type_slot = engine_light_double_2
+				avionics_type_slot = avionics_manned_2
+				wingform_type_slot = wing_swept
+				special_slot_type_1 = spec_countermeasures_1
+			}
+			icon = "gfx/interface/technologies/KOR/AIR/KF5E.dds"
+			model = "USA_small_plane_airframe_1_entity"
+		}
+
+		complete_special_project = sp:sp_aircraft_project
+
+		else = {
+
+			set_technology = {
+
+				early_fighter = 1
+
+				AS_Fighter1 = 1
+
+				MR_Fighter1 = 1
+
+				L_Strike_fighter1 = 1
+
+				early_bomber = 1
+
+				transport_plane1 = 1
+				transport_plane2 = 1
+
+				naval_plane1 = 1
+			}
+		}
+
+	}
+	#Cyber
+	add_to_array = { cyber_targets = USA }
+	add_to_array = { cyber_targets = ENG }
+	add_to_array = { cyber_targets = CHI }
+	add_to_array = { cyber_targets = FRA }
+	add_to_array = { cyber_targets = GER }
+	add_to_array = { cyber_targets = ISR }
+	add_to_array = { cyber_targets = SOV }
+	add_to_array = { cyber_targets = SAU }
+	add_to_array = { cyber_targets = TUR }
+
+	#Influence system
+	add_to_array = { PER.influence_targets = BHR }
+	add_to_array = { PER.influence_targets = SAU }
+	add_to_array = { PER.influence_targets = UAE }
+	add_to_array = { PER.influence_targets = IRQ }
+	add_to_array = { PER.influence_targets = SYR }
+	add_to_array = { PER.influence_targets = LEB }
+	add_to_array = { PER.influence_targets = AFG }
+	add_to_array = { PER.influence_targets = HAM }
+	add_to_array = { PER.influence_targets = HEZ }
+	add_to_array = { PER.influence_targets = HOU }
+	add_to_array = { PER.influence_targets = YEM }
+	add_to_array = { PER.influence_targets = SUD }
+	add_to_array = { PER.influence_targets = EGY }
+
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 402 }
+	add_to_array = { influence_array = PAK.id }
+	add_to_array = { influence_array_val = 4 }
+	add_to_array = { influence_array = SOV.id }
+	add_to_array = { influence_array_val = 42 }
+	add_to_array = { influence_array = CHI.id }
+	add_to_array = { influence_array_val = 5 }
+	add_to_array = { influence_array = RAJ.id }
+	add_to_array = { influence_array_val = 31 }
+	add_to_array = { influence_array = FRA.id }
+	add_to_array = { influence_array_val = 2 }
+	startup_influence = yes
+
+	### Economy
+	set_variable = { var = debt value = 146.465 }
+	set_variable = { var = treasury value = 18.6 }
+	set_variable = { var = corporate_tax_rate value = 10 }
+	set_variable = { var = population_tax_rate value = 20 }
+	set_variable = { var = int_investments value = 0 }
+
+	# Investment System
+	add_to_array = { PER.investment_targets = BHR } # Bahrain
+	add_to_array = { PER.investment_targets = SAU } # Saudi Arabia
+	add_to_array = { PER.investment_targets = UAE } # United Arab Emirates
+	add_to_array = { PER.investment_targets = IRQ } # Iraq
+	add_to_array = { PER.investment_targets = SYR } # Syria
+	add_to_array = { PER.investment_targets = LEB } # Lebanon
+	add_to_array = { PER.investment_targets = EGY } # Egypt
+	add_to_array = { PER.investment_targets = ALG } # Algeria
+	add_to_array = { PER.investment_targets = COM } # Comoros
+	add_to_array = { PER.investment_targets = DJI } # Djibouti
+	add_to_array = { PER.investment_targets = JOR } # Jordan
+	add_to_array = { PER.investment_targets = KUW } # Kuwait
+	add_to_array = { PER.investment_targets = ARG } # Argentina
+	add_to_array = { PER.investment_targets = CHI } # China
+	add_to_array = { PER.investment_targets = SOV } # Russia
+	add_to_array = { PER.investment_targets = ARM } # Armenia
+	add_to_array = { PER.investment_targets = TAJ } # Tajikistan
+	add_to_array = { PER.investment_targets = NKO } # North Korea
+	add_to_array = { PER.investment_targets = BOS } # Bosnia
+	add_to_array = { PER.investment_targets = VIE } # Vietnam
+	add_to_array = { PER.investment_targets = RAJ } # India
+	add_to_array = { PER.investment_targets = PAK } # Pakistan
+	add_to_array = { PER.investment_targets = QAT } # Qatar
+	add_to_array = { PER.investment_targets = TUN } # Tunisia
+
+	set_country_flag = investment_targets_are_set_up
+
+	set_popularities = {
+		communism = 79.3
+		democratic = 6.5
+		neutrality = 12.4
+		nationalist = 1.8
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "1997.6.8"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	### Party Popularities 3.5
+	set_variable = { party_pop_array^0 = 0.085 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.080 } #conservatism 2
+	set_variable = { party_pop_array^2 = 0.021 } #liberalism
+	set_variable = { party_pop_array^3 = 0.035 } #socialism
+	set_variable = { party_pop_array^4 = 0.002 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.021 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0.00 } #Conservative
+	set_variable = { party_pop_array^7 = 0.000 } #Autocracy
+	set_variable = { party_pop_array^8 = 0.385 } #Mod_Vilayat_e_Faqih -> Reformists
+	set_variable = { party_pop_array^9 = 0.365 } #Vilayat_e_Faqih -> Principalists
+	set_variable = { party_pop_array^10 = 0.00 } #Kingdom
+	set_variable = { party_pop_array^11 = 0.00 } #Caliphate
+	set_variable = { party_pop_array^12 = 0.00 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0.00 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.029 } #Neutral_conservatism 3
+	set_variable = { party_pop_array^15 = 0.00 } #oligarchism
+	set_variable = { party_pop_array^16 = 0.045 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0.00 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0.018 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0.011 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0.002 } #Nat_Populism 1
+	set_variable = { party_pop_array^21 = 0.001 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0.00 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0.025 } #Monarchist
+
+	### Ruling Party
+	add_to_array = { ruling_party = 8 }
+
+	startup_politics = yes
+
+	#create_country_leader = {
+	#	name = "Sayyid Mohammad Khatami"
+	#	picture = "Mohammad_Khatami.dds"
+	#	ideology = Mod_Vilayat_e_Faqih
+	#	traits = {
+	#		emerging_Mod_Vilayat_e_Faqih
+	#		cleric
+	#		sayyid
+	#		emerging_Mod_Vilayat_e_Faqih
+	#	}
+	#}
+
+	create_country_leader = {
+		name = "Sayyid Ali Hosseini Khamenei"
+		picture = "sayyid_ali_hosseini_khamenei.dds"
+		ideology = Vilayat_e_Faqih
+		desc = "PER_khamenei_desc"
+		traits = {
+			emerging_Vilayat_e_Faqih
+			cleric
+			geopolitical_thinker
+			stubborn
+			anti_zionist
+		}
+	}
+	set_country_flag = party0_banned
+	set_country_flag = party1_banned
+	set_country_flag = party2_banned
+	set_country_flag = party3_banned
+	set_country_flag = party4_banned
+	set_country_flag = party5_banned
+	set_country_flag = party6_banned
+	set_country_flag = party7_banned
+	set_country_flag = party8_banned
+	set_country_flag = party11_banned
+	set_country_flag = party12_banned
+	set_country_flag = party13_banned
+	set_country_flag = party14_banned
+	set_country_flag = party14_banned
+	set_country_flag = party15_banned
+	set_country_flag = party16_banned
+	set_country_flag = party17_banned
+	set_country_flag = party16_banned
+	set_country_flag = party17_banned
+	set_country_flag = party18_banned
+	set_country_flag = party19_banned
+	set_country_flag = party20_banned
+	set_country_flag = party21_banned
+	set_country_flag = party22_banned
+	set_country_flag = party23_banned
+	set_country_flag = party24_banned
+
+	recruit_character = PER_sajjad_kouchaki
+	recruit_character = PER_hamzeh_ali_kaviani
+	recruit_character = PER_kioumars_heydari
+	recruit_character = PER_mohammad_pakpour
+	recruit_character = PER_aziz_nasirzadeh
+	recruit_character = PER_alireza_asgari
+	recruit_character = PER_mehnaz_bezazi
+	recruit_character = PER_mahmoud_atai
+	recruit_character = PER_houshang_samadi
+	recruit_character = PER_ahmadreza_pourdastan
+	recruit_character = PER_mohammad_jafari
+	recruit_character = PER_mohammad_bagheri
+	recruit_character = PER_ali_shamkhani
+	recruit_character = PER_amir_hajizadeh
+	recruit_character = PER_abdolrahim_mousavi
+	recruit_character = PER_habibollah_sayyari
+	recruit_character = PER_nasser_mohammadifar
+	recruit_character = PER_shahram_irani
+	recruit_character = PER_ali_fadavi
+	recruit_character = PER_reza_pardis
+	recruit_character = PER_hassan_saadi
+	recruit_character = PER_jalil_zandi
+	recruit_character = PER_hossein_khanzadi
+	recruit_character = PER_amir_hatami
+	recruit_character = PER_farzad_esmaili
+	recruit_character = PER_ataollah_salehi
+	recruit_character = PER_mohammad_hossein_dadras
+	recruit_character = PER_mostafa_izadi
+	recruit_character = PER_mohammad_hejazi
+	recruit_character = PER_ali_najafi
+	recruit_character = PER_qasem_soleimani
+	#Iranian Scientists:
+	recruit_character = PER_daryush_rezaieenejad
+	recruit_character = PER_fathollah_ommi
+	recruit_character = PER_fereydoun_abbasi
+	recruit_character = PER_hamid_zeraatgar
+	recruit_character = PER_majid_abbaspour
+	recruit_character = PER_masoud_ali_mohammadi
+	recruit_character = PER_mohammad_nabi_sarbolouki
+	recruit_character = PER_mohammdreza_seddighi_saber
+	recruit_character = PER_mohsen_fakhrizade
+	recruit_character = PER_ramin_kouhi_kamali
+	recruit_character = PER_karen_abrinia
+
+	set_temp_variable = { principalists_pop = party_pop_array^9 }
+	set_temp_variable = { reformists_pop = party_pop_array^8 }
+	set_temp_variable = { sum_parties = principalists_pop }
+	add_to_temp_variable = { sum_parties = reformists_pop }
+	set_temp_variable = { temp_var_hundred = 100 }
+	divide_temp_variable = { temp_var_hundred = sum_parties }
+	multiply_temp_variable = { principalists_pop = temp_var_hundred }
+	set_variable = {
+		principalists_popularity_percent = principalists_pop
+	}
+
+
+	if = {
+		limit = { has_dlc = "La Resistance" }
+		create_operative_leader = {
+			name = "Mohammad"
+			GFX = GFX_portrait_mohammad
+			traits = { operative_spyhunter operative_revolutionary }
+			bypass_recruitment = no
+			available_to_spy_master = no
+			nationalities = { PER }
+		}
+		create_operative_leader = {
+			name = "Ali"
+			GFX = GFX_portrait_ali
+			traits = { }
+			bypass_recruitment = no
+			available_to_spy_master = no
+			nationalities = { PER }
+		}
+		create_operative_leader = {
+			name = "Charlotte Waller"
+			GFX = GFX_portrait_charlotte_waller
+			traits = { operative_double_agent operative_well_groomed }
+			bypass_recruitment = no
+			available_to_spy_master = yes
+			female = yes
+			nationalities = { ENG PER }
+		}
+		create_operative_leader = {
+			name = "Mohsen"
+			GFX = GFX_portrait_mohsen
+			traits = { }
+			bypass_recruitment = no
+			available_to_spy_master = yes
+			nationalities = { PER }
+		}
+		create_operative_leader = {
+			name = "Morteza Faraji"
+			GFX = GFX_portrait_morteza_faraji
+			traits = { operative_commando }
+			bypass_recruitment = no
+			available_to_spy_master = no
+			nationalities = { PER }
+		}
+		create_operative_leader = {
+			name = "Saeed Shahriari"
+			GFX = GFX_portrait_saeed_shahriari
+			traits = { operative_web_of_lies }
+			bypass_recruitment = no
+			available_to_spy_master = no
+			nationalities = { PER }
+		}
+	}
+}
+
+##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 7.000 }
+	set_variable = { var = debt value = 45.000 }
+	set_variable = { var = treasury value = 15 }
+	set_variable = { var = corporate_tax_rate value = 25 }
+	set_variable = { var = population_tax_rate value = 10 }
+	set_variable = { var = int_investments value = 5 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 500 }
+	}
+	set_variable = { overall_productivity = 500 }
+
+	### Nuclear enrichment update ###
+	set_variable = { enrichment_facilities = 5 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		communism = 82.0
+		democratic = 5.0
+		neutrality = 10.0
+		nationalist = 3.0
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "2024.7.5"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^9 = 0.450 }   #Vilayat_e_Faqih (Supreme Leader faction)
+	set_variable = { party_pop_array^7 = 0.200 }   #Autocracy (IRGC hardliners)
+	set_variable = { party_pop_array^6 = 0.150 }   #Conservative (pragmatists/Pezeshkian)
+	set_variable = { party_pop_array^2 = 0.050 }   #liberalism (reformists)
+	set_variable = { party_pop_array^1 = 0.050 }   #conservatism (moderates)
+	set_variable = { party_pop_array^20 = 0.030 }  #Nat_Populism (nationalists)
+	set_variable = { party_pop_array^4 = 0.020 }   #Communist-State (Tudeh remnants)
+	set_variable = { party_pop_array^16 = 0.050 }  #libertarians
+
+	add_to_array = { ruling_party = 9 }             #Vilayat_e_Faqih (Supreme Leader)
+	add_to_array = { gov_coalition_array = 7 }       #Autocracy (IRGC)
+	add_to_array = { gov_coalition_array = 6 }       #Conservative (pragmatists)
+
+	# 2024 presidential election results
+	set_variable = { party_pop_elect_array^6 = 0.537 }  #Pezeshkian (reformist-leaning)
+	set_variable = { party_pop_elect_array^7 = 0.446 }  #Jalili (hardliner)
+
+	startup_politics = yes
+
+	### 2026 National Spirits ###
+	add_ideas = {
+		md2026_per_international_sanctions
+	}
+
+	### Country Leader: Sayyid Ali Hosseini Khamenei ###
+	create_country_leader = {
+		name = "Sayyid Ali Hosseini Khamenei"
+		picture = "sayyid_ali_hosseini_khamenei.dds"
+		ideology = Vilayat_e_Faqih
+		traits = {
+			emerging_Vilayat_e_Faqih
+			cleric
+			geopolitical_thinker
+			stubborn
+			anti_zionist
+			elder
+		}
+	}
+}

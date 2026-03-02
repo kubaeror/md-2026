@@ -1,0 +1,555 @@
+###################################
+# MD2026 Middle East Events
+# Syria reconstruction, Israel-Palestine, Iran nuclear, Yemen
+###################################
+
+add_namespace = md2026_mideast
+add_namespace = md2026_mideast_news
+
+###################################
+# md2026_mideast.1 - Syria: Post-Assad Reconstruction
+# Auto-fires for SYR in 2026 bookmark
+###################################
+country_event = {
+	id = md2026_mideast.1
+	title = md2026_mideast.1.t
+	desc = md2026_mideast.1.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SYR
+		date > 2026.3.1
+		NOT = { has_country_flag = md2026_syria_reconstruction_started }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	# Option A: Pursue secular reconstruction
+	option = {
+		name = md2026_mideast.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.1.o1 executed"
+
+		add_political_power = 75
+		add_stability = 0.10
+
+		set_country_flag = md2026_syria_reconstruction_started
+		set_country_flag = md2026_syria_secular_path
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: Islamic-oriented governance
+	option = {
+		name = md2026_mideast.1.o2
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.1.o2 executed"
+
+		add_political_power = 50
+		add_stability = 0.05
+		add_war_support = 0.05
+
+		set_country_flag = md2026_syria_reconstruction_started
+		set_country_flag = md2026_syria_islamic_path
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option C: Power-sharing fragmentation
+	option = {
+		name = md2026_mideast.1.o3
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.1.o3 executed"
+
+		add_stability = -0.10
+		add_political_power = -50
+
+		set_country_flag = md2026_syria_reconstruction_started
+
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+###################################
+# md2026_mideast.2 - Syria: International Aid Conference
+# Follows reconstruction decision
+###################################
+country_event = {
+	id = md2026_mideast.2
+	title = md2026_mideast.2.t
+	desc = md2026_mideast.2.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SYR
+		has_country_flag = md2026_syria_reconstruction_started
+		NOT = { has_country_flag = md2026_syria_aid_conference }
+	}
+
+	mean_time_to_happen = {
+		months = 8
+	}
+
+	# Option A: Accept Western aid with conditions
+	option = {
+		name = md2026_mideast.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.2.o1 executed"
+
+		add_political_power = 50
+		add_stability = 0.05
+
+		add_opinion_modifier = { target = USA modifier = improve_relation }
+		add_opinion_modifier = { target = ENG modifier = improve_relation }
+		add_opinion_modifier = { target = FRA modifier = improve_relation }
+
+		set_country_flag = md2026_syria_aid_conference
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 20
+				has_country_flag = md2026_syria_secular_path
+			}
+		}
+	}
+
+	# Option B: Seek regional Arab support
+	option = {
+		name = md2026_mideast.2.o2
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.2.o2 executed"
+
+		add_political_power = 75
+		add_stability = 0.03
+
+		add_opinion_modifier = { target = SAU modifier = improve_relation }
+		add_opinion_modifier = { target = UAE modifier = improve_relation }
+		add_opinion_modifier = { target = TUR modifier = improve_relation }
+
+		set_country_flag = md2026_syria_aid_conference
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# md2026_mideast.10 - Israel: Gaza Situation Evolves
+# Auto-fires for ISR
+###################################
+country_event = {
+	id = md2026_mideast.10
+	title = md2026_mideast.10.t
+	desc = md2026_mideast.10.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ISR
+		date > 2026.6.1
+		NOT = { has_country_flag = md2026_isr_gaza_decision }
+	}
+
+	mean_time_to_happen = {
+		months = 4
+	}
+
+	# Option A: Continue military operations
+	option = {
+		name = md2026_mideast.10.o1
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.10.o1 executed"
+
+		add_war_support = 0.10
+		add_stability = -0.10
+		add_political_power = -75
+		army_experience = 15
+
+		set_country_flag = md2026_isr_gaza_decision
+
+		every_country = {
+			limit = {
+				OR = {
+					tag = EGY
+					tag = SAU
+					tag = UAE
+					tag = TUR
+				}
+			}
+			add_opinion_modifier = { target = ISR modifier = embargo }
+		}
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: Pursue ceasefire and negotiations
+	option = {
+		name = md2026_mideast.10.o2
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.10.o2 executed"
+
+		add_stability = 0.10
+		add_political_power = 50
+		add_war_support = -0.10
+
+		set_country_flag = md2026_isr_gaza_decision
+		set_country_flag = md2026_isr_ceasefire
+
+		add_opinion_modifier = { target = USA modifier = improve_relation }
+		add_opinion_modifier = { target = EGY modifier = improve_relation }
+
+		hidden_effect = {
+			news_event = { id = md2026_mideast_news.1 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option C: Expand Abraham Accords diplomacy
+	option = {
+		name = md2026_mideast.10.o3
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.10.o3 executed"
+
+		add_political_power = 100
+		add_stability = 0.05
+
+		set_country_flag = md2026_isr_gaza_decision
+
+		add_opinion_modifier = { target = SAU modifier = improve_relation }
+		reverse_add_opinion_modifier = { target = SAU modifier = improve_relation }
+		add_opinion_modifier = { target = UAE modifier = improve_relation }
+		reverse_add_opinion_modifier = { target = UAE modifier = improve_relation }
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+###################################
+# md2026_mideast.20 - Iran: Nuclear Program Crossroads
+# Auto-fires for PER
+###################################
+country_event = {
+	id = md2026_mideast.20
+	title = md2026_mideast.20.t
+	desc = md2026_mideast.20.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = PER
+		date > 2026.6.1
+		NOT = { has_country_flag = md2026_iran_nuclear_decision }
+	}
+
+	mean_time_to_happen = {
+		months = 8
+	}
+
+	# Option A: Accelerate enrichment - pursue breakout capability
+	option = {
+		name = md2026_mideast.20.o1
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.20.o1 executed"
+
+		add_stability = -0.10
+		add_war_support = 0.10
+		add_political_power = -50
+
+		set_country_flag = md2026_iran_nuclear_decision
+		set_country_flag = md2026_iran_nuclear_breakout
+
+		ISR = {
+			country_event = { id = md2026_mideast.21 days = 14 }
+		}
+		USA = {
+			country_event = { id = md2026_mideast.22 days = 14 }
+		}
+
+		hidden_effect = {
+			news_event = { id = md2026_mideast_news.2 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option B: Negotiate new JCPOA with the West
+	option = {
+		name = md2026_mideast.20.o2
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.20.o2 executed"
+
+		add_political_power = 75
+		add_stability = 0.05
+
+		set_country_flag = md2026_iran_nuclear_decision
+
+		add_opinion_modifier = { target = USA modifier = improve_relation }
+		add_opinion_modifier = { target = ENG modifier = improve_relation }
+		add_opinion_modifier = { target = FRA modifier = improve_relation }
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option C: Maintain strategic ambiguity
+	option = {
+		name = md2026_mideast.20.o3
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.20.o3 executed"
+
+		add_political_power = 25
+
+		set_country_flag = md2026_iran_nuclear_decision
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# md2026_mideast.21 - Israel: Iran Nuclear Breakout
+# ISR responds to Iranian nuclear escalation
+###################################
+country_event = {
+	id = md2026_mideast.21
+	title = md2026_mideast.21.t
+	desc = md2026_mideast.21.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = ISR
+	}
+
+	# Option A: Preemptive strike on nuclear facilities
+	option = {
+		name = md2026_mideast.21.o1
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.21.o1 executed"
+
+		add_war_support = 0.15
+		add_stability = -0.15
+		add_political_power = -100
+		air_experience = 25
+
+		create_wargoal = {
+			target = PER
+			type = puppet_wargoal_focus
+		}
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: Diplomatic pressure through allies
+	option = {
+		name = md2026_mideast.21.o2
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.21.o2 executed"
+
+		add_political_power = -50
+
+		add_opinion_modifier = { target = PER modifier = embargo }
+		reverse_add_opinion_modifier = { target = PER modifier = embargo }
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option C: Accelerate own deterrence
+	option = {
+		name = md2026_mideast.21.o3
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.21.o3 executed"
+
+		add_war_support = 0.05
+		add_political_power = -75
+
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+###################################
+# md2026_mideast.22 - USA: Iran Nuclear Breakout
+# USA responds to Iranian nuclear escalation
+###################################
+country_event = {
+	id = md2026_mideast.22
+	title = md2026_mideast.22.t
+	desc = md2026_mideast.22.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+	}
+
+	# Option A: Maximum pressure sanctions
+	option = {
+		name = md2026_mideast.22.o1
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.22.o1 executed"
+
+		add_political_power = -50
+
+		add_opinion_modifier = { target = PER modifier = embargo }
+		reverse_add_opinion_modifier = { target = PER modifier = embargo }
+
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Option B: Support Israeli action
+	option = {
+		name = md2026_mideast.22.o2
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.22.o2 executed"
+
+		add_war_support = 0.05
+		add_political_power = -100
+
+		add_opinion_modifier = { target = ISR modifier = improve_relation }
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option C: Accept Iran as a threshold state
+	option = {
+		name = md2026_mideast.22.o3
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.22.o3 executed"
+
+		add_stability = -0.05
+		add_political_power = -25
+
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+###################################
+# md2026_mideast.30 - Yemen: Path Forward
+# Auto-fires for YEM
+###################################
+country_event = {
+	id = md2026_mideast.30
+	title = md2026_mideast.30.t
+	desc = md2026_mideast.30.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = YEM
+		date > 2026.6.1
+		NOT = { has_country_flag = md2026_yemen_decision }
+	}
+
+	mean_time_to_happen = {
+		months = 10
+	}
+
+	# Option A: National unity government
+	option = {
+		name = md2026_mideast.30.o1
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.30.o1 executed"
+
+		add_stability = 0.15
+		add_political_power = 75
+
+		set_country_flag = md2026_yemen_decision
+
+		add_opinion_modifier = { target = SAU modifier = improve_relation }
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: Continue Houthi dominance
+	option = {
+		name = md2026_mideast.30.o2
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.30.o2 executed"
+
+		add_stability = -0.05
+		add_war_support = 0.10
+		add_political_power = 25
+
+		set_country_flag = md2026_yemen_decision
+
+		add_opinion_modifier = { target = PER modifier = improve_relation }
+		add_opinion_modifier = { target = SAU modifier = embargo }
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+###################################
+# NEWS EVENTS
+###################################
+
+# Israel-Palestine ceasefire
+news_event = {
+	id = md2026_mideast_news.1
+	title = md2026_mideast_news.1.t
+	desc = md2026_mideast_news.1.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_mideast_news.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_mideast_news.1.o1 executed"
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+# Iran nuclear crisis
+news_event = {
+	id = md2026_mideast_news.2
+	title = md2026_mideast_news.2.t
+	desc = md2026_mideast_news.2.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_mideast_news.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_mideast_news.2.o1 executed"
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}

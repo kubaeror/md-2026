@@ -1,0 +1,999 @@
+﻿capital = 602
+2000.1.1 = {
+	set_cosmetic_tag = NKO_AUTH_S
+	set_country_flag = dynamic_flag
+	set_country_flag = dynamic_rebel_flag
+	set_variable = { gdp_per_capita = 2.100 }
+
+
+
+
+
+
+	set_naval_oob = "NKO_2000_naval_mtg"
+
+	set_technology = {
+		corvette_hull_1 = 1
+		corvette_hull_2 = 1
+
+		frigate_hull_1 = 1
+		frigate_hull_2 = 1
+
+		tech_submarine_engineering = 1
+
+		attack_submarine_hull_1 = 1
+
+		missile_submarine_hull_1 = 1
+
+		tech_naval_systems_engineering = 1
+		tech_power_systems = 1
+		tech_power_systems_1 = 1
+
+		tech_combat_support_systems = 1
+		tech_fire_control = 1
+		tech_fire_control_1 = 1
+		tech_combat_radar = 1
+		tech_combat_radar_1 = 1
+		tech_combat_sonar = 1
+		tech_combat_sonar_1 = 1
+
+		tech_early_naval_weapon_systems = 1
+		tech_naval_weapon_systems = 1
+		tech_light_guns = 1
+		tech_light_guns_1 = 1
+
+		tech_point_defense_system = 1
+
+		tech_turret_missiles_surface = 1
+		tech_turret_missiles_surface_1 = 1
+
+		tech_turret_missiles_aa = 1
+		tech_turret_missiles_aa_1 = 1
+
+		tech_vls_surface = 1
+		tech_vls_surface_1 = 1
+
+		tech_vls_aa = 1
+		tech_vls_aa_1 = 1
+
+		tech_torpedoes = 1
+		tech_torpedoes_1 = 1
+
+		tech_landing_craft = 1
+	}
+
+	#Sariwon Class https://en.wikipedia.org/wiki/Sariwon-class_corvette
+	create_equipment_variant = {
+		name = "Sariwon Class"
+		type = corvette_hull_1
+		name_group = NKO_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_engine_slot = module_light_surface_diesel_power
+			fixed_ship_fire_control_system_slot = module_analog_fire_control
+			fixed_ship_radar_slot = module_radar_1
+			fixed_ship_auxillary_slot = module_chain_gun
+			fixed_ship_battery_slot = module_ciws_1
+			front_1_custom_slot = empty
+			rear_1_custom_slot = module_asm_1
+		}
+	}
+
+	#Najin Class https://en.wikipedia.org/wiki/Najin-class_frigate
+	create_equipment_variant = {
+		name = "Najin Class"
+		type = frigate_hull_1
+		#name_group = NKO_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_engine_slot = module_light_surface_diesel_power
+			fixed_ship_fire_control_system_slot = module_analog_fire_control
+			fixed_ship_radar_slot = module_sonar_1
+			fixed_ship_auxillary_slot_2 = module_anti_submarine_mortar
+			fixed_ship_auxillary_slot_1 = module_aa_missiles_1
+			fixed_ship_auxillary_slot = module_ciws_1
+			fixed_ship_battery_slot = module_127mm_guns_1
+			front_1_custom_slot = module_127mm_guns_1
+			rear_1_custom_slot = module_asm_1
+		}
+	}
+
+	#Soho Class https://en.wikipedia.org/wiki/Soho-class_frigate
+	create_equipment_variant = {
+		name = "Soho Class"
+		type = frigate_hull_2
+		#name_group = NKO_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_engine_slot = module_light_surface_diesel_power
+			fixed_ship_fire_control_system_slot = module_analog_fire_control
+			fixed_ship_radar_slot = module_radar_1
+			fixed_ship_auxillary_slot_2 = module_anti_submarine_mortar
+			fixed_ship_auxillary_slot_1 = module_aa_missiles_1
+			fixed_ship_auxillary_slot = module_ciws_1
+			fixed_ship_battery_slot = module_127mm_guns_1
+			front_1_custom_slot = module_asm_1
+			rear_1_custom_slot = module_asm_1
+		}
+	}
+
+	#Sang-O Class https://en.wikipedia.org/wiki/Sang-O-class_submarine
+	create_equipment_variant = {
+		name = "Sang-O Class"
+		type = attack_submarine_hull_1
+		#name_group = NKO_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_engine_slot = module_sub_diesel_electric_power
+			fixed_ship_radar_slot = module_sonar_1
+			fixed_ship_auxillary_slot_2 = empty
+			fixed_ship_auxillary_slot_1 = module_minelaying
+			fixed_ship_auxillary_slot = empty
+			fixed_ship_battery_slot = module_anti_ship_torpedoes_1
+		}
+	}
+
+	complete_special_project = sp:sp_naval_vessel_project
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_oob = "NKO_2000_nsb"
+
+		set_technology = {
+			mbt_tech_ops = 1
+			mbt_tech = 1
+			early_cold_war_ammo = 1
+			defensive_systems = 1
+			nsb_gun_technology_1 = 1
+			nsb_artillery_ammo_1 = 1
+			nsb_special_ammo_0 = 1
+			nsb_AA_autocannon_0 = 1
+			nsb_SHORAD_missile_0 = 1
+			mbt_tech_1 = 1
+			defensive_systems_2 = 1
+			nsb_gun_technology_2 = 1
+			nsb_artillery_ammo_2 = 1
+			nsb_special_ammo_1 = 1
+			nsb_AA_autocannon_1 = 1
+			nsb_SHORAD_missile_1 = 1
+			tank_components_tech = 1
+			tank_components_tech_2 = 1
+			small_medium_gun_tech = 1
+			medium_gun_tech = 1
+			armor_tech = 1
+			era_tech = 1
+			diesel_engine_tech = 1
+			diesel_engine_tech_2 = 1
+
+
+			small_autocannon_tech = 1
+			big_autocannon_tech = 1
+			nsb_artillery_0 = 1 #M-1931
+			nsb_Arty_upgrade_1 = 1
+
+			 #M-1989 Koksan
+			nsb_Anti_Air_0 = 1
+			 #SA-13 Strela-10
+			nsb_AA_upgrade_1 = 1
+			nsb_Anti_Air_1 = 1 #SA-16 Igla
+			 #1965
+			 #PT-85 Shin'heung
+			helo_ops_tech = 1
+			nsb_attack_helicopter_tech_1 = 1
+			nsb_engine_tech_1 = 1
+			nsb_atgm_tech_1 = 1
+			nsb_multiple_atgm_tech_1 = 1
+			nsb_heavy_atgm_tech_1 = 1
+			nsb_rocket_pods_tech_1 = 1
+			nsb_gun_pods_tech_1 = 1
+			nsb_light_nose_gun_tech_1 = 1
+
+
+			nsb_defense_tech_1 = 1
+
+
+
+
+		}
+
+		create_equipment_variant = {
+			name = "Ch'onma"
+			type = medium_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_medium_cannon
+				ammunition_load_slot = mixed_main_ammo_1
+				turret_type_slot = tank_soviet_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen1
+				engine_type_slot = tank_diesel_engine_gen2
+				reload_type_slot = automatic_loading
+				special_type_slot_1 = smoke_launchers
+				special_type_slot_2 = empty
+				special_type_slot_4 = tank_battlestation_2
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "gfx/interface/technologies/NKO/LAND/MBT2_Chonmaho_II.dds"
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "Ch'onma-92"
+			type = medium_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_medium_cannon
+				ammunition_load_slot = mixed_main_ammo_1
+				turret_type_slot = tank_soviet_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen1
+				engine_type_slot = tank_diesel_engine_gen2
+				reload_type_slot = automatic_loading
+				special_type_slot_1 = smoke_launchers
+				special_type_slot_2 = empty
+				special_type_slot_4 = tank_battlestation_2
+				special_type_slot_6 = reactive_armor_gen1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 3
+			}
+			icon = "gfx/interface/technologies/NKO/LAND/MBT2_Chonmaho_III.dds"
+		}
+		create_equipment_variant = {
+			name = "P'okpoong-ho"
+			type = medium_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_medium_cannon
+				ammunition_load_slot = mixed_main_ammo_1
+				turret_type_slot = tank_soviet_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_composite_armor_gen1
+				engine_type_slot = tank_diesel_engine_gen3
+				reload_type_slot = automatic_loading
+				special_type_slot_1 = smoke_launchers
+				special_type_slot_2 = empty
+				special_type_slot_4 = tank_battlestation_2
+				special_type_slot_6 = spaced_armor_gen1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 4
+			}
+		}
+
+		create_equipment_variant = {
+			name = "VTT-323"
+			type = medium_tank_amphibious_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = afv_machine_gun
+				reload_type_slot = automatic_loading
+				ammunition_load_slot = machine_gun_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen1
+				engine_type_slot = afv_gasoline_engine_gen2
+				special_type_slot_1 = afv_troop_capacity
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 1
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/NKO/LAND/APC1.dds"
+		}
+
+		create_equipment_variant = {
+			name = "M-1992"
+			type = medium_tank_amphibious_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = afv_machine_gun_2
+				reload_type_slot = automatic_loading
+				ammunition_load_slot = machine_gun_ammo_1
+				turret_type_slot = tank_no_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				engine_type_slot = afv_gasoline_engine_gen2
+				armor_type_slot = tank_steel_armor_gen1
+				special_type_slot_1 = afv_gun_ports
+				special_type_slot_2 = afv_troop_capacity
+				special_type_slot_4 = tank_battlestation_1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "gfx/interface/technologies/NKO/LAND/APC2.dds"
+		}
+
+		create_equipment_variant = {
+			name = "M-1978"
+			type = medium_tank_rocket_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = art_med_rocket_gen1
+				turret_type_slot = tank_base_tank_turret
+				reload_type_slot = eight_missile_pack
+				ammunition_load_slot = artillery_medium_ammo_1
+				suspension_type_slot = tank_wheeled_suspension_medium
+				engine_type_slot = afv_gasoline_engine_gen2
+
+				special_type_slot_1 = empty
+				special_type_slot_4 = tank_battlestation_1
+			}
+			upgrades = {
+				tank_nsb_fire_upgrade = 2
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/NKO/LAND/SPR1.dds"
+		}
+
+		create_equipment_variant = {
+			name = "M-1974"
+			type = medium_tank_artillery_chassis_0
+			parent_version = 1
+			modules = {
+				main_armament_slot = art_med_gun_gen1
+				reload_type_slot = automatic_loading
+				ammunition_load_slot = artillery_medium_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_pneumatic_suspension_medium
+				engine_type_slot = tank_diesel_engine_gen2
+
+			}
+			upgrades = {
+				tank_nsb_fire_upgrade = 1
+			}
+			icon = "gfx/interface/technologies/NKO/LAND/SPG1_M1974.dds"
+		}
+
+		create_equipment_variant = {
+			name = "M-1977"
+			type = medium_tank_artillery_chassis_0
+			parent_version = 1
+			modules = {
+				main_armament_slot = art_med_gun_gen1
+				reload_type_slot = automatic_loading
+				ammunition_load_slot = artillery_medium_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_pneumatic_suspension_medium
+				engine_type_slot = tank_diesel_engine_gen2
+
+			}
+			upgrades = {
+				tank_nsb_fire_upgrade = 1
+			}
+		}
+
+		create_equipment_variant = {
+			name = "M-1985"
+			type = medium_tank_artillery_chassis_0
+			parent_version = 1
+			modules = {
+				main_armament_slot = art_med_gun_gen1
+				reload_type_slot = automatic_loading
+				ammunition_load_slot = artillery_medium_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_pneumatic_suspension_medium
+				engine_type_slot = tank_diesel_engine_gen2
+
+			}
+			upgrades = {
+				tank_nsb_fire_upgrade = 1
+			}
+			icon = "gfx/interface/technologies/NKO/LAND/SPG1_M1985.dds"
+		}
+
+		create_equipment_variant = {
+			name = "M-1978 Kok'San"
+			type = medium_tank_artillery_chassis_1
+			parent_version = 1
+			modules = {
+				main_armament_slot = art_med_gun_gen1
+				reload_type_slot = automatic_loading
+				ammunition_load_slot = artillery_medium_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_pneumatic_suspension_medium
+				engine_type_slot = tank_diesel_engine_gen2
+
+				special_type_slot_1 = empty
+				special_type_slot_4 = tank_battlestation_1
+			}
+			upgrades = {
+				tank_nsb_fire_upgrade = 2
+			}
+		}
+
+		create_equipment_variant = {
+			name = "M-1989 Kok'San"
+			type = medium_tank_artillery_chassis_1
+			parent_version = 1
+			modules = {
+				main_armament_slot = art_med_gun_gen1
+				reload_type_slot = automatic_loading
+				ammunition_load_slot = artillery_medium_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_pneumatic_suspension_medium
+				engine_type_slot = tank_diesel_engine_gen2
+
+				special_type_slot_1 = empty
+				special_type_slot_4 = tank_battlestation_2
+			}
+			upgrades = {
+				tank_nsb_fire_upgrade = 2
+			}
+			icon = "gfx/interface/technologies/NKO/LAND/SPG2_Koksan_1989.dds"
+		}
+
+		create_equipment_variant = {
+			name = "M-1985"
+			type = medium_tank_rocket_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = art_med_rocket_gen1
+				turret_type_slot = tank_base_tank_turret
+				reload_type_slot = eight_missile_pack
+				ammunition_load_slot = artillery_medium_ammo_1
+				suspension_type_slot = tank_wheeled_suspension_medium
+				engine_type_slot = afv_gasoline_engine_gen2
+
+				special_type_slot_1 = mine_ammo_1
+				special_type_slot_2 = cluster_ammo_1
+				special_type_slot_4 = tank_battlestation_1
+			}
+			upgrades = {
+				tank_nsb_fire_upgrade = 3
+			}
+			icon = "gfx/interface/technologies/NKO/LAND/SPR2.dds"
+		}
+
+		create_equipment_variant = {
+			name = "M-1985"
+			type = medium_tank_aa_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = spaa_autocannon_1
+				reload_type_slot = automatic_loading
+				turret_type_slot = tank_base_tank_turret
+				ammunition_load_slot = proximity_fuze_autocannon_ammo_1
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				engine_type_slot = tank_diesel_engine_gen2
+				secondary_armament_slot = empty
+				special_type_slot_1 = empty
+				special_type_slot_2 = empty
+				special_type_slot_3 = empty
+				special_type_slot_4 = spaa_optical_guidance_gen1
+			}
+			upgrades = {
+				tank_nsb_fire_upgrade = 1
+			}
+			obsolete = yes
+		}
+		 create_equipment_variant = {
+		 	name = "Pongae-3"
+		 	type = medium_tank_aa_chassis_1
+		 	parent_version = 0
+		 	modules = {
+		 		main_armament_slot = missile_launcher_system
+				reload_type_slot = eight_missile_pack
+				ammunition_load_slot = spaa_short_range_missiles_1
+				turret_type_slot = tank_base_tank_turret
+		 		suspension_type_slot = tank_torsion_bar_suspension_medium
+		 		engine_type_slot = tank_diesel_engine_gen2
+		 		special_type_slot_1 = empty
+		 		special_type_slot_2 = empty
+		 		special_type_slot_3 = empty
+		 		special_type_slot_4 = spaa_optical_guidance_gen2
+		 	}
+		 	upgrades = {
+		 		tank_nsb_fire_upgrade = 0
+		 	}
+		 	icon = "gfx/interface/technologies/SOV/LAND/SPA2.dds"
+		 }
+
+		create_equipment_variant = {
+			name = "M-1989/M-1992"
+			type = medium_tank_aa_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = spaa_autocannon_2
+				reload_type_slot = automatic_loading
+				turret_type_slot = tank_base_tank_turret
+				ammunition_load_slot = proximity_fuze_autocannon_ammo_1
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				engine_type_slot = tank_diesel_engine_gen2
+
+				secondary_armament_slot = empty
+				special_type_slot_1 = empty
+				special_type_slot_2 = empty
+				special_type_slot_3 = empty
+				special_type_slot_4 = spaa_radar_gen1
+			}
+			upgrades = {
+				tank_nsb_fire_upgrade = 2
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/NKO/LAND/SPA1_M1989.dds"
+		}
+
+		create_equipment_variant = {
+			name = "PT-85"
+			type = medium_tank_destroyer_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				ammunition_load_slot = mixed_main_ammo_1
+				turret_type_slot = tank_soviet_turret
+				suspension_type_slot = tank_torsion_bar_suspension_light
+				armor_type_slot = tank_steel_armor_gen1
+				engine_type_slot = tank_diesel_engine_gen2
+				reload_type_slot = manual_loading
+				secondary_armament_slot = empty
+				special_type_slot_1 = empty
+				special_type_slot_2 = smoke_launchers
+				special_type_slot_3 = empty
+				special_type_slot_4 = tank_battlestation_2
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 4
+			}
+			obsolete = no
+		}
+		create_equipment_variant = {
+			name = "Type 58"
+			type = infantry_weapons
+			upgrades = {
+				Inf_eq_heavy_weapons = 1
+			}
+		}
+		create_equipment_variant = {
+			name = "Type 68"
+			type = infantry_weapons
+			upgrades = {
+				Inf_eq_heavy_weapons = 2
+			}
+			mark_older_equipment_obsolete = yes
+		}
+
+		complete_special_project = sp:sp_armoured_vehicle_project
+
+		else = {
+			set_oob = "NKO_2000_nonnsb"
+
+			set_technology = {
+				MBT_1 = 1
+				MBT_2 = 1
+				Early_APC = 1
+				APC_1 = 1
+				APC_2 = 1
+				IFV_1 = 1
+				IFV_2 = 1
+				artillery_0 = 1 #M-1931
+				Arty_upgrade_1 = 1
+				SP_arty_0 = 1
+				SP_R_arty_0 = 1
+				SP_arty_1 = 1 #M-1989 Koksan
+				SP_R_arty_1 = 1 #MRL M1985
+				Anti_Air_0 = 1
+				SP_Anti_Air_0 = 1 #SA-13 Strela-10
+				AA_upgrade_1 = 1
+				Anti_Air_1 = 1 #SA-16 Igla
+				Rec_tank_0 = 1 #1965
+				Rec_tank_1 = 1 #PT-85 Shin'heung
+				attack_helicopter1 = 1
+			}
+		}
+	}
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "NKO_2000_bba"
+
+		set_technology = {
+			early_airframe_designs = 1
+
+			flying_wing_design = 1
+
+			early_weapons = 1
+			countermeasures_1 = 1
+		}
+
+		else = {
+			set_air_oob = "NKO_2000_nonbba"
+
+			set_technology = {
+				early_fighter = 1
+				transport_plane1 = 1
+			}
+		}
+	}
+	if = {
+		limit = { has_dlc = "Gotterdammerung" }
+
+		set_technology = {
+			ballistic_missile = 1
+
+			cruise_missile = 1
+
+			GLCM = 1
+			GLCM1 = 1
+			GLCM2 = 1
+			GLCM3 = 1
+
+			TEL_launched_missiles = 1
+			TEL_3 = 1
+			TEL_4 = 1
+
+			air_defense = 1
+
+			SAM = 1
+			SAM0 = 1
+			SAM1 = 1
+
+			IRBM = 1
+			IRBM1 = 1
+			IRBM2 = 1
+
+			ICBM = 1
+			ICBM1 = 1
+			ICBM2 = 1
+
+			hid_tech_missile_1 = 1
+			hid_tech_missile_2 = 1
+			hid_tech_missile_3 = 1
+			hid_tech_missile_4 = 1
+			hid_tech_missile_5 = 1
+			hid_tech_missile_6 = 1
+			hid_tech_missile_7 = 1
+		}
+
+		complete_special_project = sp:sp_space_program_gdm
+		complete_special_project = sp:sp_missile_project
+
+		set_variable = { num_launchers_set = 7 }
+
+		# Set the Nuclear Warhead Stance
+		complete_special_project = sp:sp_nuclear_warhead_program
+		else = {
+			complete_special_project = sp:sp_space_program_non_gdm
+		}
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "La Resistance" } }
+		# Cyber System
+		add_to_array = { cyber_targets = USA }
+		add_to_array = { cyber_targets = AST }
+		add_to_array = { cyber_targets = ENG }
+		add_to_array = { cyber_targets = CHI }
+		add_to_array = { cyber_targets = FRA }
+		add_to_array = { cyber_targets = GER }
+		add_to_array = { cyber_targets = JAP }
+		add_to_array = { cyber_targets = KOR }
+		add_to_array = { cyber_targets = SOV }
+
+	}
+
+	set_technology = {
+
+		COMSAT1 = 1
+
+		SPYSAT1 = 1
+
+		OLV1 = 1
+		OLV2 = 1
+		OLV3 = 1
+		OLV4 = 1
+
+		nuclear_technology = 1
+		reactor1 = 1
+		integrated_transportation_system = 1
+		post_conventional_rail = 1
+		early_freight_locomotive = 1
+
+
+		infantry_mass_assault = 1
+
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+
+		combat_eng_equipment = 1
+		night_vision_1 = 1
+		command_control_equipment = 1
+
+		util_vehicle_0 = 1
+		util_vehicle_1 = 1
+
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+		AT_upgrade_1 = 1
+		Anti_tank_1 = 1 #Bulsae-2
+		Heavy_Anti_tank_1 = 1
+
+		transport_helicopter1 = 1
+		nsb_transport_helicopter1 = 1
+
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+		microprocessors = 1
+
+		radar = 1
+		internet1 = 1 	#1G
+		fuel_silos = 1
+
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
+		fuel_refining = 1
+		construction1 = 1
+	}
+
+		complete_special_project = sp:sp_helicopter_project
+
+	add_ideas = {
+		paralyzing_corruption
+		cheondo
+		stagnation
+		defence_06
+		edu_02
+		health_02
+		social_01
+		bureau_03
+		police_05
+		md_closed_economy
+		draft_army
+		drafted_women
+		the_donju
+		the_military
+		communist_cadres
+		officer_advanced_training
+		closed_borders
+		nuclear_power_off
+		full_first_use
+		NKO_closed_nation
+		NKO_Planned_Economy
+		NKO_southern_propaganda_broadcasts
+		NKO_southern_balloon_leaflets
+		NKO_hermit_kingdom
+		NKO_The_Green_Water_Navy
+		NKO_international_sanctions_idea
+		NKO_sad_army_idea
+		NKO_china_economic_assistant
+	}
+
+	add_timed_idea = { idea = NKO_Simhwajo_Sageon_legacy days = 280 }
+
+	add_dynamic_modifier = {
+		modifier = arduous_march_modifiers
+	}
+
+	set_variable = { var = AM_political_power_var value = -0.20 }
+	set_variable = { var = AM_stability_factor_var value = -0.20 }
+	set_variable = { var = AM_monthly_population_var value = -0.20 }
+	set_variable = { var = AM_communism_drift_var value = -0.10 }
+	set_variable = { var = AM_consumer_goods_factor_var value = 0.10 }
+	set_variable = { var = AM_buildings_speed_var value = -0.25 }
+	set_variable = { var = AM_industrial_output_var value = -0.25 }
+	set_variable = { var = AM_industry_free_repair_var value = -0.50 }
+	set_variable = { var = AM_research_speed_var value = -0.25 }
+	set_variable = { var = AM_army_attack_var value = -0.20 }
+	set_variable = { var = AM_army_defence_var value = -0.20 }
+
+	add_opinion_modifier = { target = CHI modifier = large_commercial_relations }
+	add_opinion_modifier = { target = JAP modifier = refuse_to_apologize_for_warcrimes }
+	add_opinion_modifier = { target = USA modifier = refuse_to_apologize_for_warcrimes }
+	add_opinion_modifier = { target = USA modifier = imminent_danger_to_national_security }
+	add_opinion_modifier = { target = KOR modifier = propaganda_broadcasts }
+	add_opinion_modifier = { target = KOR modifier = propaganda_leaflets }
+	add_opinion_modifier = { target = MAY modifier = supports_us }
+
+	#Influence system
+	add_to_array = { NKO.influence_targets = AGL }
+	add_to_array = { NKO.influence_targets = UNI }
+	add_to_array = { NKO.influence_targets = ALG }
+	add_to_array = { NKO.influence_targets = BEN }
+	add_to_array = { NKO.influence_targets = BOT }
+	add_to_array = { NKO.influence_targets = CBD }
+	add_to_array = { NKO.influence_targets = CHA }
+	add_to_array = { NKO.influence_targets = DRC }
+	add_to_array = { NKO.influence_targets = EGY }
+	add_to_array = { NKO.influence_targets = EGU }
+	add_to_array = { NKO.influence_targets = ETH }
+	add_to_array = { NKO.influence_targets = GER }
+	add_to_array = { NKO.influence_targets = MAY }
+	add_to_array = { NKO.influence_targets = MAL }
+	add_to_array = { NKO.influence_targets = MOZ }
+	add_to_array = { NKO.influence_targets = NAM }
+	add_to_array = { NKO.influence_targets = SEN }
+	add_to_array = { NKO.influence_targets = TOG }
+	add_to_array = { NKO.influence_targets = ZIM }
+
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 55.8 }
+	add_to_array = { influence_array = CHI.id }
+	add_to_array = { influence_array_val = 35.5 }
+	add_to_array = { influence_array = SOV.id }
+	add_to_array = { influence_array_val = 5.7 }
+	add_to_array = { influence_array = KOR.id }
+	add_to_array = { influence_array_val = 2 }
+	add_to_array = { influence_array = JAP.id }
+	add_to_array = { influence_array_val = 1 }
+	startup_influence = yes
+
+	### Economy
+	set_variable = { var = debt value = 9.6 }
+	set_variable = { var = int_investments value = 2 }
+	set_variable = { var = treasury value = 6.3 }
+	set_variable = { var = corporate_tax_rate value = 15 }
+	set_variable = { var = population_tax_rate value = 45 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 550 }
+	}
+	set_variable = { overall_productivity = 550 }
+
+	set_popularities = {
+		democratic = 0.0
+		communism = 99.5
+		fascism = 0.0
+		neutrality = 0.0
+		nationalist = 0.5
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "2000.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+
+	start_politics_input = yes
+
+	# Kim's
+	set_variable = { var = Kim_Jong_un value = 45 }
+	set_variable = { var = Kim_Jong_Nam value = 55 }
+
+	### Party Popularities
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0 } #conservatism
+	set_variable = { party_pop_array^2 = 0 } #liberalism
+	set_variable = { party_pop_array^3 = 0 } #socialism
+	set_variable = { party_pop_array^4 = 0.9 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.044 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0 } #Conservative
+	set_variable = { party_pop_array^7 = 0.05 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0.005 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+
+	### Ruling Party
+	add_to_array = { ruling_party = 4 }
+	add_to_array = { gov_coalition_array = 5 }
+	add_to_array = { gov_coalition_array = 7 }
+
+	startup_politics = yes
+
+	### Banned Parties & Balance
+	set_country_flag = party1_banned
+	set_country_flag = party2_banned
+	set_country_flag = party3_banned
+	set_country_flag = party4_banned
+	set_country_flag = party7_banned
+	set_country_flag = party8_banned
+	set_country_flag = party9_banned
+	set_country_flag = party10_banned
+	set_country_flag = party11_banned
+	set_country_flag = party12_banned
+	set_country_flag = party13_banned
+	set_country_flag = party14_banned
+	set_country_flag = party15_banned
+	set_country_flag = party16_banned
+	set_country_flag = party17_banned
+	set_country_flag = party18_banned
+	set_country_flag = party19_banned
+	set_country_flag = party20_banned
+	set_country_flag = party21_banned
+	set_country_flag = party22_banned
+	set_country_flag = party23_banned
+	set_country_flag = party24_banned
+	add_political_power = 300
+
+	create_country_leader = {
+		name = "Kim Jong-il"
+		picture = "Kim_Jong_il.dds"
+		expire = "2011.12.11"
+		ideology = Communist-State
+		traits = {
+			emerging_Communist-State
+			stubborn
+			ruthless
+		}
+	}
+
+	recruit_character = NKO_ri_gil
+	recruit_character = NKO_kim_sik
+	recruit_character = NKO_yi_ju
+	recruit_character = NKO_kim_hong
+	recruit_character = NKO_jo_chol
+	recruit_character = NKO_hyon_chol
+	recruit_character = NKO_hwang_so
+	recruit_character = NKO_choe_il
+	recruit_character = NKO_kim_kuk
+	recruit_character = NKO_ri_su
+	recruit_character = NKO_choe_hae
+	recruit_character = NKO_pak_sik
+}
+##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 1.800 }
+	set_variable = { var = debt value = 5.000 }
+	set_variable = { var = treasury value = 2 }
+	set_variable = { var = corporate_tax_rate value = 0 }
+	set_variable = { var = population_tax_rate value = 0 }
+	set_variable = { var = int_investments value = 2 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 120 }
+	}
+	set_variable = { overall_productivity = 120 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 0.0
+		communism = 98.0
+		fascism = 0.0
+		neutrality = 1.0
+		nationalist = 1.0
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "2000.1.1"
+		election_frequency = 999
+		elections_allowed = no
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^4 = 0.950 }   #Communist-State (WPK)
+	set_variable = { party_pop_array^7 = 0.030 }   #Autocracy
+	set_variable = { party_pop_array^13 = 0.020 }   #Neutral_Autocracy
+
+	add_to_array = { ruling_party = 4 }             #Communist-State (WPK)
+
+	startup_politics = yes
+
+	### 2026 National Spirits ###
+	add_ideas = {
+		md2026_nko_total_isolation
+	}
+
+	### Country Leader: Kim Jong-un ###
+	create_country_leader = {
+		name = "Kim Jong-un"
+		picture = "gfx/leaders/NKO/Kim_Jong-un.dds"
+		expire = "2065.1.1"
+		ideology = Communist-State
+		traits = {
+			communist_dictator
+			authoritarian_ruler
+			nuclear_enthusiast
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+}

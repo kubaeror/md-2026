@@ -1,0 +1,1912 @@
+capital = 207
+2000.1.1 = {
+	set_country_flag = ISR_good_size_knesset
+	set_country_flag = ISR_parliament_block
+	set_country_flag = i_am_israel
+	set_cosmetic_tag = ISR
+	set_country_flag = dynamic_flag
+	set_country_flag = dynamic_rebel_flag
+	set_variable = { gdp_per_capita = 30.476 }
+
+	complete_special_project = sp:sp_aircraft_project
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_oob = "ISR_2000_nsb"
+		else = {
+			set_oob = "ISR_2000_nonnsb"
+		}
+	}
+	set_naval_oob = "ISR_2000_naval_mtg"
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+		}
+		set_air_oob = "ISR_2000_bba"
+		else = {
+			set_air_oob = "ISR_2000_nonbba"
+		}
+	}
+
+	if = {
+		limit = {
+			is_ai = yes
+		}
+		set_country_flag = gu_gaza_select
+		set_country_flag = gu_westbank_select
+		set_country_flag = gu_mainisr_select
+	}
+
+	set_variable = { small_medium_business_owners = 75 }
+
+	add_ideas = {
+		widespread_corruption
+		judaism
+		oslo_accords_1
+		ISR_stable_security
+		law_of_return
+		security_belt
+		legacy_of_yitzhak_rabin
+		peoples_army_6
+		eddaic_ghost_3
+		arab_mafia_1
+		unintegrated_ultraorthodox_community_1
+		daneils_final_prophecy_1
+		harari_compromise
+		kirya_glilot_tensions
+		alice_miller_v_ministry_of_defence
+		stagnation
+		defence_04
+		edu_04
+		health_03
+		social_04
+		bureau_03
+		police_01
+		draft_army
+		drafted_women
+		Major_Non_NATO_Ally
+		the_military
+		the_priesthood
+		small_medium_business_owners
+		intervention_regional_interventionism
+		USA_usaid
+		western_country
+		large_far_right_movement
+		officer_military_academy
+		alice_miller_v_ministry_of_defence
+		heavily_regulated_immigration
+		ISR_israeli_diamond_stuff
+		ISR_support_of_settlements
+		nuclear_power_off
+		full_first_use
+		ISR_econ_bonus_bl
+	}
+	add_stability = 0.45
+
+	204 = { add_dynamic_modifier = { modifier = ISR_infrastruc_problems } }
+	205 = { add_dynamic_modifier = { modifier = ISR_infrastruc_problems } }
+	206 = { add_dynamic_modifier = { modifier = ISR_infrastruc_problems } }
+	207 = { add_dynamic_modifier = { modifier = ISR_infrastruc_problems } }
+	587 = { add_dynamic_modifier = { modifier = ISR_infrastruc_problems } }
+
+	204 = { add_dynamic_modifier = { modifier = state_of_tel_aviv } }
+	207 = { add_dynamic_modifier = { modifier = jordanian_waqf_authprity } }
+
+	set_variable = { ISR_palestine_situation_additional = 0 }
+	set_variable = { hap_west_bank = 40 }
+	set_variable = { hap_gaza = 20 }
+	set_variable = { hap_isr = 60 }
+	set_variable = { ter_west_bank = 30 }
+	set_variable = { ter_gaza = 50 }
+	set_variable = { ter_isr = 20 }
+	set_variable = { defence_israel = 1 }
+	set_variable = { is_attacking_gaza = 1 }
+
+	diplomatic_relation = { country = PAL relation = military_access active = yes }
+
+	# Opinion Modifiers
+	add_opinion_modifier = { target = HEZ modifier = HEZ_Are_Terrorists }
+
+	country_event = {
+		id = israel.23
+		days = 193 #Camp David
+	}
+
+	if = {
+		limit = {
+			has_dlc = "La Resistance"
+		}
+		create_intelligence_agency = {
+			name = "Mossad"
+			icon = GFX_intelligence_agency_logo_isr
+		}
+	}
+
+	set_technology = {
+		COMSAT1 = 1
+		COMSAT2 = 1
+		COMSAT3 = 1
+		COMSAT4 = 1
+
+		SPYSAT1 = 1
+		SPYSAT2 = 1
+		SPYSAT3 = 1
+		SPYSAT4 = 1
+
+		OLV1 = 1
+		OLV2 = 1
+		OLV3 = 1
+
+		nuclear_technology = 1
+		reactor1 = 1
+		reactor2 = 1
+		integrated_transportation_system = 1
+		post_conventional_rail = 1
+		early_freight_locomotive = 1
+
+
+		combined_arms = 1
+
+		command_control_equipment = 1
+		command_control_equipment1 = 1
+		command_control_equipment2 = 1
+		command_control_equipment3 = 1
+
+		combat_eng_equipment = 1
+
+		night_vision_1 = 1
+		night_vision_2 = 1
+		night_vision_3 = 1
+
+		camouflage = 1
+		camouflage2 = 1
+
+		#TAR-21
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		infantry_weapons3 = 1
+		infantry_weapons4 = 1
+		support_weapons = 1
+		tandem_charge_warheads = 1
+		squad_automatic_weapon = 1
+		support_weapons2 = 1
+		support_weapons3 = 1
+		special_forces = 1
+		special_forces2 = 1
+
+		#Spike
+		Anti_tank_0 = 1
+		Anti_tank_1 = 1
+		Anti_tank_2 = 1
+		Heavy_Anti_tank_0 = 1
+		Heavy_Anti_tank_1 = 1
+		Heavy_Anti_tank_2 = 1
+		AT_upgrade_1 = 1
+		AT_upgrade_2 = 1
+
+		#AIL Storm
+		util_vehicle_0 = 1
+		util_vehicle_1 = 1
+		util_vehicle_2 = 1
+		util_vehicle_3 = 1
+
+		land_Drone_equipment = 1
+		land_Drone_equipment1 = 1
+
+		body_armor_1980 = 1
+		body_armor_2000 = 1
+
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+		microprocessors = 1
+		computing2 = 1
+		computing3 = 1
+		decryption2 = 1
+		encryption2 = 1
+		radar = 1
+		internet1 = 1 	#1G
+		internet2 = 1 	#2G
+		gprs = 1
+		fuel_silos = 1
+
+		industrial_electrospun_polymeric_nanofibers = 1
+		multiwalled_carbon_nanotubes = 1
+		modern_electrospinning = 1
+		stereolitography = 1
+		early_3D_printers = 1
+		t3D_wax_printer = 1
+		DNA_fingerprinting = 1
+		modern_gmo = 1
+		fuel_refining = 1
+		fuel_refining2 = 1
+		energy_efficiency = 1
+		energy_efficiency2 = 1
+		energy_efficiency3 = 1
+		fuel_efficiency = 1
+		fuel_efficiency2 = 1
+		early_renewables = 1
+		renewables = 1
+		electrification_1 = 1
+		construction1 = 1
+		stronghold_building_1 = 1
+		land_fort_building_1 = 1
+		construction2 = 1
+		construction3 = 1
+		excavation1 = 1
+		excavation2 = 1
+
+		transport_helicopter1 = 1
+		transport_helicopter2 = 1
+	}
+
+	if = { limit = { has_dlc = "Gotterdammerung" }
+		set_technology = {
+			ballistic_missile = 1
+
+			IRBM = 1
+			IRBM1 = 1
+			IRBM2 = 1
+			IRBM3 = 1
+			IRBM4 = 1
+
+			ICBM = 1
+			ICBM1 = 1
+			ICBM2 = 1
+			ICBM3 = 1
+			ICBM4 = 1
+
+			cruise_missile = 1
+
+			air_defense = 1
+
+			SAM = 1
+			SAM0 = 1
+			SAM1 = 1
+			SAM2 = 1
+			SAM3 = 1
+
+			hid_tech_missile_1 = 1
+			hid_tech_missile_2 = 1
+			hid_tech_missile_3 = 1
+		}
+
+		complete_special_project = sp:sp_space_program_gdm
+		complete_special_project = sp:sp_nuclear_warhead_program
+		complete_special_project = sp:sp_missile_project
+
+		set_variable = { num_launchers_set = 3 }
+		else = {
+			complete_special_project = sp:sp_space_program_non_gdm
+		}
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			mbt_tech_ops = 1
+			mbt_tech = 1
+			early_cold_war_ammo = 1
+			defensive_systems = 1
+			nsb_gun_technology_1 = 1
+			nsb_artillery_ammo_1 = 1
+			nsb_special_ammo_0 = 1
+			nsb_AA_autocannon_0 = 1
+			nsb_SHORAD_missile_0 = 1
+			mbt_tech_1 = 1
+			defensive_systems_2 = 1
+			nsb_gun_technology_2 = 1
+			nsb_artillery_ammo_2 = 1
+			nsb_special_ammo_1 = 1
+			nsb_AA_autocannon_1 = 1
+			nsb_SHORAD_missile_1 = 1
+			mbt_tech_2 = 1
+			cold_war_ammo = 1
+			defensive_systems_3 = 1
+			nsb_gun_technology_3 = 1
+			nsb_AA_autocannon_2 = 1
+			nsb_SHORAD_missile_2 = 1
+			tank_components_tech = 1
+			tank_components_tech_2 = 1
+			tank_components_tech_3 = 1
+			small_medium_gun_tech = 1
+			small_medium_gun_tech_2 = 1
+			medium_gun_tech = 1
+			medium_gun_tech_2 = 1
+			armor_tech = 1
+			armor_tech_2 = 1
+			nera_armor_tech_1 = 1
+			era_tech = 1
+			era_tech_2 = 1
+			diesel_engine_tech = 1
+			diesel_engine_tech_2 = 1
+			diesel_engine_tech_3 = 1
+			diesel_engine_tech_4 = 1
+			diesel_engine_tech_5 = 1
+			turbine_engine_tech = 1
+			turbine_engine_tech_2 = 1
+
+			small_autocannon_tech = 1
+			small_autocannon_tech_2 = 1
+			big_autocannon_tech = 1
+			nsb_artillery_0 = 1
+			nsb_artillery_1 = 1
+			nsb_Arty_upgrade_1 = 1
+			nsb_Arty_upgrade_2 = 1
+			nsb_Arty_upgrade_3 = 1
+
+			nsb_Anti_Air_0 = 1
+			nsb_Anti_Air_1 = 1
+			nsb_AA_upgrade_1 = 1
+
+
+			#RAM-V-2
+			helo_ops_tech = 1
+			nsb_attack_helicopter_tech_1 = 1
+			nsb_engine_tech_1 = 1
+			nsb_atgm_tech_1 = 1
+			nsb_multiple_atgm_tech_1 = 1
+			nsb_heavy_atgm_tech_1 = 1
+			nsb_rocket_pods_tech_1 = 1
+			nsb_gun_pods_tech_1 = 1
+			nsb_light_nose_gun_tech_1 = 1
+
+			nsb_defense_tech_1 = 1
+
+			nsb_attack_helicopter_tech_2 = 1
+			nsb_engine_tech_2 = 1
+			nsb_atgm_tech_2 = 1
+			nsb_multiple_atgm_tech_2 = 1
+			nsb_heavy_atgm_tech_2 = 1
+			nsb_rocket_pods_tech_2 = 1
+			nsb_gun_pods_tech_2 = 1
+			nsb_light_nose_gun_tech_2 = 1
+
+
+			nsb_defense_tech_2 = 1
+
+
+
+
+			nsb_attack_helicopter_tech_3 = 1
+		}
+		#complete_special_project = sp:sp_21stcentury_thermal
+		complete_special_project = sp:sp_ground_fireandforget
+
+		 create_equipment_variant = {
+		 	name = "Bardehlas"
+		 	type = medium_tank_amphibious_chassis_1
+		 	parent_version = 1
+		 	modules = {
+		 		main_armament_slot = afv_machine_gun
+				secondary_armament_slot = additional_mg
+				reload_type_slot = manual_loading
+				ammunition_load_slot = machine_gun_ammo_1
+		 		turret_type_slot = tank_no_turret
+		 		suspension_type_slot = tank_torsion_bar_suspension_medium
+		 		engine_type_slot = tank_diesel_engine_gen2
+		 		armor_type_slot = afv_alum_armor_gen1
+		 		special_type_slot_1 = afv_gun_ports
+		 		special_type_slot_2 = smoke_launchers_2
+		 		special_type_slot_3 = afv_troop_capacity
+		 		special_type_slot_4 = tank_battlestation_1
+				special_type_slot_5 = afv_reverse_doors
+		 	}
+		 	upgrades = {
+		 		tank_nsb_armor_upgrade = 2
+		 	}
+		 	obsolete = yes
+		 	icon = "gfx/interface/technologies/ISR/LAND/APC2.dds"
+		 	model = "ISR_Bardehlas_vehicle_entity"
+		 }
+		 create_equipment_variant = {
+		 	name = "Zelda"
+		 	type = medium_tank_amphibious_chassis_1
+		 	parent_version = 1
+		 	modules = {
+		 		main_armament_slot = afv_machine_gun
+				secondary_armament_slot = additional_mg
+				reload_type_slot = manual_loading
+				ammunition_load_slot = machine_gun_ammo_1
+		 		turret_type_slot = tank_no_turret
+		 		suspension_type_slot = tank_torsion_bar_suspension_medium
+		 		engine_type_slot = tank_diesel_engine_gen2
+		 		armor_type_slot = afv_alum_armor_gen1
+		 		special_type_slot_1 = afv_gun_ports
+		 		special_type_slot_2 = smoke_launchers_2
+		 		special_type_slot_3 = afv_troop_capacity
+		 		special_type_slot_4 = tank_battlestation_1
+				special_type_slot_5 = afv_reverse_doors
+		 		special_type_slot_6 = spaced_armor_gen2
+		 	}
+		 	upgrades = {
+		 		tank_nsb_armor_upgrade = 2
+		 	}
+		 	icon = "gfx/interface/technologies/ISR/LAND/APC3.dds"
+		 	model = "ISR_Zelda_vehicle_entity"
+		 }
+
+		 create_equipment_variant = {
+		 	name = "Nagmasho't"
+		 	type = medium_tank_amphibious_chassis_0 #Sho't conversion
+		 	parent_version = 0
+		 	modules = {
+		 		main_armament_slot = afv_machine_gun_2
+				secondary_armament_slot = additional_mg
+				reload_type_slot = manual_loading
+				ammunition_load_slot = machine_gun_ammo_1
+		 		turret_type_slot = tank_base_tank_turret
+		 		suspension_type_slot = tank_torsion_bar_suspension_medium
+		 		armor_type_slot = tank_steel_armor_gen2
+		 		engine_type_slot = tank_diesel_engine_gen2
+				special_type_slot_1 = afv_troop_capacity
+		 		special_type_slot_4 = tank_battlestation_1
+		 	}
+		 	upgrades = {
+		 		tank_nsb_armor_upgrade = 6
+		 	}
+		 	icon = "gfx/interface/technologies/ISR/LAND/Nagmashot.dds"
+		 	model = "ISR_Zelda_vehicle_entity"
+		 }
+		 add_equipment_to_stockpile = {
+		 	type = medium_tank_amphibious_chassis_0
+		 	variant_name = "Nagmasho't"
+		 	amount = 200
+		 }
+		 create_equipment_variant = {
+		 	name = "Achzarit" #Tiran-5 and T-55 conversion
+		 	type = medium_tank_amphibious_chassis_0
+		 	parent_version = 1
+		 	modules = {
+		 		main_armament_slot = afv_machine_gun_2
+				secondary_armament_slot = additional_mg
+				reload_type_slot = manual_loading
+				ammunition_load_slot = machine_gun_ammo_1
+		 		turret_type_slot = tank_no_turret
+		 		suspension_type_slot = tank_torsion_bar_suspension_medium
+		 		armor_type_slot = afv_composite_armor_gen2
+		 		engine_type_slot = tank_diesel_engine_gen3
+		 		special_type_slot_4 = tank_battlestation_2
+		 		special_type_slot_1 = afv_troop_capacity
+		 	}
+		 	upgrades = {
+		 		tank_nsb_armor_upgrade = 4
+		 	}
+		 	icon = "gfx/interface/technologies/ISR/LAND/APC4.dds"
+		 	model = "ISR_Zelda_vehicle_entity"
+		 }
+		 add_equipment_to_stockpile = {
+		 	type = medium_tank_amphibious_chassis_1
+		 	variant_name = "Achzarit"
+		 	amount = 0 #200 deployed
+		 }
+		 create_equipment_variant = {
+		 	name = "Sho't"
+		 	type = medium_tank_chassis_0
+		 	parent_version = 0
+		 	modules = {
+		 		main_armament_slot = tank_small_medium_cannon
+				secondary_armament_slot = additional_mg
+				ammunition_load_slot = anti_armor_main_ammo_1
+		 		turret_type_slot = tank_base_tank_turret
+		 		suspension_type_slot = tank_torsion_bar_suspension_medium
+		 		armor_type_slot = tank_steel_armor_gen1
+		 		engine_type_slot = tank_diesel_engine_gen1
+		 		reload_type_slot = manual_loading
+		 		special_type_slot_1 = smoke_launchers
+		 		special_type_slot_4 = tank_battlestation_1
+		 	}
+		 	upgrades = {
+		 		tank_nsb_armor_upgrade = 2
+		 	}
+		 	obsolete = yes
+		 	icon = "gfx/interface/technologies/ISR/LAND/Sho't.dds"
+		 	model = "ENG_centurion_entity"
+		 }
+		 add_equipment_to_stockpile = {
+			type = medium_tank_chassis_0
+			variant_name = "Sho't"
+			amount = 632 #168 deployed
+			producer = ISR
+		}
+		create_equipment_variant = {
+			name = "Tiran-5" #aslo Ti-67
+			type = medium_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_medium_cannon
+				secondary_armament_slot = additional_mg
+				ammunition_load_slot = anti_armor_main_ammo_1
+				turret_type_slot = tank_soviet_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen1
+				engine_type_slot = tank_diesel_engine_gen2
+				reload_type_slot = manual_loading
+				special_type_slot_1 = empty
+				special_type_slot_4 = tank_battlestation_2
+				special_type_slot_6 = reactive_armor_gen1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 3
+				tank_nsb_fire_upgrade = 1
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/LAND/T55.dds"
+			model = "SOV_T55A_entity"
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_chassis_0
+			variant_name = "Tiran-5"
+			amount = 200
+			producer = ISR
+		}
+		 create_equipment_variant = {
+			name = "Tiran-6"
+			type = medium_tank_chassis_0
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_small_medium_cannon_2
+				secondary_armament_slot = additional_mg
+				ammunition_load_slot = anti_armor_main_ammo_2
+				turret_type_slot = tank_soviet_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen1
+				engine_type_slot = tank_diesel_engine_gen2
+				reload_type_slot = manual_loading
+				special_type_slot_1 = smoke_launchers
+				special_type_slot_2 = empty
+				special_type_slot_4 = tank_battlestation_2
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 4
+				tank_nsb_fire_upgrade = 1
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/LAND/T62.dds"
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_chassis_0
+			variant_name = "Tiran-6"
+			amount = 100
+			producer = ISR
+		}
+		 create_equipment_variant = {
+		 	name = "Magach 3"
+			type = medium_tank_chassis_0
+		 	parent_version = 0
+		 	modules = {
+		 		main_armament_slot = tank_small_medium_cannon
+				secondary_armament_slot = additional_mg
+				ammunition_load_slot = anti_armor_main_ammo_1
+		 		turret_type_slot = tank_soviet_turret
+		 		suspension_type_slot = tank_torsion_bar_suspension_medium
+		 		armor_type_slot = tank_steel_armor_gen1
+		 		engine_type_slot = tank_diesel_engine_gen2
+		 		reload_type_slot = manual_loading
+		 		special_type_slot_1 = empty
+		 		special_type_slot_2 = smoke_launchers_2
+		 		special_type_slot_4 = tank_battlestation_1
+		 		special_type_slot_6 = reactive_armor_gen1
+		 	}
+		 	upgrades = {
+		 		tank_nsb_armor_upgrade = 2
+		 	}
+		 	obsolete = yes
+		 	icon = "gfx/interface/technologies/ISR/LAND/MBT2.dds"
+		 	model = "USA_M48A5_entity"
+		 }
+		 add_equipment_to_stockpile = {
+		 	type = medium_tank_chassis_0
+		 	variant_name = "Magach 3"
+		 	amount = 300
+		 	producer = ISR
+		 }
+
+		create_equipment_variant = {
+			name = "Magach 6B Gal"
+			type = medium_tank_chassis_0
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_small_medium_cannon_2
+				secondary_armament_slot = additional_mg
+				ammunition_load_slot = anti_armor_main_ammo_2
+				turret_type_slot = tank_soviet_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen1
+				engine_type_slot = tank_diesel_engine_gen2
+				reload_type_slot = manual_loading
+				special_type_slot_1 = empty
+				special_type_slot_2 = smoke_launchers_3
+				special_type_slot_4 = tank_battlestation_2_thermal
+				special_type_slot_6 = reactive_armor_gen1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 4
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/LAND/MBT2.dds"
+			model = "ISR_armor_Bat_entity"
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_chassis_0
+			variant_name = "Magach 6B Gal"
+			amount = 700
+			producer = ISR
+		}
+		create_equipment_variant = {
+			name = "Magach 6B Gal Batash"
+			type = medium_tank_chassis_0
+			parent_version = 2
+			modules = {
+				main_armament_slot = tank_small_medium_cannon_2
+				secondary_armament_slot = additional_mg
+				ammunition_load_slot = anti_armor_main_ammo_2
+				turret_type_slot = tank_soviet_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen1
+				engine_type_slot = tank_diesel_engine_gen3
+				reload_type_slot = manual_loading
+				special_type_slot_1 = empty
+				special_type_slot_2 = smoke_launchers_3
+				special_type_slot_4 = tank_battlestation_2_thermal
+				special_type_slot_6 = spaced_armor_gen2
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 4
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/LAND/Galbatash.dds"
+			model = "ISR_armor_Bat_entity"
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_chassis_0
+			variant_name = "Magach 6B Gal Batash"
+			amount = 32 #168 deployed
+			producer = ISR
+		}
+		create_equipment_variant = {
+			name = "Magach 7A"
+			type = medium_tank_chassis_0
+			parent_version = 3
+			modules = {
+				main_armament_slot = tank_small_medium_cannon_2
+				secondary_armament_slot = additional_mg
+				ammunition_load_slot = anti_armor_main_ammo_2
+				turret_type_slot = tank_soviet_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen1
+				engine_type_slot = tank_diesel_engine_gen3
+				reload_type_slot = manual_loading
+				special_type_slot_1 = empty
+				special_type_slot_2 = smoke_launchers_3
+				special_type_slot_4 = tank_battlestation_2_thermal
+				special_type_slot_6 = spaced_armor_gen1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 2
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/LAND/magach7a.dds"
+			model = "ISR_armor_Bat_entity"
+		}
+		create_equipment_variant = {
+			name = "Magach 7C"
+			type = medium_tank_chassis_0
+			parent_version = 4
+			modules = {
+				main_armament_slot = tank_small_medium_cannon_2
+				secondary_armament_slot = additional_mg
+				ammunition_load_slot = anti_armor_main_ammo_2
+				turret_type_slot = tank_soviet_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen1
+				engine_type_slot = tank_diesel_engine_gen3
+				reload_type_slot = manual_loading
+				special_type_slot_1 = empty
+				special_type_slot_2 = smoke_launchers_3
+				special_type_slot_4 = tank_battlestation_2_thermal
+				special_type_slot_6 = spaced_armor_gen2
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "gfx/interface/technologies/ISR/LAND/magach7c.dds"
+			model = "ISR_armor_Bat_entity"
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_chassis_0
+			variant_name = "Magach 7A"
+			amount = 100
+			producer = ISR
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_chassis_0
+			variant_name = "Magach 7C"
+			amount = 132 #168 deployed
+			producer = ISR
+		}
+
+		create_equipment_variant = {
+			name = "Merkava Mk.1"
+			type = medium_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_medium_cannon_2
+				secondary_armament_slot = additional_mg
+				ammunition_load_slot = anti_armor_main_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen2
+				engine_type_slot = tank_diesel_engine_gen2
+				reload_type_slot = manual_loading
+				special_type_slot_1 = front_mounted_engine
+				special_type_slot_2 = smoke_launchers_2
+				special_type_slot_4 = tank_battlestation_2
+				special_type_slot_5 = afv_reverse_doors
+				special_type_slot_6 = spaced_armor_gen1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 2
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/LAND/MBT3.dds"
+			model = "ISR_armor_Bat_1_entity"
+		}
+		#add_equipment_to_stockpile = {
+		#	type = medium_tank_chassis_1
+		#	variant_name = "Merkava Mk.1"
+		#	amount = all deployed
+		#}
+		create_equipment_variant = {
+			name = "Merkava Mk.2"
+			type = medium_tank_chassis_1
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_small_medium_cannon_2
+				secondary_armament_slot = additional_mg
+				ammunition_load_slot = anti_armor_main_ammo_2
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen2
+				engine_type_slot = tank_diesel_engine_gen2
+				reload_type_slot = manual_loading
+				special_type_slot_1 = front_mounted_engine
+				special_type_slot_2 = smoke_launchers_3
+				special_type_slot_4 = tank_battlestation_2_thermal
+				special_type_slot_5 = afv_reverse_doors
+				special_type_slot_6 = spaced_armor_gen1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 3
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/LAND/MBT3.dds"
+			model = "ISR_armor_Bat_1_entity"
+		}
+		#add_equipment_to_stockpile = {
+		#	type = medium_tank_chassis_1
+		#	variant_name = "Merkava Mk.2"
+		#	amount = 0 all deployed
+		#}
+		create_equipment_variant = {
+			name = "Merkava Mk.2D"
+			type = medium_tank_chassis_1
+			parent_version = 2
+			modules = {
+				main_armament_slot = tank_small_medium_cannon_2
+				secondary_armament_slot = additional_mg
+				ammunition_load_slot = anti_armor_main_ammo_2
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_steel_armor_gen2
+				engine_type_slot = tank_diesel_engine_gen2
+				reload_type_slot = manual_loading
+				special_type_slot_1 = front_mounted_engine
+				special_type_slot_2 = smoke_launchers_3
+				special_type_slot_3 = tank_aux_engine_2
+				special_type_slot_4 = tank_battlestation_2_thermal
+				special_type_slot_5 = afv_reverse_doors
+				special_type_slot_6 = spaced_armor_gen2
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 3
+			}
+			icon = "gfx/interface/technologies/ISR/LAND/Merkava2D.dds"
+			model = "ISR_armor_Bat_1_entity"
+		}
+		#add_equipment_to_stockpile = {
+		#	type = medium_tank_chassis_1
+		#	variant_name = "Merkava Mk.2D"
+		#	amount = 80 deployed
+		#}
+		create_equipment_variant = {
+			name = "Merkava Mk.3"
+			type = medium_tank_chassis_2
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_medium_cannon_2
+				secondary_armament_slot = additional_mg
+				ammunition_load_slot = anti_armor_main_ammo_2
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_composite_armor_gen2
+				engine_type_slot = tank_diesel_engine_gen4
+				reload_type_slot = manual_loading
+				special_type_slot_1 = front_mounted_engine
+				special_type_slot_2 = smoke_launchers_3
+				special_type_slot_4 = tank_battlestation_2_thermal
+				special_type_slot_5 = afv_reverse_doors
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 3
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/LAND/MBT4.dds"
+			model = "ISR_Merkava3B_entity"
+		}
+		#add_equipment_to_stockpile = {
+		#	type = medium_tank_chassis_2
+		#	variant_name = "Merkava Mk.3"
+		#	amount = #all deployed
+		#}
+		create_equipment_variant = {
+			name = "Merkava Mk.3D"
+			type = medium_tank_chassis_2
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_medium_cannon_2
+				secondary_armament_slot = additional_mg
+				ammunition_load_slot = anti_armor_main_ammo_2
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension_medium
+				armor_type_slot = tank_composite_armor_gen2
+				engine_type_slot = tank_diesel_engine_gen4
+				reload_type_slot = manual_loading
+				special_type_slot_1 = front_mounted_engine
+				special_type_slot_2 = smoke_launchers_3
+				special_type_slot_3 = tank_aux_engine_2
+				special_type_slot_4 = tank_battlestation_3
+				special_type_slot_5 = afv_reverse_doors
+				special_type_slot_6 = spaced_armor_gen2
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 3
+			}
+			icon = "gfx/interface/technologies/ISR/LAND/Merkava3D.dds"
+			model = "ISR_armor_Bat_2_entity"
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_chassis_2
+			variant_name = "Merkava Mk.3D"
+			amount = 40
+		}
+
+		create_equipment_variant = {
+		 	name = "L-33"
+		 	type = medium_tank_artillery_chassis_0
+		 	parent_version = 0
+		 	modules = {
+		 		main_armament_slot = art_med_gun_gen1
+				reload_type_slot = manual_loading
+				ammunition_load_slot = artillery_medium_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_pneumatic_suspension_medium
+				engine_type_slot = tank_diesel_engine_gen1
+				special_type_slot_5 = direct_fire_conversion_medium
+				special_type_slot_1 = empty
+				special_type_slot_2 = empty
+				special_type_slot_4 = tank_battlestation_1
+		 	}
+		 	upgrades = {
+		 		tank_nsb_fire_upgrade = 2
+		 	}
+		 	obsolete = yes
+			icon = "gfx/interface/technologies/ISR/LAND/SPG1.dds"
+		}
+		#add_equipment_to_stockpile = {
+		#	type = medium_tank_artillery_chassis_0
+		#	variant_name = "L-33"
+		#	amount = 150 removed from stockpile, were broken up and used for other vehicles
+		#}
+
+		 create_equipment_variant = {
+		 	name = "LAR-160"
+		 	type = medium_tank_rocket_chassis_0
+		 	parent_version = 1
+		 	modules = {
+		 		main_armament_slot = art_med_rocket_gen1
+				turret_type_slot = tank_base_tank_turret
+				reload_type_slot = eight_missile_pack
+				ammunition_load_slot = artillery_medium_ammo_1
+		 		suspension_type_slot = tank_torsion_bar_suspension_medium
+		 		engine_type_slot = tank_diesel_engine_gen2
+
+		 		special_type_slot_1 = cluster_ammo_1
+		 		special_type_slot_4 = tank_battlestation_1
+		 	}
+		 	upgrades = {
+		 		tank_nsb_fire_upgrade = 2
+		 	}
+		 	icon = "GFX_ISR_SPR2"
+		 }
+
+		 create_equipment_variant = {
+		 	name = "MAR-290"
+		 	type = medium_tank_rocket_chassis_0
+		 	parent_version = 2
+		 	modules = {
+		 		main_armament_slot = art_med_rocket_gen1
+				turret_type_slot = tank_base_tank_turret
+				reload_type_slot = eight_missile_pack
+				ammunition_load_slot = artillery_medium_ammo_1
+		 		suspension_type_slot = tank_pneumatic_suspension_medium
+		 		engine_type_slot = tank_diesel_engine_gen2
+
+		 		special_type_slot_1 = mine_ammo_1
+		 		special_type_slot_2 = cluster_ammo_1
+		 		special_type_slot_4 = tank_battlestation_1
+		 	}
+		 	upgrades = {
+		 		tank_nsb_fire_upgrade = 2
+		 	}
+		 	obsolete = yes
+		 	icon = "GFX_ISR_SPR1"
+		 }
+		 create_equipment_variant = {
+		 	name = "M109A2 Rochev"
+		 	type = medium_tank_artillery_chassis_1
+		 	parent_version = 0
+		 	modules = {
+		 		main_armament_slot = art_med_gun_gen2
+				reload_type_slot = manual_loading
+				ammunition_load_slot = artillery_medium_ammo_2
+				turret_type_slot = tank_base_tank_turret
+		 		suspension_type_slot = tank_torsion_bar_suspension_medium
+		 		engine_type_slot = tank_diesel_engine_gen2
+		 		special_type_slot_1 = empty
+		 		special_type_slot_2 = cluster_ammo_1
+		 		special_type_slot_3 = empty
+		 		special_type_slot_4 = tank_battlestation_1
+		 	}
+		 	upgrades = {
+		 		tank_nsb_fire_upgrade = 2
+		 	}
+		 	obsolete = yes
+		 	icon = "gfx/interface/technologies/ISR/LAND/SPG2.dds"
+		 }
+
+		 create_equipment_variant = {
+		 	name = "M109A5 Doher"
+		 	type = medium_tank_artillery_chassis_1
+		 	parent_version = 1
+		 	modules = {
+		 		main_armament_slot = art_med_gun_gen2
+				reload_type_slot = manual_loading
+				ammunition_load_slot = artillery_medium_ammo_2
+				turret_type_slot = tank_base_tank_turret
+		 		suspension_type_slot = tank_torsion_bar_suspension_medium
+		 		engine_type_slot = tank_diesel_engine_gen2
+
+		 		special_type_slot_1 = empty
+		 		special_type_slot_2 = cluster_ammo_1
+		 		special_type_slot_3 = empty
+		 		special_type_slot_4 = tank_battlestation_3
+		 	}
+		 	upgrades = {
+		 		tank_nsb_fire_upgrade = 3
+		 	}
+		 	icon = "gfx/interface/technologies/ISR/LAND/SPG2.dds"
+		 }
+		 create_equipment_variant = {
+		 	name = "M270 Menatetz"
+		 	type = medium_tank_rocket_chassis_1
+		 	parent_version = 0
+		 	modules = {
+		 		main_armament_slot = art_med_rocket_gen2
+				turret_type_slot = tank_base_tank_turret
+				reload_type_slot = eight_missile_pack
+				ammunition_load_slot = artillery_medium_ammo_2
+		 		suspension_type_slot = tank_torsion_bar_suspension_medium
+		 		engine_type_slot = tank_diesel_engine_gen2
+
+		 		special_type_slot_1 = cluster_ammo_1
+		 		special_type_slot_2 = mine_ammo_1
+		 		special_type_slot_3 = empty
+		 		special_type_slot_4 = tank_battlestation_3
+		 	}
+		 	upgrades = {
+		 		tank_nsb_fire_upgrade = 4
+		 	}
+		 	icon = "gfx/interface/technologies/ISR/LAND/SPR3.dds"
+		 }
+
+		 create_equipment_variant = {
+		 	name = "Atmos 2000"
+		 	type = medium_tank_artillery_chassis_2
+		 	parent_version = 0
+		 	modules = {
+		 		main_armament_slot = art_med_gun_gen2
+				reload_type_slot = automatic_loading
+				ammunition_load_slot = artillery_medium_ammo_2
+				turret_type_slot = tank_base_tank_turret
+		 		suspension_type_slot = tank_wheeled_suspension_medium
+		 		engine_type_slot = tank_diesel_engine_gen1
+		 		special_type_slot_1 = empty
+		 		special_type_slot_2 = empty
+		 		special_type_slot_3 = empty
+		 		special_type_slot_4 = tank_battlestation_3
+				special_type_slot_5 = multiple_rounds_medium_gen1
+		 	}
+		 	upgrades = {
+		 		tank_nsb_fire_upgrade = 3
+		 	}
+		 	icon = "gfx/interface/technologies/ISR/LAND/SPG3.dds"
+		 }
+
+		 create_equipment_variant = {
+		 	name = "RAM V-2"
+		 	type = medium_tank_destroyer_chassis_1
+		 	parent_version = 0
+		 	modules = {
+		 		main_armament_slot = afv_assault_gun
+				ammunition_load_slot = anti_armor_main_ammo_1
+				turret_type_slot = tank_base_tank_turret
+		 		suspension_type_slot = tank_wheeled_suspension_medium
+		 		engine_type_slot = tank_diesel_engine_gen3
+		 		armor_type_slot = afv_alum_armor_gen1
+		 		reload_type_slot = manual_loading
+		 		secondary_armament_slot = empty
+		 		special_type_slot_1 = empty
+		 		special_type_slot_2 = smoke_launchers
+		 		special_type_slot_3 = empty
+		 		special_type_slot_4 = tank_battlestation_2
+		 	}
+		 	upgrades = {
+		 		tank_nsb_armor_upgrade = 0
+		 	}
+		 	obsolete = yes
+		 	icon = "gfx/interface/technologies/ISR/LAND/IFV1.dds"
+		 }
+
+		 create_equipment_variant = {
+			name = "RBY-1"
+			type = medium_tank_destroyer_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = afv_machine_gun
+				reload_type_slot = manual_loading
+				ammunition_load_slot = machine_gun_ammo_1
+				turret_type_slot = tank_base_tank_turret
+				suspension_type_slot = tank_wheeled_suspension_medium
+				engine_type_slot = tank_diesel_engine_gen3
+				armor_type_slot = afv_alum_armor_gen1
+				secondary_armament_slot = empty
+				special_type_slot_1 = empty
+				special_type_slot_2 = smoke_launchers
+				special_type_slot_3 = afv_atgm_gen1
+				special_type_slot_4 = tank_battlestation_2
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 0
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/LAND/IFV1.dds"
+		}
+		create_equipment_variant = {
+			name = "MD-500 Lahatut"
+			type = heavy_tank_chassis_0
+			parent_version = 0
+			modules = {
+				chassis_type_slot = helicopter_light_chassis
+			   	helicopter_body_layout = light_gunship_layout
+				helicopter_body_mount_1 = helicopter_rocket_pod_gen2
+				nose_gun_type_slot = helicopter_light_nose_gun_gen1
+				armor_type_slot = empty
+				engine_type_slot = helicopter_turbine_engine_gen1
+				defence_type_slot = flare_launchers
+				sensor_and_avionics_slot = sensors_and_avionics_gen_1
+				helicopter_body_mount_2 = helicopter_multiple_atgm_gen1
+			}
+			upgrades = {
+				helicopter_nsb_upgrade = 1
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/AIR/AH1.dds"
+		}
+		create_equipment_variant = {
+			name = "AH-1F Tzefa"
+			type = heavy_tank_chassis_0
+			parent_version = 1
+			modules = {
+				chassis_type_slot = helicopter_medium_chassis
+			   	helicopter_body_layout = gunship_layout
+				helicopter_body_mount_1 = helicopter_multiple_atgm_gen1
+				nose_gun_type_slot = helicopter_medium_nose_gun_gen2
+				armor_type_slot = helicopter_armor_gen1
+				engine_type_slot = helicopter_turbine_engine_gen2
+				defence_type_slot = flare_launchers
+				defence_type_slot_2 = em_lock_detection_system_gen2
+				sensor_and_avionics_slot = sensors_and_avionics_gen_2
+				helicopter_body_mount_2 = helicopter_rocket_pod_gen2
+			}
+			upgrades = {
+				helicopter_nsb_upgrade = 3
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/AIR/AH2.dds"
+		}
+		create_equipment_variant = {
+			name = "AH-64A Peten"
+			type = heavy_tank_chassis_2
+			parent_version = 0
+			modules = {
+				chassis_type_slot = helicopter_medium_chassis
+				helicopter_body_layout = gunship_layout
+				nose_gun_type_slot = helicopter_heavy_nose_gun_gen2
+				armor_type_slot = helicopter_armor_gen2
+				engine_type_slot = helicopter_turbine_engine_gen3
+				defence_type_slot = flare_launchers
+				defence_type_slot_2 = em_lock_detection_system_gen2
+				sensor_and_avionics_slot = sensors_and_avionics_gen_2
+				helicopter_body_mount_1 = helicopter_rocket_pod_gen2
+				helicopter_body_mount_2 = helicopter_rocket_pod_gen2
+				helicopter_wing_mount_1 = helicopter_multiple_atgm_gen2
+				helicopter_wing_mount_2 = helicopter_multiple_atgm_gen2
+			}
+			upgrades = {
+				helicopter_nsb_upgrade = 5
+			}
+			icon = "gfx/interface/technologies/ISR/AIR/AH3.dds"
+			model = "USA_attack_helo_bat_entity"
+		}
+		create_equipment_variant = {
+			name = "CH-53 Sea Stallion"
+			type = transport_helicopter2
+			upgrades = {
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/AIR/UH4.dds"
+		}
+		create_equipment_variant = {
+			name = "UH-60 Black Hawk"
+			type = transport_helicopter2
+			upgrades = {
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/AIR/UH2.dds"
+		}
+
+		complete_special_project = sp:sp_armoured_vehicle_project
+		complete_special_project = sp:sp_tank_nera_armor
+
+		else = {
+			set_technology = {
+				MBT_1 = 1
+				MBT_2 = 1
+				MBT_3 = 1
+				MBT_4 = 1
+				# MBT_5 should be here but its nuts
+				IFV_1 = 1
+				IFV_2 = 1
+				IFV_3 = 1
+				IFV_4 = 1
+
+				#Namer
+				Early_APC = 1
+				APC_1 = 1
+				APC_2 = 1
+				APC_3 = 1
+				APC_4 = 1
+				artillery_0 = 1
+				artillery_1 = 1
+
+				Arty_upgrade_1 = 1
+				Arty_upgrade_2 = 1
+
+				#Rascal
+				SP_arty_0 = 1
+				SP_arty_1 = 1
+				SP_arty_2 = 1
+
+				#LAR-160
+				SP_R_arty_0 = 1
+				SP_R_arty_1 = 1
+
+				Anti_Air_0 = 1
+				Anti_Air_1 = 1
+				AA_upgrade_1 = 1
+				AA_upgrade_3 = 1
+				SP_Anti_Air_0 = 1
+				SP_Anti_Air_1 = 1
+
+				#RAM-V-2
+				Rec_tank_0 = 1
+				Rec_tank_1 = 1
+				attack_helicopter1 = 1
+				attack_helicopter2 = 1
+				attack_helicopter3 = 1
+			}
+		}
+	}
+
+	set_technology = {
+			corvette_hull_1 = 1
+			corvette_hull_2 = 1
+			corvette_hull_3 = 1
+
+			frigate_hull_1 = 1
+			frigate_hull_2 = 1
+			frigate_hull_3 = 1
+
+			destroyer_hull_1 = 1
+			destroyer_hull_2 = 1
+
+			cruiser_hull_1 = 1
+
+			attack_submarine_hull_1 = 1
+			attack_submarine_hull_2 = 1
+			attack_submarine_hull_3 = 1
+
+			missile_submarine_hull_1 = 1
+
+			aircraft_carrier_engineering = 1
+			aircraft_heli_engineering_1 = 1
+
+			tech_submarine_engineering = 1
+			tech_submarine_engineering_1 = 1
+			tech_submarine_engineering_2 = 1
+
+			tech_naval_systems_engineering = 1
+			tech_power_systems = 1
+			tech_power_systems_1 = 1
+			tech_power_systems_2 = 1
+			tech_nuclear_power_systems = 1
+			tech_nuclear_power_systems_1 = 1
+
+			tech_combat_support_systems = 1
+			tech_fire_control = 1
+			tech_fire_control_1 = 1
+			tech_combat_radar = 1
+			tech_combat_radar_1 = 1
+			tech_combat_radar_2 = 1
+			tech_combat_sonar = 1
+			tech_combat_sonar_1 = 1
+			tech_combat_sonar_2 = 1
+
+			tech_early_naval_weapon_systems = 1
+			tech_naval_weapon_systems = 1
+			tech_light_guns = 1
+			tech_light_guns_1 = 1
+
+			tech_point_defense_system = 1
+			tech_point_defense_system_1 = 1
+			tech_point_defense_system_2 = 1
+			tech_point_defense_system_3 = 1
+
+			tech_turret_missiles_surface = 1
+			tech_turret_missiles_surface_1 = 1
+
+			tech_turret_missiles_aa = 1
+			tech_turret_missiles_aa_1 = 1
+
+			tech_vls_surface = 1
+			tech_vls_surface_1 = 1
+
+			tech_vls_aa = 1
+			tech_vls_aa_1 = 1
+
+			tech_torpedoes = 1
+			tech_torpedoes_1 = 1
+
+			tech_landing_craft = 1
+		}
+
+		create_equipment_variant = {
+			name = "Sa'ar 4 Class"
+			type = corvette_hull_1
+			name_group = SOV_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_jet_turbine_power
+				fixed_ship_fire_control_system_slot = module_analog_fire_control
+				fixed_ship_radar_slot = module_radar_2
+				fixed_ship_auxillary_slot = module_asm_2
+				fixed_ship_battery_slot = module_76mm_gun_1
+				front_1_custom_slot = module_ciws_2
+				rear_1_custom_slot = empty
+			}
+		}
+
+		#Sa'ar 5 Class
+		create_equipment_variant = {
+			name = "Sa'ar 5 Class"
+			type = corvette_hull_3
+			#name_group = ISR_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_light_surface_jet_turbine_power2
+				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+				fixed_ship_radar_slot = module_radar_4
+				fixed_ship_auxillary_slot = module_vls_sam_2
+				fixed_ship_battery_slot = module_76mm_gun_2
+				front_1_custom_slot = module_ciws_3
+				rear_1_custom_slot = module_light_helipad_1
+
+			}
+		}
+		#Dolphin Class
+		create_equipment_variant = {
+			name = "Dolphin Class"
+			type = attack_submarine_hull_2
+			#name_group = ISR_SS_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_engine_slot = module_sub_diesel_electric_power
+				fixed_ship_radar_slot = module_sonar_2
+				fixed_ship_auxillary_slot_3 = module_torpedoes_2
+				fixed_ship_auxillary_slot_2 = module_sub_esm_1
+				fixed_ship_auxillary_slot_1 = module_torpedoes_2
+				fixed_ship_auxillary_slot = module_vls_sub_asm_1
+				fixed_ship_battery_slot = module_anti_ship_torpedoes_2
+
+			}
+		}
+
+		complete_special_project = sp:sp_naval_vessel_project
+		complete_special_project = sp:sp_medium_naval_nuclear_engines
+
+		complete_special_project = sp:sp_helicopter_project
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			early_airframe_designs = 1
+			gen_3_light = 1
+			gen_4_light = 1
+			gen_3_medium = 1
+			gen_4_medium = 1
+			gen_3_large = 1
+			gen_4_large = 1
+
+			flying_wing_design = 1
+			variable_wing_design = 1
+			delta_wing_design = 1
+
+			engines_2 = 1
+			engines_3 = 1
+
+			refueling_1 = 1
+
+			avionics_1 = 1
+			avionics_2 = 1
+
+			drone_1 = 1
+			suicide_drone_1 = 1
+
+			awacs_1 = 1
+
+			redundant_1 = 1
+
+			early_weapons = 1
+			air_weapons_1 = 1
+			air_weapons_2 = 1
+			countermeasures_1 = 1
+			countermeasures_2 = 1
+
+			ag_weapons_1 = 1
+			ag_weapons_2 = 1
+
+			naval_weapons_1 = 1
+			special_mad_1 = 1
+
+			tgp_recon_1 = 1
+			tgp_recon_2 = 1
+
+			transport_helicopter1 = 1
+		nsb_transport_helicopter1 = 1
+			transport_helicopter2 = 1
+		nsb_transport_helicopter2 = 1
+		}
+
+		##BBA Designs##
+
+		create_equipment_variant = {
+			name = "IAI Nesher"
+			type = small_plane_strike_airframe_1
+			parent_version = 0
+			modules = {
+				fixed_main_weapon_slot = weap_mp_med_hardpoint_1
+				fixed_gun_slot = weap_multi_gun_1
+				engine_type_slot = engine_light_single_1
+				avionics_type_slot = avionics_manned_2
+				wingform_type_slot = wing_delta
+				special_slot_type_1 = spec_countermeasures_1
+			}
+			icon = "gfx/interface/technologies/ISR/AIR/MR1.dds"
+			obsolete = yes
+		}
+
+		create_equipment_variant = {
+			name = "IAI Kfir"
+			type = small_plane_strike_airframe_1
+			parent_version = 0
+			modules = {
+				fixed_main_weapon_slot = weap_mp_med_hardpoint_1
+				fixed_gun_slot = weap_multi_gun_1
+				engine_type_slot = engine_light_single_2
+				avionics_type_slot = avionics_manned_2
+				wingform_type_slot = wing_delta
+				special_slot_type_1 = spec_countermeasures_2
+			}
+			icon = "gfx/interface/technologies/ISR/AIR/MR1.dds"
+			obsolete = yes
+		}
+		create_equipment_variant = { #Light Fighter
+			name = "F-16A Netz"
+			type = small_plane_strike_airframe_2
+			parent_version = 0
+			modules = {
+				fixed_main_weapon_slot = weap_mp_med_hardpoint_1
+				fixed_gun_slot = weap_multi_gun_2
+				fixed_auxiliary_weapon_slot_1 = weap_a2a_hardpoint_1
+				engine_type_slot = engine_light_single_2
+				avionics_type_slot = avionics_manned_2
+				wingform_type_slot = wing_delta
+				special_slot_type_1 = spec_countermeasures_2
+				special_slot_type_2 = spec_tgp_1
+				special_slot_type_3 = spec_refuel_3
+			}
+			upgrades = {
+				plane_bba_radar_upgrade = 2
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/AIR/MR2.dds"
+			model = "ISR_small_plane_airframe_2_entity"
+		}
+		create_equipment_variant = { #Light Fighter
+			name = "F-16C Barak II"
+			type = small_plane_strike_airframe_2
+			parent_version = 1
+			modules = {
+				fixed_main_weapon_slot = weap_mp_med_hardpoint_2
+				fixed_gun_slot = weap_multi_gun_2
+				fixed_auxiliary_weapon_slot_1 = weap_a2a_hardpoint_2
+				engine_type_slot = engine_light_single_3
+				avionics_type_slot = avionics_manned_3
+				wingform_type_slot = wing_delta
+				special_slot_type_1 = spec_countermeasures_2
+				special_slot_type_2 = spec_tgp_2
+				special_slot_type_3 = spec_refuel_3
+			}
+			upgrades = {
+				plane_bba_radar_upgrade = 3
+				plane_bba_engine_upgrade = 2
+			}
+			icon = "gfx/interface/technologies/ISR/AIR/MR2.dds"
+			model = "ISR_small_plane_airframe_2_entity"
+		}
+		create_equipment_variant = { #Light Fighter
+			name = "F-16I Sufa"
+			type = small_plane_strike_airframe_2
+			parent_version = 3
+			modules = {
+				fixed_main_weapon_slot = weap_mp_med_hardpoint_2
+				fixed_gun_slot = weap_multi_gun_2
+				fixed_auxiliary_weapon_slot_1 = weap_a2a_hardpoint_2
+				engine_type_slot = engine_light_single_3
+				avionics_type_slot = avionics_manned_3
+				wingform_type_slot = wing_delta
+				special_slot_type_1 = spec_countermeasures_2
+				special_slot_type_2 = spec_tgp_2
+				special_slot_type_3 = spec_refuel_3
+			}
+			upgrades = {
+				plane_bba_radar_upgrade = 4
+				plane_bba_engine_upgrade = 4
+			}
+			icon = "gfx/interface/technologies/ISR/AIR/MR3.dds"
+			model = "ISR_F16I_entity"
+		}
+		create_equipment_variant = { #Med Fighter
+			name = "F-15A Baz"
+			type = medium_plane_fighter_airframe_2
+			parent_version = 0
+			modules = {
+				fixed_main_weapon_slot = weap_a2a_hardpoint_1
+				fixed_gun_slot = weap_multi_gun_2
+				engine_type_slot = engine_jet_double_2
+				avionics_type_slot = avionics_manned_2
+				wingform_type_slot = wing_delta
+				special_slot_type_1 = spec_countermeasures_2
+				special_slot_type_2 = spec_refuel_3
+				special_slot_type_3 = spec_redundant_2
+				fixed_auxiliary_weapon_slot_1 = weap_a2a_hardpoint_1
+				fixed_auxiliary_weapon_slot_2 = weap_mp_light_hardpoint_2
+			}
+			upgrades = {
+				plane_bba_radar_upgrade = 2
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/AIR/AS3.dds"
+			model = "ISR_medium_plane_fighter_airframe_2_entity"
+		}
+		create_equipment_variant = { #Med Fighter
+			name = "F-15C Baz Meshupar"
+			type = medium_plane_fighter_airframe_2
+			parent_version = 1
+			modules = {
+				fixed_main_weapon_slot = weap_a2a_hardpoint_2
+				fixed_gun_slot = weap_multi_gun_2
+				engine_type_slot = engine_jet_double_2
+				avionics_type_slot = avionics_manned_2
+				wingform_type_slot = wing_delta
+				special_slot_type_1 = spec_countermeasures_2
+				special_slot_type_2 = spec_refuel_3
+				special_slot_type_3 = spec_redundant_2
+				fixed_auxiliary_weapon_slot_1 = weap_a2a_hardpoint_2
+				fixed_auxiliary_weapon_slot_2 = weap_mp_light_hardpoint_2
+			}
+			upgrades = {
+				plane_bba_radar_upgrade = 2
+			}
+			icon = "gfx/interface/technologies/ISR/AIR/AS3.dds"
+			model = "ISR_medium_plane_fighter_airframe_2_entity"
+		}
+		create_equipment_variant = { #Med Fighter
+				name = "F-4E Kurnass 2000"
+				type = medium_plane_airframe_1
+				parent_version = 1
+				modules = {
+					fixed_main_weapon_slot = weap_mp_light_hardpoint_2
+					fixed_gun_slot = weap_multi_gun_2
+					engine_type_slot = engine_jet_double_1
+					avionics_type_slot = avionics_manned_3
+					wingform_type_slot = wing_swept
+					special_slot_type_1 = spec_countermeasures_2
+					special_slot_type_2 = spec_refuel_1
+					special_slot_type_3 = spec_refuel_3
+					fixed_auxiliary_weapon_slot_1 = weap_ag_cas_hardpoint_1
+				}
+				upgrades = {
+					plane_bba_radar_upgrade = 4
+					plane_bba_engine_upgrade = 4
+				}
+				obsolete = yes
+				icon = "gfx/interface/technologies/ISR/AIR/AS2.dds"
+				model = "USA_medium_plane_airframe_1_entity"
+			}
+		create_equipment_variant = { #Med Fighter BRUH BRUH BRUH
+			name = "F-15I Ra'am"
+			type = medium_plane_airframe_2
+			parent_version = 1
+			modules = {
+				fixed_main_weapon_slot = weap_mp_med_hardpoint_2
+				fixed_gun_slot = weap_multi_gun_2
+				engine_type_slot = engine_jet_double_3
+				avionics_type_slot = avionics_manned_3
+				wingform_type_slot = wing_delta
+				special_slot_type_1 = spec_countermeasures_2
+				special_slot_type_2 = spec_tgp_2
+				special_slot_type_3 = spec_refuel_3
+				fixed_auxiliary_weapon_slot_1 = weap_ag_cas_hardpoint_2
+				fixed_auxiliary_weapon_slot_2 = weap_a2a_hardpoint_2
+			}
+			upgrades = {
+				plane_bba_radar_upgrade = 2
+			}
+			icon = "gfx/interface/technologies/ISR/AIR/STR3.dds"
+			model = "ISR_medium_plane_airframe_2_entity"
+		}
+		create_equipment_variant = { #Light Atk/trainer
+			name = "A-4N Ayit"
+			type = cv_small_plane_strike_airframe_1
+			parent_version = 0
+			modules = {
+				fixed_main_weapon_slot = weap_mp_light_hardpoint_2
+				fixed_gun_slot = weap_multi_gun_1
+				engine_type_slot = engine_light_single_2
+				avionics_type_slot = avionics_manned_2
+				wingform_type_slot = wing_delta
+				special_slot_type_1 = spec_countermeasures_2
+			}
+			obsolete = yes
+			icon = "gfx/interface/technologies/ISR/AIR/CAS2.dds"
+		}
+		create_equipment_variant = { #CV ASW/ASuW
+				name = "IAI Sea Scan"
+				type = medium_plane_maritime_patrol_airframe_1
+				parent_version = 0
+				modules = {
+					fixed_main_weapon_slot = weap_as_hardpoint_1
+					fixed_gun_slot = empty
+					engine_type_slot = engine_jet_double_1
+					avionics_type_slot = avionics_manned_2
+					wingform_type_slot = wing_straight
+					special_slot_type_1 = spec_countermeasures_2
+					special_slot_type_2 = spec_mad_1
+					special_slot_type_3 = empty
+					fixed_auxiliary_weapon_slot_1 = weap_as_hardpoint_1
+				}
+				icon = "gfx/interface/technologies/ISR/AIR/AWACS1.dds"
+				obsolete = yes
+			}
+		create_equipment_variant = {
+				name = "Boeing EL/M-2075 Phalcon"
+				type = large_plane_awacs_airframe_1
+				parent_version = 0
+				modules = {
+					fixed_main_weapon_slot = weap_buff_awacs_1
+					fixed_gun_slot = empty
+					engine_type_slot = engine_jet_quad_2
+					avionics_type_slot = avionics_manned_2
+					wingform_type_slot = wing_swept
+					special_slot_type_1 = spec_countermeasures_2
+					special_slot_type_2 = spec_redundant_2
+					fixed_auxiliary_weapon_slot_1 = empty
+				}
+				icon = "gfx/interface/technologies/USA/AIR/RC135.dds" #need a GFX with the biiiiiiiig nose
+			}
+
+		#Drones
+		create_equipment_variant = {
+			name = "IAI Hunter"
+			type = small_plane_suicide_airframe_2
+			parent_version = 0
+			modules = {
+				fixed_main_weapon_slot = avionics_drone_1
+				fixed_gun_slot = empty
+				fixed_auxiliary_weapon_slot_1 = weap_ag_cas_hardpoint_1
+				engine_type_slot = engine_prop_single_2
+				avionics_type_slot = avionics_manned_2
+				wingform_type_slot = wing_straight
+				special_slot_type_2 = spec_tgp_1
+			}
+			icon = "gfx/interface/technologies/TUR/AIR/UAV1.dds"
+			model = "TUR_bayraktartb2_entity" # actually looks very similar to the og Hunter
+		}
+
+		else = {
+			set_technology = {
+
+				#IAI Kfir
+				early_fighter = 1
+				AS_Fighter1 = 1
+				AS_Fighter2 = 1
+				MR_Fighter1 = 1
+				MR_Fighter2 = 1
+				MR_Fighter3 = 1
+
+				#IAI Nesher
+				Strike_fighter1 = 1
+				Strike_fighter2 = 1
+				Strike_fighter3 = 1
+
+				awacs_plane1 = 1
+
+				Air_UAV1 = 1
+				Air_Kamikaze1 = 1
+			}
+		}
+	}
+
+	#Cyber
+	if = {
+		limit = { NOT = { has_dlc = "La Resistance" } }
+
+		add_to_array = { cyber_targets = USA }
+		add_to_array = { cyber_targets = PER }
+		add_to_array = { cyber_targets = SOV }
+		add_to_array = { cyber_targets = SAU }
+		add_to_array = { cyber_targets = TUR }
+	}
+
+	### ISR ###
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 230 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 90 }
+	add_to_array = { influence_array = GER.id }
+	add_to_array = { influence_array_val = 7 }
+	add_to_array = { influence_array = TUR.id }
+	add_to_array = { influence_array_val = 4 }
+	add_to_array = { influence_array = CHI.id }
+	add_to_array = { influence_array_val = 35 }
+	add_to_array = { influence_array = SOV.id }
+	add_to_array = { influence_array_val = 20 }
+	add_to_array = { influence_array = RAJ.id }
+	add_to_array = { influence_array_val = 15 }
+	add_to_array = { influence_array = ENG.id }
+	add_to_array = { influence_array_val = 12 }
+	startup_influence = yes
+
+	### Economy
+	set_variable = { var = debt value = 149.499 }
+	set_variable = { var = treasury value = 34 }
+	set_variable = { var = corporate_tax_rate value = 23 }
+	set_variable = { var = population_tax_rate value = 38 }
+	set_variable = { var = int_investments value = 34 }
+
+	set_popularities = {
+		democratic = 53.4
+		fascism = 0
+		communism = 19.5
+		neutrality = 25.1
+		nationalist = 2
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1999.05.17.22"
+		election_frequency = 44
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { election_threshold = 0.01 }
+
+	### Party Popularities
+	set_variable = { party_pop_array^1 = 0.164 } #conservatism
+	set_variable = { party_pop_array^3 = 0.233 } #socialism
+	set_variable = { party_pop_array^4 = 0.025 } #Communist-State
+	set_variable = { party_pop_array^6 = 0.140 } #Conservative
+	set_variable = { party_pop_array^5 = 0.020 } #anarchist_communism
+	set_variable = { party_pop_array^18 = 0.086 } #neutral_Social
+	set_variable = { party_pop_array^13 = 0.037 } #Neutral_Autocracy
+	set_variable = { party_pop_array^12 = 0.027 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^20 = 0.020 } #Nat_Populism
+	set_variable = { party_pop_array^2 = 0.11 } #Liberalism
+	set_variable = { party_pop_array^0 = 0.027 } #Western Autocrats
+	set_variable = { party_pop_array^7 = 0.010 } #Autocrats
+	set_variable = { party_pop_array^15 = 0.04 } #Oligarch
+	set_variable = { party_pop_array^14 = 0.061 } #Conservative Neutral
+
+	### Ruling Party
+	add_to_array = { ruling_party = 3 } #socialism
+	add_to_array = { gov_coalition_array = 0 }
+	add_to_array = { gov_coalition_array = 18 }
+	add_to_array = { gov_coalition_array = 2 }
+	add_to_array = { gov_coalition_array = 14 }
+	add_to_array = { gov_coalition_array = 13 }
+	add_to_array = { gov_coalition_array = 6 }
+	add_to_array = { gov_coalition_array = 20 }
+
+	startup_politics = yes
+
+	if = {
+		limit = {
+			has_global_flag = GAME_RULE_allow_colored_puppets
+		}
+		set_autonomy = {
+			target = PAL
+			autonomy_state = autonomy_authority_of_palestine
+		}
+		else = {
+			set_autonomy = {
+				target = PAL
+				autonomy_state = autonomy_authority_of_palestine
+			}
+		}
+	}
+
+	create_country_leader = {
+		name = "Ehud Barak"
+		desc = "Ehud Barak"
+		picture = "barak_ehud.dds"
+		expire = "2001.3.7"
+		ideology = socialism
+		traits = {
+			western_socialism
+			military_career
+			scientist_engineer
+		}
+	}
+
+	recruit_character = ISR_tamir_hayman
+	recruit_character = ISR_yossi_bachar
+	recruit_character = ISR_hassan_alian
+	recruit_character = ISR_eyal_eizenberg
+	recruit_character = ISR_amir_abulaifa
+	recruit_character = ISR_amir_baram
+	recruit_character = ISR_gadi_eizenkot
+	recruit_character = ISR_kobi_barak
+	recruit_character = ISR_aviv_kochavi
+	recruit_character = ISR_dan_goldfus
+	recruit_character = ISR_david_zini
+	recruit_character = ISR_dror_friedman
+	recruit_character = ISR_yoel_strik
+
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 935 }
+	}
+	set_variable = { overall_productivity = 935 }
+}
+##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 55.000 }
+	set_variable = { var = debt value = 350.000 }
+	set_variable = { var = treasury value = 80 }
+	set_variable = { var = corporate_tax_rate value = 23 }
+	set_variable = { var = population_tax_rate value = 25 }
+	set_variable = { var = int_investments value = 100 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 1200 }
+	}
+	set_variable = { overall_productivity = 1200 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 45.0
+		communism = 5.0
+		fascism = 0.0
+		neutrality = 10.0
+		nationalist = 40.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2022.11.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^1 = 0.235 }   #conservatism (Likud)
+	set_variable = { party_pop_array^20 = 0.110 }   #Nat_Populism (Religious Zionism)
+	set_variable = { party_pop_array^21 = 0.065 }   #Nat_Fascism (Otzma Yehudit)
+	set_variable = { party_pop_array^3 = 0.180 }   #socialism (Yesh Atid)
+	set_variable = { party_pop_array^14 = 0.080 }   #Neutral_conservatism (National Unity)
+	set_variable = { party_pop_array^2 = 0.070 }   #liberalism (Yisrael Beiteinu)
+	set_variable = { party_pop_array^16 = 0.060 }   #Neutral_Libertarian (UTJ)
+	set_variable = { party_pop_array^10 = 0.055 }   #Kingdom (Shas)
+	set_variable = { party_pop_array^4 = 0.045 }   #Communist-State (Hadash-Taal)
+	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
+	set_variable = { party_pop_array^18 = 0.050 }   #neutral_Social (Labor)
+
+	add_to_array = { ruling_party = 1 }             #conservatism (Likud)
+	add_to_array = { gov_coalition_array = 20 }       #Nat_Populism (Religious Zionism)
+	add_to_array = { gov_coalition_array = 21 }       #Nat_Fascism (Otzma Yehudit)
+	add_to_array = { gov_coalition_array = 16 }       #Neutral_Libertarian (UTJ)
+	add_to_array = { gov_coalition_array = 10 }       #Kingdom (Shas)
+
+	set_variable = { party_pop_elect_array^1 = 0.234 }  #Likud
+	set_variable = { party_pop_elect_array^3 = 0.178 }  #Yesh Atid
+	set_variable = { party_pop_elect_array^20 = 0.109 }  #Religious Zionism
+	set_variable = { party_pop_elect_array^14 = 0.083 }  #National Unity
+	set_variable = { party_pop_elect_array^16 = 0.059 }  #UTJ
+	set_variable = { party_pop_elect_array^10 = 0.054 }  #Shas
+	set_variable = { party_pop_elect_array^21 = 0.065 }  #Otzma Yehudit
+	set_variable = { party_pop_elect_array^2 = 0.048 }  #Yisrael Beiteinu
+
+	startup_politics = yes
+
+	### 2026 National Spirits ###
+	add_ideas = {
+		md2026_isr_wartime_footing
+	}
+
+	### Country Leader: Benjamin Netanyahu ###
+	create_country_leader = {
+		name = "Benjamin Netanyahu"
+		picture = "gfx/leaders/ISR/Benjamin_Netanyahu.dds"
+		expire = "2028.11.1"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+			career_politician
+			hawk
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 6 }
+}

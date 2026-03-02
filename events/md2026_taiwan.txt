@@ -1,0 +1,488 @@
+###################################
+# MD2026 Taiwan Crisis Events
+# China-Taiwan escalation, US/Japan response
+###################################
+
+add_namespace = md2026_taiwan
+add_namespace = md2026_taiwan_news
+
+###################################
+# md2026_taiwan.1 - China: Taiwan Crisis Escalation
+# Triggered by CHI taiwan_escalation focus
+# CHI decides how to proceed
+###################################
+country_event = {
+	id = md2026_taiwan.1
+	title = md2026_taiwan.1.t
+	desc = md2026_taiwan.1.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		date > 2025.12.31
+	}
+
+	# Option A: Naval blockade of Taiwan
+	option = {
+		name = md2026_taiwan.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.1.o1 executed"
+
+		add_war_support = 0.10
+		add_stability = -0.10
+		navy_experience = 25
+
+		set_country_flag = md2026_chi_taiwan_blockade
+
+		USA = {
+			country_event = { id = md2026_taiwan.2 days = 3 }
+		}
+		JAP = {
+			country_event = { id = md2026_taiwan.3 days = 3 }
+		}
+
+		hidden_effect = {
+			news_event = { id = md2026_taiwan_news.1 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: Full-scale amphibious invasion
+	option = {
+		name = md2026_taiwan.1.o2
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.1.o2 executed"
+
+		add_war_support = 0.20
+		add_stability = -0.20
+
+		set_country_flag = md2026_chi_taiwan_invasion
+
+		declare_war_on = {
+			target = TAI
+			type = annex_everything
+		}
+
+		USA = {
+			country_event = { id = md2026_taiwan.4 days = 1 }
+		}
+		JAP = {
+			country_event = { id = md2026_taiwan.5 days = 1 }
+		}
+
+		hidden_effect = {
+			news_event = { id = md2026_taiwan_news.2 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	# Option C: Military exercises only - demonstrate strength
+	option = {
+		name = md2026_taiwan.1.o3
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.1.o3 executed"
+
+		add_war_support = 0.05
+		add_stability = 0.03
+		army_experience = 10
+		navy_experience = 10
+		air_experience = 10
+
+		add_opinion_modifier = { target = TAI modifier = embargo }
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+###################################
+# md2026_taiwan.2 - USA: China Blockades Taiwan
+# US decides response to blockade
+###################################
+country_event = {
+	id = md2026_taiwan.2
+	title = md2026_taiwan.2.t
+	desc = md2026_taiwan.2.d
+	picture = GFX_report_event_merchant_ship
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+	}
+
+	# Option A: Send Navy to break the blockade
+	option = {
+		name = md2026_taiwan.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.2.o1 executed"
+
+		add_war_support = 0.10
+		add_stability = -0.10
+		add_political_power = -100
+		navy_experience = 25
+
+		add_opinion_modifier = { target = CHI modifier = embargo }
+		reverse_add_opinion_modifier = { target = CHI modifier = embargo }
+
+		set_country_flag = md2026_usa_challenged_blockade
+
+		CHI = {
+			country_event = { id = md2026_taiwan.6 days = 5 }
+		}
+
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Option B: Diplomatic protest and sanctions only
+	option = {
+		name = md2026_taiwan.2.o2
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.2.o2 executed"
+
+		add_political_power = -50
+		add_stability = -0.05
+
+		add_opinion_modifier = { target = CHI modifier = embargo }
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option C: Accept the new status quo
+	option = {
+		name = md2026_taiwan.2.o3
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.2.o3 executed"
+
+		add_political_power = -150
+		add_stability = -0.15
+		add_war_support = -0.10
+
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+###################################
+# md2026_taiwan.3 - Japan: China Blockades Taiwan
+# Japan decides response to blockade
+###################################
+country_event = {
+	id = md2026_taiwan.3
+	title = md2026_taiwan.3.t
+	desc = md2026_taiwan.3.d
+	picture = GFX_report_event_merchant_ship
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = JAP
+	}
+
+	# Option A: Support US naval operations
+	option = {
+		name = md2026_taiwan.3.o1
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.3.o1 executed"
+
+		add_war_support = 0.10
+		add_stability = -0.05
+		navy_experience = 15
+
+		add_opinion_modifier = { target = CHI modifier = embargo }
+		add_opinion_modifier = { target = USA modifier = improve_relation }
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 30
+				USA = { has_country_flag = md2026_usa_challenged_blockade }
+			}
+		}
+	}
+
+	# Option B: Maintain neutrality
+	option = {
+		name = md2026_taiwan.3.o2
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.3.o2 executed"
+
+		add_political_power = 25
+		add_stability = 0.03
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# md2026_taiwan.4 - USA: China Invades Taiwan
+# US decides whether to intervene militarily
+###################################
+country_event = {
+	id = md2026_taiwan.4
+	title = md2026_taiwan.4.t
+	desc = md2026_taiwan.4.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+	}
+
+	# Option A: Defend Taiwan - join the war
+	option = {
+		name = md2026_taiwan.4.o1
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.4.o1 executed"
+
+		add_war_support = 0.15
+		add_stability = -0.15
+		add_political_power = -200
+
+		declare_war_on = {
+			target = CHI
+			type = puppet_wargoal_focus
+		}
+
+		add_opinion_modifier = { target = TAI modifier = improve_relation }
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Provide weapons and support only
+	option = {
+		name = md2026_taiwan.4.o2
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.4.o2 executed"
+
+		add_political_power = -100
+		add_stability = -0.10
+
+		add_opinion_modifier = { target = CHI modifier = embargo }
+		reverse_add_opinion_modifier = { target = CHI modifier = embargo }
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option C: This is not our fight
+	option = {
+		name = md2026_taiwan.4.o3
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.4.o3 executed"
+
+		add_political_power = -200
+		add_stability = -0.20
+		add_war_support = -0.15
+
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+###################################
+# md2026_taiwan.5 - Japan: China Invades Taiwan
+# Japan decides whether to intervene
+###################################
+country_event = {
+	id = md2026_taiwan.5
+	title = md2026_taiwan.5.t
+	desc = md2026_taiwan.5.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = JAP
+	}
+
+	# Option A: Join the defense of Taiwan
+	option = {
+		name = md2026_taiwan.5.o1
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.5.o1 executed"
+
+		add_war_support = 0.15
+		add_stability = -0.15
+
+		declare_war_on = {
+			target = CHI
+			type = puppet_wargoal_focus
+		}
+
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = 40
+				USA = { has_war_with = CHI }
+			}
+		}
+	}
+
+	# Option B: Strengthen defenses, do not intervene directly
+	option = {
+		name = md2026_taiwan.5.o2
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.5.o2 executed"
+
+		add_war_support = 0.05
+		add_stability = 0.03
+		army_experience = 15
+		navy_experience = 15
+
+		add_opinion_modifier = { target = CHI modifier = embargo }
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+###################################
+# md2026_taiwan.6 - China: US Challenges the Blockade
+# CHI decides how to respond to US Navy
+###################################
+country_event = {
+	id = md2026_taiwan.6
+	title = md2026_taiwan.6.t
+	desc = md2026_taiwan.6.d
+	picture = GFX_report_event_merchant_ship
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+	}
+
+	# Option A: Confront US Navy - risk of war
+	option = {
+		name = md2026_taiwan.6.o1
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.6.o1 executed"
+
+		add_war_support = 0.15
+		add_stability = -0.20
+
+		create_wargoal = {
+			target = USA
+			type = puppet_wargoal_focus
+		}
+
+		ai_chance = {
+			base = 15
+		}
+	}
+
+	# Option B: Back down, lift the blockade
+	option = {
+		name = md2026_taiwan.6.o2
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.6.o2 executed"
+
+		add_political_power = -100
+		add_stability = -0.10
+		add_war_support = -0.10
+
+		clr_country_flag = md2026_chi_taiwan_blockade
+
+		hidden_effect = {
+			news_event = { id = md2026_taiwan_news.3 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 70
+		}
+	}
+
+	# Option C: Maintain blockade, avoid direct confrontation
+	option = {
+		name = md2026_taiwan.6.o3
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan.6.o3 executed"
+
+		add_stability = -0.05
+		add_political_power = -25
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# NEWS EVENTS
+###################################
+
+# China blockades Taiwan
+news_event = {
+	id = md2026_taiwan_news.1
+	title = md2026_taiwan_news.1.t
+	desc = md2026_taiwan_news.1.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_taiwan_news.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan_news.1.o1 executed"
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+# China invades Taiwan
+news_event = {
+	id = md2026_taiwan_news.2
+	title = md2026_taiwan_news.2.t
+	desc = md2026_taiwan_news.2.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_taiwan_news.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan_news.2.o1 executed"
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+# China lifts Taiwan blockade
+news_event = {
+	id = md2026_taiwan_news.3
+	title = md2026_taiwan_news.3.t
+	desc = md2026_taiwan_news.3.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_taiwan_news.3.o1
+		log = "[GetDateText]: [This.GetName]: md2026_taiwan_news.3.o1 executed"
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}

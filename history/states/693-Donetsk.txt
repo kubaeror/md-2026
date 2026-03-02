@@ -1,0 +1,38 @@
+state = {
+	id = 693
+	name = "STATE_693"
+	manpower = 2540905
+	state_category = state_04
+
+	resources = {
+		oil = 19
+	}
+	history = {
+		owner = UKR
+		add_core_of = UKR
+		add_core_of = DPR
+		victory_points = { 6474 8 } #Donetsk
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 3
+			air_base = 2
+			3421 = {
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.20 }		
+		
+	}
+
+	provinces = {
+		3421 6493 6474
+	}
+
+	# MD2026: Donetsk city under Russian control since 2014, annexed 2022
+	2026.1.1 = {
+		owner = SOV
+		add_core_of = SOV
+	}
+}

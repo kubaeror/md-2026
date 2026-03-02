@@ -1,0 +1,214 @@
+### MD2026 Germany Focus Branch ###
+# Shared focuses for Germany's 2026 focus tree branch
+# Root focus at absolute x=38, y=0
+# Gated by date > 2025.12.31
+
+shared_focus = {
+	id = MD2026_GER_zeitenwende_2026
+	icon = bundeswehr_reserve
+	x = 38
+	y = 0
+	allow_branch = {
+		original_tag = GER
+		date > 2025.12.31
+	}
+	cost = 3.6
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_zeitenwende_2026"
+		add_political_power = 75
+		add_stability = 0.05
+	}
+	ai_will_do = { base = 100 }
+}
+
+### EUROPEAN ARMY BRANCH (left) ###
+
+shared_focus = {
+	id = MD2026_GER_european_army
+	icon = coalition_army
+	x = -3
+	y = 1
+	relative_position_id = MD2026_GER_zeitenwende_2026
+	prerequisite = { focus = MD2026_GER_zeitenwende_2026 }
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_european_army"
+		army_experience = 25
+		add_war_support = 0.10
+		add_political_power = -50
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = MD2026_GER_bundeswehr_expansion
+	icon = bundeswehr_help
+	x = -1
+	y = 1
+	relative_position_id = MD2026_GER_european_army
+	prerequisite = { focus = MD2026_GER_european_army }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_bundeswehr_expansion"
+		army_experience = 25
+		add_manpower = 50000
+		add_war_support = 0.05
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = MD2026_GER_nato_2_percent
+	icon = blr_nato_cooperation
+	x = 1
+	y = 1
+	relative_position_id = MD2026_GER_european_army
+	prerequisite = { focus = MD2026_GER_european_army }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_EXPENDITURE }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_nato_2_percent"
+		add_political_power = -25
+		add_stability = -0.03
+		add_war_support = 0.05
+	}
+	ai_will_do = { base = 50 }
+}
+
+### ENERGY INDEPENDENCE BRANCH (center) ###
+
+shared_focus = {
+	id = MD2026_GER_energy_independence
+	icon = BRA_renewable_energy_funds
+	x = 0
+	y = 1
+	relative_position_id = MD2026_GER_zeitenwende_2026
+	prerequisite = { focus = MD2026_GER_zeitenwende_2026 }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_energy_independence"
+		add_political_power = 50
+		add_stability = 0.03
+	}
+	ai_will_do = { base = 80 }
+}
+
+shared_focus = {
+	id = MD2026_GER_renewables_push
+	icon = green_projects
+	x = -1
+	y = 1
+	relative_position_id = MD2026_GER_energy_independence
+	prerequisite = { focus = MD2026_GER_energy_independence }
+	mutually_exclusive = { focus = MD2026_GER_nuclear_revival }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_renewables_push"
+		add_stability = 0.05
+		add_political_power = 25
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = MD2026_GER_nuclear_revival
+	icon = nuclear_energy
+	x = 1
+	y = 1
+	relative_position_id = MD2026_GER_energy_independence
+	prerequisite = { focus = MD2026_GER_energy_independence }
+	mutually_exclusive = { focus = MD2026_GER_renewables_push }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_nuclear_revival"
+		add_stability = -0.05
+		add_political_power = -25
+		random_owned_controlled_state = {
+			limit = { is_core_of = GER }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 40 }
+}
+
+### EU EXPANSION BRANCH (right) ###
+
+shared_focus = {
+	id = MD2026_GER_eu_expansion
+	icon = eu_investments
+	x = 3
+	y = 1
+	relative_position_id = MD2026_GER_zeitenwende_2026
+	prerequisite = { focus = MD2026_GER_zeitenwende_2026 }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_eu_expansion"
+		add_political_power = 50
+		add_stability = 0.03
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = MD2026_GER_ukraine_eu_accession
+	icon = EU_reform
+	x = -1
+	y = 1
+	relative_position_id = MD2026_GER_eu_expansion
+	prerequisite = { focus = MD2026_GER_eu_expansion }
+	cost = 12.9
+
+	available = {
+		UKR = { NOT = { has_war = yes } }
+	}
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_ukraine_eu_accession"
+		add_political_power = 75
+		add_stability = 0.05
+		add_opinion_modifier = { target = UKR modifier = improve_relation }
+		reverse_add_opinion_modifier = { target = UKR modifier = improve_relation }
+	}
+	ai_will_do = { base = 50 }
+}
+
+shared_focus = {
+	id = MD2026_GER_balkans_integration
+	icon = nato_nation
+	x = 1
+	y = 1
+	relative_position_id = MD2026_GER_eu_expansion
+	prerequisite = { focus = MD2026_GER_eu_expansion }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_balkans_integration"
+		add_political_power = 50
+		add_opinion_modifier = { target = SER modifier = improve_relation }
+		add_opinion_modifier = { target = BOS modifier = improve_relation }
+		add_opinion_modifier = { target = ALB modifier = improve_relation }
+	}
+	ai_will_do = { base = 40 }
+}

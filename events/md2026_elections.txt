@@ -1,0 +1,251 @@
+###################################
+# MD2026 Elections Events
+# Cyclical elections for democratic countries
+###################################
+
+add_namespace = md2026_elections
+
+###################################
+# md2026_elections.1 - Generic: Upcoming Elections
+# Auto-fires for democratic countries periodically
+###################################
+country_event = {
+	id = md2026_elections.1
+	title = md2026_elections.1.t
+	desc = md2026_elections.1.d
+	picture = GFX_report_event_generic_diplomacy
+
+	trigger = {
+		date > 2026.6.1
+		has_government = democratic
+		NOT = { has_country_flag = md2026_election_held }
+		NOT = { has_war = yes }
+		OR = {
+			tag = USA
+			tag = FRA
+			tag = GER
+			tag = ENG
+			tag = JAP
+			tag = KOR
+			tag = BRA
+			tag = CAN
+			tag = AST
+			tag = ITA
+			tag = SPR
+			tag = POL
+			tag = ISR
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	# Option A: Center-right wins
+	option = {
+		name = md2026_elections.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections.1.o1 executed"
+
+		add_political_power = 50
+		add_stability = 0.05
+
+		set_country_flag = md2026_election_held
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+	# Option B: Center-left wins
+	option = {
+		name = md2026_elections.1.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections.1.o2 executed"
+
+		add_political_power = 50
+		add_stability = 0.05
+
+		set_country_flag = md2026_election_held
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option C: Populist surge - political instability
+	option = {
+		name = md2026_elections.1.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections.1.o3 executed"
+
+		add_political_power = -25
+		add_stability = -0.10
+		add_war_support = 0.05
+
+		set_country_flag = md2026_election_held
+
+		ai_chance = {
+			base = 25
+		}
+	}
+
+	# Option D: Incumbent retains power
+	option = {
+		name = md2026_elections.1.o4
+		log = "[GetDateText]: [This.GetName]: md2026_elections.1.o4 executed"
+
+		add_political_power = 25
+		add_stability = 0.03
+
+		set_country_flag = md2026_election_held
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+###################################
+# md2026_elections.10 - USA: 2028 Midterm Elections
+# US-specific midterm event
+###################################
+country_event = {
+	id = md2026_elections.10
+	title = md2026_elections.10.t
+	desc = md2026_elections.10.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 2028.9.1
+		NOT = { has_country_flag = md2026_usa_midterms }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	# Option A: Republicans hold Congress
+	option = {
+		name = md2026_elections.10.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections.10.o1 executed"
+
+		add_political_power = 75
+		add_stability = 0.05
+
+		set_country_flag = md2026_usa_midterms
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: Democrats win back Congress
+	option = {
+		name = md2026_elections.10.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections.10.o2 executed"
+
+		add_political_power = -50
+		add_stability = -0.05
+
+		set_country_flag = md2026_usa_midterms
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option C: Split Congress - gridlock
+	option = {
+		name = md2026_elections.10.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections.10.o3 executed"
+
+		add_political_power = -25
+		add_stability = -0.03
+
+		set_country_flag = md2026_usa_midterms
+
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+###################################
+# md2026_elections.20 - France: 2027 Presidential Election
+###################################
+country_event = {
+	id = md2026_elections.20
+	title = md2026_elections.20.t
+	desc = md2026_elections.20.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		date > 2027.3.1
+		NOT = { has_country_flag = md2026_fra_election }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	# Option A: Center coalition wins (continuity)
+	option = {
+		name = md2026_elections.20.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections.20.o1 executed"
+
+		add_political_power = 50
+		add_stability = 0.05
+
+		set_country_flag = md2026_fra_election
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option B: Right-wing victory (Le Pen/RN)
+	option = {
+		name = md2026_elections.20.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections.20.o2 executed"
+
+		add_political_power = -25
+		add_stability = -0.10
+		add_war_support = 0.05
+
+		set_country_flag = md2026_fra_election
+
+		every_country = {
+			limit = {
+				OR = {
+					tag = GER
+					tag = ITA
+					tag = SPR
+				}
+			}
+			add_opinion_modifier = { target = FRA modifier = embargo }
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+	# Option C: Left coalition victory
+	option = {
+		name = md2026_elections.20.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections.20.o3 executed"
+
+		add_political_power = 25
+		add_stability = 0.03
+
+		set_country_flag = md2026_fra_election
+
+		ai_chance = {
+			base = 25
+		}
+	}
+}

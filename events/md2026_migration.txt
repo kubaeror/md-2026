@@ -1,0 +1,299 @@
+###################################
+# MD2026 Migration Crisis Events
+# Migration from Africa/Middle East to Europe
+###################################
+
+add_namespace = md2026_migration
+
+###################################
+# md2026_migration.1 - European Country: Migration Surge
+# Auto-fires for European countries
+###################################
+country_event = {
+	id = md2026_migration.1
+	title = md2026_migration.1.t
+	desc = md2026_migration.1.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2026.6.1
+		OR = {
+			tag = GER
+			tag = FRA
+			tag = ITA
+			tag = SPR
+			tag = GRE
+			tag = POL
+			tag = HUN
+		}
+		has_government = democratic
+		NOT = { has_country_flag = md2026_migration_crisis }
+	}
+
+	mean_time_to_happen = {
+		months = 14
+	}
+
+	# Option A: Open borders - accept refugees
+	option = {
+		name = md2026_migration.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_migration.1.o1 executed"
+
+		add_stability = -0.10
+		add_political_power = -50
+		add_manpower = 100000
+
+		set_country_flag = md2026_migration_crisis
+		set_country_flag = md2026_open_borders
+
+		ai_chance = {
+			base = 25
+		}
+	}
+
+	# Option B: Controlled immigration - quotas
+	option = {
+		name = md2026_migration.1.o2
+		log = "[GetDateText]: [This.GetName]: md2026_migration.1.o2 executed"
+
+		add_stability = -0.05
+		add_political_power = -25
+		add_manpower = 50000
+
+		set_country_flag = md2026_migration_crisis
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option C: Close borders - anti-immigration policy
+	option = {
+		name = md2026_migration.1.o3
+		log = "[GetDateText]: [This.GetName]: md2026_migration.1.o3 executed"
+
+		add_stability = 0.05
+		add_political_power = -25
+		add_war_support = 0.03
+
+		set_country_flag = md2026_migration_crisis
+		set_country_flag = md2026_closed_borders
+
+		every_country = {
+			limit = {
+				is_in_faction_with = ROOT
+				NOT = { tag = ROOT }
+				has_government = democratic
+			}
+			add_opinion_modifier = { target = ROOT modifier = embargo }
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+###################################
+# md2026_migration.2 - EU Migration Pact Crisis
+# Fires after multiple EU countries face migration
+###################################
+country_event = {
+	id = md2026_migration.2
+	title = md2026_migration.2.t
+	desc = md2026_migration.2.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date > 2027.1.1
+		NOT = { has_global_flag = md2026_eu_migration_pact }
+		OR = {
+			has_country_flag = md2026_migration_crisis
+			ITA = { has_country_flag = md2026_migration_crisis }
+			FRA = { has_country_flag = md2026_migration_crisis }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 8
+	}
+
+	# Option A: Push for EU-wide burden sharing
+	option = {
+		name = md2026_migration.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_migration.2.o1 executed"
+
+		add_political_power = -75
+		add_stability = -0.05
+
+		set_global_flag = md2026_eu_migration_pact
+
+		HUN = {
+			country_event = { id = md2026_migration.3 days = 7 }
+		}
+		POL = {
+			country_event = { id = md2026_migration.3 days = 7 }
+		}
+		ITA = {
+			country_event = { id = md2026_migration.3 days = 7 }
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Accept national solutions
+	option = {
+		name = md2026_migration.2.o2
+		log = "[GetDateText]: [This.GetName]: md2026_migration.2.o2 executed"
+
+		add_political_power = 25
+		add_stability = -0.03
+
+		set_global_flag = md2026_eu_migration_pact
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+###################################
+# md2026_migration.3 - EU Member: Migration Burden Sharing
+# Country decides on EU migration pact
+###################################
+country_event = {
+	id = md2026_migration.3
+	title = md2026_migration.3.t
+	desc = md2026_migration.3.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Accept EU quotas
+	option = {
+		name = md2026_migration.3.o1
+		log = "[GetDateText]: [This.GetName]: md2026_migration.3.o1 executed"
+
+		add_political_power = -50
+		add_stability = -0.10
+
+		add_opinion_modifier = { target = GER modifier = improve_relation }
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option B: Reject quotas, pay financial contribution
+	option = {
+		name = md2026_migration.3.o2
+		log = "[GetDateText]: [This.GetName]: md2026_migration.3.o2 executed"
+
+		add_political_power = -25
+		add_stability = 0.03
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option C: Refuse entirely - sovereignty first
+	option = {
+		name = md2026_migration.3.o3
+		log = "[GetDateText]: [This.GetName]: md2026_migration.3.o3 executed"
+
+		add_political_power = 25
+		add_stability = 0.05
+		add_war_support = 0.03
+
+		add_opinion_modifier = { target = GER modifier = embargo }
+
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = 30
+				tag = HUN
+			}
+		}
+	}
+}
+
+###################################
+# md2026_migration.10 - Populist Rise from Migration
+# Auto-fires if country had open borders
+###################################
+country_event = {
+	id = md2026_migration.10
+	title = md2026_migration.10.t
+	desc = md2026_migration.10.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2027.6.1
+		has_country_flag = md2026_open_borders
+		NOT = { has_country_flag = md2026_populist_reaction }
+	}
+
+	mean_time_to_happen = {
+		months = 10
+	}
+
+	# Option A: Address populist concerns
+	option = {
+		name = md2026_migration.10.o1
+		log = "[GetDateText]: [This.GetName]: md2026_migration.10.o1 executed"
+
+		add_stability = -0.10
+		add_political_power = -50
+
+		set_country_flag = md2026_populist_reaction
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Double down on progressive policy
+	option = {
+		name = md2026_migration.10.o2
+		log = "[GetDateText]: [This.GetName]: md2026_migration.10.o2 executed"
+
+		add_stability = -0.15
+		add_political_power = -75
+
+		set_country_flag = md2026_populist_reaction
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option C: Shift right on immigration
+	option = {
+		name = md2026_migration.10.o3
+		log = "[GetDateText]: [This.GetName]: md2026_migration.10.o3 executed"
+
+		add_stability = 0.05
+		add_political_power = 25
+
+		set_country_flag = md2026_populist_reaction
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# NEWS EVENTS - not needed for migration (local events)
+###################################

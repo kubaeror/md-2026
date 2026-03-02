@@ -1,0 +1,402 @@
+###################################
+# MD2026 NATO-Russia Escalation Events
+# Border incidents, cyber attacks, Article 5
+###################################
+
+add_namespace = md2026_nato_russia
+add_namespace = md2026_nato_russia_news
+
+###################################
+# md2026_nato_russia.1 - Baltic Border Incident
+# Auto-fires for random NATO Baltic member
+###################################
+country_event = {
+	id = md2026_nato_russia.1
+	title = md2026_nato_russia.1.t
+	desc = md2026_nato_russia.1.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2026.6.1
+		OR = {
+			tag = EST
+			tag = LAT
+			tag = LIT
+			tag = POL
+			tag = FIN
+		}
+		is_in_faction_with = USA
+		SOV = { NOT = { has_country_flag = md2026_frozen_conflict_established } }
+		NOT = { has_global_flag = md2026_baltic_incident }
+	}
+
+	mean_time_to_happen = {
+		months = 18
+	}
+
+	# Option A: Invoke Article 5 consultations
+	option = {
+		name = md2026_nato_russia.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.1.o1 executed"
+
+		add_war_support = 0.15
+		add_stability = -0.10
+		add_political_power = -50
+
+		set_global_flag = md2026_baltic_incident
+
+		USA = {
+			country_event = { id = md2026_nato_russia.2 days = 3 }
+		}
+
+		hidden_effect = {
+			news_event = { id = md2026_nato_russia_news.1 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Handle bilaterally with Russia
+	option = {
+		name = md2026_nato_russia.1.o2
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.1.o2 executed"
+
+		add_political_power = -25
+		add_stability = -0.05
+
+		set_global_flag = md2026_baltic_incident
+
+		SOV = {
+			country_event = { id = md2026_nato_russia.4 days = 5 }
+		}
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option C: Increase border patrols, de-escalate
+	option = {
+		name = md2026_nato_russia.1.o3
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.1.o3 executed"
+
+		add_war_support = 0.05
+		army_experience = 10
+
+		set_global_flag = md2026_baltic_incident
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+###################################
+# md2026_nato_russia.2 - USA: NATO Article 5 Consultations
+# US responds to Baltic border incident
+###################################
+country_event = {
+	id = md2026_nato_russia.2
+	title = md2026_nato_russia.2.t
+	desc = md2026_nato_russia.2.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+	}
+
+	# Option A: Deploy additional forces to Eastern flank
+	option = {
+		name = md2026_nato_russia.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.2.o1 executed"
+
+		add_war_support = 0.05
+		add_political_power = -75
+		army_experience = 15
+
+		add_opinion_modifier = { target = SOV modifier = embargo }
+
+		SOV = {
+			country_event = { id = md2026_nato_russia.3 days = 5 }
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Diplomatic warning to Russia
+	option = {
+		name = md2026_nato_russia.2.o2
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.2.o2 executed"
+
+		add_political_power = -25
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option C: Downplay the incident
+	option = {
+		name = md2026_nato_russia.2.o3
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.2.o3 executed"
+
+		add_stability = -0.03
+		add_political_power = 25
+
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+###################################
+# md2026_nato_russia.3 - Russia: NATO Deploys to Eastern Flank
+# SOV responds to NATO buildup
+###################################
+country_event = {
+	id = md2026_nato_russia.3
+	title = md2026_nato_russia.3.t
+	desc = md2026_nato_russia.3.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+	}
+
+	# Option A: Match NATO buildup
+	option = {
+		name = md2026_nato_russia.3.o1
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.3.o1 executed"
+
+		add_war_support = 0.10
+		add_stability = -0.05
+		army_experience = 15
+		add_manpower = 50000
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Nuclear saber-rattling
+	option = {
+		name = md2026_nato_russia.3.o2
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.3.o2 executed"
+
+		add_war_support = 0.15
+		add_stability = -0.15
+		add_political_power = -50
+
+		every_country = {
+			limit = { is_in_faction_with = USA }
+			add_opinion_modifier = { target = SOV modifier = embargo }
+		}
+
+		ai_chance = {
+			base = 20
+		}
+	}
+
+	# Option C: Propose de-escalation talks
+	option = {
+		name = md2026_nato_russia.3.o3
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.3.o3 executed"
+
+		add_political_power = 50
+		add_stability = 0.05
+
+		add_opinion_modifier = { target = USA modifier = improve_relation }
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+###################################
+# md2026_nato_russia.4 - Russia: Bilateral Incident Discussion
+# SOV responds to bilateral complaint
+###################################
+country_event = {
+	id = md2026_nato_russia.4
+	title = md2026_nato_russia.4.t
+	desc = md2026_nato_russia.4.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+	}
+
+	# Option A: Deny involvement
+	option = {
+		name = md2026_nato_russia.4.o1
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.4.o1 executed"
+
+		add_political_power = 25
+
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Option B: Apologize and cooperate
+	option = {
+		name = md2026_nato_russia.4.o2
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.4.o2 executed"
+
+		add_stability = 0.03
+		add_political_power = -25
+
+		FROM = {
+			add_opinion_modifier = { target = SOV modifier = improve_relation }
+		}
+
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+###################################
+# md2026_nato_russia.10 - Cyber Attack on NATO Member
+# Auto-fires for European NATO member
+###################################
+country_event = {
+	id = md2026_nato_russia.10
+	title = md2026_nato_russia.10.t
+	desc = md2026_nato_russia.10.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2027.1.1
+		OR = {
+			tag = EST
+			tag = POL
+			tag = GER
+			tag = ENG
+			tag = FRA
+		}
+		is_in_faction_with = USA
+		NOT = { has_global_flag = md2026_cyber_attack }
+	}
+
+	mean_time_to_happen = {
+		months = 18
+	}
+
+	# Option A: Retaliate with cyber counter-operations
+	option = {
+		name = md2026_nato_russia.10.o1
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.10.o1 executed"
+
+		add_political_power = -50
+		add_stability = -0.05
+
+		set_global_flag = md2026_cyber_attack
+
+		add_opinion_modifier = { target = SOV modifier = embargo }
+
+		hidden_effect = {
+			news_event = { id = md2026_nato_russia_news.2 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: Strengthen cyber defenses
+	option = {
+		name = md2026_nato_russia.10.o2
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.10.o2 executed"
+
+		add_political_power = -25
+		add_stability = -0.03
+
+		set_global_flag = md2026_cyber_attack
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option C: Public attribution and international condemnation
+	option = {
+		name = md2026_nato_russia.10.o3
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.10.o3 executed"
+
+		add_political_power = 25
+
+		set_global_flag = md2026_cyber_attack
+
+		add_opinion_modifier = { target = SOV modifier = embargo }
+		reverse_add_opinion_modifier = { target = SOV modifier = embargo }
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+###################################
+# NEWS EVENTS
+###################################
+
+# Baltic border incident
+news_event = {
+	id = md2026_nato_russia_news.1
+	title = md2026_nato_russia_news.1.t
+	desc = md2026_nato_russia_news.1.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_nato_russia_news.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia_news.1.o1 executed"
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+# Major cyber attack
+news_event = {
+	id = md2026_nato_russia_news.2
+	title = md2026_nato_russia_news.2.t
+	desc = md2026_nato_russia_news.2.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_nato_russia_news.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia_news.2.o1 executed"
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}

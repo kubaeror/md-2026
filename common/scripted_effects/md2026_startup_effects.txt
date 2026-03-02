@@ -1,0 +1,79 @@
+# Millennium Dawn 2026 Rework - Startup Effects
+# This file adds 2026-specific faction/alliance array initialization
+# File uses NEW name (md2026_*) so it's ADDED alongside MD's original effects
+
+# Called via on_startup or from history files
+md2026_setup_alliances = {
+
+	### EU 27 Member States (2026) ###
+	# Note: EU array may already exist in base MD - these are additive
+	add_to_array = { global.eu_member_2026 = GER }
+	add_to_array = { global.eu_member_2026 = FRA }
+	add_to_array = { global.eu_member_2026 = ITA }
+	add_to_array = { global.eu_member_2026 = SPR }
+	add_to_array = { global.eu_member_2026 = HOL }
+	add_to_array = { global.eu_member_2026 = BEL }
+	add_to_array = { global.eu_member_2026 = LUX }
+	add_to_array = { global.eu_member_2026 = POR }
+	add_to_array = { global.eu_member_2026 = GRE }
+	add_to_array = { global.eu_member_2026 = AUS }  # Austria
+	add_to_array = { global.eu_member_2026 = FIN }
+	add_to_array = { global.eu_member_2026 = SWE }
+	add_to_array = { global.eu_member_2026 = DEN }
+	add_to_array = { global.eu_member_2026 = POL }
+	add_to_array = { global.eu_member_2026 = CZE }
+	add_to_array = { global.eu_member_2026 = HUN }
+	add_to_array = { global.eu_member_2026 = ROM }
+	add_to_array = { global.eu_member_2026 = BUL }
+	add_to_array = { global.eu_member_2026 = CRO }
+	add_to_array = { global.eu_member_2026 = SLO }
+	add_to_array = { global.eu_member_2026 = SLV }
+	add_to_array = { global.eu_member_2026 = EST }
+	add_to_array = { global.eu_member_2026 = LAT }
+	add_to_array = { global.eu_member_2026 = LIT }
+	add_to_array = { global.eu_member_2026 = IRL }  # Ireland
+	add_to_array = { global.eu_member_2026 = CYP }  # Cyprus
+	add_to_array = { global.eu_member_2026 = MLT }  # Malta
+
+	### BRICS+ Members (2024 expansion) ###
+	add_to_array = { global.brics_member_2026 = CHI }
+	add_to_array = { global.brics_member_2026 = SOV }
+	add_to_array = { global.brics_member_2026 = RAJ }
+	add_to_array = { global.brics_member_2026 = BRA }
+	add_to_array = { global.brics_member_2026 = SAF }
+	add_to_array = { global.brics_member_2026 = EGY }
+	add_to_array = { global.brics_member_2026 = ETH }
+	add_to_array = { global.brics_member_2026 = PER }
+	add_to_array = { global.brics_member_2026 = UAE }
+	add_to_array = { global.brics_member_2026 = SAU }
+
+	### AUKUS Security Pact ###
+	add_to_array = { global.aukus_member = USA }
+	add_to_array = { global.aukus_member = ENG }
+	add_to_array = { global.aukus_member = AST }
+
+	### SCO Full Members (2026) ###
+	add_to_array = { global.sco_member_2026 = CHI }
+	add_to_array = { global.sco_member_2026 = SOV }
+	add_to_array = { global.sco_member_2026 = RAJ }
+	add_to_array = { global.sco_member_2026 = KAZ }
+	add_to_array = { global.sco_member_2026 = KYR }
+	add_to_array = { global.sco_member_2026 = TAJ }
+	add_to_array = { global.sco_member_2026 = UZB }
+	add_to_array = { global.sco_member_2026 = PAK }
+	add_to_array = { global.sco_member_2026 = PER }
+	add_to_array = { global.sco_member_2026 = BLR }  # Full member 2024
+
+	### Quad Security Dialogue ###
+	add_to_array = { global.quad_member = USA }
+	add_to_array = { global.quad_member = JAP }
+	add_to_array = { global.quad_member = RAJ }
+	add_to_array = { global.quad_member = AST }
+
+	### Abraham Accords (normalization agreements) ###
+	add_to_array = { global.abraham_accords = ISR }
+	add_to_array = { global.abraham_accords = UAE }
+	add_to_array = { global.abraham_accords = BHR }
+	add_to_array = { global.abraham_accords = MOR }
+	add_to_array = { global.abraham_accords = SUD }
+}
