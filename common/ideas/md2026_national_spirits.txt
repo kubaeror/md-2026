@@ -356,5 +356,309 @@ ideas = {
 			}
 		}
 
+		### FRANCE ###
+
+		md2026_fra_european_defense_leader = {
+			picture = defense
+			allowed = { original_tag = FRA }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				army_attack_factor = 0.05
+				conscription = 0.005
+				political_power_factor = 0.05
+			}
+		}
+
+		md2026_fra_social_unrest = {
+			picture = strike
+			allowed = { original_tag = FRA }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.10
+				consumer_goods_factor = 0.03
+				war_support_factor = -0.05
+			}
+		}
+
+		### ITALY ###
+
+		md2026_ita_demographic_crisis = {
+			picture = population
+			allowed = { original_tag = ITA }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				conscription = -0.005
+				stability_factor = -0.03
+				consumer_goods_factor = 0.03
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+
+		md2026_ita_right_wing_government = {
+			picture = political_censorship
+			allowed = { original_tag = ITA }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				NOT = { has_government = nationalist }
+			}
+			modifier = {
+				political_power_factor = 0.05
+				drift_defence_factor = 0.10
+				trade_opinion_factor = -0.05
+				stability_factor = -0.03
+			}
+		}
+
+		### EGYPT ###
+
+		md2026_egy_military_state = {
+			picture = national_mobilization
+			allowed = { original_tag = EGY }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = -0.05
+				conscription = 0.01
+				drift_defence_factor = 0.15
+				democratic_drift = -0.05
+			}
+		}
+
+		### PAKISTAN ###
+
+		md2026_pak_political_instability = {
+			picture = disjointed_government
+			allowed = { original_tag = PAK }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.15
+				war_support_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		md2026_pak_nuclear_deterrent = {
+			picture = rocket
+			allowed = { original_tag = PAK }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.10
+				army_defence_factor = 0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		### TAIWAN ###
+
+		md2026_tai_silicon_shield = {
+			picture = electronic_warfare
+			allowed = { original_tag = TAI }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = 0.20
+				research_speed_factor = 0.05
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.10
+			}
+		}
+
+		md2026_tai_china_threat = {
+			picture = threat
+			allowed = { original_tag = TAI }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.15
+				conscription = 0.01
+				army_defence_factor = 0.10
+				stability_factor = -0.05
+			}
+		}
+
+		### AUSTRALIA ###
+
+		md2026_ast_aukus_partner = {
+			picture = defense
+			allowed = { original_tag = AST }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				experience_gain_navy = 0.02
+				army_defence_factor = 0.05
+				political_power_factor = 0.03
+			}
+		}
+
+		### CANADA ###
+
+		md2026_can_nato_arctic = {
+			picture = winter_training
+			allowed = { original_tag = CAN }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_defence_factor = 0.05
+				war_support_factor = 0.03
+				winter_attrition_factor = -0.20
+				conscription = 0.003
+			}
+		}
+
+		### SPAIN ###
+
+		md2026_spr_territorial_tensions = {
+			picture = disjointed_government
+			allowed = { original_tag = SPR }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.08
+				political_power_factor = -0.05
+				war_support_factor = -0.03
+			}
+		}
+
+		### FINLAND ###
+
+		md2026_fin_new_nato_member = {
+			picture = defense
+			allowed = { original_tag = FIN }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_defence_factor = 0.10
+				war_support_factor = 0.05
+				conscription = 0.005
+				winter_attrition_factor = -0.15
+			}
+		}
+
+		### SWEDEN ###
+
+		md2026_swe_new_nato_member = {
+			picture = defense
+			allowed = { original_tag = SWE }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_defence_factor = 0.05
+				production_speed_arms_factory_factor = 0.10
+				war_support_factor = 0.05
+				conscription = 0.005
+			}
+		}
+
+		### GREECE ###
+
+		md2026_gre_economic_recovery = {
+			picture = economic_growth
+			allowed = { original_tag = GRE }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.03
+				consumer_goods_factor = -0.03
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		### ROMANIA ###
+
+		md2026_rom_frontline_nato = {
+			picture = fortification2
+			allowed = { original_tag = ROM }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_defence_factor = 0.10
+				production_speed_bunker_factor = 0.10
+				war_support_factor = 0.05
+				conscription = 0.005
+			}
+		}
+
+		### BURMA/MYANMAR ###
+
+		md2026_brm_civil_war_chaos = {
+			picture = disjointed_government
+			allowed = { original_tag = BRM }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.20
+				political_power_factor = -0.15
+				war_support_factor = -0.10
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.15
+			}
+		}
+
+		### SYRIA ###
+
+		md2026_syr_post_assad = {
+			picture = disjointed_government
+			allowed = { original_tag = SYR }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = -0.10
+				consumer_goods_factor = 0.10
+				production_speed_buildings_factor = -0.20
+				war_support_factor = 0.10
+			}
+		}
+
+		### SOUTH AFRICA ###
+
+		md2026_saf_load_shedding = {
+			picture = financial_crisis
+			allowed = { original_tag = SAF }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = -0.10
+				production_speed_buildings_factor = -0.10
+				stability_factor = -0.08
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		### KAZAKHSTAN ###
+
+		md2026_kaz_multi_vector_diplomacy = {
+			picture = political_censorship
+			allowed = { original_tag = KAZ }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = 0.10
+				political_power_factor = 0.05
+				stability_factor = 0.03
+				drift_defence_factor = 0.10
+			}
+		}
+
+		### BELARUS ###
+
+		md2026_blr_russian_satellite = {
+			picture = central_management
+			allowed = { original_tag = BLR }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_factor = -0.10
+				stability_factor = -0.10
+				trade_opinion_factor = -0.15
+				conscription = 0.01
+				army_defence_factor = 0.05
+			}
+		}
+
+		### GEORGIA ###
+
+		md2026_geo_eu_aspirations = {
+			picture = economic_growth
+			allowed = { original_tag = GEO }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.05
+				democratic_drift = 0.03
+				consumer_goods_factor = -0.03
+			}
+		}
+
 	}
 }

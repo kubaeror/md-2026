@@ -1115,4 +1115,9 @@
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	add_ideas = {
+		md2026_can_nato_arctic
+	}
 }
+

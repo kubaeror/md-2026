@@ -372,4 +372,8 @@
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 7 }
+
+	add_ideas = {
+		md2026_blr_russian_satellite
+	}
 }

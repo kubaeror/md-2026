@@ -664,4 +664,10 @@
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	### National Spirits ###
+	add_ideas = {
+		md2026_pak_political_instability
+		md2026_pak_nuclear_deterrent
+	}
 }

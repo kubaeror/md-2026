@@ -835,4 +835,8 @@
 	}
 	set_variable = { term_limit = 2 }
 	set_variable = { current_term = 2 }
+
+	add_ideas = {
+		md2026_saf_load_shedding
+	}
 }
