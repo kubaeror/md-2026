@@ -1,0 +1,271 @@
+##### ISR 2026 OOB - Israel Defense Forces (post-Gaza War) #####
+# Battle-hardened from 2023-2024 Gaza operations, high experience
+# Merkava Mk.4/4M MBT, Namer IFV, Eitan APC, Iron Dome, Trophy APS
+# AH-64D Saraf, Hermes 900/450 UAVs
+
+division_template = {
+	name = "Armored Brigade 2026"
+	division_names_group = ISR_ARM_01
+
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		armor_Bat = { x = 0 y = 2 }
+
+		Arm_Inf_Bat = { x = 1 y = 0 }
+
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		Mech_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		attack_helo_comp = { x = 0 y = 3 }
+		SP_R_Arty_Battery = { x = 0 y = 4 }
+	}
+}
+division_template = {
+	name = "Infantry Brigade 2026"
+	division_names_group = ISR_INF_01
+
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+
+		SP_Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		Mech_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		attack_helo_comp = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+}
+division_template = {
+	name = "Paratrooper Brigade 2026"
+	division_names_group = ISR_PAR_01
+
+	regiments = {
+		Mot_Air_Inf_Bat = { x = 0 y = 0 }
+		Mot_Air_Inf_Bat = { x = 0 y = 1 }
+		Mot_Air_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Reserve Brigade 2026"
+	division_names_group = ISR_RES_01
+
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+
+		armor_Bat = { x = 1 y = 0 }
+
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		Mech_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Special Forces 2026"
+	division_names_group = ISR_SOF_01
+
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		helicopter_combat_service_support = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Territorial Brigade 2026"
+	division_names_group = ISR_GAR_01
+
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 0
+}
+
+units = {
+	### Northern Command ###
+	## 36th Division "Ga'ash" ##
+	division = {
+		name = "1st 'Golani' Infantry Brigade"
+		location = 13205	#Haifa/N Israel
+		division_template = "Infantry Brigade 2026"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "7th Armored Brigade 'Saar me'Golan'"
+		location = 1065		#Golan Heights
+		division_template = "Armored Brigade 2026"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "188th Armored Brigade 'Barak'"
+		location = 1065		#Golan Heights
+		division_template = "Armored Brigade 2026"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+
+	## 210th Division "HaBashan" (Golan) ##
+	division = {
+		name = "474th Territorial Brigade 'Golan'"
+		location = 12839	#N Israel/Golan
+		division_template = "Territorial Brigade 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+
+	### Central Command ###
+	## 98th Division "Ha-Esh" (Fire) - elite ##
+	division = {
+		name = "35th Paratrooper Brigade 'Tzanhanim'"
+		location = 1201		#Central Israel
+		division_template = "Paratrooper Brigade 2026"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "55th Reserve Paratrooper Brigade"
+		location = 1201
+		division_template = "Paratrooper Brigade 2026"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "900th 'Kfir' Infantry Brigade"
+		location = 4206		#West Bank/Central
+		division_template = "Infantry Brigade 2026"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "933rd 'Nahal' Infantry Brigade"
+		location = 4206
+		division_template = "Infantry Brigade 2026"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+
+	### Southern Command ###
+	## 162nd Division "Ha-Plada" (Steel) ##
+	division = {
+		name = "84th 'Givati' Infantry Brigade"
+		location = 11970	#Negev/S Israel
+		division_template = "Infantry Brigade 2026"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "401st Armored Brigade 'Ikvot HaBarzel'"
+		location = 11970
+		division_template = "Armored Brigade 2026"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "460th Armored Training Brigade"
+		location = 1015		#S Israel
+		division_template = "Armored Brigade 2026"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.7
+	}
+
+	### Reserve Formations ###
+	division = {
+		name = "Reserve Brigade 'North'"
+		location = 12839
+		division_template = "Reserve Brigade 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Reserve Brigade 'Center'"
+		location = 13205
+		division_template = "Reserve Brigade 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Reserve Brigade 'South'"
+		location = 1015
+		division_template = "Reserve Brigade 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+
+	### Special Operations (Sayeret/Shaldag/Shayetet 13) ###
+	division = {
+		name = "Sayeret Matkal"
+		location = 4206
+		division_template = "Special Forces 2026"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "Shayetet 13"
+		location = 13205
+		division_template = "Special Forces 2026"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.9
+	}
+
+	### Territorial Brigades ###
+	division = {
+		name = "Judea and Samaria Territorial Brigade"
+		location = 4088		#West Bank
+		division_template = "Territorial Brigade 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 15000
+		producer = ISR
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons6
+		amount = 5000
+		producer = ISR
+	}
+	add_equipment_to_stockpile = {
+		type = command_control_equipment2
+		amount = 4000
+		producer = ISR
+	}
+	add_equipment_to_stockpile = {
+		type = command_control_equipment3
+		amount = 2000
+		producer = ISR
+	}
+}

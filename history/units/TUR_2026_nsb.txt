@@ -1,0 +1,280 @@
+##### TUR 2026 OOB - Turkey (NATO 2nd largest army) #####
+# Modernized with domestic production: Altay MBT (limited), M60T Sabra, Leopard 2A4
+# T-155 Firtina SPH, T-129 ATAK helos, Kirpi/BMC MRAP, FNSS ACV-15/Kaplan IFV
+
+division_template = {
+	name = "Zırhlı Tugay"			# Armored Brigade
+
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		Arm_Inf_Bat = { x = 1 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Arm_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "Mekanize Tugay"			# Mechanized Brigade
+
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 1 }
+		Mech_Inf_Bat = { x = 1 y = 2 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Piyade Tugay"			# Infantry Brigade (Motorized)
+
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Komando Tugay"			# Commando Brigade (SOF)
+
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		Special_Forces = { x = 1 y = 0 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		attack_helo_comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Amfibi Tugay"			# Amphibious Marine Brigade
+
+	regiments = {
+		Mech_Marine_Bat = { x = 0 y = 0 }
+		Mech_Marine_Bat = { x = 0 y = 1 }
+		Mech_Marine_Bat = { x = 1 y = 0 }
+		Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	### Armored Brigades (6) ###
+	division = {
+		name = "1. Zırhlı Tugay"
+		location = 3893		#Thrace
+		division_template = "Zırhlı Tugay"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "5. Zırhlı Tugay"
+		location = 9893
+		division_template = "Zırhlı Tugay"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "14. Zırhlı Tugay"
+		location = 7193		#SE Turkey
+		division_template = "Zırhlı Tugay"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "28. Zırhlı Tugay"
+		location = 7193
+		division_template = "Zırhlı Tugay"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "52. Zırhlı Tugay"
+		location = 9833
+		division_template = "Zırhlı Tugay"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "95. Zırhlı Tugay"
+		location = 3893		#Thrace
+		division_template = "Zırhlı Tugay"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.7
+	}
+
+	### Mechanized Brigades (8) ###
+	division = {
+		name = "1. Mekanize Tugay"
+		location = 4583
+		division_template = "Mekanize Tugay"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "4. Mekanize Tugay"
+		location = 849
+		division_template = "Mekanize Tugay"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "8. Mekanize Tugay"
+		location = 6895
+		division_template = "Mekanize Tugay"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "18. Mekanize Tugay"
+		location = 6864
+		division_template = "Mekanize Tugay"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "39. Mekanize Tugay"
+		location = 12029
+		division_template = "Mekanize Tugay"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "54. Mekanize Tugay"
+		location = 11842
+		division_template = "Mekanize Tugay"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "65. Mekanize Tugay"
+		location = 3893
+		division_template = "Mekanize Tugay"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "70. Mekanize Tugay"
+		location = 12416
+		division_template = "Mekanize Tugay"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+
+	### Infantry Brigades (6) ###
+	division = {
+		name = "2. Piyade Tugay"
+		location = 11739
+		division_template = "Piyade Tugay"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "6. Piyade Tugay"
+		location = 9799
+		division_template = "Piyade Tugay"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "15. Piyade Tugay"
+		location = 11842
+		division_template = "Piyade Tugay"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "23. Piyade Tugay"
+		location = 9833
+		division_template = "Piyade Tugay"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "34. Piyade Tugay"
+		location = 1463
+		division_template = "Piyade Tugay"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "49. Piyade Tugay"
+		location = 10399
+		division_template = "Piyade Tugay"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.65
+	}
+
+	### Commando Brigades (3) ###
+	division = {
+		name = "1. Komando Tugay"
+		location = 6977		#Kayseri
+		division_template = "Komando Tugay"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "2. Komando Tugay"
+		location = 3905
+		division_template = "Komando Tugay"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "3. Komando Tugay"
+		location = 871
+		division_template = "Komando Tugay"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+
+	### Amphibious Marine Brigade (1) ###
+	division = {
+		name = "Amfibi Deniz Piyade Tugayı"
+		location = 4112
+		division_template = "Amfibi Tugay"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.7
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 30000
+		producer = TUR
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 15000
+		producer = TUR
+	}
+	add_equipment_to_stockpile = {
+		type = command_control_equipment2
+		amount = 8000
+		producer = TUR
+	}
+}

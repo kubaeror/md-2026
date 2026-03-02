@@ -1,0 +1,371 @@
+##### KOR 2026 OOB - Republic of Korea (ROK Army) #####
+# K2 Black Panther MBT, K21 IFV, K9 Thunder SPH, K239 Chunmoo MLRS
+# KUH-1 Surion, LAH helicopter, K808/K806 wheeled APC
+
+division_template = {
+	name = "Mechanized Infantry Division 2026"
+	division_names_group = KOR_MECHINF_01
+
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+
+		armor_Bat = { x = 1 y = 0 }
+		armor_Bat = { x = 1 y = 1 }
+
+		SP_Arty_Bat = { x = 2 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 1 }
+
+		SP_R_Arty_Bat = { x = 3 y = 0 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "Infantry Division 2026"
+	division_names_group = KOR_INF_01
+
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 2 }
+
+		armor_Bat = { x = 2 y = 0 }
+
+		Arty_Bat = { x = 3 y = 0 }
+		Arty_Bat = { x = 3 y = 1 }
+		SP_Arty_Bat = { x = 3 y = 2 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "Armored Brigade 2026"
+	division_names_group = KOR_ARM_02
+
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		armor_Bat = { x = 0 y = 2 }
+
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		Arm_Inf_Bat = { x = 1 y = 1 }
+
+		SP_Arty_Bat = { x = 2 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "Marine Division 2026"
+
+	regiments = {
+		L_Marine_Bat = { x = 0 y = 0 }
+		L_Marine_Bat = { x = 0 y = 1 }
+		L_Marine_Bat = { x = 0 y = 2 }
+
+		L_Marine_Bat = { x = 1 y = 0 }
+		L_Marine_Bat = { x = 1 y = 1 }
+		L_Marine_Bat = { x = 1 y = 2 }
+
+		armor_Bat = { x = 2 y = 0 }
+
+		SP_Arty_Bat = { x = 3 y = 0 }
+		SP_Arty_Bat = { x = 3 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "Special Forces Brigade 2026"
+
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		helicopter_combat_service_support = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Reserve Infantry Division 2026"
+	division_names_group = KOR_INF_01
+
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+		L_Inf_Bat = { x = 1 y = 2 }
+
+		armor_Bat = { x = 2 y = 0 }
+
+		Arty_Bat = { x = 3 y = 0 }
+		Arty_Bat = { x = 3 y = 1 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	### Special Warfare Command ###
+	division = {
+		name = "1st Special Forces Brigade"
+		location = 4126		#Icheon
+		division_template = "Special Forces Brigade 2026"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "3rd Special Forces Brigade"
+		location = 4126
+		division_template = "Special Forces Brigade 2026"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "7th Special Forces Brigade"
+		location = 4126
+		division_template = "Special Forces Brigade 2026"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.85
+	}
+
+	### First ROK Army (frontline DMZ) ###
+	# I Corps
+	division = {
+		name = "1st Infantry Division 'Forward'"
+		location = 7125		#DMZ
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "9th Infantry Division 'White Horse'"
+		location = 3308
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "25th Infantry Division"
+		location = 7125
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "30th Mechanized Infantry Division"
+		location = 3308
+		division_template = "Mechanized Infantry Division 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+
+	# II Corps
+	division = {
+		name = "7th Infantry Division 'Seven Stars'"
+		location = 11958
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "15th Infantry Division"
+		location = 11958
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "27th Infantry Division 'Winning'"
+		location = 11958
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+
+	# III Corps
+	division = {
+		name = "2nd Infantry Division 'Loyal'"
+		location = 4004
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "12th Infantry Division"
+		location = 4004
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "21st Infantry Division 'Baekdu'"
+		location = 4004
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+
+	# VIII Corps
+	division = {
+		name = "22nd Infantry Division"
+		location = 3247
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "23rd Infantry Division"
+		location = 12011
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+
+	### Armored Brigades ###
+	division = {
+		name = "1st Armored Brigade"
+		location = 3285
+		division_template = "Armored Brigade 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "2nd Armored Brigade"
+		location = 3308
+		division_template = "Armored Brigade 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "3rd Armored Brigade"
+		location = 1148
+		division_template = "Armored Brigade 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "5th Armored Brigade"
+		location = 3285
+		division_template = "Armored Brigade 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+
+	### VII Maneuver Corps ###
+	division = {
+		name = "Capital Mechanized Infantry Division"
+		location = 7221		#Wonju
+		division_template = "Mechanized Infantry Division 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "20th Mechanized Infantry Division"
+		location = 7221
+		division_template = "Mechanized Infantry Division 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "26th Mechanized Infantry Division"
+		location = 7125
+		division_template = "Mechanized Infantry Division 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+
+	### Marines ###
+	division = {
+		name = "1st Marine Division 'Haeryong'"
+		location = 3308		#Pohang
+		division_template = "Marine Division 2026"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "2nd Marine Division 'Blue Dragon'"
+		location = 10115
+		division_template = "Marine Division 2026"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+
+	### Reserve Divisions ###
+	division = {
+		name = "31st Reserve Infantry Division"
+		location = 10110
+		division_template = "Reserve Infantry Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "35th Reserve Infantry Division"
+		location = 4126
+		division_template = "Reserve Infantry Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "39th Reserve Infantry Division"
+		location = 12060
+		division_template = "Reserve Infantry Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 25000
+		producer = KOR
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 18000
+		producer = KOR
+	}
+	add_equipment_to_stockpile = {
+		type = command_control_equipment2
+		amount = 9000
+		producer = KOR
+	}
+	add_equipment_to_stockpile = {
+		type = command_control_equipment3
+		amount = 3000
+		producer = KOR
+	}
+}

@@ -1,0 +1,227 @@
+##### POL 2026 OOB - Poland (massive modernization since 2022) #####
+# K2 Black Panther (ordered), Leopard 2A5/2PL, Rosomak IFV, K9/Krab SPH
+# HIMARS MLRS, AW149/Black Hawk helos, Patriot SAM
+
+division_template = {
+	name = "Dywizja Zmechanizowana 2026"		# Mechanized Division
+
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+
+		armor_Bat = { x = 1 y = 0 }
+		armor_Bat = { x = 1 y = 1 }
+
+		SP_Arty_Bat = { x = 2 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 1 }
+
+		SP_R_Arty_Bat = { x = 3 y = 0 }
+	}
+	support = {
+		armor_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "Dywizja Kawalerii Pancernej 2026"	# Armored Cavalry Division
+
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		armor_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 0 y = 3 }
+
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		Arm_Inf_Bat = { x = 1 y = 1 }
+
+		SP_Arty_Bat = { x = 2 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 1 }
+
+		attack_helo_bat = { x = 3 y = 0 }
+	}
+	support = {
+		armor_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Brygada Piechoty Gorskiej 2026"		# Mountain Infantry Brigade
+
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Kawaleria Powietrzna 2026"			# Air Cavalry Brigade
+
+	regiments = {
+		L_Air_assault_Bat = { x = 0 y = 0 }
+		L_Air_assault_Bat = { x = 0 y = 1 }
+
+		attack_helo_bat = { x = 1 y = 0 }
+		attack_helo_bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Arty_Battery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Brygada Desantowa 2026"				# Airborne Brigade
+
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Wojska Specjalne 2026"				# Special Forces (GROM/JWK/AGAT/FORMOZA)
+
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		Special_Forces = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Brygada WOT 2026"					# Territorial Defense Brigade
+
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 0 y = 3 }
+	}
+	support = {
+		Arty_Battery = { x = 0 y = 0 }
+	}
+	priority = 0
+}
+
+units = {
+	### 11th Lubuska Armored Cavalry Division ###
+	division = {
+		name = "11. Lubuska Dywizja Kawalerii Pancernej"
+		location = 3438		#Zagan
+		division_template = "Dywizja Kawalerii Pancernej 2026"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.75
+	}
+
+	### 12th Szczecinska Mechanized Division ###
+	division = {
+		name = "12. Szczecinska Dywizja Zmechanizowana"
+		location = 6282		#Szczecin
+		division_template = "Dywizja Zmechanizowana 2026"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.75
+	}
+
+	### 16th Pomorska Mechanized Division ###
+	division = {
+		name = "16. Pomorska Dywizja Zmechanizowana"
+		location = 3380		#Elblag
+		division_template = "Dywizja Zmechanizowana 2026"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.75
+	}
+
+	### 18th Mechanized Division ###
+	division = {
+		name = "18. Dywizja Zmechanizowana"
+		location = 524		#Siedlce/Warsaw
+		division_template = "Dywizja Zmechanizowana 2026"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.7
+	}
+
+	### 21st Podhale Riflemen Brigade ###
+	division = {
+		name = "21. Brygada Strzelcow Podhalanskich"
+		location = 6499		#Rzeszow
+		division_template = "Brygada Piechoty Gorskiej 2026"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.7
+	}
+
+	### 25th Air Cavalry Brigade ###
+	division = {
+		name = "25. Brygada Kawalerii Powietrznej"
+		location = 9508		#Lodz/Tomaszow
+		division_template = "Kawaleria Powietrzna 2026"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.7
+	}
+
+	### 6th Airborne Brigade ###
+	division = {
+		name = "6. Brygada Powietrznodesantowa"
+		location = 9427		#Krakow
+		division_template = "Brygada Desantowa 2026"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.7
+	}
+
+	### Special Forces (GROM/JWK/AGAT/FORMOZA) ###
+	division = {
+		name = "Wojska Specjalne RP"
+		location = 3544		#Warsaw
+		division_template = "Wojska Specjalne 2026"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.85
+	}
+
+	### Territorial Defense (WOT) - representative brigades ###
+	division = {
+		name = "1. Brygada Obrony Terytorialnej"
+		location = 362		#Gdansk
+		division_template = "Brygada WOT 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2. Brygada Obrony Terytorialnej"
+		location = 6512		#Nysa/SE Poland
+		division_template = "Brygada WOT 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 20000
+		producer = POL
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 10000
+		producer = POL
+	}
+	add_equipment_to_stockpile = {
+		type = command_control_equipment2
+		amount = 5000
+		producer = POL
+	}
+}

@@ -784,6 +784,15 @@ capital = 159
 ##############################
 2026.1.1 = {
 
+	### OOB 2026 ###
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "TUR_2026_nsb"
+		else = {
+			set_oob = "TUR_2000_nonnsb"
+		}
+	}
+
 	### GDP & Economic Variables ###
 	set_variable = { gdp_per_capita = 13.000 }
 	set_variable = { var = debt value = 480.000 }
