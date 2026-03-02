@@ -1,0 +1,383 @@
+### SOV 2026 OOB (NSB) ###
+### Millennium Dawn 2026 Rework ###
+### Russian Armed Forces - January 2026 ###
+### Depleted by Ukraine war but still large ###
+
+## Division Templates ##
+
+# Motor Rifle Brigade (BTGr-based, modernized)
+# Core Russian formation 2026 - rebuilt from BTGr experience
+division_template = {
+	name = "Motor Rifle Brigade"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+		SP_R_Arty_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+}
+
+# Mechanized Brigade (BMP-3 / BTR-82A)
+division_template = {
+	name = "Mechanized Brigade"
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		Mech_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+		SP_R_Arty_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		Arm_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+}
+
+# Tank Brigade (T-72B3M / T-90M)
+division_template = {
+	name = "Tank Brigade"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		Arm_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+		attack_helo_bat = { x = 1 y = 1 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+
+# VDV Airborne Brigade
+division_template = {
+	name = "VDV Airborne Brigade"
+	regiments = {
+		Mot_Air_Inf_Bat = { x = 0 y = 0 }
+		Mot_Air_Inf_Bat = { x = 0 y = 1 }
+		Mot_Air_Inf_Bat = { x = 0 y = 2 }
+		L_Air_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# Naval Infantry Brigade
+division_template = {
+	name = "Naval Infantry Brigade"
+	regiments = {
+		Mot_Marine_Bat = { x = 0 y = 0 }
+		Mot_Marine_Bat = { x = 0 y = 1 }
+		Mot_Marine_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# Spetsnaz Brigade
+division_template = {
+	name = "Spetsnaz Brigade"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		Special_Forces = { x = 0 y = 2 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Ranger_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+# Mobilized Infantry Brigade (low quality conscripts from 2022+ mobilization)
+division_template = {
+	name = "Mobilized Infantry Brigade"
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+	priority = 0
+}
+
+## Unit Deployments ##
+
+units = {
+	### UKRAINE FRONT ###
+	# Most Russian forces deployed to Ukraine theater
+
+	# 1st Guards Tank Army (Western MD) - Ukraine front
+	division = {
+		name = "1st Guards Tank Army"
+		location = 11729
+		division_template = "Tank Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "2nd Guards Motor Rifle Division"
+		location = 11729
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "4th Guards Tank Division"
+		location = 6591
+		division_template = "Tank Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.6
+	}
+
+	# 20th Guards Combined Arms Army - Ukraine front
+	division = {
+		name = "20th Guards CAA - 3rd MRD"
+		location = 11375
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "20th Guards CAA - 144th MRD"
+		location = 11375
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+
+	# 8th Guards Combined Arms Army - Donbas
+	division = {
+		name = "8th Guards CAA - 150th MRD"
+		location = 11729
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+
+	# Southern MD forces - Zaporizhzhia/Kherson axis
+	division = {
+		name = "58th Combined Arms Army"
+		location = 3734
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "49th Combined Arms Army"
+		location = 3734
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+
+	# Mobilized forces on front
+	division = {
+		name = "1st Mobilized Brigade"
+		location = 11729
+		division_template = "Mobilized Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "2nd Mobilized Brigade"
+		location = 11375
+		division_template = "Mobilized Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "3rd Mobilized Brigade"
+		location = 6591
+		division_template = "Mobilized Infantry Brigade"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
+	}
+	division = {
+		name = "4th Mobilized Brigade"
+		location = 3734
+		division_template = "Mobilized Infantry Brigade"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
+	}
+
+	### STRATEGIC RESERVE ###
+	# Moscow / Central MD
+	division = {
+		name = "Tamanskaya Motor Rifle Division"
+		location = 6380
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "Kantemirovskaya Tank Division"
+		location = 6290
+		division_template = "Tank Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.7
+	}
+
+	### VDV ###
+	division = {
+		name = "76th Guards Air Assault Division"
+		location = 11202
+		division_template = "VDV Airborne Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "106th Guards Airborne Division"
+		location = 6245
+		division_template = "VDV Airborne Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+
+	### NORTHERN / WESTERN FLANK ###
+	# Kaliningrad
+	division = {
+		name = "11th Army Corps"
+		location = 395
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+
+	# Leningrad MD
+	division = {
+		name = "6th Combined Arms Army"
+		location = 9098
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.6
+	}
+
+	# Arctic
+	division = {
+		name = "200th Motor Rifle Brigade (Arctic)"
+		location = 3134
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.65
+	}
+
+	### EASTERN MD ###
+	division = {
+		name = "5th Combined Arms Army"
+		location = 380
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "35th Combined Arms Army"
+		location = 380
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+
+	### CENTRAL MD ###
+	division = {
+		name = "2nd Guards Combined Arms Army"
+		location = 9417
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "41st Combined Arms Army"
+		location = 9417
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+
+	### NAVAL INFANTRY ###
+	division = {
+		name = "810th Naval Infantry Brigade (Black Sea)"
+		location = 3734
+		division_template = "Naval Infantry Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "61st Naval Infantry Brigade (Northern)"
+		location = 3134
+		division_template = "Naval Infantry Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "155th Naval Infantry Brigade (Pacific)"
+		location = 380
+		division_template = "Naval Infantry Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+
+	### SPETSNAZ ###
+	division = {
+		name = "GRU Spetsnaz Group"
+		location = 6380
+		division_template = "Spetsnaz Brigade"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+}
+
+### Equipment Stockpile ###
+instant_effect = {
+	# Reduced stockpiles due to war attrition
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 8000
+		producer = SOV
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_equipment
+		amount = 2000
+		producer = SOV
+	}
+	add_equipment_to_stockpile = {
+		type = util_vehicle_equipment
+		amount = 1500
+		producer = SOV
+	}
+}

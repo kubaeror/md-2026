@@ -1,0 +1,463 @@
+### CHI 2026 OOB (NSB) ###
+### Millennium Dawn 2026 Rework ###
+### People's Liberation Army - January 2026 ###
+### Rapidly modernizing, largest standing army ###
+
+## Division Templates ##
+
+# Combined Arms Brigade (Type A - Heavy) - ZTZ-99A + ZBD-04A
+# PLA's premier mechanized formation
+division_template = {
+	name = "Combined Arms Brigade (Heavy)"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		Arm_Inf_Bat = { x = 0 y = 3 }
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 1 y = 1 }
+		SP_R_Arty_Bat = { x = 1 y = 2 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+
+# Combined Arms Brigade (Type B - Medium) - ZTZ-96A + ZBD-86A
+division_template = {
+	name = "Combined Arms Brigade (Medium)"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		Mech_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+		SP_R_Arty_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		Arm_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+}
+
+# Light Combined Arms Brigade (Motorized)
+division_template = {
+	name = "Light Combined Arms Brigade"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+		SP_R_Arty_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+}
+
+# Mountain/Border Brigade (for Tibet, India border)
+division_template = {
+	name = "Mountain Brigade"
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# PLA Airborne Brigade (15th Airborne Corps)
+division_template = {
+	name = "PLA Airborne Brigade"
+	regiments = {
+		Mech_Air_Inf_Bat = { x = 0 y = 0 }
+		Mech_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+		L_Air_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# PLA Marine Brigade (PLAN Marine Corps)
+division_template = {
+	name = "PLA Marine Brigade"
+	regiments = {
+		Arm_Marine_Bat = { x = 0 y = 0 }
+		Arm_Marine_Bat = { x = 0 y = 1 }
+		Mech_Marine_Bat = { x = 0 y = 2 }
+		L_Marine_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+		armor_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		Arm_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# Air Assault Brigade (with Z-20/Z-10)
+division_template = {
+	name = "Air Assault Brigade"
+	regiments = {
+		L_Air_assault_Bat = { x = 0 y = 0 }
+		L_Air_assault_Bat = { x = 0 y = 1 }
+		L_Air_assault_Bat = { x = 0 y = 2 }
+		attack_helo_bat = { x = 1 y = 0 }
+		attack_helo_bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		air_assault_Arty_Battery = { x = 0 y = 3 }
+	}
+}
+
+# Special Operations Brigade
+division_template = {
+	name = "Special Operations Brigade"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		Special_Forces = { x = 0 y = 2 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Ranger_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+## Unit Deployments ##
+
+units = {
+	### EASTERN THEATER COMMAND (Taiwan focus) ###
+	# 71st Group Army - Jiangsu
+	division = {
+		name = "71st Group Army - 1st CAB"
+		location = 10101
+		division_template = "Combined Arms Brigade (Heavy)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "71st Group Army - 2nd CAB"
+		location = 10101
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "71st Group Army - 3rd LCAB"
+		location = 10101
+		division_template = "Light Combined Arms Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.85
+	}
+
+	# 72nd Group Army - Zhejiang
+	division = {
+		name = "72nd Group Army - 1st CAB"
+		location = 11920
+		division_template = "Combined Arms Brigade (Heavy)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "72nd Group Army - 2nd CAB"
+		location = 11920
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "72nd Group Army - 3rd CAB"
+		location = 11920
+		division_template = "Light Combined Arms Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.85
+	}
+
+	### SOUTHERN THEATER COMMAND (SCS / Vietnam border) ###
+	# 74th Group Army - Guangdong
+	division = {
+		name = "74th Group Army - 1st CAB"
+		location = 7071
+		division_template = "Combined Arms Brigade (Heavy)"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "74th Group Army - 2nd CAB"
+		location = 7071
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+
+	# 75th Group Army - Yunnan
+	division = {
+		name = "75th Group Army - 1st CAB"
+		location = 11986
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "75th Group Army - 2nd LCAB"
+		location = 11986
+		division_template = "Light Combined Arms Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.8
+	}
+
+	### WESTERN THEATER COMMAND (India border / Tibet) ###
+	# 76th Group Army - Xining
+	division = {
+		name = "76th Group Army - 1st CAB"
+		location = 10062
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "76th Group Army - Mountain"
+		location = 10062
+		division_template = "Mountain Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+
+	# 77th Group Army - Chengdu
+	division = {
+		name = "77th Group Army - 1st LCAB"
+		location = 10404
+		division_template = "Light Combined Arms Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "77th Group Army - Mountain"
+		location = 10404
+		division_template = "Mountain Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+
+	### NORTHERN THEATER COMMAND (Korea / Russia border) ###
+	# 78th Group Army - Shenyang
+	division = {
+		name = "78th Group Army - 1st CAB"
+		location = 1038
+		division_template = "Combined Arms Brigade (Heavy)"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "78th Group Army - 2nd CAB"
+		location = 1038
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+
+	# 79th Group Army - Liaoning
+	division = {
+		name = "79th Group Army - 1st CAB"
+		location = 1038
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "79th Group Army - 2nd LCAB"
+		location = 1038
+		division_template = "Light Combined Arms Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.8
+	}
+
+	### CENTRAL THEATER COMMAND (Reserve / Beijing) ###
+	# 81st Group Army - Beijing/Hebei
+	division = {
+		name = "81st Group Army - 1st CAB"
+		location = 4619
+		division_template = "Combined Arms Brigade (Heavy)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "81st Group Army - 2nd CAB"
+		location = 4619
+		division_template = "Combined Arms Brigade (Heavy)"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+
+	# 82nd Group Army - Hebei
+	division = {
+		name = "82nd Group Army - 1st CAB"
+		location = 994
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "82nd Group Army - 2nd LCAB"
+		location = 994
+		division_template = "Light Combined Arms Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.8
+	}
+
+	# 83rd Group Army - Henan
+	division = {
+		name = "83rd Group Army - 1st CAB"
+		location = 1146
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "83rd Group Army - Air Assault"
+		location = 1146
+		division_template = "Air Assault Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+
+	### XINJIANG MILITARY REGION ###
+	division = {
+		name = "Xinjiang Military Region - 1st"
+		location = 1597
+		division_template = "Light Combined Arms Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "Xinjiang Military Region - 2nd Mountain"
+		location = 1597
+		division_template = "Mountain Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+
+	### PLA AIRBORNE CORPS ###
+	division = {
+		name = "PLA Airborne Corps - 43rd Brigade"
+		location = 7191
+		division_template = "PLA Airborne Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "PLA Airborne Corps - 44th Brigade"
+		location = 7191
+		division_template = "PLA Airborne Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "PLA Airborne Corps - 45th Brigade"
+		location = 7191
+		division_template = "PLA Airborne Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+
+	### PLAN MARINE CORPS ###
+	division = {
+		name = "PLAN 1st Marine Brigade"
+		location = 7071
+		division_template = "PLA Marine Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "PLAN 2nd Marine Brigade"
+		location = 7071
+		division_template = "PLA Marine Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "PLAN 3rd Marine Brigade"
+		location = 7071
+		division_template = "PLA Marine Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+
+	### SPECIAL OPERATIONS ###
+	division = {
+		name = "PLA SOF Command"
+		location = 4619
+		division_template = "Special Operations Brigade"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.9
+	}
+
+	### INNER MONGOLIA / TIBET GARRISON ###
+	division = {
+		name = "Tibet Military District"
+		location = 9978
+		division_template = "Mountain Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "Inner Mongolia Garrison"
+		location = 1202
+		division_template = "Light Combined Arms Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.75
+	}
+}
+
+### Equipment Stockpile ###
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 15000
+		producer = CHI
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_equipment
+		amount = 3000
+		producer = CHI
+	}
+	add_equipment_to_stockpile = {
+		type = util_vehicle_equipment
+		amount = 5000
+		producer = CHI
+	}
+}

@@ -1,0 +1,384 @@
+### USA 2026 OOB (NSB) ###
+### Millennium Dawn 2026 Rework ###
+### US Armed Forces - January 2026 ###
+
+## Division Templates ##
+
+# Armored Brigade Combat Team (ABCT) - M1A2 SEPv3 + M2A4 Bradley
+# Optimized: 2 MBT + 3 IFV + SP Arty + Attack Helo + drone support
+division_template = {
+	name = "Armored Brigade Combat Team"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		Arm_Inf_Bat = { x = 0 y = 3 }
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 1 y = 1 }
+		attack_helo_bat = { x = 1 y = 2 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+
+# Stryker Brigade Combat Team (SBCT)
+# Optimized: 5 Mech (APC) + SP Arty + drones
+division_template = {
+	name = "Stryker Brigade Combat Team"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		Mech_Inf_Bat = { x = 0 y = 3 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		Mech_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+}
+
+# Infantry Brigade Combat Team (IBCT)
+division_template = {
+	name = "Infantry Brigade Combat Team"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+		attack_helo_bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+}
+
+# 82nd/101st Airborne Division BCT
+division_template = {
+	name = "Airborne Brigade"
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+		L_Air_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+		attack_helo_bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# Air Assault Brigade (101st style)
+division_template = {
+	name = "Air Assault Brigade"
+	regiments = {
+		L_Air_assault_Bat = { x = 0 y = 0 }
+		L_Air_assault_Bat = { x = 0 y = 1 }
+		L_Air_assault_Bat = { x = 0 y = 2 }
+		L_Air_assault_Bat = { x = 0 y = 3 }
+		attack_helo_bat = { x = 1 y = 0 }
+		attack_helo_bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		air_assault_Arty_Battery = { x = 0 y = 3 }
+		SP_AA_Battery = { x = 0 y = 4 }
+	}
+}
+
+# Marine Expeditionary Brigade
+division_template = {
+	name = "Marine Expeditionary Brigade"
+	regiments = {
+		Arm_Marine_Bat = { x = 0 y = 0 }
+		Arm_Marine_Bat = { x = 0 y = 1 }
+		Arm_Marine_Bat = { x = 0 y = 2 }
+		L_Marine_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+		armor_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		Arm_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+}
+
+# Special Operations Brigade
+division_template = {
+	name = "Special Operations Brigade"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		Special_Forces = { x = 0 y = 2 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+		L_Ranger_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Ranger_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		attack_helo_comp = { x = 0 y = 3 }
+	}
+}
+
+# National Guard Motorized Brigade
+division_template = {
+	name = "National Guard Brigade"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+	priority = 0
+}
+
+## Unit Deployments ##
+
+units = {
+	# III Corps - Fort Cavazos, Texas
+	division = {
+		name = "1st Armored Division"
+		location = 15393
+		division_template = "Armored Brigade Combat Team"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "1st Cavalry Division"
+		location = 15393
+		division_template = "Armored Brigade Combat Team"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "3rd Armored Cavalry Regiment"
+		location = 15393
+		division_template = "Stryker Brigade Combat Team"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.9
+	}
+
+	# XVIII Airborne Corps - Fort Liberty, NC
+	division = {
+		name = "82nd Airborne Division"
+		location = 7083
+		division_template = "Airborne Brigade"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "101st Airborne Division"
+		location = 7083
+		division_template = "Air Assault Brigade"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "10th Mountain Division"
+		location = 7083
+		division_template = "Infantry Brigade Combat Team"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "3rd Infantry Division"
+		location = 7083
+		division_template = "Armored Brigade Combat Team"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.95
+	}
+
+	# V Corps - Europe (Germany/Poland)
+	division = {
+		name = "2nd Cavalry Regiment"
+		location = 3397
+		division_template = "Stryker Brigade Combat Team"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "1st Infantry Division (Fwd)"
+		location = 3397
+		division_template = "Armored Brigade Combat Team"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "4th Infantry Division (Rotational)"
+		location = 3397
+		division_template = "Armored Brigade Combat Team"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.9
+	}
+
+	# I Corps - JBLM, Washington
+	division = {
+		name = "2nd Infantry Division"
+		location = 7583
+		division_template = "Stryker Brigade Combat Team"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "7th Infantry Division"
+		location = 7583
+		division_template = "Infantry Brigade Combat Team"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.85
+	}
+
+	# Korea
+	division = {
+		name = "2nd Infantry Division (Korea)"
+		location = 1147
+		division_template = "Armored Brigade Combat Team"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.95
+	}
+
+	# USMC
+	division = {
+		name = "1st Marine Division"
+		location = 1562
+		division_template = "Marine Expeditionary Brigade"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "2nd Marine Division"
+		location = 7083
+		division_template = "Marine Expeditionary Brigade"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "3rd Marine Division"
+		location = 7386
+		division_template = "Marine Expeditionary Brigade"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.85
+	}
+
+	# Special Operations
+	division = {
+		name = "USSOCOM Task Force"
+		location = 788
+		division_template = "Special Operations Brigade"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "75th Ranger Regiment"
+		location = 788
+		division_template = "Special Operations Brigade"
+		start_experience_factor = 0.85
+		start_equipment_factor = 0.9
+	}
+
+	# National Guard (selected)
+	division = {
+		name = "28th Infantry Division (NG)"
+		location = 873
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "29th Infantry Division (NG)"
+		location = 873
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "34th Infantry Division (NG)"
+		location = 4865
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "35th Infantry Division (NG)"
+		location = 1753
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "36th Infantry Division (NG)"
+		location = 3960
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "38th Infantry Division (NG)"
+		location = 4402
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "40th Infantry Division (NG)"
+		location = 1562
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "42nd Infantry Division (NG)"
+		location = 10352
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+}
+
+### Equipment Stockpile ###
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons6
+		amount = 5000
+		producer = USA
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_equipment
+		amount = 800
+		producer = USA
+	}
+	add_equipment_to_stockpile = {
+		type = util_vehicle_equipment
+		amount = 3000
+		producer = USA
+	}
+}
