@@ -1,0 +1,43 @@
+##### Montenegro - 2026 OOB #####
+# Armed Forces of Montenegro - NATO member since 2017
+# Very small professional force
+
+division_template = {
+	name = "Peshachka Brigada"		# Infantry Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "Brigada Kopnene Vojske"
+		location = 3922
+		division_template = "Peshachka Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.60
+	}
+	division = {
+		name = "Teritorijalna Odbrana"
+		location = 11858
+		division_template = "Peshachka Brigada"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.55
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 800
+		producer = MNT
+	}
+}

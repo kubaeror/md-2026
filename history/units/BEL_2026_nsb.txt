@@ -1,0 +1,86 @@
+##### Belgium - 2026 OOB #####
+# Belgian Land Component - small professional force
+# Motorized focus with light mechanized capability
+
+division_template = {
+	name = "Gemotoriseerde Brigade"		# Motorized Brigade
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Paracommando Brigade"		# Para-Commando Brigade
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Speciale Eenheden"		# Special Forces Group
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Belgian Land Component #####
+
+	# Motorized Brigade - Leopoldsburg
+	division = {
+		name = "1e Gemotoriseerde Brigade"
+		location = 9574
+		division_template = "Gemotoriseerde Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.80
+	}
+
+	# Para-Commando Brigade - Marche-en-Famenne
+	division = {
+		name = "Paracommando Brigade"
+		location = 3488
+		division_template = "Paracommando Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.80
+	}
+
+	# SOF - Heverlee
+	division = {
+		name = "Speciale Operaties Regiment"
+		location = 11407
+		division_template = "Speciale Eenheden"
+		start_experience_factor = 0.60
+		start_equipment_factor = 0.85
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 2000
+		producer = BEL
+	}
+}

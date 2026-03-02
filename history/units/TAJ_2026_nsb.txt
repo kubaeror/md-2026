@@ -1,0 +1,77 @@
+##### Tajikistan - 2026 OOB #####
+# Armed Forces of Tajikistan - post-Soviet, border security focus
+# Concerned with Afghan border, Russian base at 201st
+
+division_template = {
+	name = "Motostrelkovaya Brigada"		# Motorized Rifle Brigade
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+		L_Inf_Bat = { x = 1 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Pogranichna Brigada"		# Border Guard Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		Militia_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	# Dushanbe
+	division = {
+		name = "1. Motostrelkovaya Brigada"
+		location = 14205
+		division_template = "Motostrelkovaya Brigada"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.55
+	}
+
+	# Khujand (North)
+	division = {
+		name = "2. Motostrelkovaya Brigada"
+		location = 12218
+		division_template = "Motostrelkovaya Brigada"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.55
+	}
+
+	# Afghan border
+	division = {
+		name = "1. Pogranichna Brigada"
+		location = 12430
+		division_template = "Pogranichna Brigada"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.50
+	}
+	division = {
+		name = "2. Pogranichna Brigada"
+		location = 1384
+		division_template = "Pogranichna Brigada"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.45
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons3
+		amount = 2000
+		producer = TAJ
+	}
+}

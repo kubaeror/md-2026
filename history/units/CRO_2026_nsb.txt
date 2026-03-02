@@ -1,0 +1,105 @@
+##### Croatia - 2026 OOB #####
+# Croatian Armed Forces - NATO member since 2009
+# Modernizing, experienced from 1990s wars
+
+division_template = {
+	name = "Mehanizirana Brigada"		# Mechanized Brigade
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		armor_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Gardijska Brigada"		# Guards Motorized Brigade
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Specijalne Snage"		# Special Forces
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Croatian Armed Forces #####
+
+	# Guards Mechanized Brigade - Zagreb area
+	division = {
+		name = "Gardijska Mehanizirana Brigada"
+		location = 11735
+		division_template = "Mehanizirana Brigada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.75
+	}
+
+	# Guards Motorized Brigade - Petrinja
+	division = {
+		name = "1. Gardijska Brigada"
+		location = 3943
+		division_template = "Gardijska Brigada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.70
+	}
+
+	# Eastern Croatia
+	division = {
+		name = "2. Gardijska Brigada"
+		location = 11581
+		division_template = "Gardijska Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.70
+	}
+
+	# Dalmatia / coastal
+	division = {
+		name = "3. Gardijska Brigada"
+		location = 6889
+		division_template = "Gardijska Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.65
+	}
+
+	# SOF
+	division = {
+		name = "Zapovjednistvo Specijalnih Snaga"
+		location = 11577
+		division_template = "Specijalne Snage"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.80
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 2000
+		producer = CRO
+	}
+}

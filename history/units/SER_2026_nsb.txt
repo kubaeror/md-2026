@@ -1,0 +1,143 @@
+##### Serbia - 2026 OOB #####
+# Serbian Armed Forces - neutral, Russian-leaning but EU aspirant
+# Modernizing with mixed Russian/Chinese/Western equipment
+
+division_template = {
+	name = "Mehanizovana Brigada"		# Mechanized Brigade
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		armor_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Pesadijska Brigada"		# Infantry Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Specijalna Brigada"		# Special Forces Brigade
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+		L_Air_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Artiljerijska Brigada"		# Artillery Brigade
+	regiments = {
+		SP_Arty_Bat = { x = 0 y = 0 }
+		SP_Arty_Bat = { x = 0 y = 1 }
+		SP_R_Arty_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		combat_service_support_company = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Serbian Armed Forces #####
+
+	# Belgrade area
+	division = {
+		name = "1. Mehanizovana Brigada"
+		location = 388
+		division_template = "Mehanizovana Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.70
+	}
+	division = {
+		name = "72. Specijalna Brigada"
+		location = 388
+		division_template = "Specijalna Brigada"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.75
+	}
+
+	# Vojvodina (North)
+	division = {
+		name = "1. Pesadijska Brigada"
+		location = 11887
+		division_template = "Pesadijska Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+
+	# Southern Serbia
+	division = {
+		name = "4. Pesadijska Brigada"
+		location = 937
+		division_template = "Pesadijska Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.65
+	}
+
+	# Western Serbia
+	division = {
+		name = "3. Pesadijska Brigada"
+		location = 9621
+		division_template = "Pesadijska Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+
+	# Artillery
+	division = {
+		name = "Mesovita Artiljerijska Brigada"
+		location = 630
+		division_template = "Artiljerijska Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+
+	# Central
+	division = {
+		name = "2. Mehanizovana Brigada"
+		location = 3617
+		division_template = "Mehanizovana Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.70
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 3000
+		producer = SER
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 1000
+		producer = SOV
+	}
+}

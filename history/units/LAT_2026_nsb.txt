@@ -1,0 +1,59 @@
+##### Latvia - 2026 OOB #####
+# Latvian National Armed Forces - NATO frontline state
+# Expanding territorial defense + mechanized brigade
+
+division_template = {
+	name = "Mehanizeta Brigade"		# Mechanized Brigade
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Zemessardzes Brigade"		# National Guard Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "Mehanizeta Kaujinieku Brigade"
+		location = 9340
+		division_template = "Mehanizeta Brigade"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.70
+	}
+	division = {
+		name = "Zemessardzes Brigade"
+		location = 9340
+		division_template = "Zemessardzes Brigade"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.60
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 1500
+		producer = LAT
+	}
+}

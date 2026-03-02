@@ -279,6 +279,14 @@
 ##############################
 2026.1.1 = {
 
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "UZB_2026_nsb"
+		else = {
+			set_oob = "UZB_2000_nonnsb"
+		}
+	}
+
 	### GDP & Economic Variables ###
 	set_variable = { gdp_per_capita = 2.500 }
 	set_variable = { var = debt value = 25.000 }

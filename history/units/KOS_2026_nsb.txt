@@ -1,0 +1,42 @@
+##### Kosovo - 2026 OOB #####
+# Kosovo Security Force (KSF) - transitioning to full military
+# Small, light infantry, NATO-mentored
+
+division_template = {
+	name = "Brigada e Kembesorise"		# Infantry Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "Brigada e Pare"
+		location = 9849
+		division_template = "Brigada e Kembesorise"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "Brigada e Dyte"
+		location = 6940
+		division_template = "Brigada e Kembesorise"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.55
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 800
+		producer = KOS
+	}
+}

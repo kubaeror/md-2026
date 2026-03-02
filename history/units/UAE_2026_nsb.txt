@@ -1,0 +1,113 @@
+##### UAE - 2026 OOB #####
+# UAE Armed Forces - well-equipped, modern military
+# Heavy investment in French/US equipment, combat experience from Yemen
+
+division_template = {
+	name = "Liwa' Mudarra'"		# Armored Brigade
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		Arm_Inf_Bat = { x = 1 y = 1 }
+		Mech_Inf_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Arm_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		combat_service_support_company = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "Liwa' Mushaat Mikaniki"		# Mechanized Infantry Brigade
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		Mot_Inf_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Quwat Khassa"		# Presidential Guard / SOF
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+		L_Ranger_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		attack_helo_comp = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	##### UAE Armed Forces #####
+
+	# Abu Dhabi
+	division = {
+		name = "1. Liwa' Mudarra'"
+		location = 3725
+		division_template = "Liwa' Mudarra'"
+		start_experience_factor = 0.50
+		start_equipment_factor = 0.90
+	}
+	division = {
+		name = "Haras al-Ri'asa"
+		location = 3725
+		division_template = "Quwat Khassa"
+		start_experience_factor = 0.60
+		start_equipment_factor = 0.90
+	}
+
+	# Dubai area
+	division = {
+		name = "1. Liwa' Mushaat Mikaniki"
+		location = 3689
+		division_template = "Liwa' Mushaat Mikaniki"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.85
+	}
+
+	# Northern Emirates
+	division = {
+		name = "2. Liwa' Mushaat Mikaniki"
+		location = 3585
+		division_template = "Liwa' Mushaat Mikaniki"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.85
+	}
+
+	# Western region
+	division = {
+		name = "2. Liwa' Mudarra'"
+		location = 7960
+		division_template = "Liwa' Mudarra'"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.85
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 5000
+		producer = UAE
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons6
+		amount = 1000
+		producer = USA
+	}
+}

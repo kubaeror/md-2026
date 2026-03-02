@@ -1,0 +1,69 @@
+##### Estonia - 2026 OOB #####
+# Estonian Defence Forces - NATO frontline state
+# Expanded post-2022, territorial defense model + professional core
+
+division_template = {
+	name = "Jalaväebrigaad"		# Infantry Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Kaitseliidu Brigaad"		# Territorial Defence Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+		L_Inf_Bat = { x = 1 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "1. Jalaväebrigaad"
+		location = 9079
+		division_template = "Jalaväebrigaad"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "2. Jalaväebrigaad"
+		location = 9079
+		division_template = "Jalaväebrigaad"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.70
+	}
+	division = {
+		name = "Kaitseliidu Brigaad"
+		location = 9079
+		division_template = "Kaitseliidu Brigaad"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.60
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 2000
+		producer = EST
+	}
+}

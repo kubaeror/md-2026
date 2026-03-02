@@ -1,0 +1,87 @@
+##### Denmark - 2026 OOB #####
+# Danish Defence - small professional, NATO framework nation
+# Recently expanded post-2022, mechanized focus
+
+division_template = {
+	name = "Mekaniseret Brigade"		# Mechanized Brigade
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		armor_Bat = { x = 1 y = 1 }
+		Mot_Inf_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Let Infanteri Brigade"		# Light Infantry Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Jaegerkorpset"		# Special Operations
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Royal Danish Army #####
+
+	# 1st Brigade - Jutland
+	division = {
+		name = "1. Brigade"
+		location = 394
+		division_template = "Mekaniseret Brigade"
+		start_experience_factor = 0.50
+		start_equipment_factor = 0.80
+	}
+
+	# 2nd Brigade (light) - Zealand
+	division = {
+		name = "2. Brigade"
+		location = 399
+		division_template = "Let Infanteri Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.80
+	}
+
+	# Jaeger Corps
+	division = {
+		name = "Jaegerkorpset"
+		location = 6287
+		division_template = "Jaegerkorpset"
+		start_experience_factor = 0.60
+		start_equipment_factor = 0.85
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 2000
+		producer = DEN
+	}
+}

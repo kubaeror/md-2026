@@ -1,0 +1,97 @@
+##### Norway - 2026 OOB #####
+# Norwegian Armed Forces - NATO founding member
+# Arctic warfare specialization, expanding post-2022
+
+division_template = {
+	name = "Mekanisert Brigade"		# Mechanized Brigade (Brigade Nord)
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		armor_Bat = { x = 1 y = 1 }
+		Mot_Inf_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Arm_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		combat_service_support_company = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "Garnisonsgruppe"		# Garrison/Border Guard Group
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Ranger_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Spesialkommandoen"		# Special Operations
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Norwegian Armed Forces #####
+
+	# Brigade Nord - Bardufoss / Northern Norway
+	division = {
+		name = "Brigade Nord"
+		location = 9116
+		division_template = "Mekanisert Brigade"
+		start_experience_factor = 0.50
+		start_equipment_factor = 0.85
+	}
+
+	# Finnmark garrison - Arctic border
+	division = {
+		name = "Finnmark Landforsvar"
+		location = 3145
+		division_template = "Garnisonsgruppe"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.80
+	}
+
+	# Southern Norway garrison
+	division = {
+		name = "Oslo Garnisonsgruppe"
+		location = 6116
+		division_template = "Garnisonsgruppe"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.75
+	}
+
+	# SOF
+	division = {
+		name = "Forsvarets Spesialkommando"
+		location = 3136
+		division_template = "Spesialkommandoen"
+		start_experience_factor = 0.60
+		start_equipment_factor = 0.85
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 2000
+		producer = NOR
+	}
+}

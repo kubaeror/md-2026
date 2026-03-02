@@ -1,0 +1,128 @@
+##### Uzbekistan - 2026 OOB #####
+# Armed Forces of Uzbekistan - largest Central Asian military
+# Modernizing with Russian and Turkish equipment
+
+division_template = {
+	name = "Motostrelkovaya Brigada"		# Motorized Rifle Brigade
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Pehotnaya Brigada"		# Infantry Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Spetsnaz Brigada"		# Special Forces
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+		L_Ranger_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Uzbek Armed Forces #####
+
+	# Tashkent Military District
+	division = {
+		name = "1. Motostrelkovaya Brigada"
+		location = 11687
+		division_template = "Motostrelkovaya Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "1. Spetsnaz Brigada"
+		location = 11687
+		division_template = "Spetsnaz Brigada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.70
+	}
+
+	# Samarkand
+	division = {
+		name = "2. Motostrelkovaya Brigada"
+		location = 1216
+		division_template = "Motostrelkovaya Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+
+	# Fergana Valley
+	division = {
+		name = "3. Motostrelkovaya Brigada"
+		location = 1479
+		division_template = "Motostrelkovaya Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.60
+	}
+	division = {
+		name = "1. Pehotnaya Brigada"
+		location = 7775
+		division_template = "Pehotnaya Brigada"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.60
+	}
+
+	# Afghan border (Termez)
+	division = {
+		name = "4. Motostrelkovaya Brigada"
+		location = 12239
+		division_template = "Motostrelkovaya Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "2. Pehotnaya Brigada"
+		location = 12722
+		division_template = "Pehotnaya Brigada"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.55
+	}
+
+	# Bukhara/Western
+	division = {
+		name = "3. Pehotnaya Brigada"
+		location = 2058
+		division_template = "Pehotnaya Brigada"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.55
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 5000
+		producer = UZB
+	}
+}

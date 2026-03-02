@@ -787,6 +787,14 @@ set_research_slots = 3
 ##############################
 2026.1.1 = {
 
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "SER_2026_nsb"
+		else = {
+			set_oob = "SER_2000_nonnsb"
+		}
+	}
+
 	### GDP & Economic Variables ###
 	set_variable = { gdp_per_capita = 12.000 }
 	set_variable = { var = debt value = 35.000 }

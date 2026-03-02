@@ -1,0 +1,100 @@
+##### Portugal - 2026 OOB #####
+# Portuguese Army - NATO member, experienced in overseas deployments
+# Mixed light/mechanized force with strong commando tradition
+
+division_template = {
+	name = "Brigada Mecanizada"		# Mechanized Brigade
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		armor_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Brigada Intervencao Rapida"		# Rapid Reaction Brigade
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+		L_Ranger_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Brigada Ligeira"		# Light Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	##### Portuguese Army #####
+
+	# Mechanized Brigade - Santa Margarida
+	division = {
+		name = "Brigada Mecanizada"
+		location = 11805
+		division_template = "Brigada Mecanizada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.75
+	}
+
+	# Rapid Reaction Brigade - Tancos
+	division = {
+		name = "Brigada de Reacao Rapida"
+		location = 9787
+		division_template = "Brigada Intervencao Rapida"
+		start_experience_factor = 0.50
+		start_equipment_factor = 0.75
+	}
+
+	# Light Brigade - Lisbon area
+	division = {
+		name = "Brigada Ligeira de Intervencao"
+		location = 924
+		division_template = "Brigada Ligeira"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.70
+	}
+
+	# Northern garrison
+	division = {
+		name = "Comando Norte"
+		location = 3118
+		division_template = "Brigada Ligeira"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 2000
+		producer = POR
+	}
+}

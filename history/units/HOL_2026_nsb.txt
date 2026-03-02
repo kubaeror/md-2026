@@ -1,0 +1,98 @@
+##### Netherlands - 2026 OOB #####
+# Royal Netherlands Army - professional, NATO-integrated
+# Focused on mechanized capability, small but modern
+
+division_template = {
+	name = "Gemechaniseerde Brigade"		# Mechanized Brigade
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		Arm_Inf_Bat = { x = 1 y = 1 }
+		armor_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		combat_service_support_company = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "Luchtmobiele Brigade"		# Air Mobile Brigade
+	regiments = {
+		L_Air_assault_Bat = { x = 0 y = 0 }
+		L_Air_assault_Bat = { x = 0 y = 1 }
+		L_Air_assault_Bat = { x = 1 y = 0 }
+		L_Air_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		air_assault_Arty_Battery = { x = 0 y = 2 }
+		attack_helo_comp = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Speciale Operaties"		# Special Operations
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Royal Netherlands Army #####
+
+	# 13th Light Brigade (air mobile) - Oirschot
+	division = {
+		name = "13e Luchtmobiele Brigade"
+		location = 6500
+		division_template = "Luchtmobiele Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+
+	# 43rd Mechanized Brigade - Havelte
+	division = {
+		name = "43e Gemechaniseerde Brigade"
+		location = 3262
+		division_template = "Gemechaniseerde Brigade"
+		start_experience_factor = 0.50
+		start_equipment_factor = 0.85
+	}
+
+	# German-Netherlands Corps contribution
+	division = {
+		name = "1e Gemechaniseerde Brigade"
+		location = 6241
+		division_template = "Gemechaniseerde Brigade"
+		start_experience_factor = 0.50
+		start_equipment_factor = 0.80
+	}
+
+	# SOF
+	division = {
+		name = "Korps Commandotroepen"
+		location = 9403
+		division_template = "Speciale Operaties"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.90
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 3000
+		producer = HOL
+	}
+}
