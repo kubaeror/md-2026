@@ -1,0 +1,169 @@
+### ENG 2026 OOB (NSB) ###
+### Millennium Dawn 2026 Rework ###
+### British Armed Forces - January 2026 ###
+
+## Division Templates ##
+
+# Armoured Infantry Brigade - Challenger 3 + Boxer
+division_template = {
+	name = "Armoured Infantry Brigade"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		Mech_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+		attack_helo_bat = { x = 1 y = 1 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+
+# Light Mechanised Infantry Brigade (Boxer)
+division_template = {
+	name = "Light Mechanised Brigade"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Mech_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# 16 Air Assault Brigade
+division_template = {
+	name = "Air Assault Brigade"
+	regiments = {
+		L_Air_assault_Bat = { x = 0 y = 0 }
+		L_Air_assault_Bat = { x = 0 y = 1 }
+		L_Air_assault_Bat = { x = 0 y = 2 }
+		attack_helo_bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		air_assault_Arty_Battery = { x = 0 y = 3 }
+	}
+}
+
+# Royal Marines Commando Brigade
+division_template = {
+	name = "Commando Brigade"
+	regiments = {
+		L_Marine_Cdo_Bat = { x = 0 y = 0 }
+		L_Marine_Cdo_Bat = { x = 0 y = 1 }
+		L_Marine_Cdo_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+	}
+}
+
+# SAS/SBS
+division_template = {
+	name = "UKSF Group"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Ranger_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+	}
+}
+
+## Unit Deployments ##
+
+units = {
+	# 3rd (UK) Division
+	division = {
+		name = "1st Armoured Infantry Brigade"
+		location = 11471
+		division_template = "Armoured Infantry Brigade"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "20th Armoured Infantry Brigade"
+		location = 11471
+		division_template = "Armoured Infantry Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "11th Security Force Assistance Brigade"
+		location = 11374
+		division_template = "Light Mechanised Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+
+	# Germany (NATO FWD presence)
+	division = {
+		name = "7th Light Mech Brigade (Germany)"
+		location = 6377
+		division_template = "Light Mechanised Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.75
+	}
+
+	# 16 Air Assault Brigade
+	division = {
+		name = "16 Air Assault Brigade"
+		location = 11374
+		division_template = "Air Assault Brigade"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.8
+	}
+
+	# 3 Commando Brigade RM
+	division = {
+		name = "3 Commando Brigade"
+		location = 9458
+		division_template = "Commando Brigade"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+
+	# UKSF
+	division = {
+		name = "UKSF Group"
+		location = 3241
+		division_template = "UKSF Group"
+		start_experience_factor = 0.85
+		start_equipment_factor = 0.9
+	}
+}
+
+### Equipment Stockpile ###
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 2000
+		producer = ENG
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_equipment
+		amount = 300
+		producer = ENG
+	}
+}

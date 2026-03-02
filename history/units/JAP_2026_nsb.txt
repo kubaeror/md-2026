@@ -1,0 +1,220 @@
+### JAP 2026 OOB (NSB) ###
+### Millennium Dawn 2026 Rework ###
+### Japan Self-Defense Forces - January 2026 ###
+### Post Article 9 reform, expanding capabilities ###
+
+## Division Templates ##
+
+# Armored Combined Brigade (Type 10 MBT + Type 89 IFV)
+division_template = {
+	name = "Armored Brigade"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		Mech_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+
+# Infantry Brigade (Type 96 APC based)
+division_template = {
+	name = "Infantry Brigade"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Mech_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# Amphibious Rapid Deployment Brigade (Japan Marines)
+division_template = {
+	name = "Amphibious Rapid Deployment Brigade"
+	regiments = {
+		Arm_Marine_Bat = { x = 0 y = 0 }
+		Arm_Marine_Bat = { x = 0 y = 1 }
+		L_Marine_Bat = { x = 0 y = 2 }
+		L_Marine_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		Arm_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# Airborne Brigade
+division_template = {
+	name = "Airborne Brigade"
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+	}
+}
+
+# Special Forces Group
+division_template = {
+	name = "Special Forces Group"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Ranger_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+	}
+}
+
+## Unit Deployments ##
+
+units = {
+	# Northern Army (Hokkaido) - armor-heavy, facing Russia
+	division = {
+		name = "7th Armored Division"
+		location = 12352
+		division_template = "Armored Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "2nd Infantry Division"
+		location = 12352
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "5th Infantry Brigade"
+		location = 12352
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "11th Infantry Brigade"
+		location = 12352
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+
+	# Northeastern Army
+	division = {
+		name = "9th Infantry Division"
+		location = 10444
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "6th Infantry Division"
+		location = 12493
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+
+	# Eastern Army (Kanto)
+	division = {
+		name = "1st Infantry Division"
+		location = 10015
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "12th Infantry Brigade"
+		location = 10015
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+
+	# Central Readiness Force
+	division = {
+		name = "1st Airborne Brigade"
+		location = 10015
+		division_template = "Airborne Brigade"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Amphibious Rapid Deployment Brigade"
+		location = 1092
+		division_template = "Amphibious Rapid Deployment Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Special Forces Group"
+		location = 10015
+		division_template = "Special Forces Group"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.85
+	}
+
+	# Western Army (Kyushu - facing China)
+	division = {
+		name = "4th Infantry Division"
+		location = 1092
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "8th Infantry Division"
+		location = 1136
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+
+	# Okinawa
+	division = {
+		name = "15th Infantry Brigade"
+		location = 12032
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+}
+
+### Equipment Stockpile ###
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 3000
+		producer = JAP
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_equipment
+		amount = 500
+		producer = JAP
+	}
+}

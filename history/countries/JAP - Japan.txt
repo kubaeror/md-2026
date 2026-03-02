@@ -1693,6 +1693,15 @@ capital = 615
 ##############################
 2026.1.1 = {
 
+	### OOB 2026 ###
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "JAP_2026_nsb"
+		else = {
+			set_oob = "JAP_2000_nonnsb"
+		}
+	}
+
 	### GDP & Economic Variables ###
 	set_variable = { gdp_per_capita = 34.000 }
 	set_variable = { var = debt value = 9800.000 }

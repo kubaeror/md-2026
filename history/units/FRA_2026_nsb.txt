@@ -1,0 +1,223 @@
+### FRA 2026 OOB (NSB) ###
+### Millennium Dawn 2026 Rework ###
+### French Armed Forces - January 2026 ###
+
+## Division Templates ##
+
+# Brigade Blindée (Armored Brigade) - Leclerc + VBCI
+division_template = {
+	name = "Brigade Blindee"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		Arm_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+		attack_helo_bat = { x = 1 y = 1 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+
+# Brigade Interarmes (Combined Arms - Griffon/Jaguar)
+division_template = {
+	name = "Brigade Interarmes"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		L_arm_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		Mech_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+}
+
+# Brigade Legere (Light Brigade - Mountain/Infantry)
+division_template = {
+	name = "Brigade Legere"
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# 11e Brigade Parachutiste
+division_template = {
+	name = "Brigade Parachutiste"
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+		L_Air_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# COS (Special Operations)
+division_template = {
+	name = "Commandement des Operations Speciales"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Ranger_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+	}
+}
+
+# Foreign Legion Brigade
+division_template = {
+	name = "Brigade de la Legion Etrangere"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+## Unit Deployments ##
+
+units = {
+	# 1re Division - Northeast
+	division = {
+		name = "1re Brigade Blindee"
+		location = 6545
+		division_template = "Brigade Blindee"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "2e Brigade Blindee"
+		location = 6698
+		division_template = "Brigade Blindee"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "7e Brigade Blindee"
+		location = 6698
+		division_template = "Brigade Interarmes"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.75
+	}
+
+	# 3e Division
+	division = {
+		name = "9e Brigade Interarmes"
+		location = 3626
+		division_template = "Brigade Interarmes"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "27e Brigade Montagne"
+		location = 3768
+		division_template = "Brigade Legere"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "6e Brigade Legere Blindee"
+		location = 958
+		division_template = "Brigade Interarmes"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+
+	# 11e Brigade Parachutiste
+	division = {
+		name = "11e Brigade Parachutiste"
+		location = 6766
+		division_template = "Brigade Parachutiste"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.8
+	}
+
+	# Foreign Legion
+	division = {
+		name = "Brigade de la Legion Etrangere"
+		location = 521
+		division_template = "Brigade de la Legion Etrangere"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.8
+	}
+
+	# Franco-German Brigade (in Germany)
+	division = {
+		name = "Brigade Franco-Allemande"
+		location = 3679
+		division_template = "Brigade Interarmes"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+
+	# COS
+	division = {
+		name = "COS"
+		location = 454
+		division_template = "Commandement des Operations Speciales"
+		start_experience_factor = 0.85
+		start_equipment_factor = 0.85
+	}
+
+	# Overseas (French Guiana)
+	division = {
+		name = "Forces en Guyane"
+		location = 12885
+		division_template = "Brigade Legere"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.6
+	}
+}
+
+### Equipment Stockpile ###
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 2500
+		producer = FRA
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_equipment
+		amount = 400
+		producer = FRA
+	}
+}

@@ -1,0 +1,290 @@
+### RAJ 2026 OOB (NSB) ###
+### Millennium Dawn 2026 Rework ###
+### Indian Armed Forces - January 2026 ###
+### Large army, rapidly modernizing ###
+
+## Division Templates ##
+
+# Strike Corps Armored Brigade (T-90S Bhishma + BMP-2)
+division_template = {
+	name = "Armoured Brigade"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		Arm_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+		SP_R_Arty_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+	priority = 2
+}
+
+# Mechanized Infantry Brigade (BMP-2 / Sarath)
+division_template = {
+	name = "Mechanized Infantry Brigade"
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		Mech_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		Arm_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# Infantry Division (motorized)
+division_template = {
+	name = "Infantry Division"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+		SP_R_Arty_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# Mountain Division (LAC border)
+division_template = {
+	name = "Mountain Division"
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# Airborne Brigade (Para SF + Parachute)
+division_template = {
+	name = "Parachute Brigade"
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+	}
+}
+
+# Special Forces (MARCOS / Para SF / NSG)
+division_template = {
+	name = "Special Forces Brigade"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		Special_Forces = { x = 0 y = 2 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Ranger_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+## Unit Deployments ##
+
+units = {
+	### NORTHERN COMMAND (China/LAC border) ###
+	division = {
+		name = "3rd Infantry Division (Leh)"
+		location = 7273
+		division_template = "Mountain Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "8th Mountain Division"
+		location = 12884
+		division_template = "Mountain Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Fire and Fury Corps"
+		location = 107
+		division_template = "Mountain Division"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.8
+	}
+
+	### EASTERN COMMAND (China/Arunachal border) ###
+	division = {
+		name = "17th Mountain Strike Corps"
+		location = 4435
+		division_template = "Mountain Division"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "4th Corps (Tezpur)"
+		location = 7455
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "3rd Corps (Dimapur)"
+		location = 12025
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "33rd Corps (Siliguri)"
+		location = 10389
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+
+	### WESTERN COMMAND (Pakistan border) ###
+	division = {
+		name = "1st Armoured Division"
+		location = 44
+		division_template = "Armoured Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "2nd Armoured Division (RAPID)"
+		location = 44
+		division_template = "Armoured Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "1st Corps (Mathura)"
+		location = 44
+		division_template = "Mechanized Infantry Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "2nd Corps (Ambala)"
+		location = 44
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "10th Corps (Bathinda)"
+		location = 44
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "11th Corps (Jalandhar)"
+		location = 44
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.7
+	}
+
+	### SOUTHWESTERN COMMAND ###
+	division = {
+		name = "12th Corps (Jodhpur)"
+		location = 44
+		division_template = "Mechanized Infantry Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "21st Corps (Bhopal)"
+		location = 12035
+		division_template = "Infantry Division"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.7
+	}
+
+	### CENTRAL COMMAND ###
+	division = {
+		name = "9th Corps (Yol)"
+		location = 12035
+		division_template = "Infantry Division"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "36th Corps (Ranchi)"
+		location = 12035
+		division_template = "Infantry Division"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.7
+	}
+
+	### SOUTHERN COMMAND ###
+	division = {
+		name = "Southern Army Reserve"
+		location = 12035
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.65
+	}
+
+	### PARACHUTE & SPECIAL FORCES ###
+	division = {
+		name = "50th Parachute Brigade"
+		location = 12035
+		division_template = "Parachute Brigade"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Indian Special Forces"
+		location = 12035
+		division_template = "Special Forces Brigade"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.85
+	}
+}
+
+### Equipment Stockpile ###
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 10000
+		producer = RAJ
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_equipment
+		amount = 2000
+		producer = RAJ
+	}
+	add_equipment_to_stockpile = {
+		type = util_vehicle_equipment
+		amount = 3000
+		producer = RAJ
+	}
+}

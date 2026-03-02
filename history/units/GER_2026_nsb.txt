@@ -1,0 +1,180 @@
+### GER 2026 OOB (NSB) ###
+### Millennium Dawn 2026 Rework ###
+### Bundeswehr - January 2026 ###
+### Zeitenwende rearmament underway ###
+
+## Division Templates ##
+
+# Panzergrenadierbrigade (Mechanized Brigade) - Leopard 2A7V + Puma
+division_template = {
+	name = "Panzergrenadierbrigade"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		Arm_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+
+# Panzerbrigade (Armored Brigade)
+division_template = {
+	name = "Panzerbrigade"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		Arm_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+		SP_R_Arty_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+
+# Jägerbrigade (Light Infantry)
+division_template = {
+	name = "Jaegerbrigade"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# Luftlandebrigade (Airborne)
+division_template = {
+	name = "Luftlandebrigade"
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# KSK (Special Forces)
+division_template = {
+	name = "KSK"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Ranger_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+	}
+}
+
+## Unit Deployments ##
+
+units = {
+	# 1st Panzer Division - Hannover
+	division = {
+		name = "9. Panzerbrigade"
+		location = 6469
+		division_template = "Panzerbrigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "21. Panzergrenadierbrigade"
+		location = 11560
+		division_template = "Panzergrenadierbrigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+
+	# 10th Armored Division - Stuttgart
+	division = {
+		name = "12. Panzerbrigade"
+		location = 519
+		division_template = "Panzerbrigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "37. Panzergrenadierbrigade"
+		location = 3258
+		division_template = "Panzergrenadierbrigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+
+	# Rapid Forces Division
+	division = {
+		name = "Luftlandebrigade 1"
+		location = 3312
+		division_template = "Luftlandebrigade"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "Jaegerbrigade 1"
+		location = 707
+		division_template = "Jaegerbrigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.75
+	}
+
+	# Lithuania (NATO Enhanced Forward Presence)
+	division = {
+		name = "Panzerbrigade 42 (Lithuania)"
+		location = 395
+		division_template = "Panzergrenadierbrigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+
+	# KSK
+	division = {
+		name = "KSK Calw"
+		location = 11486
+		division_template = "KSK"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.85
+	}
+}
+
+### Equipment Stockpile ###
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 3000
+		producer = GER
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_equipment
+		amount = 400
+		producer = GER
+	}
+}
