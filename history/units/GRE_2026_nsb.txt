@@ -1,0 +1,214 @@
+##### Division Templates #####
+# Greece 2026 — Large conscript army, Aegean defense focus
+
+division_template = {
+	name = "Tethorikmeno Taxiarchia 2026"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Michanokiniton Merarhia 2026"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Pezikon Merarhia 2026"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Aleipton Katadromeon 2026"
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Navtikon Pezikon 2026"
+	regiments = {
+		L_Marine_Bat = { x = 0 y = 0 }
+		L_Marine_Bat = { x = 0 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Eidikon Dynameion 2026"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+units = {
+	##### Thrace — Evros Border #####
+
+	# XII Mechanized Division (Alexandroupoli)
+	division = {
+		name = "XII Michanokiniton Merarhia"
+		location = 863
+		division_template = "Michanokiniton Merarhia 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.8
+	}
+	# XVI Armoured Division
+	division = {
+		name = "XVI Tethorikmeno Merarhia"
+		location = 895
+		division_template = "Tethorikmeno Taxiarchia 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.8
+	}
+	# D Corps - Infantry
+	division = {
+		name = "D Corps Pezikon Merarhia"
+		location = 3973
+		division_template = "Pezikon Merarhia 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+
+	##### Aegean / Islands #####
+
+	# XX Armoured Division (Kavala)
+	division = {
+		name = "XX Tethorikmeno Merarhia"
+		location = 11818
+		division_template = "Tethorikmeno Taxiarchia 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.8
+	}
+	# Islands garrison brigades
+	division = {
+		name = "Aegean Islands Command"
+		location = 9837
+		division_template = "Pezikon Merarhia 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "Crete Defense Brigade"
+		location = 12058
+		division_template = "Pezikon Merarhia 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+
+	##### Central/Thessaly #####
+
+	# I Armoured Division (Larissa)
+	division = {
+		name = "I Tethorikmeno Merarhia"
+		location = 3844
+		division_template = "Tethorikmeno Taxiarchia 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.8
+	}
+	# II Mechanized Division
+	division = {
+		name = "II Michanokiniton Merarhia"
+		location = 11905
+		division_template = "Michanokiniton Merarhia 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.8
+	}
+	# III Infantry Division
+	division = {
+		name = "III Pezikon Merarhia"
+		location = 11774
+		division_template = "Pezikon Merarhia 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# IX Infantry Division
+	division = {
+		name = "IX Pezikon Merarhia"
+		location = 9791
+		division_template = "Pezikon Merarhia 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+
+	##### Rapid Reaction #####
+
+	# 1st Raider/Paratrooper Brigade
+	division = {
+		name = "1i Taxiarchia Aleipton Katadromeon"
+		location = 3914
+		division_template = "Aleipton Katadromeon 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.85
+	}
+	# Marine Brigade
+	division = {
+		name = "Taxiarchia Navtikon Pezikon"
+		location = 6550
+		division_template = "Navtikon Pezikon 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.85
+	}
+	# SOF
+	division = {
+		name = "Eidikon Dynameion"
+		location = 966
+		division_template = "Eidikon Dynameion 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 4000
+		producer = GRE
+	}
+}

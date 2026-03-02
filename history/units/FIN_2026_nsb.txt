@@ -1,0 +1,149 @@
+##### Division Templates #####
+# Finland 2026 — NATO member since 2023, strong reserve system
+
+division_template = {
+	name = "Mekaniserad Brigad 2026"
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+		SP_R_Arty_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		Arm_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Jääkäriprikaati 2026"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+		Arty_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Valmiusprikaati 2026"
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Erikoisjääkäriprikaati 2026"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+units = {
+	# Panssariprikaati (Armoured Brigade)
+	division = {
+		name = "Panssariprikaati"
+		location = 67
+		division_template = "Mekaniserad Brigad 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.85
+	}
+	# Karjalan Prikaati (Karelian Brigade)
+	division = {
+		name = "Karjalan Prikaati"
+		location = 6087
+		division_template = "Jääkäriprikaati 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.85
+	}
+	# Kainuun Prikaati
+	division = {
+		name = "Kainuun Prikaati"
+		location = 9233
+		division_template = "Jääkäriprikaati 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.8
+	}
+	# Porin Prikaati
+	division = {
+		name = "Porin Prikaati"
+		location = 165
+		division_template = "Jääkäriprikaati 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.8
+	}
+	# Jääkäriprikaati (Sodankylä)
+	division = {
+		name = "Jääkäriprikaati"
+		location = 16269
+		division_template = "Jääkäriprikaati 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	# Maavoimien valmiusprikaatit (Reserve readiness brigades)
+	division = {
+		name = "Valmiusprikaati Länsi"
+		location = 9183
+		division_template = "Valmiusprikaati 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Valmiusprikaati Itä"
+		location = 11211
+		division_template = "Valmiusprikaati 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Valmiusprikaati Pohjoinen"
+		location = 11105
+		division_template = "Valmiusprikaati 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.7
+	}
+	# Erikoisjääkäriprikaati (Special Jäger)
+	division = {
+		name = "Erikoisjääkäripataljoona"
+		location = 16264
+		division_template = "Erikoisjääkäriprikaati 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 5000
+		producer = FIN
+	}
+}

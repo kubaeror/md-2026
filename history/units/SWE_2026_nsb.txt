@@ -1,0 +1,146 @@
+##### Division Templates #####
+# Sweden 2026 — Rearming after NATO accession
+
+division_template = {
+	name = "Mekaniserad Brigad 2026"
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Arm_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Infanteribrigad 2026"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Amfibiebataljon 2026"
+	regiments = {
+		L_Marine_Bat = { x = 0 y = 0 }
+		L_Marine_Bat = { x = 0 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Specialförbanden 2026"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Hemvärnsbrigad 2026"
+	regiments = {
+		Militia_Bat = { x = 0 y = 0 }
+		Militia_Bat = { x = 0 y = 1 }
+		Militia_Bat = { x = 0 y = 2 }
+		Militia_Bat = { x = 0 y = 3 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	# Norrbottens Mekaniserade Brigad (MekB 19)
+	division = {
+		name = "MekB 19 Norrbotten"
+		location = 6050
+		division_template = "Mekaniserad Brigad 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.85
+	}
+	# Skaraborgs Mekaniserade Brigad (MekB 4)
+	division = {
+		name = "MekB 4 Skaraborg"
+		location = 6208
+		division_template = "Mekaniserad Brigad 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.85
+	}
+	# Gotlands Regemente (Inf)
+	division = {
+		name = "P 18 Gotland"
+		location = 383
+		division_template = "Infanteribrigad 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.8
+	}
+	# Amfibieregementet
+	division = {
+		name = "Amf 1 Amfibieregementet"
+		location = 161
+		division_template = "Amfibiebataljon 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.85
+	}
+	# Specialförbanden
+	division = {
+		name = "Specialförbanden"
+		location = 6397
+		division_template = "Specialförbanden 2026"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	# Hemvärn brigades
+	division = {
+		name = "Hemvärnsbrigad Nord"
+		location = 9054
+		division_template = "Hemvärnsbrigad 2026"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Hemvärnsbrigad Mitt"
+		location = 11311
+		division_template = "Hemvärnsbrigad 2026"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Hemvärnsbrigad Syd"
+		location = 6412
+		division_template = "Hemvärnsbrigad 2026"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 2000
+		producer = SWE
+	}
+}

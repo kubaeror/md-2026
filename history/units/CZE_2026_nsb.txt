@@ -1,0 +1,90 @@
+##### Division Templates #####
+# Czech Republic 2026 — NATO, small professional
+
+division_template = {
+	name = "Mechanizovaná Brigáda 2026"
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Lehká Brigáda 2026"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "601. Skupina SOF 2026"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+units = {
+	# 7th Mechanized Brigade (Hranice)
+	division = {
+		name = "7. mechanizovaná brigáda"
+		location = 3418
+		division_template = "Mechanizovaná Brigáda 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.85
+	}
+	# 4th Rapid Deployment Brigade (Žatec)
+	division = {
+		name = "4. brigáda rychlého nasazení"
+		location = 6590
+		division_template = "Lehká Brigáda 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.85
+	}
+	# 13th Artillery Regiment (as brigade equivalent)
+	division = {
+		name = "13. dělostřelecký pluk"
+		location = 9541
+		division_template = "Lehká Brigáda 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.8
+	}
+	# 601st SOF Group
+	division = {
+		name = "601. skupina speciálních sil"
+		location = 11556
+		division_template = "601. Skupina SOF 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.9
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 1500
+		producer = CZE
+	}
+}

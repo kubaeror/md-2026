@@ -1,0 +1,130 @@
+##### Division Templates #####
+# South Africa 2026
+
+division_template = {
+	name = "Mechanized Brigade 2026"
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Motorized Brigade 2026"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Airborne Brigade 2026"
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "SF Brigade 2026"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Reserve Force Brigade 2026"
+	regiments = {
+		Militia_Bat = { x = 0 y = 0 }
+		Militia_Bat = { x = 0 y = 1 }
+		Militia_Bat = { x = 0 y = 2 }
+		Militia_Bat = { x = 0 y = 3 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	# 43 SA Brigade (Mechanized)
+	division = {
+		name = "43 SA Brigade"
+		location = 1247
+		division_template = "Mechanized Brigade 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.8
+	}
+	# 46 SA Brigade (Motorized)
+	division = {
+		name = "46 SA Brigade"
+		location = 10566
+		division_template = "Motorized Brigade 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	# 9 SA Division — Reserve
+	division = {
+		name = "9 SA Division (Reserve)"
+		location = 12648
+		division_template = "Reserve Force Brigade 2026"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.6
+	}
+	# General Support Brigade
+	division = {
+		name = "General Support Brigade"
+		location = 10400
+		division_template = "Motorized Brigade 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	# 44 Parachute Brigade
+	division = {
+		name = "44 Parachute Brigade"
+		location = 10400
+		division_template = "Airborne Brigade 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	# SA Special Forces Brigade
+	division = {
+		name = "SA Special Forces Brigade"
+		location = 1363
+		division_template = "SF Brigade 2026"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 2000
+		producer = SAF
+	}
+}

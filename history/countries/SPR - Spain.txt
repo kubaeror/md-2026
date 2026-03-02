@@ -1140,6 +1140,14 @@
 ##############################
 2026.1.1 = {
 
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "SPR_2026_nsb"
+		else = {
+			set_oob = "SPR_2000_nonnsb"
+		}
+	}
+
 	### GDP & Economic Variables ###
 	set_variable = { gdp_per_capita = 33.000 }
 	set_variable = { var = debt value = 1600.000 }

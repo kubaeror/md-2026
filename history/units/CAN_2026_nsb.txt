@@ -1,0 +1,147 @@
+##### Division Templates #####
+# Canada 2026 — Small professional force
+
+division_template = {
+	name = "Mechanized Brigade Group 2026"
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Arm_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Light Infantry Battalion Group 2026"
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "CANSOF 2026"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Reserve Brigade Group 2026"
+	regiments = {
+		Militia_Bat = { x = 0 y = 0 }
+		Militia_Bat = { x = 0 y = 1 }
+		Militia_Bat = { x = 0 y = 2 }
+		Militia_Bat = { x = 0 y = 3 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		combat_service_support_company = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	# 1 Canadian Mechanized Brigade Group — Edmonton
+	division = {
+		name = "1 Canadian Mechanized Brigade Group"
+		location = 3010
+		division_template = "Mechanized Brigade Group 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.9
+	}
+	# 2 Canadian Mechanized Brigade Group — Petawawa
+	division = {
+		name = "2 Canadian Mechanized Brigade Group"
+		location = 4872
+		division_template = "Mechanized Brigade Group 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.9
+	}
+	# 5 Canadian Mechanized Brigade Group — Valcartier
+	division = {
+		name = "5 Canadian Mechanized Brigade Group"
+		location = 1408
+		division_template = "Mechanized Brigade Group 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.9
+	}
+	# 3rd Canadian Division — Light
+	division = {
+		name = "3rd Canadian Division (Light)"
+		location = 3706
+		division_template = "Light Infantry Battalion Group 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.85
+	}
+	# CANSOFCOM
+	division = {
+		name = "CANSOFCOM"
+		location = 4872
+		division_template = "CANSOF 2026"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	# Reserve Brigades
+	division = {
+		name = "31 Canadian Brigade Group (Reserve)"
+		location = 3706
+		division_template = "Reserve Brigade Group 2026"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "32 Canadian Brigade Group (Reserve)"
+		location = 9634
+		division_template = "Reserve Brigade Group 2026"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "33 Canadian Brigade Group (Reserve)"
+		location = 722
+		division_template = "Reserve Brigade Group 2026"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "34 Canadian Brigade Group (Reserve)"
+		location = 3775
+		division_template = "Reserve Brigade Group 2026"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "38 Canadian Brigade Group (Reserve)"
+		location = 3010
+		division_template = "Reserve Brigade Group 2026"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.6
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 2000
+		producer = CAN
+	}
+}
