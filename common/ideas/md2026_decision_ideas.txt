@@ -1,0 +1,131 @@
+### Millennium Dawn 2026 - Decision Reward Ideas & Opinion Modifiers ###
+
+ideas = {
+	country = {
+
+		### Decision reward ideas ###
+
+		md2026_additional_sanctions_effect = {
+			picture = embargo
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = -0.05
+				trade_opinion_factor = -0.10
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		md2026_increased_defense_budget = {
+			picture = defense
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				conscription = 0.005
+				consumer_goods_factor = 0.03
+				Military_Spending_cost_factor = -1.0
+			}
+		}
+
+		md2026_nato_battlegroup_deployed = {
+			picture = volunteer_defenders
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_defence_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+
+		md2026_trade_war_tariffs = {
+			picture = GENERIC_protectionism
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = -0.15
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.05
+				stability_factor = -0.02
+			}
+		}
+
+		md2026_drone_warfare_capability = {
+			picture = air_support_focus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = 0.05
+				air_superiority_efficiency = 0.05
+			}
+		}
+
+		md2026_cyber_capability = {
+			picture = electronic_warfare
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				decryption_factor = 0.15
+				encryption_factor = 0.10
+				political_power_factor = 0.05
+			}
+		}
+
+		md2026_military_ai_systems = {
+			picture = modernized_army
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_org_factor = 0.05
+				army_attack_factor = 0.05
+				planning_speed = 0.10
+				research_speed_factor = 0.03
+			}
+		}
+
+		md2026_special_forces_expansion = {
+			picture = special_forces
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				special_forces_cap = 0.05
+				special_forces_attack_factor = 0.10
+				special_forces_defence_factor = 0.10
+			}
+		}
+
+		md2026_energy_transition = {
+			picture = green_energy
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				stability_factor = 0.03
+				consumer_goods_factor = -0.03
+				local_resources_factor = 0.05
+			}
+		}
+
+		md2026_digital_transformation = {
+			picture = electronic_warfare
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				research_speed_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+		md2026_arms_exporter = {
+			picture = production
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				industrial_capacity_factory = 0.05
+				trade_opinion_factor = 0.10
+			}
+		}
+	}
+}
