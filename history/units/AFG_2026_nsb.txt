@@ -1,0 +1,158 @@
+##### Afghanistan - 2026 OOB (Taliban Islamic Emirate) #####
+# Taliban-controlled since August 2021
+# Mix of captured US/NATO equipment and older Soviet-era gear
+# Large militia force, limited conventional capability
+
+division_template = {
+	name = "Loy Taliban"		# Taliban Infantry Corps
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		Militia_Bat = { x = 1 y = 0 }
+		Militia_Bat = { x = 1 y = 1 }
+		Militia_Bat = { x = 1 y = 2 }
+		Militia_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Arty_Battery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Da Taliban Miliishiya"		# Militia Force
+	regiments = {
+		Militia_Bat = { x = 0 y = 0 }
+		Militia_Bat = { x = 0 y = 1 }
+		Militia_Bat = { x = 0 y = 2 }
+		Militia_Bat = { x = 1 y = 0 }
+		Militia_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Badri 313"		# Taliban Special Forces (captured US equipment)
+	regiments = {
+		L_Ranger_Bat = { x = 0 y = 0 }
+		L_Ranger_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Islamic Emirate Armed Forces #####
+
+	# Kabul
+	division = {
+		name = "1. Loy Taliban"
+		location = 10781
+		division_template = "Loy Taliban"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "1. Badri 313"
+		location = 10781
+		division_template = "Badri 313"
+		start_experience_factor = 0.50
+		start_equipment_factor = 0.60
+	}
+	division = {
+		name = "1. Da Taliban Miliishiya"
+		location = 10781
+		division_template = "Da Taliban Miliishiya"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.45
+	}
+
+	# Kandahar (Taliban heartland)
+	division = {
+		name = "2. Loy Taliban"
+		location = 10826
+		division_template = "Loy Taliban"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "2. Da Taliban Miliishiya"
+		location = 10826
+		division_template = "Da Taliban Miliishiya"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.50
+	}
+
+	# Herat (Western)
+	division = {
+		name = "3. Loy Taliban"
+		location = 14683
+		division_template = "Loy Taliban"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.50
+	}
+	division = {
+		name = "3. Da Taliban Miliishiya"
+		location = 14683
+		division_template = "Da Taliban Miliishiya"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.40
+	}
+
+	# Mazar-i-Sharif (Northern)
+	division = {
+		name = "4. Loy Taliban"
+		location = 14685
+		division_template = "Loy Taliban"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.50
+	}
+	division = {
+		name = "4. Da Taliban Miliishiya"
+		location = 14685
+		division_template = "Da Taliban Miliishiya"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.40
+	}
+
+	# Eastern (Nangarhar / Jalalabad)
+	division = {
+		name = "5. Loy Taliban"
+		location = 12314
+		division_template = "Loy Taliban"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.50
+	}
+	division = {
+		name = "5. Da Taliban Miliishiya"
+		location = 12314
+		division_template = "Da Taliban Miliishiya"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.45
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 2000
+		producer = USA
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons3
+		amount = 5000
+		producer = SOV
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons2
+		amount = 3000
+		producer = CHI
+	}
+}

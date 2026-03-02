@@ -1,0 +1,168 @@
+##### Yemen - 2026 OOB (Houthi-controlled government) #####
+# Ongoing civil conflict, Houthi forces dominate the north
+# Mix of militia and light infantry, limited heavy equipment
+
+division_template = {
+	name = "Firqa Ansar Allah"		# Houthi Infantry
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		Militia_Bat = { x = 1 y = 0 }
+		Militia_Bat = { x = 1 y = 1 }
+		Militia_Bat = { x = 1 y = 2 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Arty_Battery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Firqa Miliishiya"		# Militia Force
+	regiments = {
+		Militia_Bat = { x = 0 y = 0 }
+		Militia_Bat = { x = 0 y = 1 }
+		Militia_Bat = { x = 0 y = 2 }
+		Militia_Bat = { x = 1 y = 0 }
+		Militia_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Liwa' Mushaat Khafeef"		# Light Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		Arty_Battery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Liwa' Sawarikh"		# Rocket/Missile Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		SP_R_Arty_Bat = { x = 1 y = 0 }
+		Arty_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	##### Yemeni Armed Forces #####
+
+	# Sana'a area
+	division = {
+		name = "1. Firqa Ansar Allah"
+		location = 9141
+		division_template = "Firqa Ansar Allah"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.50
+	}
+	division = {
+		name = "2. Firqa Ansar Allah"
+		location = 9141
+		division_template = "Firqa Ansar Allah"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name = "1. Liwa' Sawarikh"
+		location = 9141
+		division_template = "Liwa' Sawarikh"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.40
+	}
+
+	# Saada (Houthi heartland)
+	division = {
+		name = "3. Firqa Ansar Allah"
+		location = 9138
+		division_template = "Firqa Ansar Allah"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.50
+	}
+	division = {
+		name = "1. Firqa Miliishiya"
+		location = 9138
+		division_template = "Firqa Miliishiya"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.40
+	}
+
+	# Hodeidah coast
+	division = {
+		name = "4. Firqa Ansar Allah"
+		location = 9150
+		division_template = "Firqa Ansar Allah"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name = "1. Liwa' Mushaat Khafeef"
+		location = 9158
+		division_template = "Liwa' Mushaat Khafeef"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.45
+	}
+
+	# Aden / South
+	division = {
+		name = "2. Firqa Miliishiya"
+		location = 8000
+		division_template = "Firqa Miliishiya"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.35
+	}
+
+	# Marib front
+	division = {
+		name = "5. Firqa Ansar Allah"
+		location = 9181
+		division_template = "Firqa Ansar Allah"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.45
+	}
+
+	# Eastern / Hadramaut
+	division = {
+		name = "3. Firqa Miliishiya"
+		location = 10840
+		division_template = "Firqa Miliishiya"
+		start_experience_factor = 0.20
+		start_equipment_factor = 0.30
+	}
+
+	# Taiz area
+	division = {
+		name = "2. Liwa' Mushaat Khafeef"
+		location = 9217
+		division_template = "Liwa' Mushaat Khafeef"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.40
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons3
+		amount = 3000
+		producer = YEM
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons2
+		amount = 4000
+		producer = SOV
+	}
+}

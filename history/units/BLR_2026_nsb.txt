@@ -1,0 +1,141 @@
+##### Belarus - 2026 OOB (Lukashenko Regime) #####
+# Close military integration with Russia
+# Relatively modern equipment from Russian transfers
+# Small but organized force
+
+division_template = {
+	name = "Mekhanizavanaya Bryhada"		# Mechanized Brigade
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		armor_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Mataryzavanaya Bryhada"		# Motorized Brigade
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Desantnaya Bryhada"		# Airborne/Special Ops Brigade
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 1 y = 0 }
+		L_Ranger_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Artyleryiskaya Bryhada"		# Artillery Brigade
+	regiments = {
+		SP_Arty_Bat = { x = 0 y = 0 }
+		SP_Arty_Bat = { x = 0 y = 1 }
+		SP_R_Arty_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		combat_service_support_company = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Belarusian Armed Forces #####
+
+	# Minsk area (Western Operational Command)
+	division = {
+		name = "11. Mekhanizavanaya Bryhada"
+		location = 6359
+		division_template = "Mekhanizavanaya Bryhada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "120. Mekhanizavanaya Bryhada"
+		location = 3392
+		division_template = "Mekhanizavanaya Bryhada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+
+	# Western border (Grodno/Brest)
+	division = {
+		name = "6. Mekhanizavanaya Bryhada"
+		location = 11241
+		division_template = "Mekhanizavanaya Bryhada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.70
+	}
+	division = {
+		name = "111. Artyleryiskaya Bryhada"
+		location = 11370
+		division_template = "Artyleryiskaya Bryhada"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.70
+	}
+
+	# North-west (NW Operational Command)
+	division = {
+		name = "19. Mataryzavanaya Bryhada"
+		location = 3393
+		division_template = "Mataryzavanaya Bryhada"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.70
+	}
+
+	# Airborne / SOF
+	division = {
+		name = "38. Desantnaya Bryhada"
+		location = 699
+		division_template = "Desantnaya Bryhada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "103. Desantnaya Bryhada"
+		location = 9304
+		division_template = "Desantnaya Bryhada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.75
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 5000
+		producer = BLR
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 2000
+		producer = SOV
+	}
+}

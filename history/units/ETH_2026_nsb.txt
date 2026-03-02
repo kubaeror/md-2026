@@ -1,0 +1,210 @@
+##### Ethiopia - 2026 OOB (Post-Tigray War) #####
+# ENDF rebuilt after Tigray conflict; large but equipment-depleted force
+# Focus on infantry mass with limited mechanized capability
+
+division_template = {
+	name = "Ye Egir Hayl Kifl"		# Infantry Division
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+		L_Inf_Bat = { x = 1 y = 2 }
+		Militia_Bat = { x = 2 y = 0 }
+		Militia_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Arty_Battery = { x = 0 y = 1 }
+		L_Recce_Comp = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Ye Fano Hayl"		# Militia/Regional Force
+	regiments = {
+		Militia_Bat = { x = 0 y = 0 }
+		Militia_Bat = { x = 0 y = 1 }
+		Militia_Bat = { x = 0 y = 2 }
+		Militia_Bat = { x = 1 y = 0 }
+		Militia_Bat = { x = 1 y = 1 }
+		L_Inf_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Ye Mekina Kifl"		# Motorized Division
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		L_Inf_Bat = { x = 2 y = 0 }
+		L_Inf_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		Arty_Battery = { x = 0 y = 1 }
+		L_Engi_Comp = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Ye Tanker Briged"		# Armored Brigade
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Ye Komando Briged"		# Commando Brigade
+	regiments = {
+		L_Ranger_Bat = { x = 0 y = 0 }
+		L_Ranger_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Ethiopian National Defense Force #####
+
+	# Addis Ababa / Central Command
+	division = {
+		name = "1. Ye Egir Hayl Kifl"
+		location = 5010
+		division_template = "Ye Egir Hayl Kifl"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.60
+	}
+	division = {
+		name = "1. Ye Tanker Briged"
+		location = 5010
+		division_template = "Ye Tanker Briged"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.50
+	}
+	division = {
+		name = "1. Ye Komando Briged"
+		location = 5010
+		division_template = "Ye Komando Briged"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+
+	# Northern Command (Amhara / Tigray border)
+	division = {
+		name = "2. Ye Egir Hayl Kifl"
+		location = 208
+		division_template = "Ye Egir Hayl Kifl"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "3. Ye Egir Hayl Kifl"
+		location = 338
+		division_template = "Ye Egir Hayl Kifl"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.50
+	}
+	division = {
+		name = "1. Ye Fano Hayl"
+		location = 208
+		division_template = "Ye Fano Hayl"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.45
+	}
+
+	# Eastern Command (Somali region)
+	division = {
+		name = "4. Ye Egir Hayl Kifl"
+		location = 2072
+		division_template = "Ye Egir Hayl Kifl"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.50
+	}
+	division = {
+		name = "2. Ye Fano Hayl"
+		location = 8019
+		division_template = "Ye Fano Hayl"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.40
+	}
+
+	# Western Command
+	division = {
+		name = "5. Ye Egir Hayl Kifl"
+		location = 510
+		division_template = "Ye Egir Hayl Kifl"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "3. Ye Fano Hayl"
+		location = 518
+		division_template = "Ye Fano Hayl"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.40
+	}
+
+	# Southern Command
+	division = {
+		name = "6. Ye Egir Hayl Kifl"
+		location = 520
+		division_template = "Ye Egir Hayl Kifl"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.50
+	}
+	division = {
+		name = "4. Ye Fano Hayl"
+		location = 533
+		division_template = "Ye Fano Hayl"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.40
+	}
+
+	# Motorized reserve
+	division = {
+		name = "1. Ye Mekina Kifl"
+		location = 5010
+		division_template = "Ye Mekina Kifl"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.50
+	}
+	division = {
+		name = "2. Ye Mekina Kifl"
+		location = 208
+		division_template = "Ye Mekina Kifl"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.45
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons3
+		amount = 8000
+		producer = ETH
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons2
+		amount = 5000
+		producer = SOV
+	}
+}

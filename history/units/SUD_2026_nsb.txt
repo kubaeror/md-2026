@@ -1,0 +1,201 @@
+##### Sudan - 2026 OOB (Sudanese Armed Forces - SAF) #####
+# Civil war since April 2023 between SAF (al-Burhan) and RSF (Hemedti)
+# Military depleted, fighting ongoing; SAF controls Port Sudan and east
+
+division_template = {
+	name = "Firqa Mushaat"		# Infantry Division (SAF)
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		Militia_Bat = { x = 1 y = 1 }
+		Militia_Bat = { x = 1 y = 2 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Arty_Battery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Firqa Miliishiya"		# Militia / Popular Defense Forces
+	regiments = {
+		Militia_Bat = { x = 0 y = 0 }
+		Militia_Bat = { x = 0 y = 1 }
+		Militia_Bat = { x = 0 y = 2 }
+		Militia_Bat = { x = 1 y = 0 }
+		Militia_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Firqa Mudarra'a"		# Armored Division (depleted)
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		Mot_Inf_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Liwa' Motahirka"		# Motorized Brigade
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Sudanese Armed Forces (SAF) #####
+
+	# Khartoum front (contested)
+	division = {
+		name = "1. Firqa Mushaat"
+		location = 1960
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name = "2. Firqa Mushaat"
+		location = 1960
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.40
+	}
+	division = {
+		name = "1. Firqa Mudarra'a"
+		location = 1960
+		division_template = "Firqa Mudarra'a"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.35
+	}
+
+	# Port Sudan (SAF HQ in exile)
+	division = {
+		name = "3. Firqa Mushaat"
+		location = 10851
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.50
+	}
+	division = {
+		name = "1. Firqa Miliishiya"
+		location = 10877
+		division_template = "Firqa Miliishiya"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.40
+	}
+
+	# Eastern front
+	division = {
+		name = "4. Firqa Mushaat"
+		location = 2088
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name = "1. Liwa' Motahirka"
+		location = 10900
+		division_template = "Liwa' Motahirka"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.40
+	}
+
+	# Northern (Egyptian border)
+	division = {
+		name = "5. Firqa Mushaat"
+		location = 1140
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.45
+	}
+
+	# Central / Gezira
+	division = {
+		name = "2. Firqa Miliishiya"
+		location = 4133
+		division_template = "Firqa Miliishiya"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.35
+	}
+	division = {
+		name = "3. Firqa Miliishiya"
+		location = 11044
+		division_template = "Firqa Miliishiya"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.35
+	}
+
+	# Southern / Blue Nile
+	division = {
+		name = "6. Firqa Mushaat"
+		location = 10739
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.40
+	}
+	division = {
+		name = "4. Firqa Miliishiya"
+		location = 11049
+		division_template = "Firqa Miliishiya"
+		start_experience_factor = 0.20
+		start_equipment_factor = 0.30
+	}
+
+	# Darfur area
+	division = {
+		name = "7. Firqa Mushaat"
+		location = 10200
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.40
+	}
+	division = {
+		name = "5. Firqa Miliishiya"
+		location = 12359
+		division_template = "Firqa Miliishiya"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.35
+	}
+
+	# Kassala / Red Sea
+	division = {
+		name = "2. Liwa' Motahirka"
+		location = 12454
+		division_template = "Liwa' Motahirka"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.40
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons3
+		amount = 5000
+		producer = SUD
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons2
+		amount = 4000
+		producer = SOV
+	}
+}

@@ -1,0 +1,115 @@
+##### Georgia - 2026 OOB #####
+# Small professional military, NATO-aspirant
+# Modernizing with Western equipment and training
+# Limited but well-trained infantry force
+
+division_template = {
+	name = "Sakmanebi Brigada"		# Infantry Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Artileriis Brigada"		# Artillery Brigade
+	regiments = {
+		SP_Arty_Bat = { x = 0 y = 0 }
+		SP_Arty_Bat = { x = 0 y = 1 }
+		Arty_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		combat_service_support_company = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Spetsrazmeli Brigada"		# Special Forces Brigade
+	regiments = {
+		L_Ranger_Bat = { x = 0 y = 0 }
+		L_Ranger_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Georgian Defense Forces #####
+
+	# Tbilisi
+	division = {
+		name = "1. Sakmanebi Brigada"
+		location = 3653
+		division_template = "Sakmanebi Brigada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.70
+	}
+	division = {
+		name = "1. Spetsrazmeli Brigada"
+		location = 3653
+		division_template = "Spetsrazmeli Brigada"
+		start_experience_factor = 0.50
+		start_equipment_factor = 0.70
+	}
+
+	# Western Georgia (Kutaisi)
+	division = {
+		name = "2. Sakmanebi Brigada"
+		location = 3658
+		division_template = "Sakmanebi Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.65
+	}
+
+	# Gori (near South Ossetia)
+	division = {
+		name = "3. Sakmanebi Brigada"
+		location = 1599
+		division_template = "Sakmanebi Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "1. Artileriis Brigada"
+		location = 1599
+		division_template = "Artileriis Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.60
+	}
+
+	# Eastern (Batumi area)
+	division = {
+		name = "4. Sakmanebi Brigada"
+		location = 772
+		division_template = "Sakmanebi Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.65
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons4
+		amount = 3000
+		producer = GEO
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 1000
+		producer = USA
+	}
+}
