@@ -2,7 +2,7 @@
 # Brazil 2026 — Large territory, mixed jungle/urban force
 
 division_template = {
-	name = "Brig. Cavalaria Blindada 2026"
+	name = "Brig. Cavalaria Blindada"
 	regiments = {
 		armor_Bat = { x = 0 y = 0 }
 		armor_Bat = { x = 0 y = 1 }
@@ -19,7 +19,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brig. Infantaria Mec. 2026"
+	name = "Brig. Infantaria Mec."
 	regiments = {
 		Mech_Inf_Bat = { x = 0 y = 0 }
 		Mech_Inf_Bat = { x = 0 y = 1 }
@@ -35,7 +35,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brigada Inf. Motorizada 2026"
+	name = "Brigada Inf. Motorizada"
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
 		Mot_Inf_Bat = { x = 0 y = 1 }
@@ -50,7 +50,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brigada Inf. Selva 2026"
+	name = "Brigada Inf. Selva"
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
@@ -65,7 +65,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brigada Inf. Leve 2026"
+	name = "Brigada Inf. Leve"
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
@@ -80,7 +80,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brigada Para-quedista 2026"
+	name = "Brigada Para-quedista"
 	regiments = {
 		L_Air_Inf_Bat = { x = 0 y = 0 }
 		L_Air_Inf_Bat = { x = 0 y = 1 }
@@ -94,7 +94,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brig. Operacoes Especiais 2026"
+	name = "Brig. Operacoes Especiais"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -115,7 +115,7 @@ units = {
 	division = {
 		name = "1a Brigada de Cavalaria Blindada"
 		location = 10980
-		division_template = "Brig. Cavalaria Blindada 2026"
+		division_template = "Brig. Cavalaria Blindada"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -123,7 +123,7 @@ units = {
 	division = {
 		name = "2a Brigada de Cavalaria Blindada"
 		location = 10432
-		division_template = "Brig. Cavalaria Blindada 2026"
+		division_template = "Brig. Cavalaria Blindada"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -131,7 +131,7 @@ units = {
 	division = {
 		name = "3a Brigada de Infantaria Mecanizada"
 		location = 920
-		division_template = "Brig. Infantaria Mec. 2026"
+		division_template = "Brig. Infantaria Mec."
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -139,7 +139,7 @@ units = {
 	division = {
 		name = "5a Brigada de Cavalaria Blindada"
 		location = 5214
-		division_template = "Brig. Cavalaria Blindada 2026"
+		division_template = "Brig. Cavalaria Blindada"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -150,7 +150,7 @@ units = {
 	division = {
 		name = "4a Brigada de Infantaria Motorizada"
 		location = 12919
-		division_template = "Brigada Inf. Motorizada 2026"
+		division_template = "Brigada Inf. Motorizada"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
@@ -158,7 +158,7 @@ units = {
 	division = {
 		name = "9a Brigada de Infantaria Motorizada"
 		location = 6651
-		division_template = "Brigada Inf. Motorizada 2026"
+		division_template = "Brigada Inf. Motorizada"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
@@ -166,7 +166,7 @@ units = {
 	division = {
 		name = "10a Brigada de Infantaria Motorizada"
 		location = 12939
-		division_template = "Brigada Inf. Motorizada 2026"
+		division_template = "Brigada Inf. Motorizada"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
@@ -174,7 +174,7 @@ units = {
 	division = {
 		name = "11a Brigada de Infantaria Motorizada"
 		location = 4095
-		division_template = "Brigada Inf. Motorizada 2026"
+		division_template = "Brigada Inf. Motorizada"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
@@ -185,7 +185,7 @@ units = {
 	division = {
 		name = "6a Brigada de Infantaria Leve"
 		location = 8189
-		division_template = "Brigada Inf. Leve 2026"
+		division_template = "Brigada Inf. Leve"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.75
 	}
@@ -193,7 +193,7 @@ units = {
 	division = {
 		name = "15a Brigada de Infantaria Leve"
 		location = 903
-		division_template = "Brigada Inf. Leve 2026"
+		division_template = "Brigada Inf. Leve"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.75
 	}
@@ -204,7 +204,7 @@ units = {
 	division = {
 		name = "1a Brigada de Infantaria de Selva"
 		location = 10933
-		division_template = "Brigada Inf. Selva 2026"
+		division_template = "Brigada Inf. Selva"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.75
 	}
@@ -212,7 +212,7 @@ units = {
 	division = {
 		name = "2a Brigada de Infantaria de Selva"
 		location = 4436
-		division_template = "Brigada Inf. Selva 2026"
+		division_template = "Brigada Inf. Selva"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.75
 	}
@@ -220,7 +220,7 @@ units = {
 	division = {
 		name = "16a Brigada de Infantaria de Selva"
 		location = 5168
-		division_template = "Brigada Inf. Selva 2026"
+		division_template = "Brigada Inf. Selva"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.75
 	}
@@ -228,7 +228,7 @@ units = {
 	division = {
 		name = "17a Brigada de Infantaria de Selva"
 		location = 2111
-		division_template = "Brigada Inf. Selva 2026"
+		division_template = "Brigada Inf. Selva"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.75
 	}
@@ -236,7 +236,7 @@ units = {
 	division = {
 		name = "23a Brigada de Infantaria de Selva"
 		location = 10405
-		division_template = "Brigada Inf. Selva 2026"
+		division_template = "Brigada Inf. Selva"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.75
 	}
@@ -247,7 +247,7 @@ units = {
 	division = {
 		name = "Brigada de Infantaria Para-quedista"
 		location = 10360
-		division_template = "Brigada Para-quedista 2026"
+		division_template = "Brigada Para-quedista"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.85
 	}
@@ -255,9 +255,31 @@ units = {
 	division = {
 		name = "Brigada de Operacoes Especiais"
 		location = 10432
-		division_template = "Brig. Operacoes Especiais 2026"
+		division_template = "Brig. Operacoes Especiais"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.85
+	}
+
+	##### Marinha do Brasil #####
+
+	fleet = {
+		name = "Esquadra"
+		naval_base = 10980
+		task_force = {
+			name = "Esquadra"
+			location = 10980
+			ship = { name = "PHM Atlântico (A140)" definition = helicopter_operator start_experience_factor = 0.4 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = BRA version_name = "Atlântico Class" } } }
+			ship = { name = "Tamandaré (F200)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = BRA version_name = "Tamandaré Class" } } }
+			ship = { name = "Niterói (F40)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = BRA version_name = "Niterói Class" } } }
+			ship = { name = "Defensora (F41)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = BRA version_name = "Niterói Class" } } }
+			ship = { name = "Constituição (F42)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = BRA version_name = "Niterói Class" } } }
+			ship = { name = "Barroso (V34)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_2 = { amount = 1 owner = BRA version_name = "Barroso Class" } } }
+			ship = { name = "Riachuelo (S40)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = BRA version_name = "Riachuelo Class" } } }
+			ship = { name = "Humaitá (S41)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = BRA version_name = "Riachuelo Class" } } }
+			ship = { name = "Tonelero (S42)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = BRA version_name = "Riachuelo Class" } } }
+			ship = { name = "Tupi (S30)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = BRA version_name = "Tupi Class" } } }
+			ship = { name = "Tamoio (S31)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = BRA version_name = "Tupi Class" } } }
+		}
 	}
 }
 
@@ -266,5 +288,54 @@ instant_effect = {
 		type = infantry_weapons4
 		amount = 5000
 		producer = BRA
+	}
+}
+
+##### Forca Aerea Brasileira #####
+
+air_wings = {
+	# Anápolis (Goiás)
+	885 = {
+		small_plane_strike_airframe_2 = { owner = "BRA" creator = "SWE" amount = 24 version_name = "JAS 39E/F Gripen" }
+		name = "1º Grupo de Defesa Aérea"
+		start_experience_factor = 0.5
+	}
+	885 = {
+		large_plane_awacs_airframe_1 = { owner = "BRA" amount = 5 version_name = "E-99M" }
+		name = "2º/6º Grupo de Aviação"
+		start_experience_factor = 0.45
+	}
+	# Canoas (Rio Grande do Sul)
+	879 = {
+		small_plane_airframe_2 = { owner = "BRA" amount = 20 version_name = "F-5EM Tiger III" }
+		name = "1º/14º Grupo de Aviação"
+		start_experience_factor = 0.35
+	}
+	# Santa Cruz (Rio de Janeiro)
+	883 = {
+		small_plane_cas_airframe_2 = { owner = "BRA" amount = 20 version_name = "A-1M AMX" }
+		name = "1º/16º Grupo de Aviação"
+		start_experience_factor = 0.4
+	}
+	883 = {
+		large_plane_air_transport_airframe_2 = { owner = "BRA" amount = 8 version_name = "KC-390 Millennium" }
+		name = "1º/15º Grupo de Aviação"
+		start_experience_factor = 0.5
+	}
+	883 = {
+		large_plane_air_transport_airframe_1 = { owner = "BRA" creator = "USA" amount = 10 version_name = "C-130H Hercules" }
+		name = "1º Grupo de Transporte"
+		start_experience_factor = 0.35
+	}
+	# Natal / Ceará area
+	889 = {
+		small_plane_cas_airframe_2 = { owner = "BRA" amount = 20 version_name = "A-1M AMX" }
+		name = "3º/10º Grupo de Aviação"
+		start_experience_factor = 0.4
+	}
+	889 = {
+		large_plane_maritime_patrol_airframe_1 = { owner = "BRA" creator = "USA" amount = 8 version_name = "P-3AM Orion" }
+		name = "1º/7º Grupo de Aviação"
+		start_experience_factor = 0.4
 	}
 }
