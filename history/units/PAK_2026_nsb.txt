@@ -291,6 +291,57 @@ units = {
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.9
 	}
+
+	##### Additional Forces #####
+	division = {
+		name = "2nd Armoured Division"
+		location = 6424
+		division_template = "Armoured Division 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "20th Infantry Division"
+		location = 10821
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "23rd Infantry Division"
+		location = 2084
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "27th Infantry Division"
+		location = 8007
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "33rd Infantry Division"
+		location = 1107
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "111th Brigade (Bajaur)"
+		location = 3866
+		division_template = "Light Infantry Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "SSG (Air)"
+		location = 6492
+		division_template = "SSG Brigade 2026"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.75
+	}
 }
 
 instant_effect = {

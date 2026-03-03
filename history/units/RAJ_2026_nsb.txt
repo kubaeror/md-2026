@@ -268,6 +268,188 @@ units = {
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.85
 	}
+
+	### Western Command (Additional) ###
+	division = {
+		name = "14th Corps (Nagrota)"
+		location = 44
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "16th Corps (Prayagraj)"
+		location = 44
+		division_template = "Infantry Division"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "2nd Mech Infantry Brigade (Ambala)"
+		location = 44
+		division_template = "Mechanized Infantry Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "15th Infantry Division"
+		location = 44
+		division_template = "Infantry Division"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "26th Infantry Division"
+		location = 44
+		division_template = "Infantry Division"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "29th Infantry Division"
+		location = 44
+		division_template = "Infantry Division"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.7
+	}
+
+	### Northern Command (Additional) ###
+	division = {
+		name = "14th Corps Reserve"
+		location = 7273
+		division_template = "Mountain Division"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "5th Mountain Division"
+		location = 7273
+		division_template = "Mountain Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "57th Mountain Division"
+		location = 7273
+		division_template = "Mountain Division"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.75
+	}
+
+	### Eastern Command (Additional - NE India) ###
+	division = {
+		name = "4th Corps - 2nd Brigade"
+		location = 12025
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "3rd Corps - 2nd Brigade"
+		location = 12025
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "56th Mountain Division"
+		location = 12025
+		division_template = "Mountain Division"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "71st Mountain Division"
+		location = 12025
+		division_template = "Mountain Division"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.75
+	}
+
+	### Eastern Command (Additional - Siliguri) ###
+	division = {
+		name = "33rd Corps - 2nd Brigade"
+		location = 10389
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "17th Mountain Division"
+		location = 10389
+		division_template = "Mountain Division"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.75
+	}
+
+	### Central Command (Additional) ###
+	division = {
+		name = "1st Corps Reserve (Mathura)"
+		location = 12035
+		division_template = "Armoured Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "RAPID Reserve Division"
+		location = 12035
+		division_template = "Mechanized Infantry Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Central Reserve Division"
+		location = 12035
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "25th Infantry Division"
+		location = 12035
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "39th Infantry Division"
+		location = 12035
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "54th Infantry Division"
+		location = 12035
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.65
+	}
+
+	### Southern Command (Additional) ###
+	division = {
+		name = "Southern Command Reserve - 1st"
+		location = 12035
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "Southern Command Reserve - 2nd"
+		location = 12035
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.65
+	}
+
+	### Para SF (Additional) ###
+	division = {
+		name = "Para SF (Special)"
+		location = 12035
+		division_template = "Special Forces Brigade"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.85
+	}
 }
 
 ### Equipment Stockpile ###

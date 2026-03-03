@@ -206,6 +206,36 @@ units = {
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.5
 	}
+
+	### Additional Forces ###
+	division = {
+		name = "19. Lubelska Brygada Zmechanizowana"
+		location = 6499
+		division_template = "Dywizja Zmechanizowana 2026"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "3. Brygada Obrony Terytorialnej"
+		location = 524
+		division_template = "Brygada WOT 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "4. Brygada Obrony Terytorialnej"
+		location = 3380
+		division_template = "Brygada WOT 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "5. Brygada Obrony Terytorialnej"
+		location = 6282
+		division_template = "Brygada WOT 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
 }
 
 instant_effect = {

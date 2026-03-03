@@ -441,6 +441,183 @@ units = {
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.75
 	}
+
+	### ADDITIONAL EASTERN THEATER COMMAND ###
+	division = {
+		name = "71st Group Army - 4th CAB"
+		location = 10101
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "71st Group Army - Amphibious CAB"
+		location = 10101
+		division_template = "Combined Arms Brigade (Heavy)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "72nd Group Army - 3rd CAB"
+		location = 11920
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "72nd Group Army - Amphibious CAB"
+		location = 11920
+		division_template = "Combined Arms Brigade (Heavy)"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+
+	### ADDITIONAL SOUTHERN THEATER COMMAND ###
+	division = {
+		name = "74th Group Army - 3rd LCAB"
+		location = 7071
+		division_template = "Light Combined Arms Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "75th Group Army - 2nd CAB"
+		location = 11986
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "75th Group Army - Mountain"
+		location = 11986
+		division_template = "Mountain Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "PLAN 4th Marine Brigade"
+		location = 7071
+		division_template = "PLA Marine Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "PLAN 5th Marine Brigade"
+		location = 7071
+		division_template = "PLA Marine Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+
+	### ADDITIONAL WESTERN THEATER COMMAND ###
+	division = {
+		name = "76th Group Army - 2nd LCAB"
+		location = 10062
+		division_template = "Light Combined Arms Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "76th Group Army - 2nd Mountain"
+		location = 10062
+		division_template = "Mountain Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "77th Group Army - 2nd CAB"
+		location = 10404
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "77th Group Army - Air Assault"
+		location = 10404
+		division_template = "Air Assault Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+
+	### ADDITIONAL NORTHERN THEATER COMMAND ###
+	division = {
+		name = "78th Group Army - 3rd LCAB"
+		location = 1038
+		division_template = "Light Combined Arms Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "79th Group Army - 2nd CAB"
+		location = 1038
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Northern Theater Reserve"
+		location = 1038
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+	}
+
+	### ADDITIONAL CENTRAL THEATER COMMAND ###
+	division = {
+		name = "81st Group Army - 3rd CAB"
+		location = 4619
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "82nd Group Army - 2nd CAB"
+		location = 994
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "83rd Group Army - 2nd LCAB"
+		location = 1146
+		division_template = "Light Combined Arms Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Strategic Reserve - 1st CAB"
+		location = 4619
+		division_template = "Combined Arms Brigade (Heavy)"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+
+	### ADDITIONAL XINJIANG MILITARY REGION ###
+	division = {
+		name = "Xinjiang Military Region - 3rd"
+		location = 1597
+		division_template = "Light Combined Arms Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.65
+	}
+
+	### ADDITIONAL PLA SOF ###
+	division = {
+		name = "PLA SOF - Eastern Detachment"
+		location = 4619
+		division_template = "Special Operations Brigade"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.85
+	}
+
+	### ADDITIONAL PLA AIRBORNE CORPS ###
+	division = {
+		name = "PLA Airborne Corps - 46th Brigade"
+		location = 7191
+		division_template = "PLA Airborne Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
 }
 
 ### Equipment Stockpile ###

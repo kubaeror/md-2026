@@ -360,6 +360,146 @@ units = {
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.8
 	}
+
+	### ADDITIONAL FORCES — UKRAINE FRONT ###
+	division = {
+		name = "5th Mobilized Brigade"
+		location = 11729
+		division_template = "Mobilized Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "6th Mobilized Brigade"
+		location = 11729
+		division_template = "Mobilized Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "3rd Guards Motor Rifle Division"
+		location = 11729
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "7th Mobilized Brigade"
+		location = 11375
+		division_template = "Mobilized Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "8th Mobilized Brigade"
+		location = 11375
+		division_template = "Mobilized Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "144th Motor Rifle Division (2nd)"
+		location = 11375
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.6
+	}
+
+	### ADDITIONAL FORCES — UKRAINE SOUTH ###
+	division = {
+		name = "9th Mobilized Brigade"
+		location = 3734
+		division_template = "Mobilized Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "10th Mobilized Brigade"
+		location = 3734
+		division_template = "Mobilized Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+
+	### ADDITIONAL FORCES — UKRAINE ###
+	division = {
+		name = "11th Mobilized Brigade"
+		location = 6591
+		division_template = "Mobilized Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "12th Mobilized Brigade"
+		location = 6591
+		division_template = "Mobilized Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+
+	### ADDITIONAL STRATEGIC RESERVE ###
+	division = {
+		name = "2nd Guards Tank Division"
+		location = 6380
+		division_template = "Tank Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "47th Guards Tank Division"
+		location = 6380
+		division_template = "Tank Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "Reserve Motor Rifle Brigade"
+		location = 6380
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.6
+	}
+
+	### ADDITIONAL FAR EAST ###
+	division = {
+		name = "29th Combined Arms Army"
+		location = 380
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "68th Army Corps"
+		location = 380
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.6
+	}
+
+	### ADDITIONAL CENTRAL MD ###
+	division = {
+		name = "14th Army Corps"
+		location = 9417
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Central MD Reserve"
+		location = 9417
+		division_template = "Mobilized Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+
+	### ADDITIONAL NORTHERN FLEET ###
+	division = {
+		name = "80th Arctic Motor Rifle Brigade"
+		location = 3134
+		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.7
+	}
 }
 
 ### Equipment Stockpile ###

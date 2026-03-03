@@ -692,7 +692,7 @@ md2026_geopolitics_category = {
 		}
 
 		remove_effect = {
-			country_event = { id = md2026_russia_ukraine.10 days = 7 }
+			country_event = { id = md2026_ru_ukr.10 days = 7 }
 		}
 
 		ai_will_do = {

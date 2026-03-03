@@ -284,6 +284,142 @@ units = {
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.6
 	}
+
+	##### Additional Front Line — DMZ #####
+	division = {
+		name = "1st Corps - 2nd Infantry Division"
+		location = 3187
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2nd Corps - 8th Infantry Division"
+		location = 9981
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "4th Corps - 5th Infantry Division"
+		location = 3173
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "5th Corps - 13th Infantry Division"
+		location = 12040
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "3rd Corps - 15th Infantry Division"
+		location = 3187
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name = "3rd Corps - 16th Infantry Division"
+		location = 3187
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.45
+	}
+
+	##### Additional Second Echelon #####
+	division = {
+		name = "425th Mechanized Corps"
+		location = 10083
+		division_template = "Mechanized Division 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "105th Armored Corps"
+		location = 3176
+		division_template = "Armored Division 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "810th Mechanized Corps"
+		location = 1003
+		division_template = "Mechanized Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "107th Mechanized Corps"
+		location = 4052
+		division_template = "Mechanized Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+
+	##### Additional Rear Echelon #####
+	division = {
+		name = "6th Corps - Infantry Division"
+		location = 3981
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "7th Corps - Infantry Division"
+		location = 9790
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "11th Corps - Infantry Division"
+		location = 6928
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "13th Corps - Infantry Division"
+		location = 912
+		division_template = "Infantry Division 2026"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.4
+	}
+
+	##### Additional Artillery #####
+	division = {
+		name = "610th Artillery Division"
+		location = 9981
+		division_template = "Artillery Division 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "630th Artillery Division"
+		location = 3173
+		division_template = "Artillery Division 2026"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+
+	##### Additional Special Forces #####
+	division = {
+		name = "Special Operations Force - Sniper Bde 3"
+		location = 6822
+		division_template = "Sniper Brigade 2026"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "Light Infantry Bde - Central"
+		location = 6822
+		division_template = "Light Infantry Brigade 2026"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
 }
 
 instant_effect = {
