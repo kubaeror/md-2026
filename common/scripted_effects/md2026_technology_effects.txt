@@ -362,6 +362,67 @@ md2026_techs_prereqs = {
 			}
 		}
 	}
+
+	### Missile prereqs (pre-2005) ###
+	if = { limit = { has_dlc = "Gotterdammerung" }
+		set_technology = {
+			# Ballistic missile roots (1945-1995 prereqs for ICBM5/IRBM5/NIRBM4 @ 2005)
+			ballistic_missile = 1
+			ICBM = 1
+			ICBM1 = 1
+			ICBM2 = 1
+			ICBM3 = 1
+			ICBM4 = 1
+			IRBM = 1
+			IRBM1 = 1
+			IRBM2 = 1
+			IRBM3 = 1
+			IRBM4 = 1
+			NIRBM1 = 1
+			NIRBM2 = 1
+			NIRBM3 = 1
+			# Cruise missile chain (1945-1995 prereqs for GLCM5/TEL_7 @ 2005)
+			cruise_missile = 1
+			GLCM = 1
+			GLCM1 = 1
+			GLCM2 = 1
+			GLCM3 = 1
+			GLCM4 = 1
+			TEL_launched_missiles = 1
+			TEL_3 = 1
+			TEL_4 = 1
+			TEL_5 = 1
+			TEL_6 = 1
+			# SAM chain (1945-1995 prereqs for SAM4 @ 2005)
+			air_defense = 1
+			SAM = 1
+			SAM0 = 1
+			SAM1 = 1
+			SAM2 = 1
+			SAM3 = 1
+		}
+		else = {
+			set_technology = {
+				# Non-Gotterdammerung cruise missile chain (1945-1995 prereqs for GLCM5_non_got @ 2005)
+				cruise_missile_non_got = 1
+				GLCM_non_got = 1
+				GLCM1_non_got = 1
+				GLCM2_non_got = 1
+				GLCM3_non_got = 1
+				GLCM4_non_got = 1
+				TEL_launched_missiles_non_got = 1
+				TEL_3_non_got = 1
+				TEL_4_non_got = 1
+				TEL_5_non_got = 1
+				TEL_6_non_got = 1
+				# Non-Gotterdammerung SAM chain (1945-1975 prereqs for SAM2_non_got @ 1985 end of chain)
+				air_defense_non_got = 1
+				SAM_non_got = 1
+				SAM0_non_got = 1
+				SAM1_non_got = 1
+			}
+		}
+	}
 }
 
 
@@ -434,6 +495,13 @@ md2026_techs_2005 = {
 			TEL_7 = 1
 			GLCM5 = 1
 			SAM4 = 1
+		}
+		else = {
+			set_technology = {
+				GLCM5_non_got = 1
+				TEL_7_non_got = 1
+				SAM2_non_got = 1
+			}
 		}
 	}
 
@@ -620,6 +688,12 @@ md2026_techs_2015 = {
 			HSCM = 1
 			GLCM6 = 1
 			SAM5 = 1
+		}
+		else = {
+			set_technology = {
+				GLCM6_non_got = 1
+				HSCM_non_got = 1
+			}
 		}
 	}
 
@@ -814,6 +888,12 @@ md2026_techs_2025 = {
 			HSCM1 = 1
 			GLCM7 = 1
 			SAM6 = 1
+		}
+		else = {
+			set_technology = {
+				GLCM7_non_got = 1
+				HSCM1_non_got = 1
+			}
 		}
 	}
 
