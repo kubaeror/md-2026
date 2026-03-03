@@ -208,3 +208,25 @@ instant_effect = {
 		producer = SOV
 	}
 }
+
+##### Ethiopian Air Force #####
+air_wings = {
+	# Su-27/Su-30 (post-Tigray war survivors)
+	233 = {
+		medium_plane_fighter_airframe_2 = { owner = "ETH" creator = "SOV" amount = 16 version_name = "Su-27SK/Su-30MK Flanker" }
+		name = "Debre Zeit Fighter Wing"
+		start_experience_factor = 0.35
+	}
+	# Bayraktar TB2 drones (acquired during Tigray war)
+	233 = {
+		small_plane_suicide_airframe_2 = { owner = "ETH" creator = "TUR" amount = 12 version_name = "Bayraktar TB2" }
+		name = "UAV Wing"
+		start_experience_factor = 0.4
+	}
+	# C-130 Transport
+	233 = {
+		large_plane_air_transport_airframe_1 = { owner = "ETH" creator = "USA" amount = 4 version_name = "C-130E Hercules" }
+		name = "Transport Squadron"
+		start_experience_factor = 0.3
+	}
+}
