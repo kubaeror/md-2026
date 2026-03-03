@@ -2,7 +2,7 @@
 # Finland 2026 — NATO member since 2023, strong reserve system
 
 division_template = {
-	name = "Mekaniserad Brigad 2026"
+	name = "Mekaniserad Brigad"
 	regiments = {
 		Arm_Inf_Bat = { x = 0 y = 0 }
 		Arm_Inf_Bat = { x = 0 y = 1 }
@@ -20,7 +20,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Jääkäriprikaati 2026"
+	name = "Jääkäriprikaati"
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
 		Mot_Inf_Bat = { x = 0 y = 1 }
@@ -37,7 +37,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Valmiusprikaati 2026"
+	name = "Valmiusprikaati"
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
@@ -54,7 +54,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Erikoisjääkäriprikaati 2026"
+	name = "Erikoisjääkäriprikaati"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -72,7 +72,7 @@ units = {
 	division = {
 		name = "Panssariprikaati"
 		location = 67
-		division_template = "Mekaniserad Brigad 2026"
+		division_template = "Mekaniserad Brigad"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.85
 	}
@@ -80,7 +80,7 @@ units = {
 	division = {
 		name = "Karjalan Prikaati"
 		location = 6087
-		division_template = "Jääkäriprikaati 2026"
+		division_template = "Jääkäriprikaati"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.85
 	}
@@ -88,7 +88,7 @@ units = {
 	division = {
 		name = "Kainuun Prikaati"
 		location = 9233
-		division_template = "Jääkäriprikaati 2026"
+		division_template = "Jääkäriprikaati"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -96,7 +96,7 @@ units = {
 	division = {
 		name = "Porin Prikaati"
 		location = 165
-		division_template = "Jääkäriprikaati 2026"
+		division_template = "Jääkäriprikaati"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -104,7 +104,7 @@ units = {
 	division = {
 		name = "Jääkäriprikaati"
 		location = 16269
-		division_template = "Jääkäriprikaati 2026"
+		division_template = "Jääkäriprikaati"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}
@@ -112,21 +112,21 @@ units = {
 	division = {
 		name = "Valmiusprikaati Länsi"
 		location = 9183
-		division_template = "Valmiusprikaati 2026"
+		division_template = "Valmiusprikaati"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "Valmiusprikaati Itä"
 		location = 11211
-		division_template = "Valmiusprikaati 2026"
+		division_template = "Valmiusprikaati"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "Valmiusprikaati Pohjoinen"
 		location = 11105
-		division_template = "Valmiusprikaati 2026"
+		division_template = "Valmiusprikaati"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.7
 	}
@@ -134,9 +134,39 @@ units = {
 	division = {
 		name = "Erikoisjääkäripataljoona"
 		location = 16264
-		division_template = "Erikoisjääkäriprikaati 2026"
+		division_template = "Erikoisjääkäriprikaati"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.85
+	}
+
+	##### Fleet — Merivoimat #####
+	fleet = {
+		name = "Merivoimat"
+		naval_base = 11105
+		# 1st Corvette Squadron — Pohjanmaa-class
+		task_force = {
+			name = "1. Korvettidivisioona"
+			location = 11105
+			ship = { name = "FNS Pohjanmaa" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = FIN version_name = "Pohjanmaa Class" } } }
+			ship = { name = "FNS Häme" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = FIN version_name = "Pohjanmaa Class" } } }
+		}
+		# Hamina-class missile boats
+		task_force = {
+			name = "Ohjusvenelaivue"
+			location = 11105
+			ship = { name = "FNS Hamina (80)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = FIN version_name = "Hamina Class" } } }
+			ship = { name = "FNS Tornio (81)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = FIN version_name = "Hamina Class" } } }
+			ship = { name = "FNS Hanko (82)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = FIN version_name = "Hamina Class" } } }
+			ship = { name = "FNS Pori (83)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = FIN version_name = "Hamina Class" } } }
+		}
+		# Rauma-class missile boats
+		task_force = {
+			name = "Rannikkotukikohta"
+			location = 3122
+			ship = { name = "FNS Rauma (70)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_1 = { amount = 1 owner = FIN version_name = "Rauma Class" } } }
+			ship = { name = "FNS Raahe (71)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_1 = { amount = 1 owner = FIN version_name = "Rauma Class" } } }
+			ship = { name = "FNS Naantali (73)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_1 = { amount = 1 owner = FIN version_name = "Rauma Class" } } }
+		}
 	}
 }
 
@@ -145,5 +175,27 @@ instant_effect = {
 		type = infantry_weapons5
 		amount = 5000
 		producer = FIN
+	}
+}
+
+##### Air Wings — Ilmavoimat #####
+air_wings = {
+	# HävLLv 11 — F/A-18C Hornet (Rovaniemi)
+	100 = {
+		medium_plane_airframe_2 = { owner = "FIN" creator = "USA" amount = 32 version_name = "F/A-18C Hornet" }
+		name = "HävLLv 11"
+		start_experience_factor = 0.5
+	}
+	# HävLLv 21 — F/A-18C Hornet (Tampere-Pirkkala)
+	101 = {
+		medium_plane_airframe_2 = { owner = "FIN" creator = "USA" amount = 30 version_name = "F/A-18C Hornet" }
+		name = "HävLLv 21"
+		start_experience_factor = 0.5
+	}
+	# Kuljetuslentolaivue — C-295M (Tikkakoski)
+	102 = {
+		large_plane_air_transport_airframe_1 = { owner = "FIN" creator = "SPR" amount = 3 version_name = "C-295M" }
+		name = "Kuljetuslentolaivue"
+		start_experience_factor = 0.4
 	}
 }
