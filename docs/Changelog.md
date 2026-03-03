@@ -80,6 +80,34 @@ All notable changes to the Millennium Dawn 2026 Rework submod.
 - Tiered deployment matching country military capabilities
 - Custom templates for infantry, armor, mechanized, special forces, naval, air
 
+### OOB Expansion — Fleets, Air Wings & Real Unit Names (30 commits on `dev`)
+
+Complete overhaul of all 65 OOB files to add real-world military detail:
+
+**Template cleanup:**
+- Removed "2026" suffix from all division template names across 23 countries (e.g. `"Armored Brigade 2026"` -> `"Armored Brigade"`)
+
+**Naval forces added (fleets with real ship names and hull numbers):**
+- **Tier 1:** USA (76 ships / 7 fleets), Russia (56 ships / 4 fleets), China (60 ships / 3 fleets, 3 carriers)
+- **Tier 2a:** UK (36 ships, 2 carriers), France (33 ships, 1 carrier), Japan (44 ships), Germany (24 ships), India (40 ships, 2 carriers)
+- **Tier 2b:** Turkey (~30 ships), Poland (8 ships), South Korea (30 ships), Israel (13 ships)
+- **Tier 3a:** Italy (20), SAU (11), EGY (16), PAK (13), UKR (6), NKO (26), PER (11, 2 fleets), BRA (11), TAI (25), AST (21)
+- **Tier 3b:** CAN (22), SPR (18), SAF (10), SWE (9), FIN (9), GRE (15), ROM (6), BRM (7)
+- **Tier 3c-d:** SYR (2), HOL (11), NOR (16), DEN (9), BEL (2), POR (9), BUL (4), CRO (5), UAE (8), LIT (4), LAT (5), EST (3), ALB (2)
+
+**Air wings added (real squadron names, accurate aircraft types, correct creator tags):**
+- 5th-gen fighters: F-35A/B/C (USA, ENG, ITA, NOR, DEN, BEL, HOL, AST, JAP, KOR, ISR), F-22A (USA), J-20A (CHI)
+- 4th-gen fighters: Typhoon, Rafale, F-15, F-16, Su-30/35, MiG-29, Gripen, FA-50, JF-17, J-10CE, F-CK-1
+- CAS/Strike: Su-25, Su-24, A-10C, Tornado IDS, Mirage 2000D, AMX, Su-34
+- AWACS/AEW: E-3, E-7, E-767, E-2C/D, A-50U, KJ-500, G550 CAEW, E-99M, GlobalEye
+- MPA: P-8A, P-1, P-3C, Atlantique 2
+- Transport: C-17, C-130H/J, A400M, KC-390, C-2, C-27J, C-295M, Il-76
+- Drones/UCAV: MQ-9A, Bayraktar TB2/TB3, Akinci, Heron TP, Hermes 900, Wing Loong II, Mohajer-6, Samad-3/Shahed-136
+- Carrier air wings: USA (5x CVN), UK (2x QE), France (CdG), China (3x), India (2x)
+
+**Countries with no air/naval additions (ground forces only):**
+- Afghanistan (Taliban — no air force), Bosnia, Kosovo, Slovenia, Montenegro, North Macedonia — no significant air or naval assets to model
+
 ---
 
 ### Bug Fix Rounds

@@ -18,7 +18,7 @@ This mod updates the world state to reflect geopolitical reality as of January 2
 - **~75 events** across 11 event chains — elections, NATO-Russia tensions, Taiwan crisis, BRICS expansion, Middle East, migration, climate, tech revolution, space race, demographics
 - **45 national spirits** (15 base + 22 expansion + 8 focus rewards) for major and regional powers
 - **20 strategic decisions** across 5 categories (sanctions, NATO, military, geopolitics, economy)
-- **65 OOB files** with optimized unit templates balanced for gameplay
+- **65 OOB files** with real-world unit names, ~600 named ships across 40+ navies, 200+ air wings with accurate aircraft types and squadron designations, carrier air wings for 5 carrier nations, and `creator` tags for all imported equipment
 - **927 localisation keys** (English)
 
 ## Requirements
