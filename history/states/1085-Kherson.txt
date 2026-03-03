@@ -17,6 +17,19 @@ state = {
 		set_variable = { hydroelectric_energy_production_var = 0.088 }
 		set_variable = { hydroelectric_energy_storage_var = 0 }
 		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+
+		# MD2026: Kherson Oblast - city liberated by Ukraine (Nov 2022)
+		# East bank of Dnieper still under Russian control
+		2026.1.1 = {
+			add_core_of = SOV
+			# Eastern provinces under Russian control
+			set_province_controller = { province = 568 controller = SOV }
+			set_province_controller = { province = 588 controller = SOV }
+			set_province_controller = { province = 721 controller = SOV }
+			set_province_controller = { province = 9712 controller = SOV }
+			set_province_controller = { province = 14435 controller = SOV }
+			set_province_controller = { province = 14436 controller = SOV }
+		}
 	}
 
 	provinces = {
@@ -24,17 +37,4 @@ state = {
 	}
 	manpower = 1139371
 	state_category = state_02
-
-	# MD2026: Kherson Oblast - city liberated by Ukraine (Nov 2022)
-	# East bank of Dnieper still under Russian control
-	2026.1.1 = {
-		add_core_of = SOV
-		# Eastern provinces under Russian control
-		set_province_controller = { province = 568 controller = SOV }
-		set_province_controller = { province = 588 controller = SOV }
-		set_province_controller = { province = 721 controller = SOV }
-		set_province_controller = { province = 9712 controller = SOV }
-		set_province_controller = { province = 14435 controller = SOV }
-		set_province_controller = { province = 14436 controller = SOV }
-	}
 }

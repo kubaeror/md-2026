@@ -831,7 +831,7 @@ md2026_military_modernization_category = {
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
-				category = electronics
+				category = CAT_computing_tech
 			}
 		}
 
@@ -908,7 +908,9 @@ md2026_military_modernization_category = {
 		remove_effect = {
 			every_owned_state = {
 				limit = {
-					is_border_state = yes
+					any_neighbor_state = {
+						NOT = { is_controlled_by = ROOT }
+					}
 				}
 				add_building_construction = {
 					type = bunker
@@ -1073,7 +1075,7 @@ md2026_economic_decisions_category = {
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 1
-				category = electronics
+				category = CAT_computing_tech
 			}
 		}
 
@@ -1143,7 +1145,7 @@ md2026_economic_decisions_category = {
 
 		available = {
 			has_war = no
-			stability > 0.3
+			has_stability > 0.3
 		}
 
 		complete_effect = {

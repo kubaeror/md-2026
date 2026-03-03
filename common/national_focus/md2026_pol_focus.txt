@@ -68,7 +68,7 @@ shared_focus = {
 			name = MD2026_POL_patriot_batteries
 			bonus = 1.0
 			uses = 2
-			category = cat_anti_air
+			category = CAT_aa
 		}
 	}
 }
@@ -107,7 +107,7 @@ shared_focus = {
 			name = MD2026_POL_k2_tanks
 			bonus = 1.0
 			uses = 2
-			category = armor
+			category = CAT_armor
 		}
 		add_opinion_modifier = { target = KOR modifier = improved_relations }
 		KOR = { add_opinion_modifier = { target = POL modifier = improved_relations } }
@@ -128,7 +128,7 @@ shared_focus = {
 			name = MD2026_POL_himars
 			bonus = 1.0
 			uses = 2
-			category = artillery
+			category = CAT_artillery
 		}
 	}
 }

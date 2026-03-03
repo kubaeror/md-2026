@@ -33,6 +33,19 @@ state = {
 		set_variable = { hydroelectric_energy_production_var = 0.372 }
 		set_variable = { hydroelectric_energy_storage_var = 0 }
 		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+
+		# MD2026: Zaporizhzhia Oblast partially occupied by Russia
+		# Russia controls south (Melitopol, Energodar, nuclear plant)
+		# Ukraine controls Zaporizhzhia city (main VP)
+		# Province controllers set to reflect partial occupation
+		2026.1.1 = {
+			add_core_of = SOV
+			# Southern provinces under Russian control
+			set_province_controller = { province = 9571 controller = SOV }
+			set_province_controller = { province = 14439 controller = SOV }
+			set_province_controller = { province = 14440 controller = SOV }
+			set_province_controller = { province = 14441 controller = SOV }
+		}
 	}
 
 	provinces = {
@@ -41,17 +54,4 @@ state = {
 	manpower = 1867578
 	buildings_max_level_factor = 1.000
 	state_category = state_03
-
-	# MD2026: Zaporizhzhia Oblast partially occupied by Russia
-	# Russia controls south (Melitopol, Energodar, nuclear plant)
-	# Ukraine controls Zaporizhzhia city (main VP)
-	# Province controllers set to reflect partial occupation
-	2026.1.1 = {
-		add_core_of = SOV
-		# Southern provinces under Russian control
-		set_province_controller = { province = 9571 controller = SOV }
-		set_province_controller = { province = 14439 controller = SOV }
-		set_province_controller = { province = 14440 controller = SOV }
-		set_province_controller = { province = 14441 controller = SOV }
-	}
 }

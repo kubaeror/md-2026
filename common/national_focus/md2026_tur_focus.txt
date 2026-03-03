@@ -55,7 +55,7 @@ shared_focus = {
 			name = MD2026_TUR_bayraktar
 			bonus = 1.0
 			uses = 2
-			category = light_air
+			category = CAT_l_fighter
 		}
 	}
 }
@@ -74,7 +74,7 @@ shared_focus = {
 			name = MD2026_TUR_tfx_fighter
 			bonus = 1.0
 			uses = 2
-			category = light_air
+			category = CAT_l_fighter
 		}
 		add_political_power = 50
 	}

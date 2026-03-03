@@ -24,15 +24,14 @@ state = {
 		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.20 }		
 		
+		# MD2026: Donetsk city under Russian control since 2014, annexed 2022
+		2026.1.1 = {
+			owner = SOV
+			add_core_of = SOV
+		}
 	}
 
 	provinces = {
 		3421 6493 6474
-	}
-
-	# MD2026: Donetsk city under Russian control since 2014, annexed 2022
-	2026.1.1 = {
-		owner = SOV
-		add_core_of = SOV
 	}
 }

@@ -72,7 +72,7 @@ shared_focus = {
 			name = MD2026_JAP_pacific_shield
 			bonus = 1.0
 			uses = 2
-			category = naval_equipment
+			category = CAT_naval_all
 		}
 	}
 }
@@ -165,7 +165,7 @@ shared_focus = {
 			name = MD2026_JAP_tech_sovereignty
 			bonus = 1.0
 			uses = 2
-			category = electronics
+			category = CAT_computing_tech
 		}
 	}
 }
@@ -186,7 +186,7 @@ shared_focus = {
 			name = MD2026_JAP_missile_defense
 			bonus = 1.0
 			uses = 2
-			category = cat_anti_air
+			category = CAT_aa
 		}
 		add_political_power = 50
 	}

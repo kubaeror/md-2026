@@ -175,7 +175,7 @@ shared_focus = {
 			name = MD2026_BRA_military_modernization
 			bonus = 1.0
 			uses = 2
-			category = naval_equipment
+			category = CAT_naval_all
 		}
 	}
 }

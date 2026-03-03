@@ -194,7 +194,7 @@ shared_focus = {
 			name = MD2026_SAU_military_modernization
 			bonus = 1.0
 			uses = 2
-			category = armor
+			category = CAT_armor
 		}
 	}
 }

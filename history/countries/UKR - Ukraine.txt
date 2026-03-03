@@ -1036,7 +1036,7 @@ capital = 698
 	}
 	add_ideas = {
 		recession
-		full_draft_army
+		draft_army
 		officer_international_education
 		western_country
 		md2026_ukr_western_military_aid

@@ -81,4 +81,15 @@ opinion_modifiers = {
 		value = 30
 		decay = 1
 	}
+
+	# Generic diplomacy modifiers used by focus trees
+	improved_relations = {
+		value = 25
+		decay = 1
+	}
+
+	border_conflict = {
+		value = -40
+		decay = 0.5
+	}
 }

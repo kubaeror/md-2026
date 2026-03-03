@@ -173,7 +173,7 @@ shared_focus = {
 			name = MD2026_ISR_defense_tech
 			bonus = 1.0
 			uses = 2
-			category = cat_anti_air
+			category = CAT_aa
 		}
 	}
 }

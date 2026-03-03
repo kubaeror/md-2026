@@ -51,7 +51,7 @@ shared_focus = {
 			name = MD2026_KOR_kill_chain
 			bonus = 1.0
 			uses = 2
-			category = rocketry
+			category = CAT_missile
 		}
 		army_experience = 25
 	}
@@ -108,7 +108,7 @@ shared_focus = {
 			name = MD2026_KOR_kf21
 			bonus = 1.0
 			uses = 2
-			category = light_air
+			category = CAT_l_fighter
 		}
 	}
 }
@@ -127,7 +127,7 @@ shared_focus = {
 			name = MD2026_KOR_missile_arsenal
 			bonus = 1.0
 			uses = 2
-			category = rocketry
+			category = CAT_missile
 		}
 	}
 }
@@ -166,7 +166,7 @@ shared_focus = {
 			name = MD2026_KOR_semiconductor
 			bonus = 1.0
 			uses = 2
-			category = electronics
+			category = CAT_computing_tech
 		}
 	}
 }

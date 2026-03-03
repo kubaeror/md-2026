@@ -5127,9 +5127,9 @@ capital = 1182
 		nuclear_power_off
 	}
 	add_ideas = {
-		moderate_growth
+		fast_growth
 		modest_corruption
-		nuclear_power_on
+		nuclear_power_off
 		md2026_usa_political_polarization
 		md2026_usa_america_first
 	}

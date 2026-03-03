@@ -55,7 +55,7 @@ shared_focus = {
 			name = MD2026_RAJ_digital_india
 			bonus = 1.0
 			uses = 2
-			category = electronics
+			category = CAT_computing_tech
 		}
 	}
 }
@@ -165,7 +165,7 @@ shared_focus = {
 			name = MD2026_RAJ_military_modernization
 			bonus = 1.0
 			uses = 2
-			category = armor
+			category = CAT_armor
 		}
 	}
 }
@@ -185,7 +185,7 @@ shared_focus = {
 			name = MD2026_RAJ_space_power
 			bonus = 1.0
 			uses = 2
-			category = rocketry
+			category = CAT_missile
 		}
 		add_political_power = 50
 	}
