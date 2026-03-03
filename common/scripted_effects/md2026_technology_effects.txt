@@ -447,6 +447,118 @@ md2026_techs_prereqs = {
 		tech_modern_landing_craft = 1
 	}
 
+	### Industry prereqs (pre-2005, shared) ###
+	set_technology = {
+		# Nanofibers chain (1985-2000)
+		industrial_electrospun_polymeric_nanofibers = 1
+		multiwalled_carbon_nanotubes = 1
+		modern_electrospinning = 1
+		inorganic_fibers_fabrication = 1
+
+		# 3D Printing chain (1985-2000)
+		stereolitography = 1
+		early_3D_printers = 1
+		t3D_wax_printer = 1
+		large_scale_3D_printing = 1
+
+		# Genetics chains (1985-2000)
+		DNA_fingerprinting = 1
+		modern_gmo = 1
+		gene_therapy = 1
+		genetically_modified_crops = 1
+		crispr = 1
+
+		# Energy root (1985)
+		fuel_silos = 1
+
+		# Electrification chain (1995-2000)
+		electrification_1 = 1
+		electrification_2 = 1
+
+		# Energy Efficiency chain (1990-2000)
+		energy_efficiency = 1
+		energy_efficiency2 = 1
+		energy_efficiency3 = 1
+
+		# Renewables chain (1990-2000)
+		early_renewables = 1
+		renewables = 1
+		improved_renewables = 1
+
+		# Fuel Efficiency chain (1990-2000)
+		fuel_efficiency = 1
+		fuel_efficiency2 = 1
+
+		# Fuel Refining chain (1990-2000)
+		fuel_refining = 1
+		fuel_refining2 = 1
+		fuel_refining3 = 1
+
+		# Battery Storage (2000)
+		utility_scale_battery_storage = 1
+
+		# Nuclear Reactors chain (1985-1995)
+		nuclear_technology = 1
+		reactor1 = 1
+		reactor2 = 1
+
+		# Construction chain (1985-2000)
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+
+		# Excavation chain (1985-2000)
+		excavation1 = 1
+		excavation2 = 1
+		excavation3 = 1
+
+		# Fortifications (1990-2000)
+		land_fort_building_1 = 1
+		land_fort_building_2 = 1
+
+		# Infrastructure/Rail chain (1985-2000)
+		integrated_transportation_system = 1
+		post_conventional_rail = 1
+		early_freight_locomotive = 1
+		early_high_speed_rail = 1
+
+		# Agriculture chain (1990-2000)
+		gps_agricultural_applications = 1
+		automated_irrigation_systems = 1
+		farming_data_analytic_softwares = 1
+	}
+
+	### Space prereqs (pre-2005, shared) ###
+	set_technology = {
+		# GNSS chain (1965-1995)
+		GNSS1 = 1
+		GNSS2 = 1
+		GNSS3 = 1
+		GNSS4 = 1
+
+		# COMSAT chain (1965-1995)
+		COMSAT1 = 1
+		COMSAT2 = 1
+		COMSAT3 = 1
+		COMSAT4 = 1
+
+		# SPYSAT chain (1965-1995)
+		SPYSAT1 = 1
+		SPYSAT2 = 1
+		SPYSAT3 = 1
+		SPYSAT4 = 1
+
+		# KILLSAT chain (1985-1995)
+		KILLSAT1 = 1
+		KILLSAT2 = 1
+
+		# OLV chain (1965-1995)
+		OLV1 = 1
+		OLV2 = 1
+		OLV3 = 1
+		OLV4 = 1
+	}
+
 	### Missiles prereqs (pre-2005) ###
 	if = { limit = { has_dlc = "Gotterdammerung" }
 		set_technology = {
