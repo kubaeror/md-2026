@@ -16,6 +16,7 @@ This submod is designed as a **dependency mod**. It:
 
 This mod **may conflict** with other Millennium Dawn submods that modify:
 - `common/bookmarks/` — any mod using `replace_path` for bookmarks
+- `common/national_focus/` — 45 files (23 `md2026_*` shared focus definitions + 22 base tree copies); other submods modifying the same base tree files will conflict
 - `history/countries/` — files are full copies of MD originals; other submods modifying the same country files will conflict
 - `history/states/` — only 8 state files are modified (Crimea, Donbas, Zaporizhzhia, Kherson, Syria, Golan, Kosovo, South Sudan)
 - `common/characters/` — full copies of character files for ~66 countries

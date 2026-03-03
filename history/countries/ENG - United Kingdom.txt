@@ -2569,4 +2569,20 @@ capital = 13
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_ENG_global_britain
+	complete_national_focus = MD2026_ENG_nuclear_deterrent
+	complete_national_focus = MD2026_ENG_aukus
+	complete_national_focus = MD2026_ENG_carrier_strike
+	complete_national_focus = MD2026_ENG_post_brexit_trade
+	complete_national_focus = MD2026_ENG_special_relationship
+	complete_national_focus = MD2026_ENG_five_eyes
+	complete_national_focus = MD2026_ENG_ukraine_support
+	complete_national_focus = MD2026_ENG_armed_forces
+	complete_national_focus = MD2026_ENG_cyber_warfare
+	complete_national_focus = MD2026_ENG_army_modernization
+	complete_national_focus = MD2026_ENG_science_innovation
+	complete_national_focus = MD2026_ENG_ai_strategy
+	complete_national_focus = MD2026_ENG_biotech_hub
 }

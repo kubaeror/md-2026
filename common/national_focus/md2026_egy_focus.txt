@@ -1,11 +1,12 @@
 ###################################
 # MD2026 Egypt (EGY) Focus Tree
 # 2026 Shared Focuses - Nile Power
+# 26 focuses: 1 root + 5 branches + capstone
 ###################################
 
 shared_focus = {
 	id = MD2026_EGY_nile_power
-	icon = GFX_focus_generic_egypt
+	icon = GFX_goal_generic_national_unity
 	x = 38
 	y = 0
 	cost = 3.6
@@ -24,11 +25,11 @@ shared_focus = {
 	}
 }
 
-### Military Modernization Branch ###
+### B1: Military Modernization Branch (x=-6, ME) ###
 shared_focus = {
 	id = MD2026_EGY_military_modernization
 	icon = GFX_goal_generic_army_doctrines
-	x = -3
+	x = -6
 	y = 1
 	cost = 8.6
 	search_filters = { FOCUS_FILTER_MILITARY }
@@ -37,12 +38,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_military_modernization"
 		army_experience = 25
-		add_tech_bonus = {
-			name = MD2026_EGY_military_modernization
-			bonus = 1.0
-			uses = 2
-			category = CAT_armor
-		}
+		add_war_support = 0.10
 	}
 	ai_will_do = {
 		factor = 1
@@ -54,16 +50,21 @@ shared_focus = {
 	icon = align_to_usa
 	x = -1
 	y = 1
-	cost = 8.6
+	cost = 12.9
 	search_filters = { FOCUS_FILTER_MILITARY }
 	prerequisite = { focus = MD2026_EGY_military_modernization }
 	relative_position_id = MD2026_EGY_military_modernization
 	mutually_exclusive = { focus = MD2026_EGY_diversify_suppliers }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_us_weapons"
+		add_tech_bonus = {
+			name = MD2026_EGY_us_weapons
+			bonus = 1.0
+			uses = 2
+			category = CAT_armor
+		}
 		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
 		USA = { add_opinion_modifier = { target = EGY modifier = md2026_improved_relations } }
-		army_experience = 25
 	}
 	ai_will_do = {
 		factor = 1
@@ -72,30 +73,58 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_EGY_diversify_suppliers
-	icon = GFX_goal_generic_military_deal
+	icon = align_to_russia
 	x = 1
 	y = 1
-	cost = 8.6
+	cost = 12.9
 	search_filters = { FOCUS_FILTER_MILITARY }
 	prerequisite = { focus = MD2026_EGY_military_modernization }
 	relative_position_id = MD2026_EGY_military_modernization
 	mutually_exclusive = { focus = MD2026_EGY_us_weapons }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_diversify_suppliers"
+		add_tech_bonus = {
+			name = MD2026_EGY_diversify_suppliers
+			bonus = 1.0
+			uses = 2
+			category = CAT_l_fighter
+		}
 		add_opinion_modifier = { target = SOV modifier = md2026_improved_relations }
-		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
-		add_political_power = 50
+		SOV = { add_opinion_modifier = { target = EGY modifier = md2026_improved_relations } }
 	}
 	ai_will_do = {
 		factor = 1
 	}
 }
 
-### Economic Crisis Branch ###
+shared_focus = {
+	id = MD2026_EGY_domestic_production
+	icon = GFX_goal_generic_construct_mil_factory
+	x = 0
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_EGY_us_weapons focus = MD2026_EGY_diversify_suppliers }
+	relative_position_id = MD2026_EGY_military_modernization
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_domestic_production"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+		}
+		army_experience = 25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B2: Economic Crisis Branch (x=-3) ###
 shared_focus = {
 	id = MD2026_EGY_economic_crisis
 	icon = GFX_goal_generic_consumer_goods
-	x = 0
+	x = -3
 	y = 1
 	cost = 8.6
 	search_filters = { FOCUS_FILTER_ECONOMY }
@@ -103,8 +132,8 @@ shared_focus = {
 	relative_position_id = MD2026_EGY_nile_power
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_economic_crisis"
-		add_stability = -0.10
 		add_political_power = 50
+		add_stability = -0.05
 	}
 	ai_will_do = {
 		factor = 1
@@ -120,11 +149,357 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_ECONOMY }
 	prerequisite = { focus = MD2026_EGY_economic_crisis }
 	relative_position_id = MD2026_EGY_economic_crisis
-	mutually_exclusive = { focus = MD2026_EGY_gulf_investment }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_imf_program"
 		add_stability = 0.05
-		add_political_power = -50
+		add_political_power = 75
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_EGY_gulf_investment
+	icon = GFX_goal_generic_construct_civ_factory
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	prerequisite = { focus = MD2026_EGY_economic_crisis }
+	relative_position_id = MD2026_EGY_economic_crisis
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_gulf_investment"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+		add_opinion_modifier = { target = SAU modifier = md2026_improved_relations }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_EGY_austerity_reform
+	icon = GFX_goal_generic_consumer_goods
+	x = 0
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	prerequisite = { focus = MD2026_EGY_imf_program }
+	relative_position_id = MD2026_EGY_imf_program
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_austerity_reform"
+		add_stability = 0.05
+		add_political_power = 50
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_EGY_suez_revenue
+	icon = GFX_goal_generic_occupy_states_coastal
+	x = 0
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_TRADE }
+	prerequisite = { focus = MD2026_EGY_gulf_investment }
+	relative_position_id = MD2026_EGY_gulf_investment
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_suez_revenue"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B3: Regional Role Branch (x=0) ###
+shared_focus = {
+	id = MD2026_EGY_regional_role
+	icon = GFX_goal_generic_alliance
+	x = 0
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_EGY_nile_power }
+	relative_position_id = MD2026_EGY_nile_power
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_regional_role"
+		add_political_power = 75
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_EGY_gaza_mediator
+	icon = GFX_goal_generic_improve_relations
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_EGY_regional_role }
+	relative_position_id = MD2026_EGY_regional_role
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_gaza_mediator"
+		add_political_power = 75
+		add_opinion_modifier = { target = ISR modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_EGY_nile_dispute
+	icon = GFX_goal_generic_demand_territory
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_EGY_regional_role }
+	relative_position_id = MD2026_EGY_regional_role
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_nile_dispute"
+		add_political_power = 50
+		add_war_support = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_EGY_peace_broker
+	icon = diplomatic_treaty
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_EGY_gaza_mediator }
+	relative_position_id = MD2026_EGY_gaza_mediator
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_peace_broker"
+		add_political_power = 100
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_EGY_gerd_negotiations
+	icon = GFX_goal_generic_dangerous_deal
+	x = 0
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_EGY_nile_dispute }
+	relative_position_id = MD2026_EGY_nile_dispute
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_gerd_negotiations"
+		add_political_power = 75
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B4: Mega Projects Branch (x=3) ###
+shared_focus = {
+	id = MD2026_EGY_mega_projects
+	icon = GFX_goal_generic_construct_infrastructure
+	x = 3
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_EGY_nile_power }
+	relative_position_id = MD2026_EGY_nile_power
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_mega_projects"
+		add_political_power = 50
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } }
+			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_EGY_new_capital
+	icon = GFX_goal_generic_construct_civ_factory
+	x = -1
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_EGY_mega_projects }
+	relative_position_id = MD2026_EGY_mega_projects
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_new_capital"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_EGY_infrastructure_expansion
+	icon = GFX_goal_generic_construct_infrastructure
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_EGY_mega_projects }
+	relative_position_id = MD2026_EGY_mega_projects
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_infrastructure_expansion"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } }
+			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+		}
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } }
+			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_EGY_administrative_city
+	icon = GFX_goal_generic_construct_civ_factory
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_EGY_new_capital }
+	relative_position_id = MD2026_EGY_new_capital
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_administrative_city"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+		}
+		add_political_power = 75
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_EGY_rail_network
+	icon = GFX_goal_generic_construct_infrastructure
+	x = 0
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_EGY_infrastructure_expansion }
+	relative_position_id = MD2026_EGY_infrastructure_expansion
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_rail_network"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } }
+			add_building_construction = { type = infrastructure level = 3 instant_build = yes }
+		}
+		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B5: Energy Future Branch (x=6) ###
+shared_focus = {
+	id = MD2026_EGY_energy_future
+	icon = GFX_goal_generic_oil_refinery
+	x = 6
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_EGY_nile_power }
+	relative_position_id = MD2026_EGY_nile_power
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_energy_future"
+		add_political_power = 50
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_EGY_nuclear_power
+	icon = nuclear_science
+	x = -1
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	prerequisite = { focus = MD2026_EGY_energy_future }
+	relative_position_id = MD2026_EGY_energy_future
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_nuclear_power"
+		add_tech_bonus = {
+			name = MD2026_EGY_nuclear_power
+			bonus = 1.0
+			uses = 2
+			category = CAT_computing_tech
+		}
+		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_EGY_solar_farms
+	icon = GFX_goal_generic_construct_civ_factory
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_EGY_energy_future }
+	relative_position_id = MD2026_EGY_energy_future
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_solar_farms"
 		random_owned_controlled_state = {
 			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
 			add_extra_state_shared_building_slots = 2
@@ -137,108 +512,62 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MD2026_EGY_gulf_investment
-	icon = GFX_goal_generic_improve_relations
-	x = 1
-	y = 1
-	cost = 8.6
-	search_filters = { FOCUS_FILTER_ECONOMY }
-	prerequisite = { focus = MD2026_EGY_economic_crisis }
-	relative_position_id = MD2026_EGY_economic_crisis
-	mutually_exclusive = { focus = MD2026_EGY_imf_program }
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_gulf_investment"
-		add_opinion_modifier = { target = SAU modifier = md2026_improved_relations }
-		add_opinion_modifier = { target = UAE modifier = md2026_improved_relations }
-		add_stability = 0.05
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-### Regional Role Branch ###
-shared_focus = {
-	id = MD2026_EGY_regional_role
-	icon = GFX_goal_generic_alliance
-	x = 3
-	y = 1
-	cost = 8.6
-	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
-	prerequisite = { focus = MD2026_EGY_nile_power }
-	relative_position_id = MD2026_EGY_nile_power
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_regional_role"
-		add_political_power = 75
-		add_opinion_modifier = { target = ISR modifier = md2026_improved_relations }
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-shared_focus = {
-	id = MD2026_EGY_gaza_mediator
-	icon = GFX_goal_generic_demand_territory
-	x = -1
-	y = 1
-	cost = 8.6
-	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
-	prerequisite = { focus = MD2026_EGY_regional_role }
-	relative_position_id = MD2026_EGY_regional_role
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_gaza_mediator"
-		add_political_power = 100
-		add_stability = 0.05
-		add_opinion_modifier = { target = ISR modifier = md2026_improved_relations }
-		ISR = { add_opinion_modifier = { target = EGY modifier = md2026_improved_relations } }
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-shared_focus = {
-	id = MD2026_EGY_nile_dispute
-	icon = GFX_goal_generic_dangerous_deal
-	x = 1
-	y = 1
-	cost = 8.6
-	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
-	prerequisite = { focus = MD2026_EGY_regional_role }
-	relative_position_id = MD2026_EGY_regional_role
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_nile_dispute"
-		add_war_support = 0.10
-		add_political_power = 50
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-### Mega Projects Branch ###
-shared_focus = {
-	id = MD2026_EGY_mega_projects
-	icon = GFX_goal_generic_construct_infrastructure
+	id = MD2026_EGY_dabaa_reactor
+	icon = nuclear_science
 	x = 0
-	y = 3
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	prerequisite = { focus = MD2026_EGY_nuclear_power }
+	relative_position_id = MD2026_EGY_nuclear_power
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_dabaa_reactor"
+		add_research_slot = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_EGY_green_hydrogen
+	icon = GFX_goal_generic_oil_refinery
+	x = 0
+	y = 1
 	cost = 8.6
 	search_filters = { FOCUS_FILTER_INDUSTRY }
-	prerequisite = { focus = MD2026_EGY_nile_power }
-	prerequisite = {
-		focus = MD2026_EGY_imf_program
-		focus = MD2026_EGY_gulf_investment
-	}
-	relative_position_id = MD2026_EGY_nile_power
+	prerequisite = { focus = MD2026_EGY_solar_farms }
+	relative_position_id = MD2026_EGY_solar_farms
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_mega_projects"
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_green_hydrogen"
 		random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
 		}
 		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Capstone ###
+shared_focus = {
+	id = MD2026_EGY_arab_leader
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 5
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_EGY_nile_power }
+	prerequisite = { focus = MD2026_EGY_peace_broker focus = MD2026_EGY_gerd_negotiations }
+	relative_position_id = MD2026_EGY_nile_power
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_EGY_arab_leader"
+		add_political_power = 150
+		add_stability = 0.10
+		add_war_support = 0.10
 	}
 	ai_will_do = {
 		factor = 1

@@ -1248,6 +1248,22 @@ capital = 405
 			nationalities = { PER }
 		}
 	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_PER_regime_survival
+	complete_national_focus = MD2026_PER_nuclear_program
+	complete_national_focus = MD2026_PER_regional_proxies
+	complete_national_focus = MD2026_PER_axis_resistance
+	complete_national_focus = MD2026_PER_proxy_rebuild
+	complete_national_focus = MD2026_PER_sanctions_economy
+	complete_national_focus = MD2026_PER_oil_barter
+	complete_national_focus = MD2026_PER_russia_alliance
+	complete_national_focus = MD2026_PER_domestic_control
+	complete_national_focus = MD2026_PER_irgc_power
+	complete_national_focus = MD2026_PER_succession_planning
+	complete_national_focus = MD2026_PER_military_industry
+	complete_national_focus = MD2026_PER_drone_program
+	complete_national_focus = MD2026_PER_air_defense
 }
 
 ##############################

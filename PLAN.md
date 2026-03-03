@@ -324,43 +324,37 @@ Bloki technologiczne w `history/countries/` z odblokowanymi tech na 2026.
 ---
 
 ## FAZA 8: Focus Trees
-**Priorytet:** SREDNI | **Zlozonosc:** BARDZO WYSOKA | **Pliki:** 5-10
+**Priorytet:** SREDNI | **Zlozonosc:** BARDZO WYSOKA | **Pliki:** 45 (23 shared + 22 base copies)
 
 ### Podejscie: Nowe galezi drzew dodawane do istniejacych (NIE zastepujemy calych drzew)
 
-### USA 2026 (nowa galaz):
-- Trump 2.0 / MAGA Agenda
-  - Deportacje masowe -> efekty na manpower i stability
-  - Taryfy celne -> trade war z Chinami i EU
-  - NATO pressure -> kraje NATO musza zwiekszyc wydatki
-  - Energy dominance -> bonus do oil/energy
-  - Space Force -> tech bonusy kosmiczne
-  - Deal with Russia -> mozliwe zakonczenie wojny UKR
+### 23 drzewa fokusowe:
+- **Oryginalne 13 (kompaktowe, ~8-12 fokusow):** USA, SOV, UKR, CHI, GER, RAJ, JAP, TUR, BRA, ISR, KOR, SAU, POL
+- **Rozszerzone 10 (26 fokusow, 5 galezi, ME, capstone):** FRA, ENG, PER, ITA, NKO, CAN, AST, TAI, EGY, SYR
 
-### Rosja 2026 (nowa galaz):
-- Kontynuacja wojny / Negocjacje pokojowe (wybor)
-  - Eskalacja -> wieksza mobilizacja, ryzyko nuklearne
-  - Zamrozony konflikt -> stabilizacja, zniesienie czesci sankcji
-  - Autarkia ekonomiczna -> samodzielnosc ale mniejszy wzrost
-  - Zwrot na Wschod -> BRICS+, SCO, handel z Chinami
+### Struktura rozszerzonych drzew (26 fokusow):
+- 4 galeze non-ME: T1 → T2a + T2b → T3a + T3b (5 fokusow per galaz)
+- 1 galaz ME: T1 → T2a ⊕ T2b → T3 (4 fokusy)
+- 1 capstone: wymaga root + kilku T3
+- Pozycje galezi wzgledem root: x = -6, -3, 0, +3, +6
 
-### Ukraina 2026 (nowa galaz):
-- Sciezka wojenna / Sciezka dyplomatyczna
-  - Kontrofensywa -> wymaga zachodniej pomocy
-  - Czlonkostwo NATO -> dluga sciezka, wymaga konca wojny
-  - Integracja z EU -> bonus ekonomiczny
-  - Odbudowa -> focus na recovery po zniszczeniach
+### Pre-completion (210 fokusow):
+- Oryginalne 13: ~70 fokusow pre-completed
+- Rozszerzone 10: 14 fokusow per kraj (root + 5 T1 + 8 non-ME T2) = 140
 
-### Chiny 2026 (nowa galaz):
-- Tajwan (eskalacja/dyplomacja)
-- Belt & Road 2.0 -> wplyw globalny
-- Dominacja technologiczna -> tech race z USA
-- Ekspansja morska -> South China Sea
-
-### EU/Niemcy 2026 (nowa galaz):
-- Europejska armia
-- Niezaleznosc energetyczna
-- Rozszerzenie EU (Ukraina, Moldawia, Balkany)
+### Pary ME per kraj:
+| Kraj | Opcja A | Opcja B |
+|------|---------|---------|
+| FRA | sahel_withdrawal | sahel_reengage |
+| ENG | cptpp | eu_rapprochement |
+| PER | nuclear_accelerate | nuclear_negotiate |
+| ITA | south_development | northern_industry |
+| NKO | south_korea_threat | diplomatic_leverage |
+| CAN | trade_diversification | us_accommodation |
+| AST | china_decouple | china_engage |
+| TAI | us_arms_sales | japan_cooperation |
+| EGY | us_weapons | diversify_suppliers |
+| SYR | secular_state | islamic_governance |
 
 ---
 

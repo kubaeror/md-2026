@@ -2073,4 +2073,20 @@ capital = 81
 		md2026_ita_demographic_crisis
 		md2026_ita_right_wing_government
 	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_ITA_mediterranean_crossroads
+	complete_national_focus = MD2026_ITA_nato_southern_flank
+	complete_national_focus = MD2026_ITA_naval_power
+	complete_national_focus = MD2026_ITA_tempest_fighter
+	complete_national_focus = MD2026_ITA_economic_reform
+	complete_national_focus = MD2026_ITA_migration_crisis
+	complete_national_focus = MD2026_ITA_fortress_europe
+	complete_national_focus = MD2026_ITA_integration_plan
+	complete_national_focus = MD2026_ITA_piano_mattei
+	complete_national_focus = MD2026_ITA_energy_corridors
+	complete_national_focus = MD2026_ITA_libya_stabilization
+	complete_national_focus = MD2026_ITA_eu_leadership
+	complete_national_focus = MD2026_ITA_eurozone_reform
+	complete_national_focus = MD2026_ITA_cultural_heritage
 }

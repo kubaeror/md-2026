@@ -57,9 +57,13 @@ All notable changes to the Millennium Dawn 2026 Rework submod.
 - 11 decision reward ideas
 
 ### Focus Trees (FAZA 8)
-- **13 shared focus trees**: USA, Russia, Ukraine, China, Germany, India, Japan, Turkey, Brazil, Israel, South Korea, Saudi Arabia, Poland
+- **23 shared focus trees**: USA, Russia, Ukraine, China, Germany, India, Japan, Turkey, Brazil, Israel, South Korea, Saudi Arabia, Poland + France, UK, Iran, Italy, North Korea, Canada, Australia, Taiwan, Egypt, Syria
+- **10 expanded trees** (FRA, ENG, PER, ITA, NKO, CAN, AST, TAI, EGY, SYR) with 26 focuses each — 5 branches, mutually exclusive paths, capstone focuses
+- **260 new focus nodes** across the 10 expanded trees
+- **9 base mod focus tree files** copied (france, uk, iran, italy, korea_north, canada, egypt, syria, generic) with `shared_focus` references
+- **210 pre-completed focuses** across all 23 countries (root + T1 + non-ME T2 focuses auto-completed in history files)
 - Branch gating via `allow_branch` + date check
-- 13 copied original MD focus tree files with `shared_focus` references
+- 22 total copied original MD focus tree files with `shared_focus` references
 
 ### Events (FAZA 9)
 - **11 event files** with ~75 events total
@@ -72,8 +76,8 @@ All notable changes to the Millennium Dawn 2026 Rework submod.
 - Sanctions, NATO, military modernization, geopolitics, economy
 
 ### Localisation (FAZA 10)
-- 927 English localisation keys
-- Covers all events, focuses, spirits, decisions, bookmarks
+- ~1,450 English localisation keys
+- Covers all events, focuses (including 10 expanded trees), spirits, decisions, bookmarks
 
 ### Order of Battle (FAZA 11 — part)
 - **65 OOB files** with optimized unit templates

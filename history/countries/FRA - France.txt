@@ -2723,4 +2723,20 @@ capital = 56
 		md2026_fra_european_defense_leader
 		md2026_fra_social_unrest
 	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_FRA_european_power
+	complete_national_focus = MD2026_FRA_european_defense
+	complete_national_focus = MD2026_FRA_nuclear_deterrent
+	complete_national_focus = MD2026_FRA_arms_exports
+	complete_national_focus = MD2026_FRA_african_policy
+	complete_national_focus = MD2026_FRA_domestic_reform
+	complete_national_focus = MD2026_FRA_2027_elections
+	complete_national_focus = MD2026_FRA_economic_competitiveness
+	complete_national_focus = MD2026_FRA_strategic_autonomy
+	complete_national_focus = MD2026_FRA_indo_pacific_presence
+	complete_national_focus = MD2026_FRA_eu_defense_fund
+	complete_national_focus = MD2026_FRA_energy_transition
+	complete_national_focus = MD2026_FRA_nuclear_energy
+	complete_national_focus = MD2026_FRA_green_industry
 }

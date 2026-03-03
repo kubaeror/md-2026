@@ -1007,4 +1007,20 @@
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_NKO_nuclear_shield
+	complete_national_focus = MD2026_NKO_nuclear_expansion
+	complete_national_focus = MD2026_NKO_icbm_program
+	complete_national_focus = MD2026_NKO_tactical_nukes
+	complete_national_focus = MD2026_NKO_russia_alliance
+	complete_national_focus = MD2026_NKO_arms_for_russia
+	complete_national_focus = MD2026_NKO_russian_tech
+	complete_national_focus = MD2026_NKO_provocations
+	complete_national_focus = MD2026_NKO_regime_maintenance
+	complete_national_focus = MD2026_NKO_cult_personality
+	complete_national_focus = MD2026_NKO_juche_economy
+	complete_national_focus = MD2026_NKO_cyber_warfare
+	complete_national_focus = MD2026_NKO_crypto_theft
+	complete_national_focus = MD2026_NKO_information_warfare
 }

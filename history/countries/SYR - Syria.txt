@@ -470,4 +470,20 @@
 	add_ideas = {
 		md2026_syr_post_assad
 	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_SYR_new_syria
+	complete_national_focus = MD2026_SYR_national_governance
+	complete_national_focus = MD2026_SYR_reconstruction
+	complete_national_focus = MD2026_SYR_refugee_return
+	complete_national_focus = MD2026_SYR_infrastructure_rebuild
+	complete_national_focus = MD2026_SYR_security_consolidation
+	complete_national_focus = MD2026_SYR_new_army
+	complete_national_focus = MD2026_SYR_kurdish_question
+	complete_national_focus = MD2026_SYR_international_recognition
+	complete_national_focus = MD2026_SYR_western_engagement
+	complete_national_focus = MD2026_SYR_arab_reintegration
+	complete_national_focus = MD2026_SYR_economic_recovery
+	complete_national_focus = MD2026_SYR_foreign_investment
+	complete_national_focus = MD2026_SYR_agriculture_revival
 }

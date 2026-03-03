@@ -966,4 +966,20 @@
 		md2026_tai_silicon_shield
 		md2026_tai_china_threat
 	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_TAI_porcupine_defense
+	complete_national_focus = MD2026_TAI_asymmetric_defense
+	complete_national_focus = MD2026_TAI_anti_ship_missiles
+	complete_national_focus = MD2026_TAI_reserve_mobilization
+	complete_national_focus = MD2026_TAI_silicon_shield
+	complete_national_focus = MD2026_TAI_tsmc_dominance
+	complete_national_focus = MD2026_TAI_tech_sovereignty
+	complete_national_focus = MD2026_TAI_international_space
+	complete_national_focus = MD2026_TAI_civil_defense
+	complete_national_focus = MD2026_TAI_shelter_program
+	complete_national_focus = MD2026_TAI_information_warfare
+	complete_national_focus = MD2026_TAI_economic_diversification
+	complete_national_focus = MD2026_TAI_green_energy
+	complete_national_focus = MD2026_TAI_southbound_policy
 }

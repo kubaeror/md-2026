@@ -1122,5 +1122,21 @@
 	add_ideas = {
 		md2026_can_nato_arctic
 	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_CAN_northern_shield
+	complete_national_focus = MD2026_CAN_arctic_sovereignty
+	complete_national_focus = MD2026_CAN_northwest_passage
+	complete_national_focus = MD2026_CAN_arctic_resources
+	complete_national_focus = MD2026_CAN_us_trade_tensions
+	complete_national_focus = MD2026_CAN_defense_modernization
+	complete_national_focus = MD2026_CAN_norad_renewal
+	complete_national_focus = MD2026_CAN_navy_expansion
+	complete_national_focus = MD2026_CAN_indo_pacific
+	complete_national_focus = MD2026_CAN_cptpp_engagement
+	complete_national_focus = MD2026_CAN_pacific_security
+	complete_national_focus = MD2026_CAN_domestic_agenda
+	complete_national_focus = MD2026_CAN_reconciliation
+	complete_national_focus = MD2026_CAN_immigration_reform
 }
 

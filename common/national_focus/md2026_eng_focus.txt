@@ -1,11 +1,12 @@
 ###################################
 # MD2026 United Kingdom (ENG) Focus Tree
 # 2026 Shared Focuses - Global Britain
+# 26 focuses: 1 root + 5 branches + capstone
 ###################################
 
 shared_focus = {
 	id = MD2026_ENG_global_britain
-	icon = GFX_focus_eng_decolonization
+	icon = GFX_goal_generic_alliance
 	x = 38
 	y = 0
 	cost = 3.6
@@ -24,11 +25,11 @@ shared_focus = {
 	}
 }
 
-### Nuclear & AUKUS Branch ###
+### B1: Nuclear & AUKUS Branch (x=-6) ###
 shared_focus = {
 	id = MD2026_ENG_nuclear_deterrent
 	icon = nuclear_science
-	x = -4
+	x = -6
 	y = 1
 	cost = 8.6
 	search_filters = { FOCUS_FILTER_MILITARY }
@@ -36,13 +37,8 @@ shared_focus = {
 	relative_position_id = MD2026_ENG_global_britain
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_nuclear_deterrent"
+		army_experience = 25
 		add_war_support = 0.10
-		add_tech_bonus = {
-			name = MD2026_ENG_nuclear_deterrent
-			bonus = 1.0
-			uses = 2
-			category = CAT_missile
-		}
 	}
 	ai_will_do = {
 		factor = 1
@@ -51,7 +47,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_ENG_aukus
-	icon = GFX_goal_generic_alliance
+	icon = GFX_goal_generic_military_deal
 	x = -1
 	y = 1
 	cost = 8.6
@@ -60,10 +56,11 @@ shared_focus = {
 	relative_position_id = MD2026_ENG_nuclear_deterrent
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_aukus"
+		add_political_power = 75
 		add_opinion_modifier = { target = AST modifier = md2026_improved_relations }
 		AST = { add_opinion_modifier = { target = ENG modifier = md2026_improved_relations } }
 		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
-		navy_experience = 25
+		USA = { add_opinion_modifier = { target = ENG modifier = md2026_improved_relations } }
 	}
 	ai_will_do = {
 		factor = 1
@@ -75,7 +72,7 @@ shared_focus = {
 	icon = GFX_goal_generic_navy_doctrines
 	x = 1
 	y = 1
-	cost = 8.6
+	cost = 12.9
 	search_filters = { FOCUS_FILTER_MILITARY }
 	prerequisite = { focus = MD2026_ENG_nuclear_deterrent }
 	relative_position_id = MD2026_ENG_nuclear_deterrent
@@ -94,11 +91,59 @@ shared_focus = {
 	}
 }
 
-### Post-Brexit Trade Branch ###
+shared_focus = {
+	id = MD2026_ENG_submarine_program
+	icon = GFX_goal_generic_secret_weapon
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_ENG_aukus }
+	relative_position_id = MD2026_ENG_aukus
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_submarine_program"
+		add_tech_bonus = {
+			name = MD2026_ENG_submarine_program
+			bonus = 1.0
+			uses = 2
+			category = CAT_naval_all
+		}
+		add_war_support = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ENG_carrier_group
+	icon = GFX_goal_generic_occupy_states_coastal
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_ENG_carrier_strike }
+	relative_position_id = MD2026_ENG_carrier_strike
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_carrier_group"
+		navy_experience = 25
+		add_tech_bonus = {
+			name = MD2026_ENG_carrier_group
+			bonus = 1.0
+			uses = 2
+			category = CAT_naval_all
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B2: Post-Brexit Trade Branch (x=-3, ME) ###
 shared_focus = {
 	id = MD2026_ENG_post_brexit_trade
 	icon = GFX_goal_generic_trade
-	x = -1
+	x = -3
 	y = 1
 	cost = 8.6
 	search_filters = { FOCUS_FILTER_TRADE }
@@ -106,8 +151,8 @@ shared_focus = {
 	relative_position_id = MD2026_ENG_global_britain
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_post_brexit_trade"
-		add_political_power = 75
-		add_stability = 0.03
+		add_political_power = 50
+		add_stability = 0.05
 	}
 	ai_will_do = {
 		factor = 1
@@ -116,7 +161,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_ENG_cptpp
-	icon = GFX_goal_generic_improve_relations
+	icon = GFX_goal_generic_trade
 	x = -1
 	y = 1
 	cost = 8.6
@@ -126,9 +171,10 @@ shared_focus = {
 	mutually_exclusive = { focus = MD2026_ENG_eu_rapprochement }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_cptpp"
-		add_political_power = 50
+		add_political_power = 75
 		add_opinion_modifier = { target = JAP modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = CAN modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = AST modifier = md2026_improved_relations }
 	}
 	ai_will_do = {
 		factor = 1
@@ -141,7 +187,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	cost = 8.6
-	search_filters = { FOCUS_FILTER_TRADE }
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	prerequisite = { focus = MD2026_ENG_post_brexit_trade }
 	relative_position_id = MD2026_ENG_post_brexit_trade
 	mutually_exclusive = { focus = MD2026_ENG_cptpp }
@@ -149,19 +195,43 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_eu_rapprochement"
 		add_stability = 0.05
 		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
-		add_opinion_modifier = { target = GER modifier = md2026_improved_relations }
 		FRA = { add_opinion_modifier = { target = ENG modifier = md2026_improved_relations } }
+		add_opinion_modifier = { target = GER modifier = md2026_improved_relations }
+		GER = { add_opinion_modifier = { target = ENG modifier = md2026_improved_relations } }
 	}
 	ai_will_do = {
 		factor = 1
 	}
 }
 
-### Special Relationship Branch ###
+shared_focus = {
+	id = MD2026_ENG_trade_expansion
+	icon = GFX_goal_generic_consumer_goods
+	x = 0
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_TRADE }
+	prerequisite = { focus = MD2026_ENG_cptpp focus = MD2026_ENG_eu_rapprochement }
+	relative_position_id = MD2026_ENG_post_brexit_trade
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_trade_expansion"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B3: Special Relationship Branch (x=0) ###
 shared_focus = {
 	id = MD2026_ENG_special_relationship
 	icon = align_to_usa
-	x = 2
+	x = 0
 	y = 1
 	cost = 8.6
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -169,9 +239,9 @@ shared_focus = {
 	relative_position_id = MD2026_ENG_global_britain
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_special_relationship"
+		add_political_power = 75
 		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
 		USA = { add_opinion_modifier = { target = ENG modifier = md2026_improved_relations } }
-		add_political_power = 50
 	}
 	ai_will_do = {
 		factor = 1
@@ -181,15 +251,15 @@ shared_focus = {
 shared_focus = {
 	id = MD2026_ENG_five_eyes
 	icon = GFX_goal_generic_intelligence_agency
-	x = 0
+	x = -1
 	y = 1
 	cost = 8.6
-	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	prerequisite = { focus = MD2026_ENG_special_relationship }
 	relative_position_id = MD2026_ENG_special_relationship
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_five_eyes"
-		add_political_power = 75
+		add_political_power = 50
 		add_opinion_modifier = { target = CAN modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = AST modifier = md2026_improved_relations }
 	}
@@ -198,23 +268,43 @@ shared_focus = {
 	}
 }
 
-### Armed Forces Branch ###
 shared_focus = {
-	id = MD2026_ENG_armed_forces
-	icon = GFX_goal_generic_army_doctrines
-	x = 5
+	id = MD2026_ENG_ukraine_support
+	icon = GFX_goal_generic_military_deal
+	x = 1
 	y = 1
 	cost = 8.6
-	search_filters = { FOCUS_FILTER_MILITARY }
-	prerequisite = { focus = MD2026_ENG_global_britain }
-	relative_position_id = MD2026_ENG_global_britain
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_ENG_special_relationship }
+	relative_position_id = MD2026_ENG_special_relationship
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_armed_forces"
-		army_experience = 25
-		random_owned_controlled_state = {
-			limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_ukraine_support"
+		add_war_support = 0.10
+		add_opinion_modifier = { target = UKR modifier = md2026_improved_relations }
+		UKR = { add_opinion_modifier = { target = ENG modifier = md2026_improved_relations } }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ENG_intelligence_dominance
+	icon = GFX_goal_generic_secret_weapon
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_ENG_five_eyes }
+	relative_position_id = MD2026_ENG_five_eyes
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_intelligence_dominance"
+		add_political_power = 100
+		add_tech_bonus = {
+			name = MD2026_ENG_intelligence_dominance
+			bonus = 1.0
+			uses = 2
+			category = CAT_computing_tech
 		}
 	}
 	ai_will_do = {
@@ -223,17 +313,57 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = MD2026_ENG_european_security
+	icon = blr_nato_cooperation
+	x = 0
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_ENG_ukraine_support }
+	relative_position_id = MD2026_ENG_ukraine_support
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_european_security"
+		add_war_support = 0.05
+		army_experience = 25
+		add_opinion_modifier = { target = POL modifier = md2026_improved_relations }
+		POL = { add_opinion_modifier = { target = ENG modifier = md2026_improved_relations } }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B4: Armed Forces Branch (x=3) ###
+shared_focus = {
+	id = MD2026_ENG_armed_forces
+	icon = GFX_goal_generic_army_doctrines
+	x = 3
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_ENG_global_britain }
+	relative_position_id = MD2026_ENG_global_britain
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_armed_forces"
+		army_experience = 25
+		add_war_support = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
 	id = MD2026_ENG_cyber_warfare
-	icon = GFX_focus_research
+	icon = GFX_goal_generic_secret_weapon
 	x = -1
 	y = 1
 	cost = 8.6
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_MILITARY }
 	prerequisite = { focus = MD2026_ENG_armed_forces }
 	relative_position_id = MD2026_ENG_armed_forces
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_cyber_warfare"
-		add_research_slot = 1
 		add_tech_bonus = {
 			name = MD2026_ENG_cyber_warfare
 			bonus = 1.0
@@ -257,13 +387,189 @@ shared_focus = {
 	relative_position_id = MD2026_ENG_armed_forces
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_army_modernization"
+		army_experience = 25
 		add_tech_bonus = {
 			name = MD2026_ENG_army_modernization
 			bonus = 1.0
 			uses = 2
 			category = CAT_armor
 		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ENG_gchq_expansion
+	icon = GFX_goal_generic_intelligence_agency
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_ENG_cyber_warfare }
+	relative_position_id = MD2026_ENG_cyber_warfare
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_gchq_expansion"
+		add_political_power = 100
+		add_tech_bonus = {
+			name = MD2026_ENG_gchq_expansion
+			bonus = 1.0
+			uses = 1
+			category = CAT_computing_tech
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ENG_challenger_3
+	icon = GFX_goal_generic_build_tank
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_ENG_army_modernization }
+	relative_position_id = MD2026_ENG_army_modernization
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_challenger_3"
+		add_tech_bonus = {
+			name = MD2026_ENG_challenger_3
+			bonus = 1.0
+			uses = 2
+			category = CAT_armor
+		}
 		army_experience = 25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B5: Science & Innovation Branch (x=6) ###
+shared_focus = {
+	id = MD2026_ENG_science_innovation
+	icon = GFX_focus_research
+	x = 6
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	prerequisite = { focus = MD2026_ENG_global_britain }
+	relative_position_id = MD2026_ENG_global_britain
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_science_innovation"
+		add_research_slot = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ENG_ai_strategy
+	icon = GFX_goal_generic_scientific_exchange
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	prerequisite = { focus = MD2026_ENG_science_innovation }
+	relative_position_id = MD2026_ENG_science_innovation
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_ai_strategy"
+		add_tech_bonus = {
+			name = MD2026_ENG_ai_strategy
+			bonus = 1.0
+			uses = 2
+			category = CAT_computing_tech
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ENG_biotech_hub
+	icon = GFX_focus_research
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	prerequisite = { focus = MD2026_ENG_science_innovation }
+	relative_position_id = MD2026_ENG_science_innovation
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_biotech_hub"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ENG_tech_regulation
+	icon = GFX_goal_generic_dangerous_deal
+	x = 0
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	prerequisite = { focus = MD2026_ENG_ai_strategy }
+	relative_position_id = MD2026_ENG_ai_strategy
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_tech_regulation"
+		add_political_power = 100
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ENG_pharma_exports
+	icon = GFX_goal_generic_trade
+	x = 0
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_TRADE }
+	prerequisite = { focus = MD2026_ENG_biotech_hub }
+	relative_position_id = MD2026_ENG_biotech_hub
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_pharma_exports"
+		add_political_power = 75
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Capstone ###
+shared_focus = {
+	id = MD2026_ENG_global_reach
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 5
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_ENG_global_britain }
+	prerequisite = { focus = MD2026_ENG_submarine_program focus = MD2026_ENG_carrier_group }
+	relative_position_id = MD2026_ENG_global_britain
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ENG_global_reach"
+		add_political_power = 150
+		add_stability = 0.10
+		add_war_support = 0.10
 	}
 	ai_will_do = {
 		factor = 1

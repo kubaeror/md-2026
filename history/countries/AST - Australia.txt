@@ -762,4 +762,20 @@
 	add_ideas = {
 		md2026_ast_aukus_partner
 	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_AST_pacific_partner
+	complete_national_focus = MD2026_AST_aukus_commitment
+	complete_national_focus = MD2026_AST_nuclear_submarines
+	complete_national_focus = MD2026_AST_missile_capability
+	complete_national_focus = MD2026_AST_china_balancing
+	complete_national_focus = MD2026_AST_pacific_islands
+	complete_national_focus = MD2026_AST_pacific_aid
+	complete_national_focus = MD2026_AST_pacific_security
+	complete_national_focus = MD2026_AST_defense_expansion
+	complete_national_focus = MD2026_AST_northern_bases
+	complete_national_focus = MD2026_AST_cyber_defense
+	complete_national_focus = MD2026_AST_economic_resilience
+	complete_national_focus = MD2026_AST_green_energy
+	complete_national_focus = MD2026_AST_innovation_economy
 }

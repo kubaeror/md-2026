@@ -732,4 +732,20 @@ capital = 215
 	add_ideas = {
 		md2026_egy_military_state
 	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_EGY_nile_power
+	complete_national_focus = MD2026_EGY_military_modernization
+	complete_national_focus = MD2026_EGY_economic_crisis
+	complete_national_focus = MD2026_EGY_imf_program
+	complete_national_focus = MD2026_EGY_gulf_investment
+	complete_national_focus = MD2026_EGY_regional_role
+	complete_national_focus = MD2026_EGY_gaza_mediator
+	complete_national_focus = MD2026_EGY_nile_dispute
+	complete_national_focus = MD2026_EGY_mega_projects
+	complete_national_focus = MD2026_EGY_new_capital
+	complete_national_focus = MD2026_EGY_infrastructure_expansion
+	complete_national_focus = MD2026_EGY_energy_future
+	complete_national_focus = MD2026_EGY_nuclear_power
+	complete_national_focus = MD2026_EGY_solar_farms
 }
