@@ -110,7 +110,7 @@ md2026_sanctions_category = {
 	md2026_escalate_iran_sanctions = {
 		icon = generic_economy
 
-		cost = 50
+		cost = 75
 		fire_only_once = no
 		days_remove = 45
 		days_re_enable = 270
@@ -127,6 +127,7 @@ md2026_sanctions_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision md2026_escalate_iran_sanctions"
+			add_political_power = -25
 			PER = {
 				add_timed_idea = {
 					idea = md2026_additional_sanctions_effect
@@ -137,7 +138,6 @@ md2026_sanctions_category = {
 		}
 
 		remove_effect = {
-			add_political_power = 10
 		}
 
 		ai_will_do = {
@@ -396,10 +396,10 @@ md2026_nato_decisions_category = {
 	md2026_request_nato_consultation = {
 		icon = generic_political_actions
 
-		cost = 25
+		cost = 50
 		fire_only_once = no
 		days_remove = 14
-		days_re_enable = 180
+		days_re_enable = 365
 
 		visible = {
 			date > 2025.12.31
@@ -422,8 +422,8 @@ md2026_nato_decisions_category = {
 		}
 
 		remove_effect = {
-			add_war_support = 0.05
-			add_stability = 0.03
+			add_war_support = 0.03
+			add_stability = 0.02
 			every_country = {
 				limit = {
 					is_in_faction_with = USA
@@ -434,7 +434,7 @@ md2026_nato_decisions_category = {
 		}
 
 		ai_will_do = {
-			base = 75
+			base = 50
 		}
 	}
 }
@@ -500,6 +500,18 @@ md2026_geopolitics_category = {
 				factor = 2
 				NOT = { has_government = democratic }
 			}
+			modifier = {
+				add = 30
+				OR = {
+					original_tag = RAJ
+					original_tag = SAF
+					original_tag = EGY
+					original_tag = ETH
+					original_tag = PER
+					original_tag = SAU
+					original_tag = UAE
+				}
+			}
 		}
 	}
 
@@ -531,7 +543,7 @@ md2026_geopolitics_category = {
 
 		remove_effect = {
 			add_timed_idea = {
-				idea = md2026_trade_war_tariffs
+				idea = md2026_trade_war_tariffs_usa
 				days = 365
 			}
 			CHI = {
@@ -545,10 +557,6 @@ md2026_geopolitics_category = {
 
 		ai_will_do = {
 			base = 40
-			modifier = {
-				factor = 2
-				has_government = nationalist
-			}
 		}
 	}
 
@@ -557,7 +565,7 @@ md2026_geopolitics_category = {
 	md2026_recognize_taiwan = {
 		icon = generic_political_actions
 
-		cost = 150
+		cost = 100
 		fire_only_once = yes
 
 		visible = {
@@ -576,7 +584,7 @@ md2026_geopolitics_category = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision md2026_recognize_taiwan"
 			set_country_flag = md2026_recognized_taiwan
-			add_political_power = -75
+			add_political_power = -50
 			TAI = {
 				add_opinion_modifier = { target = ROOT modifier = md2026_taiwan_recognition_opinion }
 			}
@@ -584,12 +592,13 @@ md2026_geopolitics_category = {
 				add_opinion_modifier = { target = ROOT modifier = md2026_taiwan_recognition_anger }
 			}
 			add_stability = -0.03
+			add_war_support = 0.02
 		}
 
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 10
+				add = 25
 				CHI = { has_war_with = TAI }
 			}
 		}
@@ -657,7 +666,7 @@ md2026_geopolitics_category = {
 	md2026_propose_ceasefire = {
 		icon = generic_political_actions
 
-		cost = 200
+		cost = 150
 		fire_only_once = yes
 		days_remove = 90
 
@@ -679,7 +688,7 @@ md2026_geopolitics_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision md2026_propose_ceasefire"
-			add_political_power = -100
+			add_political_power = -75
 		}
 
 		remove_effect = {
@@ -692,6 +701,14 @@ md2026_geopolitics_category = {
 				factor = 3
 				original_tag = USA
 				has_government = nationalist
+			}
+			modifier = {
+				add = 20
+				original_tag = CHI
+			}
+			modifier = {
+				add = 15
+				original_tag = TUR
 			}
 		}
 	}
@@ -730,7 +747,7 @@ md2026_military_modernization_category = {
 		remove_effect = {
 			add_timed_idea = {
 				idea = md2026_drone_warfare_capability
-				days = 730
+				days = 365
 			}
 			army_experience = 5
 			air_experience = 5
@@ -855,6 +872,7 @@ md2026_military_modernization_category = {
 		}
 
 		available = {
+			has_war = no
 			num_divisions > 5
 		}
 
@@ -1058,6 +1076,31 @@ md2026_economic_decisions_category = {
 
 		visible = {
 			date > 2025.12.31
+			OR = {
+				original_tag = USA
+				original_tag = CHI
+				original_tag = SOV
+				original_tag = ENG
+				original_tag = FRA
+				original_tag = GER
+				original_tag = JAP
+				original_tag = KOR
+				original_tag = RAJ
+				original_tag = ISR
+				original_tag = TAI
+				original_tag = BRA
+				original_tag = ITA
+				original_tag = CAN
+				original_tag = AST
+				original_tag = SWE
+				original_tag = FIN
+				original_tag = HOL
+				original_tag = POL
+				original_tag = SPR
+				original_tag = TUR
+				original_tag = SAU
+				original_tag = UAE
+			}
 		}
 
 		available = {
