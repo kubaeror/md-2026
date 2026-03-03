@@ -2,7 +2,7 @@
 # Hungary 2026 — Small NATO army, modernizing
 
 division_template = {
-	name = "Gépesített Dandár 2026"
+	name = "Gépesített Dandár"
 	regiments = {
 		Arm_Inf_Bat = { x = 0 y = 0 }
 		Arm_Inf_Bat = { x = 0 y = 1 }
@@ -19,7 +19,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Lövész Dandár 2026"
+	name = "Lövész Dandár"
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
 		Mot_Inf_Bat = { x = 0 y = 1 }
@@ -34,7 +34,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Különleges Műveleti 2026"
+	name = "Különleges Műveleti"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -51,7 +51,7 @@ units = {
 	division = {
 		name = "25. Klapka György Dandár"
 		location = 11659
-		division_template = "Gépesített Dandár 2026"
+		division_template = "Gépesített Dandár"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.85
 	}
@@ -59,7 +59,7 @@ units = {
 	division = {
 		name = "2. Vitéz Árpád Dandár"
 		location = 9676
-		division_template = "Lövész Dandár 2026"
+		division_template = "Lövész Dandár"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -67,7 +67,7 @@ units = {
 	division = {
 		name = "5. Bocskai István Dandár"
 		location = 682
-		division_template = "Lövész Dandár 2026"
+		division_template = "Lövész Dandár"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -75,7 +75,7 @@ units = {
 	division = {
 		name = "86. Szolnok Dandár"
 		location = 730
-		division_template = "Lövész Dandár 2026"
+		division_template = "Lövész Dandár"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -83,7 +83,7 @@ units = {
 	division = {
 		name = "MH 34. Bercsényi László KMD"
 		location = 730
-		division_template = "Különleges Műveleti 2026"
+		division_template = "Különleges Műveleti"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.85
 	}
@@ -94,5 +94,21 @@ instant_effect = {
 		type = infantry_weapons5
 		amount = 1500
 		producer = HUN
+	}
+}
+
+##### Air Wings #####
+air_wings = {
+	# Puma Squadron — JAS 39C/D Gripen (Kecskemét)
+	999 = {
+		small_plane_strike_airframe_2 = { owner = "HUN" creator = "SWE" amount = 14 version_name = "JAS 39C/D Gripen" }
+		name = "MH 59. Szentgyörgyi Dezső Repülőbázis"
+		start_experience_factor = 0.45
+	}
+	# Transport Squadron — C-17 (SAC Pápa) + An-26
+	123 = {
+		large_plane_air_transport_airframe_2 = { owner = "HUN" creator = "USA" amount = 1 version_name = "C-17A Globemaster III" }
+		name = "MH Pápa Bázisrepülőtér"
+		start_experience_factor = 0.4
 	}
 }

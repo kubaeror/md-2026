@@ -2,7 +2,7 @@
 # Czech Republic 2026 — NATO, small professional
 
 division_template = {
-	name = "Mechanizovaná Brigáda 2026"
+	name = "Mechanizovaná Brigáda"
 	regiments = {
 		Arm_Inf_Bat = { x = 0 y = 0 }
 		Arm_Inf_Bat = { x = 0 y = 1 }
@@ -19,7 +19,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Lehká Brigáda 2026"
+	name = "Lehká Brigáda"
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
 		Mot_Inf_Bat = { x = 0 y = 1 }
@@ -34,7 +34,7 @@ division_template = {
 }
 
 division_template = {
-	name = "601. Skupina SOF 2026"
+	name = "601. Skupina SOF"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -51,7 +51,7 @@ units = {
 	division = {
 		name = "7. mechanizovaná brigáda"
 		location = 3418
-		division_template = "Mechanizovaná Brigáda 2026"
+		division_template = "Mechanizovaná Brigáda"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.85
 	}
@@ -59,7 +59,7 @@ units = {
 	division = {
 		name = "4. brigáda rychlého nasazení"
 		location = 6590
-		division_template = "Lehká Brigáda 2026"
+		division_template = "Lehká Brigáda"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.85
 	}
@@ -67,7 +67,7 @@ units = {
 	division = {
 		name = "13. dělostřelecký pluk"
 		location = 9541
-		division_template = "Lehká Brigáda 2026"
+		division_template = "Lehká Brigáda"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -75,7 +75,7 @@ units = {
 	division = {
 		name = "601. skupina speciálních sil"
 		location = 11556
-		division_template = "601. Skupina SOF 2026"
+		division_template = "601. Skupina SOF"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.9
 	}
@@ -86,5 +86,27 @@ instant_effect = {
 		type = infantry_weapons5
 		amount = 1500
 		producer = CZE
+	}
+}
+
+##### Air Wings #####
+air_wings = {
+	# 211th Tactical Squadron — JAS 39C/D Gripen (Čáslav)
+	117 = {
+		small_plane_strike_airframe_2 = { owner = "CZE" creator = "SWE" amount = 14 version_name = "JAS 39C/D Gripen" }
+		name = "211. taktická letka"
+		start_experience_factor = 0.5
+	}
+	# 212th Tactical Squadron — L-159 ALCA (Čáslav)
+	117 = {
+		small_plane_cas_airframe_2 = { owner = "CZE" amount = 20 version_name = "L-159 ALCA" }
+		name = "212. taktická letka"
+		start_experience_factor = 0.4
+	}
+	# 241st Transport Squadron — C-295M (Kbely, Prague)
+	117 = {
+		large_plane_air_transport_airframe_1 = { owner = "CZE" creator = "SPR" amount = 4 version_name = "C-295M" }
+		name = "241. dopravní letka"
+		start_experience_factor = 0.4
 	}
 }
