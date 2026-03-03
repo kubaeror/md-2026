@@ -1,5 +1,5 @@
 # Millennium Dawn 2026 Rework - On Actions
-# Additional on_startup handler for 2026 alliance arrays
+# on_startup handler for 2026 bookmark initialization
 
 on_actions = {
 	on_startup = {
@@ -9,8 +9,8 @@ on_actions = {
 				limit = {
 					date > 2025.12.31
 				}
-				# Initialize 2026-specific alliance arrays
-				md2026_setup_alliances = yes
+				# Set global flag to indicate 2026 bookmark is active
+				set_global_flag = md2026_active
 			}
 		}
 	}
