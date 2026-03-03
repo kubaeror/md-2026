@@ -81,6 +81,51 @@ md2026_techs_prereqs = {
 			}
 		}
 	}
+
+	### Infantry prereqs (pre-2005, shared — no DLC gating) ###
+	set_technology = {
+		# Infantry Weapons chain (1965-1995 prereqs for infantry_weapons4 @ 2005)
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		infantry_weapons3 = 1
+		# Utility Vehicles chain (1965-1995 prereqs for util_vehicle_4 @ 2005)
+		util_vehicle_0 = 1
+		util_vehicle_1 = 1
+		util_vehicle_2 = 1
+		util_vehicle_3 = 1
+		# Night Vision chain (1965-1985 prereqs for night_vision_4 @ 2015)
+		night_vision_1 = 1
+		night_vision_2 = 1
+		night_vision_3 = 1
+		# Command & Control chain (1975-1995 prereqs for command_control_equipment3 @ 2005)
+		command_control_equipment = 1
+		command_control_equipment1 = 1
+		command_control_equipment2 = 1
+		# Land Drones chain (1985-1995 prereqs for land_Drone_equipment2 @ 2005)
+		land_Drone_equipment = 1
+		land_Drone_equipment1 = 1
+		# Body Armor chain (1980-2000 prereqs for body_armor_2010 @ 2010)
+		body_armor_1980 = 1
+		body_armor_2000 = 1
+		# Camouflage chain (1965-2000 prereqs for camouflage4 @ 2020)
+		camouflage = 1
+		camouflage2 = 1
+		camouflage3 = 1
+		# Support Weapons chain (1965-1995 prereqs for support_weapons4 @ 2005)
+		support_weapons = 1
+		squad_automatic_weapon = 1
+		tandem_charge_warheads = 1
+		support_weapons2 = 1
+		support_weapons3 = 1
+		# Special Forces chain (1965-1995 prereqs for special_forces5 @ 2005)
+		special_forces = 1
+		special_forces2 = 1
+		special_forces3 = 1
+		special_forces4 = 1
+		# Combat Engineer (standalone 1965 base tech)
+		combat_eng_equipment = 1
+	}
 }
 
 
