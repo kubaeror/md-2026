@@ -230,6 +230,57 @@ md2026_techs_prereqs = {
 		# WiFi chain (2000 prereq for lifi @ 2020)
 		wifi = 1
 	}
+
+	### BBA Aircraft prereqs (pre-2005) ###
+	if = { limit = { has_dlc = "By Blood Alone" }
+		set_technology = {
+			# Root techs (1955)
+			early_airframe_designs = 1
+			early_weapons = 1
+			# Airframe light chain (1960-1980 prereqs for gen_5_light @ 2015)
+			gen_3_light = 1
+			gen_4_light = 1
+			# Airframe medium chain (1960-1980 prereqs for gen_5_medium @ 2015)
+			gen_3_medium = 1
+			gen_4_medium = 1
+			# Airframe large chain (1960-1980 prereqs for gen_5_large @ 2015)
+			gen_3_large = 1
+			gen_4_large = 1
+			# Avionics chain (1980-2000 prereqs for avionics_3 @ 2020)
+			avionics_1 = 1
+			avionics_2 = 1
+			# AWACS (1985 prereq for awacs_2 @ 2005)
+			awacs_1 = 1
+			# Wing designs (1970-1990 prereqs for stealth/fwdswept/diamond)
+			flying_wing_design = 1
+			variable_wing_design = 1
+			delta_wing_design = 1
+			# Engines (1975 prereq for engines_3 @ 2010)
+			engines_2 = 1
+			# Refueling (1980 prereq for refueling_2 @ 2005)
+			refueling_1 = 1
+			# Air-to-air weapons chain (1965-1990 prereqs for air_weapons_3 @ 2020)
+			air_weapons_1 = 1
+			air_weapons_2 = 1
+			# Air-to-ground weapons chain (1965-1990 prereqs for ag_weapons_3 @ 2020)
+			ag_weapons_1 = 1
+			ag_weapons_2 = 1
+			# Naval weapons chain (1965-1990 prereqs for naval_weapons_3 @ 2020)
+			naval_weapons_1 = 1
+			naval_weapons_2 = 1
+			# Special MAD chain (1970-1995 prereqs for special_mad_3 @ 2025)
+			special_mad_1 = 1
+			special_mad_2 = 1
+			# TGP/Recon chain (1970-1995 prereqs for tgp_recon_3 @ 2025)
+			tgp_recon_1 = 1
+			tgp_recon_2 = 1
+			# Gunship chain (1970-1995 prereqs for rapid_dragon @ 2025)
+			gunship_1 = 1
+			gunship_2 = 1
+			# Internal weapons (2000 prereq for internal_weapons_2 @ 2025)
+			internal_weapons_1 = 1
+		}
+	}
 }
 
 
