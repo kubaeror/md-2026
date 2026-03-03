@@ -48,6 +48,21 @@ units = {
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.60
 	}
+
+	##### Latvian Naval Forces (Liepaja) #####
+	fleet = {
+		name = "Latvian Naval Forces"
+		naval_base = 9262
+		task_force = {
+			name = "Mine Countermeasures Squadron"
+			location = 9262
+			ship = { name = "M-04 Imanta" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LAT version_name = "Alkmaar Class" } } }
+			ship = { name = "M-05 Viesturs" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LAT version_name = "Alkmaar Class" } } }
+			ship = { name = "M-06 Talivaldis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LAT version_name = "Alkmaar Class" } } }
+			ship = { name = "M-07 Visvaldis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LAT version_name = "Alkmaar Class" } } }
+			ship = { name = "M-08 Rusins" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LAT version_name = "Alkmaar Class" } } }
+		}
+	}
 }
 
 instant_effect = {

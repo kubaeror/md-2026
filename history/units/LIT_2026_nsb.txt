@@ -77,6 +77,20 @@ units = {
 		start_experience_factor = 0.50
 		start_equipment_factor = 0.75
 	}
+
+	##### Lithuanian Naval Force #####
+	fleet = {
+		name = "Lithuanian Naval Force"
+		naval_base = 13258
+		task_force = {
+			name = "Lithuanian Naval Force"
+			location = 13258
+			ship = { name = "P11 Zemaitis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT version_name = "Flyvefisken Class" } } }
+			ship = { name = "P12 Aukstaitis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT version_name = "Flyvefisken Class" } } }
+			ship = { name = "M51 Kursis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT version_name = "Hunt Class" } } }
+			ship = { name = "M52 Suduvis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT version_name = "Hunt Class" } } }
+		}
+	}
 }
 
 instant_effect = {
@@ -84,5 +98,15 @@ instant_effect = {
 		type = infantry_weapons5
 		amount = 2000
 		producer = LIT
+	}
+}
+
+##### Lithuanian Air Force #####
+air_wings = {
+	# Siauliai / Zokniai Air Base
+	109 = {
+		large_plane_air_transport_airframe_1 = { owner = "LIT" creator = "ITA" amount = 3 version_name = "C-27J Spartan" }
+		name = "Air Force Transport Squadron"
+		start_experience_factor = 0.4
 	}
 }
