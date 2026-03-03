@@ -76,6 +76,36 @@ units = {
 		start_experience_factor = 0.60
 		start_equipment_factor = 0.85
 	}
+
+	##### Søværnet (Royal Danish Navy) #####
+	fleet = {
+		name = "Søværnet"
+		naval_base = 394		# Frederikshavn
+		task_force = {
+			name = "1. Eskadre"
+			location = 394
+			# Iver Huitfeldt-class frigates
+			ship = { name = "HDMS Iver Huitfeldt (F361)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = DEN version_name = "Iver Huitfeldt class" } } }
+			ship = { name = "HDMS Peter Willemoes (F362)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = DEN version_name = "Iver Huitfeldt class" } } }
+			ship = { name = "HDMS Niels Juel (F363)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = DEN version_name = "Iver Huitfeldt class" } } }
+		}
+		task_force = {
+			name = "2. Eskadre"
+			location = 14542		# Korsør
+			# Absalon-class support ships
+			ship = { name = "HDMS Absalon (L16)" definition = helicopter_operator equipment = { helicopter_operator_hull_2 = { amount = 1 owner = DEN version_name = "Absalon class" } } }
+			ship = { name = "HDMS Esbern Snare (L17)" definition = helicopter_operator equipment = { helicopter_operator_hull_2 = { amount = 1 owner = DEN version_name = "Absalon class" } } }
+		}
+		task_force = {
+			name = "Arktisk Kommando"
+			location = 394
+			# Thetis-class OPVs
+			ship = { name = "HDMS Thetis (F357)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = DEN version_name = "Thetis class" } } }
+			ship = { name = "HDMS Triton (F358)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = DEN version_name = "Thetis class" } } }
+			ship = { name = "HDMS Vaedderen (F359)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = DEN version_name = "Thetis class" } } }
+			ship = { name = "HDMS Hvidbjørnen (F360)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = DEN version_name = "Thetis class" } } }
+		}
+	}
 }
 
 instant_effect = {
@@ -83,5 +113,21 @@ instant_effect = {
 		type = infantry_weapons5
 		amount = 2000
 		producer = DEN
+	}
+}
+
+##### Flyvevåbnet (Royal Danish Air Force) #####
+air_wings = {
+	# Skrydstrup - F-35A Lightning II
+	6 = {
+		small_plane_strike_airframe_2 = { owner = "DEN" creator = "USA" amount = 27 version_name = "F-35A Lightning II" }
+		name = "Fighter Wing Skrydstrup"
+		start_experience_factor = 0.5
+	}
+	# Transport - C-130J-30
+	4 = {
+		large_plane_air_transport_airframe_1 = { owner = "DEN" creator = "USA" amount = 4 version_name = "C-130J-30 Super Hercules" }
+		name = "Transport Wing Aalborg"
+		start_experience_factor = 0.5
 	}
 }
