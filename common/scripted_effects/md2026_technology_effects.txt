@@ -110,6 +110,38 @@ md2026_techs_prereqs = {
 			# NSB Armor: Assault gun chain (1965-1985 prereqs for assault_gun_tech_3 @ 2015)
 			assault_gun_tech = 1
 			assault_gun_tech_2 = 1
+			# NSB Helicopter: root (1965 prereq for all NSB heli branches)
+			helo_ops_tech = 1
+			# NSB Helicopter: Attack chain (1965-1985 prereqs for nsb_attack_helicopter_tech_3 @ 2005)
+			nsb_attack_helicopter_tech_1 = 1
+			nsb_attack_helicopter_tech_2 = 1
+			# NSB Helicopter: Transport chain (1965-1985 prereqs for nsb_transport_helicopter3 @ 2005)
+			nsb_transport_helicopter1 = 1
+			nsb_transport_helicopter2 = 1
+			# NSB Helicopter: Engine chain (1965-1985 prereqs for nsb_engine_tech_3 @ 2005)
+			nsb_engine_tech_1 = 1
+			nsb_engine_tech_2 = 1
+			# NSB Helicopter: ATGM chain (1965-1985 prereqs for nsb_atgm_tech_3 @ 2005)
+			nsb_atgm_tech_1 = 1
+			nsb_atgm_tech_2 = 1
+			# NSB Helicopter: Multiple ATGM chain (1965-1985 prereqs for nsb_multiple_atgm_tech_3 @ 2005)
+			nsb_multiple_atgm_tech_1 = 1
+			nsb_multiple_atgm_tech_2 = 1
+			# NSB Helicopter: Heavy ATGM chain (1965-1985 prereqs for nsb_heavy_atgm_tech_3 @ 2005)
+			nsb_heavy_atgm_tech_1 = 1
+			nsb_heavy_atgm_tech_2 = 1
+			# NSB Helicopter: Rocket Pods chain (1965-1985 prereqs for nsb_rocket_pods_tech_3 @ 2005)
+			nsb_rocket_pods_tech_1 = 1
+			nsb_rocket_pods_tech_2 = 1
+			# NSB Helicopter: Gun Pods chain (1965-1985 prereqs for nsb_gun_pods_tech_3 @ 2005)
+			nsb_gun_pods_tech_1 = 1
+			nsb_gun_pods_tech_2 = 1
+			# NSB Helicopter: Light Nose Gun chain (1965-1985 prereqs for nsb_light_nose_gun_tech_3 @ 2005)
+			nsb_light_nose_gun_tech_1 = 1
+			nsb_light_nose_gun_tech_2 = 1
+			# NSB Helicopter: Defense chain (1985-2000 prereqs for nsb_defense_tech_3 @ 2015)
+			nsb_defense_tech_1 = 1
+			nsb_defense_tech_2 = 1
 		}
 		else = {
 			set_technology = {
@@ -150,6 +182,12 @@ md2026_techs_prereqs = {
 				# Non-NSB armor: Rec tank chain (1965-1985 prereqs for Rec_tank_2 @ 2005)
 				Rec_tank_0 = 1
 				Rec_tank_1 = 1
+				# Non-NSB Helicopter: Attack chain (1965-1985 prereqs for attack_helicopter3 @ 2005)
+				attack_helicopter1 = 1
+				attack_helicopter2 = 1
+				# Non-NSB Helicopter: Transport chain (1965-1985 prereqs for transport_helicopter3 @ 2005)
+				transport_helicopter1 = 1
+				transport_helicopter2 = 1
 			}
 		}
 	}
