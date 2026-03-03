@@ -500,6 +500,135 @@ units = {
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.7
 	}
+
+	##### RUSSIAN NAVY #####
+
+	# Northern Fleet - Murmansk
+	fleet = {
+		name = "Northern Fleet"
+		naval_base = 3134
+		task_force = {
+			name = "Northern Fleet Surface Group"
+			location = 3134
+			ship = { name = "Pyotr Velikiy" definition = battle_cruiser start_experience_factor = 0.50 equipment = { battle_cruiser_hull_1 = { amount = 1 owner = SOV version_name = "Kirov Class" } } }
+			ship = { name = "Marshal Ustinov" definition = cruiser start_experience_factor = 0.50 equipment = { cruiser_hull_2 = { amount = 1 owner = SOV version_name = "Slava Class" } } }
+			ship = { name = "Admiral Gorshkov" definition = frigate start_experience_factor = 0.60 equipment = { frigate_hull_2 = { amount = 1 owner = SOV version_name = "Admiral Gorshkov Class" } } }
+			ship = { name = "Admiral Kasatonov" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SOV version_name = "Admiral Gorshkov Class" } } }
+		}
+		task_force = {
+			name = "Northern Fleet ASW Group"
+			location = 3134
+			ship = { name = "Severomorsk" definition = destroyer start_experience_factor = 0.45 equipment = { destroyer_hull_2 = { amount = 1 owner = SOV version_name = "Udaloy Class" } } }
+			ship = { name = "Admiral Levchenko" definition = destroyer start_experience_factor = 0.40 equipment = { destroyer_hull_2 = { amount = 1 owner = SOV version_name = "Udaloy Class" } } }
+			ship = { name = "Admiral Kharlamov" definition = destroyer start_experience_factor = 0.35 equipment = { destroyer_hull_2 = { amount = 1 owner = SOV version_name = "Udaloy Class" } } }
+		}
+		task_force = {
+			name = "Northern Fleet Submarine Group"
+			location = 3134
+			ship = { name = "K-560 Severodvinsk" definition = attack_submarine start_experience_factor = 0.55 equipment = { attack_submarine_hull_3 = { amount = 1 owner = SOV version_name = "Yasen Class" } } }
+			ship = { name = "K-561 Kazan" definition = attack_submarine start_experience_factor = 0.55 equipment = { attack_submarine_hull_3 = { amount = 1 owner = SOV version_name = "Yasen-M Class" } } }
+			ship = { name = "K-573 Novosibirsk" definition = attack_submarine start_experience_factor = 0.50 equipment = { attack_submarine_hull_3 = { amount = 1 owner = SOV version_name = "Yasen-M Class" } } }
+			ship = { name = "K-571 Krasnoyarsk" definition = attack_submarine start_experience_factor = 0.50 equipment = { attack_submarine_hull_3 = { amount = 1 owner = SOV version_name = "Yasen-M Class" } } }
+			ship = { name = "K-461 Volk" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Akula Class" } } }
+			ship = { name = "K-328 Leopard" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Akula Class" } } }
+			ship = { name = "K-335 Gepard" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Akula Class" } } }
+			ship = { name = "K-119 Voronezh" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Oscar Class" } } }
+			ship = { name = "K-266 Orel" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Oscar Class" } } }
+			ship = { name = "B-459 Vladikavkaz" definition = attack_submarine start_experience_factor = 0.40 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Kilo Class" } } }
+			ship = { name = "B-177 Lipetsk" definition = attack_submarine start_experience_factor = 0.40 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Kilo Class" } } }
+		}
+		task_force = {
+			name = "Northern Fleet SSBN Patrol"
+			location = 3134
+			ship = { name = "K-535 Yuri Dolgorukiy" definition = missile_submarine start_experience_factor = 0.55 equipment = { missile_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Borei Class" } } }
+			ship = { name = "K-549 Knyaz Vladimir" definition = missile_submarine start_experience_factor = 0.55 equipment = { missile_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Borei-A Class" } } }
+			ship = { name = "K-551 Knyaz Oleg" definition = missile_submarine start_experience_factor = 0.50 equipment = { missile_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Borei-A Class" } } }
+			ship = { name = "K-552 Generalissimus Suvorov" definition = missile_submarine start_experience_factor = 0.50 equipment = { missile_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Borei-A Class" } } }
+			ship = { name = "K-51 Verkhoturye" definition = missile_submarine start_experience_factor = 0.40 equipment = { missile_submarine_hull_1 = { amount = 1 owner = SOV version_name = "Delta IV Class" } } }
+			ship = { name = "K-114 Tula" definition = missile_submarine start_experience_factor = 0.40 equipment = { missile_submarine_hull_1 = { amount = 1 owner = SOV version_name = "Delta IV Class" } } }
+			ship = { name = "K-117 Bryansk" definition = missile_submarine start_experience_factor = 0.40 equipment = { missile_submarine_hull_1 = { amount = 1 owner = SOV version_name = "Delta IV Class" } } }
+			ship = { name = "K-18 Karelia" definition = missile_submarine start_experience_factor = 0.40 equipment = { missile_submarine_hull_1 = { amount = 1 owner = SOV version_name = "Delta IV Class" } } }
+		}
+	}
+
+	# Black Sea Fleet - Novorossiysk (relocated from Sevastopol due to Ukrainian attacks)
+	fleet = {
+		name = "Black Sea Fleet"
+		naval_base = 11668
+		task_force = {
+			name = "Black Sea Fleet Surface Group"
+			location = 11668
+			ship = { name = "Admiral Essen" definition = frigate start_experience_factor = 0.40 equipment = { frigate_hull_2 = { amount = 1 owner = SOV version_name = "Admiral Grigorovich Class" } } }
+			ship = { name = "Admiral Makarov" definition = frigate start_experience_factor = 0.40 equipment = { frigate_hull_2 = { amount = 1 owner = SOV version_name = "Admiral Grigorovich Class" } } }
+			ship = { name = "Vyshny Volochyok" definition = corvette start_experience_factor = 0.40 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Buyan-M Class" } } }
+			ship = { name = "Ingushetiya" definition = corvette start_experience_factor = 0.40 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Buyan-M Class" } } }
+			ship = { name = "Tsiklon" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Karakurt Class" } } }
+		}
+		task_force = {
+			name = "Black Sea Fleet Submarine Group"
+			location = 11668
+			ship = { name = "B-261 Novorossiysk" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Improved Kilo Class" } } }
+			ship = { name = "B-237 Rostov-na-Donu" definition = attack_submarine start_experience_factor = 0.40 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Improved Kilo Class" } } }
+			ship = { name = "B-262 Stary Oskol" definition = attack_submarine start_experience_factor = 0.40 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Improved Kilo Class" } } }
+			ship = { name = "B-265 Krasnodar" definition = attack_submarine start_experience_factor = 0.40 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Improved Kilo Class" } } }
+		}
+	}
+
+	# Baltic Fleet - Kaliningrad
+	fleet = {
+		name = "Baltic Fleet"
+		naval_base = 6332
+		task_force = {
+			name = "Baltic Fleet Corvette Group"
+			location = 6332
+			ship = { name = "Steregushchiy" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Steregushchiy Class" } } }
+			ship = { name = "Soobrazitelny" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Steregushchiy Class" } } }
+			ship = { name = "Boikiy" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Steregushchiy Class" } } }
+			ship = { name = "Stoikiy" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Steregushchiy Class" } } }
+			ship = { name = "Zeleny Dol" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Buyan-M Class" } } }
+			ship = { name = "Serpukhov" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Buyan-M Class" } } }
+		}
+		task_force = {
+			name = "Baltic Fleet Submarine Group"
+			location = 6332
+			ship = { name = "B-806 Dmitrov" definition = attack_submarine start_experience_factor = 0.40 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Kilo Class" } } }
+			ship = { name = "B-586 Kronshtadt" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Lada Class" } } }
+		}
+	}
+
+	# Pacific Fleet - Vladivostok / Petropavlovsk-Kamchatsky
+	fleet = {
+		name = "Pacific Fleet"
+		naval_base = 957
+		task_force = {
+			name = "Pacific Fleet Surface Group"
+			location = 957
+			ship = { name = "Varyag" definition = cruiser start_experience_factor = 0.45 equipment = { cruiser_hull_2 = { amount = 1 owner = SOV version_name = "Slava Class" } } }
+			ship = { name = "Marshal Shaposhnikov" definition = destroyer start_experience_factor = 0.50 equipment = { destroyer_hull_2 = { amount = 1 owner = SOV version_name = "Udaloy Class" } } }
+			ship = { name = "Admiral Tributs" definition = destroyer start_experience_factor = 0.45 equipment = { destroyer_hull_2 = { amount = 1 owner = SOV version_name = "Udaloy Class" } } }
+			ship = { name = "Admiral Panteleyev" definition = destroyer start_experience_factor = 0.45 equipment = { destroyer_hull_2 = { amount = 1 owner = SOV version_name = "Udaloy Class" } } }
+			ship = { name = "Gromkiy" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Steregushchiy Class" } } }
+			ship = { name = "Sovershenny" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Steregushchiy Class" } } }
+		}
+		task_force = {
+			name = "Pacific Fleet Submarine Group"
+			location = 957
+			ship = { name = "K-391 Bratsk" definition = attack_submarine start_experience_factor = 0.40 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Akula Class" } } }
+			ship = { name = "K-295 Samara" definition = attack_submarine start_experience_factor = 0.40 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Akula Class" } } }
+			ship = { name = "K-419 Kuzbass" definition = attack_submarine start_experience_factor = 0.40 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Akula Class" } } }
+			ship = { name = "K-186 Omsk" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Oscar Class" } } }
+			ship = { name = "K-150 Tomsk" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Oscar Class" } } }
+			ship = { name = "B-187 Novosibirsk" definition = attack_submarine start_experience_factor = 0.40 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Kilo Class" } } }
+			ship = { name = "B-190 Krasnokamensk" definition = attack_submarine start_experience_factor = 0.40 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Kilo Class" } } }
+			ship = { name = "B-345 Mogocha" definition = attack_submarine start_experience_factor = 0.40 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Kilo Class" } } }
+		}
+		task_force = {
+			name = "Pacific Fleet SSBN Patrol"
+			location = 7878
+			ship = { name = "K-550 Aleksandr Nevskiy" definition = missile_submarine start_experience_factor = 0.50 equipment = { missile_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Borei Class" } } }
+			ship = { name = "K-553 Emperor Alexander III" definition = missile_submarine start_experience_factor = 0.50 equipment = { missile_submarine_hull_2 = { amount = 1 owner = SOV version_name = "Borei-A Class" } } }
+		}
+	}
 }
 
 ### Equipment Stockpile ###
@@ -519,5 +648,189 @@ instant_effect = {
 		type = util_vehicle_equipment
 		amount = 1500
 		producer = SOV
+	}
+}
+
+##### VKS AIR FORCE #####
+
+air_wings = {
+	# Fighters / Multirole
+
+	# 23rd Fighter Aviation Regiment - Dzemgi, Khabarovsk
+	687 = {
+		medium_plane_fighter_airframe_2 = { owner = "SOV" amount = 20 version_name = "Su-35S" }
+		name = "23rd Fighter Aviation Regiment"
+		start_experience_factor = 0.45
+	}
+	# 22nd Guards Fighter Aviation Regiment - Primorye
+	692 = {
+		medium_plane_fighter_airframe_2 = { owner = "SOV" amount = 20 version_name = "Su-35S" }
+		name = "22nd Guards Fighter Aviation Regiment"
+		start_experience_factor = 0.45
+	}
+	# 159th Fighter Aviation Regiment - Primorye
+	692 = {
+		medium_plane_airframe_2 = { owner = "SOV" amount = 20 version_name = "Su-30SM" }
+		name = "159th Fighter Aviation Regiment"
+		start_experience_factor = 0.4
+	}
+	# 14th Guards Fighter Aviation Regiment - Kursk
+	653 = {
+		medium_plane_airframe_2 = { owner = "SOV" amount = 16 version_name = "Su-30SM" }
+		name = "14th Guards Fighter Aviation Regiment"
+		start_experience_factor = 0.4
+	}
+	# 31st Guards Fighter Aviation Regiment - Rostov
+	667 = {
+		medium_plane_airframe_2 = { owner = "SOV" amount = 16 version_name = "Su-30SM" }
+		name = "31st Guards Fighter Aviation Regiment"
+		start_experience_factor = 0.4
+	}
+	# 120th Fighter Aviation Regiment - Chita (MiG-31BM)
+	1070 = {
+		medium_plane_fighter_airframe_2 = { owner = "SOV" amount = 16 version_name = "MiG-31BM" }
+		name = "120th Fighter Aviation Regiment"
+		start_experience_factor = 0.4
+	}
+	# 790th Fighter Aviation Regiment - Tver (MiG-31BM)
+	649 = {
+		medium_plane_fighter_airframe_2 = { owner = "SOV" amount = 16 version_name = "MiG-31BM" }
+		name = "790th Fighter Aviation Regiment"
+		start_experience_factor = 0.4
+	}
+
+	# Su-57 Felon - 929th State Flight Test Center
+	1130 = {
+		medium_plane_fighter_airframe_2 = { owner = "SOV" amount = 10 version_name = "Su-57" }
+		name = "929th State Flight Test Center"
+		start_experience_factor = 0.5
+	}
+
+	# MiG-29SMT Units
+	# 28th Guards Fighter Aviation Regiment - Tver
+	649 = {
+		small_plane_strike_airframe_2 = { owner = "SOV" amount = 20 version_name = "MiG-29SMT" }
+		name = "28th Guards Fighter Aviation Regiment"
+		start_experience_factor = 0.4
+	}
+	# 19th Guards Fighter Aviation Regiment - Rostov
+	667 = {
+		small_plane_strike_airframe_2 = { owner = "SOV" amount = 20 version_name = "MiG-29SMT" }
+		name = "19th Guards Fighter Aviation Regiment"
+		start_experience_factor = 0.4
+	}
+
+	# Attack / Bomber Aviation
+
+	# 47th Mixed Aviation Regiment - Voronezh (Su-34)
+	656 = {
+		medium_plane_cas_airframe_2 = { owner = "SOV" amount = 20 version_name = "Su-34" }
+		name = "47th Mixed Aviation Regiment"
+		start_experience_factor = 0.4
+	}
+	# 277th Bomber Aviation Regiment - Khabarovsk (Su-34)
+	687 = {
+		medium_plane_cas_airframe_2 = { owner = "SOV" amount = 20 version_name = "Su-34" }
+		name = "277th Bomber Aviation Regiment"
+		start_experience_factor = 0.4
+	}
+	# 559th Bomber Aviation Regiment - Rostov (Su-34, reduced from losses)
+	667 = {
+		medium_plane_cas_airframe_2 = { owner = "SOV" amount = 16 version_name = "Su-34" }
+		name = "559th Bomber Aviation Regiment"
+		start_experience_factor = 0.4
+	}
+	# 960th Assault Aviation Regiment - Krasnodar (Su-25SM3)
+	668 = {
+		small_plane_cas_airframe_2 = { owner = "SOV" amount = 16 version_name = "Su-25SM3" }
+		name = "960th Assault Aviation Regiment"
+		start_experience_factor = 0.4
+	}
+	# 368th Assault Aviation Regiment - Krasnodar (Su-25SM3)
+	668 = {
+		small_plane_cas_airframe_2 = { owner = "SOV" amount = 16 version_name = "Su-25SM3" }
+		name = "368th Assault Aviation Regiment"
+		start_experience_factor = 0.4
+	}
+
+	# Strategic Aviation (37th Air Army)
+
+	# 121st Guards Heavy Bomber Regiment - Engels, Saratov (Tu-95MS)
+	1130 = {
+		large_plane_airframe_1 = { owner = "SOV" amount = 16 version_name = "Tu-95MS" }
+		name = "121st Guards Heavy Bomber Regiment"
+		start_experience_factor = 0.5
+	}
+	# 184th Guards Heavy Bomber Regiment - Engels (Tu-160)
+	1130 = {
+		large_plane_airframe_2 = { owner = "SOV" amount = 16 version_name = "Tu-160" }
+		name = "184th Guards Heavy Bomber Regiment"
+		start_experience_factor = 0.5
+	}
+	# 52nd Guards Heavy Bomber Regiment - Kaluga (Tu-22M3)
+	1181 = {
+		large_plane_airframe_1 = { owner = "SOV" amount = 16 version_name = "Tu-22M3" }
+		name = "52nd Guards Heavy Bomber Regiment"
+		start_experience_factor = 0.45
+	}
+	# 200th Guards Heavy Bomber Regiment - Irkutsk (Tu-22M3)
+	685 = {
+		large_plane_airframe_1 = { owner = "SOV" amount = 12 version_name = "Tu-22M3" }
+		name = "200th Guards Heavy Bomber Regiment"
+		start_experience_factor = 0.4
+	}
+
+	# Military Transport Aviation (VTA)
+
+	# 196th Guards MTA Regiment - Tver (Il-76MD)
+	649 = {
+		large_plane_air_transport_airframe_2 = { owner = "SOV" amount = 16 version_name = "Il-76MD" }
+		name = "196th Guards MTA Regiment"
+		start_experience_factor = 0.4
+	}
+	# 566th MTA Regiment - Bryansk (An-124)
+	1174 = {
+		large_plane_air_transport_airframe_2 = { owner = "SOV" amount = 8 version_name = "An-124" }
+		name = "566th MTA Regiment"
+		start_experience_factor = 0.4
+	}
+	# 334th MTA Regiment - Pskov (Il-76MD)
+	1129 = {
+		large_plane_air_transport_airframe_2 = { owner = "SOV" amount = 16 version_name = "Il-76MD" }
+		name = "334th MTA Regiment"
+		start_experience_factor = 0.4
+	}
+
+	# AWACS
+
+	# 144th Airborne Early Warning Regiment - Ivanovo (A-50U)
+	1186 = {
+		large_plane_awacs_airframe_2 = { owner = "SOV" amount = 6 version_name = "A-50U" }
+		name = "144th Airborne Early Warning Regiment"
+		start_experience_factor = 0.5
+	}
+
+	# Naval Aviation - Maritime Patrol
+
+	# 403rd Mixed Aviation Regiment - Murmansk (Il-38N)
+	643 = {
+		large_plane_maritime_patrol_airframe_1 = { owner = "SOV" amount = 8 version_name = "Il-38N" }
+		name = "403rd Mixed Aviation Regiment"
+		start_experience_factor = 0.4
+	}
+	# 317th Mixed Aviation Regiment - Kamchatka (Il-38N)
+	1137 = {
+		large_plane_maritime_patrol_airframe_1 = { owner = "SOV" amount = 8 version_name = "Il-38N" }
+		name = "317th Mixed Aviation Regiment"
+		start_experience_factor = 0.4
+	}
+
+	# Drones
+
+	# Drone Squadron - Voronezh (Orion)
+	656 = {
+		small_plane_suicide_airframe_2 = { owner = "SOV" amount = 12 version_name = "Orion" }
+		name = "Drone Squadron"
+		start_experience_factor = 0.35
 	}
 }
