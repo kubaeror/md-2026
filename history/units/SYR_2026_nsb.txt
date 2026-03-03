@@ -164,6 +164,19 @@ units = {
 		start_experience_factor = 0.20
 		start_equipment_factor = 0.45
 	}
+
+	##### Syrian Navy (remnant) #####
+	fleet = {
+		name = "Syrian Navy"
+		naval_base = 10087		# Latakia / Tartus
+		task_force = {
+			name = "Latakia Naval Detachment"
+			location = 10087
+			# Remnant patrol craft
+			ship = { name = "Tishreen" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = SYR version_name = "Petya class" } } }
+			ship = { name = "Al Assad" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = SYR version_name = "Osa class" } } }
+		}
+	}
 }
 
 instant_effect = {
@@ -176,5 +189,21 @@ instant_effect = {
 		type = infantry_weapons3
 		amount = 5000
 		producer = SOV
+	}
+}
+
+##### Syrian Air Force (remnant, minimal operational capability) #####
+air_wings = {
+	# Surviving MiG-29 (very few operational)
+	186 = {
+		small_plane_airframe_2 = { owner = "SYR" creator = "SOV" amount = 6 version_name = "MiG-29A Fulcrum" }
+		name = "Remnant Fighter Squadron"
+		start_experience_factor = 0.2
+	}
+	# L-39 Albatros (trainer/light attack, some still flying)
+	186 = {
+		small_plane_cas_airframe_2 = { owner = "SYR" creator = "SOV" amount = 10 version_name = "L-39ZA Albatros" }
+		name = "Training Squadron"
+		start_experience_factor = 0.15
 	}
 }
