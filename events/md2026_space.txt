@@ -1,0 +1,288 @@
+###################################
+# MD2026 Space Race Events
+# Lunar programs, satellite warfare, commercial space, Mars ambitions
+###################################
+
+add_namespace = md2026_space
+add_namespace = md2026_space_news
+
+###################################
+# md2026_space.1 - New Space Race
+# USA vs China lunar competition
+###################################
+country_event = {
+	id = md2026_space.1
+	title = md2026_space.1.t
+	desc = md2026_space.1.d
+	picture = GFX_report_event_generic_research
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2026.6.1
+		NOT = { has_global_flag = md2026_space_race_begun }
+		OR = {
+			tag = USA
+			tag = CHI
+		}
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	# Option A: Accelerate manned lunar program
+	option = {
+		name = md2026_space.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_space.1.o1 executed"
+
+		add_political_power = 100
+		add_stability = 0.05
+		add_war_support = 0.03
+
+		set_global_flag = md2026_space_race_begun
+		set_country_flag = md2026_lunar_program
+
+		hidden_effect = {
+			news_event = { id = md2026_space_news.1 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Option B: Focus on commercial space partnerships
+	option = {
+		name = md2026_space.1.o2
+		log = "[GetDateText]: [This.GetName]: md2026_space.1.o2 executed"
+
+		add_political_power = 50
+
+		set_global_flag = md2026_space_race_begun
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# md2026_space.2 - Anti-Satellite Test Incident
+# A nation tests an ASAT weapon, creating debris
+###################################
+country_event = {
+	id = md2026_space.2
+	title = md2026_space.2.t
+	desc = md2026_space.2.d
+	picture = GFX_report_event_generic_military
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2026.3.1
+		NOT = { has_global_flag = md2026_asat_incident }
+		OR = {
+			tag = USA
+			tag = JAP
+			tag = ENG
+		}
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	# Option A: Condemn and propose space arms control
+	option = {
+		name = md2026_space.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_space.2.o1 executed"
+
+		add_political_power = 50
+		add_stability = -0.03
+
+		set_global_flag = md2026_asat_incident
+
+		add_opinion_modifier = { target = CHI modifier = embargo }
+
+		hidden_effect = {
+			news_event = { id = md2026_space_news.2 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Option B: Accelerate own ASAT capability
+	option = {
+		name = md2026_space.2.o2
+		log = "[GetDateText]: [This.GetName]: md2026_space.2.o2 executed"
+
+		add_war_support = 0.05
+		air_experience = 25
+
+		set_global_flag = md2026_asat_incident
+
+		hidden_effect = {
+			news_event = { id = md2026_space_news.2 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# md2026_space.3 - Commercial Space Boom
+# Private sector space industry grows rapidly
+###################################
+country_event = {
+	id = md2026_space.3
+	title = md2026_space.3.t
+	desc = md2026_space.3.d
+	picture = GFX_report_event_generic_research
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2026.9.1
+		NOT = { has_global_flag = md2026_commercial_space }
+		tag = USA
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	# Option A: Public-private partnerships
+	option = {
+		name = md2026_space.3.o1
+		log = "[GetDateText]: [This.GetName]: md2026_space.3.o1 executed"
+
+		add_political_power = 75
+		add_stability = 0.03
+
+		set_global_flag = md2026_commercial_space
+
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Option B: Military space contracts
+	option = {
+		name = md2026_space.3.o2
+		log = "[GetDateText]: [This.GetName]: md2026_space.3.o2 executed"
+
+		add_political_power = 25
+		add_war_support = 0.05
+		air_experience = 25
+
+		set_global_flag = md2026_commercial_space
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# md2026_space.10 - Satellite Constellation Race
+# Competition for orbital internet and surveillance networks
+###################################
+country_event = {
+	id = md2026_space.10
+	title = md2026_space.10.t
+	desc = md2026_space.10.d
+	picture = GFX_report_event_generic_research
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2027.1.1
+		NOT = { has_global_flag = md2026_satellite_race }
+		OR = {
+			tag = USA
+			tag = CHI
+			tag = ENG
+		}
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 18
+	}
+
+	# Option A: Military satellite constellation
+	option = {
+		name = md2026_space.10.o1
+		log = "[GetDateText]: [This.GetName]: md2026_space.10.o1 executed"
+
+		add_war_support = 0.05
+		air_experience = 15
+
+		set_global_flag = md2026_satellite_race
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Civilian broadband constellation
+	option = {
+		name = md2026_space.10.o2
+		log = "[GetDateText]: [This.GetName]: md2026_space.10.o2 executed"
+
+		add_political_power = 75
+		add_stability = 0.03
+
+		set_global_flag = md2026_satellite_race
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+###################################
+# NEWS EVENTS
+###################################
+
+# Space Race Announcement
+news_event = {
+	id = md2026_space_news.1
+	title = md2026_space_news.1.t
+	desc = md2026_space_news.1.d
+	picture = GFX_news_event_generic_research
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_space_news.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_space_news.1 acknowledged"
+	}
+}
+
+# ASAT Test News
+news_event = {
+	id = md2026_space_news.2
+	title = md2026_space_news.2.t
+	desc = md2026_space_news.2.d
+	picture = GFX_news_event_generic_military
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_space_news.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_space_news.2 acknowledged"
+	}
+}

@@ -1,0 +1,337 @@
+###################################
+# MD2026 Climate & Energy Crisis Events
+# Extreme weather, energy transition, resource competition
+###################################
+
+add_namespace = md2026_climate
+add_namespace = md2026_climate_news
+
+###################################
+# md2026_climate.1 - Record Heat Wave
+# Fires for any major country in summer
+###################################
+country_event = {
+	id = md2026_climate.1
+	title = md2026_climate.1.t
+	desc = md2026_climate.1.d
+	picture = GFX_report_event_generic_disaster
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2026.6.1
+		NOT = { has_global_flag = md2026_heat_wave_2026 }
+		OR = {
+			tag = FRA
+			tag = SPR
+			tag = ITA
+			tag = GRE
+			tag = TUR
+			tag = RAJ
+		}
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	# Option A: Emergency climate response
+	option = {
+		name = md2026_climate.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_climate.1.o1 executed"
+
+		add_stability = -0.05
+		add_political_power = -50
+
+		set_global_flag = md2026_heat_wave_2026
+
+		random_owned_controlled_state = {
+			limit = { is_core_of = ROOT }
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+		}
+
+		hidden_effect = {
+			news_event = { id = md2026_climate_news.1 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Option B: Climate adaptation investments
+	option = {
+		name = md2026_climate.1.o2
+		log = "[GetDateText]: [This.GetName]: md2026_climate.1.o2 executed"
+
+		add_political_power = -100
+		add_stability = 0.03
+
+		set_global_flag = md2026_heat_wave_2026
+
+		hidden_effect = {
+			news_event = { id = md2026_climate_news.1 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# md2026_climate.2 - Energy Transition Crossroads
+# Fires for GER, ENG, FRA, or other industrialized nations
+###################################
+country_event = {
+	id = md2026_climate.2
+	title = md2026_climate.2.t
+	desc = md2026_climate.2.d
+	picture = GFX_report_event_generic_industry
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2026.3.1
+		NOT = { has_global_flag = md2026_energy_transition_choice }
+		OR = {
+			tag = GER
+			tag = ENG
+			tag = FRA
+			tag = ITA
+			tag = JAP
+		}
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 18
+	}
+
+	# Option A: Accelerate green transition
+	option = {
+		name = md2026_climate.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_climate.2.o1 executed"
+
+		add_political_power = -75
+		add_stability = -0.03
+
+		set_global_flag = md2026_energy_transition_choice
+		set_country_flag = md2026_green_transition
+
+		random_owned_controlled_state = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Pragmatic energy mix (keep fossil fuels)
+	option = {
+		name = md2026_climate.2.o2
+		log = "[GetDateText]: [This.GetName]: md2026_climate.2.o2 executed"
+
+		add_political_power = 50
+		add_stability = 0.05
+
+		set_global_flag = md2026_energy_transition_choice
+		set_country_flag = md2026_pragmatic_energy
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+###################################
+# md2026_climate.3 - Critical Mineral Race
+# Competition for lithium, cobalt, rare earths
+###################################
+country_event = {
+	id = md2026_climate.3
+	title = md2026_climate.3.t
+	desc = md2026_climate.3.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2026.6.1
+		NOT = { has_global_flag = md2026_mineral_race }
+		OR = {
+			tag = USA
+			tag = CHI
+		}
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	# Option A: Secure mineral supply chains
+	option = {
+		name = md2026_climate.3.o1
+		log = "[GetDateText]: [This.GetName]: md2026_climate.3.o1 executed"
+
+		add_political_power = -50
+
+		set_global_flag = md2026_mineral_race
+
+		random_owned_controlled_state = {
+			limit = { is_core_of = ROOT }
+			add_resource = {
+				type = tungsten
+				amount = 5
+			}
+		}
+
+		if = {
+			limit = { tag = USA }
+			add_opinion_modifier = { target = AST modifier = improve_relation }
+			add_opinion_modifier = { target = CAN modifier = improve_relation }
+		}
+		if = {
+			limit = { tag = CHI }
+			add_opinion_modifier = { target = SAF modifier = improve_relation }
+		}
+
+		ai_chance = {
+			base = 70
+		}
+	}
+
+	# Option B: Invest in recycling and alternatives
+	option = {
+		name = md2026_climate.3.o2
+		log = "[GetDateText]: [This.GetName]: md2026_climate.3.o2 executed"
+
+		add_political_power = -25
+
+		set_global_flag = md2026_mineral_race
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+###################################
+# md2026_climate.10 - Catastrophic Flooding
+# Fires for South/Southeast Asian countries
+###################################
+country_event = {
+	id = md2026_climate.10
+	title = md2026_climate.10.t
+	desc = md2026_climate.10.d
+	picture = GFX_report_event_generic_disaster
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2026.7.1
+		NOT = { has_global_flag = md2026_asia_floods }
+		OR = {
+			tag = RAJ
+			tag = PAK
+			tag = BRM
+		}
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	# Option A: International aid appeal
+	option = {
+		name = md2026_climate.10.o1
+		log = "[GetDateText]: [This.GetName]: md2026_climate.10.o1 executed"
+
+		add_stability = -0.10
+		add_political_power = -75
+
+		set_global_flag = md2026_asia_floods
+
+		random_owned_controlled_state = {
+			limit = { is_core_of = ROOT }
+			damage_building = {
+				type = infrastructure
+				damage = 2
+			}
+		}
+
+		hidden_effect = {
+			news_event = { id = md2026_climate_news.2 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 70
+		}
+	}
+
+	# Option B: Domestic disaster response only
+	option = {
+		name = md2026_climate.10.o2
+		log = "[GetDateText]: [This.GetName]: md2026_climate.10.o2 executed"
+
+		add_stability = -0.15
+		add_manpower = -25000
+
+		set_global_flag = md2026_asia_floods
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+###################################
+# NEWS EVENTS
+###################################
+
+# Record Heat Wave News
+news_event = {
+	id = md2026_climate_news.1
+	title = md2026_climate_news.1.t
+	desc = md2026_climate_news.1.d
+	picture = GFX_news_event_generic_disaster
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_climate_news.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_climate_news.1 acknowledged"
+	}
+}
+
+# Asian Flooding News
+news_event = {
+	id = md2026_climate_news.2
+	title = md2026_climate_news.2.t
+	desc = md2026_climate_news.2.d
+	picture = GFX_news_event_generic_disaster
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_climate_news.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_climate_news.2 acknowledged"
+	}
+}

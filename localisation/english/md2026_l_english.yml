@@ -809,3 +809,119 @@
  md2026_blr_russian_satellite_desc:0 "Belarus functions as a satellite state of Russia, with limited sovereignty in foreign and military policy."
  md2026_geo_eu_aspirations:0 "EU Aspirations"
  md2026_geo_eu_aspirations_desc:0 "Georgia's candidacy for EU membership drives democratic reform but creates tension with Russia."
+
+ ### EVENTS - CLIMATE & ENERGY CRISIS ###
+ md2026_climate.1.t:0 "Record Heat Wave"
+ md2026_climate.1.d:0 "An unprecedented heat wave is sweeping across the nation, shattering temperature records and straining infrastructure to breaking point. Wildfires rage across parched landscapes, power grids buckle under record cooling demand, and agricultural losses mount daily. Scientists warn this is a preview of the new climate reality. We must decide how to respond."
+ md2026_climate.1.o1:0 "Declare a climate emergency"
+ md2026_climate.1.o2:0 "Invest in climate adaptation infrastructure"
+
+ md2026_climate.2.t:0 "Energy Transition Crossroads"
+ md2026_climate.2.d:0 "The global energy transition has reached a critical juncture. Fossil fuel prices remain volatile, renewable costs continue to fall, and our industrial base demands reliable power. We stand at a crossroads: accelerate the transition to green energy at significant upfront cost, or maintain a pragmatic energy mix that keeps fossil fuels in the picture for decades to come."
+ md2026_climate.2.o1:0 "Accelerate the green transition"
+ md2026_climate.2.o2:0 "Maintain a pragmatic energy mix"
+
+ md2026_climate.3.t:0 "Critical Mineral Race"
+ md2026_climate.3.d:0 "The race for critical minerals — lithium, cobalt, rare earth elements — has intensified dramatically. These materials are essential for batteries, electronics, and defense systems. Our competitors are aggressively securing supply chains across Africa and South America. We must act to ensure our access to these strategic resources."
+ md2026_climate.3.o1:0 "Secure mineral supply chains through partnerships"
+ md2026_climate.3.o2:0 "Invest in recycling and synthetic alternatives"
+
+ md2026_climate.10.t:0 "Catastrophic Flooding"
+ md2026_climate.10.d:0 "Devastating monsoon floods have inundated vast areas of the country. Rivers have burst their banks, displacing millions and destroying critical infrastructure. Cropland is submerged, threatening food security. The scale of destruction requires an urgent national response."
+ md2026_climate.10.o1:0 "Appeal for international humanitarian aid"
+ md2026_climate.10.o2:0 "Handle disaster response domestically"
+
+ md2026_climate_news.1.t:0 "Record Heat Wave Devastates Region"
+ md2026_climate_news.1.d:0 "A record-breaking heat wave has struck multiple countries, causing widespread wildfires, infrastructure damage, and heat-related casualties. Scientists attribute the extreme temperatures to accelerating climate change and call for urgent action."
+ md2026_climate_news.1.o1:0 "The planet is burning"
+
+ md2026_climate_news.2.t:0 "Catastrophic Floods in Asia"
+ md2026_climate_news.2.d:0 "Unprecedented monsoon flooding has devastated large parts of South and Southeast Asia, displacing millions and destroying critical infrastructure. International aid organizations mobilize as the humanitarian crisis deepens."
+ md2026_climate_news.2.o1:0 "A humanitarian catastrophe"
+
+ ### EVENTS - AI & TECHNOLOGY REVOLUTION ###
+ md2026_tech.1.t:0 "AI Breakthrough"
+ md2026_tech.1.d:0 "Our research institutions have achieved a major breakthrough in artificial intelligence. A new large-scale AI system demonstrates capabilities far exceeding current models, with profound implications for both civilian and military applications. This technology could revolutionize our economy and defense — but the path we choose will shape its impact."
+ md2026_tech.1.o1:0 "Prioritize military AI applications"
+ md2026_tech.1.o2:0 "Focus on civilian economic applications"
+
+ md2026_tech.2.t:0 "Major Cyber Attack"
+ md2026_tech.2.d:0 "A sophisticated state-sponsored cyber attack has penetrated our critical infrastructure. Power grids, financial networks, and government databases have been compromised. Intelligence agencies have traced the attack to hostile state actors. The scale and sophistication of the intrusion demands a decisive response."
+ md2026_tech.2.o1:0 "Publicly attribute and retaliate"
+ md2026_tech.2.o2:0 "Strengthen cyber defenses quietly"
+
+ md2026_tech.3.t:0 "Automation & Job Displacement"
+ md2026_tech.3.d:0 "The rapid advance of AI and automation is reshaping the labor market. Millions of jobs in manufacturing, services, and transportation face elimination as intelligent systems become cheaper and more capable. Unemployment rises in affected sectors, and public anxiety grows. We must decide how to navigate this economic transformation."
+ md2026_tech.3.o1:0 "Launch universal retraining programs"
+ md2026_tech.3.o2:0 "Let the market adapt naturally"
+ md2026_tech.3.o3:0 "Regulate AI deployment to protect jobs"
+
+ md2026_tech.10.t:0 "Quantum Computing Milestone"
+ md2026_tech.10.d:0 "Our scientists have achieved a significant quantum computing milestone, demonstrating quantum advantage over classical computers in practical applications. This breakthrough has profound implications for cryptography, drug discovery, materials science, and military intelligence. The race to harness quantum power is on."
+ md2026_tech.10.o1:0 "Prioritize military applications — code-breaking"
+ md2026_tech.10.o2:0 "Focus on scientific research applications"
+
+ md2026_tech_news.1.t:0 "AI Breakthrough Shakes the World"
+ md2026_tech_news.1.d:0 "A major breakthrough in artificial intelligence has been announced, with a new system demonstrating unprecedented capabilities. Experts debate whether this marks the beginning of an AI revolution that will reshape the global economy and military balance of power."
+ md2026_tech_news.1.o1:0 "The age of AI is here"
+
+ md2026_tech_news.2.t:0 "Massive Cyber Attack Hits Major Power"
+ md2026_tech_news.2.d:0 "A devastating cyber attack has struck a major nation's critical infrastructure, disrupting power grids and financial systems. Intelligence agencies attribute the attack to state-sponsored hackers, marking a new escalation in the invisible war waged across digital networks."
+ md2026_tech_news.2.o1:0 "The digital battlefield expands"
+
+ ### EVENTS - DEMOGRAPHICS & POPULATION ###
+ md2026_demographics.1.t:0 "Aging Population Crisis"
+ md2026_demographics.1.d:0 "Our nation faces a demographic time bomb. The population is aging rapidly, with the working-age cohort shrinking year by year. Pension systems strain under mounting costs, healthcare demand surges, and military recruitment pools dry up. Without action, economic decline is inevitable. We must choose our path forward."
+ md2026_demographics.1.o1:0 "Open immigration reform"
+ md2026_demographics.1.o2:0 "Invest in automation and robotics"
+ md2026_demographics.1.o3:0 "Launch pro-natalist policies"
+
+ md2026_demographics.2.t:0 "Youth Bulge Instability"
+ md2026_demographics.2.d:0 "A massive youth population faces bleak employment prospects. With over half the population under 30 and unemployment rampant among the young, frustration simmers in cities and towns. This demographic powder keg threatens social stability and the regime's legitimacy. We must find a way to channel this energy."
+ md2026_demographics.2.o1:0 "Launch massive jobs programs"
+ md2026_demographics.2.o2:0 "Military recruitment drive"
+ md2026_demographics.2.o3:0 "Encourage emigration to ease pressure"
+
+ md2026_demographics.3.t:0 "Brain Drain"
+ md2026_demographics.3.d:0 "Our most talented citizens are leaving in droves. Skilled professionals, scientists, and entrepreneurs emigrate to wealthier nations offering better opportunities. This brain drain erodes our human capital and slows economic development. We must find ways to retain talent or leverage our diaspora."
+ md2026_demographics.3.o1:0 "Retention incentives and salary reform"
+ md2026_demographics.3.o2:0 "Diaspora engagement program"
+ md2026_demographics.3.o3:0 "Accept the reality and adapt"
+
+ md2026_demographics.10.t:0 "Urbanization Pressure"
+ md2026_demographics.10.d:0 "Our megacities are bursting at the seams. Rapid urbanization strains infrastructure beyond capacity — water systems fail, traffic paralyzes streets, slums expand, and air quality deteriorates. The growth is unstoppable, but how we manage it will determine whether our cities become engines of prosperity or cauldrons of chaos."
+ md2026_demographics.10.o1:0 "Smart city investments"
+ md2026_demographics.10.o2:0 "Decentralization and regional development"
+
+ md2026_demographics_news.1.t:0 "Aging Crisis Grips Developed Nations"
+ md2026_demographics_news.1.d:0 "Multiple developed nations face a deepening demographic crisis as birth rates plummet and populations age rapidly. Economists warn of severe long-term consequences for pension systems, healthcare, and economic growth across the industrialized world."
+ md2026_demographics_news.1.o1:0 "A slow-motion crisis"
+
+ ### EVENTS - SPACE RACE ###
+ md2026_space.1.t:0 "The New Space Race"
+ md2026_space.1.d:0 "A new space race has begun. Our nation stands at the threshold of a historic achievement — returning humans to the Moon and establishing a permanent presence beyond Earth. The competition is fierce, with rival powers accelerating their own programs. This is not just about science; it is about prestige, resources, and military advantage in the ultimate high ground."
+ md2026_space.1.o1:0 "Accelerate the manned lunar program"
+ md2026_space.1.o2:0 "Focus on commercial space partnerships"
+
+ md2026_space.2.t:0 "Anti-Satellite Test Incident"
+ md2026_space.2.d:0 "A rival power has conducted a destructive anti-satellite weapons test, destroying one of its own satellites and creating a massive debris field in low Earth orbit. The debris threatens our satellites, the International Space Station, and commercial space operations. This provocative act demands a response."
+ md2026_space.2.o1:0 "Condemn and propose space arms control"
+ md2026_space.2.o2:0 "Accelerate our own ASAT capability"
+
+ md2026_space.3.t:0 "Commercial Space Boom"
+ md2026_space.3.d:0 "Private space companies are revolutionizing access to orbit. Reusable rockets have slashed launch costs, satellite constellations promise global internet coverage, and space tourism is becoming a reality. This boom presents an opportunity to leverage private innovation for national strategic advantage."
+ md2026_space.3.o1:0 "Public-private space partnerships"
+ md2026_space.3.o2:0 "Military space contracts"
+
+ md2026_space.10.t:0 "Satellite Constellation Race"
+ md2026_space.10.d:0 "The race to dominate low Earth orbit with massive satellite constellations has intensified. These networks provide global communications, real-time surveillance, and precision navigation — capabilities with enormous civilian and military value. Our adversaries are deploying their own constellations at breakneck speed."
+ md2026_space.10.o1:0 "Deploy military satellite constellation"
+ md2026_space.10.o2:0 "Invest in civilian broadband constellation"
+
+ md2026_space_news.1.t:0 "New Space Race Begins!"
+ md2026_space_news.1.d:0 "A major power has announced an accelerated program to return humans to the Moon and establish a permanent lunar base. The announcement signals the beginning of a new space race with profound implications for science, technology, and military dominance."
+ md2026_space_news.1.o1:0 "To the Moon and beyond"
+
+ md2026_space_news.2.t:0 "Anti-Satellite Test Creates Space Debris Crisis"
+ md2026_space_news.2.d:0 "A destructive anti-satellite weapons test has created thousands of pieces of space debris in low Earth orbit, threatening satellites and crewed spacecraft. The international community condemns the reckless act as space becomes an increasingly contested domain."
+ md2026_space_news.2.o1:0 "Space is becoming a battlefield"

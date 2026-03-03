@@ -1,0 +1,327 @@
+###################################
+# MD2026 AI & Technology Revolution Events
+# Artificial intelligence, automation, cyber warfare, digital economy
+###################################
+
+add_namespace = md2026_tech
+add_namespace = md2026_tech_news
+
+###################################
+# md2026_tech.1 - AI Breakthrough
+# Major AI advancement with economic/military implications
+###################################
+country_event = {
+	id = md2026_tech.1
+	title = md2026_tech.1.t
+	desc = md2026_tech.1.d
+	picture = GFX_report_event_generic_research
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2026.3.1
+		NOT = { has_global_flag = md2026_ai_breakthrough }
+		OR = {
+			tag = USA
+			tag = CHI
+			tag = ENG
+		}
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	# Option A: Military AI applications
+	option = {
+		name = md2026_tech.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_tech.1.o1 executed"
+
+		add_political_power = 50
+		add_war_support = 0.05
+
+		set_global_flag = md2026_ai_breakthrough
+		set_country_flag = md2026_military_ai_leader
+
+		army_experience = 15
+		air_experience = 15
+
+		hidden_effect = {
+			news_event = { id = md2026_tech_news.1 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Civilian AI economy
+	option = {
+		name = md2026_tech.1.o2
+		log = "[GetDateText]: [This.GetName]: md2026_tech.1.o2 executed"
+
+		add_political_power = 75
+		add_stability = 0.05
+
+		set_global_flag = md2026_ai_breakthrough
+		set_country_flag = md2026_civilian_ai_leader
+
+		random_owned_controlled_state = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		hidden_effect = {
+			news_event = { id = md2026_tech_news.1 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+###################################
+# md2026_tech.2 - Major Cyber Attack
+# State-sponsored cyber warfare incident
+###################################
+country_event = {
+	id = md2026_tech.2
+	title = md2026_tech.2.t
+	desc = md2026_tech.2.d
+	picture = GFX_report_event_generic_espionage
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2026.1.15
+		NOT = { has_global_flag = md2026_major_cyber_attack }
+		OR = {
+			tag = USA
+			tag = ENG
+			tag = GER
+			tag = JAP
+			tag = KOR
+		}
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 18
+	}
+
+	# Option A: Attribute and retaliate
+	option = {
+		name = md2026_tech.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_tech.2.o1 executed"
+
+		add_stability = -0.05
+		add_political_power = -50
+		add_war_support = 0.05
+
+		set_global_flag = md2026_major_cyber_attack
+
+		add_opinion_modifier = { target = SOV modifier = embargo }
+		add_opinion_modifier = { target = CHI modifier = embargo }
+
+		hidden_effect = {
+			news_event = { id = md2026_tech_news.2 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Option B: Strengthen defenses quietly
+	option = {
+		name = md2026_tech.2.o2
+		log = "[GetDateText]: [This.GetName]: md2026_tech.2.o2 executed"
+
+		add_stability = -0.03
+		add_political_power = -25
+
+		set_global_flag = md2026_major_cyber_attack
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# md2026_tech.3 - Automation & Job Displacement
+# Economic disruption from AI-driven automation
+###################################
+country_event = {
+	id = md2026_tech.3
+	title = md2026_tech.3.t
+	desc = md2026_tech.3.d
+	picture = GFX_report_event_generic_industry
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2027.1.1
+		NOT = { has_global_flag = md2026_automation_crisis }
+		OR = {
+			tag = USA
+			tag = GER
+			tag = JAP
+			tag = KOR
+			tag = ENG
+			tag = FRA
+		}
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	# Option A: Universal retraining programs
+	option = {
+		name = md2026_tech.3.o1
+		log = "[GetDateText]: [This.GetName]: md2026_tech.3.o1 executed"
+
+		add_political_power = -100
+		add_stability = 0.03
+
+		set_global_flag = md2026_automation_crisis
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Let the market adapt
+	option = {
+		name = md2026_tech.3.o2
+		log = "[GetDateText]: [This.GetName]: md2026_tech.3.o2 executed"
+
+		add_stability = -0.10
+		add_political_power = 50
+
+		set_global_flag = md2026_automation_crisis
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option C: AI regulation
+	option = {
+		name = md2026_tech.3.o3
+		log = "[GetDateText]: [This.GetName]: md2026_tech.3.o3 executed"
+
+		add_political_power = -50
+		add_stability = 0.05
+
+		set_global_flag = md2026_automation_crisis
+
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+###################################
+# md2026_tech.10 - Quantum Computing Milestone
+# A country achieves quantum advantage
+###################################
+country_event = {
+	id = md2026_tech.10
+	title = md2026_tech.10.t
+	desc = md2026_tech.10.d
+	picture = GFX_report_event_generic_research
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2027.6.1
+		NOT = { has_global_flag = md2026_quantum_milestone }
+		OR = {
+			tag = USA
+			tag = CHI
+		}
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 18
+	}
+
+	# Option A: Prioritize military applications (code-breaking)
+	option = {
+		name = md2026_tech.10.o1
+		log = "[GetDateText]: [This.GetName]: md2026_tech.10.o1 executed"
+
+		add_political_power = 50
+		add_war_support = 0.03
+
+		set_global_flag = md2026_quantum_milestone
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: Focus on scientific research
+	option = {
+		name = md2026_tech.10.o2
+		log = "[GetDateText]: [This.GetName]: md2026_tech.10.o2 executed"
+
+		add_political_power = 100
+		add_stability = 0.05
+
+		set_global_flag = md2026_quantum_milestone
+
+		ai_chance = {
+			base = 60
+		}
+	}
+}
+
+###################################
+# NEWS EVENTS
+###################################
+
+# AI Breakthrough News
+news_event = {
+	id = md2026_tech_news.1
+	title = md2026_tech_news.1.t
+	desc = md2026_tech_news.1.d
+	picture = GFX_news_event_generic_research
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_tech_news.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_tech_news.1 acknowledged"
+	}
+}
+
+# Major Cyber Attack News
+news_event = {
+	id = md2026_tech_news.2
+	title = md2026_tech_news.2.t
+	desc = md2026_tech_news.2.d
+	picture = GFX_news_event_generic_espionage
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_tech_news.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_tech_news.2 acknowledged"
+	}
+}
