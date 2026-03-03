@@ -749,6 +749,8 @@
  md2026_nato_battlegroup_deployed_desc:0 "A multinational NATO battlegroup is stationed in the country, bolstering defense."
  md2026_trade_war_tariffs:0 "Trade War Tariffs"
  md2026_trade_war_tariffs_desc:0 "Retaliatory tariffs are disrupting trade and increasing consumer goods costs."
+ md2026_trade_war_tariffs_usa:0 "Protective Tariffs"
+ md2026_trade_war_tariffs_usa_desc:0 "Tariffs on foreign imports are shielding domestic industry but raising consumer prices."
  md2026_drone_warfare_capability:0 "Drone Warfare Capability"
  md2026_drone_warfare_capability_desc:0 "Modern combat drone systems provide tactical advantages on the battlefield."
  md2026_cyber_capability:0 "Cyber Warfare Capability"
