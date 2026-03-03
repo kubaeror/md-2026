@@ -55,6 +55,18 @@ units = {
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.70
 	}
+
+	##### Albanian Naval Force (Durres) #####
+	fleet = {
+		name = "Albanian Naval Force"
+		naval_base = 9780
+		task_force = {
+			name = "Patrol Vessel Squadron"
+			location = 9780
+			ship = { name = "P131 Iliria" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = ALB version_name = "Diciotti Class" } } }
+			ship = { name = "P132 Oriku" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = ALB version_name = "Diciotti Class" } } }
+		}
+	}
 }
 
 instant_effect = {
