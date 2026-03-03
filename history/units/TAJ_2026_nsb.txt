@@ -75,3 +75,13 @@ instant_effect = {
 		producer = TAJ
 	}
 }
+
+##### Tajik Air Force #####
+air_wings = {
+	# Ayni Air Base (Tajik Bactria)
+	724 = {
+		small_plane_strike_airframe_1 = { owner = "TAJ" creator = "CZE" amount = 6 version_name = "Aero L-39 Albatros" }
+		name = "Jet Training / Light Attack Squadron"
+		start_experience_factor = 0.25
+	}
+}

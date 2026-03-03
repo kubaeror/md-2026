@@ -66,3 +66,18 @@ instant_effect = {
 		producer = MLV
 	}
 }
+
+##### Moldovan Air Force #####
+air_wings = {
+	# Marculesti Air Base
+	147 = {
+		small_plane_airframe_2 = { owner = "MLV" creator = "SOV" amount = 6 version_name = "MiG-29 Fulcrum" }
+		name = "Fighter Aviation Squadron"
+		start_experience_factor = 0.25
+	}
+	147 = {
+		large_plane_air_transport_airframe_1 = { owner = "MLV" creator = "UKR" amount = 2 version_name = "An-26" }
+		name = "Transport Aviation Squadron"
+		start_experience_factor = 0.3
+	}
+}
