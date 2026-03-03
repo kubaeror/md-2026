@@ -2,7 +2,7 @@
 # South Africa 2026
 
 division_template = {
-	name = "Mechanized Brigade 2026"
+	name = "Mechanized Brigade"
 	regiments = {
 		Arm_Inf_Bat = { x = 0 y = 0 }
 		Arm_Inf_Bat = { x = 0 y = 1 }
@@ -18,7 +18,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Motorized Brigade 2026"
+	name = "Motorized Brigade"
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
 		Mot_Inf_Bat = { x = 0 y = 1 }
@@ -33,7 +33,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Airborne Brigade 2026"
+	name = "Airborne Brigade"
 	regiments = {
 		L_Air_Inf_Bat = { x = 0 y = 0 }
 		L_Air_Inf_Bat = { x = 0 y = 1 }
@@ -45,7 +45,7 @@ division_template = {
 }
 
 division_template = {
-	name = "SF Brigade 2026"
+	name = "SF Brigade"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -58,7 +58,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Reserve Force Brigade 2026"
+	name = "Reserve Force Brigade"
 	regiments = {
 		Militia_Bat = { x = 0 y = 0 }
 		Militia_Bat = { x = 0 y = 1 }
@@ -75,7 +75,7 @@ units = {
 	division = {
 		name = "43 SA Brigade"
 		location = 1247
-		division_template = "Mechanized Brigade 2026"
+		division_template = "Mechanized Brigade"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -83,7 +83,7 @@ units = {
 	division = {
 		name = "46 SA Brigade"
 		location = 10566
-		division_template = "Motorized Brigade 2026"
+		division_template = "Motorized Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.75
 	}
@@ -91,7 +91,7 @@ units = {
 	division = {
 		name = "9 SA Division (Reserve)"
 		location = 12648
-		division_template = "Reserve Force Brigade 2026"
+		division_template = "Reserve Force Brigade"
 		start_experience_factor = 0.15
 		start_equipment_factor = 0.6
 	}
@@ -99,7 +99,7 @@ units = {
 	division = {
 		name = "General Support Brigade"
 		location = 10400
-		division_template = "Motorized Brigade 2026"
+		division_template = "Motorized Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.75
 	}
@@ -107,7 +107,7 @@ units = {
 	division = {
 		name = "44 Parachute Brigade"
 		location = 10400
-		division_template = "Airborne Brigade 2026"
+		division_template = "Airborne Brigade"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}
@@ -115,9 +115,40 @@ units = {
 	division = {
 		name = "SA Special Forces Brigade"
 		location = 1363
-		division_template = "SF Brigade 2026"
+		division_template = "SF Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.85
+	}
+
+	##### Fleet — South African Navy #####
+	fleet = {
+		name = "South African Navy"
+		naval_base = 12589
+		# Valour-class (MEKO A-200SAN) frigates
+		task_force = {
+			name = "Frigate Squadron"
+			location = 12589
+			ship = { name = "SAS Amatola (F-145)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = SAF version_name = "Valour Class" } } }
+			ship = { name = "SAS Isandlwana (F-146)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = SAF version_name = "Valour Class" } } }
+			ship = { name = "SAS Spioenkop (F-147)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = SAF version_name = "Valour Class" } } }
+			ship = { name = "SAS Mendi (F-148)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = SAF version_name = "Valour Class" } } }
+		}
+		# Heroine-class (Type 209/1400mod) submarines
+		task_force = {
+			name = "Submarine Flotilla"
+			location = 12589
+			ship = { name = "SAS Manthatisi (S-101)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SAF version_name = "Heroine Class" } } }
+			ship = { name = "SAS Charlotte Maxeke (S-102)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SAF version_name = "Heroine Class" } } }
+			ship = { name = "SAS Queen Modjadji (S-103)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SAF version_name = "Heroine Class" } } }
+		}
+		# Warrior-class OPV (older patrol vessels)
+		task_force = {
+			name = "Patrol Squadron"
+			location = 1468
+			ship = { name = "SAS Isaac Dyobha (P-1565)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAF version_name = "Warrior Class" } } }
+			ship = { name = "SAS Makhanda (P-1569)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAF version_name = "Warrior Class" } } }
+			ship = { name = "SAS Galeshewe (P-1567)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAF version_name = "Warrior Class" } } }
+		}
 	}
 }
 
@@ -126,5 +157,27 @@ instant_effect = {
 		type = infantry_weapons4
 		amount = 2000
 		producer = SAF
+	}
+}
+
+##### Air Wings — SA Air Force #####
+air_wings = {
+	# 2 Squadron — JAS 39C/D Gripen (AFB Makhado)
+	275 = {
+		small_plane_strike_airframe_2 = { owner = "SAF" creator = "SWE" amount = 26 version_name = "JAS 39C/D Gripen" }
+		name = "2 Squadron SAAF"
+		start_experience_factor = 0.4
+	}
+	# 85 Combat Flying School — BAE Hawk Mk.120 (AFB Makhado)
+	275 = {
+		small_plane_cas_airframe_2 = { owner = "SAF" creator = "ENG" amount = 12 version_name = "Hawk Mk.120 LIFT" }
+		name = "85 Combat Flying School"
+		start_experience_factor = 0.35
+	}
+	# 28 Squadron — C-130BZ Hercules (AFB Waterkloof, Pretoria)
+	275 = {
+		large_plane_air_transport_airframe_1 = { owner = "SAF" creator = "USA" amount = 5 version_name = "C-130BZ Hercules" }
+		name = "28 Squadron SAAF"
+		start_experience_factor = 0.35
 	}
 }
