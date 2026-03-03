@@ -1702,6 +1702,9 @@ capital = 615
 		}
 	}
 
+	### Technology 2026 ###
+	md2026_tier2_2026_techs = yes
+
 	### GDP & Economic Variables ###
 	set_variable = { gdp_per_capita = 34.000 }
 	set_variable = { var = debt value = 9800.000 }

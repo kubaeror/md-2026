@@ -1,0 +1,616 @@
+# MD2026 Technology Scripted Effects
+# Assigns technologies to countries based on tier for the 2026 bookmark
+# Technologies organized by start_year era, composed into 5 tiers
+#
+# Tier 1: Superpowers (USA, SOV, CHI) — all through 2025 + cutting-edge
+# Tier 2: Major powers (ENG, FRA, GER, JAP, KOR, ISR, ITA, RAJ, AST, TUR, CAN) — all through 2025
+# Tier 3: Modern mid-tier (POL, SPR, HOL, NOR, SWE, FIN, UKR, GRE, DEN, BEL, TAI, SAU, UAE, PAK, BRA, SAF, POR, EGY) — all through 2020
+# Tier 4: Regional/developing (ROM, NKO, PER, CZE, HUN, SER, BUL, CRO, BRM, KAZ, BLR, GEO, ARM, EST, LAT, LIT, SLO) — all through 2015
+# Tier 5: Basic (AFG, ALB, BOS, ETH, FYR, ICE, KOS, KYR, LUX, MLV, MNT, SLV, SUD, SYR, TAJ, UZB, YEM) — all through 2010
+
+### ===== YEAR-BASED TECHNOLOGY BLOCKS ===== ###
+
+# ─────────────────────────────────────────────
+# Technologies with start_year = 2005
+# ─────────────────────────────────────────────
+md2026_techs_2005 = {
+	set_technology = {
+		### Infantry ###
+		infantry_weapons4 = 1
+		util_vehicle_4 = 1
+		command_control_equipment3 = 1
+		land_Drone_equipment2 = 1
+		support_weapons4 = 1
+		special_forces5 = 1
+
+		### Anti-Tank ###
+		Anti_tank_2 = 1
+		Heavy_Anti_tank_2 = 1
+
+		### Engineering ###
+		early_ai_robotics = 1
+		humanoid_robot = 1
+		computing4 = 1
+		decryption4 = 1
+		encryption4 = 1
+		edge = 1
+		umts = 1
+
+		### Industry ###
+		industrial_production_of_nanofibers = 1
+		self-replicated_3D_printer = 1
+		human_genome_project = 1
+		cas9_gene_editing = 1
+		electrification_3 = 1
+		energy_efficiency4 = 1
+		advanced_renewables = 1
+		reactor3 = 1
+		construction4 = 1
+		excavation4 = 1
+		high_speed_rail = 1
+		limited_automated_harvesting_software = 1
+
+		### Space ###
+		GNSS5 = 1
+		COMSAT5 = 1
+		SPYSAT5 = 1
+		KILLSAT3 = 1
+		OLV5 = 1
+
+		### Naval ###
+		destroyer_hull_3 = 1
+		cruiser_hull_3 = 1
+		battleship_hull_2 = 1
+		aircraft_heli_engineering_3 = 1
+		carrier_hull_3 = 1
+		tech_combat_radar_2 = 1
+		tech_combat_sonar_2 = 1
+		tech_point_defense_system_3 = 1
+	}
+
+	### Missiles (Gotterdammerung DLC) ###
+	if = { limit = { has_dlc = "Gotterdammerung" }
+		set_technology = {
+			ICBM5 = 1
+			IRBM5 = 1
+			NIRBM4 = 1
+			TEL_7 = 1
+			GLCM5 = 1
+			SAM4 = 1
+		}
+	}
+
+	### Armor & Land Systems (No Step Back DLC) ###
+	if = { limit = { has_dlc = "No Step Back" }
+		set_technology = {
+			# Tank designer modules
+			era_tech_3 = 1
+			armor_tech_3 = 1
+			modern_ammo = 1
+			diesel_engine_tech_5 = 1
+			turbine_engine_tech_4 = 1
+			small_medium_gun_tech_3 = 1
+			nera_armor_tech_2 = 1
+			# NSB Artillery
+			nsb_artillery_ammo_3 = 1
+			nsb_special_ammo_2 = 1
+			nsb_gun_technology_3 = 1
+			nsb_fire_modes_2 = 1
+			nsb_artillery_2 = 1
+			# NSB Anti-Air
+			nsb_SHORAD_missile_2 = 1
+			nsb_dual_role_missile_2 = 1
+			nsb_AA_autocannon_2 = 1
+			nsb_Anti_Air_2 = 1
+			# NSB Helicopters
+			nsb_attack_helicopter_tech_3 = 1
+			nsb_transport_helicopter3 = 1
+			nsb_engine_tech_3 = 1
+			nsb_atgm_tech_3 = 1
+			nsb_multiple_atgm_tech_3 = 1
+			nsb_heavy_atgm_tech_3 = 1
+			nsb_rocket_pods_tech_3 = 1
+			nsb_gun_pods_tech_3 = 1
+			nsb_light_nose_gun_tech_3 = 1
+			nsb_drone_tech_1 = 1
+		}
+		else = {
+			set_technology = {
+				# Non-NSB armor
+				APC_5 = 1
+				IFV_5 = 1
+				Rec_tank_2 = 1
+				# Non-NSB artillery
+				artillery_2 = 1
+				SP_arty_2 = 1
+				# Non-NSB anti-air
+				Anti_Air_2 = 1
+				# Non-NSB helicopters
+				attack_helicopter3 = 1
+				transport_helicopter3 = 1
+			}
+		}
+	}
+
+	### Aircraft (By Blood Alone DLC) ###
+	if = { limit = { has_dlc = "By Blood Alone" }
+		set_technology = {
+			awacs_2 = 1
+			drone_2 = 1
+			stealth_tech_1 = 1
+			refueling_2 = 1
+		}
+	}
+}
+
+# ─────────────────────────────────────────────
+# Technologies with start_year = 2010
+# ─────────────────────────────────────────────
+md2026_techs_2010 = {
+	set_technology = {
+		### Infantry ###
+		body_armor_2010 = 1
+
+		### Engineering ###
+		advanced_industrial_robotics = 1
+		advanced_ai = 1
+		internet4 = 1
+		hsupa = 1
+
+		### Industry ###
+		nanofibers_in_medicine = 1
+		commercial_nanomanufacturing = 1
+		gene_targeting_pesticides = 1
+		tracrrna = 1
+		utility_scale_battery_storage2 = 1
+		fuel_efficiency3 = 1
+		energy_efficiency5 = 1
+		modern_renewables = 1
+		fuel_refining4 = 1
+		electrification_4 = 1
+		construction5 = 1
+		excavation5 = 1
+		land_fort_building_3 = 1
+		modern_high_speed_rail = 1
+		satellite_based_agricultural_planning = 1
+
+		### Naval ###
+		corvette_hull_4 = 1
+		stealth_corvette_hull_1 = 1
+		frigate_hull_4 = 1
+		stealth_frigate_hull_1 = 1
+		attack_submarine_hull_4 = 1
+		missile_submarine_hull_4 = 1
+		tech_torpedoes_2 = 1
+	}
+
+	### Aircraft (BBA) ###
+	if = { limit = { has_dlc = "By Blood Alone" }
+		set_technology = {
+			suicide_drone_2 = 1
+			fwdswept_wing_design = 1
+			diamond_wing_design = 1
+			engines_3 = 1
+		}
+	}
+}
+
+# ─────────────────────────────────────────────
+# Technologies with start_year = 2015
+# ─────────────────────────────────────────────
+md2026_techs_2015 = {
+	set_technology = {
+		### Infantry ###
+		infantry_weapons5 = 1
+		util_vehicle_5 = 1
+		night_vision_4 = 1
+		command_control_equipment4 = 1
+		land_Drone_equipment3 = 1
+		exoskeleton_1 = 1
+		support_weapons5 = 1
+
+		### Engineering ###
+		smart_drones = 1
+		modern_deep_learning = 1
+		computing5 = 1
+		decryption5 = 1
+		encryption5 = 1
+		lte = 1
+		wimax = 1
+
+		### Industry ###
+		centrifugal_spinning = 1
+		modern_3D_printing = 1
+		synthetic_life = 1
+		energy_efficiency6 = 1
+		improved_modern_renewables = 1
+		electrification_5 = 1
+		reactor4 = 1
+		construction6 = 1
+		excavation6 = 1
+		freight_locomotive = 1
+		programmable_harvesters = 1
+
+		### Space ###
+		GNSS6 = 1
+		COMSAT6 = 1
+		SPYSAT6 = 1
+		KILLSAT4 = 1
+		OLV6 = 1
+
+		### Naval ###
+		stealth_destroyer_hull_1 = 1
+		tech_submarine_engineering_3 = 1
+		tech_power_systems_2 = 1
+		tech_nuclear_power_systems_2 = 1
+		tech_fire_control_2 = 1
+		tech_rail_guns = 1
+		tech_turret_missiles_surface_3 = 1
+		tech_turret_missiles_aa_3 = 1
+		tech_vls_surface_3 = 1
+		tech_vls_aa_3 = 1
+		tech_specialized_protective_equipment = 1
+	}
+
+	### Missiles (Gotterdammerung) ###
+	if = { limit = { has_dlc = "Gotterdammerung" }
+		set_technology = {
+			ICBM6 = 1
+			IRBM6 = 1
+			NIRBM5 = 1
+			HSCM = 1
+			GLCM6 = 1
+			SAM5 = 1
+		}
+	}
+
+	### NSB DLC ###
+	if = { limit = { has_dlc = "No Step Back" }
+		set_technology = {
+			# Tank designer
+			tank_components_tech_4 = 1
+			defensive_systems_4 = 1
+			diesel_engine_tech_6 = 1
+			turbine_engine_tech_5 = 1
+			medium_gun_tech_3 = 1
+			large_gun_tech_2 = 1
+			small_autocannon_tech_3 = 1
+			big_autocannon_tech_3 = 1
+			assault_gun_tech_3 = 1
+			# NSB Helicopters
+			nsb_attack_helicopter_tech_4 = 1
+			nsb_transport_helicopter4 = 1
+			nsb_engine_tech_4 = 1
+			nsb_atgm_tech_4 = 1
+			nsb_multiple_atgm_tech_4 = 1
+			nsb_heavy_atgm_tech_4 = 1
+			nsb_rocket_pods_tech_4 = 1
+			nsb_gun_pods_tech_4 = 1
+			nsb_defense_tech_3 = 1
+			nsb_drone_tech_2 = 1
+		}
+		else = {
+			set_technology = {
+				# Non-NSB armor
+				MBT_5 = 1
+				APC_6 = 1
+				IFV_6 = 1
+				Rec_tank_3 = 1
+				# Non-NSB helicopters
+				attack_helicopter4 = 1
+				transport_helicopter4 = 1
+			}
+		}
+	}
+
+	### BBA DLC ###
+	if = { limit = { has_dlc = "By Blood Alone" }
+		set_technology = {
+			gen_5_light = 1
+			gen_5_medium = 1
+			gen_5_large = 1
+		}
+		else = {
+			set_technology = {
+				# Non-BBA fighters
+				AS_Fighter4 = 1
+				MR_Fighter4 = 1
+				Strike_fighter4 = 1
+				L_Strike_fighter3 = 1
+				Air_UAV2 = 1
+				# Non-BBA bombers/transport
+				strategic_bomber4 = 1
+				transport_plane4 = 1
+				naval_plane4 = 1
+				cas3 = 1
+				awacs_plane2 = 1
+				cv_awacs_plane2 = 1
+			}
+		}
+	}
+}
+
+# ─────────────────────────────────────────────
+# Technologies with start_year = 2020
+# ─────────────────────────────────────────────
+md2026_techs_2020 = {
+	set_technology = {
+		### Infantry ###
+		camouflage4 = 1
+
+		### Anti-Tank ###
+		AT_upgrade_3 = 1
+
+		### Engineering ###
+		fully_automated_drones = 1
+		human_imitation_ai = 1
+		internet5 = 1
+		lifi = 1
+
+		### Industry ###
+		safe_cloning = 1
+		crispr_treatment_experimentation = 1
+		utility_scale_battery_storage3 = 1
+		fuel_efficiency4 = 1
+		advanced_modern_renewables = 1
+		fuel_refining5 = 1
+		electrification_6 = 1
+		reactor5 = 1
+		land_fort_building_4 = 1
+		improved_harvesting_automation = 1
+
+		### Space ###
+		part_reusable_OLV6 = 1
+
+		### Naval ###
+		helicopter_operator_hull_3 = 1
+		battleship_hull_3 = 1
+		tech_combat_radar_3 = 1
+		tech_combat_sonar_3 = 1
+		tech_point_defense_system_4 = 1
+		tech_torpedoes_3 = 1
+	}
+
+	### NSB DLC ###
+	if = { limit = { has_dlc = "No Step Back" }
+		set_technology = {
+			mbt_tech_3 = 1
+			nsb_Arty_upgrade_4 = 1
+		}
+		else = {
+			set_technology = {
+				Arty_upgrade_4 = 1
+			}
+		}
+	}
+
+	### BBA DLC ###
+	if = { limit = { has_dlc = "By Blood Alone" }
+		set_technology = {
+			avionics_3 = 1
+			solar_engines_1 = 1
+			air_weapons_3 = 1
+			countermeasures_3 = 1
+			naval_weapons_3 = 1
+			ag_weapons_3 = 1
+		}
+		else = {
+			set_technology = {
+				AS_upgrade_2 = 1
+				MR_upgrade_2 = 1
+				Strike_upgrade_2 = 1
+			}
+		}
+	}
+}
+
+# ─────────────────────────────────────────────
+# Technologies with start_year = 2025 (standard)
+# ─────────────────────────────────────────────
+md2026_techs_2025 = {
+	set_technology = {
+		### Infantry ###
+		infantry_weapons6 = 1
+		util_vehicle_6 = 1
+		command_control_equipment5 = 1
+		land_Drone_equipment4 = 1
+
+		### Anti-Tank ###
+		Anti_tank_3 = 1
+		Heavy_Anti_tank_3 = 1
+
+		### Industry ###
+		energy_efficiency7 = 1
+		electrification_7 = 1
+		reactor6 = 1
+		construction7 = 1
+		excavation7 = 1
+		early_maglev_rail = 1
+		robotic_harvesters = 1
+
+		### Space ###
+		GNSS7 = 1
+		COMSAT7 = 1
+		SPYSAT7 = 1
+		OLV7 = 1
+
+		### Naval ###
+		corvette_hull_5 = 1
+		frigate_hull_5 = 1
+		destroyer_hull_4 = 1
+		cruiser_hull_4 = 1
+		carrier_hull_4 = 1
+		attack_submarine_hull_5 = 1
+		missile_submarine_hull_5 = 1
+		tech_light_guns_2 = 1
+		tech_advanced_landing_craft = 1
+	}
+
+	### Missiles (Gotterdammerung) ###
+	if = { limit = { has_dlc = "Gotterdammerung" }
+		set_technology = {
+			ICBM7 = 1
+			IRBM7 = 1
+			NIRBM6 = 1
+			HSCM1 = 1
+			GLCM7 = 1
+			SAM6 = 1
+		}
+	}
+
+	### NSB DLC ###
+	if = { limit = { has_dlc = "No Step Back" }
+		set_technology = {
+			# Tank designer
+			era_tech_4 = 1
+			small_medium_gun_tech_4 = 1
+			small_autocannon_tech_4 = 1
+			big_autocannon_tech_4 = 1
+			assault_gun_tech_4 = 1
+			# NSB Artillery
+			nsb_artillery_ammo_4 = 1
+			nsb_special_ammo_3 = 1
+			nsb_gun_technology_4 = 1
+			nsb_fire_modes_3 = 1
+			nsb_artillery_3 = 1
+			# NSB Anti-Air
+			nsb_SHORAD_missile_3 = 1
+			nsb_dual_role_missile_3 = 1
+			nsb_AA_autocannon_3 = 1
+			nsb_Anti_Air_3 = 1
+			nsb_AA_upgrade_3 = 1
+		}
+		else = {
+			set_technology = {
+				# Non-NSB armor
+				MBT_7 = 1
+				APC_7 = 1
+				IFV_7 = 1
+				Rec_tank_4 = 1
+				# Non-NSB artillery
+				artillery_3 = 1
+				SP_arty_3 = 1
+				# Non-NSB anti-air
+				Anti_Air_3 = 1
+			}
+		}
+	}
+
+	### BBA DLC ###
+	if = { limit = { has_dlc = "By Blood Alone" }
+		set_technology = {
+			awacs_3 = 1
+			drone_3 = 1
+		}
+		else = {
+			set_technology = {
+				# Non-BBA fighters
+				AS_Fighter5 = 1
+				MR_Fighter5 = 1
+				Strike_fighter5 = 1
+				L_Strike_fighter4 = 1
+				Air_UAV3 = 1
+				# Non-BBA bombers/transport
+				strategic_bomber5 = 1
+				transport_plane5 = 1
+				naval_plane5 = 1
+				cas4 = 1
+			}
+		}
+	}
+}
+
+# ─────────────────────────────────────────────
+# Advanced 2025 technologies (Tier 1 only)
+# ─────────────────────────────────────────────
+md2026_techs_2025_advanced = {
+	set_technology = {
+		### Infantry (cutting-edge) ###
+		augmented_vision_1 = 1
+		exoskeleton_2 = 1
+		rc_fire_support_drone = 1
+
+		### Industry (cutting-edge) ###
+		t3D_printed_nanofibers = 1
+		crispr_treatment = 1
+
+		### Space ###
+		KILLSAT5 = 1
+
+		### Engineering ###
+		nanorobotics = 1
+
+		### Naval (stealth) ###
+		stealth_corvette_hull_2 = 1
+		stealth_frigate_hull_2 = 1
+		tech_rail_guns_1 = 1
+	}
+
+	### NSB DLC ###
+	if = { limit = { has_dlc = "No Step Back" }
+		set_technology = {
+			near_future_ammo = 1
+			turbine_engine_tech_6 = 1
+			electric_engine_tech_3 = 1
+		}
+	}
+
+	### BBA DLC ###
+	if = { limit = { has_dlc = "By Blood Alone" }
+		set_technology = {
+			stealth_tech_2 = 1
+			internal_weapons_2 = 1
+			rapid_dragon = 1
+			special_mad_3 = 1
+			tgp_recon_3 = 1
+		}
+	}
+}
+
+
+### ===== TIER COMPOSITION EFFECTS ===== ###
+
+# Tier 1: Superpowers (all through 2025 + cutting edge)
+# Countries: USA, SOV, CHI
+md2026_tier1_2026_techs = {
+	md2026_techs_2005 = yes
+	md2026_techs_2010 = yes
+	md2026_techs_2015 = yes
+	md2026_techs_2020 = yes
+	md2026_techs_2025 = yes
+	md2026_techs_2025_advanced = yes
+}
+
+# Tier 2: Major military powers (all through 2025)
+# Countries: ENG, FRA, GER, JAP, KOR, ISR, ITA, RAJ, AST, TUR, CAN
+md2026_tier2_2026_techs = {
+	md2026_techs_2005 = yes
+	md2026_techs_2010 = yes
+	md2026_techs_2015 = yes
+	md2026_techs_2020 = yes
+	md2026_techs_2025 = yes
+}
+
+# Tier 3: Modern mid-tier militaries (all through 2020)
+# Countries: POL, SPR, HOL, NOR, SWE, FIN, UKR, GRE, DEN, BEL, TAI, SAU, UAE, PAK, BRA, SAF, POR, EGY
+md2026_tier3_2026_techs = {
+	md2026_techs_2005 = yes
+	md2026_techs_2010 = yes
+	md2026_techs_2015 = yes
+	md2026_techs_2020 = yes
+}
+
+# Tier 4: Regional/developing militaries (all through 2015)
+# Countries: ROM, NKO, PER, CZE, HUN, SER, BUL, CRO, BRM, KAZ, BLR, GEO, ARM, EST, LAT, LIT, SLO
+md2026_tier4_2026_techs = {
+	md2026_techs_2005 = yes
+	md2026_techs_2010 = yes
+	md2026_techs_2015 = yes
+}
+
+# Tier 5: Basic modernized (all through 2010)
+# Countries: AFG, ALB, BOS, ETH, FYR, ICE, KOS, KYR, LUX, MLV, MNT, SLV, SUD, SYR, TAJ, UZB, YEM
+md2026_tier5_2026_techs = {
+	md2026_techs_2005 = yes
+	md2026_techs_2010 = yes
+}
