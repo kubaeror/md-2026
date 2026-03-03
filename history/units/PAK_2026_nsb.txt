@@ -1,7 +1,7 @@
 ##### Division Templates #####
 
 division_template = {
-	name = "Armoured Division 2026"
+	name = "Armoured Division"
 	regiments = {
 		armor_Bat = { x = 0 y = 0 }
 		armor_Bat = { x = 0 y = 1 }
@@ -20,7 +20,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Mechanized Division 2026"
+	name = "Mechanized Division"
 	regiments = {
 		Mech_Inf_Bat = { x = 0 y = 0 }
 		Mech_Inf_Bat = { x = 0 y = 1 }
@@ -38,7 +38,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Infantry Division 2026"
+	name = "Infantry Division"
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
 		Mot_Inf_Bat = { x = 0 y = 1 }
@@ -57,7 +57,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Light Infantry Division 2026"
+	name = "Light Infantry Division"
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
@@ -74,7 +74,7 @@ division_template = {
 }
 
 division_template = {
-	name = "SSG Brigade 2026"
+	name = "SSG Brigade"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -96,7 +96,7 @@ units = {
 	division = {
 		name = "1st Armoured Division"
 		location = 10887
-		division_template = "Armoured Division 2026"
+		division_template = "Armoured Division"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.85
 	}
@@ -104,7 +104,7 @@ units = {
 	division = {
 		name = "6th Armoured Division"
 		location = 6424
-		division_template = "Armoured Division 2026"
+		division_template = "Armoured Division"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.85
 	}
@@ -112,7 +112,7 @@ units = {
 	division = {
 		name = "8th Independent Armoured Brigade"
 		location = 12763
-		division_template = "Mechanized Division 2026"
+		division_template = "Mechanized Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -120,7 +120,7 @@ units = {
 	division = {
 		name = "35th Mechanized Division"
 		location = 4979
-		division_template = "Mechanized Division 2026"
+		division_template = "Mechanized Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -131,7 +131,7 @@ units = {
 	division = {
 		name = "10th Infantry Division"
 		location = 6197
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -139,7 +139,7 @@ units = {
 	division = {
 		name = "11th Infantry Division"
 		location = 10821
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -147,7 +147,7 @@ units = {
 	division = {
 		name = "14th Infantry Division"
 		location = 2084
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -155,7 +155,7 @@ units = {
 	division = {
 		name = "15th Infantry Division"
 		location = 6921
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -163,7 +163,7 @@ units = {
 	division = {
 		name = "16th Infantry Division"
 		location = 8007
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -171,7 +171,7 @@ units = {
 	division = {
 		name = "17th Infantry Division"
 		location = 1107
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -179,7 +179,7 @@ units = {
 	division = {
 		name = "18th Infantry Division"
 		location = 6097
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -187,7 +187,7 @@ units = {
 	division = {
 		name = "19th Infantry Division"
 		location = 4136
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -195,7 +195,7 @@ units = {
 	division = {
 		name = "25th Mechanized Division"
 		location = 1971
-		division_template = "Mechanized Division 2026"
+		division_template = "Mechanized Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -203,7 +203,7 @@ units = {
 	division = {
 		name = "37th Infantry Division"
 		location = 10108
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -214,7 +214,7 @@ units = {
 	division = {
 		name = "7th Infantry Division"
 		location = 3866
-		division_template = "Light Infantry Division 2026"
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}
@@ -222,7 +222,7 @@ units = {
 	division = {
 		name = "9th Infantry Division"
 		location = 7975
-		division_template = "Light Infantry Division 2026"
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}
@@ -230,7 +230,7 @@ units = {
 	division = {
 		name = "12th Infantry Division"
 		location = 5105
-		division_template = "Light Infantry Division 2026"
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}
@@ -238,7 +238,7 @@ units = {
 	division = {
 		name = "26th Mechanized Division"
 		location = 8066
-		division_template = "Mechanized Division 2026"
+		division_template = "Mechanized Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -249,7 +249,7 @@ units = {
 	division = {
 		name = "40th Infantry Division"
 		location = 10843
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.75
 	}
@@ -257,7 +257,7 @@ units = {
 	division = {
 		name = "41st Infantry Division"
 		location = 8022
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.75
 	}
@@ -268,7 +268,7 @@ units = {
 	division = {
 		name = "Force Command Northern Areas"
 		location = 1910
-		division_template = "Light Infantry Division 2026"
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -279,7 +279,7 @@ units = {
 	division = {
 		name = "Special Services Group"
 		location = 6492
-		division_template = "SSG Brigade 2026"
+		division_template = "SSG Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.9
 	}
@@ -287,7 +287,7 @@ units = {
 	division = {
 		name = "SSG (Navy)"
 		location = 4998
-		division_template = "SSG Brigade 2026"
+		division_template = "SSG Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.9
 	}
@@ -296,51 +296,80 @@ units = {
 	division = {
 		name = "2nd Armoured Division"
 		location = 6424
-		division_template = "Armoured Division 2026"
+		division_template = "Armoured Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "20th Infantry Division"
 		location = 10821
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.65
 	}
 	division = {
 		name = "23rd Infantry Division"
 		location = 2084
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.65
 	}
 	division = {
 		name = "27th Infantry Division"
 		location = 8007
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.6
 	}
 	division = {
 		name = "33rd Infantry Division"
 		location = 1107
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.6
 	}
 	division = {
 		name = "111th Brigade (Bajaur)"
 		location = 3866
-		division_template = "Light Infantry Division 2026"
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.55
 	}
 	division = {
 		name = "SSG (Air)"
 		location = 6492
-		division_template = "SSG Brigade 2026"
+		division_template = "SSG Brigade"
 		start_experience_factor = 0.65
 		start_equipment_factor = 0.75
+	}
+
+	##### Pakistan Navy #####
+
+	# Pakistan Fleet (Karachi)
+	fleet = {
+		name = "Pakistan Fleet"
+		naval_base = 3866
+		task_force = {
+			name = "Surface Flotilla"
+			location = 3866
+			ship = { name = "PNS Tughril (F-261)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = PAK version_name = "Type 054A/P" } } }
+			ship = { name = "PNS Taimur (F-262)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = PAK version_name = "Type 054A/P" } } }
+			ship = { name = "PNS Badr (F-263)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_3 = { amount = 1 owner = PAK version_name = "Type 054A/P" } } }
+			ship = { name = "PNS Hunain (F-264)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_3 = { amount = 1 owner = PAK version_name = "Type 054A/P" } } }
+			ship = { name = "PNS Zulfiquar (F-251)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PAK version_name = "F-22P Zulfiquar-class" } } }
+			ship = { name = "PNS Shamsheer (F-252)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PAK version_name = "F-22P Zulfiquar-class" } } }
+			ship = { name = "PNS Aslat (F-253)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PAK version_name = "F-22P Zulfiquar-class" } } }
+		}
+		task_force = {
+			name = "Submarine Flotilla"
+			location = 3866
+			ship = { name = "PNS Khalid (S-137)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PAK version_name = "Agosta-90B" } } }
+			ship = { name = "PNS Saad (S-138)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PAK version_name = "Agosta-90B" } } }
+			ship = { name = "PNS Hamza (S-139)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PAK version_name = "Agosta-90B" } } }
+			ship = { name = "PNS Hashmat (S-135)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = PAK version_name = "Agosta-70" } } }
+			ship = { name = "PNS Hurmat (S-136)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = PAK version_name = "Agosta-70" } } }
+			ship = { name = "PNS Hangor (S-141)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PAK version_name = "Hangor-class (Type 039B)" } } }
+		}
 	}
 }
 
@@ -349,5 +378,82 @@ instant_effect = {
 		type = infantry_weapons4
 		amount = 8000
 		producer = PAK
+	}
+}
+
+##### Pakistan Air Force #####
+
+air_wings = {
+	# No. 9 Squadron "Griffins" — F-16C/D Block 52+ (Mushaf/Sargodha)
+	422 = {
+		small_plane_strike_airframe_2 = { owner = "PAK" creator = "USA" amount = 18 version_name = "F-16C/D Block 52+" }
+		name = "No. 9 Squadron"
+		start_experience_factor = 0.5
+	}
+	# No. 16 Squadron "Black Panthers" — JF-17 Thunder (Kamra/Minhas)
+	422 = {
+		small_plane_strike_airframe_2 = { owner = "PAK" amount = 50 version_name = "JF-17 Thunder" }
+		name = "No. 16 Squadron"
+		start_experience_factor = 0.4
+	}
+	# No. 15 Squadron — J-10CE (Kamra)
+	422 = {
+		small_plane_strike_airframe_2 = { owner = "PAK" creator = "CHI" amount = 25 version_name = "J-10CE Vigorous Dragon" }
+		name = "No. 15 Squadron"
+		start_experience_factor = 0.35
+	}
+	# No. 2 Squadron "Minhasians" — JF-17 Thunder (Rafiqui)
+	563 = {
+		small_plane_strike_airframe_2 = { owner = "PAK" amount = 40 version_name = "JF-17 Thunder" }
+		name = "No. 2 Squadron"
+		start_experience_factor = 0.4
+	}
+	# No. 6 Squadron — C-130 Transport (Chaklala)
+	563 = {
+		large_plane_air_transport_airframe_1 = { owner = "PAK" creator = "USA" amount = 12 version_name = "C-130E/H Hercules" }
+		name = "No. 6 Squadron"
+		start_experience_factor = 0.35
+	}
+	# No. 5 Squadron "Falcons" — F-16A/B MLU (Masroor/Karachi)
+	426 = {
+		small_plane_strike_airframe_2 = { owner = "PAK" creator = "USA" amount = 27 version_name = "F-16A/B MLU" }
+		name = "No. 5 Squadron"
+		start_experience_factor = 0.45
+	}
+	# No. 8 Squadron "Haiders" — Mirage V (Masroor)
+	426 = {
+		small_plane_cas_airframe_2 = { owner = "PAK" creator = "FRA" amount = 30 version_name = "Mirage IIIEP/V" }
+		name = "No. 8 Squadron"
+		start_experience_factor = 0.3
+	}
+	# No. 3 AEW&C Squadron — ZDK-03 Karakoram Eagle (Masroor)
+	426 = {
+		large_plane_awacs_airframe_1 = { owner = "PAK" creator = "CHI" amount = 4 version_name = "ZDK-03 Karakoram Eagle" }
+		name = "No. 3 AEW&C Squadron"
+		start_experience_factor = 0.4
+	}
+	# No. 4 AEW&C Squadron — Saab 2000 Erieye (Masroor)
+	426 = {
+		large_plane_awacs_airframe_2 = { owner = "PAK" creator = "SWE" amount = 3 version_name = "Saab 2000 Erieye" }
+		name = "No. 4 AEW&C Squadron"
+		start_experience_factor = 0.4
+	}
+	# No. 29 Maritime Squadron — P-3C Orion (Mehran/Karachi)
+	426 = {
+		large_plane_maritime_patrol_airframe_1 = { owner = "PAK" creator = "USA" amount = 8 version_name = "P-3C Orion" }
+		name = "No. 29 Maritime Squadron"
+		start_experience_factor = 0.35
+	}
+	# No. 23 Squadron — JF-17 Thunder (Samungli/Quetta)
+	416 = {
+		small_plane_strike_airframe_2 = { owner = "PAK" amount = 20 version_name = "JF-17 Thunder" }
+		name = "No. 23 Squadron"
+		start_experience_factor = 0.35
+	}
+	# UCAV Wing — CH-4B (Balochistan)
+	416 = {
+		small_plane_suicide_airframe_2 = { owner = "PAK" creator = "CHI" amount = 8 version_name = "CH-4B" }
+		name = "UAV Wing"
+		start_experience_factor = 0.4
 	}
 }

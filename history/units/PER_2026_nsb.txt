@@ -2,7 +2,7 @@
 # Iran 2026 — Dual military: Artesh (regular) + IRGC (Sepah-e Pasdaran)
 
 division_template = {
-	name = "Lashkar-e Zerehi 2026"
+	name = "Lashkar-e Zerehi"
 	regiments = {
 		armor_Bat = { x = 0 y = 0 }
 		armor_Bat = { x = 0 y = 1 }
@@ -19,7 +19,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Lashkar-e Mechanize 2026"
+	name = "Lashkar-e Mechanize"
 	regiments = {
 		Mech_Inf_Bat = { x = 0 y = 0 }
 		Mech_Inf_Bat = { x = 0 y = 1 }
@@ -36,7 +36,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Tip-e Piade Nezam 2026"
+	name = "Tip-e Piade Nezam"
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
 		Mot_Inf_Bat = { x = 0 y = 1 }
@@ -54,7 +54,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Tip-e Chatrbaz 2026"
+	name = "Tip-e Chatrbaz"
 	regiments = {
 		L_Air_Inf_Bat = { x = 0 y = 0 }
 		L_Air_Inf_Bat = { x = 0 y = 1 }
@@ -68,7 +68,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Tofangdarane Daryayee 2026"
+	name = "Tofangdarane Daryayee"
 	regiments = {
 		L_Marine_Bat = { x = 0 y = 0 }
 		L_Marine_Bat = { x = 0 y = 1 }
@@ -82,7 +82,7 @@ division_template = {
 }
 
 division_template = {
-	name = "IRGC Division 2026"
+	name = "IRGC Division"
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
 		Mot_Inf_Bat = { x = 0 y = 1 }
@@ -99,7 +99,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Quds Force 2026"
+	name = "Quds Force"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -121,7 +121,7 @@ units = {
 	division = {
 		name = "16th Armoured Division"
 		location = 9059
-		division_template = "Lashkar-e Zerehi 2026"
+		division_template = "Lashkar-e Zerehi"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.75
 	}
@@ -129,7 +129,7 @@ units = {
 	division = {
 		name = "81st Armoured Division"
 		location = 8074
-		division_template = "Lashkar-e Zerehi 2026"
+		division_template = "Lashkar-e Zerehi"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.75
 	}
@@ -137,7 +137,7 @@ units = {
 	division = {
 		name = "88th Armoured Division"
 		location = 14271
-		division_template = "Lashkar-e Zerehi 2026"
+		division_template = "Lashkar-e Zerehi"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.75
 	}
@@ -145,7 +145,7 @@ units = {
 	division = {
 		name = "92nd Armoured Division"
 		location = 10454
-		division_template = "Lashkar-e Zerehi 2026"
+		division_template = "Lashkar-e Zerehi"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.75
 	}
@@ -153,7 +153,7 @@ units = {
 	division = {
 		name = "21st Infantry Division"
 		location = 3988
-		division_template = "Tip-e Piade Nezam 2026"
+		division_template = "Tip-e Piade Nezam"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.7
 	}
@@ -161,7 +161,7 @@ units = {
 	division = {
 		name = "28th Mechanized Division"
 		location = 2000
-		division_template = "Lashkar-e Mechanize 2026"
+		division_template = "Lashkar-e Mechanize"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.75
 	}
@@ -169,7 +169,7 @@ units = {
 	division = {
 		name = "30th Infantry Division"
 		location = 4609
-		division_template = "Tip-e Piade Nezam 2026"
+		division_template = "Tip-e Piade Nezam"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.7
 	}
@@ -177,7 +177,7 @@ units = {
 	division = {
 		name = "58th Infantry Division"
 		location = 10828
-		division_template = "Tip-e Piade Nezam 2026"
+		division_template = "Tip-e Piade Nezam"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.7
 	}
@@ -185,7 +185,7 @@ units = {
 	division = {
 		name = "64th Infantry Division"
 		location = 4959
-		division_template = "Tip-e Piade Nezam 2026"
+		division_template = "Tip-e Piade Nezam"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.7
 	}
@@ -193,7 +193,7 @@ units = {
 	division = {
 		name = "77th Infantry Division"
 		location = 4618
-		division_template = "Tip-e Piade Nezam 2026"
+		division_template = "Tip-e Piade Nezam"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.7
 	}
@@ -201,7 +201,7 @@ units = {
 	division = {
 		name = "55th Airborne Brigade"
 		location = 10768
-		division_template = "Tip-e Chatrbaz 2026"
+		division_template = "Tip-e Chatrbaz"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}
@@ -209,7 +209,7 @@ units = {
 	division = {
 		name = "Artesh Marines"
 		location = 4580
-		division_template = "Tofangdarane Daryayee 2026"
+		division_template = "Tofangdarane Daryayee"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.75
 	}
@@ -220,7 +220,7 @@ units = {
 	division = {
 		name = "1st Sarallah IRGC Division"
 		location = 1957
-		division_template = "IRGC Division 2026"
+		division_template = "IRGC Division"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
 	}
@@ -228,7 +228,7 @@ units = {
 	division = {
 		name = "5th Nasr IRGC Division"
 		location = 3908
-		division_template = "IRGC Division 2026"
+		division_template = "IRGC Division"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
 	}
@@ -236,7 +236,7 @@ units = {
 	division = {
 		name = "8th Najaf IRGC Division"
 		location = 4618
-		division_template = "IRGC Division 2026"
+		division_template = "IRGC Division"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
 	}
@@ -244,7 +244,7 @@ units = {
 	division = {
 		name = "10th Seyyed al-Shuhada IRGC Division"
 		location = 829
-		division_template = "IRGC Division 2026"
+		division_template = "IRGC Division"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
 	}
@@ -252,7 +252,7 @@ units = {
 	division = {
 		name = "14th Imam Hossein IRGC Division"
 		location = 7602
-		division_template = "IRGC Division 2026"
+		division_template = "IRGC Division"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
 	}
@@ -260,7 +260,7 @@ units = {
 	division = {
 		name = "17th Ali ibn Abi Talib IRGC Division"
 		location = 4356
-		division_template = "IRGC Division 2026"
+		division_template = "IRGC Division"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
 	}
@@ -268,7 +268,7 @@ units = {
 	division = {
 		name = "19th Fajr IRGC Division"
 		location = 8040
-		division_template = "IRGC Division 2026"
+		division_template = "IRGC Division"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
 	}
@@ -276,7 +276,7 @@ units = {
 	division = {
 		name = "25th Karbala IRGC Division"
 		location = 2026
-		division_template = "IRGC Division 2026"
+		division_template = "IRGC Division"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
 	}
@@ -284,7 +284,7 @@ units = {
 	division = {
 		name = "IRGC Naval Forces"
 		location = 5050
-		division_template = "Tofangdarane Daryayee 2026"
+		division_template = "Tofangdarane Daryayee"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
 	}
@@ -295,9 +295,46 @@ units = {
 	division = {
 		name = "Quds Force"
 		location = 1982
-		division_template = "Quds Force 2026"
+		division_template = "Quds Force"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.8
+	}
+
+	##### IRIN — Islamic Republic of Iran Navy #####
+
+	# Southern Fleet (Persian Gulf / Gulf of Oman — Bandar Abbas)
+	fleet = {
+		name = "IRIN Southern Fleet"
+		naval_base = 7982
+		task_force = {
+			name = "1st Surface Group"
+			location = 7982
+			ship = { name = "IRIS Jamaran (76)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = PER version_name = "Moudge-class" } } }
+			ship = { name = "IRIS Sahand (74)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = PER version_name = "Moudge-class" } } }
+			ship = { name = "IRIS Dena (75)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PER version_name = "Moudge-class" } } }
+			ship = { name = "IRIS Alvand (71)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = PER version_name = "Alvand-class" } } }
+			ship = { name = "IRIS Alborz (72)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = PER version_name = "Alvand-class" } } }
+			ship = { name = "IRIS Sabalan (73)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = PER version_name = "Alvand-class" } } }
+		}
+		task_force = {
+			name = "Submarine Flotilla"
+			location = 7982
+			ship = { name = "IRIS Tareg (901)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PER version_name = "Kilo-class (Type 877EKM)" } } }
+			ship = { name = "IRIS Noor (902)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PER version_name = "Kilo-class (Type 877EKM)" } } }
+			ship = { name = "IRIS Yunes (903)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PER version_name = "Kilo-class (Type 877EKM)" } } }
+			ship = { name = "IRIS Fateh (S-1)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_1 = { amount = 1 owner = PER version_name = "Fateh-class" } } }
+		}
+	}
+
+	# Caspian Fleet (Bandar-e Anzali)
+	fleet = {
+		name = "IRIN Caspian Fleet"
+		naval_base = 14619
+		task_force = {
+			name = "Caspian Task Force"
+			location = 14619
+			ship = { name = "IRIS Damavand (77)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PER version_name = "Moudge-class" } } }
+		}
 	}
 }
 
@@ -306,5 +343,70 @@ instant_effect = {
 		type = infantry_weapons4
 		amount = 10000
 		producer = PER
+	}
+}
+
+##### IRIAF — Islamic Republic of Iran Air Force #####
+
+air_wings = {
+	# 8th Tactical Fighter Base (Isfahan/Khatami) — F-14A Tomcat
+	976 = {
+		medium_plane_fighter_airframe_2 = { owner = "PER" creator = "USA" amount = 24 version_name = "F-14A Tomcat" }
+		name = "81st Tactical Fighter Squadron"
+		start_experience_factor = 0.4
+	}
+	# 2nd Tactical Fighter Base (Tabriz) — MiG-29A
+	407 = {
+		small_plane_airframe_2 = { owner = "PER" creator = "SOV" amount = 25 version_name = "MiG-29A Fulcrum" }
+		name = "21st Tactical Fighter Squadron"
+		start_experience_factor = 0.35
+	}
+	# 6th Tactical Fighter Base (Bandar Abbas) — F-4E
+	978 = {
+		medium_plane_cas_airframe_1 = { owner = "PER" creator = "USA" amount = 10 version_name = "F-4E Phantom II" }
+		name = "61st Tactical Fighter Squadron"
+		start_experience_factor = 0.3
+	}
+	# 7th Tactical Fighter Base (Bushehr) — F-4E
+	1146 = {
+		medium_plane_cas_airframe_1 = { owner = "PER" creator = "USA" amount = 10 version_name = "F-4E Phantom II" }
+		name = "71st Tactical Fighter Squadron"
+		start_experience_factor = 0.3
+	}
+	# 3rd Tactical Fighter Base (Hamadan/Nojeh) — F-4E
+	1148 = {
+		medium_plane_cas_airframe_1 = { owner = "PER" creator = "USA" amount = 10 version_name = "F-4E Phantom II" }
+		name = "31st Tactical Fighter Squadron"
+		start_experience_factor = 0.3
+	}
+	# 4th Tactical Fighter Base (Dezful) — F-5E
+	406 = {
+		small_plane_airframe_2 = { owner = "PER" creator = "USA" amount = 20 version_name = "F-5E Tiger II" }
+		name = "41st Tactical Fighter Squadron"
+		start_experience_factor = 0.25
+	}
+	# 14th Tactical Fighter Base (Mashhad) — F-5E
+	402 = {
+		small_plane_airframe_2 = { owner = "PER" creator = "USA" amount = 20 version_name = "F-5E Tiger II" }
+		name = "141st Tactical Fighter Squadron"
+		start_experience_factor = 0.25
+	}
+	# 9th Tactical Fighter Base (Shiraz) — Su-24MK
+	400 = {
+		medium_plane_cas_airframe_1 = { owner = "PER" creator = "SOV" amount = 20 version_name = "Su-24MK Fencer" }
+		name = "91st Tactical Fighter Squadron"
+		start_experience_factor = 0.3
+	}
+	# Transport — Mehrabad (Tehran)
+	405 = {
+		large_plane_air_transport_airframe_1 = { owner = "PER" creator = "USA" amount = 8 version_name = "C-130E/H Hercules" }
+		name = "11th Tactical Airlift Squadron"
+		start_experience_factor = 0.3
+	}
+	# IRGC Aerospace Force — Mohajer-6 UCAV
+	399 = {
+		small_plane_suicide_airframe_2 = { owner = "PER" amount = 12 version_name = "Mohajer-6 UCAV" }
+		name = "IRGC Aerospace UAV Wing"
+		start_experience_factor = 0.45
 	}
 }
