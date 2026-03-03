@@ -280,6 +280,29 @@ md2026_techs_prereqs = {
 			# Internal weapons (2000 prereq for internal_weapons_2 @ 2025)
 			internal_weapons_1 = 1
 		}
+		else = {
+			set_technology = {
+				# Non-BBA fixed wing root (1945)
+				early_fighter = 1
+				# AS Fighter chain (1965-1995 prereqs for AS_Fighter4 @ 2015)
+				AS_Fighter1 = 1
+				AS_Fighter2 = 1
+				AS_upgrade_1 = 1
+				# MR Fighter chain (1965-1995 prereqs for MR_Fighter4 @ 2015)
+				MR_Fighter1 = 1
+				MR_Fighter2 = 1
+				MR_upgrade_1 = 1
+				# Strike Fighter chain (1965-1995 prereqs for Strike_fighter4 @ 2015)
+				Strike_fighter1 = 1
+				Strike_fighter2 = 1
+				Strike_upgrade_1 = 1
+				# L_Strike chain (1965-1995 prereqs for L_Strike_fighter3 @ 2015)
+				L_Strike_fighter1 = 1
+				L_Strike_fighter2 = 1
+				# UAV (1995 prereq for Air_UAV2 @ 2015)
+				Air_UAV1 = 1
+			}
+		}
 	}
 }
 
