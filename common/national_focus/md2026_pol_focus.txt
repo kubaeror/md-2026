@@ -49,8 +49,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_shield_of_europe"
 		add_war_support = 0.10
-		add_opinion_modifier = { target = USA modifier = improved_relations }
-		USA = { add_opinion_modifier = { target = POL modifier = improved_relations } }
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		USA = { add_opinion_modifier = { target = POL modifier = md2026_improved_relations } }
 	}
 }
 
@@ -109,8 +109,8 @@ shared_focus = {
 			uses = 2
 			category = CAT_armor
 		}
-		add_opinion_modifier = { target = KOR modifier = improved_relations }
-		KOR = { add_opinion_modifier = { target = POL modifier = improved_relations } }
+		add_opinion_modifier = { target = KOR modifier = md2026_improved_relations }
+		KOR = { add_opinion_modifier = { target = POL modifier = md2026_improved_relations } }
 	}
 }
 
@@ -159,11 +159,11 @@ shared_focus = {
 	relative_position_id = MD2026_POL_eu_powerhouse
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_visegrad"
-		add_opinion_modifier = { target = CZE modifier = improved_relations }
-		add_opinion_modifier = { target = HUN modifier = improved_relations }
-		add_opinion_modifier = { target = SLO modifier = improved_relations }
-		CZE = { add_opinion_modifier = { target = POL modifier = improved_relations } }
-		HUN = { add_opinion_modifier = { target = POL modifier = improved_relations } }
+		add_opinion_modifier = { target = CZE modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = HUN modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = SLO modifier = md2026_improved_relations }
+		CZE = { add_opinion_modifier = { target = POL modifier = md2026_improved_relations } }
+		HUN = { add_opinion_modifier = { target = POL modifier = md2026_improved_relations } }
 	}
 }
 

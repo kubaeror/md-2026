@@ -127,8 +127,8 @@ country_event = {
 
 		set_global_flag = md2026_major_cyber_attack
 
-		add_opinion_modifier = { target = SOV modifier = embargo }
-		add_opinion_modifier = { target = CHI modifier = embargo }
+		add_opinion_modifier = { target = SOV modifier = md2026_tech_rivalry }
+		add_opinion_modifier = { target = CHI modifier = md2026_tech_rivalry }
 
 		hidden_effect = {
 			news_event = { id = md2026_tech_news.2 hours = 6 }

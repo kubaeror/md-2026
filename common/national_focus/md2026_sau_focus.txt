@@ -104,7 +104,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SAU_opec_dominance"
 		add_political_power = 100
-		add_opinion_modifier = { target = UAE modifier = improved_relations }
+		add_opinion_modifier = { target = UAE modifier = md2026_improved_relations }
 	}
 }
 
@@ -167,8 +167,8 @@ shared_focus = {
 	mutually_exclusive = { focus = MD2026_SAU_iran_rivalry }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SAU_abraham_accords"
-		add_opinion_modifier = { target = ISR modifier = improved_relations }
-		ISR = { add_opinion_modifier = { target = SAU modifier = improved_relations } }
+		add_opinion_modifier = { target = ISR modifier = md2026_improved_relations }
+		ISR = { add_opinion_modifier = { target = SAU modifier = md2026_improved_relations } }
 		add_stability = 0.05
 		add_political_power = 75
 	}

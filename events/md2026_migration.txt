@@ -87,7 +87,7 @@ country_event = {
 				NOT = { tag = ROOT }
 				has_government = democratic
 			}
-			add_opinion_modifier = { target = ROOT modifier = embargo }
+			add_opinion_modifier = { target = ROOT modifier = md2026_migration_tensions }
 		}
 
 		ai_chance = {
@@ -214,7 +214,7 @@ country_event = {
 		add_stability = 0.05
 		add_war_support = 0.03
 
-		add_opinion_modifier = { target = GER modifier = embargo }
+		add_opinion_modifier = { target = GER modifier = md2026_migration_tensions }
 
 		ai_chance = {
 			base = 30

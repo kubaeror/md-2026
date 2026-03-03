@@ -49,7 +49,7 @@ country_event = {
 		add_political_power = 50
 		add_stability = 0.05
 
-		set_country_flag = md2026_election_held
+		set_country_flag = { flag = md2026_election_held days = 730 value = 1 }
 
 		ai_chance = {
 			base = 35
@@ -64,7 +64,7 @@ country_event = {
 		add_political_power = 50
 		add_stability = 0.05
 
-		set_country_flag = md2026_election_held
+		set_country_flag = { flag = md2026_election_held days = 730 value = 1 }
 
 		ai_chance = {
 			base = 30
@@ -80,7 +80,7 @@ country_event = {
 		add_stability = -0.10
 		add_war_support = 0.05
 
-		set_country_flag = md2026_election_held
+		set_country_flag = { flag = md2026_election_held days = 730 value = 1 }
 
 		ai_chance = {
 			base = 25
@@ -95,7 +95,7 @@ country_event = {
 		add_political_power = 25
 		add_stability = 0.03
 
-		set_country_flag = md2026_election_held
+		set_country_flag = { flag = md2026_election_held days = 730 value = 1 }
 
 		ai_chance = {
 			base = 30
@@ -226,7 +226,7 @@ country_event = {
 					tag = SPR
 				}
 			}
-			add_opinion_modifier = { target = FRA modifier = embargo }
+			add_opinion_modifier = { target = FRA modifier = md2026_diplomatic_disapproval }
 		}
 
 		ai_chance = {

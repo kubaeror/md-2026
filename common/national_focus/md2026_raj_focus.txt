@@ -106,12 +106,12 @@ shared_focus = {
 	mutually_exclusive = { focus = MD2026_RAJ_brics_balance }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_RAJ_quad_deepening"
-		add_opinion_modifier = { target = USA modifier = improved_relations }
-		add_opinion_modifier = { target = JAP modifier = improved_relations }
-		add_opinion_modifier = { target = AST modifier = improved_relations }
-		USA = { add_opinion_modifier = { target = RAJ modifier = improved_relations } }
-		JAP = { add_opinion_modifier = { target = RAJ modifier = improved_relations } }
-		AST = { add_opinion_modifier = { target = RAJ modifier = improved_relations } }
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = JAP modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = AST modifier = md2026_improved_relations }
+		USA = { add_opinion_modifier = { target = RAJ modifier = md2026_improved_relations } }
+		JAP = { add_opinion_modifier = { target = RAJ modifier = md2026_improved_relations } }
+		AST = { add_opinion_modifier = { target = RAJ modifier = md2026_improved_relations } }
 	}
 }
 
@@ -126,11 +126,11 @@ shared_focus = {
 	mutually_exclusive = { focus = MD2026_RAJ_quad_deepening }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_RAJ_brics_balance"
-		add_opinion_modifier = { target = SOV modifier = improved_relations }
-		add_opinion_modifier = { target = CHI modifier = improved_relations }
-		add_opinion_modifier = { target = BRA modifier = improved_relations }
-		SOV = { add_opinion_modifier = { target = RAJ modifier = improved_relations } }
-		CHI = { add_opinion_modifier = { target = RAJ modifier = improved_relations } }
+		add_opinion_modifier = { target = SOV modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = CHI modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = BRA modifier = md2026_improved_relations }
+		SOV = { add_opinion_modifier = { target = RAJ modifier = md2026_improved_relations } }
+		CHI = { add_opinion_modifier = { target = RAJ modifier = md2026_improved_relations } }
 	}
 }
 
@@ -146,7 +146,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_RAJ_china_border"
 		add_war_support = 0.10
-		add_opinion_modifier = { target = CHI modifier = border_conflict }
+		add_opinion_modifier = { target = CHI modifier = md2026_border_conflict }
 	}
 }
 

@@ -201,8 +201,8 @@ shared_focus = {
 	relative_position_id = MD2026_KOR_shield_freedom
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_KOR_us_alliance"
-		add_opinion_modifier = { target = USA modifier = improved_relations }
-		USA = { add_opinion_modifier = { target = KOR modifier = improved_relations } }
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		USA = { add_opinion_modifier = { target = KOR modifier = md2026_improved_relations } }
 		add_political_power = 50
 	}
 }

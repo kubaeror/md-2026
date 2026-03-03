@@ -45,6 +45,10 @@ country_event = {
 
 		set_country_flag = md2026_aging_crisis_addressed
 
+		hidden_effect = {
+			news_event = { id = md2026_demographics_news.1 hours = 6 }
+		}
+
 		ai_chance = {
 			base = 40
 		}
@@ -59,6 +63,10 @@ country_event = {
 		add_stability = 0.03
 
 		set_country_flag = md2026_aging_crisis_addressed
+
+		hidden_effect = {
+			news_event = { id = md2026_demographics_news.1 hours = 6 }
+		}
 
 		random_owned_controlled_state = {
 			limit = { is_core_of = ROOT }
@@ -84,6 +92,10 @@ country_event = {
 		add_stability = 0.05
 
 		set_country_flag = md2026_aging_crisis_addressed
+
+		hidden_effect = {
+			news_event = { id = md2026_demographics_news.1 hours = 6 }
+		}
 
 		ai_chance = {
 			base = 20

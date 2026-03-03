@@ -89,9 +89,9 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_JAP_indo_pacific"
 		add_political_power = 75
-		add_opinion_modifier = { target = USA modifier = improved_relations }
-		add_opinion_modifier = { target = AST modifier = improved_relations }
-		add_opinion_modifier = { target = RAJ modifier = improved_relations }
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = AST modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = RAJ modifier = md2026_improved_relations }
 	}
 }
 
@@ -107,8 +107,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_JAP_taiwan_contingency"
 		add_war_support = 0.10
-		add_opinion_modifier = { target = TAI modifier = improved_relations }
-		TAI = { add_opinion_modifier = { target = JAP modifier = improved_relations } }
+		add_opinion_modifier = { target = TAI modifier = md2026_improved_relations }
+		TAI = { add_opinion_modifier = { target = JAP modifier = md2026_improved_relations } }
 		add_opinion_modifier = { target = CHI modifier = embargo }
 	}
 }
@@ -125,8 +125,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_JAP_korea_reconciliation"
 		add_stability = 0.05
-		add_opinion_modifier = { target = KOR modifier = improved_relations }
-		KOR = { add_opinion_modifier = { target = JAP modifier = improved_relations } }
+		add_opinion_modifier = { target = KOR modifier = md2026_improved_relations }
+		KOR = { add_opinion_modifier = { target = JAP modifier = md2026_improved_relations } }
 	}
 }
 

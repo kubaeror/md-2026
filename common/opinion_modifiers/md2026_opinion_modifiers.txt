@@ -83,13 +83,31 @@ opinion_modifiers = {
 	}
 
 	# Generic diplomacy modifiers used by focus trees
-	improved_relations = {
+	md2026_improved_relations = {
 		value = 25
 		decay = 1
 	}
 
-	border_conflict = {
+	md2026_border_conflict = {
 		value = -40
 		decay = 0.5
+	}
+
+	# Diplomatic disapproval (elections, political shifts)
+	md2026_diplomatic_disapproval = {
+		value = -20
+		decay = 1
+	}
+
+	# Tech/space competition rivalry
+	md2026_tech_rivalry = {
+		value = -15
+		decay = 1
+	}
+
+	# Migration crisis tensions
+	md2026_migration_tensions = {
+		value = -20
+		decay = 1
 	}
 }
