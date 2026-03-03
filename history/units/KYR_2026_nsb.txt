@@ -55,3 +55,13 @@ instant_effect = {
 		producer = KYR
 	}
 }
+
+##### Kyrgyz Air Force #####
+air_wings = {
+	# Kant / Frunze (Tian Shan)
+	720 = {
+		small_plane_strike_airframe_1 = { owner = "KYR" creator = "CZE" amount = 6 version_name = "Aero L-39 Albatros" }
+		name = "Training Aviation Regiment"
+		start_experience_factor = 0.2
+	}
+}

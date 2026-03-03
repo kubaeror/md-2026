@@ -31,3 +31,13 @@ instant_effect = {
 		producer = LUX
 	}
 }
+
+##### Luxembourg Air Component #####
+air_wings = {
+	# Luxembourg (NATO EATC contribution)
+	53 = {
+		large_plane_air_transport_airframe_2 = { owner = "LUX" creator = "FRA" amount = 1 version_name = "A400M Atlas" }
+		name = "NATO Heavy Airlift Wing"
+		start_experience_factor = 0.5
+	}
+}
