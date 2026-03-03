@@ -152,6 +152,8 @@ country_event = {
 		add_stability = -0.05
 
 		add_opinion_modifier = { target = CHI modifier = embargo }
+		add_opinion_modifier = { target = CHI modifier = md2026_trade_war_opinion }
+		reverse_add_opinion_modifier = { target = CHI modifier = md2026_trade_war_opinion }
 
 		ai_chance = {
 			base = 30
@@ -257,6 +259,11 @@ country_event = {
 		}
 
 		add_opinion_modifier = { target = TAI modifier = improve_relation }
+		add_opinion_modifier = { target = TAI modifier = md2026_taiwan_recognition_opinion }
+		reverse_add_opinion_modifier = { target = TAI modifier = md2026_taiwan_recognition_opinion }
+		CHI = {
+			add_opinion_modifier = { target = USA modifier = md2026_taiwan_recognition_anger }
+		}
 
 		ai_chance = {
 			base = 50

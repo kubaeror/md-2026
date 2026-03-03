@@ -105,6 +105,10 @@ country_event = {
 
 		add_opinion_modifier = { target = SOV modifier = improve_relation }
 		add_opinion_modifier = { target = CHI modifier = improve_relation }
+		add_opinion_modifier = { target = SOV modifier = md2026_brics_opinion }
+		add_opinion_modifier = { target = CHI modifier = md2026_brics_opinion }
+		reverse_add_opinion_modifier = { target = SOV modifier = md2026_brics_opinion }
+		reverse_add_opinion_modifier = { target = CHI modifier = md2026_brics_opinion }
 
 		# NATO allies won't like this
 		every_country = {
@@ -286,6 +290,13 @@ country_event = {
 
 		add_opinion_modifier = { target = CHI modifier = embargo }
 		add_opinion_modifier = { target = SOV modifier = embargo }
+
+		CHI = {
+			add_opinion_modifier = { target = USA modifier = md2026_counter_sanctions_opinion }
+		}
+		SOV = {
+			add_opinion_modifier = { target = USA modifier = md2026_counter_sanctions_opinion }
+		}
 
 		ai_chance = {
 			base = 50

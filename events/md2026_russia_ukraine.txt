@@ -167,6 +167,10 @@ country_event = {
 		# White peace
 		white_peace = UKR
 
+		add_opinion_modifier = { target = USA modifier = md2026_sanctions_lifted_opinion }
+		add_opinion_modifier = { target = ENG modifier = md2026_sanctions_lifted_opinion }
+		add_opinion_modifier = { target = FRA modifier = md2026_sanctions_lifted_opinion }
+
 		hidden_effect = {
 			news_event = { id = md2026_ru_ukr_news.1 hours = 6 }
 		}
@@ -234,6 +238,8 @@ country_event = {
 		add_war_support = -0.20
 
 		set_country_flag = md2026_frozen_conflict_established
+
+		add_opinion_modifier = { target = SOV modifier = md2026_sanctions_lifted_disapproval }
 
 		ai_chance = {
 			base = 70
@@ -348,6 +354,14 @@ country_event = {
 			add_opinion_modifier = { target = UKR modifier = improve_relation }
 		}
 
+		add_opinion_modifier = { target = USA modifier = md2026_ukraine_aid_gratitude }
+		add_opinion_modifier = { target = ENG modifier = md2026_ukraine_aid_gratitude }
+		SOV = {
+			add_opinion_modifier = { target = USA modifier = md2026_ukraine_aid_anger }
+			add_opinion_modifier = { target = ENG modifier = md2026_ukraine_aid_anger }
+			add_opinion_modifier = { target = FRA modifier = md2026_ukraine_aid_anger }
+		}
+
 		ai_chance = {
 			base = 50
 		}
@@ -405,6 +419,7 @@ country_event = {
 		add_political_power = 25
 		add_war_support = 0.05
 		add_opinion_modifier = { target = USA modifier = embargo }
+		add_opinion_modifier = { target = USA modifier = md2026_sanctions_opinion }
 
 		USA = {
 			country_event = { id = md2026_ru_ukr.13 days = 3 }

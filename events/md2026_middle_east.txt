@@ -301,6 +301,18 @@ country_event = {
 		add_opinion_modifier = { target = USA modifier = improve_relation }
 		add_opinion_modifier = { target = ENG modifier = improve_relation }
 		add_opinion_modifier = { target = FRA modifier = improve_relation }
+		add_opinion_modifier = { target = USA modifier = md2026_nuclear_deal_opinion }
+		reverse_add_opinion_modifier = { target = USA modifier = md2026_nuclear_deal_opinion }
+		reverse_add_opinion_modifier = { target = ENG modifier = md2026_nuclear_deal_opinion }
+		reverse_add_opinion_modifier = { target = FRA modifier = md2026_nuclear_deal_opinion }
+		ISR = {
+			add_opinion_modifier = { target = PER modifier = md2026_iran_deal_isr_disapproval }
+			add_opinion_modifier = { target = USA modifier = md2026_iran_deal_isr_disapproval }
+		}
+		SAU = {
+			add_opinion_modifier = { target = PER modifier = md2026_iran_deal_sau_disapproval }
+			add_opinion_modifier = { target = USA modifier = md2026_iran_deal_sau_disapproval }
+		}
 
 		ai_chance = {
 			base = 30
