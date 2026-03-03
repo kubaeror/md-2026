@@ -301,6 +301,26 @@ md2026_techs_prereqs = {
 				L_Strike_fighter2 = 1
 				# UAV (1995 prereq for Air_UAV2 @ 2015)
 				Air_UAV1 = 1
+				# Non-BBA heavy aircraft root (1945)
+				early_bomber = 1
+				# Strategic Bomber chain (1965-1985 prereqs for strategic_bomber4 @ 2015)
+				strategic_bomber1 = 1
+				strategic_bomber2 = 1
+				strategic_bomber3 = 1
+				# Transport Plane chain (1965-1995 prereqs for transport_plane4 @ 2015)
+				transport_plane1 = 1
+				transport_plane2 = 1
+				transport_plane3 = 1
+				# Naval Plane chain (1965-1985 prereqs for naval_plane4 @ 2015)
+				naval_plane1 = 1
+				naval_plane2 = 1
+				naval_plane3 = 1
+				# CAS chain (1975-1995 prereqs for cas3 @ 2015)
+				cas1 = 1
+				cas2 = 1
+				# AWACS plane (1985 prereq for awacs_plane2 @ 2015)
+				awacs_plane1 = 1
+				cv_awacs_plane1 = 1
 			}
 		}
 	}
