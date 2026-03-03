@@ -18,17 +18,13 @@ state = {
 		set_variable = { hydroelectric_energy_storage_var = 0 }
 		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
 
-		# MD2026: Kherson Oblast - city liberated by Ukraine (Nov 2022)
-		# East bank of Dnieper still under Russian control
+		# MD2026: Kherson Oblast - western bank liberated by Ukraine (Nov 2022)
+		# East bank of Dnieper under Russian control in practice,
+		# but province-level control can only be set at runtime.
+		# State remains UKR-owned; Russia gets cores. War + unit placement
+		# in startup effects handles the frontline.
 		2026.1.1 = {
 			add_core_of = SOV
-			# Eastern provinces under Russian control
-			set_province_controller = { province = 568 controller = SOV }
-			set_province_controller = { province = 588 controller = SOV }
-			set_province_controller = { province = 721 controller = SOV }
-			set_province_controller = { province = 9712 controller = SOV }
-			set_province_controller = { province = 14435 controller = SOV }
-			set_province_controller = { province = 14436 controller = SOV }
 		}
 	}
 
