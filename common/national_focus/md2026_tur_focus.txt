@@ -1,6 +1,7 @@
 ###################################
 # MD2026 Turkey (TUR) Focus Tree
 # 2026 Shared Focuses - Turkiye's New Era
+# 26 focuses: 1 root + 5 branches + capstone
 ###################################
 
 shared_focus = {
@@ -24,11 +25,12 @@ shared_focus = {
 	}
 }
 
-### Defense Industry Branch ###
+### B1: Defense Industry (x=-6) ###
+
 shared_focus = {
 	id = MD2026_TUR_defense_industry
 	icon = GFX_goal_generic_construct_mil_factory
-	x = -3
+	x = -6
 	y = 1
 	cost = 8.6
 	search_filters = { FOCUS_FILTER_MILITARY }
@@ -36,12 +38,12 @@ shared_focus = {
 	relative_position_id = MD2026_TUR_new_era
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_defense_industry"
-		add_ideas = md2026_tur_defense_industry
 		random_owned_controlled_state = {
 			limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
 		}
+		army_experience = 15
 	}
 	ai_will_do = {
 		factor = 1
@@ -78,7 +80,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	cost = 8.6
-	search_filters = { FOCUS_FILTER_MILITARY }
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	prerequisite = { focus = MD2026_TUR_defense_industry }
 	relative_position_id = MD2026_TUR_defense_industry
 	completion_reward = {
@@ -96,11 +98,70 @@ shared_focus = {
 	}
 }
 
-### Regional Branch ###
+shared_focus = {
+	id = MD2026_TUR_defense_exports
+	icon = GFX_goal_generic_military_deal
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_TRADE }
+	prerequisite = { focus = MD2026_TUR_bayraktar }
+	relative_position_id = MD2026_TUR_bayraktar
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_defense_exports"
+		add_political_power = 75
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+		}
+		add_tech_bonus = {
+			name = MD2026_TUR_defense_exports
+			bonus = 0.5
+			uses = 1
+			category = CAT_missile
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_TUR_naval_program
+	icon = GFX_goal_generic_navy_doctrines
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_TUR_tfx_fighter }
+	relative_position_id = MD2026_TUR_tfx_fighter
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_naval_program"
+		navy_experience = 25
+		add_tech_bonus = {
+			name = MD2026_TUR_naval_program
+			bonus = 1.0
+			uses = 2
+			category = CAT_naval_all
+		}
+		random_owned_controlled_state = {
+			limit = { is_coastal = yes free_building_slots = { building = dockyard size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = dockyard level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B2: Regional Strategy (x=-3, ME) ###
+
 shared_focus = {
 	id = MD2026_TUR_mediation_power
 	icon = GFX_goal_generic_improve_relations
-	x = 0
+	x = -3
 	y = 1
 	cost = 8.6
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -117,37 +178,21 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MD2026_TUR_black_sea
-	icon = GFX_goal_generic_navy_doctrines
+	id = MD2026_TUR_nato_loyalty
+	icon = GFX_goal_generic_alliance
 	x = -1
 	y = 1
 	cost = 8.6
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	prerequisite = { focus = MD2026_TUR_mediation_power }
 	relative_position_id = MD2026_TUR_mediation_power
+	mutually_exclusive = { focus = MD2026_TUR_eurasian_pivot }
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_black_sea"
-		navy_experience = 25
-		add_war_support = 0.05
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-shared_focus = {
-	id = MD2026_TUR_syria_influence
-	icon = GFX_goal_generic_territory_or_war
-	x = 1
-	y = 1
-	cost = 8.6
-	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
-	prerequisite = { focus = MD2026_TUR_mediation_power }
-	relative_position_id = MD2026_TUR_mediation_power
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_syria_influence"
-		add_opinion_modifier = { target = SYR modifier = md2026_improved_relations }
-		SYR = { add_opinion_modifier = { target = TUR modifier = md2026_improved_relations } }
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_nato_loyalty"
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		USA = { add_opinion_modifier = { target = TUR modifier = md2026_improved_relations } }
+		add_opinion_modifier = { target = ENG modifier = md2026_improved_relations }
+		ENG = { add_opinion_modifier = { target = TUR modifier = md2026_improved_relations } }
 		add_political_power = 50
 	}
 	ai_will_do = {
@@ -155,14 +200,170 @@ shared_focus = {
 	}
 }
 
-### Energy & Economy Branch ###
+shared_focus = {
+	id = MD2026_TUR_eurasian_pivot
+	icon = GFX_goal_generic_dangerous_deal
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_TUR_mediation_power }
+	relative_position_id = MD2026_TUR_mediation_power
+	mutually_exclusive = { focus = MD2026_TUR_nato_loyalty }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_eurasian_pivot"
+		add_opinion_modifier = { target = SOV modifier = md2026_improved_relations }
+		SOV = { add_opinion_modifier = { target = TUR modifier = md2026_improved_relations } }
+		add_opinion_modifier = { target = CHI modifier = md2026_improved_relations }
+		CHI = { add_opinion_modifier = { target = TUR modifier = md2026_improved_relations } }
+		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_TUR_regional_hegemon
+	icon = GFX_goal_generic_demand_territory
+	x = 0
+	y = 2
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_TUR_nato_loyalty focus = MD2026_TUR_eurasian_pivot }
+	relative_position_id = MD2026_TUR_mediation_power
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_regional_hegemon"
+		add_political_power = 100
+		add_war_support = 0.05
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B3: Black Sea & Mediterranean (x=0) ###
+
+shared_focus = {
+	id = MD2026_TUR_dual_seas
+	icon = GFX_goal_generic_occupy_states_coastal
+	x = 0
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_TUR_new_era }
+	relative_position_id = MD2026_TUR_new_era
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_dual_seas"
+		navy_experience = 15
+		add_war_support = 0.03
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_TUR_black_sea_control
+	icon = GFX_goal_generic_navy_doctrines
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_TUR_dual_seas }
+	relative_position_id = MD2026_TUR_dual_seas
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_black_sea_control"
+		navy_experience = 25
+		add_war_support = 0.05
+		add_tech_bonus = {
+			name = MD2026_TUR_black_sea_control
+			bonus = 0.5
+			uses = 1
+			category = CAT_naval_all
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_TUR_east_med
+	icon = GFX_goal_generic_air_defense
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_TUR_dual_seas }
+	relative_position_id = MD2026_TUR_dual_seas
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_east_med"
+		add_political_power = 50
+		navy_experience = 15
+		add_tech_bonus = {
+			name = MD2026_TUR_east_med
+			bonus = 0.5
+			uses = 1
+			category = CAT_aa
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_TUR_straits_leverage
+	icon = GFX_goal_generic_fortify_city
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_TUR_black_sea_control }
+	relative_position_id = MD2026_TUR_black_sea_control
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_straits_leverage"
+		add_political_power = 100
+		add_war_support = 0.05
+		add_stability = 0.03
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_TUR_libya_influence
+	icon = GFX_goal_generic_territory_or_war
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_TUR_east_med }
+	relative_position_id = MD2026_TUR_east_med
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_libya_influence"
+		add_opinion_modifier = { target = LBY modifier = md2026_improved_relations }
+		LBY = { add_opinion_modifier = { target = TUR modifier = md2026_improved_relations } }
+		add_political_power = 50
+		navy_experience = 10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B4: Economy (x=+3) ###
+
 shared_focus = {
 	id = MD2026_TUR_central_corridor
 	icon = GFX_goal_generic_construct_infrastructure
 	x = 3
 	y = 1
 	cost = 8.6
-	search_filters = { FOCUS_FILTER_TRADE }
+	search_filters = { FOCUS_FILTER_ECONOMY }
 	prerequisite = { focus = MD2026_TUR_new_era }
 	relative_position_id = MD2026_TUR_new_era
 	completion_reward = {
@@ -180,7 +381,7 @@ shared_focus = {
 shared_focus = {
 	id = MD2026_TUR_energy_hub
 	icon = GFX_goal_generic_oil_refinery
-	x = 0
+	x = -1
 	y = 1
 	cost = 8.6
 	search_filters = { FOCUS_FILTER_TRADE }
@@ -196,19 +397,201 @@ shared_focus = {
 	}
 }
 
-### NATO Balance Branch ###
 shared_focus = {
-	id = MD2026_TUR_nato_russia_balance
-	icon = GFX_goal_generic_dangerous_deal
-	x = 0
-	y = 3
+	id = MD2026_TUR_turkic_council
+	icon = GFX_goal_generic_trade
+	x = 1
+	y = 1
 	cost = 8.6
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
-	prerequisite = { focus = MD2026_TUR_mediation_power }
+	prerequisite = { focus = MD2026_TUR_central_corridor }
+	relative_position_id = MD2026_TUR_central_corridor
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_turkic_council"
+		add_opinion_modifier = { target = AZE modifier = md2026_improved_relations }
+		AZE = { add_opinion_modifier = { target = TUR modifier = md2026_improved_relations } }
+		add_opinion_modifier = { target = KAZ modifier = md2026_improved_relations }
+		KAZ = { add_opinion_modifier = { target = TUR modifier = md2026_improved_relations } }
+		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_TUR_middle_corridor
+	icon = GFX_goal_generic_construct_civ_factory
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_TUR_energy_hub }
+	relative_position_id = MD2026_TUR_energy_hub
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_middle_corridor"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+		random_owned_controlled_state = {
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_TUR_economic_stabilization
+	icon = GFX_goal_generic_consumer_goods
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	prerequisite = { focus = MD2026_TUR_turkic_council }
+	relative_position_id = MD2026_TUR_turkic_council
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_economic_stabilization"
+		add_stability = 0.10
+		add_political_power = 100
+		add_research_slot = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B5: Syria & Influence (x=+6) ###
+
+shared_focus = {
+	id = MD2026_TUR_syria_influence
+	icon = GFX_goal_generic_intelligence_agency
+	x = 6
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_TUR_new_era }
 	relative_position_id = MD2026_TUR_new_era
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_nato_russia_balance"
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_syria_influence"
+		add_opinion_modifier = { target = SYR modifier = md2026_improved_relations }
+		SYR = { add_opinion_modifier = { target = TUR modifier = md2026_improved_relations } }
 		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_TUR_safe_zone
+	icon = GFX_goal_generic_fortify_city
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_TUR_syria_influence }
+	relative_position_id = MD2026_TUR_syria_influence
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_safe_zone"
+		add_war_support = 0.05
+		army_experience = 15
+		add_stability = 0.03
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_TUR_refugee_return
+	icon = GFX_goal_generic_national_unity
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_TUR_syria_influence }
+	relative_position_id = MD2026_TUR_syria_influence
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_refugee_return"
+		add_stability = 0.05
+		add_political_power = 75
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_TUR_infrastructure_projects
+	icon = GFX_goal_generic_construct_infrastructure
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_TUR_safe_zone }
+	relative_position_id = MD2026_TUR_safe_zone
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_infrastructure_projects"
+		random_owned_controlled_state = {
+			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+		}
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_TUR_cultural_influence
+	icon = GFX_goal_generic_scientific_exchange
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_TUR_refugee_return }
+	relative_position_id = MD2026_TUR_refugee_return
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_cultural_influence"
+		add_political_power = 75
+		add_stability = 0.05
+		add_tech_bonus = {
+			name = MD2026_TUR_cultural_influence
+			bonus = 0.5
+			uses = 1
+			category = CAT_computing_tech
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Capstone ###
+
+shared_focus = {
+	id = MD2026_TUR_century_of_turkiye
+	icon = GFX_focus_generic_turkey_kemalism
+	x = 0
+	y = 5
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_TUR_new_era }
+	prerequisite = { focus = MD2026_TUR_defense_exports focus = MD2026_TUR_naval_program }
+	relative_position_id = MD2026_TUR_new_era
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_century_of_turkiye"
+		add_political_power = 200
+		add_stability = 0.10
+		add_war_support = 0.10
 	}
 	ai_will_do = {
 		factor = 1
