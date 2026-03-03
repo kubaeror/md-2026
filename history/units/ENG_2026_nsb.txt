@@ -152,6 +152,92 @@ units = {
 		start_experience_factor = 0.85
 		start_equipment_factor = 0.9
 	}
+
+	### Royal Navy ###
+	fleet = {
+		name = "Royal Navy Home Fleet"
+		naval_base = 9458
+		task_force = {
+			name = "Carrier Strike Group"
+			location = 9458
+			ship = { name = "HMS Queen Elizabeth (R08)" definition = carrier start_experience_factor = 0.75 equipment = { carrier_hull_2 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+			ship = { name = "HMS Prince of Wales (R09)" definition = carrier start_experience_factor = 0.7 equipment = { carrier_hull_2 = { amount = 1 owner = ENG version_name = "Queen Elizabeth Class" } } }
+			ship = { name = "HMS Daring (D32)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = ENG version_name = "Type 45 Class" } } }
+			ship = { name = "HMS Dauntless (D33)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = ENG version_name = "Type 45 Class" } } }
+			ship = { name = "HMS Diamond (D34)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = ENG version_name = "Type 45 Class" } } }
+			ship = { name = "HMS Dragon (D35)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = ENG version_name = "Type 45 Class" } } }
+			ship = { name = "HMS Defender (D36)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = ENG version_name = "Type 45 Class" } } }
+			ship = { name = "HMS Duncan (D37)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = ENG version_name = "Type 45 Class" } } }
+		}
+		task_force = {
+			name = "Frigate Squadron — Portsmouth"
+			location = 9458
+			ship = { name = "HMS Lancaster (F229)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG version_name = "Type 23 Class" } } }
+			ship = { name = "HMS Iron Duke (F234)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG version_name = "Type 23 Class" } } }
+			ship = { name = "HMS Richmond (F239)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG version_name = "Type 23 Class" } } }
+			ship = { name = "HMS Somerset (F82)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG version_name = "Type 23 Class" } } }
+		}
+		task_force = {
+			name = "Frigate Squadron — Devonport"
+			location = 540
+			ship = { name = "HMS Sutherland (F81)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG version_name = "Type 23 Class" } } }
+			ship = { name = "HMS Northumberland (F238)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG version_name = "Type 23 Class" } } }
+			ship = { name = "HMS Portland (F79)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG version_name = "Type 23 Class" } } }
+			ship = { name = "HMS Kent (F78)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG version_name = "Type 23 Class" } } }
+		}
+		task_force = {
+			name = "Amphibious Ready Group"
+			location = 540
+			ship = { name = "HMS Albion (L14)" definition = helicopter_operator start_experience_factor = 0.65 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = ENG version_name = "Albion Class" } } }
+			ship = { name = "HMS Bulwark (L15)" definition = helicopter_operator start_experience_factor = 0.6 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = ENG version_name = "Albion Class" } } }
+		}
+		task_force = {
+			name = "Mine Countermeasures Force"
+			location = 9458
+			ship = { name = "HMS Ledbury (M30)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG version_name = "Hunt Class" } } }
+			ship = { name = "HMS Chiddingfold (M37)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG version_name = "Hunt Class" } } }
+			ship = { name = "HMS Cattistock (M31)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG version_name = "Hunt Class" } } }
+			ship = { name = "HMS Penzance (M106)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG version_name = "Sandown Class" } } }
+		}
+	}
+	fleet = {
+		name = "Royal Navy Submarine Service"
+		naval_base = 6395
+		task_force = {
+			name = "Submarine Squadron — HMNB Clyde"
+			location = 6395
+			ship = { name = "HMS Vanguard (S28)" definition = missile_submarine start_experience_factor = 0.7 equipment = { missile_submarine_hull_2 = { amount = 1 owner = ENG version_name = "Vanguard Class" } } }
+			ship = { name = "HMS Victorious (S29)" definition = missile_submarine start_experience_factor = 0.7 equipment = { missile_submarine_hull_2 = { amount = 1 owner = ENG version_name = "Vanguard Class" } } }
+			ship = { name = "HMS Vigilant (S30)" definition = missile_submarine start_experience_factor = 0.7 equipment = { missile_submarine_hull_2 = { amount = 1 owner = ENG version_name = "Vanguard Class" } } }
+			ship = { name = "HMS Vengeance (S31)" definition = missile_submarine start_experience_factor = 0.7 equipment = { missile_submarine_hull_2 = { amount = 1 owner = ENG version_name = "Vanguard Class" } } }
+			ship = { name = "HMS Astute (S119)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = ENG version_name = "Astute Class" } } }
+			ship = { name = "HMS Ambush (S120)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = ENG version_name = "Astute Class" } } }
+			ship = { name = "HMS Artful (S121)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = ENG version_name = "Astute Class" } } }
+			ship = { name = "HMS Audacious (S122)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = ENG version_name = "Astute Class" } } }
+			ship = { name = "HMS Anson (S123)" definition = attack_submarine start_experience_factor = 0.7 equipment = { attack_submarine_hull_3 = { amount = 1 owner = ENG version_name = "Astute Class" } } }
+		}
+	}
+	fleet = {
+		name = "Forward Deployed Naval Forces"
+		naval_base = 9458
+		task_force = {
+			name = "Overseas Patrol — South Atlantic"
+			location = 14578
+			ship = { name = "HMS Forth (P222)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG version_name = "River Class Batch 2" } } }
+		}
+		task_force = {
+			name = "Overseas Patrol — Mediterranean"
+			location = 4135
+			ship = { name = "HMS Medway (P223)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG version_name = "River Class Batch 2" } } }
+			ship = { name = "HMS Trent (P224)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG version_name = "River Class Batch 2" } } }
+		}
+		task_force = {
+			name = "Overseas Patrol — Indo-Pacific"
+			location = 12299
+			ship = { name = "HMS Tamar (P225)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG version_name = "River Class Batch 2" } } }
+			ship = { name = "HMS Spey (P226)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG version_name = "River Class Batch 2" } } }
+		}
+	}
 }
 
 ### Equipment Stockpile ###
@@ -165,5 +251,63 @@ instant_effect = {
 		type = artillery_equipment
 		amount = 300
 		producer = ENG
+	}
+}
+
+### Royal Air Force & Fleet Air Arm ###
+air_wings = {
+	# RAF Coningsby — Typhoon QRA & Strike (No. 3(F), 11(F), 29 Sqn)
+	1191 = {
+		medium_plane_fighter_airframe_2 = { owner = "ENG" amount = 36 version_name = "Eurofighter Typhoon FGR.4" }
+		name = "No. 1 Group — Coningsby Wing"
+		start_experience_factor = 0.65
+	}
+	# RAF Lossiemouth — Typhoon (No. 1(F), 2, 6, 9(B) Sqn)
+	1195 = {
+		medium_plane_fighter_airframe_2 = { owner = "ENG" amount = 36 version_name = "Eurofighter Typhoon FGR.4" }
+		name = "No. 1 Group — Lossiemouth Wing"
+		start_experience_factor = 0.65
+	}
+	# RAF Lossiemouth — P-8A Poseidon MRA.1 (No. 120 Sqn)
+	1195 = {
+		large_plane_maritime_patrol_airframe_1 = { owner = "ENG" creator = "USA" amount = 9 version_name = "P-8A Poseidon MRA.1" }
+		name = "No. 120 Squadron"
+		start_experience_factor = 0.55
+	}
+	# RAF Marham — F-35B Lightning (No. 617, 207 Sqn)
+	14 = {
+		small_plane_strike_airframe_2 = { owner = "ENG" creator = "USA" amount = 24 version_name = "F-35B Lightning II" }
+		name = "Lightning Force — RAF Marham"
+		start_experience_factor = 0.6
+	}
+	# RAF Brize Norton — Strategic Airlift (No. 99 Sqn)
+	15 = {
+		large_plane_air_transport_airframe_2 = { owner = "ENG" creator = "USA" amount = 8 version_name = "C-17A Globemaster III" }
+		name = "No. 99 Squadron"
+		start_experience_factor = 0.6
+	}
+	# RAF Brize Norton — Tactical Airlift (No. 24, 30, 70 Sqn)
+	15 = {
+		large_plane_air_transport_airframe_2 = { owner = "ENG" amount = 22 version_name = "A400M Atlas C.1" }
+		name = "Air Mobility Force — Brize Norton"
+		start_experience_factor = 0.6
+	}
+	# RAF Waddington — ISTAR (No. 51 Sqn)
+	1191 = {
+		large_plane_awacs_airframe_1 = { owner = "ENG" creator = "USA" amount = 3 version_name = "RC-135W Rivet Joint" }
+		name = "No. 51 Squadron"
+		start_experience_factor = 0.6
+	}
+	# RAF Waddington — RPAS (No. 31 Sqn)
+	1191 = {
+		small_plane_suicide_airframe_2 = { owner = "ENG" creator = "USA" amount = 5 version_name = "Protector RG.1" }
+		name = "No. 31 Squadron"
+		start_experience_factor = 0.45
+	}
+	# Fleet Air Arm — Carrier Air Wing (HMS Queen Elizabeth)
+	"HMS Queen Elizabeth (R08)" = {
+		cv_small_plane_strike_airframe_2 = { owner = "ENG" creator = "USA" amount = 8 version_name = "F-35B Lightning II" }
+		name = "Carrier Air Wing — HMS Queen Elizabeth"
+		start_experience_factor = 0.6
 	}
 }
