@@ -1,7 +1,7 @@
 ##### Division Templates #####
 
 division_template = {
-	name = "Brigata Corazzata 2026"
+	name = "Brigata Corazzata"
 	regiments = {
 		armor_Bat = { x = 0 y = 0 }
 		armor_Bat = { x = 0 y = 1 }
@@ -19,7 +19,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brigata Meccanizzata 2026"
+	name = "Brigata Meccanizzata"
 	regiments = {
 		Arm_Inf_Bat = { x = 0 y = 0 }
 		Arm_Inf_Bat = { x = 0 y = 1 }
@@ -37,7 +37,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brigata Alpina 2026"
+	name = "Brigata Alpina"
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
@@ -52,7 +52,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brigata Paracadutisti 2026"
+	name = "Brigata Paracadutisti"
 	regiments = {
 		L_Air_Inf_Bat = { x = 0 y = 0 }
 		L_Air_Inf_Bat = { x = 0 y = 1 }
@@ -67,7 +67,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brigata Aeromobile 2026"
+	name = "Brigata Aeromobile"
 	regiments = {
 		L_Air_assault_Bat = { x = 0 y = 0 }
 		L_Air_assault_Bat = { x = 0 y = 1 }
@@ -81,7 +81,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brigata Marina 2026"
+	name = "Brigata Marina"
 	regiments = {
 		L_Marine_Bat = { x = 0 y = 0 }
 		L_Marine_Bat = { x = 0 y = 1 }
@@ -95,7 +95,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Reggimento Forze Speciali 2026"
+	name = "Reggimento Forze Speciali"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -116,7 +116,7 @@ units = {
 	division = {
 		name = "132a Brigata Corazzata 'Ariete'"
 		location = 6656
-		division_template = "Brigata Corazzata 2026"
+		division_template = "Brigata Corazzata"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.9
 	}
@@ -124,7 +124,7 @@ units = {
 	division = {
 		name = "Brigata di Cavalleria 'Pozzuolo del Friuli'"
 		location = 628
-		division_template = "Brigata Meccanizzata 2026"
+		division_template = "Brigata Meccanizzata"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.9
 	}
@@ -132,7 +132,7 @@ units = {
 	division = {
 		name = "Brigata Meccanizzata 'Sassari'"
 		location = 9772
-		division_template = "Brigata Meccanizzata 2026"
+		division_template = "Brigata Meccanizzata"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.85
 	}
@@ -140,7 +140,7 @@ units = {
 	division = {
 		name = "Brigata Bersaglieri 'Garibaldi'"
 		location = 9826
-		division_template = "Brigata Meccanizzata 2026"
+		division_template = "Brigata Meccanizzata"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.85
 	}
@@ -148,7 +148,7 @@ units = {
 	division = {
 		name = "Brigata Meccanizzata 'Pinerolo'"
 		location = 9784
-		division_template = "Brigata Meccanizzata 2026"
+		division_template = "Brigata Meccanizzata"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -156,7 +156,7 @@ units = {
 	division = {
 		name = "Brigata Meccanizzata 'Aosta'"
 		location = 4159
-		division_template = "Brigata Meccanizzata 2026"
+		division_template = "Brigata Meccanizzata"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -164,7 +164,7 @@ units = {
 	division = {
 		name = "Brigata 'Granatieri di Sardegna'"
 		location = 9904
-		division_template = "Brigata Meccanizzata 2026"
+		division_template = "Brigata Meccanizzata"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -175,7 +175,7 @@ units = {
 	division = {
 		name = "Brigata Alpina 'Taurinense'"
 		location = 6780
-		division_template = "Brigata Alpina 2026"
+		division_template = "Brigata Alpina"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.9
 	}
@@ -183,7 +183,7 @@ units = {
 	division = {
 		name = "Brigata Alpina 'Julia'"
 		location = 316
-		division_template = "Brigata Alpina 2026"
+		division_template = "Brigata Alpina"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.9
 	}
@@ -191,7 +191,7 @@ units = {
 	division = {
 		name = "Brigata Alpina 'Tridentina'"
 		location = 9630
-		division_template = "Brigata Alpina 2026"
+		division_template = "Brigata Alpina"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.9
 	}
@@ -202,7 +202,7 @@ units = {
 	division = {
 		name = "Brigata Paracadutisti 'Folgore'"
 		location = 6946
-		division_template = "Brigata Paracadutisti 2026"
+		division_template = "Brigata Paracadutisti"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.9
 	}
@@ -210,7 +210,7 @@ units = {
 	division = {
 		name = "Brigata Aeromobile 'Friuli'"
 		location = 6606
-		division_template = "Brigata Aeromobile 2026"
+		division_template = "Brigata Aeromobile"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.9
 	}
@@ -218,7 +218,7 @@ units = {
 	division = {
 		name = "Brigata Marina 'San Marco'"
 		location = 11998
-		division_template = "Brigata Marina 2026"
+		division_template = "Brigata Marina"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.9
 	}
@@ -226,9 +226,64 @@ units = {
 	division = {
 		name = "9° Reggimento 'Col Moschin'"
 		location = 6946
-		division_template = "Reggimento Forze Speciali 2026"
+		division_template = "Reggimento Forze Speciali"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.95
+	}
+
+	### Marina Militare ###
+	## Comando Squadra Navale (Taranto) ##
+	fleet = {
+		name = "Comando Squadra Navale"
+		naval_base = 11837
+		task_force = {
+			name = "Gruppo Portaerei"
+			location = 11837
+			ship = { name = "ITS Cavour (CVH-550)" definition = carrier pride_of_the_fleet = yes start_experience_factor = 0.7 equipment = { carrier_hull_2 = { amount = 1 owner = ITA version_name = "Cavour Class" } } }
+			ship = { name = "ITS Trieste (L9890)" definition = carrier pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { carrier_hull_2 = { amount = 1 owner = ITA version_name = "Trieste Class" } } }
+			ship = { name = "ITS Andrea Doria (D553)" definition = destroyer pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { destroyer_hull_2 = { amount = 1 owner = ITA version_name = "Horizon Class" } } }
+			ship = { name = "ITS Caio Duilio (D554)" definition = destroyer pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { destroyer_hull_2 = { amount = 1 owner = ITA version_name = "Horizon Class" } } }
+		}
+		task_force = {
+			name = "Squadriglia FREMM"
+			location = 11837
+			ship = { name = "ITS Carlo Bergamini (F590)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = ITA version_name = "FREMM Bergamini Class" } } }
+			ship = { name = "ITS Virginio Fasan (F591)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = ITA version_name = "FREMM Bergamini Class" } } }
+			ship = { name = "ITS Carlo Margottini (F592)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = ITA version_name = "FREMM Bergamini Class" } } }
+			ship = { name = "ITS Carabiniere (F593)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = ITA version_name = "FREMM Bergamini Class" } } }
+			ship = { name = "ITS Alpino (F594)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = ITA version_name = "FREMM Bergamini Class" } } }
+			ship = { name = "ITS Luigi Rizzo (F595)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = ITA version_name = "FREMM Bergamini Class" } } }
+			ship = { name = "ITS Federico Martinengo (F596)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = ITA version_name = "FREMM Bergamini Class" } } }
+			ship = { name = "ITS Antonio Marceglia (F597)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = ITA version_name = "FREMM Bergamini Class" } } }
+		}
+	}
+
+	## Comando Flottiglia Sommergibili (Augusta) ##
+	fleet = {
+		name = "Comando Flottiglia Sommergibili"
+		naval_base = 4014
+		task_force = {
+			name = "Flottiglia Sommergibili"
+			location = 4014
+			ship = { name = "ITS Salvatore Todaro (S526)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { attack_submarine_hull_2 = { amount = 1 owner = ITA version_name = "Todaro Class" } } }
+			ship = { name = "ITS Scire (S527)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { attack_submarine_hull_2 = { amount = 1 owner = ITA version_name = "Todaro Class" } } }
+			ship = { name = "ITS Pietro Venuti (S528)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { attack_submarine_hull_2 = { amount = 1 owner = ITA version_name = "Todaro Class" } } }
+			ship = { name = "ITS Romeo Romei (S529)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { attack_submarine_hull_2 = { amount = 1 owner = ITA version_name = "Todaro Class" } } }
+		}
+	}
+
+	## Comando Forze di Pattugliamento (La Spezia) ##
+	fleet = {
+		name = "Comando Forze di Pattugliamento"
+		naval_base = 14604
+		task_force = {
+			name = "Pattugliatori Polivalenti d'Altura"
+			location = 14604
+			ship = { name = "ITS Paolo Thaon di Revel (P430)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { corvette_hull_3 = { amount = 1 owner = ITA version_name = "Thaon di Revel Class" } } }
+			ship = { name = "ITS Francesco Morosini (P431)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { corvette_hull_3 = { amount = 1 owner = ITA version_name = "Thaon di Revel Class" } } }
+			ship = { name = "ITS Raimondo Montecuccoli (P432)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = ITA version_name = "Thaon di Revel Class" } } }
+			ship = { name = "ITS San Giusto (L9894)" definition = helicopter_operator pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = ITA version_name = "San Giorgio Class" } } }
+		}
 	}
 }
 
@@ -237,5 +292,65 @@ instant_effect = {
 		type = infantry_weapons5
 		amount = 3000
 		producer = ITA
+	}
+}
+
+### Aeronautica Militare / Marina Militare ###
+air_wings = {
+	## Toscana (Grosseto/Pisa) ##
+	79 = {
+		medium_plane_fighter_airframe_2 = { owner = "ITA" amount = 24 version_name = "Eurofighter Typhoon" }
+		name = "4° Stormo Caccia"
+		start_experience_factor = 0.6
+	}
+	79 = {
+		large_plane_air_transport_airframe_1 = { owner = "ITA" creator = "USA" amount = 22 version_name = "C-130J Super Hercules" }
+		name = "46a Brigata Aerea"
+		start_experience_factor = 0.6
+	}
+	## Puglia (Gioia del Colle/Amendola) ##
+	957 = {
+		medium_plane_fighter_airframe_2 = { owner = "ITA" amount = 24 version_name = "Eurofighter Typhoon" }
+		name = "36° Stormo Caccia"
+		start_experience_factor = 0.6
+	}
+	957 = {
+		small_plane_strike_airframe_2 = { owner = "ITA" amount = 40 version_name = "F-35A Lightning II" }
+		name = "32° Stormo"
+		start_experience_factor = 0.65
+	}
+	957 = {
+		cv_small_plane_strike_airframe_2 = { owner = "ITA" amount = 7 version_name = "F-35B Lightning II" }
+		name = "Marina Militare - GRUPAER"
+		start_experience_factor = 0.6
+	}
+	957 = {
+		small_plane_suicide_airframe_2 = { owner = "ITA" creator = "USA" amount = 6 version_name = "MQ-9A Reaper" }
+		name = "28° Gruppo RPAS"
+		start_experience_factor = 0.6
+	}
+	## Sicilia (Trapani) ##
+	83 = {
+		medium_plane_fighter_airframe_2 = { owner = "ITA" amount = 24 version_name = "Eurofighter Typhoon" }
+		name = "37° Stormo Caccia"
+		start_experience_factor = 0.6
+	}
+	## Veneto (Istrana) ##
+	78 = {
+		medium_plane_fighter_airframe_2 = { owner = "ITA" amount = 23 version_name = "Eurofighter Typhoon" }
+		name = "51° Stormo Caccia"
+		start_experience_factor = 0.6
+	}
+	## Lombardia (Ghedi) ##
+	80 = {
+		medium_plane_cas_airframe_1 = { owner = "ITA" amount = 15 version_name = "Panavia Tornado IDS" }
+		name = "6° Stormo"
+		start_experience_factor = 0.55
+	}
+	## Carrier Air Wings ##
+	"ITS Cavour (CVH-550)" = {
+		cv_small_plane_strike_airframe_2 = { owner = "ITA" amount = 8 version_name = "F-35B Lightning II" }
+		name = "GRUPAER - Cavour Air Wing"
+		start_experience_factor = 0.65
 	}
 }
