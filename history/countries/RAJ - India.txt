@@ -1094,4 +1094,12 @@ capital = 431
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 3 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_RAJ_indias_century
+	complete_national_focus = MD2026_RAJ_make_in_india
+	complete_national_focus = MD2026_RAJ_strategic_autonomy
+	complete_national_focus = MD2026_RAJ_china_border
+	complete_national_focus = MD2026_RAJ_digital_india
+	complete_national_focus = MD2026_RAJ_semiconductor_push
 }

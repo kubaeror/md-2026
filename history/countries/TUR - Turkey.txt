@@ -867,4 +867,12 @@ capital = 159
 	}
 	set_variable = { term_limit = 2 }
 	set_variable = { current_term = 2 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_TUR_new_era
+	complete_national_focus = MD2026_TUR_defense_industry
+	complete_national_focus = MD2026_TUR_mediation_power
+	complete_national_focus = MD2026_TUR_central_corridor
+	complete_national_focus = MD2026_TUR_bayraktar
+	complete_national_focus = MD2026_TUR_syria_influence
 }

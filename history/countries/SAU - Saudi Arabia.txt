@@ -559,4 +559,10 @@
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_SAU_vision_2030
+	complete_national_focus = MD2026_SAU_diversification
+	complete_national_focus = MD2026_SAU_oil_strategy
+	complete_national_focus = MD2026_SAU_regional_balance
 }

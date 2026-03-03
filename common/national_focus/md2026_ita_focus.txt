@@ -1,0 +1,282 @@
+###################################
+# MD2026 Italy (ITA) Focus Tree
+# 2026 Shared Focuses - Mediterranean Crossroads
+###################################
+
+shared_focus = {
+	id = MD2026_ITA_mediterranean_crossroads
+	icon = GFX_focus_generic_italy
+	x = 38
+	y = 0
+	cost = 3.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	allow_branch = {
+		original_tag = ITA
+		date > 2025.12.31
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ITA_mediterranean_crossroads"
+		add_political_power = 100
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### NATO Southern Flank Branch ###
+shared_focus = {
+	id = MD2026_ITA_nato_southern_flank
+	icon = blr_nato_cooperation
+	x = -4
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_ITA_mediterranean_crossroads }
+	relative_position_id = MD2026_ITA_mediterranean_crossroads
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ITA_nato_southern_flank"
+		army_experience = 25
+		add_war_support = 0.05
+		navy_experience = 15
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ITA_naval_power
+	icon = GFX_goal_generic_navy_doctrines
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_ITA_nato_southern_flank }
+	relative_position_id = MD2026_ITA_nato_southern_flank
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ITA_naval_power"
+		navy_experience = 25
+		add_tech_bonus = {
+			name = MD2026_ITA_naval_power
+			bonus = 1.0
+			uses = 2
+			category = CAT_naval_all
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ITA_tempest_fighter
+	icon = GFX_goal_generic_air_fighter2
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_ITA_nato_southern_flank }
+	relative_position_id = MD2026_ITA_nato_southern_flank
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ITA_tempest_fighter"
+		air_experience = 25
+		add_tech_bonus = {
+			name = MD2026_ITA_tempest_fighter
+			bonus = 1.0
+			uses = 2
+			category = CAT_l_fighter
+		}
+		add_opinion_modifier = { target = ENG modifier = md2026_improved_relations }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Economic Reform Branch ###
+shared_focus = {
+	id = MD2026_ITA_economic_reform
+	icon = GFX_goal_generic_construct_civ_factory
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	prerequisite = { focus = MD2026_ITA_mediterranean_crossroads }
+	relative_position_id = MD2026_ITA_mediterranean_crossroads
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ITA_economic_reform"
+		add_stability = 0.05
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ITA_south_development
+	icon = GFX_goal_generic_construct_infrastructure
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_ITA_economic_reform }
+	relative_position_id = MD2026_ITA_economic_reform
+	mutually_exclusive = { focus = MD2026_ITA_northern_industry }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ITA_south_development"
+		add_stability = 0.05
+		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ITA_northern_industry
+	icon = GFX_goal_generic_construct_mil_factory
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_ITA_economic_reform }
+	relative_position_id = MD2026_ITA_economic_reform
+	mutually_exclusive = { focus = MD2026_ITA_south_development }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ITA_northern_industry"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Migration Crisis Branch ###
+shared_focus = {
+	id = MD2026_ITA_migration_crisis
+	icon = anti_immigration3
+	x = 2
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_ITA_mediterranean_crossroads }
+	relative_position_id = MD2026_ITA_mediterranean_crossroads
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ITA_migration_crisis"
+		add_stability = -0.05
+		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ITA_fortress_europe
+	icon = border_conflict_bunker
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_ITA_migration_crisis }
+	relative_position_id = MD2026_ITA_migration_crisis
+	mutually_exclusive = { focus = MD2026_ITA_integration_plan }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ITA_fortress_europe"
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ITA_integration_plan
+	icon = GFX_goal_generic_national_unity
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_ITA_migration_crisis }
+	relative_position_id = MD2026_ITA_migration_crisis
+	mutually_exclusive = { focus = MD2026_ITA_fortress_europe }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ITA_integration_plan"
+		add_stability = 0.10
+		add_manpower = 25000
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Piano Mattei Branch ###
+shared_focus = {
+	id = MD2026_ITA_piano_mattei
+	icon = GFX_goal_generic_alliance
+	x = 5
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_ITA_mediterranean_crossroads }
+	relative_position_id = MD2026_ITA_mediterranean_crossroads
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ITA_piano_mattei"
+		add_political_power = 75
+		add_opinion_modifier = { target = EGY modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = TUR modifier = md2026_improved_relations }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ITA_energy_corridors
+	icon = GFX_goal_generic_oil_refinery
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_TRADE }
+	prerequisite = { focus = MD2026_ITA_piano_mattei }
+	relative_position_id = MD2026_ITA_piano_mattei
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ITA_energy_corridors"
+		add_resource = { type = oil amount = 5 state = 117 }
+		add_stability = 0.03
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ITA_libya_stabilization
+	icon = GFX_goal_generic_improve_relations
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_ITA_piano_mattei }
+	relative_position_id = MD2026_ITA_piano_mattei
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ITA_libya_stabilization"
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

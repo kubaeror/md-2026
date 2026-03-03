@@ -5814,4 +5814,13 @@ capital = 652
 			rational
 		}
 	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_SOV_war_crossroads
+	complete_national_focus = MD2026_SOV_economic_autarky
+	complete_national_focus = MD2026_SOV_eastern_pivot
+	complete_national_focus = MD2026_SOV_import_substitution
+	complete_national_focus = MD2026_SOV_sanctions_circumvention
+	complete_national_focus = MD2026_SOV_china_trade
+	complete_national_focus = MD2026_SOV_brics_leadership
 }

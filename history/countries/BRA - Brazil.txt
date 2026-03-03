@@ -1007,4 +1007,10 @@ capital = 885
 	}
 	set_variable = { term_limit = 2 }
 	set_variable = { current_term = 3 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_BRA_return
+	complete_national_focus = MD2026_BRA_amazon_protection
+	complete_national_focus = MD2026_BRA_reindustrialization
+	complete_national_focus = MD2026_BRA_brics_leadership
 }

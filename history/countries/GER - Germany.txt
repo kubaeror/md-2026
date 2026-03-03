@@ -2978,4 +2978,11 @@ capital = 45
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_GER_zeitenwende_2026
+	complete_national_focus = MD2026_GER_energy_independence
+	complete_national_focus = MD2026_GER_eu_expansion
+	complete_national_focus = MD2026_GER_european_army
+	complete_national_focus = MD2026_GER_nato_2_percent
 }

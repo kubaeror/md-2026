@@ -1,0 +1,258 @@
+###################################
+# MD2026 North Korea (NKO) Focus Tree
+# 2026 Shared Focuses - Nuclear Shield
+###################################
+
+shared_focus = {
+	id = MD2026_NKO_nuclear_shield
+	icon = GFX_focus_generic_north_korea
+	x = 38
+	y = 0
+	cost = 3.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	allow_branch = {
+		original_tag = NKO
+		date > 2025.12.31
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NKO_nuclear_shield"
+		add_political_power = 100
+		add_war_support = 0.10
+		add_stability = -0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Nuclear Expansion Branch ###
+shared_focus = {
+	id = MD2026_NKO_nuclear_expansion
+	icon = nuclear_science
+	x = -3
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_NKO_nuclear_shield }
+	relative_position_id = MD2026_NKO_nuclear_shield
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NKO_nuclear_expansion"
+		add_war_support = 0.15
+		add_tech_bonus = {
+			name = MD2026_NKO_nuclear_expansion
+			bonus = 1.0
+			uses = 2
+			category = CAT_missile
+		}
+		every_country = {
+			limit = { is_in_faction_with = USA }
+			add_opinion_modifier = { target = NKO modifier = embargo }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_NKO_icbm_program
+	icon = GFX_goal_generic_secret_weapon
+	x = -1
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_NKO_nuclear_expansion }
+	relative_position_id = MD2026_NKO_nuclear_expansion
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NKO_icbm_program"
+		add_tech_bonus = {
+			name = MD2026_NKO_icbm_program
+			bonus = 1.0
+			uses = 2
+			category = CAT_missile
+		}
+		add_war_support = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_NKO_tactical_nukes
+	icon = GFX_goal_generic_air_bomber
+	x = 1
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_NKO_nuclear_expansion }
+	relative_position_id = MD2026_NKO_nuclear_expansion
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NKO_tactical_nukes"
+		army_experience = 25
+		add_war_support = 0.10
+		add_stability = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Russia Alliance Branch ###
+shared_focus = {
+	id = MD2026_NKO_russia_alliance
+	icon = align_to_russia
+	x = 0
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_NKO_nuclear_shield }
+	relative_position_id = MD2026_NKO_nuclear_shield
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NKO_russia_alliance"
+		add_opinion_modifier = { target = SOV modifier = md2026_improved_relations }
+		SOV = { add_opinion_modifier = { target = NKO modifier = md2026_improved_relations } }
+		add_political_power = 75
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_NKO_arms_for_russia
+	icon = GFX_goal_generic_military_deal
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_TRADE }
+	prerequisite = { focus = MD2026_NKO_russia_alliance }
+	relative_position_id = MD2026_NKO_russia_alliance
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NKO_arms_for_russia"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+		}
+		add_opinion_modifier = { target = SOV modifier = md2026_improved_relations }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_NKO_russian_tech
+	icon = GFX_focus_research
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	prerequisite = { focus = MD2026_NKO_russia_alliance }
+	relative_position_id = MD2026_NKO_russia_alliance
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NKO_russian_tech"
+		add_research_slot = 1
+		add_tech_bonus = {
+			name = MD2026_NKO_russian_tech
+			bonus = 1.0
+			uses = 2
+			category = cat_battlefield_support
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Provocations Branch ###
+shared_focus = {
+	id = MD2026_NKO_provocations
+	icon = GFX_goal_generic_dangerous_deal
+	x = 3
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_NKO_nuclear_shield }
+	relative_position_id = MD2026_NKO_nuclear_shield
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NKO_provocations"
+		add_war_support = 0.15
+		add_stability = -0.05
+		add_opinion_modifier = { target = KOR modifier = embargo }
+		KOR = { add_opinion_modifier = { target = NKO modifier = embargo } }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_NKO_south_korea_threat
+	icon = GFX_goal_generic_territory_or_war
+	x = -1
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_NKO_provocations }
+	relative_position_id = MD2026_NKO_provocations
+	mutually_exclusive = { focus = MD2026_NKO_diplomatic_leverage }
+	will_lead_to_war_with = KOR
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NKO_south_korea_threat"
+		add_war_support = 0.20
+		create_wargoal = {
+			target = KOR
+			type = annex_everything
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_NKO_diplomatic_leverage
+	icon = GFX_goal_generic_improve_relations
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_NKO_provocations }
+	relative_position_id = MD2026_NKO_provocations
+	mutually_exclusive = { focus = MD2026_NKO_south_korea_threat }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NKO_diplomatic_leverage"
+		add_political_power = 100
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Regime Maintenance Branch ###
+shared_focus = {
+	id = MD2026_NKO_regime_maintenance
+	icon = GFX_goal_generic_intelligence_agency
+	x = 0
+	y = 3
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_NKO_nuclear_shield }
+	prerequisite = {
+		focus = MD2026_NKO_arms_for_russia
+		focus = MD2026_NKO_russian_tech
+	}
+	relative_position_id = MD2026_NKO_nuclear_shield
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NKO_regime_maintenance"
+		add_stability = -0.05
+		add_political_power = 100
+		add_manpower = 50000
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

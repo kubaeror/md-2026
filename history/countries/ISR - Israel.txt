@@ -1921,4 +1921,10 @@ capital = 207
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 6 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_ISR_iron_wall
+	complete_national_focus = MD2026_ISR_gaza_aftermath
+	complete_national_focus = MD2026_ISR_iran_threat
+	complete_national_focus = MD2026_ISR_abraham_accords
 }

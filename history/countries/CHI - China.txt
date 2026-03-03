@@ -4405,4 +4405,14 @@ capital = 547
 			ruthless
 		}
 	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_CHI_great_rejuvenation
+	complete_national_focus = MD2026_CHI_belt_road_2
+	complete_national_focus = MD2026_CHI_naval_expansion
+	complete_national_focus = MD2026_CHI_tech_dominance
+	complete_national_focus = MD2026_CHI_taiwan_question
+	complete_national_focus = MD2026_CHI_south_china_sea
+	complete_national_focus = MD2026_CHI_semiconductor_war
+	complete_national_focus = MD2026_CHI_global_infrastructure
 }

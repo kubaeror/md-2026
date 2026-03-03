@@ -798,4 +798,12 @@ capital = 114
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_POL_eastern_shield
+	complete_national_focus = MD2026_POL_fortress_poland
+	complete_national_focus = MD2026_POL_army_modernization
+	complete_national_focus = MD2026_POL_eu_powerhouse
+	complete_national_focus = MD2026_POL_k2_tanks
+	complete_national_focus = MD2026_POL_patriot_batteries
 }

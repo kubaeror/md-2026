@@ -1770,4 +1770,10 @@ capital = 615
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_JAP_active_defense
+	complete_national_focus = MD2026_JAP_constitutional_reform
+	complete_national_focus = MD2026_JAP_indo_pacific
+	complete_national_focus = MD2026_JAP_economic_revitalization
 }

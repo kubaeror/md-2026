@@ -1,0 +1,280 @@
+###################################
+# MD2026 Iran (PER) Focus Tree
+# 2026 Shared Focuses - Regime Survival
+###################################
+
+shared_focus = {
+	id = MD2026_PER_regime_survival
+	icon = GFX_focus_generic_iran
+	x = 38
+	y = 0
+	cost = 3.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	allow_branch = {
+		original_tag = PER
+		date > 2025.12.31
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_PER_regime_survival"
+		add_political_power = 100
+		add_stability = -0.05
+		add_war_support = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Nuclear Program Branch ###
+shared_focus = {
+	id = MD2026_PER_nuclear_program
+	icon = nuclear_science
+	x = -4
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	prerequisite = { focus = MD2026_PER_regime_survival }
+	relative_position_id = MD2026_PER_regime_survival
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_PER_nuclear_program"
+		add_political_power = -50
+		add_war_support = 0.10
+		add_tech_bonus = {
+			name = MD2026_PER_nuclear_program
+			bonus = 1.0
+			uses = 2
+			category = CAT_missile
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_PER_nuclear_accelerate
+	icon = GFX_goal_generic_secret_weapon
+	x = -1
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_PER_nuclear_program }
+	relative_position_id = MD2026_PER_nuclear_program
+	mutually_exclusive = { focus = MD2026_PER_nuclear_negotiate }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_PER_nuclear_accelerate"
+		add_war_support = 0.15
+		add_stability = -0.15
+		every_country = {
+			limit = { is_in_faction_with = USA }
+			add_opinion_modifier = { target = PER modifier = embargo }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_PER_nuclear_negotiate
+	icon = diplomatic_treaty
+	x = 1
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_PER_nuclear_program }
+	relative_position_id = MD2026_PER_nuclear_program
+	mutually_exclusive = { focus = MD2026_PER_nuclear_accelerate }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_PER_nuclear_negotiate"
+		add_stability = 0.10
+		add_political_power = 100
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Regional Proxies Branch ###
+shared_focus = {
+	id = MD2026_PER_regional_proxies
+	icon = GFX_goal_generic_territory_or_war
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_PER_regime_survival }
+	relative_position_id = MD2026_PER_regime_survival
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_PER_regional_proxies"
+		add_war_support = 0.10
+		add_stability = -0.05
+		add_opinion_modifier = { target = ISR modifier = embargo }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_PER_axis_resistance
+	icon = GFX_goal_generic_dangerous_deal
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_PER_regional_proxies }
+	relative_position_id = MD2026_PER_regional_proxies
+	mutually_exclusive = { focus = MD2026_PER_proxy_rebuild }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_PER_axis_resistance"
+		add_war_support = 0.15
+		add_opinion_modifier = { target = ISR modifier = embargo }
+		add_opinion_modifier = { target = SAU modifier = embargo }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_PER_proxy_rebuild
+	icon = GFX_goal_generic_military_deal
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_PER_regional_proxies }
+	relative_position_id = MD2026_PER_regional_proxies
+	mutually_exclusive = { focus = MD2026_PER_axis_resistance }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_PER_proxy_rebuild"
+		add_political_power = 50
+		add_opinion_modifier = { target = SYR modifier = md2026_improved_relations }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Sanctions Economy Branch ###
+shared_focus = {
+	id = MD2026_PER_sanctions_economy
+	icon = black_market
+	x = 2
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	prerequisite = { focus = MD2026_PER_regime_survival }
+	relative_position_id = MD2026_PER_regime_survival
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_PER_sanctions_economy"
+		add_stability = 0.05
+		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_PER_oil_barter
+	icon = GFX_goal_generic_oil_refinery
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_TRADE }
+	prerequisite = { focus = MD2026_PER_sanctions_economy }
+	relative_position_id = MD2026_PER_sanctions_economy
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_PER_oil_barter"
+		add_resource = { type = oil amount = 8 state = 266 }
+		add_opinion_modifier = { target = CHI modifier = md2026_improved_relations }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_PER_russia_alliance
+	icon = align_to_russia
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_PER_sanctions_economy }
+	relative_position_id = MD2026_PER_sanctions_economy
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_PER_russia_alliance"
+		add_opinion_modifier = { target = SOV modifier = md2026_improved_relations }
+		SOV = { add_opinion_modifier = { target = PER modifier = md2026_improved_relations } }
+		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Domestic Control Branch ###
+shared_focus = {
+	id = MD2026_PER_domestic_control
+	icon = GFX_goal_generic_intelligence_agency
+	x = 5
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_PER_regime_survival }
+	relative_position_id = MD2026_PER_regime_survival
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_PER_domestic_control"
+		add_stability = -0.10
+		add_political_power = 100
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_PER_irgc_power
+	icon = GFX_goal_generic_army_doctrines
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_PER_domestic_control }
+	relative_position_id = MD2026_PER_domestic_control
+	mutually_exclusive = { focus = MD2026_PER_succession_crisis }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_PER_irgc_power"
+		army_experience = 25
+		add_war_support = 0.10
+		add_stability = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_PER_succession_crisis
+	icon = GFX_goal_generic_demand_territory
+	x = 1
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_PER_domestic_control }
+	relative_position_id = MD2026_PER_domestic_control
+	mutually_exclusive = { focus = MD2026_PER_irgc_power }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_PER_succession_crisis"
+		add_stability = -0.20
+		add_political_power = -100
+		country_event = { id = md2026_iran.1 days = 30 }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
