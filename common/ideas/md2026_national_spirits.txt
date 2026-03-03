@@ -27,11 +27,12 @@ ideas = {
 				has_country_flag = md2026_sov_demobilized
 			}
 			modifier = {
-				conscription = 0.05
+				conscription = 0.03
 				consumer_goods_factor = -0.10
 				army_attack_factor = 0.15
 				army_morale_factor = 0.10
-				stability_factor = -0.05
+				stability_factor = -0.10
+				political_power_factor = -0.10
 				production_speed_arms_factory_factor = 0.10
 			}
 		}
@@ -118,11 +119,12 @@ ideas = {
 			allowed = { original_tag = CHI }
 			allowed_civil_war = { always = yes }
 			modifier = {
-				experience_gain_army = 0.01
-				experience_gain_navy = 0.01
-				experience_gain_air = 0.01
-				army_attack_factor = 0.05
+				experience_gain_army = 0.02
+				experience_gain_navy = 0.02
+				experience_gain_air = 0.02
+				army_attack_factor = 0.10
 				production_speed_arms_factory_factor = 0.05
+				production_factory_max_efficiency_factor = -0.05
 			}
 		}
 
@@ -153,10 +155,11 @@ ideas = {
 			allowed = { original_tag = ENG }
 			allowed_civil_war = { always = yes }
 			modifier = {
-				trade_opinion_factor = -0.05
-				stability_factor = 0.03
+				trade_opinion_factor = -0.10
+				stability_factor = 0.05
 				drift_defence_factor = 0.05
-				political_power_factor = -0.03
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.03
 			}
 		}
 
@@ -172,7 +175,7 @@ ideas = {
 			modifier = {
 				army_defence_factor = 0.20
 				war_support_factor = 0.10
-				stability_factor = -0.15
+				stability_factor = -0.10
 				conscription = 0.02
 				consumer_goods_factor = 0.05
 				political_power_factor = -0.10
@@ -220,12 +223,12 @@ ideas = {
 			allowed = { original_tag = NKO }
 			allowed_civil_war = { always = yes }
 			modifier = {
-				trade_opinion_factor = -0.50
+				trade_opinion_factor = -0.40
 				conscription = 0.05
 				army_attack_factor = 0.20
 				consumer_goods_factor = 0.15
 				stability_factor = -0.10
-				production_factory_max_efficiency_factor = -0.30
+				production_factory_max_efficiency_factor = -0.20
 			}
 		}
 
@@ -323,6 +326,7 @@ ideas = {
 				army_attack_factor = 0.10
 				experience_gain_army = 0.02
 				research_speed_factor = 0.03
+				consumer_goods_factor = 0.03
 			}
 		}
 
@@ -335,8 +339,7 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = 0.15
 				consumer_goods_factor = -0.05
-				stability_factor = 0.05
-				political_power_factor = 0.05
+				stability_factor = -0.03
 			}
 		}
 
@@ -352,6 +355,7 @@ ideas = {
 				conscription = 0.01
 				war_support_factor = 0.10
 				stability_factor = 0.03
+				consumer_goods_factor = 0.05
 			}
 		}
 
@@ -433,7 +437,7 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			modifier = {
 				stability_factor = -0.10
-				political_power_factor = -0.15
+				political_power_factor = -0.10
 				war_support_factor = -0.05
 				consumer_goods_factor = 0.05
 			}
@@ -445,7 +449,8 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			modifier = {
 				war_support_factor = 0.10
-				army_defence_factor = 0.05
+				army_defence_factor = 0.10
+				stability_factor = 0.05
 				consumer_goods_factor = 0.03
 			}
 		}
@@ -461,6 +466,7 @@ ideas = {
 				research_speed_factor = 0.05
 				stability_factor = 0.05
 				industrial_capacity_factory = 0.10
+				consumer_goods_factor = 0.03
 			}
 		}
 
@@ -552,9 +558,9 @@ ideas = {
 			allowed = { original_tag = GRE }
 			allowed_civil_war = { always = yes }
 			modifier = {
-				stability_factor = 0.03
-				consumer_goods_factor = -0.03
-				production_speed_buildings_factor = 0.05
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
 			}
 		}
 
@@ -579,11 +585,12 @@ ideas = {
 			allowed = { original_tag = BRM }
 			allowed_civil_war = { always = yes }
 			modifier = {
-				stability_factor = -0.20
+				stability_factor = -0.15
 				political_power_factor = -0.15
 				war_support_factor = -0.10
 				consumer_goods_factor = 0.10
 				industrial_capacity_factory = -0.15
+				conscription = 0.01
 			}
 		}
 
@@ -597,8 +604,9 @@ ideas = {
 				stability_factor = -0.15
 				political_power_factor = -0.10
 				consumer_goods_factor = 0.10
-				production_speed_buildings_factor = -0.20
+				production_speed_buildings_factor = -0.10
 				war_support_factor = 0.10
+				conscription = 0.005
 			}
 		}
 
