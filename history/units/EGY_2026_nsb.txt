@@ -1,7 +1,7 @@
 ##### Division Templates #####
 
 division_template = {
-	name = "Firqa Moudar'a 2026"
+	name = "Firqa Moudar'a"
 	regiments = {
 		armor_Bat = { x = 0 y = 0 }
 		armor_Bat = { x = 0 y = 1 }
@@ -20,7 +20,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Firqa Mechaniqui 2026"
+	name = "Firqa Mechaniqui"
 	regiments = {
 		Mech_Inf_Bat = { x = 0 y = 0 }
 		Mech_Inf_Bat = { x = 0 y = 1 }
@@ -39,7 +39,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Liwa Mushat 2026"
+	name = "Liwa Mushat"
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
 		Mot_Inf_Bat = { x = 0 y = 1 }
@@ -55,7 +55,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Liwa Alhawa Almahmul 2026"
+	name = "Liwa Alhawa Almahmul"
 	regiments = {
 		L_Air_assault_Bat = { x = 0 y = 0 }
 		L_Air_assault_Bat = { x = 0 y = 1 }
@@ -69,7 +69,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Liwa Midali 2026"
+	name = "Liwa Midali"
 	regiments = {
 		L_Marine_Bat = { x = 0 y = 0 }
 		L_Marine_Bat = { x = 0 y = 1 }
@@ -83,7 +83,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Fawj Alquwwat Alkhasa 2026"
+	name = "Fawj Alquwwat Alkhasa"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -104,7 +104,7 @@ units = {
 	division = {
 		name = "4th Armoured Division"
 		location = 10073
-		division_template = "Firqa Moudar'a 2026"
+		division_template = "Firqa Moudar'a"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -112,7 +112,7 @@ units = {
 	division = {
 		name = "9th Armoured Division"
 		location = 11964
-		division_template = "Firqa Moudar'a 2026"
+		division_template = "Firqa Moudar'a"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -120,7 +120,7 @@ units = {
 	division = {
 		name = "21st Armoured Division"
 		location = 4076
-		division_template = "Firqa Moudar'a 2026"
+		division_template = "Firqa Moudar'a"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -128,7 +128,7 @@ units = {
 	division = {
 		name = "23rd Armoured Division"
 		location = 4145
-		division_template = "Firqa Moudar'a 2026"
+		division_template = "Firqa Moudar'a"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -139,7 +139,7 @@ units = {
 	division = {
 		name = "2nd Mechanized Division"
 		location = 7164
-		division_template = "Firqa Mechaniqui 2026"
+		division_template = "Firqa Mechaniqui"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -147,7 +147,7 @@ units = {
 	division = {
 		name = "3rd Mechanized Division"
 		location = 11974
-		division_template = "Firqa Mechaniqui 2026"
+		division_template = "Firqa Mechaniqui"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -155,7 +155,7 @@ units = {
 	division = {
 		name = "6th Mechanized Division"
 		location = 7144
-		division_template = "Firqa Mechaniqui 2026"
+		division_template = "Firqa Mechaniqui"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -163,7 +163,7 @@ units = {
 	division = {
 		name = "7th Mechanized Division"
 		location = 12049
-		division_template = "Firqa Mechaniqui 2026"
+		division_template = "Firqa Mechaniqui"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -171,7 +171,7 @@ units = {
 	division = {
 		name = "18th Mechanized Division"
 		location = 1155
-		division_template = "Firqa Mechaniqui 2026"
+		division_template = "Firqa Mechaniqui"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -179,7 +179,7 @@ units = {
 	division = {
 		name = "19th Mechanized Division"
 		location = 9947
-		division_template = "Firqa Mechaniqui 2026"
+		division_template = "Firqa Mechaniqui"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -190,7 +190,7 @@ units = {
 	division = {
 		name = "11th Infantry Brigade"
 		location = 10005
-		division_template = "Liwa Mushat 2026"
+		division_template = "Liwa Mushat"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
@@ -198,7 +198,7 @@ units = {
 	division = {
 		name = "22nd Infantry Brigade"
 		location = 12002
-		division_template = "Liwa Mushat 2026"
+		division_template = "Liwa Mushat"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
@@ -206,7 +206,7 @@ units = {
 	division = {
 		name = "33rd Infantry Brigade"
 		location = 9957
-		division_template = "Liwa Mushat 2026"
+		division_template = "Liwa Mushat"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
@@ -214,7 +214,7 @@ units = {
 	division = {
 		name = "116th Infantry Brigade"
 		location = 12889
-		division_template = "Liwa Mushat 2026"
+		division_template = "Liwa Mushat"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
@@ -222,7 +222,7 @@ units = {
 	division = {
 		name = "112th Infantry Brigade"
 		location = 4073
-		division_template = "Liwa Mushat 2026"
+		division_template = "Liwa Mushat"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
@@ -233,7 +233,7 @@ units = {
 	division = {
 		name = "Air Assault Brigade"
 		location = 12004
-		division_template = "Liwa Alhawa Almahmul 2026"
+		division_template = "Liwa Alhawa Almahmul"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.85
 	}
@@ -241,7 +241,7 @@ units = {
 	division = {
 		name = "153rd Commando Group"
 		location = 7011
-		division_template = "Liwa Midali 2026"
+		division_template = "Liwa Midali"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.85
 	}
@@ -249,7 +249,7 @@ units = {
 	division = {
 		name = "Unit 777"
 		location = 3996
-		division_template = "Fawj Alquwwat Alkhasa 2026"
+		division_template = "Fawj Alquwwat Alkhasa"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.9
 	}
@@ -260,7 +260,7 @@ units = {
 	division = {
 		name = "Republican Guard 1st Brigade"
 		location = 4055
-		division_template = "Firqa Moudar'a 2026"
+		division_template = "Firqa Moudar'a"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.9
 	}
@@ -268,9 +268,45 @@ units = {
 	division = {
 		name = "Republican Guard 2nd Brigade"
 		location = 1068
-		division_template = "Firqa Mechaniqui 2026"
+		division_template = "Firqa Mechaniqui"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.9
+	}
+
+	##### Egyptian Navy #####
+
+	fleet = {
+		name = "Mediterranean Fleet"
+		naval_base = 4076
+		task_force = {
+			name = "Mediterranean Fleet"
+			location = 4076
+			ship = { name = "ENS Gamal Abdel Nasser (L1010)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = EGY version_name = "Mistral Class" } } }
+			ship = { name = "ENS Tahya Misr (FFG-1001)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = EGY version_name = "FREMM Class" } } }
+			ship = { name = "ENS Al Galala (FFG-1002)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = EGY version_name = "FREMM Class" } } }
+			ship = { name = "ENS Sharm El Sheikh" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_2 = { amount = 1 owner = EGY version_name = "Oliver Hazard Perry Class" } } }
+			ship = { name = "ENS El Fateh (971)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY version_name = "Gowind 2500 Class" } } }
+			ship = { name = "ENS Port Said (972)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY version_name = "Gowind 2500 Class" } } }
+			ship = { name = "ENS S. Ezzat" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = EGY version_name = "Ambassador Mk III Class" } } }
+			ship = { name = "ENS M. Fahmy" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = EGY version_name = "Ambassador Mk III Class" } } }
+			ship = { name = "S-41" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY version_name = "Type 209/1400 Class" } } }
+			ship = { name = "S-42" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY version_name = "Type 209/1400 Class" } } }
+		}
+	}
+
+	fleet = {
+		name = "Red Sea Fleet"
+		naval_base = 4073
+		task_force = {
+			name = "Red Sea Fleet"
+			location = 4073
+			ship = { name = "ENS Anwar El Sadat (L1020)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = EGY version_name = "Mistral Class" } } }
+			ship = { name = "ENS Taba" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_2 = { amount = 1 owner = EGY version_name = "Oliver Hazard Perry Class" } } }
+			ship = { name = "ENS Al Moez (973)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY version_name = "Gowind 2500 Class" } } }
+			ship = { name = "ENS Luxor (974)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY version_name = "Gowind 2500 Class" } } }
+			ship = { name = "S-43" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY version_name = "Type 209/1400 Class" } } }
+			ship = { name = "S-44" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY version_name = "Type 209/1400 Class" } } }
+		}
 	}
 }
 
@@ -279,5 +315,42 @@ instant_effect = {
 		type = infantry_weapons5
 		amount = 8000
 		producer = EGY
+	}
+}
+
+##### Egyptian Air Force #####
+
+air_wings = {
+	# Cairo area air bases
+	215 = {
+		medium_plane_airframe_2 = { owner = "EGY" creator = "FRA" amount = 36 version_name = "Rafale EM" }
+		name = "242nd Tactical Fighter Wing"
+		start_experience_factor = 0.5
+	}
+	215 = {
+		small_plane_strike_airframe_2 = { owner = "EGY" creator = "USA" amount = 80 version_name = "F-16C Block 52" }
+		name = "232nd Tactical Fighter Wing"
+		start_experience_factor = 0.45
+	}
+	215 = {
+		small_plane_airframe_2 = { owner = "EGY" creator = "SOV" amount = 46 version_name = "MiG-29M/M2" }
+		name = "241st Tactical Fighter Wing"
+		start_experience_factor = 0.45
+	}
+	215 = {
+		large_plane_awacs_airframe_1 = { owner = "EGY" creator = "USA" amount = 8 version_name = "E-2C Hawkeye" }
+		name = "Early Warning Group"
+		start_experience_factor = 0.5
+	}
+	215 = {
+		large_plane_air_transport_airframe_1 = { owner = "EGY" creator = "USA" amount = 15 version_name = "C-130H Hercules" }
+		name = "516th Air Transport Wing"
+		start_experience_factor = 0.4
+	}
+	# Alexandria area air bases
+	216 = {
+		small_plane_strike_airframe_2 = { owner = "EGY" creator = "USA" amount = 100 version_name = "F-16C Block 40" }
+		name = "252nd Tactical Fighter Wing"
+		start_experience_factor = 0.4
 	}
 }
