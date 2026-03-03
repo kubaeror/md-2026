@@ -95,6 +95,26 @@ units = {
 		start_experience_factor = 0.50
 		start_equipment_factor = 0.75
 	}
+
+	##### Военноморски сили (Bulgarian Navy) #####
+	fleet = {
+		name = "Bulgarian Navy"
+		naval_base = 9783		# Varna
+		task_force = {
+			name = "Varna Naval Base"
+			location = 9783
+			# Wielingen-class frigates (ex-Belgian)
+			ship = { name = "BGS Drazki (F41)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL version_name = "Wielingen class" } } }
+			ship = { name = "BGS Gordi (F42)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL version_name = "Wielingen class" } } }
+			ship = { name = "BGS Reshitelni (F43)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL version_name = "Wielingen class" } } }
+		}
+		task_force = {
+			name = "Atia Naval Base"
+			location = 9902		# Burgas
+			# Corvette
+			ship = { name = "BGS Bodri (F13)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = BUL version_name = "Poti class" } } }
+		}
+	}
 }
 
 instant_effect = {
@@ -107,5 +127,27 @@ instant_effect = {
 		type = infantry_weapons5
 		amount = 1000
 		producer = USA
+	}
+}
+
+##### Военновъздушни сили (Bulgarian Air Force) #####
+air_wings = {
+	# Graf Ignatievo - F-16V Block 70
+	153 = {
+		small_plane_strike_airframe_2 = { owner = "BUL" creator = "USA" amount = 8 version_name = "F-16V Block 70" }
+		name = "1st Fighter Air Base"
+		start_experience_factor = 0.4
+	}
+	# MiG-29 (remaining operational)
+	153 = {
+		small_plane_airframe_2 = { owner = "BUL" creator = "SOV" amount = 12 version_name = "MiG-29A Fulcrum" }
+		name = "3/2 Fighter Squadron"
+		start_experience_factor = 0.4
+	}
+	# C-27J Spartan Transport
+	153 = {
+		large_plane_air_transport_airframe_1 = { owner = "BUL" creator = "ITA" amount = 3 version_name = "C-27J Spartan" }
+		name = "16th Transport Air Group"
+		start_experience_factor = 0.4
 	}
 }
