@@ -78,6 +78,25 @@ md2026_techs_prereqs = {
 				SP_Anti_Air_1 = 1
 				AA_upgrade_2 = 1
 				AA_upgrade_3 = 1
+				# Non-NSB armor: root + MBT chain (1945-1995 prereqs for MBT_5 @ 2015)
+				Early_APC = 1
+				MBT_1 = 1
+				MBT_2 = 1
+				MBT_3 = 1
+				MBT_4 = 1
+				# Non-NSB armor: APC chain (1965-1995 prereqs for APC_5 @ 2005)
+				APC_1 = 1
+				APC_2 = 1
+				APC_3 = 1
+				APC_4 = 1
+				# Non-NSB armor: IFV chain (1965-1995 prereqs for IFV_5 @ 2005)
+				IFV_1 = 1
+				IFV_2 = 1
+				IFV_3 = 1
+				IFV_4 = 1
+				# Non-NSB armor: Rec tank chain (1965-1985 prereqs for Rec_tank_2 @ 2005)
+				Rec_tank_0 = 1
+				Rec_tank_1 = 1
 			}
 		}
 	}
