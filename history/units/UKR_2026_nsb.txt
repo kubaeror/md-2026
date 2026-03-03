@@ -3,7 +3,7 @@
 # Depleted by combat, mix of NATO-standard and Soviet-era equipment
 
 division_template = {
-	name = "Mekhanizovana Bryhada 2026"
+	name = "Mekhanizovana Bryhada"
 	regiments = {
 		Arm_Inf_Bat = { x = 0 y = 0 }
 		Arm_Inf_Bat = { x = 0 y = 1 }
@@ -22,7 +22,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Tankova Bryhada 2026"
+	name = "Tankova Bryhada"
 	regiments = {
 		armor_Bat = { x = 0 y = 0 }
 		armor_Bat = { x = 0 y = 1 }
@@ -39,7 +39,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Pikhota Bryhada 2026"
+	name = "Pikhota Bryhada"
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
 		Mot_Inf_Bat = { x = 0 y = 1 }
@@ -57,7 +57,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Desantno-Shturmova Bryhada 2026"
+	name = "Desantno-Shturmova Bryhada"
 	regiments = {
 		L_Air_Inf_Bat = { x = 0 y = 0 }
 		L_Air_Inf_Bat = { x = 0 y = 1 }
@@ -73,7 +73,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Bryhada Morskoyi Pikhoty 2026"
+	name = "Bryhada Morskoyi Pikhoty"
 	regiments = {
 		L_Marine_Bat = { x = 0 y = 0 }
 		L_Marine_Bat = { x = 0 y = 1 }
@@ -89,7 +89,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Bryhada Spetspryznachennya 2026"
+	name = "Bryhada Spetspryznachennya"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -103,7 +103,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Terytorialna Bryhada 2026"
+	name = "Terytorialna Bryhada"
 	regiments = {
 		Militia_Bat = { x = 0 y = 0 }
 		Militia_Bat = { x = 0 y = 1 }
@@ -118,7 +118,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Artyleriiska Bryhada 2026"
+	name = "Artyleriiska Bryhada"
 	regiments = {
 		SP_Arty_Bat = { x = 0 y = 0 }
 		SP_Arty_Bat = { x = 0 y = 1 }
@@ -141,7 +141,7 @@ units = {
 	division = {
 		name = "1st Separate Tank Brigade"
 		location = 11670
-		division_template = "Tankova Bryhada 2026"
+		division_template = "Tankova Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -149,7 +149,7 @@ units = {
 	division = {
 		name = "3rd Separate Tank Brigade"
 		location = 6593
-		division_template = "Tankova Bryhada 2026"
+		division_template = "Tankova Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.55
 	}
@@ -157,7 +157,7 @@ units = {
 	division = {
 		name = "4th Tank Brigade"
 		location = 11452
-		division_template = "Tankova Bryhada 2026"
+		division_template = "Tankova Bryhada"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.55
 	}
@@ -165,7 +165,7 @@ units = {
 	division = {
 		name = "14th Mechanized Brigade"
 		location = 6554
-		division_template = "Mekhanizovana Bryhada 2026"
+		division_template = "Mekhanizovana Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -173,7 +173,7 @@ units = {
 	division = {
 		name = "17th Mechanized Brigade"
 		location = 3511
-		division_template = "Mekhanizovana Bryhada 2026"
+		division_template = "Mekhanizovana Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
@@ -181,7 +181,7 @@ units = {
 	division = {
 		name = "24th Mechanized Brigade 'King Daniel'"
 		location = 6509
-		division_template = "Mekhanizovana Bryhada 2026"
+		division_template = "Mekhanizovana Bryhada"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.6
 	}
@@ -189,7 +189,7 @@ units = {
 	division = {
 		name = "47th Mechanized Brigade 'Magura'"
 		location = 11464
-		division_template = "Mekhanizovana Bryhada 2026"
+		division_template = "Mekhanizovana Bryhada"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.6
 	}
@@ -197,7 +197,7 @@ units = {
 	division = {
 		name = "53rd Mechanized Brigade"
 		location = 6429
-		division_template = "Mekhanizovana Bryhada 2026"
+		division_template = "Mekhanizovana Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.55
 	}
@@ -205,7 +205,7 @@ units = {
 	division = {
 		name = "93rd Mechanized Brigade 'Kholodny Yar'"
 		location = 14328
-		division_template = "Mekhanizovana Bryhada 2026"
+		division_template = "Mekhanizovana Bryhada"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.6
 	}
@@ -216,7 +216,7 @@ units = {
 	division = {
 		name = "54th Motorized Brigade"
 		location = 9677
-		division_template = "Pikhota Bryhada 2026"
+		division_template = "Pikhota Bryhada"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.55
 	}
@@ -224,7 +224,7 @@ units = {
 	division = {
 		name = "63rd Motorized Brigade"
 		location = 11691
-		division_template = "Pikhota Bryhada 2026"
+		division_template = "Pikhota Bryhada"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.55
 	}
@@ -232,7 +232,7 @@ units = {
 	division = {
 		name = "110th Mechanized Brigade"
 		location = 9548
-		division_template = "Pikhota Bryhada 2026"
+		division_template = "Pikhota Bryhada"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.55
 	}
@@ -240,7 +240,7 @@ units = {
 	division = {
 		name = "115th Mechanized Brigade"
 		location = 11683
-		division_template = "Pikhota Bryhada 2026"
+		division_template = "Pikhota Bryhada"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.5
 	}
@@ -251,7 +251,7 @@ units = {
 	division = {
 		name = "25th Airborne Brigade 'Sicheslav'"
 		location = 9533
-		division_template = "Desantno-Shturmova Bryhada 2026"
+		division_template = "Desantno-Shturmova Bryhada"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.6
 	}
@@ -259,7 +259,7 @@ units = {
 	division = {
 		name = "46th Airmobile Brigade"
 		location = 3704
-		division_template = "Desantno-Shturmova Bryhada 2026"
+		division_template = "Desantno-Shturmova Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.55
 	}
@@ -267,7 +267,7 @@ units = {
 	division = {
 		name = "77th Airmobile Brigade"
 		location = 11670
-		division_template = "Desantno-Shturmova Bryhada 2026"
+		division_template = "Desantno-Shturmova Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.55
 	}
@@ -275,7 +275,7 @@ units = {
 	division = {
 		name = "82nd Air Assault Brigade"
 		location = 6593
-		division_template = "Desantno-Shturmova Bryhada 2026"
+		division_template = "Desantno-Shturmova Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.55
 	}
@@ -286,7 +286,7 @@ units = {
 	division = {
 		name = "35th Marine Brigade"
 		location = 705
-		division_template = "Bryhada Morskoyi Pikhoty 2026"
+		division_template = "Bryhada Morskoyi Pikhoty"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.55
 	}
@@ -294,7 +294,7 @@ units = {
 	division = {
 		name = "36th Marine Brigade"
 		location = 3686
-		division_template = "Bryhada Morskoyi Pikhoty 2026"
+		division_template = "Bryhada Morskoyi Pikhoty"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.55
 	}
@@ -302,7 +302,7 @@ units = {
 	division = {
 		name = "37th Marine Brigade"
 		location = 11670
-		division_template = "Bryhada Morskoyi Pikhoty 2026"
+		division_template = "Bryhada Morskoyi Pikhoty"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.5
 	}
@@ -313,7 +313,7 @@ units = {
 	division = {
 		name = "SSO Ukraine"
 		location = 525
-		division_template = "Bryhada Spetspryznachennya 2026"
+		division_template = "Bryhada Spetspryznachennya"
 		start_experience_factor = 0.65
 		start_equipment_factor = 0.75
 	}
@@ -321,7 +321,7 @@ units = {
 	division = {
 		name = "GUR Special Units"
 		location = 525
-		division_template = "Bryhada Spetspryznachennya 2026"
+		division_template = "Bryhada Spetspryznachennya"
 		start_experience_factor = 0.65
 		start_equipment_factor = 0.7
 	}
@@ -331,28 +331,28 @@ units = {
 	division = {
 		name = "101st TDF Brigade"
 		location = 3457
-		division_template = "Terytorialna Bryhada 2026"
+		division_template = "Terytorialna Bryhada"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
 	division = {
 		name = "112th TDF Brigade"
 		location = 525
-		division_template = "Terytorialna Bryhada 2026"
+		division_template = "Terytorialna Bryhada"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
 	division = {
 		name = "114th TDF Brigade"
 		location = 11703
-		division_template = "Terytorialna Bryhada 2026"
+		division_template = "Terytorialna Bryhada"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
 	division = {
 		name = "118th TDF Brigade"
 		location = 9680
-		division_template = "Terytorialna Bryhada 2026"
+		division_template = "Terytorialna Bryhada"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
@@ -363,7 +363,7 @@ units = {
 	division = {
 		name = "43rd Artillery Brigade"
 		location = 11464
-		division_template = "Artyleriiska Bryhada 2026"
+		division_template = "Artyleriiska Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.55
 	}
@@ -371,7 +371,7 @@ units = {
 	division = {
 		name = "44th Artillery Brigade"
 		location = 6554
-		division_template = "Artyleriiska Bryhada 2026"
+		division_template = "Artyleriiska Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.55
 	}
@@ -379,9 +379,25 @@ units = {
 	division = {
 		name = "55th Artillery Brigade"
 		location = 14328
-		division_template = "Artyleriiska Bryhada 2026"
+		division_template = "Artyleriiska Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.55
+	}
+
+	### Ukrainian Navy — Viiskovo-Morski Syly ###
+	fleet = {
+		name = "Viiskovo-Morski Syly Ukrainy"
+		naval_base = 11670
+		task_force = {
+			name = "Bryhada Nadvodnyh Korabliv"
+			location = 11670
+			ship = { name = "Slavyansk (P190)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_1 = { amount = 1 owner = UKR creator = USA version_name = "Island Class" } } }
+			ship = { name = "Starobilsk (P191)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_1 = { amount = 1 owner = UKR creator = USA version_name = "Island Class" } } }
+			ship = { name = "Sumy (P192)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_1 = { amount = 1 owner = UKR creator = USA version_name = "Island Class" } } }
+			ship = { name = "Fastiv (P193)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_1 = { amount = 1 owner = UKR creator = USA version_name = "Island Class" } } }
+			ship = { name = "Chernihiv (P311)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = UKR creator = ENG version_name = "Sandown Class" } } }
+			ship = { name = "Cherkasy (P312)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = UKR creator = ENG version_name = "Sandown Class" } } }
+		}
 	}
 }
 
@@ -395,5 +411,50 @@ instant_effect = {
 		type = infantry_weapons4
 		amount = 8000
 		producer = UKR
+	}
+}
+
+air_wings = {
+	700 = {
+		small_plane_strike_airframe_2 = { owner = "UKR" creator = "USA" amount = 18 version_name = "F-16AM Fighting Falcon" }
+		name = "114-a Bryhada Taktychnoyi Aviatsiyi"
+		start_experience_factor = 0.5
+		#
+		small_plane_cas_airframe_2 = { owner = "UKR" creator = "SOV" amount = 8 version_name = "Su-25" }
+		name = "456-a Bryhada Transportnoyi Aviatsiyi"
+		start_experience_factor = 0.4
+		#
+		small_plane_suicide_airframe_2 = { owner = "UKR" creator = "TUR" amount = 14 version_name = "Bayraktar TB2" }
+		name = "Bezpilotna Eskadrilya"
+		start_experience_factor = 0.4
+	}
+	1110 = {
+		small_plane_strike_airframe_2 = { owner = "UKR" creator = "USA" amount = 14 version_name = "F-16AM Fighting Falcon" }
+		name = "204-a Bryhada Taktychnoyi Aviatsiyi"
+		start_experience_factor = 0.5
+	}
+	698 = {
+		small_plane_strike_airframe_2 = { owner = "UKR" creator = "USA" amount = 8 version_name = "F-16AM Fighting Falcon" }
+		name = "39-a Bryhada Taktychnoyi Aviatsiyi"
+		start_experience_factor = 0.5
+		#
+		small_plane_airframe_2 = { owner = "UKR" creator = "SOV" amount = 10 version_name = "MiG-29 Fulcrum" }
+		name = "40-a Bryhada Taktychnoyi Aviatsiyi"
+		start_experience_factor = 0.45
+	}
+	1089 = {
+		medium_plane_fighter_airframe_2 = { owner = "UKR" creator = "SOV" amount = 6 version_name = "Su-27S" }
+		name = "831-a Bryhada Taktychnoyi Aviatsiyi"
+		start_experience_factor = 0.5
+	}
+	699 = {
+		medium_plane_cas_airframe_1 = { owner = "UKR" creator = "SOV" amount = 5 version_name = "Su-24M" }
+		name = "7-a Bryhada Taktychnoyi Aviatsiyi"
+		start_experience_factor = 0.45
+	}
+	694 = {
+		large_plane_air_transport_airframe_1 = { owner = "UKR" creator = "UKR" amount = 6 version_name = "An-26" }
+		name = "25-a Bryhada Transportnoyi Aviatsiyi"
+		start_experience_factor = 0.4
 	}
 }
