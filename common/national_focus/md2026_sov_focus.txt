@@ -65,7 +65,7 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_MILITARY }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_total_mobilization"
-		add_manpower = 500000
+		add_manpower = 250000
 		add_stability = -0.15
 		add_war_support = 0.10
 	}

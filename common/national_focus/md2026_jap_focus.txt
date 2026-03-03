@@ -8,7 +8,8 @@ shared_focus = {
 	icon = GFX_focus_generic_japan_pacific
 	x = 38
 	y = 0
-	cost = 5
+	cost = 3.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	allow_branch = {
 		original_tag = JAP
 		date > 2025.12.31
@@ -18,6 +19,9 @@ shared_focus = {
 		add_political_power = 100
 		add_war_support = 0.05
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 ### Military Reform Branch ###
@@ -26,7 +30,8 @@ shared_focus = {
 	icon = GFX_goal_generic_demand_territory
 	x = -3
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	prerequisite = { focus = MD2026_JAP_active_defense }
 	relative_position_id = MD2026_JAP_active_defense
 	completion_reward = {
@@ -35,6 +40,9 @@ shared_focus = {
 		add_stability = -0.05
 		add_ideas = md2026_jap_article_9_reform
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 shared_focus = {
@@ -42,7 +50,8 @@ shared_focus = {
 	icon = GFX_goal_generic_army_doctrines
 	x = -1
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
 	prerequisite = { focus = MD2026_JAP_constitutional_reform }
 	relative_position_id = MD2026_JAP_constitutional_reform
 	completion_reward = {
@@ -55,6 +64,9 @@ shared_focus = {
 		}
 		army_experience = 25
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 shared_focus = {
@@ -62,7 +74,8 @@ shared_focus = {
 	icon = GFX_goal_generic_navy_doctrines
 	x = 1
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	prerequisite = { focus = MD2026_JAP_constitutional_reform }
 	relative_position_id = MD2026_JAP_constitutional_reform
 	completion_reward = {
@@ -75,6 +88,9 @@ shared_focus = {
 			category = CAT_naval_all
 		}
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 ### Diplomatic Branch ###
@@ -83,7 +99,8 @@ shared_focus = {
 	icon = GFX_goal_generic_alliance
 	x = 0
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	prerequisite = { focus = MD2026_JAP_active_defense }
 	relative_position_id = MD2026_JAP_active_defense
 	completion_reward = {
@@ -93,6 +110,9 @@ shared_focus = {
 		add_opinion_modifier = { target = AST modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = RAJ modifier = md2026_improved_relations }
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 shared_focus = {
@@ -100,7 +120,8 @@ shared_focus = {
 	icon = GFX_goal_generic_military_deal
 	x = -1
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	prerequisite = { focus = MD2026_JAP_indo_pacific }
 	relative_position_id = MD2026_JAP_indo_pacific
 	mutually_exclusive = { focus = MD2026_JAP_korea_reconciliation }
@@ -111,6 +132,9 @@ shared_focus = {
 		TAI = { add_opinion_modifier = { target = JAP modifier = md2026_improved_relations } }
 		add_opinion_modifier = { target = CHI modifier = embargo }
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 shared_focus = {
@@ -118,7 +142,8 @@ shared_focus = {
 	icon = GFX_goal_generic_improve_relations
 	x = 1
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	prerequisite = { focus = MD2026_JAP_indo_pacific }
 	relative_position_id = MD2026_JAP_indo_pacific
 	mutually_exclusive = { focus = MD2026_JAP_taiwan_contingency }
@@ -128,6 +153,9 @@ shared_focus = {
 		add_opinion_modifier = { target = KOR modifier = md2026_improved_relations }
 		KOR = { add_opinion_modifier = { target = JAP modifier = md2026_improved_relations } }
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 ### Economic Branch ###
@@ -136,7 +164,8 @@ shared_focus = {
 	icon = GFX_goal_generic_construct_civ_factory
 	x = 3
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_ECONOMY }
 	prerequisite = { focus = MD2026_JAP_active_defense }
 	relative_position_id = MD2026_JAP_active_defense
 	completion_reward = {
@@ -148,6 +177,9 @@ shared_focus = {
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
 		}
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 shared_focus = {
@@ -155,7 +187,8 @@ shared_focus = {
 	icon = GFX_focus_research
 	x = 0
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	prerequisite = { focus = MD2026_JAP_economic_revitalization }
 	relative_position_id = MD2026_JAP_economic_revitalization
 	completion_reward = {
@@ -168,6 +201,9 @@ shared_focus = {
 			category = CAT_computing_tech
 		}
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 ### Missile Defense Branch ###
@@ -176,7 +212,8 @@ shared_focus = {
 	icon = GFX_goal_generic_air_defense
 	x = 0
 	y = 2
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
 	prerequisite = { focus = MD2026_JAP_counterattack_capability }
 	prerequisite = { focus = MD2026_JAP_pacific_shield }
 	relative_position_id = MD2026_JAP_constitutional_reform
@@ -189,5 +226,8 @@ shared_focus = {
 			category = CAT_aa
 		}
 		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }

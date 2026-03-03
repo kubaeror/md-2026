@@ -271,7 +271,7 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_USA_space_force_expansion"
-		air_experience = 50
+		air_experience = 25
 		add_political_power = 25
 	}
 	ai_will_do = { base = 40 }
@@ -336,8 +336,8 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_USA_abandon_ukraine"
-		add_stability = -0.10
-		add_political_power = -100
+		add_stability = -0.05
+		add_political_power = 50
 		add_opinion_modifier = { target = UKR modifier = embargo }
 		reverse_add_opinion_modifier = { target = UKR modifier = embargo }
 		add_opinion_modifier = { target = SOV modifier = improve_relation }

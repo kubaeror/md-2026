@@ -158,7 +158,8 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_semiconductor_war"
-		add_political_power = -25
+		add_political_power = 50
+		add_research_slot = 1
 		add_stability = -0.03
 	}
 	ai_will_do = { base = 70 }
@@ -196,7 +197,7 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_MILITARY }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_naval_expansion"
-		navy_experience = 50
+		navy_experience = 25
 		add_war_support = 0.05
 	}
 	ai_will_do = { base = 70 }
@@ -233,7 +234,7 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_MILITARY }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_blue_water_navy"
-		navy_experience = 50
+		navy_experience = 25
 		add_political_power = 50
 	}
 	ai_will_do = { base = 40 }

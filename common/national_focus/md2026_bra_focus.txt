@@ -8,7 +8,8 @@ shared_focus = {
 	icon = GFX_focus_generic_south_america
 	x = 38
 	y = 0
-	cost = 5
+	cost = 3.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	allow_branch = {
 		original_tag = BRA
 		date > 2025.12.31
@@ -18,6 +19,9 @@ shared_focus = {
 		add_political_power = 100
 		add_stability = 0.05
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 ### Environment Branch ###
@@ -26,7 +30,8 @@ shared_focus = {
 	icon = GFX_goal_generic_national_unity
 	x = -3
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	prerequisite = { focus = MD2026_BRA_return }
 	relative_position_id = MD2026_BRA_return
 	completion_reward = {
@@ -36,6 +41,9 @@ shared_focus = {
 		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = GER modifier = md2026_improved_relations }
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 shared_focus = {
@@ -43,7 +51,8 @@ shared_focus = {
 	icon = GFX_goal_generic_construct_civ_factory
 	x = 0
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	prerequisite = { focus = MD2026_BRA_amazon_protection }
 	relative_position_id = MD2026_BRA_amazon_protection
 	completion_reward = {
@@ -55,6 +64,9 @@ shared_focus = {
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
 		}
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 ### Economic Branch ###
@@ -63,7 +75,8 @@ shared_focus = {
 	icon = GFX_goal_generic_construct_mil_factory
 	x = 0
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	prerequisite = { focus = MD2026_BRA_return }
 	relative_position_id = MD2026_BRA_return
 	completion_reward = {
@@ -74,6 +87,9 @@ shared_focus = {
 			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
 		}
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 shared_focus = {
@@ -81,7 +97,8 @@ shared_focus = {
 	icon = GFX_goal_generic_trade
 	x = -1
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_TRADE }
 	prerequisite = { focus = MD2026_BRA_reindustrialization }
 	relative_position_id = MD2026_BRA_reindustrialization
 	mutually_exclusive = { focus = MD2026_BRA_agri_superpower }
@@ -90,6 +107,9 @@ shared_focus = {
 		add_political_power = 75
 		add_stability = 0.05
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 shared_focus = {
@@ -97,7 +117,8 @@ shared_focus = {
 	icon = GFX_goal_generic_consumer_goods
 	x = 1
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_ECONOMY }
 	prerequisite = { focus = MD2026_BRA_reindustrialization }
 	relative_position_id = MD2026_BRA_reindustrialization
 	mutually_exclusive = { focus = MD2026_BRA_sa_trade }
@@ -105,6 +126,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_BRA_agri_superpower"
 		add_resource = { type = steel amount = 10 state = 500 }
 		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
@@ -114,7 +138,8 @@ shared_focus = {
 	icon = GFX_goal_generic_alliance
 	x = 3
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	prerequisite = { focus = MD2026_BRA_return }
 	relative_position_id = MD2026_BRA_return
 	completion_reward = {
@@ -125,6 +150,9 @@ shared_focus = {
 		add_opinion_modifier = { target = RAJ modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = SAF modifier = md2026_improved_relations }
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 shared_focus = {
@@ -132,7 +160,8 @@ shared_focus = {
 	icon = GFX_goal_generic_improve_relations
 	x = -1
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	prerequisite = { focus = MD2026_BRA_brics_leadership }
 	relative_position_id = MD2026_BRA_brics_leadership
 	mutually_exclusive = { focus = MD2026_BRA_mercosur }
@@ -141,6 +170,9 @@ shared_focus = {
 		add_political_power = 100
 		add_stability = 0.05
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 shared_focus = {
@@ -148,13 +180,17 @@ shared_focus = {
 	icon = GFX_goal_generic_trade
 	x = 1
 	y = 1
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	prerequisite = { focus = MD2026_BRA_brics_leadership }
 	relative_position_id = MD2026_BRA_brics_leadership
 	mutually_exclusive = { focus = MD2026_BRA_un_reform }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_BRA_mercosur"
 		add_political_power = 75
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
@@ -164,7 +200,8 @@ shared_focus = {
 	icon = GFX_goal_generic_army_doctrines
 	x = 0
 	y = 3
-	cost = 10
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
 	prerequisite = { focus = MD2026_BRA_reindustrialization }
 	relative_position_id = MD2026_BRA_return
 	completion_reward = {
@@ -177,5 +214,8 @@ shared_focus = {
 			uses = 2
 			category = CAT_naval_all
 		}
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
