@@ -450,6 +450,107 @@ units = {
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.85
 	}
+
+	##### Indian Navy #####
+
+	### Western Naval Command (Mumbai) ###
+	fleet = {
+		name = "Western Naval Command"
+		naval_base = 1349
+		# Carrier Group — INS Vikramaditya
+		task_force = {
+			name = "Western Fleet Carrier Group"
+			location = 1349
+			ship = { name = "INS Vikramaditya (R33)" definition = carrier start_experience_factor = 0.55 equipment = { carrier_hull_2 = { amount = 1 owner = RAJ version_name = "Modified Kiev Class" } } }
+		}
+		# Visakhapatnam-class + Kolkata-class destroyers
+		task_force = {
+			name = "Western Destroyer Squadron"
+			location = 1349
+			ship = { name = "INS Visakhapatnam (D66)" definition = destroyer start_experience_factor = 0.65 equipment = { destroyer_hull_3 = { amount = 1 owner = RAJ version_name = "Visakhapatnam Class" } } }
+			ship = { name = "INS Mormugao (D67)" definition = destroyer start_experience_factor = 0.65 equipment = { destroyer_hull_3 = { amount = 1 owner = RAJ version_name = "Visakhapatnam Class" } } }
+			ship = { name = "INS Imphal (D68)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = RAJ version_name = "Visakhapatnam Class" } } }
+			ship = { name = "INS Kolkata (D63)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = RAJ version_name = "Kolkata Class" } } }
+			ship = { name = "INS Kochi (D64)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = RAJ version_name = "Kolkata Class" } } }
+			ship = { name = "INS Chennai (D65)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = RAJ version_name = "Kolkata Class" } } }
+		}
+		# Shivalik + Talwar-class frigates
+		task_force = {
+			name = "Western Frigate Squadron"
+			location = 1349
+			ship = { name = "INS Shivalik (F47)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = RAJ version_name = "Shivalik Class" } } }
+			ship = { name = "INS Satpura (F48)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = RAJ version_name = "Shivalik Class" } } }
+			ship = { name = "INS Sahyadri (F49)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = RAJ version_name = "Shivalik Class" } } }
+			ship = { name = "INS Talwar (F40)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = RAJ version_name = "Talwar Class" } } }
+			ship = { name = "INS Trishul (F43)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = RAJ version_name = "Talwar Class" } } }
+			ship = { name = "INS Tabar (F44)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = RAJ version_name = "Talwar Class" } } }
+			ship = { name = "INS Teg (F45)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = RAJ version_name = "Talwar Class" } } }
+			ship = { name = "INS Tarkash (F50)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = RAJ version_name = "Talwar Class" } } }
+			ship = { name = "INS Triput (F51)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = RAJ version_name = "Talwar Class" } } }
+		}
+		# Submarines (Western)
+		task_force = {
+			name = "Western Submarine Command"
+			location = 1349
+			ship = { name = "INS Kalvari (S21)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = RAJ version_name = "Scorpene Class" } } }
+			ship = { name = "INS Khanderi (S22)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = RAJ version_name = "Scorpene Class" } } }
+			ship = { name = "INS Karanj (S23)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = RAJ version_name = "Scorpene Class" } } }
+			ship = { name = "INS Vela (S24)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = RAJ version_name = "Scorpene Class" } } }
+			ship = { name = "INS Vagir (S25)" definition = attack_submarine start_experience_factor = 0.55 equipment = { attack_submarine_hull_2 = { amount = 1 owner = RAJ version_name = "Scorpene Class" } } }
+			ship = { name = "INS Vagsheer (S26)" definition = attack_submarine start_experience_factor = 0.55 equipment = { attack_submarine_hull_2 = { amount = 1 owner = RAJ version_name = "Scorpene Class" } } }
+			ship = { name = "INS Sindhukesari (S59)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_1 = { amount = 1 owner = RAJ version_name = "Sindhughosh Class" } } }
+			ship = { name = "INS Sindhukirti (S61)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_1 = { amount = 1 owner = RAJ version_name = "Sindhughosh Class" } } }
+		}
+		# SSBN
+		task_force = {
+			name = "Strategic Forces"
+			location = 10255
+			ship = { name = "INS Arihant (S73)" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = RAJ version_name = "Arihant Class" } } }
+			ship = { name = "INS Arighat (S74)" definition = missile_submarine start_experience_factor = 0.55 equipment = { missile_submarine_hull_2 = { amount = 1 owner = RAJ version_name = "Arihant Class" } } }
+		}
+	}
+
+	### Eastern Naval Command (Visakhapatnam) ###
+	fleet = {
+		name = "Eastern Naval Command"
+		naval_base = 10255
+		# Carrier Group — INS Vikrant
+		task_force = {
+			name = "Eastern Fleet Carrier Group"
+			location = 10255
+			ship = { name = "INS Vikrant (R11)" definition = carrier start_experience_factor = 0.55 equipment = { carrier_hull_2 = { amount = 1 owner = RAJ version_name = "Vikrant Class" } } }
+		}
+		# Delhi-class + Rajput-class destroyers
+		task_force = {
+			name = "Eastern Destroyer Squadron"
+			location = 10255
+			ship = { name = "INS Delhi (D61)" definition = destroyer start_experience_factor = 0.5 equipment = { destroyer_hull_2 = { amount = 1 owner = RAJ version_name = "Delhi Class" } } }
+			ship = { name = "INS Mysore (D60)" definition = destroyer start_experience_factor = 0.5 equipment = { destroyer_hull_2 = { amount = 1 owner = RAJ version_name = "Delhi Class" } } }
+			ship = { name = "INS Mumbai (D62)" definition = destroyer start_experience_factor = 0.5 equipment = { destroyer_hull_2 = { amount = 1 owner = RAJ version_name = "Delhi Class" } } }
+			ship = { name = "INS Ranvijay (D55)" definition = destroyer start_experience_factor = 0.4 equipment = { destroyer_hull_1 = { amount = 1 owner = RAJ version_name = "Rajput Class" } } }
+			ship = { name = "INS Rana (D52)" definition = destroyer start_experience_factor = 0.4 equipment = { destroyer_hull_1 = { amount = 1 owner = RAJ version_name = "Rajput Class" } } }
+		}
+		# Nilgiri-class + Kamorta-class
+		task_force = {
+			name = "Eastern Frigate Squadron"
+			location = 10255
+			ship = { name = "INS Nilgiri (F58)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_3 = { amount = 1 owner = RAJ version_name = "Nilgiri Class" } } }
+			ship = { name = "INS Udaygiri (F59)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_3 = { amount = 1 owner = RAJ version_name = "Nilgiri Class" } } }
+			ship = { name = "INS Kamorta (P28)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_3 = { amount = 1 owner = RAJ version_name = "Kamorta Class" } } }
+			ship = { name = "INS Kadmatt (P29)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_3 = { amount = 1 owner = RAJ version_name = "Kamorta Class" } } }
+			ship = { name = "INS Kiltan (P30)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_3 = { amount = 1 owner = RAJ version_name = "Kamorta Class" } } }
+			ship = { name = "INS Kavaratti (P31)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_3 = { amount = 1 owner = RAJ version_name = "Kamorta Class" } } }
+		}
+		# Submarines (Eastern)
+		task_force = {
+			name = "Eastern Submarine Command"
+			location = 10255
+			ship = { name = "INS Sindhuraj (S57)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_1 = { amount = 1 owner = RAJ version_name = "Sindhughosh Class" } } }
+			ship = { name = "INS Sindhuvijay (S62)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_1 = { amount = 1 owner = RAJ version_name = "Sindhughosh Class" } } }
+			ship = { name = "INS Sindhushastra (S65)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_1 = { amount = 1 owner = RAJ version_name = "Sindhughosh Class" } } }
+			ship = { name = "INS Chakra III (S72)" definition = attack_submarine start_experience_factor = 0.55 equipment = { attack_submarine_hull_3 = { amount = 1 owner = RAJ version_name = "Akula II Class" } } }
+		}
+	}
 }
 
 ### Equipment Stockpile ###
@@ -468,5 +569,98 @@ instant_effect = {
 		type = util_vehicle_equipment
 		amount = 3000
 		producer = RAJ
+	}
+}
+
+##### Air Wings — Indian Air Force #####
+air_wings = {
+	# Su-30MKI — Western Air Command (Punjab / Rajasthan)
+	440 = {
+		medium_plane_airframe_2 = { owner = "RAJ" creator = "SOV" amount = 130 version_name = "Su-30MKI" }
+		name = "Western Air Command — Su-30MKI"
+		start_experience_factor = 0.55
+	}
+	# Su-30MKI — Eastern Air Command (Assam / Bengal)
+	452 = {
+		medium_plane_airframe_2 = { owner = "RAJ" creator = "SOV" amount = 130 version_name = "Su-30MKI" }
+		name = "Eastern Air Command — Su-30MKI"
+		start_experience_factor = 0.55
+	}
+	# Rafale — Ambala (No. 17 & 101 Sqn)
+	440 = {
+		medium_plane_fighter_airframe_2 = { owner = "RAJ" creator = "FRA" amount = 36 version_name = "Rafale EH/DH" }
+		name = "17 & 101 Squadron (Rafale)"
+		start_experience_factor = 0.6
+	}
+	# MiG-29UPG — Central/Western
+	440 = {
+		small_plane_airframe_2 = { owner = "RAJ" creator = "SOV" amount = 60 version_name = "MiG-29UPG" }
+		name = "MiG-29 Squadrons"
+		start_experience_factor = 0.45
+	}
+	# Tejas Mk.1 — Southern Air Command
+	462 = {
+		small_plane_strike_airframe_2 = { owner = "RAJ" amount = 80 version_name = "Tejas Mk.1" }
+		name = "Tejas Squadrons"
+		start_experience_factor = 0.5
+	}
+	# Jaguar IS/DARIN III — Strike wings
+	440 = {
+		medium_plane_cas_airframe_1 = { owner = "RAJ" creator = "ENG" amount = 50 version_name = "Jaguar IS DARIN III" }
+		name = "Jaguar Strike Squadrons"
+		start_experience_factor = 0.4
+	}
+	# AWACS — A-50EI Phalcon + DRDO Netra
+	440 = {
+		large_plane_awacs_airframe_2 = { owner = "RAJ" creator = "ISR" amount = 3 version_name = "A-50EI Phalcon" }
+		name = "AWACS Squadron"
+		start_experience_factor = 0.5
+	}
+	440 = {
+		large_plane_awacs_airframe_1 = { owner = "RAJ" amount = 2 version_name = "DRDO AEW&CS Netra" }
+		name = "Netra AEW Squadron"
+		start_experience_factor = 0.45
+	}
+	# C-17A Globemaster III — Strategic transport
+	440 = {
+		large_plane_air_transport_airframe_2 = { owner = "RAJ" creator = "USA" amount = 11 version_name = "C-17A Globemaster III" }
+		name = "81 Squadron (Skylords)"
+		start_experience_factor = 0.5
+	}
+	# C-130J Super Hercules
+	440 = {
+		large_plane_air_transport_airframe_1 = { owner = "RAJ" creator = "USA" amount = 12 version_name = "C-130J Super Hercules" }
+		name = "77 & 87 Squadron"
+		start_experience_factor = 0.5
+	}
+	# Il-76 Gajraj
+	440 = {
+		large_plane_air_transport_airframe_2 = { owner = "RAJ" creator = "SOV" amount = 17 version_name = "Il-76MD Gajraj" }
+		name = "44 Squadron (Mighty Jumbos)"
+		start_experience_factor = 0.4
+	}
+	# P-8I Neptune — Indian Navy MPA
+	462 = {
+		large_plane_maritime_patrol_airframe_1 = { owner = "RAJ" creator = "USA" amount = 12 version_name = "P-8I Neptune" }
+		name = "Indian Navy INAS 312"
+		start_experience_factor = 0.5
+	}
+	# Heron TP / Hermes 900 — UCAV/ISR
+	440 = {
+		small_plane_suicide_airframe_2 = { owner = "RAJ" creator = "ISR" amount = 15 version_name = "Heron TP / Hermes 900" }
+		name = "UAV Squadron"
+		start_experience_factor = 0.4
+	}
+	# INS Vikrant carrier air wing
+	"INS Vikrant (R11)" = {
+		cv_medium_plane_fighter_airframe_2 = { owner = "RAJ" creator = "SOV" amount = 20 version_name = "MiG-29K" }
+		name = "INAS 303 Black Panthers"
+		start_experience_factor = 0.5
+	}
+	# INS Vikramaditya carrier air wing
+	"INS Vikramaditya (R33)" = {
+		cv_medium_plane_fighter_airframe_2 = { owner = "RAJ" creator = "SOV" amount = 20 version_name = "MiG-29K" }
+		name = "INAS 300 White Tigers"
+		start_experience_factor = 0.5
 	}
 }
