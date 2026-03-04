@@ -249,3 +249,776 @@ country_event = {
 		}
 	}
 }
+
+###################################
+# md2026_elections.30 - Germany: 2029 Federal Election
+###################################
+country_event = {
+	id = md2026_elections.30
+	title = md2026_elections.30.t
+	desc = md2026_elections.30.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date > 2029.6.1
+		NOT = { has_country_flag = md2026_ger_election }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	# Option A: CDU/CSU retains power - Friedrich Merz continues
+	option = {
+		name = md2026_elections.30.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections.30.o1 - CDU victory"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Friedrich Merz"
+			picture = "gfx/leaders/GER/Friedrich_Merz.dds"
+			expire = "2033.12.31"
+			ideology = conservatism
+			traits = {
+				western_conservatism
+				captain_of_industry
+				lawyer
+			}
+		}
+
+		add_political_power = 75
+		add_stability = 0.05
+		set_country_flag = md2026_ger_election
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: SPD wins - Scholz successor
+	option = {
+		name = md2026_elections.30.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections.30.o2 - SPD victory"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Boris Pistorius"
+			picture = "gfx/leaders/GER/Boris_Pistorius.dds"
+			expire = "2033.12.31"
+			ideology = socialism
+			traits = {
+				western_socialism
+				career_politician
+			}
+		}
+
+		add_political_power = 50
+		add_stability = 0.03
+		set_country_flag = md2026_ger_election
+
+		ai_chance = {
+			base = 25
+		}
+	}
+
+	# Option C: AfD surge - nationalist coalition
+	option = {
+		name = md2026_elections.30.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections.30.o3 - AfD surge"
+
+		set_politics = { ruling_party = nationalist }
+		create_country_leader = {
+			name = "Alice Weidel"
+			picture = "gfx/leaders/GER/Alice_Weidel.dds"
+			expire = "2033.12.31"
+			ideology = Nat_Populism
+			traits = {
+				nationalist_Nat_Populism
+				anti_establishment
+			}
+		}
+
+		add_political_power = -50
+		add_stability = -0.15
+		add_war_support = 0.05
+
+		remove_ideas = md2026_ger_zeitenwende
+
+		every_country = {
+			limit = {
+				OR = {
+					tag = FRA
+					tag = POL
+					tag = ISR
+				}
+			}
+			add_opinion_modifier = { target = GER modifier = md2026_diplomatic_disapproval }
+		}
+
+		set_country_flag = md2026_ger_election
+
+		ai_chance = {
+			base = 15
+		}
+	}
+
+	# Option D: Green-led coalition
+	option = {
+		name = md2026_elections.30.o4
+		log = "[GetDateText]: [This.GetName]: md2026_elections.30.o4 - Green coalition"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Robert Habeck"
+			picture = "gfx/leaders/GER/Robert_Habeck.dds"
+			expire = "2033.12.31"
+			ideology = liberalism
+			traits = {
+				western_liberalism
+				career_politician
+			}
+		}
+
+		add_political_power = 25
+		add_stability = 0.03
+		set_country_flag = md2026_ger_election
+
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+###################################
+# md2026_elections.40 - UK: 2029 General Election
+###################################
+country_event = {
+	id = md2026_elections.40
+	title = md2026_elections.40.t
+	desc = md2026_elections.40.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		date > 2029.3.1
+		NOT = { has_country_flag = md2026_eng_election }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	# Option A: Labour re-elected - Starmer continues
+	option = {
+		name = md2026_elections.40.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections.40.o1 - Labour re-elected"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Keir Starmer"
+			picture = "gfx/leaders/ENG/Keir_Starmer.dds"
+			expire = "2034.12.31"
+			ideology = socialism
+			traits = {
+				western_socialism
+				lawyer
+				career_politician
+			}
+		}
+
+		add_political_power = 50
+		add_stability = 0.05
+		set_country_flag = md2026_eng_election
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+	# Option B: Conservative victory - Badenoch
+	option = {
+		name = md2026_elections.40.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections.40.o2 - Conservative victory"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Kemi Badenoch"
+			picture = "gfx/leaders/ENG/Kemi_Badenoch.dds"
+			expire = "2034.12.31"
+			ideology = conservatism
+			traits = {
+				western_conservatism
+				anti_establishment
+			}
+		}
+
+		add_political_power = 50
+		add_stability = 0.03
+		set_country_flag = md2026_eng_election
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+	# Option C: Reform UK breakthrough - populist surge
+	option = {
+		name = md2026_elections.40.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections.40.o3 - Reform UK surge"
+
+		set_politics = { ruling_party = nationalist }
+		create_country_leader = {
+			name = "Nigel Farage"
+			picture = "gfx/leaders/ENG/Nigel_Farage.dds"
+			expire = "2034.12.31"
+			ideology = Nat_Populism
+			traits = {
+				nationalist_Nat_Populism
+				media_personality
+				anti_establishment
+			}
+		}
+
+		add_political_power = -25
+		add_stability = -0.10
+		add_war_support = 0.05
+
+		every_country = {
+			limit = {
+				OR = {
+					tag = FRA
+					tag = GER
+				}
+			}
+			add_opinion_modifier = { target = ENG modifier = md2026_diplomatic_disapproval }
+		}
+
+		set_country_flag = md2026_eng_election
+
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+###################################
+# md2026_elections.50 - Japan: 2028 General Election
+###################################
+country_event = {
+	id = md2026_elections.50
+	title = md2026_elections.50.t
+	desc = md2026_elections.50.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = JAP
+		date > 2028.6.1
+		NOT = { has_country_flag = md2026_jap_election }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	# Option A: LDP retains power - Ishiba continues
+	option = {
+		name = md2026_elections.50.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections.50.o1 - LDP retains power"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Shigeru Ishiba"
+			picture = "gfx/leaders/JAP/Shigeru_Ishiba.dds"
+			expire = "2031.12.31"
+			ideology = conservatism
+			traits = {
+				western_conservatism
+				career_politician
+			}
+		}
+
+		add_political_power = 50
+		add_stability = 0.05
+		set_country_flag = md2026_jap_election
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: Opposition coalition wins
+	option = {
+		name = md2026_elections.50.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections.50.o2 - Opposition wins"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Yoshihiko Noda"
+			picture = "gfx/leaders/JAP/Yoshihiko_Noda.dds"
+			expire = "2031.12.31"
+			ideology = liberalism
+			traits = {
+				western_liberalism
+				career_politician
+			}
+		}
+
+		add_political_power = 25
+		add_stability = -0.03
+		set_country_flag = md2026_jap_election
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option C: LDP hawks - military reform acceleration
+	option = {
+		name = md2026_elections.50.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections.50.o3 - LDP hawks"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Takayuki Kobayashi"
+			picture = "gfx/leaders/JAP/Takayuki_Kobayashi.dds"
+			expire = "2031.12.31"
+			ideology = conservatism
+			traits = {
+				western_conservatism
+			}
+		}
+
+		add_political_power = 25
+		add_stability = 0.03
+		add_war_support = 0.05
+		set_country_flag = md2026_jap_election
+
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+###################################
+# md2026_elections.60 - South Korea: 2027 Presidential Election
+# Following the 2024 martial law crisis
+###################################
+country_event = {
+	id = md2026_elections.60
+	title = md2026_elections.60.t
+	desc = md2026_elections.60.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		date > 2027.3.1
+		NOT = { has_country_flag = md2026_kor_election }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	# Option A: Liberal victory - Lee Jae-myung
+	option = {
+		name = md2026_elections.60.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections.60.o1 - Liberal victory"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Lee Jae-myung"
+			picture = "gfx/leaders/KOR/Lee_Jae-myung.dds"
+			expire = "2032.12.31"
+			ideology = liberalism
+			traits = {
+				western_liberalism
+				career_politician
+			}
+		}
+
+		add_political_power = 50
+		add_stability = 0.10
+		set_country_flag = md2026_kor_crisis_resolved
+		set_country_flag = md2026_kor_election
+
+		ai_chance = {
+			base = 45
+		}
+	}
+
+	# Option B: Conservative restoration - Han Dong-hoon
+	option = {
+		name = md2026_elections.60.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections.60.o2 - Conservative restoration"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Han Dong-hoon"
+			picture = "gfx/leaders/KOR/Han_Dong-hoon.dds"
+			expire = "2032.12.31"
+			ideology = conservatism
+			traits = {
+				western_conservatism
+				lawyer
+			}
+		}
+
+		add_political_power = 25
+		add_stability = 0.05
+		set_country_flag = md2026_kor_crisis_resolved
+		set_country_flag = md2026_kor_election
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option C: Political crisis deepens - no clear winner
+	option = {
+		name = md2026_elections.60.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections.60.o3 - Political deadlock"
+
+		add_political_power = -50
+		add_stability = -0.10
+		set_country_flag = md2026_kor_election
+
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+###################################
+# md2026_elections.70 - Brazil: 2030 Presidential Election
+###################################
+country_event = {
+	id = md2026_elections.70
+	title = md2026_elections.70.t
+	desc = md2026_elections.70.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BRA
+		date > 2030.6.1
+		NOT = { has_country_flag = md2026_bra_election }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	# Option A: Lula successor - PT continuity
+	option = {
+		name = md2026_elections.70.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections.70.o1 - PT wins"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Fernando Haddad"
+			picture = "gfx/leaders/BRA/Fernando_Haddad.dds"
+			expire = "2035.12.31"
+			ideology = socialism
+			traits = {
+				western_socialism
+				career_politician
+			}
+		}
+
+		add_political_power = 50
+		add_stability = 0.05
+		set_country_flag = md2026_bra_election
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+	# Option B: Bolsonaro faction returns
+	option = {
+		name = md2026_elections.70.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections.70.o2 - Bolsonaro faction wins"
+
+		set_politics = { ruling_party = nationalist }
+		create_country_leader = {
+			name = "Tarcisio de Freitas"
+			picture = "gfx/leaders/BRA/Tarcisio_de_Freitas.dds"
+			expire = "2035.12.31"
+			ideology = Nat_Populism
+			traits = {
+				nationalist_Nat_Populism
+				captain_of_industry
+			}
+		}
+
+		add_political_power = -25
+		add_stability = -0.10
+		add_war_support = 0.05
+
+		every_country = {
+			limit = {
+				OR = {
+					tag = FRA
+					tag = GER
+				}
+			}
+			add_opinion_modifier = { target = BRA modifier = md2026_diplomatic_disapproval }
+		}
+
+		set_country_flag = md2026_bra_election
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option C: Centrist third way
+	option = {
+		name = md2026_elections.70.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections.70.o3 - Centrist wins"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Simone Tebet"
+			picture = "gfx/leaders/BRA/Simone_Tebet.dds"
+			expire = "2035.12.31"
+			ideology = conservatism
+			traits = {
+				western_conservatism
+				career_politician
+			}
+		}
+
+		add_political_power = 50
+		add_stability = 0.08
+		set_country_flag = md2026_bra_election
+
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+
+###################################
+# md2026_elections.80 - Poland: 2027 Parliamentary Election
+###################################
+country_event = {
+	id = md2026_elections.80
+	title = md2026_elections.80.t
+	desc = md2026_elections.80.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POL
+		date > 2027.6.1
+		NOT = { has_country_flag = md2026_pol_election }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	# Option A: Tusk coalition re-elected
+	option = {
+		name = md2026_elections.80.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections.80.o1 - Tusk coalition wins"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Donald Tusk"
+			picture = "gfx/leaders/POL/Donald_Tusk.dds"
+			expire = "2031.12.31"
+			ideology = liberalism
+			traits = {
+				western_liberalism
+				career_politician
+			}
+		}
+
+		add_political_power = 50
+		add_stability = 0.05
+		set_country_flag = md2026_pol_election
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+	# Option B: PiS returns to power
+	option = {
+		name = md2026_elections.80.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections.80.o2 - PiS returns"
+
+		set_politics = { ruling_party = nationalist }
+		create_country_leader = {
+			name = "Mateusz Morawiecki"
+			picture = "gfx/leaders/POL/Mateusz_Morawiecki.dds"
+			expire = "2031.12.31"
+			ideology = Nat_Populism
+			traits = {
+				nationalist_Nat_Populism
+				captain_of_industry
+			}
+		}
+
+		add_political_power = -25
+		add_stability = -0.08
+		add_war_support = 0.10
+
+		every_country = {
+			limit = {
+				OR = {
+					tag = GER
+					tag = FRA
+				}
+			}
+			add_opinion_modifier = { target = POL modifier = md2026_diplomatic_disapproval }
+		}
+
+		set_country_flag = md2026_pol_election
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option C: New center-right coalition
+	option = {
+		name = md2026_elections.80.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections.80.o3 - New center-right"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Rafal Trzaskowski"
+			picture = "gfx/leaders/POL/Rafal_Trzaskowski.dds"
+			expire = "2031.12.31"
+			ideology = conservatism
+			traits = {
+				western_conservatism
+				career_politician
+			}
+		}
+
+		add_political_power = 50
+		add_stability = 0.05
+		set_country_flag = md2026_pol_election
+
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+
+###################################
+# md2026_elections.90 - Italy: 2028 General Election
+###################################
+country_event = {
+	id = md2026_elections.90
+	title = md2026_elections.90.t
+	desc = md2026_elections.90.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ITA
+		date > 2028.3.1
+		NOT = { has_country_flag = md2026_ita_election }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	# Option A: Meloni re-elected
+	option = {
+		name = md2026_elections.90.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections.90.o1 - Meloni re-elected"
+
+		set_politics = { ruling_party = nationalist }
+		create_country_leader = {
+			name = "Giorgia Meloni"
+			picture = "gfx/leaders/ITA/Giorgia_Meloni.dds"
+			expire = "2033.12.31"
+			ideology = Nat_Populism
+			traits = {
+				nationalist_Nat_Populism
+				career_politician
+			}
+		}
+
+		add_political_power = 50
+		add_stability = 0.03
+		set_country_flag = md2026_ita_election
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: Center-left coalition - PD wins
+	option = {
+		name = md2026_elections.90.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections.90.o2 - Center-left wins"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Elly Schlein"
+			picture = "gfx/leaders/ITA/Elly_Schlein.dds"
+			expire = "2033.12.31"
+			ideology = socialism
+			traits = {
+				western_socialism
+				career_politician
+			}
+		}
+
+		add_political_power = 25
+		add_stability = 0.05
+		remove_ideas = md2026_ita_right_wing_government
+		set_country_flag = md2026_ita_election
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option C: Five Star Movement surprise - populist coalition
+	option = {
+		name = md2026_elections.90.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections.90.o3 - M5S surge"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Giuseppe Conte"
+			picture = "gfx/leaders/ITA/Giuseppe_Conte.dds"
+			expire = "2033.12.31"
+			ideology = liberalism
+			traits = {
+				western_liberalism
+				lawyer
+			}
+		}
+
+		add_political_power = -25
+		add_stability = -0.05
+		remove_ideas = md2026_ita_right_wing_government
+		set_country_flag = md2026_ita_election
+
+		ai_chance = {
+			base = 20
+		}
+	}
+}

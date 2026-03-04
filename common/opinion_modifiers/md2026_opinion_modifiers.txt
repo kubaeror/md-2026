@@ -99,4 +99,104 @@ opinion_modifiers = {
 		value = -20
 		decay = 1
 	}
+
+	### Article 5 / NATO opinion modifiers ###
+
+	md2026_article5_solidarity = {
+		value = 30
+		decay = 1
+	}
+
+	md2026_article5_reluctance = {
+		value = -20
+		decay = 1
+	}
+
+	md2026_article5_betrayal = {
+		value = -50
+		decay = 0.5
+	}
+
+	### Nuclear / Arms race modifiers ###
+
+	md2026_nuclear_test_condemnation = {
+		value = -40
+		decay = 0.5
+	}
+
+	md2026_nuclear_test_approval = {
+		value = 10
+		decay = 1
+	}
+
+	md2026_missile_provocation_anger = {
+		value = -30
+		decay = 1
+	}
+
+	md2026_proxy_war_anger = {
+		value = -35
+		decay = 0.5
+	}
+
+	md2026_normalization_opinion = {
+		value = 40
+		decay = 1
+	}
+
+	### Trade modifiers ###
+
+	md2026_trade_partner = {
+		value = 15
+		decay = 1
+		trade = yes
+	}
+
+	md2026_trade_rival = {
+		value = -15
+		decay = 1
+		trade = yes
+	}
+
+	md2026_shadow_fleet_anger = {
+		value = -25
+		decay = 0.5
+	}
+
+	md2026_belt_road_opinion = {
+		value = 20
+		decay = 1
+	}
+
+	md2026_military_pressure_anger = {
+		value = -30
+		decay = 0.5
+	}
+
+	md2026_diplomatic_outreach = {
+		value = 25
+		decay = 1
+	}
+
+	md2026_space_program_rivalry = {
+		value = -10
+		decay = 1
+	}
+
+	md2026_election_interference = {
+		value = -30
+		decay = 0.5
+	}
+
+	md2026_brics_expansion_opinion = {
+		value = 15
+		decay = 1
+	}
+
+	### General diplomatic modifiers ###
+
+	md2026_improved_relations = {
+		value = 20
+		decay = 1
+	}
 }

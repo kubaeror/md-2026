@@ -926,6 +926,7 @@ md2026_military_modernization_category = {
 		remove_effect = {
 			every_owned_state = {
 				limit = {
+					is_controlled_by = ROOT
 					any_neighbor_state = {
 						NOT = { is_controlled_by = ROOT }
 					}
@@ -934,7 +935,6 @@ md2026_military_modernization_category = {
 					type = bunker
 					level = 1
 					instant_build = yes
-					province = { all_provinces = yes limit_to_border = yes }
 				}
 			}
 			add_war_support = 0.03
@@ -1208,6 +1208,915 @@ md2026_economic_decisions_category = {
 			modifier = {
 				factor = 2
 				has_government = democratic
+			}
+		}
+	}
+}
+
+##################################
+### INTERNAL POLITICS ###
+##################################
+
+md2026_internal_politics_category = {
+
+	### RUSSIA: War Economy Toggle ###
+
+	md2026_sov_war_economy = {
+		icon = generic_economy
+
+		cost = 75
+		fire_only_once = no
+		days_remove = 90
+		days_re_enable = 365
+
+		visible = {
+			date > 2025.12.31
+			original_tag = SOV
+		}
+
+		available = {
+			has_war = yes
+			NOT = { has_idea = md2026_sov_war_economy }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_sov_war_economy"
+			add_political_power = -50
+			add_stability = -0.03
+		}
+
+		remove_effect = {
+			add_timed_idea = {
+				idea = md2026_sov_war_economy
+				days = 365
+			}
+		}
+
+		ai_will_do = {
+			base = 70
+			modifier = {
+				factor = 2
+				surrender_progress > 0.10
+			}
+		}
+	}
+
+	### RUSSIA: Information Control ###
+
+	md2026_sov_information_control = {
+		icon = generic_political_actions
+
+		cost = 50
+		fire_only_once = yes
+		days_remove = 60
+
+		visible = {
+			date > 2025.12.31
+			original_tag = SOV
+		}
+
+		available = {
+			has_war = yes
+			NOT = { has_idea = md2026_sov_information_control }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_sov_information_control"
+			add_political_power = -25
+		}
+
+		remove_effect = {
+			add_ideas = md2026_sov_information_control
+		}
+
+		ai_will_do = {
+			base = 80
+		}
+	}
+
+	### RUSSIA: Shadow Fleet Oil Sales ###
+
+	md2026_sov_shadow_fleet_sales = {
+		icon = generic_economy
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 180
+
+		visible = {
+			date > 2025.12.31
+			original_tag = SOV
+			has_idea = md2026_sov_western_sanctions
+		}
+
+		available = {
+			NOT = { has_idea = md2026_sov_shadow_fleet }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_sov_shadow_fleet_sales"
+			add_political_power = -15
+		}
+
+		remove_effect = {
+			add_timed_idea = {
+				idea = md2026_sov_shadow_fleet
+				days = 365
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = USA
+					is_major = yes
+				}
+				add_opinion_modifier = { target = SOV modifier = md2026_shadow_fleet_anger }
+			}
+		}
+
+		ai_will_do = {
+			base = 80
+		}
+	}
+
+	### RUSSIA: Partial Mobilization ###
+
+	md2026_sov_partial_mobilization = {
+		icon = generic_military
+
+		cost = 100
+		fire_only_once = yes
+		days_remove = 30
+
+		visible = {
+			date > 2025.12.31
+			original_tag = SOV
+		}
+
+		available = {
+			has_war = yes
+			NOT = { has_idea = md2026_sov_partial_mobilization }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_sov_partial_mobilization"
+			add_political_power = -75
+			add_stability = -0.10
+		}
+
+		remove_effect = {
+			add_ideas = md2026_sov_partial_mobilization
+			add_manpower = 300000
+		}
+
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 5
+				surrender_progress > 0.15
+			}
+		}
+	}
+
+	### CHINA: Belt and Road Expansion ###
+
+	md2026_chi_belt_road_expansion = {
+		icon = generic_economy
+
+		cost = 100
+		fire_only_once = no
+		days_remove = 180
+		days_re_enable = 730
+
+		visible = {
+			date > 2025.12.31
+			original_tag = CHI
+		}
+
+		available = {
+			has_war = no
+			num_of_civilian_factories > 30
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_chi_belt_road_expansion"
+			add_political_power = -50
+		}
+
+		remove_effect = {
+			add_timed_idea = {
+				idea = md2026_chi_belt_road
+				days = 730
+			}
+			every_country = {
+				limit = {
+					NOT = { is_in_faction_with = USA }
+					NOT = { is_major = yes }
+					is_subject = no
+					NOT = { has_war_with = CHI }
+				}
+				add_opinion_modifier = { target = CHI modifier = md2026_belt_road_opinion }
+			}
+		}
+
+		ai_will_do = {
+			base = 75
+		}
+	}
+
+	### CHINA: Taiwan Military Pressure ###
+
+	md2026_chi_taiwan_pressure = {
+		icon = generic_military
+
+		cost = 75
+		fire_only_once = no
+		days_remove = 90
+		days_re_enable = 365
+
+		visible = {
+			date > 2025.12.31
+			original_tag = CHI
+		}
+
+		available = {
+			NOT = { has_war_with = TAI }
+			NOT = { has_idea = md2026_chi_taiwan_pressure }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_chi_taiwan_pressure"
+			add_political_power = -25
+			add_war_support = 0.05
+		}
+
+		remove_effect = {
+			add_timed_idea = {
+				idea = md2026_chi_taiwan_pressure
+				days = 365
+			}
+			TAI = {
+				add_opinion_modifier = { target = CHI modifier = md2026_military_pressure_anger }
+			}
+			USA = {
+				add_opinion_modifier = { target = CHI modifier = md2026_military_pressure_anger }
+			}
+			JAP = {
+				add_opinion_modifier = { target = CHI modifier = md2026_military_pressure_anger }
+			}
+		}
+
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				any_country = {
+					tag = TAI
+					has_country_flag = md2026_recognized_taiwan
+				}
+			}
+		}
+	}
+
+	### CHINA: Tech Self-Sufficiency Campaign ###
+
+	md2026_chi_tech_self_sufficiency = {
+		icon = generic_economy
+
+		cost = 100
+		fire_only_once = yes
+		days_remove = 365
+
+		visible = {
+			date > 2025.12.31
+			original_tag = CHI
+		}
+
+		available = {
+			has_war = no
+			num_of_civilian_factories > 20
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_chi_tech_self_sufficiency"
+			add_political_power = -75
+		}
+
+		remove_effect = {
+			add_ideas = md2026_chi_tech_self_sufficiency
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = CAT_computing_tech
+			}
+		}
+
+		ai_will_do = {
+			base = 80
+		}
+	}
+
+	### INDIA: Make in India Expansion ###
+
+	md2026_raj_make_in_india = {
+		icon = generic_economy
+
+		cost = 75
+		fire_only_once = no
+		days_remove = 180
+		days_re_enable = 730
+
+		visible = {
+			date > 2025.12.31
+			original_tag = RAJ
+		}
+
+		available = {
+			has_war = no
+			num_of_civilian_factories > 15
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_raj_make_in_india"
+			add_political_power = -50
+		}
+
+		remove_effect = {
+			add_timed_idea = {
+				idea = md2026_raj_make_in_india_decision
+				days = 730
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 70
+		}
+	}
+
+	### INDIA: Border Standoff with China ###
+
+	md2026_raj_border_standoff = {
+		icon = generic_military
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 365
+
+		visible = {
+			date > 2025.12.31
+			original_tag = RAJ
+		}
+
+		available = {
+			NOT = { has_war_with = CHI }
+			NOT = { has_idea = md2026_raj_border_standoff }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_raj_border_standoff"
+			add_political_power = -25
+			add_war_support = 0.05
+		}
+
+		remove_effect = {
+			add_timed_idea = {
+				idea = md2026_raj_border_standoff
+				days = 365
+			}
+			CHI = {
+				add_opinion_modifier = { target = RAJ modifier = md2026_military_pressure_anger }
+			}
+		}
+
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	### INDIA: Space Program ###
+
+	md2026_raj_space_program = {
+		icon = generic_political_actions
+
+		cost = 100
+		fire_only_once = yes
+		days_remove = 365
+
+		visible = {
+			date > 2025.12.31
+			original_tag = RAJ
+		}
+
+		available = {
+			has_war = no
+			num_of_civilian_factories > 20
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_raj_space_program"
+			add_political_power = -50
+		}
+
+		remove_effect = {
+			add_ideas = md2026_raj_space_program
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = CAT_computing_tech
+			}
+			USA = {
+				add_opinion_modifier = { target = RAJ modifier = md2026_space_program_rivalry }
+			}
+			CHI = {
+				add_opinion_modifier = { target = RAJ modifier = md2026_space_program_rivalry }
+			}
+		}
+
+		ai_will_do = {
+			base = 60
+		}
+	}
+
+	### NORTH KOREA: Nuclear Test ###
+
+	md2026_nko_nuclear_test = {
+		icon = generic_military
+
+		cost = 75
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 365
+
+		visible = {
+			date > 2025.12.31
+			original_tag = NKO
+		}
+
+		available = {
+			NOT = { has_country_flag = md2026_recent_nko_test }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_nko_nuclear_test"
+			add_political_power = -25
+			set_country_flag = { flag = md2026_recent_nko_test days = 365 value = 1 }
+		}
+
+		remove_effect = {
+			add_timed_idea = {
+				idea = md2026_nko_nuclear_test_effect
+				days = 365
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = USA
+						tag = KOR
+						tag = JAP
+					}
+				}
+				add_opinion_modifier = { target = NKO modifier = md2026_nuclear_test_condemnation }
+			}
+			CHI = {
+				add_opinion_modifier = { target = NKO modifier = md2026_nuclear_test_approval }
+			}
+		}
+
+		ai_will_do = {
+			base = 60
+		}
+	}
+
+	### NORTH KOREA: Missile Provocation ###
+
+	md2026_nko_missile_provocation = {
+		icon = generic_military
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 180
+
+		visible = {
+			date > 2025.12.31
+			original_tag = NKO
+		}
+
+		available = {
+			has_war = no
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_nko_missile_provocation"
+			add_political_power = -15
+		}
+
+		remove_effect = {
+			add_timed_idea = {
+				idea = md2026_nko_missile_provocation_effect
+				days = 180
+			}
+			KOR = {
+				add_opinion_modifier = { target = NKO modifier = md2026_missile_provocation_anger }
+			}
+			JAP = {
+				add_opinion_modifier = { target = NKO modifier = md2026_missile_provocation_anger }
+			}
+			USA = {
+				add_opinion_modifier = { target = NKO modifier = md2026_missile_provocation_anger }
+			}
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	### NORTH KOREA: Diplomatic Outreach ###
+
+	md2026_nko_diplomatic_outreach = {
+		icon = generic_political_actions
+
+		cost = 75
+		fire_only_once = yes
+		days_remove = 90
+
+		visible = {
+			date > 2025.12.31
+			original_tag = NKO
+		}
+
+		available = {
+			has_war = no
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_nko_diplomatic_outreach"
+			add_political_power = -50
+		}
+
+		remove_effect = {
+			add_stability = 0.03
+			KOR = {
+				add_opinion_modifier = { target = NKO modifier = md2026_diplomatic_outreach }
+			}
+			USA = {
+				add_opinion_modifier = { target = NKO modifier = md2026_diplomatic_outreach }
+			}
+			CHI = {
+				add_opinion_modifier = { target = NKO modifier = md2026_diplomatic_outreach }
+			}
+		}
+
+		ai_will_do = {
+			base = 15
+		}
+	}
+
+	### IRAN: Proxy Warfare Expansion ###
+
+	md2026_per_proxy_warfare = {
+		icon = generic_military
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 365
+
+		visible = {
+			date > 2025.12.31
+			original_tag = PER
+		}
+
+		available = {
+			NOT = { has_idea = md2026_per_proxy_warfare }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_per_proxy_warfare"
+			add_political_power = -25
+		}
+
+		remove_effect = {
+			add_timed_idea = {
+				idea = md2026_per_proxy_warfare
+				days = 365
+			}
+			ISR = {
+				add_opinion_modifier = { target = PER modifier = md2026_proxy_war_anger }
+			}
+			SAU = {
+				add_opinion_modifier = { target = PER modifier = md2026_proxy_war_anger }
+			}
+			USA = {
+				add_opinion_modifier = { target = PER modifier = md2026_proxy_war_anger }
+			}
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	### IRAN: Nuclear Acceleration ###
+
+	md2026_per_nuclear_acceleration = {
+		icon = generic_military
+
+		cost = 100
+		fire_only_once = yes
+		days_remove = 365
+
+		visible = {
+			date > 2025.12.31
+			original_tag = PER
+			NOT = { has_country_flag = md2026_per_sanctions_lifted }
+		}
+
+		available = {
+			NOT = { has_country_flag = md2026_nuclear_power }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_per_nuclear_acceleration"
+			add_political_power = -75
+			add_stability = -0.05
+		}
+
+		remove_effect = {
+			add_ideas = md2026_per_nuclear_program
+			set_country_flag = md2026_nuclear_power
+			every_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = USA
+						tag = ISR
+						tag = SAU
+					}
+				}
+				add_opinion_modifier = { target = PER modifier = md2026_nuclear_test_condemnation }
+			}
+		}
+
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				NOT = { has_country_flag = md2026_per_sanctions_lifted }
+			}
+		}
+	}
+
+	### SAUDI ARABIA: Vision 2030 Acceleration ###
+
+	md2026_sau_vision_acceleration = {
+		icon = generic_economy
+
+		cost = 100
+		fire_only_once = yes
+		days_remove = 180
+
+		visible = {
+			date > 2025.12.31
+			original_tag = SAU
+		}
+
+		available = {
+			has_war = no
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_sau_vision_acceleration"
+			add_political_power = -75
+		}
+
+		remove_effect = {
+			add_ideas = md2026_sau_vision_2030_acceleration
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 80
+		}
+	}
+
+	### SAUDI ARABIA: Normalization with Israel ###
+
+	md2026_sau_normalize_israel = {
+		icon = generic_political_actions
+
+		cost = 150
+		fire_only_once = yes
+		days_remove = 180
+
+		visible = {
+			date > 2025.12.31
+			original_tag = SAU
+		}
+
+		available = {
+			has_war = no
+			ISR = { has_war = no }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_sau_normalize_israel"
+			add_political_power = -100
+			add_stability = -0.05
+		}
+
+		remove_effect = {
+			ISR = {
+				add_opinion_modifier = { target = SAU modifier = md2026_normalization_opinion }
+			}
+			SAU = {
+				add_opinion_modifier = { target = ISR modifier = md2026_normalization_opinion }
+			}
+			USA = {
+				add_opinion_modifier = { target = SAU modifier = md2026_normalization_opinion }
+			}
+			PER = {
+				add_opinion_modifier = { target = SAU modifier = md2026_proxy_war_anger }
+			}
+			add_stability = 0.03
+		}
+
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 3
+				ISR = { has_war = no }
+				NOT = { ISR = { has_country_flag = md2026_isr_peace } }
+			}
+		}
+	}
+}
+
+##################################
+### NUCLEAR DECISIONS ###
+##################################
+
+md2026_nuclear_category = {
+
+	### Nuclear Modernization Program ###
+
+	md2026_nuclear_modernization = {
+		icon = generic_military
+
+		cost = 150
+		fire_only_once = yes
+		days_remove = 365
+
+		visible = {
+			date > 2025.12.31
+			has_country_flag = md2026_nuclear_power
+		}
+
+		available = {
+			has_war = no
+			num_of_military_factories > 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_nuclear_modernization"
+			add_political_power = -75
+		}
+
+		remove_effect = {
+			add_ideas = md2026_nuclear_modernization_effect
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = CAT_rocketry
+			}
+		}
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				OR = {
+					tag = USA
+					tag = SOV
+					tag = CHI
+				}
+			}
+		}
+	}
+
+	### Nuclear Posturing ###
+
+	md2026_nuclear_posturing = {
+		icon = generic_military
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 365
+
+		visible = {
+			date > 2025.12.31
+			has_country_flag = md2026_nuclear_power
+		}
+
+		available = {
+			has_war = yes
+			NOT = { has_idea = md2026_nuclear_posturing_effect }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_nuclear_posturing"
+			add_political_power = -50
+			add_stability = -0.05
+		}
+
+		remove_effect = {
+			add_timed_idea = {
+				idea = md2026_nuclear_posturing_effect
+				days = 180
+			}
+			every_enemy_country = {
+				add_opinion_modifier = { target = ROOT modifier = md2026_nuclear_test_condemnation }
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				surrender_progress > 0.20
+			}
+		}
+	}
+
+	### Develop Nuclear Weapons (for non-nuclear powers like Iran) ###
+
+	md2026_develop_nuclear_weapons = {
+		icon = generic_military
+
+		cost = 200
+		fire_only_once = yes
+		days_remove = 730
+
+		visible = {
+			date > 2025.12.31
+			NOT = { has_country_flag = md2026_nuclear_power }
+			OR = {
+				original_tag = PER
+				original_tag = SAU
+				original_tag = TUR
+				original_tag = KOR
+				original_tag = JAP
+				original_tag = EGY
+			}
+		}
+
+		available = {
+			has_war = no
+			num_of_military_factories > 15
+			NOT = { has_country_flag = md2026_per_sanctions_lifted }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_develop_nuclear_weapons"
+			add_political_power = -100
+			add_stability = -0.05
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_nuclear_power
+			add_ideas = md2026_nuclear_deterrent
+			every_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = USA
+						is_major = yes
+					}
+					NOT = { tag = ROOT }
+				}
+				add_opinion_modifier = { target = ROOT modifier = md2026_nuclear_test_condemnation }
+			}
+		}
+
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 5
+				original_tag = PER
+				NOT = { has_country_flag = md2026_per_sanctions_lifted }
 			}
 		}
 	}

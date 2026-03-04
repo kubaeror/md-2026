@@ -1,0 +1,150 @@
+### Millennium Dawn 2026 - Scripted Triggers ###
+
+# Check if 2026 bookmark is active
+md2026_is_active = {
+	has_global_flag = md2026_initialized
+}
+
+# NATO membership check
+md2026_is_nato_member = {
+	OR = {
+		has_country_flag = md2026_nato_member
+		is_in_faction_with = USA
+	}
+}
+
+# BRICS membership check
+md2026_is_brics_member = {
+	has_country_flag = md2026_brics_member
+}
+
+# Western democracy check
+md2026_is_western_democracy = {
+	has_government = democratic
+	md2026_is_nato_member = yes
+}
+
+# Authoritarian regime check
+md2026_is_authoritarian = {
+	OR = {
+		has_government = communism
+		has_government = fascism
+		AND = {
+			has_government = nationalist
+			NOT = { md2026_is_nato_member = yes }
+		}
+	}
+}
+
+# Nuclear power check
+md2026_is_nuclear_power = {
+	has_country_flag = md2026_nuclear_power
+}
+
+# Conflict zone check
+md2026_is_conflict_zone = {
+	OR = {
+		AND = { tag = UKR has_war_with = SOV }
+		AND = { tag = SOV has_war_with = UKR }
+		AND = { tag = SUD has_war = yes }
+		AND = { tag = BRM has_war = yes }
+		AND = { tag = YEM has_war = yes }
+		AND = { tag = SYR has_war = yes }
+	}
+}
+
+# Major power check
+md2026_is_major_power = {
+	OR = {
+		tag = USA
+		tag = SOV
+		tag = CHI
+		tag = ENG
+		tag = FRA
+		tag = GER
+		tag = RAJ
+		tag = JAP
+	}
+}
+
+# Regional power check
+md2026_is_regional_power = {
+	OR = {
+		md2026_is_major_power = yes
+		tag = TUR
+		tag = PER
+		tag = BRA
+		tag = UKR
+		tag = ISR
+		tag = SAU
+		tag = KOR
+		tag = AST
+		tag = POL
+		tag = ITA
+		tag = CAN
+		tag = EGY
+	}
+}
+
+# EU member check
+md2026_is_eu_member = {
+	OR = {
+		tag = GER
+		tag = FRA
+		tag = ITA
+		tag = SPR
+		tag = HOL
+		tag = BEL
+		tag = LUX
+		tag = POR
+		tag = GRE
+		tag = AUS
+		tag = FIN
+		tag = SWE
+		tag = DEN
+		tag = POL
+		tag = CZE
+		tag = HUN
+		tag = ROM
+		tag = BUL
+		tag = CRO
+		tag = SLO
+		tag = SLV
+		tag = EST
+		tag = LAT
+		tag = LIT
+		tag = IRL
+		tag = CYP
+		tag = MLT
+	}
+}
+
+# CSTO member check
+md2026_is_csto_member = {
+	OR = {
+		tag = SOV
+		tag = BLR
+		tag = KAZ
+		tag = KYR
+		tag = TAJ
+	}
+}
+
+# Can develop nuclear weapons
+md2026_can_go_nuclear = {
+	NOT = { md2026_is_nuclear_power = yes }
+	num_of_military_factories > 20
+	OR = {
+		has_tech = nuclear_reactor
+		has_tech = nukes
+	}
+}
+
+# Sanctions target check
+md2026_is_sanctioned = {
+	OR = {
+		has_idea = md2026_sov_western_sanctions
+		has_idea = md2026_per_international_sanctions
+		has_idea = md2026_additional_sanctions_effect
+	}
+}
