@@ -205,7 +205,7 @@ country_event = {
 	# Accept the plan — ceasefire, demilitarization, international force
 	option = {
 		name = md2026_gaza.5.a
-		ai_chance = { base = 40 }
+		ai_chance = { base = 50 }
 		set_country_flag = md2026_gaza_trump_plan
 		set_country_flag = md2026_isr_peace
 		add_stability = 0.15
@@ -232,7 +232,7 @@ country_event = {
 	# Reject the plan — security concerns override diplomacy
 	option = {
 		name = md2026_gaza.5.b
-		ai_chance = { base = 40 }
+		ai_chance = { base = 30 }
 		set_country_flag = md2026_gaza_trump_plan
 		add_war_support = 0.10
 		add_stability = -0.05

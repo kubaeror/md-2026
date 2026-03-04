@@ -189,7 +189,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			base = 40
+			base = 35
 		}
 	}
 
@@ -213,7 +213,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			base = 40
+			base = 45
 		}
 	}
 
@@ -233,7 +233,7 @@ country_event = {
 		reverse_add_opinion_modifier = { target = UAE modifier = improve_relation }
 
 		ai_chance = {
-			base = 30
+			base = 20
 		}
 	}
 }
@@ -367,7 +367,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			base = 40
+			base = 30
 		}
 	}
 
@@ -382,7 +382,7 @@ country_event = {
 		reverse_add_opinion_modifier = { target = PER modifier = embargo }
 
 		ai_chance = {
-			base = 40
+			base = 50
 		}
 	}
 

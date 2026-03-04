@@ -1042,6 +1042,7 @@ country_event = {
 
 	option = {
 		name = md2026_elections.100.a0
+		ai_chance = { base = 50 }
 		create_country_leader = {
 			name = "Yogi Adityanath"
 			ideology = nationalist_Nat_Populism
@@ -1053,6 +1054,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.100.a1
+		ai_chance = { base = 30 }
 		create_country_leader = {
 			name = "Rahul Gandhi"
 			ideology = western_socialism
@@ -1064,6 +1066,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.100.a2
+		ai_chance = { base = 20 }
 		create_country_leader = {
 			name = "Arvind Kejriwal"
 			ideology = western_liberalism
@@ -1092,6 +1095,7 @@ country_event = {
 
 	option = {
 		name = md2026_elections.110.a0
+		ai_chance = { base = 45 }
 		create_country_leader = {
 			name = "Recep Tayyip Erdogan"
 			ideology = conservatism
@@ -1103,6 +1107,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.110.a1
+		ai_chance = { base = 35 }
 		create_country_leader = {
 			name = "Ekrem Imamoglu"
 			ideology = western_socialism
@@ -1114,6 +1119,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.110.a2
+		ai_chance = { base = 20 }
 		create_country_leader = {
 			name = "Mansur Yavas"
 			ideology = western_liberalism
@@ -1142,6 +1148,7 @@ country_event = {
 
 	option = {
 		name = md2026_elections.120.a0
+		ai_chance = { base = 50 }
 		create_country_leader = {
 			name = "Prabowo Subianto"
 			ideology = nationalist_Nat_Populism
@@ -1153,6 +1160,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.120.a1
+		ai_chance = { base = 30 }
 		create_country_leader = {
 			name = "Anies Baswedan"
 			ideology = western_liberalism
@@ -1164,6 +1172,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.120.a2
+		ai_chance = { base = 20 }
 		create_country_leader = {
 			name = "Ganjar Pranowo"
 			ideology = conservatism
@@ -1192,6 +1201,7 @@ country_event = {
 
 	option = {
 		name = md2026_elections.130.a0
+		ai_chance = { base = 45 }
 		create_country_leader = {
 			name = "Claudia Sheinbaum Successor"
 			ideology = western_socialism
@@ -1203,6 +1213,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.130.a1
+		ai_chance = { base = 35 }
 		create_country_leader = {
 			name = "PAN Candidate"
 			ideology = western_conservatism
@@ -1214,6 +1225,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.130.a2
+		ai_chance = { base = 20 }
 		create_country_leader = {
 			name = "PRI Candidate"
 			ideology = conservatism
@@ -1242,6 +1254,7 @@ country_event = {
 
 	option = {
 		name = md2026_elections.140.a0
+		ai_chance = { base = 45 }
 		create_country_leader = {
 			name = "Cyril Ramaphosa"
 			ideology = western_socialism
@@ -1253,6 +1266,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.140.a1
+		ai_chance = { base = 35 }
 		create_country_leader = {
 			name = "John Steenhuisen"
 			ideology = western_liberalism
@@ -1264,6 +1278,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.140.a2
+		ai_chance = { base = 20 }
 		create_country_leader = {
 			name = "Julius Malema"
 			ideology = socialism
@@ -1292,6 +1307,7 @@ country_event = {
 
 	option = {
 		name = md2026_elections.150.a0
+		ai_chance = { base = 40 }
 		create_country_leader = {
 			name = "Javier Milei"
 			ideology = western_liberalism
@@ -1303,6 +1319,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.150.a1
+		ai_chance = { base = 40 }
 		create_country_leader = {
 			name = "Axel Kicillof"
 			ideology = western_socialism
@@ -1314,6 +1331,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.150.a2
+		ai_chance = { base = 20 }
 		create_country_leader = {
 			name = "Mauricio Macri"
 			ideology = western_conservatism
@@ -1342,6 +1360,7 @@ country_event = {
 
 	option = {
 		name = md2026_elections.160.a0
+		ai_chance = { base = 25 }
 		create_country_leader = {
 			name = "Justin Trudeau"
 			ideology = western_liberalism
@@ -1353,6 +1372,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.160.a1
+		ai_chance = { base = 50 }
 		create_country_leader = {
 			name = "Pierre Poilievre"
 			ideology = western_conservatism
@@ -1364,6 +1384,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.160.a2
+		ai_chance = { base = 25 }
 		create_country_leader = {
 			name = "Jagmeet Singh"
 			ideology = western_socialism
@@ -1392,6 +1413,7 @@ country_event = {
 
 	option = {
 		name = md2026_elections.170.a0
+		ai_chance = { base = 35 }
 		create_country_leader = {
 			name = "Anthony Albanese"
 			ideology = western_socialism
@@ -1403,6 +1425,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.170.a1
+		ai_chance = { base = 45 }
 		create_country_leader = {
 			name = "Peter Dutton"
 			ideology = western_conservatism
@@ -1414,6 +1437,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_elections.170.a2
+		ai_chance = { base = 20 }
 		create_country_leader = {
 			name = "Adam Bandt"
 			ideology = socialism

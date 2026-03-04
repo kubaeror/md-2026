@@ -1,98 +1,1492 @@
 # MD2026 - AI Strategy Plans
-# These ensure that the AI takes logical steps regarding the 2026 mechanics and focus trees.
+# Guides AI focus tree selection for all countries with md2026 focus trees.
+# Each plan lists focuses in logical top-down order so the AI takes root focuses first.
+# For mutually exclusive branches, the "historical" path is chosen as default.
 
-md2026_usa_plan = {
-	name = "USA 2026 Strategy"
-	desc = "Prioritize confronting China and supporting allies while building up the economy."
-	
+# ============================================================
+# UNITED STATES OF AMERICA
+# Historical path: ukraine_peace_deal (Trump seeks deal)
+# ============================================================
+md2026_usa_historical = {
+	allowed = { original_tag = USA }
+	name = "USA 2026 Historical"
+	desc = "Trump's second term agenda: DOGE, tariffs, energy dominance, and a Ukraine peace deal."
+
 	enable = {
-		tag = USA
+		original_tag = USA
 		has_global_flag = md2026_initialized
 	}
-	
+
 	abort = {
-		always = no
 	}
-	
+
 	ai_national_focuses = {
-		md2026_usa_pacific_pivot
-		md2026_usa_taiwan_defense
-		md2026_usa_reshoring
+		MD2026_USA_trump_second_term
+		MD2026_USA_doge
+		MD2026_USA_doge_federal_cuts
+		MD2026_USA_doge_deregulation
+		MD2026_USA_mass_deportations
+		MD2026_USA_border_security
+		MD2026_USA_radical_tax_cuts
+		MD2026_USA_trade_tariffs
+		MD2026_USA_trade_war_china
+		MD2026_USA_trade_war_eu
+		MD2026_USA_energy_dominance
+		MD2026_USA_drill_baby_drill
+		MD2026_USA_lng_exports
+		MD2026_USA_nato_pressure
+		MD2026_USA_pentagon_budget
+		MD2026_USA_space_force_expansion
+		MD2026_USA_deal_with_russia
+		MD2026_USA_ukraine_peace_deal
+		MD2026_USA_territorial_ambitions
+		MD2026_USA_greenland_demand
+		MD2026_USA_panama_canal
 	}
-	
+
+	focus_factors = {
+		MD2026_USA_abandon_ukraine = 0
+	}
+
 	weight = {
-		factor = 100
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
 	}
 }
 
-md2026_chi_plan = {
-	name = "China 2026 Strategy"
-	desc = "Focus on the Taiwan contingency and technological self-reliance."
-	
+# ============================================================
+# RUSSIA (SOV)
+# Historical path: escalation (Russia escalates the war)
+# ============================================================
+md2026_sov_historical = {
+	allowed = { original_tag = SOV }
+	name = "Russia 2026 Historical"
+	desc = "Escalate the war in Ukraine, pursue economic autarky and pivot east."
+
 	enable = {
-		tag = CHI
+		original_tag = SOV
 		has_global_flag = md2026_initialized
 	}
-	
+
 	abort = {
-		always = no
 	}
-	
+
 	ai_national_focuses = {
-		md2026_chi_taiwan_escalation
-		md2026_chi_pla_modernization
-		md2026_chi_tech_independence
+		MD2026_SOV_war_crossroads
+		MD2026_SOV_escalation
+		MD2026_SOV_total_mobilization
+		MD2026_SOV_nuclear_threats
+		MD2026_SOV_economic_autarky
+		MD2026_SOV_import_substitution
+		MD2026_SOV_sanctions_circumvention
+		MD2026_SOV_eastern_pivot
+		MD2026_SOV_china_trade
+		MD2026_SOV_brics_leadership
 	}
-	
+
+	focus_factors = {
+		MD2026_SOV_frozen_conflict = 0
+		MD2026_SOV_consolidate_territories = 0
+	}
+
 	weight = {
-		factor = 100
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
 	}
 }
 
-md2026_sov_plan = {
-	name = "Russia 2026 Strategy"
-	desc = "Focus on the Ukrainian war effort and sanctions evasion."
-	
+# ============================================================
+# CHINA (CHI)
+# Historical path: taiwan_diplomacy (pressure without war)
+# ============================================================
+md2026_chi_historical = {
+	allowed = { original_tag = CHI }
+	name = "China 2026 Historical"
+	desc = "Great rejuvenation through tech dominance, naval expansion, and Taiwan diplomatic pressure."
+
 	enable = {
-		tag = SOV
+		original_tag = CHI
 		has_global_flag = md2026_initialized
 	}
-	
+
 	abort = {
-		always = no
 	}
-	
+
 	ai_national_focuses = {
-		md2026_sov_war_economy
-		md2026_sov_shadow_fleet
-		md2026_sov_offensive
+		MD2026_CHI_great_rejuvenation
+		MD2026_CHI_taiwan_question
+		MD2026_CHI_taiwan_diplomacy
+		MD2026_CHI_belt_road_2
+		MD2026_CHI_global_infrastructure
+		MD2026_CHI_tech_dominance
+		MD2026_CHI_semiconductor_war
+		MD2026_CHI_space_program
+		MD2026_CHI_naval_expansion
+		MD2026_CHI_south_china_sea
+		MD2026_CHI_blue_water_navy
 	}
-	
+
+	focus_factors = {
+		MD2026_CHI_taiwan_escalation = 0
+	}
+
 	weight = {
-		factor = 100
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
 	}
 }
 
-md2026_ukr_plan = {
-	name = "Ukraine 2026 Strategy"
-	desc = "Focus on survival, mobilization, and securing Western aid."
-	
+# ============================================================
+# UKRAINE (UKR)
+# Historical path: counteroffensive (fight on)
+# ============================================================
+md2026_ukr_historical = {
+	allowed = { original_tag = UKR }
+	name = "Ukraine 2026 Historical"
+	desc = "Continue the counteroffensive, secure Western weapons, and rebuild defense industry."
+
 	enable = {
-		tag = UKR
+		original_tag = UKR
 		has_global_flag = md2026_initialized
 	}
-	
+
 	abort = {
-		always = no
 	}
-	
+
 	ai_national_focuses = {
-		md2026_ukr_total_mobilization
-		md2026_ukr_western_weapons
-		md2026_ukr_drone_warfare
+		MD2026_UKR_war_path
+		MD2026_UKR_counteroffensive
+		MD2026_UKR_western_weapons
+		MD2026_UKR_liberate_donbas
+		MD2026_UKR_reconstruction
+		MD2026_UKR_defense_industry
+		MD2026_UKR_counter_offensive
+		MD2026_UKR_peace_negotiations
+		MD2026_UKR_frozen_conflict
 	}
-	
+
+	focus_factors = {
+		MD2026_UKR_diplomatic_path = 0
+		MD2026_UKR_nato_membership = 0
+		MD2026_UKR_eu_integration = 0
+	}
+
 	weight = {
-		factor = 100
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# GERMANY (GER)
+# Historical path: atlantic_solidarity (NATO-loyal)
+# ============================================================
+md2026_ger_historical = {
+	allowed = { original_tag = GER }
+	name = "Germany 2026 Historical"
+	desc = "Zeitenwende military reform, NATO commitment, EU leadership, and economic modernization."
+
+	enable = {
+		original_tag = GER
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_GER_zeitenwende_2026
+		MD2026_GER_bundeswehr_reform
+		MD2026_GER_leopard_program
+		MD2026_GER_eurofighter_upgrade
+		MD2026_GER_european_army_corps
+		MD2026_GER_air_defense_shield
+		MD2026_GER_nato_commitment
+		MD2026_GER_atlantic_solidarity
+		MD2026_GER_defense_spending
+		MD2026_GER_energy_transition
+		MD2026_GER_renewables_expansion
+		MD2026_GER_lng_terminals
+		MD2026_GER_hydrogen_economy
+		MD2026_GER_industrial_resilience
+		MD2026_GER_eu_leadership
+		MD2026_GER_eu_enlargement
+		MD2026_GER_franco_german_engine
+		MD2026_GER_balkans_accession
+		MD2026_GER_eu_defense_fund
+		MD2026_GER_wirtschaftswunder
+		MD2026_GER_ai_leadership
+		MD2026_GER_mittelstand_innovation
+		MD2026_GER_digital_sovereignty
+		MD2026_GER_green_technology
+		MD2026_GER_leading_europe
+	}
+
+	focus_factors = {
+		MD2026_GER_european_defense_pillar = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# FRANCE (FRA)
+# Historical path: sahel_withdrawal (France withdrew IRL)
+# ============================================================
+md2026_fra_historical = {
+	allowed = { original_tag = FRA }
+	name = "France 2026 Historical"
+	desc = "European defense, Sahel withdrawal, strategic autonomy, and nuclear energy leadership."
+
+	enable = {
+		original_tag = FRA
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_FRA_european_power
+		MD2026_FRA_european_defense
+		MD2026_FRA_nuclear_deterrent
+		MD2026_FRA_arms_exports
+		MD2026_FRA_force_de_frappe
+		MD2026_FRA_rafale_program
+		MD2026_FRA_african_policy
+		MD2026_FRA_sahel_withdrawal
+		MD2026_FRA_new_african_partnerships
+		MD2026_FRA_domestic_reform
+		MD2026_FRA_2027_elections
+		MD2026_FRA_economic_competitiveness
+		MD2026_FRA_political_realignment
+		MD2026_FRA_labor_reform
+		MD2026_FRA_strategic_autonomy
+		MD2026_FRA_indo_pacific_presence
+		MD2026_FRA_eu_defense_fund
+		MD2026_FRA_pacific_fleet
+		MD2026_FRA_european_sovereignty
+		MD2026_FRA_energy_transition
+		MD2026_FRA_nuclear_energy
+		MD2026_FRA_green_industry
+		MD2026_FRA_reactor_exports
+		MD2026_FRA_hydrogen_leader
+		MD2026_FRA_grande_nation
+	}
+
+	focus_factors = {
+		MD2026_FRA_sahel_reengage = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# UNITED KINGDOM (ENG)
+# Historical path: cptpp (Pacific trade focus)
+# ============================================================
+md2026_eng_historical = {
+	allowed = { original_tag = ENG }
+	name = "UK 2026 Historical"
+	desc = "Global Britain through CPTPP, AUKUS, special relationship, and science innovation."
+
+	enable = {
+		original_tag = ENG
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_ENG_global_britain
+		MD2026_ENG_nuclear_deterrent
+		MD2026_ENG_aukus
+		MD2026_ENG_carrier_strike
+		MD2026_ENG_submarine_program
+		MD2026_ENG_carrier_group
+		MD2026_ENG_post_brexit_trade
+		MD2026_ENG_cptpp
+		MD2026_ENG_trade_expansion
+		MD2026_ENG_special_relationship
+		MD2026_ENG_five_eyes
+		MD2026_ENG_ukraine_support
+		MD2026_ENG_intelligence_dominance
+		MD2026_ENG_european_security
+		MD2026_ENG_armed_forces
+		MD2026_ENG_cyber_warfare
+		MD2026_ENG_army_modernization
+		MD2026_ENG_gchq_expansion
+		MD2026_ENG_challenger_3
+		MD2026_ENG_science_innovation
+		MD2026_ENG_ai_strategy
+		MD2026_ENG_biotech_hub
+		MD2026_ENG_tech_regulation
+		MD2026_ENG_pharma_exports
+		MD2026_ENG_global_reach
+	}
+
+	focus_factors = {
+		MD2026_ENG_eu_rapprochement = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# ITALY (ITA)
+# Historical path: northern_industry (economic reality)
+# ============================================================
+md2026_ita_historical = {
+	allowed = { original_tag = ITA }
+	name = "Italy 2026 Historical"
+	desc = "Mediterranean crossroads: NATO southern flank, Piano Mattei, and industrial north."
+
+	enable = {
+		original_tag = ITA
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_ITA_mediterranean_crossroads
+		MD2026_ITA_nato_southern_flank
+		MD2026_ITA_naval_power
+		MD2026_ITA_tempest_fighter
+		MD2026_ITA_mediterranean_fleet
+		MD2026_ITA_european_air_combat
+		MD2026_ITA_economic_reform
+		MD2026_ITA_northern_industry
+		MD2026_ITA_debt_management
+		MD2026_ITA_migration_crisis
+		MD2026_ITA_fortress_europe
+		MD2026_ITA_integration_plan
+		MD2026_ITA_mediterranean_patrol
+		MD2026_ITA_labor_migration
+		MD2026_ITA_piano_mattei
+		MD2026_ITA_energy_corridors
+		MD2026_ITA_libya_stabilization
+		MD2026_ITA_gas_hub
+		MD2026_ITA_african_partnerships
+		MD2026_ITA_eu_leadership
+		MD2026_ITA_eurozone_reform
+		MD2026_ITA_cultural_heritage
+		MD2026_ITA_fiscal_stability
+		MD2026_ITA_tourism_economy
+		MD2026_ITA_italian_renaissance
+	}
+
+	focus_factors = {
+		MD2026_ITA_south_development = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# POLAND (POL)
+# No mutually exclusive focuses - straight through
+# ============================================================
+md2026_pol_historical = {
+	allowed = { original_tag = POL }
+	name = "Poland 2026 Historical"
+	desc = "Eastern shield: fortress Poland, army modernization, regional leadership, and EU engagement."
+
+	enable = {
+		original_tag = POL
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_POL_eastern_shield
+		MD2026_POL_fortress_poland
+		MD2026_POL_shield_of_europe
+		MD2026_POL_patriot_batteries
+		MD2026_POL_army_modernization
+		MD2026_POL_k2_tanks
+		MD2026_POL_himars
+		MD2026_POL_eu_powerhouse
+		MD2026_POL_visegrad
+		MD2026_POL_energy_independence
+		MD2026_POL_vistula_defense_line
+		MD2026_POL_iron_dome_east
+		MD2026_POL_wilk_tank
+		MD2026_POL_drone_warfare
+		MD2026_POL_three_seas_initiative
+		MD2026_POL_nuclear_power
+		MD2026_POL_regional_leader
+		MD2026_POL_ukraine_support
+		MD2026_POL_baltic_cooperation
+		MD2026_POL_lublin_triangle
+		MD2026_POL_nato_eastern_hq
+		MD2026_POL_economic_powerhouse
+		MD2026_POL_cpk_hub
+		MD2026_POL_defense_industry
+		MD2026_POL_tech_sector
+		MD2026_POL_pzl_expansion
+		MD2026_POL_great_poland
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# SPAIN (SPR)
+# Historical path: minority_governance (current political reality)
+# ============================================================
+md2026_spr_historical = {
+	allowed = { original_tag = SPR }
+	name = "Spain 2026 Historical"
+	desc = "Coalition politics, Mediterranean security, green economy, and Ibero-American ties."
+
+	enable = {
+		original_tag = SPR
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_SPR_espana_del_futuro
+		MD2026_SPR_coalition_survival
+		MD2026_SPR_minority_governance
+		MD2026_SPR_catalan_question
+		MD2026_SPR_constitutional_reform
+		MD2026_SPR_mediterranean_security
+		MD2026_SPR_f110_frigates
+		MD2026_SPR_eurofighter_upgrade
+		MD2026_SPR_strait_of_gibraltar
+		MD2026_SPR_nato_southern_flank
+		MD2026_SPR_green_economy
+		MD2026_SPR_renewable_superpower
+		MD2026_SPR_tourism_recovery
+		MD2026_SPR_hydrogen_corridor
+		MD2026_SPR_sagrada_familia
+		MD2026_SPR_iberoamerican_ties
+		MD2026_SPR_mercosur_trade
+		MD2026_SPR_morocco_partnership
+		MD2026_SPR_ceuta_melilla
+		MD2026_SPR_cultural_diplomacy
+		MD2026_SPR_eu_leadership
+		MD2026_SPR_eu_defense_contribution
+		MD2026_SPR_migration_management
+		MD2026_SPR_eu_fiscal_compact
+		MD2026_SPR_border_security
+		MD2026_SPR_nueva_espana
+	}
+
+	focus_factors = {
+		MD2026_SPR_sumar_pact = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# ISRAEL (ISR)
+# Historical path: covert_ops (Mossad shadow war)
+# ============================================================
+md2026_isr_historical = {
+	allowed = { original_tag = ISR }
+	name = "Israel 2026 Historical"
+	desc = "Iron wall doctrine: Gaza aftermath, covert ops against Iran, Abraham Accords, defense tech."
+
+	enable = {
+		original_tag = ISR
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_ISR_iron_wall
+		MD2026_ISR_gaza_aftermath
+		MD2026_ISR_northern_front
+		MD2026_ISR_border_defense
+		MD2026_ISR_iron_dome_upgrade
+		MD2026_ISR_idf_restructuring
+		MD2026_ISR_iran_threat
+		MD2026_ISR_covert_ops
+		MD2026_ISR_nuclear_deterrent
+		MD2026_ISR_mossad_shin_bet
+		MD2026_ISR_regional_intelligence
+		MD2026_ISR_signals_intelligence
+		MD2026_ISR_counter_terrorism
+		MD2026_ISR_cyber_warfare
+		MD2026_ISR_abraham_accords
+		MD2026_ISR_saudi_deal
+		MD2026_ISR_gulf_integration
+		MD2026_ISR_regional_trade
+		MD2026_ISR_water_diplomacy
+		MD2026_ISR_defense_tech
+		MD2026_ISR_iron_beam
+		MD2026_ISR_uav_dominance
+		MD2026_ISR_ai_warfare
+		MD2026_ISR_space_program
+		MD2026_ISR_startup_nation
+	}
+
+	focus_factors = {
+		MD2026_ISR_preemptive_strike = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# TURKEY (TUR)
+# Historical path: nato_loyalty (stays in NATO)
+# ============================================================
+md2026_tur_historical = {
+	allowed = { original_tag = TUR }
+	name = "Turkey 2026 Historical"
+	desc = "New era: defense industry, NATO loyalty, dual seas control, and Syria influence."
+
+	enable = {
+		original_tag = TUR
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_TUR_new_era
+		MD2026_TUR_defense_industry
+		MD2026_TUR_bayraktar
+		MD2026_TUR_tfx_fighter
+		MD2026_TUR_defense_exports
+		MD2026_TUR_naval_program
+		MD2026_TUR_mediation_power
+		MD2026_TUR_nato_loyalty
+		MD2026_TUR_regional_hegemon
+		MD2026_TUR_dual_seas
+		MD2026_TUR_black_sea_control
+		MD2026_TUR_east_med
+		MD2026_TUR_straits_leverage
+		MD2026_TUR_libya_influence
+		MD2026_TUR_central_corridor
+		MD2026_TUR_energy_hub
+		MD2026_TUR_turkic_council
+		MD2026_TUR_middle_corridor
+		MD2026_TUR_economic_stabilization
+		MD2026_TUR_syria_influence
+		MD2026_TUR_safe_zone
+		MD2026_TUR_refugee_return
+		MD2026_TUR_infrastructure_projects
+		MD2026_TUR_cultural_influence
+		MD2026_TUR_century_of_turkiye
+	}
+
+	focus_factors = {
+		MD2026_TUR_eurasian_pivot = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# SOUTH KOREA (KOR)
+# Historical path: maximum_pressure (current policy)
+# ============================================================
+md2026_kor_historical = {
+	allowed = { original_tag = KOR }
+	name = "South Korea 2026 Historical"
+	desc = "Shield of freedom: NK deterrence, maximum pressure, K-defense exports, and US alliance."
+
+	enable = {
+		original_tag = KOR
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_KOR_shield_freedom
+		MD2026_KOR_nk_deterrence
+		MD2026_KOR_kill_chain
+		MD2026_KOR_missile_shield
+		MD2026_KOR_dmz_fortification
+		MD2026_KOR_preemptive_capability
+		MD2026_KOR_peninsular_strategy
+		MD2026_KOR_maximum_pressure
+		MD2026_KOR_unification_preparation
+		MD2026_KOR_k_defense
+		MD2026_KOR_kf21_boramae
+		MD2026_KOR_k2_panther
+		MD2026_KOR_defense_exports
+		MD2026_KOR_naval_expansion
+		MD2026_KOR_k_economy
+		MD2026_KOR_semiconductor_hub
+		MD2026_KOR_cultural_export
+		MD2026_KOR_ai_innovation
+		MD2026_KOR_green_economy
+		MD2026_KOR_us_alliance
+		MD2026_KOR_combined_forces
+		MD2026_KOR_indo_pacific_partner
+		MD2026_KOR_japan_cooperation
+		MD2026_KOR_asean_engagement
+		MD2026_KOR_global_pivot_state
+	}
+
+	focus_factors = {
+		MD2026_KOR_diplomatic_opening = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# TAIWAN (TAI)
+# Historical path: us_arms_sales (US primary partner)
+# ============================================================
+md2026_tai_historical = {
+	allowed = { original_tag = TAI }
+	name = "Taiwan 2026 Historical"
+	desc = "Porcupine defense: asymmetric warfare, silicon shield, US arms, and civil defense."
+
+	enable = {
+		original_tag = TAI
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_TAI_porcupine_defense
+		MD2026_TAI_asymmetric_defense
+		MD2026_TAI_anti_ship_missiles
+		MD2026_TAI_reserve_mobilization
+		MD2026_TAI_coastal_fortress
+		MD2026_TAI_urban_warfare
+		MD2026_TAI_silicon_shield
+		MD2026_TAI_tsmc_dominance
+		MD2026_TAI_tech_sovereignty
+		MD2026_TAI_fab_expansion
+		MD2026_TAI_ai_research
+		MD2026_TAI_international_space
+		MD2026_TAI_us_arms_sales
+		MD2026_TAI_regional_partnerships
+		MD2026_TAI_civil_defense
+		MD2026_TAI_shelter_program
+		MD2026_TAI_information_warfare
+		MD2026_TAI_evacuation_plans
+		MD2026_TAI_media_resilience
+		MD2026_TAI_economic_diversification
+		MD2026_TAI_green_energy
+		MD2026_TAI_southbound_policy
+		MD2026_TAI_offshore_wind
+		MD2026_TAI_asean_trade
+		MD2026_TAI_fortress_taiwan
+	}
+
+	focus_factors = {
+		MD2026_TAI_japan_cooperation = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# NORTH KOREA (NKO)
+# Historical path: south_korea_threat (aggressive posture)
+# ============================================================
+md2026_nko_historical = {
+	allowed = { original_tag = NKO }
+	name = "North Korea 2026 Historical"
+	desc = "Nuclear shield: ICBM program, Russia alliance, threats against the South, and regime control."
+
+	enable = {
+		original_tag = NKO
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_NKO_nuclear_shield
+		MD2026_NKO_nuclear_expansion
+		MD2026_NKO_icbm_program
+		MD2026_NKO_tactical_nukes
+		MD2026_NKO_hwasong_17
+		MD2026_NKO_nuclear_doctrine
+		MD2026_NKO_russia_alliance
+		MD2026_NKO_arms_for_russia
+		MD2026_NKO_russian_tech
+		MD2026_NKO_military_tech_exchange
+		MD2026_NKO_space_program
+		MD2026_NKO_provocations
+		MD2026_NKO_south_korea_threat
+		MD2026_NKO_dmz_pressure
+		MD2026_NKO_regime_maintenance
+		MD2026_NKO_cult_personality
+		MD2026_NKO_juche_economy
+		MD2026_NKO_party_purges
+		MD2026_NKO_economic_zones
+		MD2026_NKO_cyber_warfare
+		MD2026_NKO_crypto_theft
+		MD2026_NKO_information_warfare
+		MD2026_NKO_cyber_army
+		MD2026_NKO_propaganda_network
+		MD2026_NKO_eternal_leader
+	}
+
+	focus_factors = {
+		MD2026_NKO_diplomatic_leverage = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# JAPAN (JAP)
+# Historical path: taiwan_contingency (prepare for Taiwan crisis)
+# ============================================================
+md2026_jap_historical = {
+	allowed = { original_tag = JAP }
+	name = "Japan 2026 Historical"
+	desc = "Active defense: constitutional reform, Taiwan contingency, maritime power, and US alliance."
+
+	enable = {
+		original_tag = JAP
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_JAP_active_defense
+		MD2026_JAP_constitutional_reform
+		MD2026_JAP_counterattack_capability
+		MD2026_JAP_missile_defense
+		MD2026_JAP_jsdf_expansion
+		MD2026_JAP_integrated_air_defense
+		MD2026_JAP_indo_pacific
+		MD2026_JAP_taiwan_contingency
+		MD2026_JAP_quad_plus
+		MD2026_JAP_maritime_supremacy
+		MD2026_JAP_carrier_fleet
+		MD2026_JAP_submarine_force
+		MD2026_JAP_pacific_guardian
+		MD2026_JAP_island_defense
+		MD2026_JAP_economic_revitalization
+		MD2026_JAP_tech_sovereignty
+		MD2026_JAP_semiconductor_strategy
+		MD2026_JAP_ai_robotics
+		MD2026_JAP_supply_chain_resilience
+		MD2026_JAP_us_alliance
+		MD2026_JAP_joint_operations
+		MD2026_JAP_intelligence_sharing
+		MD2026_JAP_cyber_defense
+		MD2026_JAP_okinawa_posture
+		MD2026_JAP_normal_nation
+	}
+
+	focus_factors = {
+		MD2026_JAP_korea_reconciliation = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# INDIA (RAJ)
+# Historical path: quad_deepening (India leans QUAD)
+# ============================================================
+md2026_raj_historical = {
+	allowed = { original_tag = RAJ }
+	name = "India 2026 Historical"
+	desc = "India's century: Make in India, QUAD deepening, border security, and space power."
+
+	enable = {
+		original_tag = RAJ
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_RAJ_indias_century
+		MD2026_RAJ_make_in_india
+		MD2026_RAJ_digital_india
+		MD2026_RAJ_semiconductor_push
+		MD2026_RAJ_defense_production
+		MD2026_RAJ_green_energy
+		MD2026_RAJ_strategic_autonomy
+		MD2026_RAJ_quad_deepening
+		MD2026_RAJ_multi_alignment
+		MD2026_RAJ_china_border
+		MD2026_RAJ_lac_fortification
+		MD2026_RAJ_mountain_strike
+		MD2026_RAJ_agni_deterrent
+		MD2026_RAJ_military_modernization
+		MD2026_RAJ_blue_water_navy
+		MD2026_RAJ_carrier_program
+		MD2026_RAJ_submarine_fleet
+		MD2026_RAJ_indian_ocean_dominance
+		MD2026_RAJ_andaman_command
+		MD2026_RAJ_space_power
+		MD2026_RAJ_isro_expansion
+		MD2026_RAJ_ai_hub
+		MD2026_RAJ_moon_mission
+		MD2026_RAJ_quantum_computing
+		MD2026_RAJ_vishwaguru
+	}
+
+	focus_factors = {
+		MD2026_RAJ_brics_balance = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# IRAN (PER)
+# Historical path: nuclear_accelerate (Iran accelerates program)
+# ============================================================
+md2026_per_historical = {
+	allowed = { original_tag = PER }
+	name = "Iran 2026 Historical"
+	desc = "Regime survival: nuclear acceleration, proxy networks, sanctions evasion, and IRGC control."
+
+	enable = {
+		original_tag = PER
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_PER_regime_survival
+		MD2026_PER_nuclear_program
+		MD2026_PER_nuclear_accelerate
+		MD2026_PER_nuclear_threshold
+		MD2026_PER_regional_proxies
+		MD2026_PER_axis_resistance
+		MD2026_PER_proxy_rebuild
+		MD2026_PER_expand_proxies
+		MD2026_PER_iraqi_influence
+		MD2026_PER_sanctions_economy
+		MD2026_PER_oil_barter
+		MD2026_PER_russia_alliance
+		MD2026_PER_china_oil_deal
+		MD2026_PER_military_cooperation
+		MD2026_PER_domestic_control
+		MD2026_PER_irgc_power
+		MD2026_PER_succession_planning
+		MD2026_PER_revolutionary_guards
+		MD2026_PER_suppress_dissent
+		MD2026_PER_military_industry
+		MD2026_PER_drone_program
+		MD2026_PER_air_defense
+		MD2026_PER_shahed_exports
+		MD2026_PER_s400_acquisition
+		MD2026_PER_regional_hegemon
+	}
+
+	focus_factors = {
+		MD2026_PER_nuclear_negotiate = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# SAUDI ARABIA (SAU)
+# Historical path: neom, opec_dominance, iran_rivalry
+# ============================================================
+md2026_sau_historical = {
+	allowed = { original_tag = SAU }
+	name = "Saudi Arabia 2026 Historical"
+	desc = "Vision 2030: NEOM megaproject, OPEC dominance, and confronting Iran."
+
+	enable = {
+		original_tag = SAU
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_SAU_vision_2030
+		MD2026_SAU_diversification
+		MD2026_SAU_neom
+		MD2026_SAU_oil_strategy
+		MD2026_SAU_opec_dominance
+		MD2026_SAU_regional_balance
+		MD2026_SAU_iran_rivalry
+		MD2026_SAU_military_modernization
+	}
+
+	focus_factors = {
+		MD2026_SAU_tourism = 0
+		MD2026_SAU_green_hydrogen = 0
+		MD2026_SAU_abraham_accords = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# EGYPT (EGY)
+# Historical path: us_weapons (traditional supplier)
+# ============================================================
+md2026_egy_historical = {
+	allowed = { original_tag = EGY }
+	name = "Egypt 2026 Historical"
+	desc = "Nile power: US weapons, economic crisis management, regional mediation, and mega projects."
+
+	enable = {
+		original_tag = EGY
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_EGY_nile_power
+		MD2026_EGY_military_modernization
+		MD2026_EGY_us_weapons
+		MD2026_EGY_domestic_production
+		MD2026_EGY_economic_crisis
+		MD2026_EGY_imf_program
+		MD2026_EGY_gulf_investment
+		MD2026_EGY_austerity_reform
+		MD2026_EGY_suez_revenue
+		MD2026_EGY_regional_role
+		MD2026_EGY_gaza_mediator
+		MD2026_EGY_nile_dispute
+		MD2026_EGY_peace_broker
+		MD2026_EGY_gerd_negotiations
+		MD2026_EGY_mega_projects
+		MD2026_EGY_new_capital
+		MD2026_EGY_infrastructure_expansion
+		MD2026_EGY_administrative_city
+		MD2026_EGY_rail_network
+		MD2026_EGY_energy_future
+		MD2026_EGY_nuclear_power
+		MD2026_EGY_solar_farms
+		MD2026_EGY_dabaa_reactor
+		MD2026_EGY_green_hydrogen
+		MD2026_EGY_arab_leader
+	}
+
+	focus_factors = {
+		MD2026_EGY_diversify_suppliers = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# SYRIA (SYR)
+# Historical path: secular_state (new Syria post-Assad)
+# ============================================================
+md2026_syr_historical = {
+	allowed = { original_tag = SYR }
+	name = "Syria 2026 Historical"
+	desc = "New Syria: secular state, reconstruction, security consolidation, and international recognition."
+
+	enable = {
+		original_tag = SYR
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_SYR_new_syria
+		MD2026_SYR_national_governance
+		MD2026_SYR_secular_state
+		MD2026_SYR_constitutional_process
+		MD2026_SYR_reconstruction
+		MD2026_SYR_refugee_return
+		MD2026_SYR_infrastructure_rebuild
+		MD2026_SYR_resettlement_program
+		MD2026_SYR_aleppo_restoration
+		MD2026_SYR_security_consolidation
+		MD2026_SYR_new_army
+		MD2026_SYR_kurdish_question
+		MD2026_SYR_military_reform
+		MD2026_SYR_northern_border
+		MD2026_SYR_international_recognition
+		MD2026_SYR_western_engagement
+		MD2026_SYR_arab_reintegration
+		MD2026_SYR_sanctions_relief
+		MD2026_SYR_arab_league_return
+		MD2026_SYR_economic_recovery
+		MD2026_SYR_foreign_investment
+		MD2026_SYR_agriculture_revival
+		MD2026_SYR_special_zones
+		MD2026_SYR_food_security
+		MD2026_SYR_new_dawn
+	}
+
+	focus_factors = {
+		MD2026_SYR_islamic_governance = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# BRAZIL (BRA)
+# Historical path: sa_trade, un_reform (Lula's agenda)
+# ============================================================
+md2026_bra_historical = {
+	allowed = { original_tag = BRA }
+	name = "Brazil 2026 Historical"
+	desc = "Lula's return: Amazon protection, South American trade, and UN reform push."
+
+	enable = {
+		original_tag = BRA
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_BRA_return
+		MD2026_BRA_amazon_protection
+		MD2026_BRA_green_economy
+		MD2026_BRA_reindustrialization
+		MD2026_BRA_sa_trade
+		MD2026_BRA_military_modernization
+		MD2026_BRA_brics_leadership
+		MD2026_BRA_un_reform
+	}
+
+	focus_factors = {
+		MD2026_BRA_agri_superpower = 0
+		MD2026_BRA_mercosur = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# CANADA (CAN)
+# Historical path: trade_diversification (diversify away from US)
+# ============================================================
+md2026_can_historical = {
+	allowed = { original_tag = CAN }
+	name = "Canada 2026 Historical"
+	desc = "Northern shield: Arctic sovereignty, trade diversification, NORAD renewal, and Indo-Pacific."
+
+	enable = {
+		original_tag = CAN
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_CAN_northern_shield
+		MD2026_CAN_arctic_sovereignty
+		MD2026_CAN_northwest_passage
+		MD2026_CAN_arctic_resources
+		MD2026_CAN_icebreaker_fleet
+		MD2026_CAN_northern_development
+		MD2026_CAN_us_trade_tensions
+		MD2026_CAN_trade_diversification
+		MD2026_CAN_energy_exports
+		MD2026_CAN_defense_modernization
+		MD2026_CAN_norad_renewal
+		MD2026_CAN_navy_expansion
+		MD2026_CAN_continental_defense
+		MD2026_CAN_frigate_program
+		MD2026_CAN_indo_pacific
+		MD2026_CAN_cptpp_engagement
+		MD2026_CAN_pacific_security
+		MD2026_CAN_asian_markets
+		MD2026_CAN_five_eyes_contribution
+		MD2026_CAN_domestic_agenda
+		MD2026_CAN_reconciliation
+		MD2026_CAN_immigration_reform
+		MD2026_CAN_indigenous_rights
+		MD2026_CAN_skilled_workforce
+		MD2026_CAN_middle_power
+	}
+
+	focus_factors = {
+		MD2026_CAN_us_accommodation = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# AUSTRALIA (AST)
+# Historical path: china_decouple (decoupling from China)
+# ============================================================
+md2026_ast_historical = {
+	allowed = { original_tag = AST }
+	name = "Australia 2026 Historical"
+	desc = "Pacific partner: AUKUS submarines, China decoupling, Pacific Islands engagement, and defense."
+
+	enable = {
+		original_tag = AST
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_AST_pacific_partner
+		MD2026_AST_aukus_commitment
+		MD2026_AST_nuclear_submarines
+		MD2026_AST_missile_capability
+		MD2026_AST_submarine_base
+		MD2026_AST_guided_weapons
+		MD2026_AST_china_balancing
+		MD2026_AST_china_decouple
+		MD2026_AST_rare_earth_strategy
+		MD2026_AST_pacific_islands
+		MD2026_AST_pacific_aid
+		MD2026_AST_pacific_security
+		MD2026_AST_pacific_step_up
+		MD2026_AST_naval_patrol
+		MD2026_AST_defense_expansion
+		MD2026_AST_northern_bases
+		MD2026_AST_cyber_defense
+		MD2026_AST_darwin_buildup
+		MD2026_AST_signals_intelligence
+		MD2026_AST_economic_resilience
+		MD2026_AST_green_energy
+		MD2026_AST_innovation_economy
+		MD2026_AST_solar_superpower
+		MD2026_AST_tech_exports
+		MD2026_AST_indo_pacific_anchor
+	}
+
+	focus_factors = {
+		MD2026_AST_china_engage = 0
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# ARGENTINA (ARG)
+# No mutually exclusive focuses
+# ============================================================
+md2026_arg_historical = {
+	allowed = { original_tag = ARG }
+	name = "Argentina 2026 Historical"
+	desc = "Milei reforms: economic liberalization and Falklands rhetoric."
+
+	enable = {
+		original_tag = ARG
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_arg_milei_reforms
+		md2026_arg_dollarization
+		md2026_arg_falklands_rhetoric
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# MEXICO (MEX)
+# No mutually exclusive focuses
+# ============================================================
+md2026_mex_historical = {
+	allowed = { original_tag = MEX }
+	name = "Mexico 2026 Historical"
+	desc = "AMLO legacy: USMCA trade, cartel war, nearshoring, and PEMEX reform."
+
+	enable = {
+		original_tag = MEX
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_mex_amlo_legacy
+		md2026_mex_usmca_trade
+		md2026_mex_cartel_war
+		md2026_mex_nearshoring
+		md2026_mex_national_guard
+		md2026_mex_pemex_reform
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# PAKISTAN (PAK)
+# No mutually exclusive focuses
+# ============================================================
+md2026_pak_historical = {
+	allowed = { original_tag = PAK }
+	name = "Pakistan 2026 Historical"
+	desc = "Economic crisis: IMF bailout, Kashmir issue, nuclear program, and military modernization."
+
+	enable = {
+		original_tag = PAK
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_pak_economic_crisis
+		md2026_pak_imf_bailout
+		md2026_pak_chinese_loans
+		md2026_pak_kashmir_issue
+		md2026_pak_nuclear_program
+		md2026_pak_military_modernization
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# SOUTH AFRICA (ZAF - uses SAF tag)
+# No mutually exclusive focuses
+# ============================================================
+md2026_zaf_historical = {
+	allowed = { original_tag = SAF }
+	name = "South Africa 2026 Historical"
+	desc = "ANC crisis: load shedding, anti-corruption, BRICS ties, and regional power."
+
+	enable = {
+		original_tag = SAF
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_zaf_anc_crisis
+		md2026_zaf_load_shedding
+		md2026_zaf_anti_corruption
+		md2026_zaf_brics_ties
+		md2026_zaf_mining_sector
+		md2026_zaf_regional_power
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# INDONESIA (IDN)
+# No mutually exclusive focuses
+# ============================================================
+md2026_idn_historical = {
+	allowed = { original_tag = IDN }
+	name = "Indonesia 2026 Historical"
+	desc = "Nusantara capital: ASEAN leadership, nickel exports, and maritime defense."
+
+	enable = {
+		original_tag = IDN
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_idn_nusantara_capital
+		md2026_idn_asean_leadership
+		md2026_idn_nickel_export
+		md2026_idn_foreign_investment
+		md2026_idn_maritime_defense
+		md2026_idn_military_expansion
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+# ============================================================
+# NIGERIA (NGA)
+# No mutually exclusive focuses
+# ============================================================
+md2026_nga_historical = {
+	allowed = { original_tag = NGA }
+	name = "Nigeria 2026 Historical"
+	desc = "ECOWAS leadership, oil revenue, and Boko Haram crackdown."
+
+	enable = {
+		original_tag = NGA
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_nga_ecowas_leadership
+		md2026_nga_oil_revenue
+		md2026_nga_boko_haram_crackdown
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
 	}
 }

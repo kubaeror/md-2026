@@ -61,7 +61,7 @@ country_event = {
 		}
 		
 		ai_chance = {
-			base = 50
+			base = 60
 		}
 	}
 	
@@ -87,7 +87,7 @@ country_event = {
 		remove_idea = md2026_war_exhaustion_3
 		
 		ai_chance = {
-			base = 50
+			base = 40
 		}
 	}
 }

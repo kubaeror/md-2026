@@ -125,6 +125,10 @@ md2026_trumponomics_category = {
 
 		ai_will_do = {
 			base = 30
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
 		}
 	}
 

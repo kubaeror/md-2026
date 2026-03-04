@@ -1497,7 +1497,6 @@ md2026_internal_politics_category = {
 			modifier = {
 				factor = 2
 				any_country = {
-					tag = TAI
 					has_country_flag = md2026_recognized_taiwan
 				}
 			}
