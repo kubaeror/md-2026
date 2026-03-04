@@ -302,16 +302,60 @@ on_actions = {
 					remove_ideas = md2026_tur_erdogan_autocracy
 				}
 
-				# Italy: Remove right-wing spirit if government changes
-				if = {
-					limit = {
-						tag = ITA
-						NOT = { has_government = nationalist }
-						has_idea = md2026_ita_right_wing_government
-					}
-					remove_ideas = md2026_ita_right_wing_government
+			# Italy: Remove right-wing spirit if government changes
+			if = {
+				limit = {
+					tag = ITA
+					NOT = { has_government = nationalist }
+					has_idea = md2026_ita_right_wing_government
 				}
+				remove_ideas = md2026_ita_right_wing_government
+			}
+
+			# Poland: Remove cohabitation spirits if government changes to nationalist (unified PiS)
+			if = {
+				limit = {
+					tag = POL
+					has_government = nationalist
+					has_idea = md2026_pol_cohabitation
+				}
+				remove_ideas = md2026_pol_cohabitation
+			}
+			if = {
+				limit = {
+					tag = POL
+					has_government = nationalist
+					has_idea = md2026_pol_nawrocki_presidency
+				}
+				remove_ideas = md2026_pol_nawrocki_presidency
+			}
+
+			# Germany: Remove coalition/economic spirits if government changes
+			if = {
+				limit = {
+					tag = GER
+					NOT = { has_government = democratic }
+					has_idea = md2026_ger_grand_coalition
+				}
+				remove_ideas = md2026_ger_grand_coalition
+			}
+			if = {
+				limit = {
+					tag = GER
+					NOT = { has_government = democratic }
+					has_idea = md2026_ger_economic_recovery
+				}
+				remove_ideas = md2026_ger_economic_recovery
+			}
+			if = {
+				limit = {
+					tag = GER
+					NOT = { has_government = democratic }
+					has_idea = md2026_ger_economic_malaise
+				}
+				remove_ideas = md2026_ger_economic_malaise
 			}
 		}
 	}
+}
 }

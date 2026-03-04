@@ -1,0 +1,58 @@
+l_english:
+ ### MD2026 Elections 2025 - English Localisation ###
+
+ ### EVENTS ###
+
+ ## Poland: Nawrocki Presidential Victory ##
+ md2026_elections_2025.1.t:0 "Poland: Nawrocki Wins Presidential Election"
+ md2026_elections_2025.1.d:0 "In a stunning upset that has shaken Polish politics to its core, Karol Nawrocki — the PiS-backed candidate and former director of the Institute of National Remembrance — has won the presidential election with 50.89% of the vote, defeating Rafal Trzaskowski of Civic Platform. Poland now faces an unprecedented period of cohabitation: a PiS-aligned president with veto power over legislation, and a liberal Tusk government that holds the parliamentary majority. The Constitutional Tribunal, judiciary reform, and EU relations all hang in the balance."
+ md2026_elections_2025.1.o1:0 "We must learn to work with him."
+ md2026_elections_2025.1.o2:0 "We will not bow to PiS obstruction!"
+ md2026_elections_2025.1.o3:0 "Let the people decide — call snap elections."
+
+ ## Poland: Budget Veto Standoff ##
+ md2026_elections_2025.2.t:0 "Poland: Presidential Veto Crisis"
+ md2026_elections_2025.2.d:0 "President Nawrocki has exercised his constitutional veto power against key government legislation, including the national budget and judicial reform bills. The Tusk government faces a critical choice: seek a compromise that dilutes their agenda, attempt to override the veto with a three-fifths majority they may not command, or abandon the contested legislation entirely. The standoff has paralyzed policy-making and sent shockwaves through the EU, which watches nervously as Poland's democratic institutions are tested once again."
+ md2026_elections_2025.2.o1:0 "Negotiate a budget compromise."
+ md2026_elections_2025.2.o2:0 "Override the veto — constitutional confrontation."
+ md2026_elections_2025.2.o3:0 "Abandon the contested legislation."
+
+ ## Poland: Cohabitation Resolution ##
+ md2026_elections_2025.3.t:0 "Poland: The Cohabitation Question"
+ md2026_elections_2025.3.d:0 "Months of political brinkmanship between President Nawrocki and Prime Minister Tusk have brought Poland to a crossroads. The constant vetoes and counter-moves have exhausted both sides and the patience of the Polish public. Some voices call for pragmatic coexistence, while others see an opportunity for one side to seize the initiative. The EU and NATO allies watch with concern, mindful that Poland's internal stability is crucial for Eastern European security."
+ md2026_elections_2025.3.o1:0 "Pragmatic coexistence — both sides step back."
+ md2026_elections_2025.3.o2:0 "Nawrocki dominates — the PiS agenda advances."
+ md2026_elections_2025.3.o3:0 "The government collapses under the strain."
+
+ ## Poland: Snap Parliamentary Elections ##
+ md2026_elections_2025.4.t:0 "Poland: Snap Parliamentary Elections"
+ md2026_elections_2025.4.d:0 "The political deadlock has proven insurmountable. With government unable to pass legislation and public trust in institutions eroding, snap parliamentary elections have been called. The campaign is fierce — PiS, energized by Nawrocki's presidency, seeks a unified government. Civic Platform fights to retain power under Tusk's leadership, while smaller parties sense an opportunity in the chaos. Voter turnout is expected to be historic, as Poles head to the polls to resolve the constitutional crisis."
+ md2026_elections_2025.4.o1:0 "PiS wins — a unified government at last."
+ md2026_elections_2025.4.o2:0 "Civic Platform holds on — Tusk prevails."
+ md2026_elections_2025.4.o3:0 "A new centrist coalition emerges."
+
+ ## Germany: Grand Coalition Strains ##
+ md2026_elections_2025.5.t:0 "Germany: Grand Coalition Under Pressure"
+ md2026_elections_2025.5.d:0 "Chancellor Friedrich Merz's CDU/SPD grand coalition, formed after the February 2025 snap election, is already showing signs of strain. The SPD, reduced to junior partner status after their worst result in decades, chafes under CDU dominance on fiscal and migration policy. Meanwhile, the AfD's 20.8% vote share continues to influence the political discourse from outside the coalition. Merz must decide how to govern: push his conservative reform agenda, compromise with the SPD, or focus the coalition's energy on confronting the far-right threat."
+ md2026_elections_2025.5.o1:0 "Push through CDU reforms — we have the mandate."
+ md2026_elections_2025.5.o2:0 "Compromise with the SPD — stability first."
+ md2026_elections_2025.5.o3:0 "Unite against the AfD threat."
+
+ ## Germany: Sondervermogen Infrastructure Fund ##
+ md2026_elections_2025.6.t:0 "Germany: The Infrastructure Investment Debate"
+ md2026_elections_2025.6.d:0 "Chancellor Merz has proposed a massive Sondervermogen — a special infrastructure fund worth hundreds of billions of euros — to modernize Germany's crumbling roads, bridges, railways, and digital infrastructure. The proposal requires a constitutional amendment to bypass the debt brake, the very rule Merz championed as an opposition politician. The SPD enthusiastically supports the spending but demands social investment alongside infrastructure. The FDP and fiscal conservatives warn of future debt burdens, while industry leaders insist Germany's economic competitiveness depends on immediate action."
+ md2026_elections_2025.6.o1:0 "Approve the full infrastructure fund."
+ md2026_elections_2025.6.o2:0 "A scaled-down, fiscally responsible version."
+ md2026_elections_2025.6.o3:0 "Block the fund — the debt brake must hold."
+
+ ### NATIONAL SPIRITS ###
+ md2026_pol_cohabitation:0 "Cohabitation Crisis"
+ md2026_pol_cohabitation_desc:0 "The election of PiS-backed President Nawrocki has plunged Poland into an era of cohabitation, with a conservative-nationalist president wielding veto power against a liberal-centrist government. Legislative paralysis, constitutional confrontations, and declining public trust in institutions characterize this turbulent period."
+ md2026_pol_nawrocki_presidency:0 "Nawrocki Presidency"
+ md2026_pol_nawrocki_presidency_desc:0 "President Karol Nawrocki, backed by the PiS party apparatus, exercises significant influence over Poland's political direction. While the presidency is constitutionally limited, Nawrocki's aggressive use of veto power and his role as commander-in-chief shape defense policy and foreign relations."
+ md2026_ger_grand_coalition:0 "Grand Coalition Governance"
+ md2026_ger_grand_coalition_desc:0 "The CDU/SPD grand coalition under Chancellor Merz provides political stability but at the cost of legislative dynamism. Compromises between the conservative CDU and social-democratic SPD slow reform, though the broad coalition basis helps shield Germany from populist pressures."
+ md2026_ger_economic_recovery:0 "Infrastructure-Led Recovery"
+ md2026_ger_economic_recovery_desc:0 "The massive Sondervermogen infrastructure fund has kick-started Germany's economic recovery. New investment in roads, railways, digital infrastructure, and green energy is creating jobs and restoring confidence in the German economic model."
+ md2026_ger_economic_malaise:0 "Economic Stagnation"
+ md2026_ger_economic_malaise_desc:0 "Germany's economy remains stuck in a prolonged malaise. Failed investment initiatives, high energy costs, industrial decline, and political gridlock have sapped business confidence. The country that was once Europe's economic engine struggles to regain its footing."

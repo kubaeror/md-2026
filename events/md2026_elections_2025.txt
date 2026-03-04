@@ -1,0 +1,532 @@
+###################################
+# MD2026 Elections 2025
+# Poland: Nawrocki Presidential Victory & Cohabitation
+# Germany: Merz Grand Coalition Dynamics
+###################################
+
+add_namespace = md2026_elections_2025
+
+###################################
+# .1 - Poland: Nawrocki Wins Presidential Election
+# Fires shortly after 2026 bookmark start (election was June 2025)
+###################################
+country_event = {
+	id = md2026_elections_2025.1
+	title = md2026_elections_2025.1.t
+	desc = md2026_elections_2025.1.d
+	picture = GFX_report_event_generic_parliament
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POL
+		has_global_flag = md2026_initialized
+		date > 2026.1.15
+		NOT = { has_country_flag = md2026_pol_nawrocki_elected }
+		has_government = democratic
+	}
+
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	# Option A: Accept cohabitation — work with Nawrocki
+	option = {
+		name = md2026_elections_2025.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.1 - Accept cohabitation"
+
+		add_political_power = -50
+		add_stability = -0.05
+		add_ideas = md2026_pol_cohabitation
+
+		set_country_flag = md2026_pol_nawrocki_elected
+		set_country_flag = md2026_pol_cohabitation_accepted
+
+		# PiS gains popularity
+		add_popularity = { ideology = nationalist popularity = 0.03 }
+
+		country_event = { id = md2026_elections_2025.2 days = 60 }
+
+		ai_chance = {
+			base = 55
+		}
+	}
+
+	# Option B: Confrontation — challenge Nawrocki's legitimacy
+	option = {
+		name = md2026_elections_2025.1.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.1 - Confront Nawrocki"
+
+		add_political_power = -75
+		add_stability = -0.10
+		add_ideas = md2026_pol_cohabitation
+
+		set_country_flag = md2026_pol_nawrocki_elected
+		set_country_flag = md2026_pol_cohabitation_confrontation
+
+		# Greater polarization
+		add_popularity = { ideology = nationalist popularity = 0.05 }
+
+		country_event = { id = md2026_elections_2025.2 days = 45 }
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+	# Option C: Call early elections — let the people decide
+	option = {
+		name = md2026_elections_2025.1.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.1 - Call early elections"
+
+		add_political_power = -100
+		add_stability = -0.15
+
+		set_country_flag = md2026_pol_nawrocki_elected
+		set_country_flag = md2026_pol_early_elections
+
+		country_event = { id = md2026_elections_2025.4 days = 90 }
+
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+###################################
+# .2 - Poland: Budget Veto Standoff
+# Nawrocki vetoes key government legislation
+###################################
+country_event = {
+	id = md2026_elections_2025.2
+	title = md2026_elections_2025.2.t
+	desc = md2026_elections_2025.2.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	# Option A: Compromise on budget — pragmatic approach
+	option = {
+		name = md2026_elections_2025.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.2 - Budget compromise"
+
+		add_political_power = 25
+		add_stability = 0.03
+
+		# Cohabitation stabilizes somewhat
+		if = {
+			limit = { has_idea = md2026_pol_cohabitation }
+			swap_ideas = {
+				remove_idea = md2026_pol_cohabitation
+				add_idea = md2026_pol_nawrocki_presidency
+			}
+		}
+
+		country_event = { id = md2026_elections_2025.3 days = 120 }
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Override veto — constitutional confrontation
+	option = {
+		name = md2026_elections_2025.2.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.2 - Override veto"
+
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = 0.03
+
+		country_event = { id = md2026_elections_2025.3 days = 90 }
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option C: Abandon legislation — retreat
+	option = {
+		name = md2026_elections_2025.2.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.2 - Abandon legislation"
+
+		add_political_power = -25
+		add_stability = -0.08
+
+		add_popularity = { ideology = nationalist popularity = 0.03 }
+
+		country_event = { id = md2026_elections_2025.3 days = 150 }
+
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+###################################
+# .3 - Poland: Cohabitation Resolution
+# Long-term outcome of the political standoff
+###################################
+country_event = {
+	id = md2026_elections_2025.3
+	title = md2026_elections_2025.3.t
+	desc = md2026_elections_2025.3.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	# Option A: Pragmatic coexistence — both sides learn to work together
+	option = {
+		name = md2026_elections_2025.3.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.3 - Pragmatic coexistence"
+
+		add_political_power = 50
+		add_stability = 0.08
+
+		if = {
+			limit = { has_idea = md2026_pol_cohabitation }
+			remove_ideas = md2026_pol_cohabitation
+		}
+		if = {
+			limit = { has_idea = md2026_pol_nawrocki_presidency }
+			remove_ideas = md2026_pol_nawrocki_presidency
+		}
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: Nawrocki dominates — shift toward PiS agenda
+	option = {
+		name = md2026_elections_2025.3.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.3 - Nawrocki dominates"
+
+		add_political_power = -25
+		add_stability = -0.05
+		add_war_support = 0.05
+
+		if = {
+			limit = { has_idea = md2026_pol_cohabitation }
+			remove_ideas = md2026_pol_cohabitation
+		}
+		if = {
+			limit = { NOT = { has_idea = md2026_pol_nawrocki_presidency } }
+			add_ideas = md2026_pol_nawrocki_presidency
+		}
+
+		add_popularity = { ideology = nationalist popularity = 0.05 }
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+	# Option C: Government collapses — snap elections called
+	option = {
+		name = md2026_elections_2025.3.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.3 - Government collapse"
+
+		add_political_power = -75
+		add_stability = -0.12
+
+		if = {
+			limit = { has_idea = md2026_pol_cohabitation }
+			remove_ideas = md2026_pol_cohabitation
+		}
+
+		country_event = { id = md2026_elections_2025.4 days = 60 }
+
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+
+###################################
+# .4 - Poland: Snap Parliamentary Elections
+# Can be triggered by .1 option C or .3 option C
+###################################
+country_event = {
+	id = md2026_elections_2025.4
+	title = md2026_elections_2025.4.t
+	desc = md2026_elections_2025.4.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	# Option A: PiS wins — unified government under Nawrocki
+	option = {
+		name = md2026_elections_2025.4.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.4 - PiS wins snap election"
+
+		set_politics = { ruling_party = nationalist }
+		create_country_leader = {
+			name = "Mateusz Morawiecki"
+			picture = "gfx/leaders/POL/Mateusz_Morawiecki.dds"
+			expire = "2031.12.31"
+			ideology = Nat_Populism
+			traits = {
+				nationalist_Nat_Populism
+				captain_of_industry
+			}
+		}
+
+		add_political_power = 50
+		add_stability = 0.05
+		add_war_support = 0.10
+
+		if = {
+			limit = { has_idea = md2026_pol_cohabitation }
+			remove_ideas = md2026_pol_cohabitation
+		}
+		if = {
+			limit = { has_idea = md2026_pol_nawrocki_presidency }
+			remove_ideas = md2026_pol_nawrocki_presidency
+		}
+
+		every_country = {
+			limit = {
+				OR = {
+					tag = GER
+					tag = FRA
+				}
+			}
+			add_opinion_modifier = { target = POL modifier = md2026_diplomatic_disapproval }
+		}
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: KO holds on — Tusk re-elected
+	option = {
+		name = md2026_elections_2025.4.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.4 - KO wins snap election"
+
+		set_politics = { ruling_party = democratic }
+
+		add_political_power = 50
+		add_stability = 0.10
+
+		if = {
+			limit = { has_idea = md2026_pol_cohabitation }
+			remove_ideas = md2026_pol_cohabitation
+		}
+		if = {
+			limit = { has_idea = md2026_pol_nawrocki_presidency }
+			remove_ideas = md2026_pol_nawrocki_presidency
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+	# Option C: Third Way emerges — centrist coalition
+	option = {
+		name = md2026_elections_2025.4.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.4 - Centrist coalition"
+
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Szymon Holownia"
+			picture = "gfx/leaders/POL/Szymon_Holownia.dds"
+			expire = "2031.12.31"
+			ideology = conservatism
+			traits = {
+				western_conservatism
+				media_personality
+			}
+		}
+
+		add_political_power = 25
+		add_stability = 0.05
+
+		if = {
+			limit = { has_idea = md2026_pol_cohabitation }
+			remove_ideas = md2026_pol_cohabitation
+		}
+		if = {
+			limit = { has_idea = md2026_pol_nawrocki_presidency }
+			remove_ideas = md2026_pol_nawrocki_presidency
+		}
+
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+
+###################################
+# .5 - Germany: Grand Coalition Strains
+# CDU/SPD coalition faces internal tensions
+###################################
+country_event = {
+	id = md2026_elections_2025.5
+	title = md2026_elections_2025.5.t
+	desc = md2026_elections_2025.5.d
+	picture = GFX_report_event_generic_parliament
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		has_global_flag = md2026_initialized
+		date > 2026.3.1
+		NOT = { has_country_flag = md2026_ger_coalition_strains }
+		has_government = democratic
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	# Option A: Push through reforms — Merz forces CDU agenda
+	option = {
+		name = md2026_elections_2025.5.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.5 - CDU agenda"
+
+		add_political_power = 50
+		add_stability = -0.05
+
+		add_ideas = md2026_ger_grand_coalition
+
+		set_country_flag = md2026_ger_coalition_strains
+		set_country_flag = md2026_ger_cdu_dominant
+
+		country_event = { id = md2026_elections_2025.6 days = 90 }
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: Compromise with SPD — balanced governance
+	option = {
+		name = md2026_elections_2025.5.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.5 - CDU/SPD balance"
+
+		add_political_power = 25
+		add_stability = 0.03
+
+		add_ideas = md2026_ger_grand_coalition
+
+		set_country_flag = md2026_ger_coalition_strains
+		set_country_flag = md2026_ger_balanced_coalition
+
+		country_event = { id = md2026_elections_2025.6 days = 120 }
+
+		ai_chance = {
+			base = 45
+		}
+	}
+
+	# Option C: Confront the AfD threat head-on
+	option = {
+		name = md2026_elections_2025.5.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.5 - Confront AfD"
+
+		add_political_power = -25
+		add_stability = 0.05
+		add_war_support = 0.03
+
+		add_ideas = md2026_ger_grand_coalition
+
+		add_popularity = { ideology = nationalist popularity = -0.02 }
+
+		set_country_flag = md2026_ger_coalition_strains
+		set_country_flag = md2026_ger_anti_afd
+
+		country_event = { id = md2026_elections_2025.6 days = 90 }
+
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+###################################
+# .6 - Germany: Sondervermogen Infrastructure Fund
+# Merz's signature economic initiative
+###################################
+country_event = {
+	id = md2026_elections_2025.6
+	title = md2026_elections_2025.6.t
+	desc = md2026_elections_2025.6.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	# Option A: Approve the fund — massive infrastructure investment
+	option = {
+		name = md2026_elections_2025.6.o1
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.6 - Approve infrastructure fund"
+
+		add_political_power = 50
+		add_stability = 0.05
+
+		# Economic boost from investment
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } }
+			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+		}
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+
+		if = {
+			limit = { has_idea = md2026_ger_grand_coalition }
+			swap_ideas = {
+				remove_idea = md2026_ger_grand_coalition
+				add_idea = md2026_ger_economic_recovery
+			}
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Scaled-down version — fiscal conservatism prevails
+	option = {
+		name = md2026_elections_2025.6.o2
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.6 - Scaled down fund"
+
+		add_political_power = 25
+		add_stability = 0.03
+
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } }
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+	# Option C: Block the fund — coalition crisis
+	option = {
+		name = md2026_elections_2025.6.o3
+		log = "[GetDateText]: [This.GetName]: md2026_elections_2025.6 - Block the fund"
+
+		add_political_power = -50
+		add_stability = -0.08
+
+		if = {
+			limit = { has_idea = md2026_ger_grand_coalition }
+			swap_ideas = {
+				remove_idea = md2026_ger_grand_coalition
+				add_idea = md2026_ger_economic_malaise
+			}
+		}
+
+		ai_chance = {
+			base = 15
+		}
+	}
+}

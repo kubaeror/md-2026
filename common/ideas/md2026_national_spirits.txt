@@ -1249,5 +1249,78 @@ ideas = {
 			}
 		}
 
+		### POLAND - COHABITATION ###
+
+		md2026_pol_cohabitation = {
+			picture = POL_political_crisis
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_factor = -0.20
+				stability_factor = -0.10
+				drift_defence_factor = -0.25
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		md2026_pol_nawrocki_presidency = {
+			picture = generic_nationalism
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_factor = -0.10
+				stability_factor = -0.05
+				war_support_factor = 0.05
+				conscription = 0.005
+				drift_defence_factor = -0.15
+			}
+		}
+
+		### GERMANY - GRAND COALITION ###
+
+		md2026_ger_grand_coalition = {
+			picture = generic_coalition_government
+			allowed = { original_tag = GER }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				NOT = { has_government = democratic }
+			}
+			modifier = {
+				political_power_factor = -0.10
+				stability_factor = 0.05
+				drift_defence_factor = 0.10
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		md2026_ger_economic_recovery = {
+			picture = generic_production_bonus
+			allowed = { original_tag = GER }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				NOT = { has_government = democratic }
+			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_infrastructure_factor = 0.15
+				stability_factor = 0.05
+				consumer_goods_factor = -0.03
+				political_power_factor = 0.05
+			}
+		}
+
+		md2026_ger_economic_malaise = {
+			picture = generic_economic_crisis
+			allowed = { original_tag = GER }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = -0.10
+				production_speed_industrial_complex_factor = -0.10
+				stability_factor = -0.08
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.10
+			}
+		}
+
 	}
 }
