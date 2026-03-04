@@ -498,7 +498,7 @@ characters = {
 		}
 		advisor = {
 			slot = army_chief
-			idea_token = kersten_lahl
+			idea_token = wolfgang_korte
 			allowed = {
 				original_tag = GER
 			}
@@ -692,7 +692,7 @@ characters = {
 		}
 		advisor = {
 			slot = high_command
-			idea_token = henning_hoops
+			idea_token = bernd_heise
 			allowed = {
 				original_tag = GER
 			}
@@ -1219,7 +1219,7 @@ GER_jorg_vollmer = {
 		}
 		advisor = {
 			slot = high_command
-			idea_token = wolfgang_schneiderhan
+			idea_token = eberhard_zorn
 			ledger = army
 			allowed = {
 				original_tag = GER
