@@ -20,7 +20,7 @@ focus_tree = {
 		cost = 10
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_political_power = 50 add_building_construction = { type = industrial_complex amount = 1 instant_build = yes }
+			add_political_power = 50 add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 		}
 	}
 	focus = {
@@ -44,7 +44,7 @@ focus_tree = {
 		prerequisite = { focus = idn_nusantara_capital }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_building_construction = { type = industrial_complex amount = 2 instant_build = yes }
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
 		}
 	}
 	focus = {
@@ -56,7 +56,7 @@ focus_tree = {
 		prerequisite = { focus = idn_asean_leadership focus = idn_nickel_export }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_building_construction = { type = arms_factory amount = 2 instant_build = yes }
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
 		}
 	}
 	focus = {
