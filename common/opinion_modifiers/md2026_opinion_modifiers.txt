@@ -204,11 +204,11 @@ opinion_modifiers = {
 		value = -30
 		decay = 1
 	}
-}
 
-md2026_cyber_attack_opinion = {
-	value = -40
-	decay = 1
-	days = 1000
-	trade = yes
+	md2026_cyber_attack_opinion = {
+		value = -40
+		decay = 1
+		days = 1000
+		trade = yes
+	}
 }
