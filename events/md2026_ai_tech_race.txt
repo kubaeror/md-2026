@@ -1,0 +1,554 @@
+###################################
+# MD2026 AI/Tech Arms Race
+# Extends md2026_tech namespace (.4-.9)
+# DeepSeek breakthrough, EU AI Act,
+# US AI race, autonomous weapons, AI governance
+###################################
+
+add_namespace = md2026_tech
+add_namespace = md2026_tech_news
+
+###################################
+# .4 - DeepSeek R1: China's AI Breakthrough
+# Auto-fires after Jan 2025
+# Chinese open-weight model matches Western AI at fraction of cost
+###################################
+country_event = {
+	id = md2026_tech.4
+	title = md2026_tech.4.t
+	desc = md2026_tech.4.d
+	picture = GFX_report_event_generic_research
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		date > 2025.1.20
+		NOT = { has_global_flag = md2026_deepseek_breakthrough }
+	}
+
+	mean_time_to_happen = {
+		days = 14
+	}
+
+	immediate = {
+		set_global_flag = md2026_deepseek_breakthrough
+	}
+
+	# Option A: Weaponize AI leadership — military and surveillance
+	option = {
+		name = md2026_tech.4.o1
+		log = "[GetDateText]: [This.GetName]: md2026_tech.4 - Military AI priority"
+
+		add_political_power = 75
+		add_stability = 0.05
+		add_war_support = 0.05
+
+		add_ideas = md2026_chi_ai_leadership
+
+		# US reaction
+		USA = {
+			country_event = { id = md2026_tech.6 days = 7 }
+		}
+
+		# Global news
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { id = md2026_tech_news.3 days = 1 }
+		}
+
+		# Tech rivalry
+		USA = {
+			add_opinion_modifier = { target = CHI modifier = md2026_tech_rivalry }
+		}
+
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Option B: Open-source AI ecosystem — economic growth focus
+	option = {
+		name = md2026_tech.4.o2
+		log = "[GetDateText]: [This.GetName]: md2026_tech.4 - Civilian AI ecosystem"
+
+		add_political_power = 100
+		add_stability = 0.08
+
+		add_ideas = md2026_chi_ai_leadership
+
+		random_owned_controlled_state = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		USA = {
+			country_event = { id = md2026_tech.6 days = 7 }
+		}
+
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { id = md2026_tech_news.3 days = 1 }
+		}
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# .5 - EU AI Act: First Prohibitions Take Effect
+# Auto-fires for EU major after Feb 2025
+# Social scoring, manipulative AI banned
+###################################
+country_event = {
+	id = md2026_tech.5
+	title = md2026_tech.5.t
+	desc = md2026_tech.5.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2025.2.1
+		NOT = { has_global_flag = md2026_eu_ai_act_enforced }
+		OR = {
+			tag = GER
+			tag = FRA
+			tag = ITA
+		}
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		days = 14
+	}
+
+	immediate = {
+		set_global_flag = md2026_eu_ai_act_enforced
+	}
+
+	# Option A: Strict enforcement — lead global AI regulation
+	option = {
+		name = md2026_tech.5.o1
+		log = "[GetDateText]: [This.GetName]: md2026_tech.5 - Strict AI Act enforcement"
+
+		add_political_power = -50
+		add_stability = 0.05
+
+		add_ideas = md2026_eu_ai_regulation
+
+		# Industry friction with US/China
+		USA = {
+			add_opinion_modifier = { target = ROOT modifier = md2026_tech_rivalry }
+		}
+
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Option B: Flexible implementation — balance innovation with safety
+	option = {
+		name = md2026_tech.5.o2
+		log = "[GetDateText]: [This.GetName]: md2026_tech.5 - Flexible AI Act"
+
+		add_political_power = 25
+		add_stability = 0.03
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# .6 - USA: AI Arms Race Response
+# Triggered by .4 — DeepSeek shocks Washington
+# EO 14179 revoking Biden AI regulation
+###################################
+country_event = {
+	id = md2026_tech.6
+	title = md2026_tech.6.t
+	desc = md2026_tech.6.d
+	picture = GFX_report_event_generic_research
+
+	is_triggered_only = yes
+
+	# Option A: Deregulate and accelerate — win the AI race at all costs
+	option = {
+		name = md2026_tech.6.o1
+		log = "[GetDateText]: [This.GetName]: md2026_tech.6 - Deregulate AI"
+
+		add_political_power = 50
+		add_war_support = 0.05
+
+		add_ideas = md2026_usa_ai_race
+
+		# Tech rivalry deepens
+		CHI = {
+			add_opinion_modifier = { target = USA modifier = md2026_tech_rivalry }
+		}
+
+		ai_chance = {
+			base = 60
+			modifier = {
+				factor = 2
+				has_government = nationalist
+			}
+		}
+	}
+
+	# Option B: Strategic investment — targeted government AI programs
+	option = {
+		name = md2026_tech.6.o2
+		log = "[GetDateText]: [This.GetName]: md2026_tech.6 - Strategic AI investment"
+
+		add_political_power = -75
+
+		add_ideas = md2026_usa_ai_race
+
+		random_owned_controlled_state = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option C: Regulate and compete — balanced approach
+	option = {
+		name = md2026_tech.6.o3
+		log = "[GetDateText]: [This.GetName]: md2026_tech.6 - Balanced AI approach"
+
+		add_political_power = 25
+		add_stability = 0.05
+
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+###################################
+# .7 - UN: Autonomous Weapons Debate
+# Auto-fires after mid 2025
+# Lethal Autonomous Weapon Systems (LAWS) negotiations
+###################################
+country_event = {
+	id = md2026_tech.7
+	title = md2026_tech.7.t
+	desc = md2026_tech.7.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2025.5.1
+		NOT = { has_global_flag = md2026_laws_debate }
+		OR = {
+			tag = USA
+			tag = CHI
+			tag = SOV
+			tag = ENG
+			tag = FRA
+		}
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	immediate = {
+		set_global_flag = md2026_laws_debate
+	}
+
+	# Option A: Oppose ban — protect military AI development
+	option = {
+		name = md2026_tech.7.o1
+		log = "[GetDateText]: [This.GetName]: md2026_tech.7 - Oppose LAWS ban"
+
+		add_political_power = -25
+		add_war_support = 0.05
+		army_experience = 10
+
+		# International criticism
+		every_country = {
+			limit = {
+				OR = {
+					tag = GER
+					tag = AUS
+					tag = NZL
+				}
+			}
+			add_opinion_modifier = { target = ROOT modifier = md2026_diplomatic_disapproval }
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2
+				OR = {
+					tag = USA
+					tag = SOV
+					tag = CHI
+				}
+			}
+		}
+	}
+
+	# Option B: Support regulation — human-in-the-loop requirement
+	option = {
+		name = md2026_tech.7.o2
+		log = "[GetDateText]: [This.GetName]: md2026_tech.7 - Support LAWS regulation"
+
+		add_political_power = 25
+		add_stability = 0.03
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+	# Option C: Push for complete ban
+	option = {
+		name = md2026_tech.7.o3
+		log = "[GetDateText]: [This.GetName]: md2026_tech.7 - Push for LAWS ban"
+
+		add_political_power = 50
+		add_stability = 0.05
+
+		# Goodwill from ban supporters
+		every_country = {
+			limit = {
+				OR = {
+					tag = AUS
+					tag = NZL
+					tag = GER
+				}
+			}
+			add_opinion_modifier = { target = ROOT modifier = md2026_diplomatic_outreach }
+		}
+
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+###################################
+# .8 - AI Economic Disruption
+# Auto-fires after 2026 — labor market upheaval
+###################################
+country_event = {
+	id = md2026_tech.8
+	title = md2026_tech.8.t
+	desc = md2026_tech.8.d
+	picture = GFX_report_event_generic_research
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2026.6.1
+		NOT = { has_global_flag = md2026_ai_labor_crisis }
+		OR = {
+			tag = USA
+			tag = CHI
+			tag = GER
+			tag = JAP
+			tag = KOR
+			tag = ENG
+		}
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	immediate = {
+		set_global_flag = md2026_ai_labor_crisis
+	}
+
+	# Option A: Embrace automation — maximize productivity
+	option = {
+		name = md2026_tech.8.o1
+		log = "[GetDateText]: [This.GetName]: md2026_tech.8 - Embrace automation"
+
+		add_stability = -0.10
+		add_political_power = 50
+
+		random_owned_controlled_state = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option B: Retraining programs — manage the transition
+	option = {
+		name = md2026_tech.8.o2
+		log = "[GetDateText]: [This.GetName]: md2026_tech.8 - Retraining programs"
+
+		add_political_power = -75
+		add_stability = 0.05
+
+		ai_chance = {
+			base = 45
+		}
+	}
+
+	# Option C: Restrict automation — protect jobs
+	option = {
+		name = md2026_tech.8.o3
+		log = "[GetDateText]: [This.GetName]: md2026_tech.8 - Restrict automation"
+
+		add_political_power = -25
+		add_stability = 0.08
+
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+###################################
+# .9 - Global AI Governance Summit
+# Auto-fires after late 2025
+# Nations attempt to coordinate AI rules
+###################################
+country_event = {
+	id = md2026_tech.9
+	title = md2026_tech.9.t
+	desc = md2026_tech.9.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 2025.11.1
+		NOT = { has_global_flag = md2026_ai_governance_summit }
+		OR = {
+			tag = USA
+			tag = CHI
+			tag = ENG
+			tag = FRA
+			tag = GER
+		}
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	immediate = {
+		set_global_flag = md2026_ai_governance_summit
+	}
+
+	# Option A: Lead the summit — shape global AI norms
+	option = {
+		name = md2026_tech.9.o1
+		log = "[GetDateText]: [This.GetName]: md2026_tech.9 - Lead AI governance"
+
+		add_political_power = 75
+		add_stability = 0.05
+
+		add_ideas = md2026_ai_governance_leader
+
+		every_country = {
+			limit = {
+				OR = {
+					tag = ENG
+					tag = FRA
+					tag = GER
+					tag = JAP
+					tag = KOR
+				}
+			}
+			add_opinion_modifier = { target = ROOT modifier = md2026_diplomatic_outreach }
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Option B: Attend but protect national interests
+	option = {
+		name = md2026_tech.9.o2
+		log = "[GetDateText]: [This.GetName]: md2026_tech.9 - Protect national AI interests"
+
+		add_political_power = 25
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+	# Option C: Boycott — AI sovereignty is non-negotiable
+	option = {
+		name = md2026_tech.9.o3
+		log = "[GetDateText]: [This.GetName]: md2026_tech.9 - Boycott summit"
+
+		add_political_power = -25
+		add_stability = -0.03
+
+		every_country = {
+			limit = {
+				OR = {
+					tag = ENG
+					tag = FRA
+					tag = GER
+				}
+			}
+			add_opinion_modifier = { target = ROOT modifier = md2026_diplomatic_disapproval }
+		}
+
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+###################################
+# News Events
+###################################
+
+###################################
+# md2026_tech_news.3 - DeepSeek Shakes the AI World
+###################################
+news_event = {
+	id = md2026_tech_news.3
+	title = md2026_tech_news.3.t
+	desc = md2026_tech_news.3.d
+	picture = GFX_news_event_generic_research
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_tech_news.3.o1
+	}
+}

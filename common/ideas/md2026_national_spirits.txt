@@ -1440,5 +1440,64 @@ ideas = {
 			}
 		}
 
+		###################################
+		# Batch 8 — AI/Tech Arms Race
+		###################################
+
+		md2026_chi_ai_leadership = {
+			picture = generic_research
+			allowed = { original_tag = CHI }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.10
+				industrial_capacity_factory = 0.05
+				political_power_factor = 0.05
+				stability_factor = 0.03
+			}
+		}
+
+		md2026_usa_ai_race = {
+			picture = generic_research
+			allowed = { original_tag = USA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.10
+				industrial_capacity_factory = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+		md2026_eu_ai_regulation = {
+			picture = generic_diplomacy
+			allowed = {
+				OR = {
+					original_tag = GER
+					original_tag = FRA
+					original_tag = ITA
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.05
+				research_speed_factor = -0.03
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		md2026_ai_governance_leader = {
+			picture = generic_diplomacy
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.05
+				research_speed_factor = 0.03
+			}
+		}
+
 	}
 }

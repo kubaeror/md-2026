@@ -1,0 +1,62 @@
+﻿l_english:
+
+ ### AI/Tech Arms Race Event Chain ###
+
+ # Event .4 - DeepSeek R1: China's AI Breakthrough
+ md2026_tech.4.t:0 "DeepSeek R1: China's AI Moment"
+ md2026_tech.4.d:0 "Chinese AI startup DeepSeek has released its R1 model — an open-weight artificial intelligence system that matches or exceeds the performance of leading Western models from OpenAI and Google, but at a fraction of the training cost and computational requirements. The breakthrough has sent shockwaves through Silicon Valley and global stock markets. If China can build frontier AI at a tenth of the cost, the entire Western advantage in the AI race is in question. The Party must decide how to leverage this achievement."
+ md2026_tech.4.o1:0 "Prioritize military and surveillance AI applications."
+ md2026_tech.4.o2:0 "Build an open-source AI ecosystem for economic growth."
+
+ # Event .5 - EU AI Act Enforcement Begins
+ md2026_tech.5.t:0 "EU AI Act: First Prohibitions Take Effect"
+ md2026_tech.5.d:0 "The European Union's Artificial Intelligence Act — the world's first comprehensive AI regulation — has entered its enforcement phase. As of February 2nd, AI systems deemed to pose 'unacceptable risks' are banned across the EU: social scoring systems, manipulative AI, untargeted facial recognition scraping, and emotion recognition in workplaces and schools. While proponents hail the regulations as necessary safeguards, critics warn that excessive regulation will drive AI innovation to the United States and China."
+ md2026_tech.5.o1:0 "Strict enforcement — Europe will lead on responsible AI."
+ md2026_tech.5.o2:0 "Flexible implementation — balance innovation with safety."
+
+ # Event .6 - USA: AI Arms Race Response
+ md2026_tech.6.t:0 "The DeepSeek Shock"
+ md2026_tech.6.d:0 "China's DeepSeek R1 has exposed a critical vulnerability in American AI supremacy. Chinese researchers have achieved comparable AI performance at dramatically lower cost, undermining the assumption that massive compute spending guarantees Western dominance. The administration has responded by revoking previous AI safety regulations through Executive Order 14179, arguing that bureaucratic constraints were hampering American competitiveness. The question now is whether to fully deregulate to win the race, or pursue strategic investment."
+ md2026_tech.6.o1:0 "Deregulate completely — win the AI race at any cost."
+ md2026_tech.6.o2:0 "Strategic government AI investment — targeted programs."
+ md2026_tech.6.o3:0 "Balanced approach — compete responsibly."
+
+ # Event .7 - UN Autonomous Weapons Debate
+ md2026_tech.7.t:0 "Lethal Autonomous Weapons: The UN Debate"
+ md2026_tech.7.d:0 "The United Nations has convened an emergency session on Lethal Autonomous Weapon Systems. Over 120 nations support a new international treaty to ban machines that can select and engage targets without human oversight. The UN Secretary-General has called for a legally binding prohibition with a 2026 deadline. However, the major military powers — the United States, Russia, and China — have invested billions in autonomous weapons research and resist any binding restrictions. The debate strikes at the heart of a question: should machines decide who lives and who dies?"
+ md2026_tech.7.o1:0 "Oppose the ban — autonomous weapons are the future of warfare."
+ md2026_tech.7.o2:0 "Support regulation — require human-in-the-loop."
+ md2026_tech.7.o3:0 "Push for a complete ban on autonomous weapons."
+
+ # Event .8 - AI Economic Disruption
+ md2026_tech.8.t:0 "The Great Displacement"
+ md2026_tech.8.d:0 "The AI revolution is reshaping the labor market at unprecedented speed. Advanced AI systems are now capable of performing tasks previously thought to be exclusively human — legal analysis, medical diagnosis, financial modeling, software development, content creation. Unemployment in white-collar sectors is rising sharply for the first time, while AI-augmented industries report record productivity. Our economists warn that without intervention, social instability could follow."
+ md2026_tech.8.o1:0 "Embrace automation — maximize national productivity."
+ md2026_tech.8.o2:0 "Launch massive retraining programs."
+ md2026_tech.8.o3:0 "Restrict AI automation to protect jobs."
+
+ # Event .9 - Global AI Governance Summit
+ md2026_tech.9.t:0 "Global AI Governance Summit"
+ md2026_tech.9.d:0 "World leaders have gathered for a landmark summit on artificial intelligence governance. The agenda includes establishing international norms for AI development, addressing the proliferation of autonomous weapons, creating frameworks for AI safety testing, and coordinating responses to AI-driven economic disruption. The summit represents humanity's best chance at shaping the trajectory of artificial intelligence before it outpaces our ability to control it — but national interests threaten to derail any consensus."
+ md2026_tech.9.o1:0 "Lead the summit — shape the future of AI governance."
+ md2026_tech.9.o2:0 "Attend but protect our national AI interests."
+ md2026_tech.9.o3:0 "Boycott — AI sovereignty is non-negotiable."
+
+ # News Event .3 - DeepSeek
+ md2026_tech_news.3.t:0 "BREAKING: Chinese AI Matches Western Models at Fraction of Cost"
+ md2026_tech_news.3.d:0 "Chinese AI company DeepSeek has released an open-weight AI model that rivals the most advanced systems from American tech giants — at a reported training cost of just $5.6 million, compared to hundreds of millions spent by Western competitors. The release of DeepSeek R1 has triggered a sell-off in AI-related stocks worldwide and raised fundamental questions about the future of the global technology race. Analysts describe the development as a 'Sputnik moment' for artificial intelligence."
+ md2026_tech_news.3.o1:0 "The implications are staggering."
+
+ ### National Spirit Localisation ###
+
+ md2026_chi_ai_leadership:0 "AI Superpower"
+ md2026_chi_ai_leadership_desc:0 "China's breakthrough in cost-efficient AI has positioned the nation as a global leader in artificial intelligence. DeepSeek's success demonstrates that massive compute spending is not the only path to AI supremacy, empowering Chinese research institutions and technology companies."
+
+ md2026_usa_ai_race:0 "AI Arms Race"
+ md2026_usa_ai_race_desc:0 "The DeepSeek shock has galvanized American efforts to maintain AI dominance. Government investment and deregulation are accelerating AI development across military, intelligence, and commercial sectors, but the race carries risks of its own."
+
+ md2026_eu_ai_regulation:0 "EU AI Act Enforcement"
+ md2026_eu_ai_regulation_desc:0 "The European Union has begun enforcing the world's first comprehensive AI regulation. While the Act provides stability and consumer protection, some fear it may slow European innovation compared to the less-regulated American and Chinese AI ecosystems."
+
+ md2026_ai_governance_leader:0 "AI Governance Leader"
+ md2026_ai_governance_leader_desc:0 "By taking a leading role in global AI governance, this nation has gained diplomatic prestige and helped shape international norms for artificial intelligence development. The position brings influence but also responsibility."
