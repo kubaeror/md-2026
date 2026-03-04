@@ -1322,5 +1322,64 @@ ideas = {
 			}
 		}
 
+		###################################
+		# Batch 6 — Iran-Israel Escalation
+		###################################
+
+		md2026_isr_wartime_escalation = {
+			picture = generic_war_preparation
+			allowed = { original_tag = ISR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.15
+				army_attack_factor = 0.10
+				air_attack_factor = 0.10
+				stability_factor = -0.10
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.15
+			}
+		}
+
+		md2026_per_nuclear_setback = {
+			picture = generic_nuclear
+			allowed = { original_tag = PER }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = -0.10
+				research_speed_factor = -0.10
+				war_support_factor = 0.10
+			}
+		}
+
+		md2026_per_hormuz_blockade = {
+			picture = generic_navy
+			allowed = { original_tag = PER }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = -0.80
+				stability_factor = -0.15
+				war_support_factor = 0.15
+				political_power_factor = -0.20
+				consumer_goods_factor = 0.10
+			}
+		}
+
+		md2026_usa_persian_gulf_deployment = {
+			picture = generic_navy
+			allowed = { original_tag = USA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				navy_org_factor = 0.10
+				consumer_goods_factor = 0.03
+				political_power_factor = -0.05
+			}
+		}
+
 	}
 }

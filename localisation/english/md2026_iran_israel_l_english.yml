@@ -1,0 +1,56 @@
+﻿l_english:
+
+ ### Iran-Israel Escalation Event Chain ###
+
+ # Event .23 - Israel: Strikes on Iranian Nuclear Facilities
+ md2026_mideast.23.t:0 "Operation: Iranian Nuclear Facilities"
+ md2026_mideast.23.d:0 "Intelligence assessments indicate that Iran's nuclear program has reached a critical threshold. Satellite imagery reveals accelerated enrichment activity at Natanz, Fordow, and Isfahan, with IAEA inspectors denied access. The Israeli security cabinet has convened an emergency session. The IAF has prepared strike packages for Iranian nuclear sites — the question is how far to go."
+ md2026_mideast.23.o1:0 "Full-scale strike — destroy all known nuclear infrastructure."
+ md2026_mideast.23.o2:0 "Limited precision strike — Natanz enrichment facility only."
+
+ # Event .24 - Iran: Retaliation After Israeli Strike
+ md2026_mideast.24.t:0 "Israeli Strike on Our Nuclear Facilities"
+ md2026_mideast.24.d:0 "Israeli warplanes have struck our nuclear facilities, causing significant damage to Iran's enrichment capabilities. The attack has humiliated the Revolutionary Guard and enraged the population. The Supreme Leader demands a response. Three paths lie before us: direct ballistic missile retaliation against Israel, escalation through our proxy network across the region, or strategic patience to rebuild while extracting maximum international sympathy."
+ md2026_mideast.24.o1:0 "Launch ballistic missile retaliation against Israel."
+ md2026_mideast.24.o2:0 "Activate proxies — Hezbollah, Houthis, Iraqi militias."
+ md2026_mideast.24.o3:0 "Strategic patience — rebuild and let the world condemn Israel."
+
+ # Event .25 - USA: Response to Israeli Strike on Iran
+ md2026_mideast.25.t:0 "Israel Has Struck Iran"
+ md2026_mideast.25.d:0 "Israel has conducted a major military strike against Iranian nuclear facilities. The attack has sent shockwaves through the region and world markets. Oil prices are spiking as the Strait of Hormuz faces potential disruption. The National Security Council is in session — the President must decide America's posture. Our response will shape the trajectory of this crisis and our alliance commitments in the Middle East."
+ md2026_mideast.25.o1:0 "Full support — Israel has the right to defend itself."
+ md2026_mideast.25.o2:0 "Call for restraint on all sides."
+ md2026_mideast.25.o3:0 "Condemn the strike — this was reckless escalation."
+
+ # Event .26 - Iran: Strait of Hormuz Blockade Threat
+ md2026_mideast.26.t:0 "The Strait of Hormuz"
+ md2026_mideast.26.d:0 "In the aftermath of our missile retaliation and continued Israeli aggression, the Revolutionary Guard Naval Forces have proposed a blockade of the Strait of Hormuz — the chokepoint through which 20% of the world's oil passes. A blockade would cripple the global economy and give Iran massive leverage, but it would also invite direct American military intervention and unite the world against us."
+ md2026_mideast.26.o1:0 "Blockade the Strait — bring the world to the negotiating table."
+ md2026_mideast.26.o2:0 "Limited mining and harassment — create disruption without full blockade."
+ md2026_mideast.26.o3:0 "Back down — we cannot fight the entire world."
+
+ # Event .27 - USA: Persian Gulf Military Response
+ md2026_mideast.27.t:0 "Hormuz Blockade: Military Response"
+ md2026_mideast.27.d:0 "Iran has made good on its threat to blockade the Strait of Hormuz. Naval mines have been deployed and IRGC fast-attack boats are harassing commercial shipping. Oil prices have doubled overnight. The Fifth Fleet is on station and carrier strike groups are converging on the Persian Gulf. The Joint Chiefs have presented options ranging from a full naval operation to break the blockade to diplomatic pressure through the UN Security Council."
+ md2026_mideast.27.o1:0 "Break the blockade — Operation Persian Freedom."
+ md2026_mideast.27.o2:0 "Issue a 48-hour ultimatum — remove the mines or face consequences."
+ md2026_mideast.27.o3:0 "Pursue a multilateral response through the UN."
+
+ # Event .28 - NEWS: Israeli Strike on Iran
+ md2026_mideast.28.t:0 "BREAKING: Israel Strikes Iranian Nuclear Facilities"
+ md2026_mideast.28.d:0 "In a dramatic escalation of the long-simmering conflict between Israel and Iran, the Israeli Air Force has conducted strikes against Iranian nuclear facilities. The attack marks the most significant military action between the two nations in history. Iran has vowed retaliation, world leaders are calling for restraint, and oil markets are in turmoil. The Middle East stands on the brink of a wider conflict."
+ md2026_mideast.28.o1:0 "The situation is dire."
+
+ ### National Spirit Localisation ###
+
+ md2026_isr_wartime_escalation:0 "Wartime Escalation"
+ md2026_isr_wartime_escalation_desc:0 "Israel's strike on Iranian nuclear facilities has thrust the nation into a state of heightened military readiness. The home front is mobilized, the air force is on constant alert, and the economy is strained by the demands of a potential multi-front war."
+
+ md2026_per_nuclear_setback:0 "Nuclear Program Setback"
+ md2026_per_nuclear_setback_desc:0 "Israeli strikes have inflicted severe damage on Iran's nuclear infrastructure. Years of enrichment progress have been destroyed. The scientific community is demoralized, international isolation deepens, and the regime faces difficult questions about its strategic deterrence posture."
+
+ md2026_per_hormuz_blockade:0 "Strait of Hormuz Blockade"
+ md2026_per_hormuz_blockade_desc:0 "Iran has blockaded the Strait of Hormuz, cutting off 20% of global oil supply. While this gives Iran enormous leverage, it has also united the international community against Tehran, devastated Iran's own trade, and brought American military forces to Iran's doorstep."
+
+ md2026_usa_persian_gulf_deployment:0 "Persian Gulf Deployment"
+ md2026_usa_persian_gulf_deployment_desc:0 "The United States has deployed additional naval assets to the Persian Gulf in response to the Iran-Israel crisis. Carrier strike groups patrol the Strait of Hormuz, projecting American power but also straining military resources and domestic patience."

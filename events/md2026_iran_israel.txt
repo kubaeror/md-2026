@@ -1,0 +1,441 @@
+###################################
+# MD2026 Iran-Israel Escalation
+# Extends md2026_mideast namespace (.23-.28)
+# Israeli strikes on Iranian nuclear facilities,
+# Iranian retaliation, US involvement, regional fallout
+###################################
+
+add_namespace = md2026_mideast
+
+###################################
+# .23 - Israel: Strikes on Iranian Nuclear Facilities
+# Triggered by ISR focus MD2026_ISR_preemptive_strike
+# OR can fire independently if Iran chooses breakout (.20.a)
+###################################
+country_event = {
+	id = md2026_mideast.23
+	title = md2026_mideast.23.t
+	desc = md2026_mideast.23.d
+	picture = GFX_report_event_generic_air_raid
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = md2026_isr_struck_iran
+	}
+
+	# Option A: Full-scale strike — destroy nuclear infrastructure
+	option = {
+		name = md2026_mideast.23.o1
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.23 - Full-scale strike on Iran"
+
+		add_political_power = -100
+		add_stability = -0.10
+		add_war_support = 0.15
+		air_experience = 25
+
+		add_ideas = md2026_isr_wartime_escalation
+
+		# Iran receives the strike
+		PER = {
+			country_event = { id = md2026_mideast.24 days = 3 }
+		}
+
+		# USA must respond
+		USA = {
+			country_event = { id = md2026_mideast.25 days = 5 }
+		}
+
+		# Global news
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { id = md2026_mideast.28 days = 1 }
+		}
+
+		# Regional opinion shock
+		every_country = {
+			limit = {
+				OR = {
+					tag = SOV
+					tag = CHI
+					tag = TUR
+				}
+			}
+			add_opinion_modifier = { target = ISR modifier = md2026_military_pressure_anger }
+		}
+
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Option B: Limited precision strike — Natanz only
+	option = {
+		name = md2026_mideast.23.o2
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.23 - Limited strike"
+
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = 0.10
+		air_experience = 15
+
+		# Iran receives the strike (limited)
+		PER = {
+			country_event = { id = md2026_mideast.24 days = 3 }
+		}
+
+		# USA must respond
+		USA = {
+			country_event = { id = md2026_mideast.25 days = 5 }
+		}
+
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { id = md2026_mideast.28 days = 1 }
+		}
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# .24 - Iran: Retaliation After Israeli Strike
+# Triggered by .23 — Iran's response options
+###################################
+country_event = {
+	id = md2026_mideast.24
+	title = md2026_mideast.24.t
+	desc = md2026_mideast.24.d
+	picture = GFX_report_event_generic_air_raid
+
+	is_triggered_only = yes
+
+	# Option A: Massive ballistic missile retaliation
+	option = {
+		name = md2026_mideast.24.o1
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.24 - Missile retaliation"
+
+		add_political_power = -75
+		add_stability = -0.10
+		add_war_support = 0.20
+
+		add_ideas = md2026_per_nuclear_setback
+
+		# Proxy activation
+		set_country_flag = md2026_per_proxy_retaliation
+
+		# Counter-strike opinion
+		ISR = {
+			add_opinion_modifier = { target = PER modifier = md2026_military_pressure_anger }
+		}
+
+		# Strait of Hormuz threat
+		country_event = { id = md2026_mideast.26 days = 14 }
+
+		ai_chance = {
+			base = 45
+		}
+	}
+
+	# Option B: Proxy war escalation — Hezbollah, Houthis, Iraqi militias
+	option = {
+		name = md2026_mideast.24.o2
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.24 - Proxy escalation"
+
+		add_political_power = -50
+		add_war_support = 0.15
+		add_stability = -0.05
+
+		add_ideas = md2026_per_nuclear_setback
+
+		set_country_flag = md2026_per_proxy_retaliation
+
+		# Attack through proxies — less direct escalation
+		ISR = {
+			add_opinion_modifier = { target = PER modifier = md2026_proxy_war_anger }
+		}
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option C: Strategic patience — rebuild and deter
+	option = {
+		name = md2026_mideast.24.o3
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.24 - Strategic patience"
+
+		add_political_power = 50
+		add_stability = 0.05
+		add_war_support = -0.10
+
+		add_ideas = md2026_per_nuclear_setback
+
+		# International sympathy
+		every_country = {
+			limit = {
+				OR = {
+					tag = SOV
+					tag = CHI
+				}
+			}
+			add_opinion_modifier = { target = PER modifier = md2026_diplomatic_outreach }
+		}
+
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+###################################
+# .25 - USA: Response to Israeli Strike on Iran
+# Triggered by .23 — US role in the escalation
+###################################
+country_event = {
+	id = md2026_mideast.25
+	title = md2026_mideast.25.t
+	desc = md2026_mideast.25.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+
+	# Option A: Full support — "Israel has the right to defend itself"
+	option = {
+		name = md2026_mideast.25.o1
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.25 - Full support for Israel"
+
+		add_political_power = -50
+		add_war_support = 0.10
+
+		add_opinion_modifier = { target = ISR modifier = md2026_improved_relations }
+		ISR = { add_opinion_modifier = { target = USA modifier = md2026_improved_relations } }
+
+		# Iran is furious
+		PER = {
+			add_opinion_modifier = { target = USA modifier = md2026_military_pressure_anger }
+		}
+
+		# Deploy naval assets to Persian Gulf
+		add_ideas = md2026_usa_persian_gulf_deployment
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2
+				has_government = nationalist
+			}
+		}
+	}
+
+	# Option B: Call for restraint — diplomatic solution
+	option = {
+		name = md2026_mideast.25.o2
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.25 - Call for restraint"
+
+		add_political_power = 25
+		add_stability = 0.03
+
+		# Mild Israeli disappointment
+		ISR = {
+			add_opinion_modifier = { target = USA modifier = md2026_diplomatic_disapproval }
+		}
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option C: Condemn the strike — break with Israel
+	option = {
+		name = md2026_mideast.25.o3
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.25 - Condemn Israeli strike"
+
+		add_political_power = -25
+		add_stability = -0.05
+
+		ISR = {
+			add_opinion_modifier = { target = USA modifier = md2026_diplomatic_disapproval }
+		}
+		add_opinion_modifier = { target = ISR modifier = md2026_diplomatic_disapproval }
+
+		# Gain goodwill with Iran
+		PER = {
+			add_opinion_modifier = { target = USA modifier = md2026_diplomatic_outreach }
+		}
+
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 5
+				NOT = { has_government = nationalist }
+			}
+		}
+	}
+}
+
+###################################
+# .26 - Iran: Strait of Hormuz Blockade Threat
+# Triggered by .24 option A — escalation spiral
+###################################
+country_event = {
+	id = md2026_mideast.26
+	title = md2026_mideast.26.t
+	desc = md2026_mideast.26.d
+	picture = GFX_report_event_generic_navy
+
+	is_triggered_only = yes
+
+	# Option A: Blockade the Strait — maximum escalation
+	option = {
+		name = md2026_mideast.26.o1
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.26 - Blockade Strait of Hormuz"
+
+		add_political_power = -100
+		add_stability = -0.15
+		add_war_support = 0.20
+
+		add_ideas = md2026_per_hormuz_blockade
+
+		# Global oil crisis
+		every_country = {
+			limit = {
+				OR = {
+					tag = USA
+					tag = ENG
+					tag = FRA
+					tag = GER
+					tag = JAP
+					tag = KOR
+					tag = CHI
+					tag = RAJ
+				}
+			}
+			add_opinion_modifier = { target = PER modifier = md2026_trade_war_opinion }
+		}
+
+		# USA escalation
+		USA = {
+			country_event = { id = md2026_mideast.27 days = 7 }
+		}
+
+		ai_chance = {
+			base = 25
+		}
+	}
+
+	# Option B: Mining and harassment — limited disruption
+	option = {
+		name = md2026_mideast.26.o2
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.26 - Limited mining"
+
+		add_political_power = -50
+		add_war_support = 0.10
+		add_stability = -0.05
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option C: Back down — avoid further escalation
+	option = {
+		name = md2026_mideast.26.o3
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.26 - Stand down"
+
+		add_political_power = 25
+		add_stability = 0.05
+		add_war_support = -0.15
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+###################################
+# .27 - USA: Persian Gulf Military Response
+# Triggered by .26 option A — Hormuz blockade
+###################################
+country_event = {
+	id = md2026_mideast.27
+	title = md2026_mideast.27.t
+	desc = md2026_mideast.27.d
+	picture = GFX_report_event_generic_navy
+
+	is_triggered_only = yes
+
+	# Option A: Break the blockade — naval operation
+	option = {
+		name = md2026_mideast.27.o1
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.27 - Break the blockade"
+
+		add_political_power = -75
+		add_war_support = 0.15
+		add_stability = -0.05
+		navy_experience = 25
+
+		# Create wargoal against Iran
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = PER
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2
+				has_government = nationalist
+			}
+		}
+	}
+
+	# Option B: Diplomatic ultimatum — give Iran 48 hours
+	option = {
+		name = md2026_mideast.27.o2
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.27 - Diplomatic ultimatum"
+
+		add_political_power = -25
+		add_war_support = 0.05
+
+		PER = {
+			add_opinion_modifier = { target = USA modifier = md2026_military_pressure_anger }
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+	# Option C: Multilateral response — work through UN
+	option = {
+		name = md2026_mideast.27.o3
+		log = "[GetDateText]: [This.GetName]: md2026_mideast.27 - Multilateral response"
+
+		add_political_power = 25
+		add_stability = 0.03
+
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+###################################
+# .28 - NEWS: Israeli Strike on Iran
+# Global news broadcast
+###################################
+news_event = {
+	id = md2026_mideast.28
+	title = md2026_mideast.28.t
+	desc = md2026_mideast.28.d
+	picture = GFX_news_event_generic_air_raid
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_mideast.28.o1
+	}
+}

@@ -168,7 +168,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ISR_preemptive_strike"
 		air_experience = 25
 		add_war_support = 0.10
-		PER = { country_event = { id = md2026_mideast.30 days = 7 } }
+		country_event = { id = md2026_mideast.23 days = 7 }
 	}
 	ai_will_do = {
 		factor = 1
