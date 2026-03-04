@@ -94,7 +94,7 @@ characters = {
 		}
 		advisor = {
 			slot = army_chief
-			idea_token = bruno_cuche
+			idea_token = jean_bosser
 			allowed = {
 				original_tag = FRA
 			}
