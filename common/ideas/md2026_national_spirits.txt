@@ -1499,5 +1499,181 @@ ideas = {
 			}
 		}
 
+		### SPAIN - EU-1 ###
+
+		md2026_spr_progressive_coalition = {
+			picture = generic_democratic_drift
+			allowed = { original_tag = SPR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		md2026_spr_coalition_crisis = {
+			picture = disjointed_government
+			allowed = { original_tag = SPR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.10
+			}
+		}
+
+		md2026_spr_renewable_leader = {
+			picture = generic_production_bonus
+			allowed = { original_tag = SPR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.02
+				research_speed_factor = 0.02
+			}
+		}
+
+		### UK - EU-1 ###
+
+		md2026_eng_eu_reset = {
+			picture = generic_diplomacy
+			allowed = { original_tag = ENG }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.15
+				political_power_factor = 0.05
+			}
+		}
+
+		md2026_eng_defense_review = {
+			picture = generic_army_bonus
+			allowed = { original_tag = ENG }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+				army_attack_factor = 0.03
+			}
+		}
+
+		md2026_eng_nhs_reform = {
+			picture = generic_production_bonus
+			allowed = { original_tag = ENG }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.03
+				political_power_factor = -0.05
+			}
+		}
+
+		### FRANCE - EU-1 ###
+
+		md2026_fra_nuclear_expansion = {
+			picture = generic_army_bonus
+			allowed = { original_tag = FRA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				political_power_factor = 0.05
+				army_attack_factor = 0.03
+			}
+		}
+
+		md2026_fra_pm_carousel = {
+			picture = disjointed_government
+			allowed = { original_tag = FRA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.15
+			}
+		}
+
+		md2026_fra_defense_surge = {
+			picture = generic_army_bonus
+			allowed = { original_tag = FRA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		### GERMANY - EU-1 ###
+
+		md2026_ger_infrastructure_fund = {
+			picture = generic_production_bonus
+			allowed = { original_tag = GER }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		### ITALY - EU-1 ###
+
+		md2026_ita_austerity_pressure = {
+			picture = generic_economy
+			allowed = { original_tag = ITA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = -0.05
+				political_power_factor = -0.05
+			}
+		}
+
+		### POLAND - EU-1 ###
+
+		md2026_pol_cpk_megaproject = {
+			picture = generic_production_bonus
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = 0.10
+				consumer_goods_factor = 0.03
+				political_power_factor = -0.03
+			}
+		}
+
+		md2026_pol_nuclear_program = {
+			picture = generic_production_bonus
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.03
+				research_speed_factor = 0.02
+			}
+		}
+
+		md2026_pol_tech_hub = {
+			picture = generic_research_bonus
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.03
+				political_power_factor = 0.05
+			}
+		}
+
 	}
 }

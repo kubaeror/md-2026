@@ -1,0 +1,811 @@
+###########################
+# MD2026 European Events
+# Namespace: md2026_europe
+# IDs: 1-30+
+###########################
+
+add_namespace = md2026_europe
+
+### Event 1: Spain - Sánchez Coalition Crisis ###
+country_event = {
+	id = md2026_europe.1
+	title = md2026_europe.1.t
+	desc = md2026_europe.1.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_europe.1.o1
+		ai_chance = { factor = 60 }
+		add_stability = -0.05
+		add_political_power = -50
+		add_ideas = md2026_spr_coalition_crisis
+	}
+	option = {
+		name = md2026_europe.1.o2
+		ai_chance = { factor = 40 }
+		add_stability = -0.10
+		add_political_power = 75
+	}
+}
+
+### Event 2: Spain - Catalan Autonomy Debate ###
+country_event = {
+	id = md2026_europe.2
+	title = md2026_europe.2.t
+	desc = md2026_europe.2.d
+	picture = GFX_report_event_generic_rally2
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_europe.2.o1
+		ai_chance = { factor = 50 }
+		add_stability = -0.05
+		if = {
+			limit = { has_idea = md2026_spr_territorial_tensions }
+			remove_ideas = md2026_spr_territorial_tensions
+		}
+		add_political_power = -25
+	}
+	option = {
+		name = md2026_europe.2.o2
+		ai_chance = { factor = 50 }
+		add_stability = 0.05
+		add_political_power = -50
+	}
+}
+
+### Event 3: Spain - Sagrada Familia Completion ###
+country_event = {
+	id = md2026_europe.3
+	title = md2026_europe.3.t
+	desc = md2026_europe.3.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = SPR
+		date > 2026.6.1
+		NOT = { has_country_flag = md2026_sagrada_familia_completed }
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = md2026_europe.3.o1
+		add_stability = 0.10
+		add_political_power = 50
+		set_country_flag = md2026_sagrada_familia_completed
+	}
+}
+
+### Event 4: UK - EU-UK Reset Summit ###
+country_event = {
+	id = md2026_europe.4
+	title = md2026_europe.4.t
+	desc = md2026_europe.4.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = ENG
+		date > 2026.1.15
+		has_government = democratic
+		NOT = { has_country_flag = md2026_eu_uk_reset }
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = md2026_europe.4.o1
+		ai_chance = { factor = 70 }
+		add_political_power = 50
+		add_stability = 0.05
+		add_ideas = md2026_eng_eu_reset
+		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = GER modifier = md2026_improved_relations }
+		FRA = { add_opinion_modifier = { target = ENG modifier = md2026_improved_relations } }
+		GER = { add_opinion_modifier = { target = ENG modifier = md2026_improved_relations } }
+		set_country_flag = md2026_eu_uk_reset
+	}
+	option = {
+		name = md2026_europe.4.o2
+		ai_chance = { factor = 30 }
+		add_political_power = -25
+		set_country_flag = md2026_eu_uk_reset
+	}
+}
+
+### Event 5: UK - Strategic Defence Review ###
+country_event = {
+	id = md2026_europe.5
+	title = md2026_europe.5.t
+	desc = md2026_europe.5.d
+	picture = GFX_report_event_generic_military_deal
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = ENG
+		date > 2026.3.1
+		NOT = { has_country_flag = md2026_eng_sdr_done }
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = md2026_europe.5.o1
+		ai_chance = { factor = 60 }
+		add_ideas = md2026_eng_defense_review
+		add_war_support = 0.10
+		army_experience = 15
+		set_country_flag = md2026_eng_sdr_done
+	}
+	option = {
+		name = md2026_europe.5.o2
+		ai_chance = { factor = 40 }
+		add_war_support = 0.05
+		add_political_power = 50
+		set_country_flag = md2026_eng_sdr_done
+	}
+}
+
+### Event 6: UK - NHS Ten-Year Overhaul ###
+country_event = {
+	id = md2026_europe.6
+	title = md2026_europe.6.t
+	desc = md2026_europe.6.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = ENG
+		date > 2026.2.1
+		has_government = democratic
+		NOT = { has_country_flag = md2026_nhs_reform_done }
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = md2026_europe.6.o1
+		ai_chance = { factor = 70 }
+		add_stability = 0.05
+		add_political_power = -50
+		add_ideas = md2026_eng_nhs_reform
+		set_country_flag = md2026_nhs_reform_done
+	}
+	option = {
+		name = md2026_europe.6.o2
+		ai_chance = { factor = 30 }
+		add_stability = -0.05
+		add_political_power = 25
+		set_country_flag = md2026_nhs_reform_done
+	}
+}
+
+### Event 7: UK - Immigration White Paper ###
+country_event = {
+	id = md2026_europe.7
+	title = md2026_europe.7.t
+	desc = md2026_europe.7.d
+	picture = GFX_report_event_generic_parliament
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = ENG
+		date > 2026.5.1
+		NOT = { has_country_flag = md2026_eng_immigration_wp }
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = md2026_europe.7.o1
+		ai_chance = { factor = 50 }
+		add_stability = 0.05
+		add_war_support = -0.05
+		add_political_power = 25
+		set_country_flag = md2026_eng_immigration_wp
+	}
+	option = {
+		name = md2026_europe.7.o2
+		ai_chance = { factor = 50 }
+		add_stability = -0.05
+		add_political_power = 50
+		set_country_flag = md2026_eng_immigration_wp
+	}
+}
+
+### Event 8: UK - Reform UK Electoral Surge ###
+country_event = {
+	id = md2026_europe.8
+	title = md2026_europe.8.t
+	desc = md2026_europe.8.d
+	picture = GFX_report_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = ENG
+		date > 2026.5.1
+		has_government = democratic
+		NOT = { has_country_flag = md2026_reform_uk_surge }
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = md2026_europe.8.o1
+		ai_chance = { factor = 60 }
+		add_stability = -0.05
+		add_popularity = { ideology = nationalist popularity = 0.05 }
+		set_country_flag = md2026_reform_uk_surge
+	}
+	option = {
+		name = md2026_europe.8.o2
+		ai_chance = { factor = 40 }
+		add_stability = -0.10
+		add_political_power = -50
+		set_country_flag = md2026_reform_uk_surge
+	}
+}
+
+### Event 9: France - Macron Nuclear Doctrine Expansion ###
+country_event = {
+	id = md2026_europe.9
+	title = md2026_europe.9.t
+	desc = md2026_europe.9.d
+	picture = GFX_report_event_generic_military_deal
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = FRA
+		date > 2026.3.1
+		NOT = { has_country_flag = md2026_fra_nuclear_doctrine }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = md2026_europe.9.o1
+		ai_chance = { factor = 70 }
+		add_ideas = md2026_fra_nuclear_expansion
+		add_war_support = 0.10
+		add_opinion_modifier = { target = ENG modifier = md2026_improved_relations }
+		ENG = { add_opinion_modifier = { target = FRA modifier = md2026_improved_relations } }
+		set_country_flag = md2026_fra_nuclear_doctrine
+	}
+	option = {
+		name = md2026_europe.9.o2
+		ai_chance = { factor = 30 }
+		add_political_power = 50
+		set_country_flag = md2026_fra_nuclear_doctrine
+	}
+}
+
+### Event 10: France - Political Instability (Third PM) ###
+country_event = {
+	id = md2026_europe.10
+	title = md2026_europe.10.t
+	desc = md2026_europe.10.d
+	picture = GFX_report_event_generic_parliament
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = FRA
+		date > 2026.1.1
+		NOT = { has_country_flag = md2026_fra_pm_crisis }
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = md2026_europe.10.o1
+		ai_chance = { factor = 60 }
+		add_stability = -0.10
+		add_political_power = -75
+		add_ideas = md2026_fra_pm_carousel
+		set_country_flag = md2026_fra_pm_crisis
+	}
+	option = {
+		name = md2026_europe.10.o2
+		ai_chance = { factor = 40 }
+		add_stability = -0.05
+		add_political_power = -25
+		set_country_flag = md2026_fra_pm_crisis
+	}
+}
+
+### Event 11: France - Defense Budget to 3.5% GDP ###
+country_event = {
+	id = md2026_europe.11
+	title = md2026_europe.11.t
+	desc = md2026_europe.11.d
+	picture = GFX_report_event_generic_military_deal
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = FRA
+		date > 2026.6.1
+		NOT = { has_country_flag = md2026_fra_defense_boost }
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = md2026_europe.11.o1
+		ai_chance = { factor = 70 }
+		add_ideas = md2026_fra_defense_surge
+		army_experience = 15
+		add_war_support = 0.05
+		set_country_flag = md2026_fra_defense_boost
+	}
+	option = {
+		name = md2026_europe.11.o2
+		ai_chance = { factor = 30 }
+		add_political_power = 50
+		add_stability = 0.05
+		set_country_flag = md2026_fra_defense_boost
+	}
+}
+
+### Event 12: France - G7 Summit Host 2026 ###
+country_event = {
+	id = md2026_europe.12
+	title = md2026_europe.12.t
+	desc = md2026_europe.12.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = FRA
+		date > 2026.6.1
+		NOT = { has_country_flag = md2026_fra_g7_host }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = md2026_europe.12.o1
+		add_political_power = 75
+		add_stability = 0.05
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = ENG modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = GER modifier = md2026_improved_relations }
+		set_country_flag = md2026_fra_g7_host
+	}
+}
+
+### Event 13: Germany - Merz-Macron Joint Declaration ###
+country_event = {
+	id = md2026_europe.13
+	title = md2026_europe.13.t
+	desc = md2026_europe.13.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = GER
+		date > 2026.3.1
+		NOT = { has_country_flag = md2026_ger_merz_macron }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = md2026_europe.13.o1
+		ai_chance = { factor = 80 }
+		add_political_power = 50
+		add_stability = 0.05
+		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
+		FRA = { add_opinion_modifier = { target = GER modifier = md2026_improved_relations } }
+		set_country_flag = md2026_ger_merz_macron
+	}
+	option = {
+		name = md2026_europe.13.o2
+		ai_chance = { factor = 20 }
+		add_political_power = -25
+		set_country_flag = md2026_ger_merz_macron
+	}
+}
+
+### Event 14: Germany - Sondervermögen Infrastructure Fund ###
+country_event = {
+	id = md2026_europe.14
+	title = md2026_europe.14.t
+	desc = md2026_europe.14.d
+	picture = GFX_report_event_generic_factory
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = GER
+		date > 2026.4.1
+		NOT = { has_country_flag = md2026_ger_sondervermoegen }
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = md2026_europe.14.o1
+		ai_chance = { factor = 70 }
+		add_ideas = md2026_ger_infrastructure_fund
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } }
+			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+		}
+		set_country_flag = md2026_ger_sondervermoegen
+	}
+	option = {
+		name = md2026_europe.14.o2
+		ai_chance = { factor = 30 }
+		add_political_power = 50
+		add_stability = -0.05
+		set_country_flag = md2026_ger_sondervermoegen
+	}
+}
+
+### Event 15: Germany - State Elections 2026 ###
+country_event = {
+	id = md2026_europe.15
+	title = md2026_europe.15.t
+	desc = md2026_europe.15.d
+	picture = GFX_report_event_generic_rally2
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = GER
+		date > 2026.9.1
+		NOT = { has_country_flag = md2026_ger_state_elections }
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = md2026_europe.15.o1
+		ai_chance = { factor = 50 }
+		add_stability = -0.05
+		add_popularity = { ideology = nationalist popularity = 0.03 }
+		set_country_flag = md2026_ger_state_elections
+	}
+	option = {
+		name = md2026_europe.15.o2
+		ai_chance = { factor = 50 }
+		add_stability = 0.05
+		add_political_power = 25
+		set_country_flag = md2026_ger_state_elections
+	}
+}
+
+### Event 16: Italy - Milano-Cortina Winter Olympics 2026 ###
+country_event = {
+	id = md2026_europe.16
+	title = md2026_europe.16.t
+	desc = md2026_europe.16.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = ITA
+		date > 2026.2.1
+		NOT = { has_country_flag = md2026_ita_olympics_done }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = md2026_europe.16.o1
+		add_stability = 0.10
+		add_political_power = 75
+		add_war_support = 0.05
+		set_country_flag = md2026_ita_olympics_done
+	}
+}
+
+### Event 17: Italy - Budget Crisis Warning ###
+country_event = {
+	id = md2026_europe.17
+	title = md2026_europe.17.t
+	desc = md2026_europe.17.d
+	picture = GFX_report_event_generic_parliament
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = ITA
+		date > 2026.4.1
+		NOT = { has_country_flag = md2026_ita_budget_crisis }
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = md2026_europe.17.o1
+		ai_chance = { factor = 60 }
+		add_stability = -0.05
+		add_political_power = -50
+		add_ideas = md2026_ita_austerity_pressure
+		set_country_flag = md2026_ita_budget_crisis
+	}
+	option = {
+		name = md2026_europe.17.o2
+		ai_chance = { factor = 40 }
+		add_stability = -0.10
+		add_political_power = 50
+		set_country_flag = md2026_ita_budget_crisis
+	}
+}
+
+### Event 18: Italy - Electoral Reform Push ###
+country_event = {
+	id = md2026_europe.18
+	title = md2026_europe.18.t
+	desc = md2026_europe.18.d
+	picture = GFX_report_event_generic_parliament
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = ITA
+		date > 2026.6.1
+		has_government = nationalist
+		NOT = { has_country_flag = md2026_ita_electoral_reform }
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = md2026_europe.18.o1
+		ai_chance = { factor = 60 }
+		add_stability = -0.05
+		add_political_power = 75
+		set_country_flag = md2026_ita_electoral_reform
+	}
+	option = {
+		name = md2026_europe.18.o2
+		ai_chance = { factor = 40 }
+		add_stability = 0.05
+		add_political_power = -25
+		set_country_flag = md2026_ita_electoral_reform
+	}
+}
+
+### Event 19: European Defense Spending Surge ###
+country_event = {
+	id = md2026_europe.19
+	title = md2026_europe.19.t
+	desc = md2026_europe.19.d
+	picture = GFX_report_event_generic_military_deal
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = GER
+		date > 2026.6.1
+		NOT = { has_global_flag = md2026_eu_defense_surge }
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	immediate = {
+		set_global_flag = md2026_eu_defense_surge
+	}
+
+	option = {
+		name = md2026_europe.19.o1
+		add_war_support = 0.05
+		FRA = { country_event = { id = md2026_europe.20 days = 3 } }
+		ENG = { country_event = { id = md2026_europe.20 days = 3 } }
+		ITA = { country_event = { id = md2026_europe.20 days = 3 } }
+		POL = { country_event = { id = md2026_europe.20 days = 3 } }
+		SPR = { country_event = { id = md2026_europe.20 days = 3 } }
+	}
+}
+
+### Event 20: European Defense Spending - Response ###
+country_event = {
+	id = md2026_europe.20
+	title = md2026_europe.20.t
+	desc = md2026_europe.20.d
+	picture = GFX_report_event_generic_military_deal
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_europe.20.o1
+		ai_chance = { factor = 70 }
+		add_war_support = 0.05
+		army_experience = 10
+		add_political_power = -25
+	}
+	option = {
+		name = md2026_europe.20.o2
+		ai_chance = { factor = 30 }
+		add_political_power = 25
+	}
+}
+
+### Event 21: EU SAFE Defense Procurement Initiative ###
+country_event = {
+	id = md2026_europe.21
+	title = md2026_europe.21.t
+	desc = md2026_europe.21.d
+	picture = GFX_report_event_generic_factory
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = FRA
+		date > 2026.4.1
+		has_global_flag = md2026_eu_defense_surge
+		NOT = { has_global_flag = md2026_eu_safe_done }
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	immediate = {
+		set_global_flag = md2026_eu_safe_done
+	}
+
+	option = {
+		name = md2026_europe.21.o1
+		add_political_power = 50
+		GER = {
+			add_political_power = 25
+			random_owned_controlled_state = {
+				limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		ITA = {
+			add_political_power = 25
+		}
+		SPR = {
+			add_political_power = 25
+		}
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+		}
+	}
+}
+
+### Event 22: European Nuclear Umbrella Discussion ###
+country_event = {
+	id = md2026_europe.22
+	title = md2026_europe.22.t
+	desc = md2026_europe.22.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = FRA
+		date > 2026.4.1
+		has_country_flag = md2026_fra_nuclear_doctrine
+		NOT = { has_global_flag = md2026_nuclear_umbrella_debate }
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	immediate = {
+		set_global_flag = md2026_nuclear_umbrella_debate
+	}
+
+	option = {
+		name = md2026_europe.22.o1
+		ai_chance = { factor = 60 }
+		add_political_power = 75
+		add_war_support = 0.05
+		GER = { country_event = { id = md2026_europe.23 days = 5 } }
+		POL = { country_event = { id = md2026_europe.23 days = 5 } }
+	}
+	option = {
+		name = md2026_europe.22.o2
+		ai_chance = { factor = 40 }
+		add_political_power = 25
+	}
+}
+
+### Event 23: Nuclear Umbrella - Response ###
+country_event = {
+	id = md2026_europe.23
+	title = md2026_europe.23.t
+	desc = md2026_europe.23.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_europe.23.o1
+		ai_chance = { factor = 70 }
+		add_political_power = 25
+		add_war_support = 0.05
+		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
+		FRA = { add_opinion_modifier = { target = ROOT modifier = md2026_improved_relations } }
+	}
+	option = {
+		name = md2026_europe.23.o2
+		ai_chance = { factor = 30 }
+		add_political_power = -25
+	}
+}
+
+### Event 24: Poland - EU Council Presidency Concludes ###
+country_event = {
+	id = md2026_europe.24
+	title = md2026_europe.24.t
+	desc = md2026_europe.24.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = POL
+		date > 2026.7.1
+		NOT = { has_country_flag = md2026_pol_eu_presidency_end }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = md2026_europe.24.o1
+		add_political_power = 75
+		add_stability = 0.05
+		add_opinion_modifier = { target = GER modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
+		set_country_flag = md2026_pol_eu_presidency_end
+	}
+}
+
+### Event 25: Poland - CPK Airport Megaproject Progress ###
+country_event = {
+	id = md2026_europe.25
+	title = md2026_europe.25.t
+	desc = md2026_europe.25.d
+	picture = GFX_report_event_generic_factory
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = POL
+		date > 2026.3.1
+		NOT = { has_country_flag = md2026_pol_cpk_progress }
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = md2026_europe.25.o1
+		ai_chance = { factor = 60 }
+		add_ideas = md2026_pol_cpk_megaproject
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } }
+			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+		}
+		set_country_flag = md2026_pol_cpk_progress
+	}
+	option = {
+		name = md2026_europe.25.o2
+		ai_chance = { factor = 40 }
+		add_political_power = -50
+		add_stability = -0.05
+		set_country_flag = md2026_pol_cpk_progress
+	}
+}
