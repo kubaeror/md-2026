@@ -107,48 +107,48 @@ on_actions = {
 								NOT = { has_idea = md2026_war_exhaustion_2 }
 								NOT = { has_idea = md2026_war_exhaustion_3 }
 							}
-						add_ideas = md2026_war_exhaustion_1
-						set_variable = { md2026_war_months = 0 }
+							add_ideas = md2026_war_exhaustion_1
+							set_variable = { md2026_war_months = 0 }
+						}
+						add_to_variable = { md2026_war_months = 1 }
 					}
-					add_to_variable = { md2026_war_months = 1 }
 				}
-			}
 
-			# Ukraine war exhaustion
-			UKR = {
-				if = {
-					limit = {
-						has_war_with = SOV
-						NOT = { has_idea = md2026_war_exhaustion_3 }
-					}
+				# Ukraine war exhaustion
+				UKR = {
 					if = {
 						limit = {
-							has_idea = md2026_war_exhaustion_2
-							check_variable = { md2026_war_months > 36 }
-						}
-						swap_ideas = {
-							remove_idea = md2026_war_exhaustion_2
-							add_idea = md2026_war_exhaustion_3
-						}
-					}
-					if = {
-						limit = {
-							has_idea = md2026_war_exhaustion_1
-							NOT = { has_idea = md2026_war_exhaustion_2 }
-							check_variable = { md2026_war_months > 18 }
-						}
-						swap_ideas = {
-							remove_idea = md2026_war_exhaustion_1
-							add_idea = md2026_war_exhaustion_2
-						}
-					}
-					if = {
-						limit = {
-							NOT = { has_idea = md2026_war_exhaustion_1 }
-							NOT = { has_idea = md2026_war_exhaustion_2 }
+							has_war_with = SOV
 							NOT = { has_idea = md2026_war_exhaustion_3 }
 						}
-						add_ideas = md2026_war_exhaustion_1
+						if = {
+							limit = {
+								has_idea = md2026_war_exhaustion_2
+								check_variable = { md2026_war_months > 36 }
+							}
+							swap_ideas = {
+								remove_idea = md2026_war_exhaustion_2
+								add_idea = md2026_war_exhaustion_3
+							}
+						}
+						if = {
+							limit = {
+								has_idea = md2026_war_exhaustion_1
+								NOT = { has_idea = md2026_war_exhaustion_2 }
+								check_variable = { md2026_war_months > 18 }
+							}
+							swap_ideas = {
+								remove_idea = md2026_war_exhaustion_1
+								add_idea = md2026_war_exhaustion_2
+							}
+						}
+						if = {
+							limit = {
+								NOT = { has_idea = md2026_war_exhaustion_1 }
+								NOT = { has_idea = md2026_war_exhaustion_2 }
+								NOT = { has_idea = md2026_war_exhaustion_3 }
+							}
+							add_ideas = md2026_war_exhaustion_1
 							set_variable = { md2026_war_months = 0 }
 						}
 						add_to_variable = { md2026_war_months = 1 }
