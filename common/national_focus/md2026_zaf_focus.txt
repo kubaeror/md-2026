@@ -102,6 +102,9 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
+		CHI = {
+			country_event = { id = md2026_brics.22 days = 14 }
+		}
 	}
 	ai_will_do = { base = 60 }
 }

@@ -430,6 +430,8 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
+		# Cross-country: notify Ukraine about fortified lines
+		UKR = { country_event = { id = md2026_ru_ukr.20 days = 14 } }
 	}
 	ai_will_do = { base = 60 }
 }
@@ -463,6 +465,8 @@ shared_focus = {
 			uses = 1
 			category = CAT_naval_all
 		}
+		# Cross-country: notify USA/NATO about Arctic militarization
+		USA = { country_event = { id = md2026_nato_russia.20 days = 14 } }
 	}
 	ai_will_do = { base = 40 }
 }
@@ -530,6 +534,8 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
+		# Cross-country: propose BRICS payment system to China
+		CHI = { country_event = { id = md2026_brics.20 days = 14 } }
 	}
 	ai_will_do = { base = 50 }
 }

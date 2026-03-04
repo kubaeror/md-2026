@@ -406,3 +406,263 @@ news_event = {
 		}
 	}
 }
+
+### BATCH 4: GLOBAL ARMS RACE CHAIN ###
+# Triggered by focus completions - NATO/Russia military buildup reactions
+
+# SOV completes arctic_militarization -> NATO members react
+country_event = {
+	id = md2026_nato_russia.20
+	title = md2026_nato_russia.20.t
+	desc = md2026_nato_russia.20.d
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Fired at USA when SOV completes arctic_militarization
+
+	# Deploy NATO forces to Arctic
+	option = {
+		name = md2026_nato_russia.20.o1
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.20.o1 - Arctic deployment"
+		add_political_power = -50
+		add_war_support = 0.05
+		add_opinion_modifier = { target = SOV modifier = md2026_military_pressure_anger }
+		# Notify allies
+		every_country = {
+			limit = {
+				has_country_flag = md2026_nato_member
+				NOT = { tag = USA }
+				OR = {
+					tag = CAN
+					tag = ENG
+					tag = GER
+				}
+			}
+			country_event = { id = md2026_nato_russia.21 days = 10 }
+		}
+		news_event = { id = md2026_nato_russia_news.10 days = 3 }
+		ai_chance = { base = 60 }
+	}
+
+	# Diplomatic protest only
+	option = {
+		name = md2026_nato_russia.20.o2
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.20.o2 - Diplomatic protest"
+		add_political_power = 25
+		add_opinion_modifier = { target = SOV modifier = md2026_diplomatic_disapproval }
+		ai_chance = { base = 40 }
+	}
+}
+
+# NATO allies: Arctic buildup response
+country_event = {
+	id = md2026_nato_russia.21
+	title = md2026_nato_russia.21.t
+	desc = md2026_nato_russia.21.d
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Increase defense spending
+	option = {
+		name = md2026_nato_russia.21.o1
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.21.o1 - Increase spending"
+		add_political_power = -25
+		add_war_support = 0.05
+		army_experience = 10
+		add_opinion_modifier = { target = USA modifier = md2026_joint_exercises_opinion }
+		ai_chance = { base = 60 }
+	}
+
+	# Focus on diplomacy
+	option = {
+		name = md2026_nato_russia.21.o2
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.21.o2 - Focus diplomacy"
+		add_political_power = 25
+		add_stability = 0.03
+		ai_chance = { base = 40 }
+	}
+}
+
+# Russia: NATO expands eastern flank - fires when GER completes nato_2_percent or POL completes a military focus
+country_event = {
+	id = md2026_nato_russia.22
+	title = md2026_nato_russia.22.t
+	desc = md2026_nato_russia.22.d
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Military buildup in response
+	option = {
+		name = md2026_nato_russia.22.o1
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.22.o1 - Military buildup"
+		add_war_support = 0.10
+		army_experience = 15
+		add_manpower = 50000
+		add_opinion_modifier = { target = GER modifier = md2026_military_pressure_anger }
+		SOV = {
+			country_event = { id = md2026_nato_russia.23 days = 30 }
+		}
+		ai_chance = { base = 70 }
+	}
+
+	# Propose arms control talks
+	option = {
+		name = md2026_nato_russia.22.o2
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.22.o2 - Arms control"
+		add_political_power = 50
+		add_stability = 0.03
+		USA = { country_event = { id = md2026_nato_russia.24 days = 15 } }
+		ai_chance = { base = 30 }
+	}
+}
+
+# Russia: Kaliningrad reinforcement decision
+country_event = {
+	id = md2026_nato_russia.23
+	title = md2026_nato_russia.23.t
+	desc = md2026_nato_russia.23.d
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Deploy missiles to Kaliningrad
+	option = {
+		name = md2026_nato_russia.23.o1
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.23.o1 - Deploy missiles"
+		add_war_support = 0.05
+		add_political_power = -25
+		every_country = {
+			limit = {
+				has_country_flag = md2026_nato_member
+				OR = {
+					tag = POL
+					tag = GER
+				}
+			}
+			add_opinion_modifier = { target = SOV modifier = md2026_military_pressure_anger }
+		}
+		news_event = { id = md2026_nato_russia_news.11 days = 3 }
+		ai_chance = { base = 60 }
+	}
+
+	# Maintain current posture
+	option = {
+		name = md2026_nato_russia.23.o2
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.23.o2 - Maintain posture"
+		add_political_power = 25
+		ai_chance = { base = 40 }
+	}
+}
+
+# USA: Russia proposes arms control talks
+country_event = {
+	id = md2026_nato_russia.24
+	title = md2026_nato_russia.24.t
+	desc = md2026_nato_russia.24.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Engage in talks
+	option = {
+		name = md2026_nato_russia.24.o1
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.24.o1 - Engage talks"
+		add_political_power = 25
+		add_stability = 0.03
+		add_opinion_modifier = { target = SOV modifier = md2026_improved_relations }
+		set_global_flag = md2026_arms_control_talks
+		ai_chance = { base = 40 }
+	}
+
+	# Reject — peace through strength
+	option = {
+		name = md2026_nato_russia.24.o2
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.24.o2 - Reject talks"
+		add_war_support = 0.05
+		add_political_power = -25
+		add_opinion_modifier = { target = SOV modifier = md2026_diplomatic_disapproval }
+		ai_chance = { base = 60 }
+	}
+}
+
+# Japan: Regional security implications - fires when SOV arctic_militarization AND USA pentagon_budget both completed
+country_event = {
+	id = md2026_nato_russia.25
+	title = md2026_nato_russia.25.t
+	desc = md2026_nato_russia.25.d
+	picture = GFX_report_event_generic_battle
+
+	fire_only_once = yes
+	trigger = {
+		tag = JAP
+		has_global_flag = md2026_initialized
+		SOV = { has_completed_focus = MD2026_SOV_arctic_militarization }
+		USA = { has_completed_focus = MD2026_USA_pentagon_budget }
+	}
+	mean_time_to_happen = { days = 60 }
+
+	# Accelerate rearmament
+	option = {
+		name = md2026_nato_russia.25.o1
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.25.o1 - Accelerate rearmament"
+		add_war_support = 0.05
+		add_political_power = -25
+		army_experience = 10
+		navy_experience = 10
+		add_opinion_modifier = { target = USA modifier = md2026_joint_exercises_opinion }
+		ai_chance = { base = 60 }
+	}
+
+	# Maintain constitutional limits
+	option = {
+		name = md2026_nato_russia.25.o2
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia.25.o2 - Constitutional limits"
+		add_stability = 0.05
+		add_political_power = 25
+		ai_chance = { base = 40 }
+	}
+}
+
+# NEWS: NATO Arctic deployment
+news_event = {
+	id = md2026_nato_russia_news.10
+	title = md2026_nato_russia_news.10.t
+	desc = md2026_nato_russia_news.10.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_nato_russia_news.10.o1
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia_news.10 executed"
+		ai_chance = { base = 100 }
+	}
+}
+
+# NEWS: Russia deploys missiles to Kaliningrad
+news_event = {
+	id = md2026_nato_russia_news.11
+	title = md2026_nato_russia_news.11.t
+	desc = md2026_nato_russia_news.11.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_nato_russia_news.11.o1
+		log = "[GetDateText]: [This.GetName]: md2026_nato_russia_news.11 executed"
+		ai_chance = { base = 100 }
+	}
+}

@@ -615,3 +615,222 @@ news_event = {
 		}
 	}
 }
+
+### BATCH 4: FRONTLINE DYNAMICS CHAIN ###
+# Triggered by focus completions - cross-country reactions
+
+# Russia completes fortress_russia -> UKR gets event about fortified lines
+country_event = {
+	id = md2026_ru_ukr.20
+	title = md2026_ru_ukr.20.t
+	desc = md2026_ru_ukr.20.d
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = UKR
+		has_war_with = SOV
+	}
+
+	# Option A: Adapt tactics with drone warfare
+	option = {
+		name = md2026_ru_ukr.20.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.20.o1 - Adapting tactics"
+		add_war_support = 0.05
+		army_experience = 10
+		SOV = { country_event = { id = md2026_ru_ukr.21 days = 15 } }
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Seek international pressure for de-escalation
+	option = {
+		name = md2026_ru_ukr.20.o2
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.20.o2 - Seeking pressure"
+		add_political_power = 50
+		USA = { country_event = { id = md2026_ru_ukr.22 days = 10 } }
+		ai_chance = { base = 40 }
+	}
+}
+
+# Russia learns Ukraine is adapting tactics
+country_event = {
+	id = md2026_ru_ukr.21
+	title = md2026_ru_ukr.21.t
+	desc = md2026_ru_ukr.21.d
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_ru_ukr.21.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.21.o1 - Reinforce positions"
+		add_war_support = 0.03
+		army_experience = 10
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = md2026_ru_ukr.21.o2
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.21.o2 - Counter-offensive planning"
+		army_experience = 20
+		add_political_power = -25
+		ai_chance = { base = 30 }
+	}
+}
+
+# USA: Ukraine seeks international pressure on Russia
+country_event = {
+	id = md2026_ru_ukr.22
+	title = md2026_ru_ukr.22.t
+	desc = md2026_ru_ukr.22.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Issue strong condemnation and increase aid
+	option = {
+		name = md2026_ru_ukr.22.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.22.o1 - Increase aid"
+		add_political_power = -50
+		add_opinion_modifier = { target = UKR modifier = md2026_solidarity_opinion }
+		add_opinion_modifier = { target = SOV modifier = md2026_sanctions_opinion }
+		UKR = {
+			add_political_power = 75
+			add_stability = 0.05
+		}
+		news_event = { id = md2026_ru_ukr_news.10 days = 3 }
+		ai_chance = { base = 50 }
+	}
+
+	# Option B: Push for negotiations
+	option = {
+		name = md2026_ru_ukr.22.o2
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.22.o2 - Push negotiations"
+		add_political_power = 25
+		SOV = { country_event = { id = md2026_ru_ukr.23 days = 20 } }
+		UKR = { country_event = { id = md2026_ru_ukr.24 days = 20 } }
+		ai_chance = { base = 50 }
+	}
+}
+
+# Russia: US pushes for negotiations
+country_event = {
+	id = md2026_ru_ukr.23
+	title = md2026_ru_ukr.23.t
+	desc = md2026_ru_ukr.23.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Accept talks
+	option = {
+		name = md2026_ru_ukr.23.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.23.o1 - Accept talks"
+		add_political_power = 25
+		add_stability = 0.03
+		set_country_flag = md2026_sov_accepts_talks
+		ai_chance = { base = 40 }
+	}
+
+	# Reject and escalate
+	option = {
+		name = md2026_ru_ukr.23.o2
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.23.o2 - Reject talks"
+		add_war_support = 0.10
+		add_political_power = -25
+		add_opinion_modifier = { target = USA modifier = md2026_diplomatic_disapproval }
+		ai_chance = { base = 60 }
+	}
+}
+
+# Ukraine: US pushes for negotiations
+country_event = {
+	id = md2026_ru_ukr.24
+	title = md2026_ru_ukr.24.t
+	desc = md2026_ru_ukr.24.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Accept talks cautiously
+	option = {
+		name = md2026_ru_ukr.24.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.24.o1 - Accept talks"
+		add_stability = 0.05
+		add_political_power = 25
+		set_country_flag = md2026_ukr_accepts_talks
+		ai_chance = { base = 50 }
+	}
+
+	# Refuse — fight on
+	option = {
+		name = md2026_ru_ukr.24.o2
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.24.o2 - Refuse talks"
+		add_war_support = 0.10
+		add_stability = -0.03
+		ai_chance = { base = 50 }
+	}
+}
+
+# UKR completes drone_warfare -> SOV gets event about new drone threat
+country_event = {
+	id = md2026_ru_ukr.25
+	title = md2026_ru_ukr.25.t
+	desc = md2026_ru_ukr.25.d
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		has_war_with = UKR
+	}
+
+	# Develop countermeasures
+	option = {
+		name = md2026_ru_ukr.25.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.25.o1 - Countermeasures"
+		add_political_power = -50
+		add_tech_bonus = {
+			name = SOV_anti_drone
+			bonus = 1.0
+			uses = 1
+			category = CAT_battlefield_support
+		}
+		ai_chance = { base = 70 }
+	}
+
+	# Retaliate with escalation
+	option = {
+		name = md2026_ru_ukr.25.o2
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr.25.o2 - Retaliate"
+		add_war_support = 0.10
+		army_experience = 15
+		ai_chance = { base = 30 }
+	}
+}
+
+# NEWS: US increases Ukraine aid
+news_event = {
+	id = md2026_ru_ukr_news.10
+	title = md2026_ru_ukr_news.10.t
+	desc = md2026_ru_ukr_news.10.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_ru_ukr_news.10.o1
+		log = "[GetDateText]: [This.GetName]: md2026_ru_ukr_news.10 executed"
+		ai_chance = { base = 100 }
+	}
+}

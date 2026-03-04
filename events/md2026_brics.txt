@@ -362,3 +362,222 @@ news_event = {
 		}
 	}
 }
+
+### BATCH 4: BRICS TRADE BLOC CHAIN ###
+# Triggered by focus completions - cross-country economic integration
+
+# BRICS Alternative Payment System - fires at CHI when SOV completes rubles_for_oil
+country_event = {
+	id = md2026_brics.20
+	title = md2026_brics.20.t
+	desc = md2026_brics.20.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Join the alternative payment system
+	option = {
+		name = md2026_brics.20.o1
+		log = "[GetDateText]: [This.GetName]: md2026_brics.20.o1 - Join payment system"
+		add_political_power = 50
+		add_opinion_modifier = { target = SOV modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = USA modifier = md2026_trade_war_opinion }
+		set_country_flag = md2026_brics_payment_member
+		# Notify other BRICS members
+		every_country = {
+			limit = {
+				has_country_flag = md2026_brics_member
+				NOT = { tag = ROOT }
+				NOT = { tag = SOV }
+			}
+			country_event = { id = md2026_brics.21 days = 10 }
+		}
+		ai_chance = { base = 70 }
+	}
+
+	# Observe but don't commit
+	option = {
+		name = md2026_brics.20.o2
+		log = "[GetDateText]: [This.GetName]: md2026_brics.20.o2 - Observe only"
+		add_political_power = 25
+		ai_chance = { base = 30 }
+	}
+}
+
+# Other BRICS members: Alternative payment system expanding
+country_event = {
+	id = md2026_brics.21
+	title = md2026_brics.21.t
+	desc = md2026_brics.21.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Join the system
+	option = {
+		name = md2026_brics.21.o1
+		log = "[GetDateText]: [This.GetName]: md2026_brics.21.o1 - Join system"
+		add_political_power = 25
+		add_opinion_modifier = { target = SOV modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = CHI modifier = md2026_improved_relations }
+		set_country_flag = md2026_brics_payment_member
+		ai_chance = { base = 50 }
+	}
+
+	# Stay with dollar system
+	option = {
+		name = md2026_brics.21.o2
+		log = "[GetDateText]: [This.GetName]: md2026_brics.21.o2 - Stay with dollar"
+		add_political_power = 10
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		ai_chance = { base = 50 }
+	}
+}
+
+# BRICS Development Bank Expansion - fires when SAF completes brics_ties
+country_event = {
+	id = md2026_brics.22
+	title = md2026_brics.22.t
+	desc = md2026_brics.22.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Fired at CHI (as BRICS bank host)
+
+	# Approve expanded lending
+	option = {
+		name = md2026_brics.22.o1
+		log = "[GetDateText]: [This.GetName]: md2026_brics.22.o1 - Expand lending"
+		add_political_power = -25
+		add_opinion_modifier = { target = SAF modifier = md2026_improved_relations }
+		every_country = {
+			limit = { has_country_flag = md2026_brics_member }
+			add_political_power = 15
+		}
+		news_event = { id = md2026_brics_news.10 days = 3 }
+		ai_chance = { base = 80 }
+	}
+
+	# Maintain current scope
+	option = {
+		name = md2026_brics.22.o2
+		log = "[GetDateText]: [This.GetName]: md2026_brics.22.o2 - Maintain scope"
+		add_political_power = 10
+		ai_chance = { base = 20 }
+	}
+}
+
+# USA: BRICS economic challenge - fires when 3+ BRICS members adopt alt payment
+country_event = {
+	id = md2026_brics.23
+	title = md2026_brics.23.t
+	desc = md2026_brics.23.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	fire_only_once = yes
+	trigger = {
+		tag = USA
+		has_global_flag = md2026_initialized
+		count_triggers = {
+			amount = 3
+			SOV = { has_country_flag = md2026_brics_payment_member }
+			CHI = { has_country_flag = md2026_brics_payment_member }
+			RAJ = { has_country_flag = md2026_brics_payment_member }
+			BRA = { has_country_flag = md2026_brics_payment_member }
+			SAF = { has_country_flag = md2026_brics_payment_member }
+		}
+	}
+	mean_time_to_happen = { days = 60 }
+
+	# Sanctions threat against BRICS payment participants
+	option = {
+		name = md2026_brics.23.o1
+		log = "[GetDateText]: [This.GetName]: md2026_brics.23.o1 - Sanctions threat"
+		add_political_power = -50
+		every_country = {
+			limit = { has_country_flag = md2026_brics_payment_member }
+			add_opinion_modifier = { target = USA modifier = md2026_sanctions_opinion }
+		}
+		ai_chance = { base = 40 }
+	}
+
+	# Strengthen dollar institutions
+	option = {
+		name = md2026_brics.23.o2
+		log = "[GetDateText]: [This.GetName]: md2026_brics.23.o2 - Strengthen dollar"
+		add_political_power = -25
+		add_stability = 0.03
+		ai_chance = { base = 60 }
+	}
+}
+
+# Global South: BRICS becomes credible alternative - fires at IDN/ARG/NGA etc.
+country_event = {
+	id = md2026_brics.24
+	title = md2026_brics.24.t
+	desc = md2026_brics.24.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = md2026_initialized
+		NOT = { has_country_flag = md2026_brics_member }
+		NOT = { is_in_faction_with = USA }
+		OR = {
+			tag = IDN
+			tag = ARG
+			tag = NGA
+			tag = MEX
+		}
+		count_triggers = {
+			amount = 3
+			SOV = { has_country_flag = md2026_brics_payment_member }
+			CHI = { has_country_flag = md2026_brics_payment_member }
+			RAJ = { has_country_flag = md2026_brics_payment_member }
+			BRA = { has_country_flag = md2026_brics_payment_member }
+			SAF = { has_country_flag = md2026_brics_payment_member }
+		}
+	}
+	mean_time_to_happen = { days = 90 }
+
+	# Apply for BRICS membership
+	option = {
+		name = md2026_brics.24.o1
+		log = "[GetDateText]: [This.GetName]: md2026_brics.24.o1 - Apply for membership"
+		add_political_power = 25
+		set_country_flag = md2026_brics_member
+		add_opinion_modifier = { target = CHI modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = SOV modifier = md2026_improved_relations }
+		ai_chance = { base = 40 }
+	}
+
+	# Maintain neutrality
+	option = {
+		name = md2026_brics.24.o2
+		log = "[GetDateText]: [This.GetName]: md2026_brics.24.o2 - Stay neutral"
+		add_political_power = 10
+		ai_chance = { base = 60 }
+	}
+}
+
+# NEWS: BRICS Development Bank expansion
+news_event = {
+	id = md2026_brics_news.10
+	title = md2026_brics_news.10.t
+	desc = md2026_brics_news.10.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_brics_news.10.o1
+		log = "[GetDateText]: [This.GetName]: md2026_brics_news.10 executed"
+		ai_chance = { base = 100 }
+	}
+}

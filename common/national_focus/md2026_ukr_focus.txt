@@ -481,6 +481,8 @@ shared_focus = {
 			uses = 2
 			category = CAT_battlefield_support
 		}
+		# Cross-country: notify Russia about drone warfare advancement
+		SOV = { country_event = { id = md2026_ru_ukr.25 days = 14 } }
 	}
 	ai_will_do = { base = 70 }
 }

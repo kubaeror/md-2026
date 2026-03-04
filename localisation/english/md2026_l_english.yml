@@ -2192,5 +2192,111 @@
  md2026_ukr_eu_candidate_desc:0 "Ongoing reforms toward EU membership are modernizing Ukraine's economy and institutions."
  md2026_ukr_drone_warfare:0 "Drone Warfare Pioneers"
  md2026_ukr_drone_warfare_desc:0 "Ukraine's world-leading drone warfare capabilities give our forces a decisive edge on the battlefield."
- md2026_ukr_victory_plan:0 "Victory Plan"
- md2026_ukr_victory_plan_desc:0 "A comprehensive national strategy combining military success, Western integration, and economic recovery."
+  md2026_ukr_victory_plan:0 "Victory Plan"
+  md2026_ukr_victory_plan_desc:0 "A comprehensive national strategy combining military success, Western integration, and economic recovery."
+
+  ### BATCH 4: CROSS-COUNTRY EVENT CHAINS ###
+
+  ## Chain 1: Russia-Ukraine Frontline Dynamics ##
+  md2026_ru_ukr.20.t:0 "Russia Fortifies the Front"
+  md2026_ru_ukr.20.d:0 "Russian forces have completed a massive fortification program along the entire front line. Deep trench networks, dragon's teeth anti-tank barriers, and layered minefields now stretch for hundreds of kilometers. Our military commanders must adapt their tactics to break through these defenses or seek alternative approaches."
+  md2026_ru_ukr.20.o1:0 "Adapt our tactics — drones and innovation"
+  md2026_ru_ukr.20.o2:0 "Seek international pressure for de-escalation"
+
+  md2026_ru_ukr.21.t:0 "Ukraine Adapts Its Tactics"
+  md2026_ru_ukr.21.d:0 "Intelligence reports indicate that Ukraine is rapidly adapting its tactics to counter our fortified positions. New drone swarm attacks, electronic warfare capabilities, and combined arms approaches are being developed. Our fortress defense strategy may need reinforcement."
+  md2026_ru_ukr.21.o1:0 "Reinforce our defensive positions"
+  md2026_ru_ukr.21.o2:0 "Plan a counter-offensive to disrupt them"
+
+  md2026_ru_ukr.22.t:0 "Ukraine Seeks Pressure on Russia"
+  md2026_ru_ukr.22.d:0 "Ukraine has appealed to the United States to increase pressure on Russia following Moscow's massive fortification of the front lines. Kyiv argues that without stronger Western action, the conflict will become permanently frozen on Russian terms. We must decide how to respond."
+  md2026_ru_ukr.22.o1:0 "Increase aid and condemn Russia"
+  md2026_ru_ukr.22.o2:0 "Push both sides toward negotiations"
+
+  md2026_ru_ukr.23.t:0 "American Pressure for Talks"
+  md2026_ru_ukr.23.d:0 "The United States is pressing Russia to enter peace negotiations over Ukraine. Washington threatens additional sanctions and increased military aid to Kyiv if Moscow refuses to engage diplomatically. The Kremlin must weigh the costs of continued defiance against the possibility of a negotiated settlement."
+  md2026_ru_ukr.23.o1:0 "Accept talks — explore terms"
+  md2026_ru_ukr.23.o2:0 "Reject — we will not negotiate under pressure"
+
+  md2026_ru_ukr.24.t:0 "American Push for Negotiations"
+  md2026_ru_ukr.24.d:0 "The United States is urging Ukraine to enter peace negotiations with Russia. Washington argues that a negotiated settlement, while imperfect, would end the bloodshed and allow reconstruction to begin. However, accepting talks could be seen as a betrayal of those who fought and died for territorial integrity."
+  md2026_ru_ukr.24.o1:0 "Accept talks cautiously"
+  md2026_ru_ukr.24.o2:0 "Refuse — we will not negotiate away our land"
+
+  md2026_ru_ukr.25.t:0 "Ukrainian Drone Threat Escalates"
+  md2026_ru_ukr.25.d:0 "Ukraine has completed a major expansion of its drone warfare capabilities. Long-range strike drones now reach deep into Russian territory, hitting military installations, logistics hubs, and energy infrastructure. Our air defenses are struggling to cope with the volume and sophistication of these attacks."
+  md2026_ru_ukr.25.o1:0 "Develop counter-drone technology"
+  md2026_ru_ukr.25.o2:0 "Retaliate with escalated strikes"
+
+  md2026_ru_ukr_news.10.t:0 "US Increases Ukraine Aid"
+  md2026_ru_ukr_news.10.d:0 "The United States has announced a major new military aid package for Ukraine, including advanced air defense systems, long-range precision munitions, and intelligence-sharing capabilities. The package signals continued American commitment to Ukraine's defense despite domestic political pressure."
+  md2026_ru_ukr_news.10.o1:0 "The war effort continues"
+
+  ## Chain 2: BRICS Trade Bloc ##
+  md2026_brics.20.t:0 "Alternative Payment System"
+  md2026_brics.20.d:0 "Russia has launched a new international payment system designed to bypass Western financial infrastructure. Moscow is inviting China to join as a founding partner, creating a parallel financial network that could fundamentally challenge dollar hegemony. Joining would strengthen our economic ties with Russia but risk American retaliation."
+  md2026_brics.20.o1:0 "Join the alternative payment system"
+  md2026_brics.20.o2:0 "Observe but don't commit yet"
+
+  md2026_brics.21.t:0 "BRICS Payment System Expanding"
+  md2026_brics.21.d:0 "The BRICS alternative payment system, jointly operated by Russia and China, is expanding. Our country has been invited to join the network, which promises reduced transaction costs and freedom from Western sanctions risk. However, participation could strain our relationship with the United States."
+  md2026_brics.21.o1:0 "Join the payment system"
+  md2026_brics.21.o2:0 "Stay with the dollar system"
+
+  md2026_brics.22.t:0 "BRICS Development Bank Expansion"
+  md2026_brics.22.d:0 "South Africa's deepening engagement with BRICS has prompted calls to expand the New Development Bank's lending capacity. As the bank's host country, China can approve increased capital commitments and new lending programs that would give BRICS members an alternative to IMF and World Bank financing."
+  md2026_brics.22.o1:0 "Approve expanded lending programs"
+  md2026_brics.22.o2:0 "Maintain current scope"
+
+  md2026_brics.23.t:0 "BRICS Economic Challenge"
+  md2026_brics.23.d:0 "Multiple BRICS members have now joined the alternative payment system, creating a credible parallel financial infrastructure. While the dollar's dominance is not immediately threatened, the trend is accelerating. We must decide whether to respond with economic pressure or strengthen our own institutions."
+  md2026_brics.23.o1:0 "Threaten sanctions against participants"
+  md2026_brics.23.o2:0 "Strengthen dollar-based institutions"
+
+  md2026_brics.24.t:0 "BRICS Membership Opportunity"
+  md2026_brics.24.d:0 "The BRICS alliance has emerged as a credible alternative to Western-dominated institutions. With its expanded membership and new financial infrastructure, BRICS offers developing nations economic opportunities and political influence outside the traditional Western framework. Our country could benefit from membership."
+  md2026_brics.24.o1:0 "Apply for BRICS membership"
+  md2026_brics.24.o2:0 "Maintain neutrality"
+
+  md2026_brics_news.10.t:0 "BRICS Development Bank Expands"
+  md2026_brics_news.10.d:0 "The BRICS New Development Bank has announced a major expansion of its lending programs, offering developing nations an alternative source of infrastructure financing outside Western-dominated institutions. The move is seen as a challenge to the World Bank and IMF."
+  md2026_brics_news.10.o1:0 "A new financial order emerges"
+
+  ## Chain 3: Global Arms Race ##
+  md2026_nato_russia.20.t:0 "Russia Militarizes the Arctic"
+  md2026_nato_russia.20.d:0 "Russia has completed a major military buildup in the Arctic, deploying new bases, missile systems, and naval forces across its northern coastline. This threatens NATO's northern flank and challenges Western Arctic interests. As the alliance's leading power, we must decide how to respond to this strategic challenge."
+  md2026_nato_russia.20.o1:0 "Deploy NATO forces to the Arctic"
+  md2026_nato_russia.20.o2:0 "Diplomatic protest only"
+
+  md2026_nato_russia.21.t:0 "Arctic Security Buildup"
+  md2026_nato_russia.21.d:0 "The United States has raised concerns about Russia's military buildup in the Arctic and is requesting allied support for an enhanced NATO Arctic presence. As a northern ally, our contribution would be significant but costly. Increasing defense spending would demonstrate solidarity but strain domestic budgets."
+  md2026_nato_russia.21.o1:0 "Increase defense spending"
+  md2026_nato_russia.21.o2:0 "Focus on diplomatic solutions"
+
+  md2026_nato_russia.22.t:0 "NATO Strengthens Eastern Flank"
+  md2026_nato_russia.22.d:0 "Germany has significantly increased its NATO defense commitment, meeting and exceeding the 2% GDP spending target. New NATO forces are deploying to the alliance's eastern flank. This represents a direct military challenge to Russian security interests that Moscow cannot ignore."
+  md2026_nato_russia.22.o1:0 "Respond with military buildup"
+  md2026_nato_russia.22.o2:0 "Propose arms control talks"
+
+  md2026_nato_russia.23.t:0 "Kaliningrad Reinforcement"
+  md2026_nato_russia.23.d:0 "In response to NATO's military buildup on our borders, the General Staff recommends reinforcing the Kaliningrad exclave with additional missile systems. Deploying Iskander missiles to Kaliningrad would provide a credible deterrent against NATO forces in Poland and the Baltic states, but would further escalate tensions."
+  md2026_nato_russia.23.o1:0 "Deploy missiles to Kaliningrad"
+  md2026_nato_russia.23.o2:0 "Maintain current military posture"
+
+  md2026_nato_russia.24.t:0 "Russian Arms Control Proposal"
+  md2026_nato_russia.24.d:0 "Russia has proposed new arms control negotiations, offering to limit missile deployments in exchange for NATO restraint on its eastern flank. This could reduce tensions and prevent a new arms race, but critics argue it would reward Russian aggression and undermine allied deterrence."
+  md2026_nato_russia.24.o1:0 "Engage in arms control talks"
+  md2026_nato_russia.24.o2:0 "Reject — peace through strength"
+
+  md2026_nato_russia.25.t:0 "Global Arms Race Implications"
+  md2026_nato_russia.25.d:0 "The escalating military competition between NATO and Russia has profound implications for Japanese security. Both the United States and Russia are increasing defense spending and deploying new weapons systems globally. Japan must decide whether to accelerate its own rearmament or maintain its constitutional constraints on military power."
+  md2026_nato_russia.25.o1:0 "Accelerate rearmament"
+  md2026_nato_russia.25.o2:0 "Maintain constitutional limits"
+
+  md2026_nato_russia_news.10.t:0 "NATO Deploys to the Arctic"
+  md2026_nato_russia_news.10.d:0 "NATO has announced a significant military deployment to the Arctic in response to Russia's northern military buildup. Allied forces from the United States, Canada, and Nordic nations will establish a permanent Arctic presence for the first time."
+  md2026_nato_russia_news.10.o1:0 "The Arctic becomes a new frontline"
+
+  md2026_nato_russia_news.11.t:0 "Russia Deploys Missiles to Kaliningrad"
+  md2026_nato_russia_news.11.d:0 "Russia has deployed advanced Iskander missile systems to its Kaliningrad exclave, placing NATO forces in Poland and the Baltic states within range of precision strikes. The deployment marks a dangerous escalation in the ongoing military standoff between Russia and the Western alliance."
+  md2026_nato_russia_news.11.o1:0 "Europe on the brink"

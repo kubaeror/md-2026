@@ -152,6 +152,8 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_nato_commitment"
 		add_political_power = 50
 		add_war_support = 0.05
+		# Cross-country: Russia reacts to NATO commitment
+		SOV = { country_event = { id = md2026_nato_russia.22 days = 14 } }
 	}
 	ai_will_do = {
 		factor = 1
