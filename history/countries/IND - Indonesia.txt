@@ -1,0 +1,559 @@
+capital = 631
+##State Modifiers - by 2026 Aceh conflict resolved, Papua insurgency continues
+638 = { add_dynamic_modifier = { modifier = IND_papua_resist } }
+##
+2000.1.1 = {
+	set_country_flag = dynamic_flag
+	set_country_flag = dynamic_rebel_flag
+	set_variable = { gdp_per_capita = 5.621 }
+	complete_special_project = sp:sp_aircraft_project
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_oob = "IND_2000_nsb"
+		else = {
+			set_oob = "IND_2000_nonnsb"
+		}
+	}
+	set_cosmetic_tag = IND
+	set_naval_oob = "IND_2000_naval_mtg"
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "IND_2000_bba"
+		else = {
+			set_air_oob = "IND_2000_nonbba"
+		}
+	}
+
+	#israel blockade
+	set_country_flag = blockade_israel_yes
+
+	add_ideas = {
+		ASEAN_Member
+		crippling_corruption
+		sunni
+		saudi_aid
+		export_economy
+		stagnation
+		defence_01
+		edu_02
+		health_01
+		social_01
+		bureau_03
+		police_02
+		export_economy
+		volunteer_army
+		volunteer_women
+		small_medium_business_owners
+		the_ulema
+		landowners
+		ASEAN_Member
+		multi_ethnic_state_idea
+		officer_advanced_training
+		IND_ethnic_tension
+		IND_aceh_in_turmoil
+		IND_rupiah_crisis
+		IND_popular_tourist_destination
+		IND_growing_radicalization
+		IND_asian_crisis
+		USA_usaid
+	}
+
+
+	declare_war_on = {
+		target = ACE
+		type = annex_everything
+	}
+
+	set_technology = {
+		integrated_transportation_system = 1
+		post_conventional_rail = 1
+		early_freight_locomotive = 1
+
+
+		infantry_mass_assault = 1
+
+		night_vision_1 = 1
+
+		command_control_equipment = 1
+		command_control_equipment1 = 1
+
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+
+		util_vehicle_0 = 1
+		util_vehicle_1 = 1
+		util_vehicle_2 = 1
+
+		combat_eng_equipment = 1
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+
+		body_armor_1980 = 1
+		camouflage = 1
+
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+
+		radar = 1
+		internet1 = 1
+		fuel_silos = 1
+		support_weapons = 1
+		special_forces = 1
+
+		industrial_electrospun_polymeric_nanofibers = 1
+		multiwalled_carbon_nanotubes = 1
+		stereolitography = 1
+		early_3D_printers = 1
+		DNA_fingerprinting = 1
+		fuel_refining = 1
+		early_renewables = 1
+		renewables = 1
+		electrification_1 = 1
+		construction1 = 1
+
+
+		transport_helicopter1 = 1
+		nsb_transport_helicopter1 = 1
+	}
+
+		complete_special_project = sp:sp_helicopter_project
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+
+		set_technology = {
+			mbt_tech_ops = 1
+
+			nsb_artillery_0 = 1
+
+			nsb_Anti_Air_0 = 1
+		}
+
+		else = {
+			set_technology = {
+				MBT_1 = 1
+				Early_APC = 1
+				APC_1 = 1
+				IFV_1 = 1
+				artillery_0 = 1
+				SP_arty_0 = 1
+				SP_R_arty_0 = 1
+				Anti_Air_0 = 1
+				SP_Anti_Air_0 = 1
+				Rec_tank_0 = 1
+			}
+		}
+	}
+
+
+	set_technology = {
+		corvette_hull_1 = 1
+
+		frigate_hull_1 = 1
+		frigate_hull_2 = 1
+
+		destroyer_hull_1 = 1
+
+		attack_submarine_hull_1 = 1
+
+		tech_submarine_engineering = 1
+
+		tech_naval_systems_engineering = 1
+		tech_power_systems = 1
+
+		tech_combat_support_systems = 1
+		tech_fire_control = 1
+		tech_combat_radar = 1
+		tech_combat_radar_1 = 1
+		tech_combat_sonar = 1
+
+		tech_early_naval_weapon_systems = 1
+		tech_naval_weapon_systems = 1
+		tech_light_guns = 1
+
+		tech_point_defense_system = 1
+
+		tech_turret_missiles_surface = 1
+		tech_turret_missiles_aa = 1
+		tech_vls_surface = 1
+		tech_vls_aa = 1
+
+		tech_torpedoes = 1
+
+		tech_landing_craft = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			early_airframe_designs = 1
+			gen_3_large = 1
+
+			engines_2 = 1
+
+			early_weapons = 1
+			countermeasures_1 = 1
+
+			ag_weapons_1 = 1
+		}
+
+		create_equipment_variant = { #Large Transport
+			name = "CASA/IPTN CN-235"
+			type = large_plane_air_transport_airframe_1
+			parent_version = 0
+			modules = {
+				fixed_main_weapon_slot = weap_buff_transport
+				fixed_gun_slot = empty
+				engine_type_slot = engine_prop_quad_1
+				avionics_type_slot = avionics_manned_1
+				wingform_type_slot = wing_straight
+				special_slot_type_2 = spec_redundant_1
+				special_slot_type_3 = empty
+				fixed_auxiliary_weapon_slot_1 = empty
+				fixed_auxiliary_weapon_slot_2 = empty
+			}
+		}
+
+		else = {
+			set_technology = {
+				early_bomber = 1
+				transport_plane1 = 1
+				transport_plane2 = 1
+			}
+		}
+	}
+
+	#Chinese diaspora trading network
+	add_opinion_modifier = { target = SIN modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = SIN modifier = bamboo_network }
+	add_opinion_modifier = { target = TAI modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = TAI modifier = bamboo_network }
+	add_opinion_modifier = { target = SIA modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = SIA modifier = bamboo_network }
+	add_opinion_modifier = { target = VIE modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = VIE modifier = bamboo_network }
+	add_opinion_modifier = { target = CBD modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = CBD modifier = bamboo_network }
+	add_opinion_modifier = { target = MAY modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = MAY modifier = bamboo_network }
+
+	add_opinion_modifier = { target = LAO modifier = asean_relations }
+	reverse_add_opinion_modifier = { target = LAO modifier = asean_relations }
+	add_opinion_modifier = { target = MAY modifier = asean_relations }
+	reverse_add_opinion_modifier = { target = MAY modifier = asean_relations }
+	add_opinion_modifier = { target = BRM modifier = asean_relations }
+	reverse_add_opinion_modifier = { target = BRM modifier = asean_relations }
+	add_opinion_modifier = { target = PHI modifier = asean_relations }
+	reverse_add_opinion_modifier = { target = PHI modifier = asean_relations }
+	add_opinion_modifier = { target = SIN modifier = asean_relations }
+	reverse_add_opinion_modifier = { target = SIN modifier = asean_relations }
+	add_opinion_modifier = { target = SIA modifier = asean_relations }
+	reverse_add_opinion_modifier = { target = SIA modifier = asean_relations }
+	add_opinion_modifier = { target = VIE modifier = asean_relations }
+	reverse_add_opinion_modifier = { target = VIE modifier = asean_relations }
+
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 210 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 102 }
+	add_to_array = { influence_array = CHI.id }
+	add_to_array = { influence_array_val = 98 }
+	add_to_array = { influence_array = RAJ.id }
+	add_to_array = { influence_array_val = 26 }
+	add_to_array = { influence_array = AST.id }
+	add_to_array = { influence_array_val = 44 }
+	add_to_array = { influence_array = MAY.id }
+	add_to_array = { influence_array_val = 9 }
+	add_to_array = { influence_array = HOL.id }
+	add_to_array = { influence_array_val = 9 }
+	add_to_array = { influence_array = SOV.id }
+	add_to_array = { influence_array_val = 12 }
+	startup_influence = yes
+
+	### Economy
+	set_variable = { var = debt value = 1052.183 }
+	set_variable = { var = treasury value = 39.4 }
+	set_variable = { var = int_investments value = 3 }
+	set_variable = { var = corporate_tax_rate value = 18 }
+	set_variable = { var = population_tax_rate value = 27 }
+
+	# Custom Investment Targets for Indonesia
+	add_to_array = { IND.investment_targets = SIN } # Singapore
+	add_to_array = { IND.investment_targets = CBD } # Cambodia
+	add_to_array = { IND.investment_targets = VIE } # Vietnam
+	add_to_array = { IND.investment_targets = PHI } # Philippines
+	add_to_array = { IND.investment_targets = AST } # Australia
+	add_to_array = { IND.investment_targets = CHI } # China
+	add_to_array = { IND.investment_targets = RAJ } # India
+	add_to_array = { IND.investment_targets = BAN } # Bangladesh
+	add_to_array = { IND.investment_targets = SIA } # Thailand
+	add_to_array = { IND.investment_targets = BRM } # Myanmar
+	add_to_array = { IND.investment_targets = SRI } # Sri Lanka
+	add_to_array = { IND.investment_targets = JAP } # Japan
+	add_to_array = { IND.investment_targets = FRA } # France
+	set_country_flag = investment_targets_are_set_up
+
+	add_to_array = { IND.influence_targets = CBD }
+	add_to_array = { IND.influence_targets = VIE }
+	add_to_array = { IND.influence_targets = LAO }
+	add_to_array = { IND.influence_targets = PHI }
+	add_to_array = { IND.influence_targets = SIN }
+	add_to_array = { IND.influence_targets = MAD }
+	add_to_array = { IND.influence_targets = AST }
+	add_to_array = { IND.influence_targets = NZL }
+	add_to_array = { IND.influence_targets = PAP }
+	add_to_array = { IND.influence_targets = SRI }
+	add_to_array = { IND.influence_targets = TIM }
+	add_to_array = { IND.influence_targets = MAY }
+
+	set_popularities = {
+		democratic = 49.6
+		communism = 38.3
+		fascism = 0.0
+		neutrality = 10.7
+		nationalist = 1.4
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1999.4.1"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	### Party Popularities
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.424 } #conservatism
+	set_variable = { party_pop_array^2 = 0.071 } #liberalism
+	set_variable = { party_pop_array^3 = 0.001 } #socialism
+	set_variable = { party_pop_array^4 = 0.05 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.33 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0.003 } #Conservative
+	set_variable = { party_pop_array^7 = 0.0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0.107 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0.014 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+
+	### Ruling Party
+	add_to_array = { ruling_party = 1 }
+
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Abdurrahman Wahid"
+		picture = "Abdurrahman_Wahid.dds"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+		}
+	}
+	set_variable = { term_limit = 2 }
+	set_variable = { current_term = 1 }
+
+	recruit_character = IND_tyasno_sudarto
+	recruit_character = IND_endriartono_sutarto
+	recruit_character = IND_ryamizard_ryacudu
+	recruit_character = IND_djoko_santoso
+	recruit_character = IND_achmad_sutjipto
+	recruit_character = IND_indroko_sastrowiryono
+	recruit_character = IND_bernard_kent_sondakh
+	recruit_character = IND_hanafie_asnan
+	recruit_character = IND_chappy_hakim
+	recruit_character = IND_djoko_suyanto
+	recruit_character = IND_herman_prayitno
+	recruit_character = IND_bambang_darmono
+	recruit_character = IND_tubagus_hasanuddin
+	recruit_character = IND_moeldoko
+	recruit_character = IND_agus_suhartono
+	recruit_character = IND_marsetio
+
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 477 }
+	}
+	set_variable = { overall_productivity = 477 }
+}
+
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "IND_2026_nsb"
+		else = {
+			set_oob = "IND_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier3_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 4.900 }
+	set_variable = { var = debt value = 400.000 }
+	set_variable = { var = treasury value = 50 }
+	set_variable = { var = corporate_tax_rate value = 22 }
+	set_variable = { var = population_tax_rate value = 20 }
+	set_variable = { var = int_investments value = 25 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 550 }
+	}
+	set_variable = { overall_productivity = 550 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 55.0
+		communism = 25.0
+		fascism = 0.0
+		neutrality = 15.0
+		nationalist = 5.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2024.2.14"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^20 = 0.350 }   #Nat_Populism (Gerindra/Prabowo)
+	set_variable = { party_pop_array^1 = 0.200 }    #conservatism (PDI-P)
+	set_variable = { party_pop_array^5 = 0.120 }    #anarchist_communism (Golkar)
+	set_variable = { party_pop_array^14 = 0.080 }   #Neutral_conservatism (PKB/NU)
+	set_variable = { party_pop_array^12 = 0.060 }   #Neutral_Muslim_Brotherhood (PKS)
+	set_variable = { party_pop_array^2 = 0.060 }    #liberalism (NasDem)
+	set_variable = { party_pop_array^6 = 0.050 }    #Conservative (Demokrat)
+	set_variable = { party_pop_array^15 = 0.040 }   #oligarchism (PPP)
+	set_variable = { party_pop_array^4 = 0.040 }    #Communist-State (minor left)
+
+	add_to_array = { ruling_party = 20 }             #Nat_Populism (Gerindra/Prabowo)
+	add_to_array = { gov_coalition_array = 1 }        #conservatism (PDI-P/Megawati bloc)
+	add_to_array = { gov_coalition_array = 5 }        #anarchist_communism (Golkar)
+	add_to_array = { gov_coalition_array = 14 }       #Neutral_conservatism (PKB)
+
+	# 2024 presidential election results
+	set_variable = { party_pop_elect_array^20 = 0.589 }  #Prabowo-Gibran
+	set_variable = { party_pop_elect_array^1 = 0.249 }   #Ganjar-Mahfud (PDI-P)
+	set_variable = { party_pop_elect_array^6 = 0.162 }   #Anies-Muhaimin (opposition)
+
+	startup_politics = yes
+
+	### Country Leader: Prabowo Subianto ###
+	create_country_leader = {
+		name = "Prabowo Subianto"
+		picture = "gfx/leaders/IND/Prabowo_Subianto.dds"
+		expire = "2029.10.20"
+		ideology = Nat_Populism
+		traits = {
+			emerging_Nat_Populism
+			career_officer
+			captain_of_industry
+		}
+	}
+	set_variable = { term_limit = 2 }
+	set_variable = { current_term = 1 }
+
+	# Aceh conflict resolved (Helsinki MoU 2005)
+	set_country_flag = ACE1
+
+	# Base MD pre-completed focuses (2000-2026)
+	# Ethnic tension / anti-radicalism branch
+	complete_national_focus = IND_ethnic_tension
+	complete_national_focus = IND_maluku_just_fix_it
+	complete_national_focus = IND_maluku_call_army
+	complete_national_focus = IND_maluku_militarize_villages
+	complete_national_focus = IND_maluku_increase_policing
+	complete_national_focus = IND_maluku_civilian_shelter
+	complete_national_focus = IND_maluku_all_quiet_for_now
+	complete_national_focus = IND_combat_it
+	complete_national_focus = IND_investigate_growth
+	complete_national_focus = IND_start_media_campaign
+	complete_national_focus = IND_derad_campaign
+	complete_national_focus = IND_bolster_party_pop
+	complete_national_focus = IND_rallies_schools
+	complete_national_focus = IND_bolster_nationalism
+	complete_national_focus = IND_filter_net
+	complete_national_focus = IND_curb_fpi
+	complete_national_focus = IND_arrest_members
+	complete_national_focus = IND_persecute
+
+	# Economic / domestic branch
+	complete_national_focus = IND_indonesias_future
+	complete_national_focus = IND_asia_financial_crisis
+	complete_national_focus = IND_grasberg_mine_exploitation
+	complete_national_focus = IND_chinese_aid
+	complete_national_focus = IND_chin_aid_gas_plants
+	complete_national_focus = IND_chin_aid_coal
+	complete_national_focus = IND_chin_aid_coal_surplus
+	complete_national_focus = IND_chin_aid_ev
+	complete_national_focus = IND_chin_aid_catl
+	complete_national_focus = IND_chin_aid_pollution
+	complete_national_focus = IND_chin_aid_inf
+	complete_national_focus = IND_chin_aid_high_railway
+	complete_national_focus = IND_chin_aid_tollway
+	complete_national_focus = IND_new_capital
+	complete_national_focus = IND_new_silkroad
+	complete_national_focus = IND_our_policies
+	complete_national_focus = IND_kemendegari
+	complete_national_focus = IND_shun_corruption
+	complete_national_focus = IND_kpk
+	complete_national_focus = IND_trial_corrupt_official
+	complete_national_focus = IND_more_jobs
+	complete_national_focus = IND_rural_fortification
+	complete_national_focus = IND_fund_industries
+	complete_national_focus = IND_education_question
+	complete_national_focus = IND_religious_system
+	complete_national_focus = IND_quran_class
+	complete_national_focus = IND_separate_school
+	complete_national_focus = IND_mandatory_education
+	complete_national_focus = IND_fix_rupiah
+	complete_national_focus = IND_crackdown_counterfiet
+	complete_national_focus = IND_cooperate_local_gov
+	complete_national_focus = IND_lower_interest_rates
+	complete_national_focus = IND_farmers_in_industry
+	complete_national_focus = IND_begin_projects
+	complete_national_focus = IND_fight_rising_prices
+	complete_national_focus = IND_proficient_supply
+	complete_national_focus = IND_connect_docks
+	complete_national_focus = IND_a_resilient_currency
+	complete_national_focus = IND_satisfied_nation
+
+	# Military branch
+	complete_national_focus = IND_indonesian_armed_forces
+	complete_national_focus = IND_tni_ad
+	complete_national_focus = IND_tni_al
+	complete_national_focus = IND_tni_au
+	complete_national_focus = IND_purchase_rafale_jets
+
+	# Aceh branch (conflict resolved by 2005)
+	complete_national_focus = IND_help_aceh
+	complete_national_focus = IND_send_aid_package
+	complete_national_focus = IND_bring_resistance_down_one
+	complete_national_focus = IND_bring_resistance_down_two
+	complete_national_focus = IND_bring_resistance_down_three
+	complete_national_focus = IND_bring_resistance_down_four
+
+	# MD2026 pre-completed focuses
+	complete_national_focus = md2026_idn_nusantara_capital
+	complete_national_focus = md2026_idn_nickel_export
+}

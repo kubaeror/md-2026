@@ -1,0 +1,442 @@
+capital = 337
+2000.1.1 = {
+	set_cosmetic_tag = NIG
+	set_country_flag = dynamic_flag
+	set_country_flag = dynamic_rebel_flag
+	set_variable = { gdp_per_capita = 2.963 }
+
+	complete_special_project = sp:sp_helicopter_project
+
+	set_naval_oob = "NIG_2000_naval_mtg"
+
+		set_technology = {
+			tech_early_naval_weapon_systems = 1
+			corvette_hull_1 = 1
+			corvette_hull_2 = 1
+			destroyer_hull_1 = 1
+			destroyer_hull_2 = 1
+			tech_naval_systems_engineering = 1
+			tech_landing_craft = 1
+		}
+
+	if = { limit = { has_dlc = "No Step Back" }
+
+		set_oob = "NIG_2000_nsb"
+
+		set_technology = {
+			helo_ops_tech = 1
+			nsb_transport_helicopter1 = 1
+			mbt_tech_ops = 1
+
+			nsb_artillery_0 = 1
+
+			nsb_Anti_Air_0 = 1
+		}
+
+		else = {
+			set_oob = "NIG_2000_nonnsb"
+
+			set_technology = {
+				Early_APC = 1
+				APC_1 = 1
+				MBT_1 = 1
+				IFV_1 = 1
+				artillery_0 = 1
+				SP_arty_0 = 1
+				Anti_Air_0 = 1
+				SP_Anti_Air_0 = 1
+				Rec_tank_0 = 1
+			}
+		}
+	}
+
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "NIG_2000_bba"
+		else = {
+			set_air_oob = "NIG_2000_nonbba"
+		}
+	}
+	add_ideas = {
+		paralyzing_corruption
+		ecowas_member_state
+		fifty_fifty_divide
+		youth_radicalization
+		recession
+		OAU_member
+		defence_01
+		edu_01
+		health_01
+		social_02
+		bureau_01
+		police_01
+		export_economy
+		volunteer_army
+		volunteer_women
+		USA_usaid #https://explorer.usaid.gov/aid-dashboard.html
+		fossil_fuel_industry
+		oligarchs
+		small_medium_business_owners
+		NIG_uncontrollable_population_growth_idea
+		multi_ethnic_state_idea
+		commonwealth_of_nations_member
+		NIG_unrestrained_piracy_idea
+		officer_basic_training
+		NIG_blood_oil_idea
+		NIG_bakassi_occupation_idea
+	}
+
+	#CT
+	set_country_flag = threat_level_substantial
+	set_variable = { threat_level = 45 }
+	set_variable = { radicalization = 25 }
+	add_to_array = { global.ct_states = THIS }
+
+	#Influence system
+	add_to_array = { NIG.influence_targets = BEN }
+	add_to_array = { NIG.influence_targets = CAM }
+	add_to_array = { NIG.influence_targets = TOG }
+	add_to_array = { NIG.influence_targets = GAH }
+	add_to_array = { NIG.influence_targets = NGR }
+	add_to_array = { NIG.influence_targets = CHA }
+	add_to_array = { NIG.influence_targets = CDI }
+	add_to_array = { NIG.influence_targets = MAL }
+	add_to_array = { NIG.influence_targets = BFA }
+	add_to_array = { NIG.influence_targets = CAR }
+
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 130 }
+	add_to_array = { influence_array = AGL.id }
+	add_to_array = { influence_array_val = 5 }
+	add_to_array = { influence_array = GAH.id }
+	add_to_array = { influence_array_val = 15 }
+	add_to_array = { influence_array = NGR.id }
+	add_to_array = { influence_array_val = 11 }
+	add_to_array = { influence_array = CAN.id }
+	add_to_array = { influence_array_val = 30 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 70 }
+	add_to_array = { influence_array = CHI.id }
+	add_to_array = { influence_array_val = 90 }
+	add_to_array = { influence_array = ENG.id }
+	add_to_array = { influence_array_val = 50 }
+	startup_influence = yes
+
+	set_variable = { oligarchs_opinion = 20 }
+	set_variable = { fossil_fuel_industry_opinion = 80 }
+
+	set_variable = { var = debt value = 203 }
+	set_variable = { var = treasury value = 23 }
+	set_variable = { var = corporate_tax_rate value = 18 }
+	set_variable = { var = population_tax_rate value = 17 }
+	set_variable = { var = int_investments value = 3 }
+
+	# Ambazonia Content
+	CAM = {
+		give_resource_rights = {
+			receiver = NIG
+			state = 322
+			resources = { oil }
+		}
+	}
+
+	add_opinion_modifier = { target = GAH modifier = english_speaking }
+	reverse_add_opinion_modifier = { target = GAH modifier = english_speaking }
+
+	set_technology = {
+		integrated_transportation_system = 1
+		post_conventional_rail = 1
+		early_freight_locomotive = 1
+
+
+		infantry_mass_assault = 1
+		night_vision_1 = 1
+
+		# Igrigi
+		util_vehicle_0 = 1
+
+		#For templates
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		combat_eng_equipment = 1
+		command_control_equipment = 1
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+
+		camouflage = 1
+		camouflage2 = 1
+
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		decryption1 = 1
+		encryption1 = 1
+
+		radar = 1
+		internet1 = 1 	#1G
+		fuel_silos = 1
+
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
+		fuel_refining = 1
+		construction1 = 1
+	}
+
+	set_popularities = {
+		democratic = 27.0
+		communism = 28.0
+		fascism = 9.0
+		neutrality = 34.0
+		nationalist = 2.0
+	}
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1999.2.27"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	### Party Popularities
+	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
+	set_variable = { party_pop_array^1 = 0.11 } #conservatism
+	set_variable = { party_pop_array^2 = 0.06 } #liberalism
+	set_variable = { party_pop_array^3 = 0.1 } #socialism
+	set_variable = { party_pop_array^4 = 0.19 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.05 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0.04 } #Conservative
+	set_variable = { party_pop_array^7 = 0 } #Autocracy
+	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
+	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
+	set_variable = { party_pop_array^10 = 0 } #Kingdom
+	set_variable = { party_pop_array^11 = 0.09 } #Caliphate
+	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^13 = 0 } #Neutral_Autocracy
+	set_variable = { party_pop_array^14 = 0.31 } #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0 } #oligarchism
+	set_variable = { party_pop_array^16 = 0 } #Neutral_Libertarian
+	set_variable = { party_pop_array^17 = 0.03 } #Neutral_green
+	set_variable = { party_pop_array^18 = 0 } #neutral_Social
+	set_variable = { party_pop_array^19 = 0 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0.02 } #Nat_Populism
+	set_variable = { party_pop_array^21 = 0 } #Nat_Fascism
+	set_variable = { party_pop_array^22 = 0 } #Nat_Autocracy
+	set_variable = { party_pop_array^23 = 0 } #Monarchist
+
+	### Ruling Party
+	add_to_array = { ruling_party = 14 }
+
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Olusegun Obasanjo"
+		picture = "olusegun_obasanjo.dds"
+		ideology = Neutral_conservatism
+		traits = {
+			neutrality_Neutral_conservatism
+			military_career
+			silent_workhorse
+		}
+	}
+	set_variable = { term_limit = 2 }
+	set_variable = { current_term = 1 }
+
+	recruit_character = NIG_a_abubakar
+	recruit_character = NIG_a_oyebade
+	recruit_character = NIG_ibok_ibas
+	recruit_character = NIG_sadiq_abubakar
+	recruit_character = NIG_c_abraham
+	recruit_character = NIG_e_oyefolu
+	recruit_character = NIG_e_udoh
+	recruit_character = NIG_p_dauke
+	recruit_character = NIG_m_koleoso
+	recruit_character = NIG_k_minimah
+
+	set_variable = { literacy_rate = 0.548 }
+
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 640 }
+	}
+	set_variable = { overall_productivity = 640 }
+}
+
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "NIG_2026_nsb"
+		else = {
+			set_oob = "NIG_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier4_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 2.200 }
+	set_variable = { var = debt value = 100.000 }
+	set_variable = { var = treasury value = 15 }
+	set_variable = { var = corporate_tax_rate value = 30 }
+	set_variable = { var = population_tax_rate value = 8 }
+	set_variable = { var = int_investments value = 10 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 300 }
+	}
+	set_variable = { overall_productivity = 300 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 20.0
+		communism = 20.0
+		fascism = 10.0
+		neutrality = 40.0
+		nationalist = 10.0
+	}
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "2023.2.25"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^14 = 0.350 }   #Neutral_conservatism (APC/Tinubu)
+	set_variable = { party_pop_array^1 = 0.200 }    #conservatism (PDP)
+	set_variable = { party_pop_array^2 = 0.100 }    #liberalism (Labour/Obi wing)
+	set_variable = { party_pop_array^15 = 0.080 }   #oligarchism (business elite)
+	set_variable = { party_pop_array^11 = 0.080 }   #Caliphate (northern Islamic)
+	set_variable = { party_pop_array^20 = 0.060 }   #Nat_Populism (populist movements)
+	set_variable = { party_pop_array^3 = 0.050 }    #socialism (NNPP/minor)
+	set_variable = { party_pop_array^7 = 0.040 }    #Autocracy (military establishment)
+	set_variable = { party_pop_array^6 = 0.040 }    #Conservative (traditional elders)
+
+	add_to_array = { ruling_party = 14 }             #Neutral_conservatism (APC)
+	add_to_array = { gov_coalition_array = 15 }       #oligarchism
+
+	# 2023 presidential election results
+	set_variable = { party_pop_elect_array^14 = 0.367 }  #Tinubu (APC)
+	set_variable = { party_pop_elect_array^1 = 0.291 }   #Atiku (PDP)
+	set_variable = { party_pop_elect_array^2 = 0.254 }   #Obi (Labour)
+
+	startup_politics = yes
+
+	### Country Leader: Bola Ahmed Tinubu ###
+	create_country_leader = {
+		name = "Bola Ahmed Tinubu"
+		picture = "gfx/leaders/NIG/Bola_Tinubu.dds"
+		expire = "2027.5.29"
+		ideology = Neutral_conservatism
+		traits = {
+			neutrality_Neutral_conservatism
+			career_politician
+			captain_of_industry
+		}
+	}
+	set_variable = { term_limit = 2 }
+	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (2000-2026)
+	# Religious divide branch
+	complete_national_focus = NIG_religious_divide
+	complete_national_focus = NIG_fifty_fifty
+	complete_national_focus = NIG_tolerance
+	complete_national_focus = NIG_islamic_tolerance
+	complete_national_focus = NIG_christian_faiths
+	complete_national_focus = NIG_separation_of_church_and_state
+	complete_national_focus = NIG_land_of_harmony
+
+	# Federal government branch
+	complete_national_focus = NIG_federal_government_of_nigeria
+	complete_national_focus = NIG_constiution_reforms
+	complete_national_focus = NIG_the_nigerian_model
+	complete_national_focus = NIG_the_pdp
+	complete_national_focus = NIG_social_conservatism
+	complete_national_focus = NIG_national_health_care_service
+	complete_national_focus = NIG_found_the_ntel
+	complete_national_focus = NIG_balanced_budgets
+	complete_national_focus = NIG_free_market
+	complete_national_focus = NIG_the_way_of_bible
+	complete_national_focus = NIG_christian_tradtionalism
+	complete_national_focus = NIG_adminstrative_reforms
+	complete_national_focus = NIG_reform_the_economic_departments
+	complete_national_focus = NIG_found_the_icpc
+	complete_national_focus = NIG_cut_the_waste
+	complete_national_focus = NIG_foreign_grants
+	complete_national_focus = NIG_piracy_and_militias
+	complete_national_focus = NIG_simpify_government_processes
+	complete_national_focus = NIG_the_togo_triangle
+	complete_national_focus = NIG_population_crisis
+	complete_national_focus = NIG_stabilize_the_regime
+	complete_national_focus = NIG_industrial_regulations
+	complete_national_focus = NIG_poverty_issues
+	complete_national_focus = NIG_petition_to_continue_usaid
+	complete_national_focus = NIG_expand_the_safety_net
+	complete_national_focus = NIG_efficent_government_spending
+	complete_national_focus = NIG_anti_debt_agenda
+
+	# Economic / industrial branch
+	complete_national_focus = NIG_bankers_of_africa
+	complete_national_focus = NIG_bankroll_africa
+	complete_national_focus = NIG_lagos_financial_centre
+	complete_national_focus = NIG_water_crisis
+	complete_national_focus = NIG_reform_water_legislation
+	complete_national_focus = NIG_nigerian_industry
+	complete_national_focus = NIG_nigerian_agricultural_belt
+	complete_national_focus = NIG_education_programs
+	complete_national_focus = NIG_african_investments
+	complete_national_focus = NIG_abuja_road_projects
+	complete_national_focus = NIG_middle_belt_legislation
+	complete_national_focus = NIG_reckless_agriculture
+	complete_national_focus = NIG_northern_factories
+	complete_national_focus = NIG_local_arms_companies
+	complete_national_focus = NIG_spur_regional_development
+	complete_national_focus = NIG_support_the_people
+	complete_national_focus = NIG_desalination_projects
+	complete_national_focus = NIG_nigerian_oil
+	complete_national_focus = NIG_homegrown_design
+	complete_national_focus = NIG_neighborly_expansion
+	complete_national_focus = NIG_west_african_highways
+	complete_national_focus = NIG_agricultural_investments
+	complete_national_focus = NIG_industrial_expansions
+	complete_national_focus = NIG_found_the_ndcc
+	complete_national_focus = NIG_browning_contracts
+	complete_national_focus = NIG_consolidations_of_arms
+	complete_national_focus = NIG_european_investments
+	complete_national_focus = NIG_hydroelectric_power_projects
+	complete_national_focus = NIG_sustainable_development
+
+	# Military branch
+	complete_national_focus = NIG_nigerian_armed_forces
+	complete_national_focus = NIG_defense_industries_of_nigeria
+	complete_national_focus = NIG_the_army
+	complete_national_focus = NIG_rifle_compositions
+	complete_national_focus = NIG_light_forces_investments
+	complete_national_focus = NIG_western_military_assistance
+	complete_national_focus = NIG_combined_arms
+	complete_national_focus = NIG_armor_production
+	complete_national_focus = NIG_nigerian_coastal_forces
+	complete_national_focus = NIG_lagos_drydocks
+	complete_national_focus = NIG_royal_naval_doctrines
+	complete_national_focus = NIG_air_components
+	complete_national_focus = NIG_helicopter_requests
+	complete_national_focus = NIG_multirole_fighters
+	complete_national_focus = NIG_strike_fighters
+	complete_national_focus = NIG_resource_drives
+	complete_national_focus = NIG_northern_armories
+	complete_national_focus = NIG_abuja_armories
+	complete_national_focus = NIG_national_guard
+	complete_national_focus = NIG_kaduna_military_industries
+	complete_national_focus = NIG_peacekeepers_of_africa
+	complete_national_focus = NIG_victory_is_from_god
+	complete_national_focus = NIG_frigates
+	complete_national_focus = NIG_light_submarines
+	complete_national_focus = NIG_corvettes
+
+	# MD2026 pre-completed focuses
+	complete_national_focus = md2026_nga_ecowas_leadership
+	complete_national_focus = md2026_nga_boko_haram_crackdown
+}
