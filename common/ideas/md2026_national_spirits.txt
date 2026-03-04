@@ -182,6 +182,33 @@ ideas = {
 			}
 		}
 
+		md2026_isr_ceasefire_dividend = {
+			picture = economic_growth
+			allowed = { original_tag = ISR }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.08
+				consumer_goods_factor = -0.03
+				political_power_factor = 0.05
+				war_support_factor = -0.05
+			}
+		}
+
+		md2026_isr_peace_dividend = {
+			picture = economic_boom
+			allowed = { original_tag = ISR }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.08
+				political_power_factor = 0.10
+				production_speed_buildings_factor = 0.10
+				trade_opinion_factor = 0.15
+				war_support_factor = -0.10
+				conscription = -0.01
+			}
+		}
+
 		### TURKEY ###
 
 		md2026_tur_erdogan_autocracy = {

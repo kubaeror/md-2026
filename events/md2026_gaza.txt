@@ -1,0 +1,272 @@
+add_namespace = md2026_gaza
+
+### Gaza Ceasefire Cycle Event Chain ###
+# .1  - Interim Ceasefire Agreement (ISR, early game)
+# .2  - Hostage Exchange Under Way (ISR, follows ceasefire)
+# .3  - Ceasefire Collapses (ISR, date-triggered)
+# .4  - Israel Resumes Large-Scale Operations (ISR, follows collapse)
+# .5  - Trump Comprehensive Peace Plan (ISR, late 2025 date)
+# .6  - International Reaction to Peace Plan (news event)
+
+### .1 - Interim Ceasefire Agreement ###
+country_event = {
+	id = md2026_gaza.1
+	title = md2026_gaza.1.t
+	desc = md2026_gaza.1.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = ISR
+		has_global_flag = md2026_initialized
+		date > 2026.1.15
+		NOT = { has_country_flag = md2026_gaza_ceasefire_1 }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	# Accept the ceasefire — prioritize hostage recovery
+	option = {
+		name = md2026_gaza.1.a
+		ai_chance = { base = 70 }
+		set_country_flag = md2026_gaza_ceasefire_1
+		set_country_flag = md2026_gaza_ceasefire_active
+		add_stability = 0.08
+		add_war_support = -0.10
+		add_political_power = 50
+		add_ideas = md2026_isr_ceasefire_dividend
+		USA = {
+			add_opinion_modifier = { target = ISR modifier = md2026_improved_relations }
+		}
+		EGY = {
+			add_opinion_modifier = { target = ISR modifier = md2026_improved_relations }
+		}
+		country_event = { id = md2026_gaza.2 days = 30 }
+		country_event = { id = md2026_gaza.3 days = 90 }
+	}
+
+	# Reject the terms — continue operations
+	option = {
+		name = md2026_gaza.1.b
+		ai_chance = { base = 30 }
+		set_country_flag = md2026_gaza_ceasefire_1
+		add_war_support = 0.10
+		add_stability = -0.10
+		add_political_power = -50
+		every_country = {
+			limit = {
+				OR = {
+					original_tag = EGY
+					original_tag = SAU
+					original_tag = TUR
+					original_tag = JOR
+				}
+			}
+			add_opinion_modifier = { target = ISR modifier = md2026_diplomatic_disapproval }
+		}
+	}
+}
+
+### .2 - Hostage Exchange Under Way ###
+country_event = {
+	id = md2026_gaza.2
+	title = md2026_gaza.2.t
+	desc = md2026_gaza.2.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Successful exchange — domestic relief
+	option = {
+		name = md2026_gaza.2.a
+		ai_chance = { base = 70 }
+		set_country_flag = md2026_gaza_hostages_returned
+		add_stability = 0.10
+		add_political_power = 75
+		add_war_support = -0.05
+	}
+
+	# Partial exchange — some hostages still held
+	option = {
+		name = md2026_gaza.2.b
+		ai_chance = { base = 30 }
+		add_stability = 0.03
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+### .3 - Ceasefire Collapses ###
+country_event = {
+	id = md2026_gaza.3
+	title = md2026_gaza.3.t
+	desc = md2026_gaza.3.d
+	picture = GFX_report_event_generic_crisis
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Resume operations — the ceasefire has failed
+	option = {
+		name = md2026_gaza.3.a
+		ai_chance = { base = 60 }
+		set_country_flag = md2026_gaza_ceasefire_collapsed
+		clr_country_flag = md2026_gaza_ceasefire_active
+		remove_ideas = md2026_isr_ceasefire_dividend
+		add_war_support = 0.15
+		add_stability = -0.10
+		add_political_power = -50
+		army_experience = 15
+		country_event = { id = md2026_gaza.4 days = 14 }
+	}
+
+	# Attempt to salvage negotiations
+	option = {
+		name = md2026_gaza.3.b
+		ai_chance = { base = 40 }
+		set_country_flag = md2026_gaza_ceasefire_collapsed
+		clr_country_flag = md2026_gaza_ceasefire_active
+		remove_ideas = md2026_isr_ceasefire_dividend
+		add_stability = -0.05
+		add_political_power = -25
+		USA = {
+			add_opinion_modifier = { target = ISR modifier = md2026_improved_relations }
+		}
+	}
+}
+
+### .4 - Israel Resumes Large-Scale Operations ###
+country_event = {
+	id = md2026_gaza.4
+	title = md2026_gaza.4.t
+	desc = md2026_gaza.4.d
+	picture = GFX_report_event_generic_crisis
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Full-scale operation — secure remaining objectives
+	option = {
+		name = md2026_gaza.4.a
+		ai_chance = { base = 70 }
+		add_war_support = 0.10
+		add_stability = -0.08
+		army_experience = 25
+		add_political_power = -75
+		every_country = {
+			limit = {
+				OR = {
+					original_tag = TUR
+					original_tag = EGY
+					original_tag = JOR
+					original_tag = SAU
+				}
+			}
+			add_opinion_modifier = { target = ISR modifier = md2026_diplomatic_disapproval }
+		}
+	}
+
+	# Limited operations — focused strikes only
+	option = {
+		name = md2026_gaza.4.b
+		ai_chance = { base = 30 }
+		add_war_support = 0.05
+		army_experience = 15
+		add_political_power = -25
+	}
+}
+
+### .5 - Trump Comprehensive Peace Plan ###
+country_event = {
+	id = md2026_gaza.5
+	title = md2026_gaza.5.t
+	desc = md2026_gaza.5.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = ISR
+		has_global_flag = md2026_initialized
+		has_country_flag = md2026_gaza_ceasefire_1
+		date > 2026.10.1
+		NOT = { has_country_flag = md2026_gaza_trump_plan }
+		USA = { has_government = nationalist }
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	# Accept the plan — ceasefire, demilitarization, international force
+	option = {
+		name = md2026_gaza.5.a
+		ai_chance = { base = 40 }
+		set_country_flag = md2026_gaza_trump_plan
+		set_country_flag = md2026_isr_peace
+		add_stability = 0.15
+		add_political_power = 100
+		add_war_support = -0.15
+		swap_ideas = {
+			remove_idea = md2026_isr_wartime_footing
+			add_idea = md2026_isr_peace_dividend
+		}
+		USA = {
+			add_opinion_modifier = { target = ISR modifier = md2026_improved_relations }
+		}
+		EGY = {
+			add_opinion_modifier = { target = ISR modifier = md2026_normalization_opinion }
+		}
+		SAU = {
+			add_opinion_modifier = { target = ISR modifier = md2026_normalization_opinion }
+		}
+		hidden_effect = {
+			news_event = { id = md2026_gaza.6 hours = 6 }
+		}
+	}
+
+	# Reject the plan — security concerns override diplomacy
+	option = {
+		name = md2026_gaza.5.b
+		ai_chance = { base = 40 }
+		set_country_flag = md2026_gaza_trump_plan
+		add_war_support = 0.10
+		add_stability = -0.05
+		add_political_power = -50
+		USA = {
+			add_opinion_modifier = { target = ISR modifier = md2026_diplomatic_disapproval }
+		}
+	}
+
+	# Counter-proposal — modified terms
+	option = {
+		name = md2026_gaza.5.c
+		ai_chance = { base = 20 }
+		set_country_flag = md2026_gaza_trump_plan
+		add_political_power = 25
+		add_stability = 0.05
+		USA = {
+			add_opinion_modifier = { target = ISR modifier = md2026_improved_relations }
+		}
+	}
+}
+
+### .6 - International Reaction: Trump Peace Plan ###
+news_event = {
+	id = md2026_gaza.6
+	title = md2026_gaza.6.t
+	desc = md2026_gaza.6.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_gaza.6.a
+	}
+}

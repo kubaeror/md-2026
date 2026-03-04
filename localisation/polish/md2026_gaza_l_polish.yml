@@ -1,0 +1,47 @@
+﻿l_polish:
+
+ ### Gaza Ceasefire Cycle Event Chain ###
+
+ # Event 1 - Interim Ceasefire Agreement
+ md2026_gaza.1.t:0 "Gaza: tymczasowe porozumienie o zawieszeniu broni"
+ md2026_gaza.1.d:0 "Po miesiącach intensywnych negocjacji prowadzonych przez Stany Zjednoczone, Katar i Egipt, osiągnięto tymczasowe porozumienie o zawieszeniu broni w Gazie. Umowa obejmuje fazowe zaprzestanie działań wojennych i ramy wymiany jeńców/zakładników. Porozumienie jest kruche — obie strony mają zastrzeżenia, a radykałowie po każdej ze stron grożą jego zerwaniem."
+ md2026_gaza.1.a:0 "Przyjąć zawieszenie broni — sprowadzić naszych ludzi do domu."
+ md2026_gaza.1.b:0 "Warunki są nie do przyjęcia."
+
+ # Event 2 - Hostage Exchange Under Way
+ md2026_gaza.2.t:0 "Trwa wymiana zakładników"
+ md2026_gaza.2.d:0 "Rozpoczęła się pierwsza faza wymiany zakładników w ramach porozumienia o zawieszeniu broni. Izraelscy zakładnicy przetrzymywani od ataku 7 października wracają w zamian za palestyńskich więźniów. Proces jest emocjonalnie naładowany — rodziny ponownie zjednoczone, ale polityczne implikacje wymiany dzielą społeczeństwo izraelskie."
+ md2026_gaza.2.a:0 "Wszyscy zakładnicy wracają — moment narodowej ulgi."
+ md2026_gaza.2.b:0 "Tylko część zakładników uwolniona — gehenna trwa."
+
+ # Event 3 - Ceasefire Collapses
+ md2026_gaza.3.t:0 "Zawieszenie broni w Gazie upada"
+ md2026_gaza.3.d:0 "Kruche zawieszenie broni załamało się. Oskarżenia lecą z obu stron — Izrael zarzuca kontynuowanie ostrzału rakietowego i budowy tuneli, Hamas twierdzi, że Izrael naruszył harmonogram wycofywania wojsk. 18 marca siły izraelskie wznawiają operacje wojskowe na dużą skalę w Gazie. Społeczność międzynarodowa potępia załamanie, ale droga powrotna do negocjacji wydaje się daleka."
+ md2026_gaza.3.a:0 "Wznowić operacje — musimy dokończyć to, co zaczęliśmy."
+ md2026_gaza.3.b:0 "Spróbować ratować negocjacje."
+
+ # Event 4 - Israel Resumes Large-Scale Operations
+ md2026_gaza.4.t:0 "Izrael wznawia operacje na dużą skalę"
+ md2026_gaza.4.d:0 "Po upadku zawieszenia broni IDF rozpoczął odnowioną kampanię wojskową w Gazie. Operacja ma na celu rozmontowanie pozostałej infrastruktury Hamasu i zabezpieczenie stałej strefy buforowej. Krytyka międzynarodowa się nasila, ale rząd izraelski nalega, że wymogi bezpieczeństwa nie pozostawiają alternatywy."
+ md2026_gaza.4.a:0 "Pełna operacja — nie zostawiać bezpiecznej przystani."
+ md2026_gaza.4.b:0 "Tylko ograniczone, celowane uderzenia."
+
+ # Event 5 - Trump Comprehensive Peace Plan
+ md2026_gaza.5.t:0 "Kompleksowy plan pokojowy Trumpa"
+ md2026_gaza.5.d:0 "Prezydent Trump przedstawił kompleksowy plan pokojowy dla Gazy i szerszego konfliktu izraelsko-palestyńskiego. Propozycja obejmuje trwałe zawieszenie broni, zwrot wszystkich pozostałych zakładników, całkowitą demilitaryzację Gazy, rozmieszczenie międzynarodowych sił pokojowych i ścieżkę ku normalizacji saudyjsko-izraelskiej w ramach rozszerzonych Porozumień Abrahamowych."
+ md2026_gaza.5.a:0 "Przyjąć plan — nowa era pokoju."
+ md2026_gaza.5.b:0 "Odrzucić — naszego bezpieczeństwa nie można zlecić na zewnątrz."
+ md2026_gaza.5.c:0 "Kontrapropozycja ze zmienionymi warunkami."
+
+ # Event 6 - International Reaction: Peace Plan
+ md2026_gaza.6.t:0 "Plan pokojowy Trumpa przyjęty"
+ md2026_gaza.6.d:0 "W historycznym wydarzeniu Izrael przyjął kompleksowy plan pokojowy prezydenta Trumpa dla Gazy. Porozumienie wyznacza potencjalny punkt zwrotny w wieloletnim konflikcie, z międzynarodowymi siłami pokojowymi gotowymi do rozmieszczenia i przyspieszającymi rozmowami o normalizacji saudyjsko-izraelskiej."
+ md2026_gaza.6.a:0 "Historyczny moment."
+
+ ### National Spirit Localisation ###
+
+ md2026_isr_ceasefire_dividend:0 "Dywidenda z zawieszenia broni"
+ md2026_isr_ceasefire_dividend_desc:0 "Tymczasowe zawieszenie broni w Gazie przyniosło chwilową ulgę. Presja międzynarodowa słabnie, napięcia wewnętrzne częściowo ustępują, a gospodarka zaczyna się stabilizować po miesiącach mobilizacji wojennej."
+
+ md2026_isr_peace_dividend:0 "Dywidenda pokojowa"
+ md2026_isr_peace_dividend_desc:0 "Przyjęcie kompleksowego planu pokojowego zmieniło pozycję międzynarodową Izraela. Stosunki handlowe się normalizują, wydatki wojskowe mogą być przekierowane na cele cywilne, a fala optymizmu napędza wzrost gospodarczy."

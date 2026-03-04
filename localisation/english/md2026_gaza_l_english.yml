@@ -1,0 +1,47 @@
+﻿l_english:
+
+ ### Gaza Ceasefire Cycle Event Chain ###
+
+ # Event 1 - Interim Ceasefire Agreement
+ md2026_gaza.1.t:0 "Gaza: Interim Ceasefire Agreement"
+ md2026_gaza.1.d:0 "After months of intense negotiations mediated by the United States, Qatar, and Egypt, an interim ceasefire agreement has been reached for Gaza. The deal includes a phased cessation of hostilities and a prisoner/hostage exchange framework. The agreement is fragile — both sides have reservations, and hardliners on each side threaten to derail it."
+ md2026_gaza.1.a:0 "Accept the ceasefire — bring our people home."
+ md2026_gaza.1.b:0 "The terms are unacceptable."
+
+ # Event 2 - Hostage Exchange Under Way
+ md2026_gaza.2.t:0 "Hostage Exchange Under Way"
+ md2026_gaza.2.d:0 "The first phase of the hostage exchange has begun under the ceasefire agreement. Israeli hostages held since the October 7th attack are being returned in exchange for Palestinian prisoners. The process is emotionally charged — families reunited, but the political implications of the exchange divide Israeli society."
+ md2026_gaza.2.a:0 "All hostages are returned — a moment of national relief."
+ md2026_gaza.2.b:0 "Only some hostages are released — the ordeal continues."
+
+ # Event 3 - Ceasefire Collapses
+ md2026_gaza.3.t:0 "Gaza Ceasefire Collapses"
+ md2026_gaza.3.d:0 "The fragile ceasefire has collapsed. Accusations fly from both sides — Israel alleges continued rocket fire and tunnel construction, while Hamas claims Israeli violations of withdrawal timelines. On March 18th, Israeli forces resume large-scale military operations in Gaza. The international community condemns the breakdown, but the path back to negotiations appears distant."
+ md2026_gaza.3.a:0 "Resume operations — we must finish what we started."
+ md2026_gaza.3.b:0 "Try to salvage negotiations."
+
+ # Event 4 - Israel Resumes Large-Scale Operations
+ md2026_gaza.4.t:0 "Israel Resumes Large-Scale Operations"
+ md2026_gaza.4.d:0 "With the ceasefire in ruins, the IDF has launched a renewed military campaign in Gaza. The operation aims to dismantle remaining Hamas infrastructure and secure a permanent buffer zone. International criticism intensifies, but the Israeli government insists that security demands leave no alternative."
+ md2026_gaza.4.a:0 "Full-scale operation — leave no safe haven."
+ md2026_gaza.4.b:0 "Limited, targeted strikes only."
+
+ # Event 5 - Trump Comprehensive Peace Plan
+ md2026_gaza.5.t:0 "Trump Comprehensive Peace Plan"
+ md2026_gaza.5.d:0 "President Trump has unveiled a comprehensive peace plan for Gaza and the broader Israeli-Palestinian conflict. The proposal includes a permanent ceasefire, return of all remaining hostages, complete demilitarization of Gaza, deployment of an international peacekeeping force, and a pathway toward Saudi-Israeli normalization through an expanded Abraham Accords framework."
+ md2026_gaza.5.a:0 "Accept the plan — a new era of peace."
+ md2026_gaza.5.b:0 "Reject — our security cannot be outsourced."
+ md2026_gaza.5.c:0 "Counter-propose with modified terms."
+
+ # Event 6 - International Reaction: Peace Plan
+ md2026_gaza.6.t:0 "Trump Peace Plan Accepted"
+ md2026_gaza.6.d:0 "In a historic development, Israel has accepted President Trump's comprehensive peace plan for Gaza. The agreement marks a potential turning point in the decades-long conflict, with an international peacekeeping force set to deploy and Saudi-Israeli normalization talks accelerating."
+ md2026_gaza.6.a:0 "A historic moment."
+
+ ### National Spirit Localisation ###
+
+ md2026_isr_ceasefire_dividend:0 "Ceasefire Dividend"
+ md2026_isr_ceasefire_dividend_desc:0 "The interim ceasefire in Gaza has brought a temporary reprieve. International pressure eases, domestic tensions subside slightly, and the economy begins to stabilize after months of wartime mobilization."
+
+ md2026_isr_peace_dividend:0 "Peace Dividend"
+ md2026_isr_peace_dividend_desc:0 "The acceptance of a comprehensive peace plan has transformed Israel's international standing. Trade relations normalize, military spending can be redirected to civilian purposes, and a wave of optimism drives economic growth."
