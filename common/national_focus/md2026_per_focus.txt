@@ -468,7 +468,7 @@ shared_focus = {
 			name = MD2026_PER_drone_program
 			bonus = 1.0
 			uses = 2
-			category = cat_battlefield_support
+			category = CAT_battlefield_support
 		}
 	}
 	ai_will_do = {
