@@ -1,86 +1,114 @@
-focus_tree = {
-	id = md2026_mex_focus
+### MD2026 Mexico Focus Branch ###
+# Shared focuses for Mexico's 2026 focus tree branch
+# Root focus at absolute x=38, y=0
 
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = MEX
-			has_global_flag = md2026_initialized
-		}
+shared_focus = {
+	id = md2026_mex_amlo_legacy
+	icon = GFX_goal_generic_political_pressure
+	x = 38
+	y = 0
+	cost = 10
+	allow_branch = {
+		original_tag = MEX
+		has_global_flag = md2026_initialized
 	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_amlo_legacy"
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	ai_will_do = { factor = 1 }
+}
 
-	default = no
+shared_focus = {
+	id = md2026_mex_usmca_trade
+	icon = GFX_goal_generic_trade
+	x = -2
+	y = 1
+	relative_position_id = md2026_mex_amlo_legacy
+	prerequisite = { focus = md2026_mex_amlo_legacy }
+	cost = 10
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_usmca_trade"
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+	ai_will_do = { factor = 1 }
+}
 
-	focus = {
-		id = mex_amlo_legacy
-		icon = GFX_goal_generic_political_pressure
-		x = 2
-		y = 0
-		cost = 10
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_political_power = 50 add_stability = 0.05
+shared_focus = {
+	id = md2026_mex_cartel_war
+	icon = GFX_goal_generic_attack_allies
+	x = 2
+	y = 1
+	relative_position_id = md2026_mex_amlo_legacy
+	prerequisite = { focus = md2026_mex_amlo_legacy }
+	cost = 10
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_cartel_war"
+		add_war_support = 0.1
+		add_stability = -0.05
+	}
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = md2026_mex_nearshoring
+	icon = GFX_goal_generic_production
+	x = -2
+	y = 2
+	relative_position_id = md2026_mex_amlo_legacy
+	prerequisite = { focus = md2026_mex_usmca_trade }
+	cost = 10
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_nearshoring"
+		add_building_construction = {
+			type = industrial_complex
+			level = 3
+			instant_build = yes
 		}
 	}
-	focus = {
-		id = mex_usmca_trade
-		icon = GFX_goal_generic_trade
-		x = 0
-		y = 1
-		cost = 10
-		prerequisite = { focus = mex_amlo_legacy }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = md2026_mex_national_guard
+	icon = GFX_goal_generic_army_motorized
+	x = 2
+	y = 2
+	relative_position_id = md2026_mex_amlo_legacy
+	prerequisite = { focus = md2026_mex_cartel_war }
+	cost = 10
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_national_guard"
+		add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 0.5
+			uses = 1
+			category = land_doctrine
 		}
 	}
-	focus = {
-		id = mex_cartel_war
-		icon = GFX_goal_generic_attack_allies
-		x = 4
-		y = 1
-		cost = 10
-		prerequisite = { focus = mex_amlo_legacy }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_war_support = 0.1 add_stability = -0.05
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = md2026_mex_pemex_reform
+	icon = GFX_goal_generic_oil_refinery
+	x = 0
+	y = 3
+	relative_position_id = md2026_mex_amlo_legacy
+	prerequisite = { focus = md2026_mex_nearshoring focus = md2026_mex_national_guard }
+	cost = 10
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_pemex_reform"
+		add_building_construction = {
+			type = synthetic_refinery
+			level = 2
+			instant_build = yes
 		}
 	}
-	focus = {
-		id = mex_nearshoring
-		icon = GFX_goal_generic_production
-		x = 0
-		y = 2
-		cost = 10
-		prerequisite = { focus = mex_usmca_trade }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
-		}
-	}
-	focus = {
-		id = mex_national_guard
-		icon = GFX_goal_generic_army_motorized
-		x = 4
-		y = 2
-		cost = 10
-		prerequisite = { focus = mex_cartel_war }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_tech_bonus = { name = land_doc_bonus bonus = 0.5 uses = 1 category = land_doctrine }
-		}
-	}
-	focus = {
-		id = mex_pemex_reform
-		icon = GFX_goal_generic_oil_refinery
-		x = 2
-		y = 3
-		cost = 10
-		prerequisite = { focus = mex_nearshoring focus = mex_national_guard }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_building_construction = { type = synthetic_refinery level = 2 instant_build = yes }
-		}
-	}
+	ai_will_do = { factor = 1 }
 }

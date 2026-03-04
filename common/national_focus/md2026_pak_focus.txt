@@ -1,86 +1,112 @@
-focus_tree = {
-	id = md2026_pak_focus
+### MD2026 Pakistan Focus Branch ###
+# Shared focuses for Pakistan's 2026 focus tree branch
+# Root focus at absolute x=38, y=0
 
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = PAK
-			has_global_flag = md2026_initialized
-		}
+shared_focus = {
+	id = md2026_pak_economic_crisis
+	icon = GFX_goal_generic_debt
+	x = 38
+	y = 0
+	cost = 10
+	allow_branch = {
+		original_tag = PAK
+		has_global_flag = md2026_initialized
 	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_economic_crisis"
+		add_political_power = -50
+		add_stability = -0.05
+	}
+	ai_will_do = { factor = 1 }
+}
 
-	default = no
+shared_focus = {
+	id = md2026_pak_imf_bailout
+	icon = GFX_goal_generic_trade
+	x = -2
+	y = 1
+	relative_position_id = md2026_pak_economic_crisis
+	prerequisite = { focus = md2026_pak_economic_crisis }
+	cost = 10
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_imf_bailout"
+		add_political_power = 25
+		add_stability = 0.05
+	}
+	ai_will_do = { factor = 1 }
+}
 
-	focus = {
-		id = pak_economic_crisis
-		icon = GFX_goal_generic_debt
-		x = 2
-		y = 0
-		cost = 10
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_political_power = -50 add_stability = -0.05
+shared_focus = {
+	id = md2026_pak_chinese_loans
+	icon = GFX_goal_generic_alliance
+	x = 2
+	y = 1
+	relative_position_id = md2026_pak_economic_crisis
+	prerequisite = { focus = md2026_pak_economic_crisis }
+	cost = 10
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_chinese_loans"
+		add_political_power = 25
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
 		}
 	}
-	focus = {
-		id = pak_imf_bailout
-		icon = GFX_goal_generic_trade
-		x = 0
-		y = 1
-		cost = 10
-		prerequisite = { focus = pak_economic_crisis }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_political_power = 25 add_stability = 0.05
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = md2026_pak_kashmir_issue
+	icon = GFX_goal_generic_demand_territory
+	x = 0
+	y = 2
+	relative_position_id = md2026_pak_economic_crisis
+	prerequisite = { focus = md2026_pak_imf_bailout focus = md2026_pak_chinese_loans }
+	cost = 10
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_kashmir_issue"
+		add_war_support = 0.1
+	}
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = md2026_pak_nuclear_program
+	icon = GFX_goal_generic_construct_military
+	x = 0
+	y = 3
+	relative_position_id = md2026_pak_economic_crisis
+	prerequisite = { focus = md2026_pak_kashmir_issue }
+	cost = 10
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_nuclear_program"
+		add_tech_bonus = {
+			name = nuclear_bonus
+			bonus = 0.5
+			uses = 1
+			category = nuclear
 		}
 	}
-	focus = {
-		id = pak_chinese_loans
-		icon = GFX_goal_generic_alliance
-		x = 4
-		y = 1
-		cost = 10
-		prerequisite = { focus = pak_economic_crisis }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_political_power = 25 add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = md2026_pak_military_modernization
+	icon = GFX_goal_generic_army_motorized
+	x = 0
+	y = 4
+	relative_position_id = md2026_pak_economic_crisis
+	prerequisite = { focus = md2026_pak_nuclear_program }
+	cost = 10
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_military_modernization"
+		add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 0.5
+			uses = 1
+			category = land_doctrine
 		}
 	}
-	focus = {
-		id = pak_kashmir_issue
-		icon = GFX_goal_generic_demand_territory
-		x = 2
-		y = 2
-		cost = 10
-		prerequisite = { focus = pak_imf_bailout focus = pak_chinese_loans }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_war_support = 0.1
-		}
-	}
-	focus = {
-		id = pak_nuclear_program
-		icon = GFX_goal_generic_construct_military
-		x = 2
-		y = 3
-		cost = 10
-		prerequisite = { focus = pak_kashmir_issue }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_tech_bonus = { name = nuclear_bonus bonus = 0.5 uses = 1 category = nuclear }
-		}
-	}
-	focus = {
-		id = pak_military_modernization
-		icon = GFX_goal_generic_army_motorized
-		x = 2
-		y = 4
-		cost = 10
-		prerequisite = { focus = pak_nuclear_program }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_tech_bonus = { name = land_doc_bonus bonus = 0.5 uses = 1 category = land_doctrine }
-		}
-	}
+	ai_will_do = { factor = 1 }
 }

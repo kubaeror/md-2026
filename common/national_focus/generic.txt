@@ -5,6 +5,14 @@
 	shared_focus = MD2026_AST_pacific_partner
 	# MD2026: Porcupine Defense branch - Taiwan (2026 bookmark)
 	shared_focus = MD2026_TAI_porcupine_defense
+	# MD2026: Mexico 2026 branch
+	shared_focus = md2026_mex_amlo_legacy
+	# MD2026: Pakistan 2026 branch
+	shared_focus = md2026_pak_economic_crisis
+	# MD2026: South Africa 2026 branch
+	shared_focus = md2026_zaf_anc_crisis
+	# MD2026: Argentina 2026 branch
+	shared_focus = md2026_arg_milei_reforms
 
 	country = { factor = 2 }
 	continuous_focus_position = { x = 5 y = 830 }
