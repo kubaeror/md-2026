@@ -99,6 +99,58 @@ on_actions = {
 					}
 				}
 
+				# Tariff impact cleanup: if USA loses its tariff spirit, remove impact from CAN/MEX
+				if = {
+					limit = {
+						USA = {
+							NOT = { has_idea = md2026_usa_section122_tariff }
+						}
+					}
+					CAN = {
+						if = {
+							limit = { has_idea = md2026_can_us_tariff_impact }
+							remove_ideas = md2026_can_us_tariff_impact
+						}
+					}
+					MEX = {
+						if = {
+							limit = { has_idea = md2026_mex_us_tariff_impact }
+							remove_ideas = md2026_mex_us_tariff_impact
+						}
+					}
+				}
+
+				# USA deployment cleanup: remove if no longer relevant
+				USA = {
+					if = {
+						limit = {
+							has_idea = md2026_usa_persian_gulf_deployment
+							NOT = { has_war_with = PER }
+							PER = { has_war = no }
+						}
+						remove_ideas = md2026_usa_persian_gulf_deployment
+					}
+					if = {
+						limit = {
+							has_idea = md2026_usa_caribbean_deployment
+							NOT = { has_war_with = VEN }
+							VEN = { has_war = no }
+						}
+						remove_ideas = md2026_usa_caribbean_deployment
+					}
+				}
+
+				# Iran Hormuz blockade cleanup
+				PER = {
+					if = {
+						limit = {
+							has_idea = md2026_per_hormuz_blockade
+							has_war = no
+						}
+						remove_ideas = md2026_per_hormuz_blockade
+					}
+				}
+
 				# Russia-Ukraine war exhaustion
 				SOV = {
 					if = {
@@ -248,6 +300,98 @@ on_actions = {
 					remove_ideas = md2026_war_exhaustion_2
 					remove_ideas = md2026_war_exhaustion_3
 				}
+
+				# Remove SOV war economy when no longer at war
+				SOV = {
+					if = {
+						limit = {
+							has_war = no
+							has_idea = md2026_sov_war_economy
+						}
+						remove_ideas = md2026_sov_war_economy
+					}
+				}
+
+				# Remove UKR resistance spirit when no longer at war
+				UKR = {
+					if = {
+						limit = {
+							has_war = no
+							has_idea = md2026_ukr_resistance
+						}
+						remove_ideas = md2026_ukr_resistance
+					}
+				}
+
+				# Remove ISR wartime escalation when no longer at war
+				ISR = {
+					if = {
+						limit = {
+							has_war = no
+							has_idea = md2026_isr_wartime_escalation
+						}
+						remove_ideas = md2026_isr_wartime_escalation
+					}
+				}
+
+				# Remove NATO Article 5 active spirit from all NATO members after peace
+				if = {
+					limit = {
+						has_global_flag = md2026_article5_invoked
+					}
+					every_country = {
+						limit = {
+							has_country_flag = md2026_nato_member
+							has_idea = md2026_nato_article5_active
+							has_war = no
+						}
+						remove_ideas = md2026_nato_article5_active
+					}
+					# Clear global flag if no NATO member is still at war
+					if = {
+						limit = {
+							NOT = {
+								any_country = {
+									has_country_flag = md2026_nato_member
+									has_idea = md2026_nato_article5_active
+									has_war = yes
+								}
+							}
+						}
+						clr_global_flag = md2026_article5_invoked
+					}
+				}
+
+				# Remove Iran Hormuz blockade when no longer at war
+				PER = {
+					if = {
+						limit = {
+							has_war = no
+							has_idea = md2026_per_hormuz_blockade
+						}
+						remove_ideas = md2026_per_hormuz_blockade
+					}
+				}
+
+				# Remove USA deployments when relevant conflicts end
+				USA = {
+					if = {
+						limit = {
+							has_idea = md2026_usa_persian_gulf_deployment
+							NOT = { has_war_with = PER }
+							PER = { has_war = no }
+						}
+						remove_ideas = md2026_usa_persian_gulf_deployment
+					}
+					if = {
+						limit = {
+							has_idea = md2026_usa_caribbean_deployment
+							NOT = { has_war_with = VEN }
+							VEN = { has_war = no }
+						}
+						remove_ideas = md2026_usa_caribbean_deployment
+					}
+				}
 			}
 		}
 	}
@@ -392,6 +536,22 @@ on_actions = {
 					has_idea = md2026_eng_eu_reset
 				}
 				remove_ideas = md2026_eng_eu_reset
+			}
+
+			# Venezuela: Remove regime spirits on government change
+			if = {
+				limit = {
+					tag = VEN
+					has_idea = md2026_ven_siege_mentality
+				}
+				remove_ideas = md2026_ven_siege_mentality
+			}
+			if = {
+				limit = {
+					tag = VEN
+					has_idea = md2026_ven_power_vacuum
+				}
+				remove_ideas = md2026_ven_power_vacuum
 			}
 		}
 	}
