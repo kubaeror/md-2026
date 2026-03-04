@@ -355,6 +355,44 @@ on_actions = {
 				}
 				remove_ideas = md2026_ger_economic_malaise
 			}
+
+			# Spain: Remove coalition spirits if government changes
+			if = {
+				limit = {
+					tag = SPR
+					NOT = { has_government = democratic }
+					has_idea = md2026_spr_progressive_coalition
+				}
+				remove_ideas = md2026_spr_progressive_coalition
+			}
+			if = {
+				limit = {
+					tag = SPR
+					NOT = { has_government = democratic }
+					has_idea = md2026_spr_coalition_crisis
+				}
+				remove_ideas = md2026_spr_coalition_crisis
+			}
+
+			# France: Remove PM carousel if government changes
+			if = {
+				limit = {
+					tag = FRA
+					NOT = { has_government = democratic }
+					has_idea = md2026_fra_pm_carousel
+				}
+				remove_ideas = md2026_fra_pm_carousel
+			}
+
+			# UK: Remove EU reset if government changes (new gov may not honor deal)
+			if = {
+				limit = {
+					tag = ENG
+					NOT = { has_government = democratic }
+					has_idea = md2026_eng_eu_reset
+				}
+				remove_ideas = md2026_eng_eu_reset
+			}
 		}
 	}
 }
