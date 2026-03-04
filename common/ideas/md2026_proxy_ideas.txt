@@ -8,7 +8,7 @@ ideas = {
 			}
 			
 			modifier = {
-				consumer_goods_expected_multiplier = 0.05
+				consumer_goods_expected_value = 0.05
 				political_power_gain = -0.1
 				army_org_regain = 0.05
 			}

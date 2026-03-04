@@ -10,7 +10,7 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.15
 				production_factory_max_efficiency_factor = 0.10
-				consumer_goods_expected_multiplier = -0.05
+				consumer_goods_expected_value = -0.05
 				research_speed_factor = 0.05
 			}
 		}
@@ -37,7 +37,7 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = -0.10
 				production_factory_max_efficiency_factor = -0.10
-				consumer_goods_expected_multiplier = 0.05
+				consumer_goods_expected_value = 0.05
 			}
 		}
 		
@@ -51,7 +51,7 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = -0.25
 				production_factory_max_efficiency_factor = -0.20
-				consumer_goods_expected_multiplier = 0.10
+				consumer_goods_expected_value = 0.10
 				political_power_gain = -0.15
 				stability_factor = -0.10
 			}
