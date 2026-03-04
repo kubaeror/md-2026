@@ -248,3 +248,58 @@
   MD2026_POL_pzl_expansion_desc:0 "Rozszerz produkcję lotniczą PZL Mielec i PZL Świdnik w zakresie śmigłowców i dronów."
   MD2026_POL_great_poland:0 "Wielka Polska"
   MD2026_POL_great_poland_desc:0 "Polska stała się znaczącą potęgą europejską — bezpieczna, zamożna i szanowana na arenie międzynarodowej."
+
+  ### Kategoria decyzji ###
+  md2026_europe_category:0 "Sprawy Europejskie 2026"
+
+  ### Decyzje Niemiec ###
+  md2026_ger_sondervermogen:0 "Uruchom Sondervermögen — Fundusz Infrastruktury"
+  md2026_ger_sondervermogen_desc:0 "Ustanów specjalny fundusz infrastrukturalny o wartości 100 mld euro na modernizację niemieckich dróg, mostów, linii kolejowych i sieci cyfrowych. Wymaga to zmiany konstytucji, by ominąć hamulec zadłużenia."
+  md2026_ger_franco_german_initiative:0 "Inicjatywa Francusko-Niemiecka"
+  md2026_ger_franco_german_initiative_desc:0 "Zaproponuj wspólną deklarację z Francją potwierdzającą francusko-niemiecki silnik integracji europejskiej. Kanclerz Merz i Prezydent Macron zobowiążą się do skoordynowanej polityki obronnej, przemysłowej i energetycznej."
+  md2026_ger_combat_extremism:0 "Walka z ekstremizmem politycznym"
+  md2026_ger_combat_extremism_desc:0 "Uruchom kompleksowy program przeciwdziałania wzrostowi AfD i ruchów skrajnie prawicowych we wschodnich Niemczech poprzez programy demokratycznej odporności, edukację obywatelską i ukierunkowane inwestycje."
+
+  ### Decyzje Francji ###
+  md2026_fra_nuclear_umbrella:0 "Rozszerz parasol nuklearny"
+  md2026_fra_nuclear_umbrella_desc:0 "Formalnie zaproponuj rozszerzenie francuskiego odstraszacza nuklearnego na europejskich sojuszników, tworząc europejski filar odstraszania nuklearnego niezależny od gwarancji amerykańskich."
+  md2026_fra_g7_summit:0 "Zorganizuj szczyt G7 2026"
+  md2026_fra_g7_summit_desc:0 "Francja przewodniczy G7 w 2026 roku. Zorganizuj szczyt łączący przywódców największych demokracji świata, aby zająć się obroną, zarządzaniem AI i konfliktem rosyjsko-ukraińskim."
+  md2026_fra_defense_surge_decision:0 "Budżet obronny: cel 3,5% PKB"
+  md2026_fra_defense_surge_decision_desc:0 "Ogłoś ambitny plan zwiększenia francuskich wydatków obronnych do 3,5% PKB — znacznie przekraczając cel NATO wynoszący 2%. Sfinansuje to nowy sprzęt, rozbudowę sił zbrojnych i program myśliwca nowej generacji FCAS."
+
+  ### Decyzje Wielkiej Brytanii ###
+  md2026_eng_eu_reset_summit:0 "Zaproponuj szczyt resetu UE-UK"
+  md2026_eng_eu_reset_summit_desc:0 "Zorganizuj przełomowy szczyt z liderami UE w celu ustanowienia nowych ram partnerstwa. Ma to zmniejszyć tarcia handlowe, zharmonizować współpracę bezpieczeństwa i odbudować relacje dyplomatyczne nadszarpnięte Brexitem."
+  md2026_eng_defense_review:0 "Uruchom Strategiczny Przegląd Obronny"
+  md2026_eng_defense_review_decision_desc:0 "Zlecenie najbardziej kompleksowego przeglądu brytyjskiej polityki obronnej od dekad. Przegląd ukształtuje strukturę sił, priorytety inwestycyjne i wytyczyzścieżkę do 2,5%, a następnie 3,5% PKB na obronę."
+  md2026_eng_nhs_overhaul:0 "Dziesięcioletnia reforma NHS"
+  md2026_eng_nhs_overhaul_desc:0 "Uruchom ambitny dziesięcioletni plan transformacji Narodowej Służby Zdrowia. Inwestycje w zdrowie cyfrowe, rozbudowę personelu i budowę nowych szpitali zaradzą najgorszym czasom oczekiwania w historii NHS."
+  md2026_eng_border_security:0 "Powołaj Komendę Bezpieczeństwa Granic"
+  md2026_eng_border_security_desc:0 "Stwórz nową Komendę Bezpieczeństwa Granic, Azylu i Imigracji do walki z nielegalnymi przeprawami przez Kanał La Manche i reformy systemu azylowego."
+
+  ### Decyzje Włoch ###
+  md2026_ita_olympics_prep:0 "Przygotowania do Olimpiady Milano-Cortina"
+  md2026_ita_olympics_prep_desc:0 "Przyspiesz przygotowania do Zimowych Igrzysk Olimpijskich 2026 w Milano-Cortina d'Ampezzo. Ukończ budowę obiektów, zmodernizuj infrastrukturę transportową Lombardii i zaplanuj ceremonię otwarcia."
+  md2026_ita_fiscal_consolidation:0 "Plan konsolidacji fiskalnej"
+  md2026_ita_fiscal_consolidation_desc:0 "Wdróż pakiet konsolidacji fiskalnej, by spełnić wymogi Paktu Stabilności UE i uspokoić rynki obligacji. Obejmuje cięcia wydatków, reformę podatkową i dostosowania strukturalne."
+  md2026_ita_electoral_reform:0 "Reforma systemu wyborczego"
+  md2026_ita_electoral_reform_desc:0 "Rząd Meloni proponuje fundamentalne zmiany systemu wyborczego Włoch, w tym bezpośredni wybór premiera i nowy system premii większościowej."
+
+  ### Decyzje Polski ###
+  md2026_pol_cpk_construction:0 "Rozpocznij budowę CPK"
+  md2026_pol_cpk_construction_desc:0 "Rozpocznij budowę Centralnego Portu Komunikacyjnego — polskiego megaprojektu za 40 mld dolarów łączącego nowe centralne lotnisko, węzeł kolei dużych prędkości i centrum logistyczne między Warszawą a Łodzią."
+  md2026_pol_military_procurement:0 "Przyspieszenie zakupów wojskowych"
+  md2026_pol_military_procurement_desc:0 "Przyspiesz masowy program zakupów wojskowych Polski — czołgi K2, wyrzutnie HIMARS, myśliwce F-35 i baterie Patriot. Polska dąży do zbudowania największej armii lądowej w Europie."
+  md2026_pol_eu_presidency:0 "Inicjatywa Prezydencji w Radzie UE"
+  md2026_pol_eu_presidency_desc:0 "Wykorzystaj polską prezydencję w Radzie UE w pierwszym półroczu 2025 do forsowania kluczowych priorytetów: wsparcia Ukrainy, integracji obronnej i bezpieczeństwa wschodniej granicy."
+  md2026_pol_ukraine_aid:0 "Pomoc wojskowa dla Ukrainy"
+  md2026_pol_ukraine_aid_desc:0 "Wyślij pakiet sprzętu wojskowego i amunicji na Ukrainę. Jako sąsiad Rosji i wschodnia tarcza NATO, Polska jest jednym z najbardziej zaangażowanych wspierających ukraińskiej obrony."
+
+  ### Decyzje Hiszpanii ###
+  md2026_spr_catalan_negotiation:0 "Negocjacje w sprawie autonomii Katalonii"
+  md2026_spr_catalan_negotiation_desc:0 "Otwórz formalne negocjacje z katalońskimi liderami politycznymi w celu znalezienia trwałego rozwiązania kwestii terytorialnej. Ryzyko zapalenia hiszpańskich nacjonalistów, ale szansa na rozwiązanie kryzysu konstytucyjnego."
+  md2026_spr_renewable_expansion:0 "Ekspansja energii odnawialnej"
+  md2026_spr_renewable_expansion_desc:0 "Uruchom masową rozbudowę mocy słonecznych i wiatrowych, wykorzystując obfitość hiszpańskiego słońca i wiatrów atlantyckich. Hiszpania dąży do pozycji europejskiego supermocarstwa energii odnawialnej."
+  md2026_spr_stabilize_coalition:0 "Stabilizacja rządu koalicyjnego"
+  md2026_spr_stabilize_coalition_desc:0 "Poczynić ustępstwa polityczne wobec partnerów koalicyjnych i partii regionalnych, by wzmocnić kruchy rząd mniejszościowy PSOE-Sumar."

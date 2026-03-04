@@ -154,3 +154,24 @@ md2026_trumponomics_category = {
 		has_government = nationalist
 	}
 }
+
+md2026_europe_category = {
+	icon = generic_political_actions
+	picture = GFX_decision_cat_generic_political_actions
+	priority = 80
+
+	allowed = {
+		OR = {
+			original_tag = GER
+			original_tag = FRA
+			original_tag = ENG
+			original_tag = ITA
+			original_tag = POL
+			original_tag = SPR
+		}
+	}
+
+	visible = {
+		date > 2025.12.31
+	}
+}

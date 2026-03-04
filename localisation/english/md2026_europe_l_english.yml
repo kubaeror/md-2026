@@ -266,5 +266,60 @@
  MD2026_POL_tech_sector_desc:0 "Foster Poland's booming IT and cybersecurity sector, already the largest in Central Europe."
  MD2026_POL_pzl_expansion:0 "PZL Aerospace Expansion"
  MD2026_POL_pzl_expansion_desc:0 "Expand PZL Mielec and PZL Świdnik aerospace production for helicopters and drones."
- MD2026_POL_great_poland:0 "Wielka Polska"
- MD2026_POL_great_poland_desc:0 "Poland has risen to become a major European power — secure, prosperous, and respected on the world stage."
+  MD2026_POL_great_poland:0 "Wielka Polska"
+  MD2026_POL_great_poland_desc:0 "Poland has risen to become a major European power — secure, prosperous, and respected on the world stage."
+
+  ### Decision Category ###
+  md2026_europe_category:0 "European Affairs 2026"
+
+  ### Germany Decisions ###
+  md2026_ger_sondervermogen:0 "Launch Sondervermögen Infrastructure Fund"
+  md2026_ger_sondervermogen_desc:0 "Establish a €100 billion special infrastructure fund to modernize Germany's crumbling roads, bridges, rail lines, and digital networks. This requires a constitutional amendment to bypass the debt brake."
+  md2026_ger_franco_german_initiative:0 "Franco-German Joint Initiative"
+  md2026_ger_franco_german_initiative_desc:0 "Propose a joint declaration with France reaffirming the Franco-German engine of European integration. Chancellor Merz and President Macron will commit to coordinated defense, industrial, and energy policies."
+  md2026_ger_combat_extremism:0 "Combat Political Extremism"
+  md2026_ger_combat_extremism_desc:0 "Launch a comprehensive program to counter the rise of the AfD and far-right movements in eastern Germany through democratic resilience programs, civic education, and targeted investment."
+
+  ### France Decisions ###
+  md2026_fra_nuclear_umbrella:0 "Expand Nuclear Umbrella"
+  md2026_fra_nuclear_umbrella_desc:0 "Formally offer to extend France's nuclear deterrent to European allies, establishing a European pillar of nuclear deterrence independent of American guarantees. This is the most dramatic shift in French nuclear doctrine since de Gaulle."
+  md2026_fra_g7_summit:0 "Host G7 Summit 2026"
+  md2026_fra_g7_summit_desc:0 "France holds the G7 presidency in 2026. Organize a summit bringing together the leaders of the world's largest democracies to address defense, AI governance, and the Russia-Ukraine conflict."
+  md2026_fra_defense_surge_decision:0 "Defense Budget: Target 3.5% GDP"
+  md2026_fra_defense_surge_decision_desc:0 "Announce an ambitious plan to raise French defense spending to 3.5% of GDP — far exceeding the NATO 2% target. This will fund new equipment, expand the armed forces, and accelerate the FCAS next-gen fighter program."
+
+  ### UK Decisions ###
+  md2026_eng_eu_reset_summit:0 "Propose EU-UK Reset Summit"
+  md2026_eng_eu_reset_summit_desc:0 "Organize a landmark summit with European Union leaders to establish a new partnership framework. This aims to reduce trade friction, align on security cooperation, and restore diplomatic ties damaged by Brexit."
+  md2026_eng_defense_review:0 "Launch Strategic Defence Review"
+  md2026_eng_defense_review_decision_desc:0 "Commission the most comprehensive review of British defense policy in decades. The review will reshape force structure, investment priorities, and set a path toward 2.5% then 3.5% GDP defense spending."
+  md2026_eng_nhs_overhaul:0 "NHS Ten-Year Overhaul"
+  md2026_eng_nhs_overhaul_desc:0 "Launch an ambitious ten-year plan to transform the National Health Service. Investment in digital health, workforce expansion, and new hospital construction will address the worst waiting times in NHS history."
+  md2026_eng_border_security:0 "Establish Border Security Command"
+  md2026_eng_border_security_desc:0 "Create a new Border Security, Asylum and Immigration Command to tackle illegal Channel crossings and reform the asylum system. This unified command will bring together intelligence, enforcement, and technology."
+
+  ### Italy Decisions ###
+  md2026_ita_olympics_prep:0 "Milano-Cortina Olympics Preparation"
+  md2026_ita_olympics_prep_desc:0 "Accelerate preparations for the 2026 Winter Olympics in Milano-Cortina d'Ampezzo. Complete venue construction, upgrade Lombardy transport infrastructure, and plan the opening ceremony to showcase modern Italy."
+  md2026_ita_fiscal_consolidation:0 "Fiscal Consolidation Plan"
+  md2026_ita_fiscal_consolidation_desc:0 "Implement a fiscal consolidation package to satisfy EU Stability Pact requirements and calm bond markets. This involves spending cuts, tax reform, and structural adjustments that will be politically painful."
+  md2026_ita_electoral_reform:0 "Electoral System Reform"
+  md2026_ita_electoral_reform_desc:0 "The Meloni government proposes sweeping changes to Italy's electoral system, including a directly elected Prime Minister and a new majority-bonus system. Critics call it a power grab; supporters say it will end decades of political instability."
+
+  ### Poland Decisions ###
+  md2026_pol_cpk_construction:0 "Launch CPK Construction"
+  md2026_pol_cpk_construction_desc:0 "Break ground on the Centralny Port Komunikacyjny — Poland's $40 billion megaproject combining a new central airport, high-speed rail hub, and logistics center between Warsaw and Łódź. This will transform Poland into Central Europe's transportation nexus."
+  md2026_pol_military_procurement:0 "Military Procurement Push"
+  md2026_pol_military_procurement_desc:0 "Accelerate Poland's massive military procurement program — K2 tanks, HIMARS launchers, F-35 fighters, and Patriot batteries. Poland aims to build the largest land army in Europe."
+  md2026_pol_eu_presidency:0 "EU Council Presidency Initiative"
+  md2026_pol_eu_presidency_desc:0 "Leverage Poland's EU Council Presidency in H1 2025 to push key priorities: Ukraine support, defense integration, and eastern border security. A successful presidency will cement Poland's status as a major EU player."
+  md2026_pol_ukraine_aid:0 "Military Aid to Ukraine"
+  md2026_pol_ukraine_aid_desc:0 "Send a package of military equipment and ammunition to Ukraine. As Russia's neighbor and NATO's eastern shield, Poland has been among the most committed supporters of Ukrainian defense."
+
+  ### Spain Decisions ###
+  md2026_spr_catalan_negotiation:0 "Catalan Autonomy Negotiations"
+  md2026_spr_catalan_negotiation_desc:0 "Open formal negotiations with Catalan political leaders to find a lasting resolution to the territorial question. This risks inflaming Spanish nationalists but could finally resolve the constitutional crisis that has paralyzed Spanish politics."
+  md2026_spr_renewable_expansion:0 "Renewable Energy Expansion"
+  md2026_spr_renewable_expansion_desc:0 "Launch a massive expansion of solar and wind energy capacity, leveraging Spain's abundant sunshine and Atlantic winds. Spain aims to become Europe's renewable energy superpower and a major green hydrogen exporter."
+  md2026_spr_stabilize_coalition:0 "Stabilize Coalition Government"
+  md2026_spr_stabilize_coalition_desc:0 "Make political concessions to coalition partners and regional parties to shore up the fragile PSOE-Sumar minority government. This buys time but comes at a cost in policy coherence and political capital."

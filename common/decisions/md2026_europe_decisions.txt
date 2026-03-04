@@ -1,0 +1,849 @@
+### Millennium Dawn 2026 - European Decisions ###
+# Country-specific decisions for GER, FRA, ENG, ITA, POL, SPR
+
+md2026_europe_category = {
+
+	#############################
+	### GERMANY DECISIONS ###
+	#############################
+
+	### Sondervermögen Infrastructure Fund ###
+	md2026_ger_sondervermogen = {
+		icon = generic_economy
+
+		cost = 100
+		fire_only_once = yes
+		days_remove = 180
+
+		visible = {
+			date > 2025.12.31
+			original_tag = GER
+			NOT = { has_country_flag = md2026_ger_sondervermogen_launched }
+		}
+
+		available = {
+			has_government = democratic
+			has_political_power > 100
+			NOT = { has_war = yes }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_ger_sondervermogen"
+			add_political_power = -100
+			add_stability = 0.03
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_ger_sondervermogen_launched
+			add_ideas = md2026_ger_infrastructure_fund
+			country_event = { id = md2026_europe.14 days = 5 }
+		}
+
+		ai_will_do = {
+			base = 80
+			modifier = {
+				factor = 0
+				NOT = { has_government = democratic }
+			}
+		}
+	}
+
+	### Franco-German Joint Initiative ###
+	md2026_ger_franco_german_initiative = {
+		icon = generic_political_actions
+
+		cost = 75
+		fire_only_once = yes
+		days_remove = 60
+
+		visible = {
+			date > 2025.12.31
+			original_tag = GER
+			NOT = { has_country_flag = md2026_ger_fra_joint_initiative }
+			FRA = { exists = yes }
+		}
+
+		available = {
+			has_government = democratic
+			NOT = { has_war_with = FRA }
+			FRA = { has_government = democratic }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_ger_franco_german_initiative"
+			add_political_power = -50
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_ger_fra_joint_initiative
+			FRA = { set_country_flag = md2026_ger_fra_joint_initiative }
+			add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
+			FRA = { add_opinion_modifier = { target = GER modifier = md2026_improved_relations } }
+			country_event = { id = md2026_europe.13 days = 3 }
+		}
+
+		ai_will_do = {
+			base = 70
+		}
+	}
+
+	### Combat AfD Extremism ###
+	md2026_ger_combat_extremism = {
+		icon = generic_political_actions
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 90
+		days_re_enable = 365
+
+		visible = {
+			date > 2025.12.31
+			original_tag = GER
+			has_government = democratic
+		}
+
+		available = {
+			NOT = { has_government = nationalist }
+			has_stability < 0.7
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_ger_combat_extremism"
+			add_political_power = -30
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+			add_war_support = -0.02
+			nationalist_drift = -0.03
+		}
+
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 3
+				has_stability < 0.5
+			}
+		}
+	}
+
+	#############################
+	### FRANCE DECISIONS ###
+	#############################
+
+	### Expand Nuclear Doctrine ###
+	md2026_fra_nuclear_umbrella = {
+		icon = generic_military
+
+		cost = 150
+		fire_only_once = yes
+		days_remove = 120
+
+		visible = {
+			date > 2025.12.31
+			original_tag = FRA
+			NOT = { has_country_flag = md2026_fra_nuclear_umbrella_offered }
+		}
+
+		available = {
+			has_government = democratic
+			has_war = no
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_fra_nuclear_umbrella"
+			add_political_power = -100
+			add_war_support = 0.05
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_fra_nuclear_umbrella_offered
+			add_ideas = md2026_fra_nuclear_expansion
+			country_event = { id = md2026_europe.9 days = 5 }
+			# Trigger nuclear umbrella offer to European allies
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA
+					NOT = { tag = FRA }
+					NOT = { tag = USA }
+					NOT = { tag = ENG }
+					capital_scope = { is_on_continent = europe }
+				}
+				country_event = { id = md2026_europe.23 days = 14 }
+			}
+		}
+
+		ai_will_do = {
+			base = 60
+			modifier = {
+				factor = 2
+				SOV = { has_war_with = UKR }
+			}
+		}
+	}
+
+	### Host G7 Summit 2026 ###
+	md2026_fra_g7_summit = {
+		icon = generic_political_actions
+
+		cost = 100
+		fire_only_once = yes
+		days_remove = 90
+
+		visible = {
+			date > 2025.12.31
+			original_tag = FRA
+			NOT = { has_country_flag = md2026_fra_g7_hosted }
+			date < 2027.1.1
+		}
+
+		available = {
+			has_war = no
+			has_stability > 0.3
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_fra_g7_summit"
+			add_political_power = -75
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_fra_g7_hosted
+			add_political_power = 50
+			add_stability = 0.03
+			add_war_support = 0.02
+			country_event = { id = md2026_europe.12 days = 5 }
+		}
+
+		ai_will_do = {
+			base = 90
+		}
+	}
+
+	### Defense Budget Surge to 3.5% GDP ###
+	md2026_fra_defense_surge = {
+		icon = generic_military
+
+		cost = 125
+		fire_only_once = yes
+		days_remove = 180
+
+		visible = {
+			date > 2025.12.31
+			original_tag = FRA
+			NOT = { has_idea = md2026_fra_defense_surge }
+		}
+
+		available = {
+			has_political_power > 75
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_fra_defense_surge"
+			add_political_power = -75
+			add_stability = -0.02
+		}
+
+		remove_effect = {
+			add_ideas = md2026_fra_defense_surge
+			country_event = { id = md2026_europe.11 days = 5 }
+		}
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				any_neighbor_country = { has_war = yes }
+			}
+		}
+	}
+
+	#############################
+	### UK DECISIONS ###
+	#############################
+
+	### EU-UK Reset Summit ###
+	md2026_eng_eu_reset_summit = {
+		icon = generic_political_actions
+
+		cost = 100
+		fire_only_once = yes
+		days_remove = 90
+
+		visible = {
+			date > 2025.12.31
+			original_tag = ENG
+			NOT = { has_country_flag = md2026_eng_eu_reset_done }
+		}
+
+		available = {
+			has_government = democratic
+			has_war = no
+			NOT = { is_in_faction_with = GER }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_eng_eu_reset_summit"
+			add_political_power = -75
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_eng_eu_reset_done
+			add_ideas = md2026_eng_eu_reset
+			add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
+			add_opinion_modifier = { target = GER modifier = md2026_improved_relations }
+			FRA = { add_opinion_modifier = { target = ENG modifier = md2026_improved_relations } }
+			GER = { add_opinion_modifier = { target = ENG modifier = md2026_improved_relations } }
+			country_event = { id = md2026_europe.4 days = 5 }
+		}
+
+		ai_will_do = {
+			base = 70
+		}
+	}
+
+	### Strategic Defence Review ###
+	md2026_eng_defense_review = {
+		icon = generic_military
+
+		cost = 100
+		fire_only_once = yes
+		days_remove = 120
+
+		visible = {
+			date > 2025.12.31
+			original_tag = ENG
+			NOT = { has_idea = md2026_eng_defense_review }
+		}
+
+		available = {
+			has_political_power > 50
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_eng_defense_review"
+			add_political_power = -50
+		}
+
+		remove_effect = {
+			add_ideas = md2026_eng_defense_review
+			country_event = { id = md2026_europe.5 days = 5 }
+		}
+
+		ai_will_do = {
+			base = 65
+		}
+	}
+
+	### NHS Ten-Year Overhaul ###
+	md2026_eng_nhs_overhaul = {
+		icon = generic_economy
+
+		cost = 150
+		fire_only_once = yes
+		days_remove = 180
+
+		visible = {
+			date > 2025.12.31
+			original_tag = ENG
+			NOT = { has_idea = md2026_eng_nhs_reform }
+		}
+
+		available = {
+			has_government = democratic
+			has_stability > 0.4
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_eng_nhs_overhaul"
+			add_political_power = -100
+			add_stability = -0.02
+		}
+
+		remove_effect = {
+			add_ideas = md2026_eng_nhs_reform
+			add_stability = 0.05
+			country_event = { id = md2026_europe.6 days = 5 }
+		}
+
+		ai_will_do = {
+			base = 55
+		}
+	}
+
+	### Border Security Command ###
+	md2026_eng_border_security = {
+		icon = generic_political_actions
+
+		cost = 75
+		fire_only_once = yes
+		days_remove = 60
+
+		visible = {
+			date > 2025.12.31
+			original_tag = ENG
+			NOT = { has_country_flag = md2026_eng_border_security_launched }
+		}
+
+		available = {
+			has_government = democratic
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_eng_border_security"
+			add_political_power = -50
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_eng_border_security_launched
+			add_stability = 0.03
+			add_war_support = 0.02
+			country_event = { id = md2026_europe.7 days = 5 }
+		}
+
+		ai_will_do = {
+			base = 60
+		}
+	}
+
+	#############################
+	### ITALY DECISIONS ###
+	#############################
+
+	### Milano-Cortina Olympics Preparation ###
+	md2026_ita_olympics_prep = {
+		icon = generic_economy
+
+		cost = 100
+		fire_only_once = yes
+		days_remove = 120
+
+		visible = {
+			date > 2025.12.31
+			original_tag = ITA
+			NOT = { has_country_flag = md2026_ita_olympics_done }
+			date < 2027.1.1
+		}
+
+		available = {
+			has_stability > 0.3
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_ita_olympics_prep"
+			add_political_power = -75
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_ita_olympics_done
+			add_stability = 0.05
+			add_war_support = 0.03
+			159 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			country_event = { id = md2026_europe.16 days = 5 }
+		}
+
+		ai_will_do = {
+			base = 85
+		}
+	}
+
+	### Fiscal Consolidation ###
+	md2026_ita_fiscal_consolidation = {
+		icon = generic_economy
+
+		cost = 75
+		fire_only_once = no
+		days_remove = 90
+		days_re_enable = 365
+
+		visible = {
+			date > 2025.12.31
+			original_tag = ITA
+		}
+
+		available = {
+			has_political_power > 50
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_ita_fiscal_consolidation"
+			add_political_power = -50
+			add_stability = -0.03
+		}
+
+		remove_effect = {
+			add_stability = 0.02
+			if = {
+				limit = { has_idea = md2026_ita_austerity_pressure }
+				remove_ideas = md2026_ita_austerity_pressure
+			}
+		}
+
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 3
+				has_idea = md2026_ita_austerity_pressure
+			}
+		}
+	}
+
+	### Electoral System Reform ###
+	md2026_ita_electoral_reform = {
+		icon = generic_political_actions
+
+		cost = 125
+		fire_only_once = yes
+		days_remove = 180
+
+		visible = {
+			date > 2025.12.31
+			original_tag = ITA
+			NOT = { has_country_flag = md2026_ita_electoral_reform_done }
+		}
+
+		available = {
+			has_government = nationalist
+			has_stability > 0.4
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_ita_electoral_reform"
+			add_political_power = -100
+			add_stability = -0.05
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_ita_electoral_reform_done
+			add_stability = 0.05
+			add_political_power = 50
+			country_event = { id = md2026_europe.18 days = 5 }
+		}
+
+		ai_will_do = {
+			base = 30
+			modifier = {
+				factor = 3
+				has_government = nationalist
+			}
+		}
+	}
+
+	#############################
+	### POLAND DECISIONS ###
+	#############################
+
+	### Launch CPK Construction ###
+	md2026_pol_cpk_construction = {
+		icon = generic_economy
+
+		cost = 150
+		fire_only_once = yes
+		days_remove = 365
+
+		visible = {
+			date > 2025.12.31
+			original_tag = POL
+			NOT = { has_country_flag = md2026_pol_cpk_started }
+		}
+
+		available = {
+			has_government = democratic
+			has_political_power > 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_pol_cpk_construction"
+			add_political_power = -100
+			add_stability = -0.02
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_pol_cpk_started
+			add_ideas = md2026_pol_cpk_megaproject
+			10 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			country_event = { id = md2026_europe.25 days = 5 }
+		}
+
+		ai_will_do = {
+			base = 75
+		}
+	}
+
+	### Military Procurement Push ###
+	md2026_pol_military_procurement = {
+		icon = generic_military
+
+		cost = 100
+		fire_only_once = no
+		days_remove = 120
+		days_re_enable = 365
+
+		visible = {
+			date > 2025.12.31
+			original_tag = POL
+		}
+
+		available = {
+			has_political_power > 50
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_pol_military_procurement"
+			add_political_power = -50
+			add_war_support = 0.03
+		}
+
+		remove_effect = {
+			army_experience = 10
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+			}
+		}
+
+		ai_will_do = {
+			base = 60
+			modifier = {
+				factor = 2
+				SOV = { has_war_with = UKR }
+			}
+		}
+	}
+
+	### EU Council Presidency Initiative ###
+	md2026_pol_eu_presidency = {
+		icon = generic_political_actions
+
+		cost = 75
+		fire_only_once = yes
+		days_remove = 90
+
+		visible = {
+			date > 2025.12.31
+			original_tag = POL
+			NOT = { has_country_flag = md2026_pol_eu_presidency_done }
+			date < 2026.7.1
+		}
+
+		available = {
+			has_government = democratic
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_pol_eu_presidency"
+			add_political_power = -50
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_pol_eu_presidency_done
+			add_political_power = 75
+			add_stability = 0.03
+			add_opinion_modifier = { target = GER modifier = md2026_improved_relations }
+			add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
+			country_event = { id = md2026_europe.24 days = 5 }
+		}
+
+		ai_will_do = {
+			base = 90
+		}
+	}
+
+	### Support Ukraine Military Aid ###
+	md2026_pol_ukraine_aid = {
+		icon = generic_military
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 180
+
+		visible = {
+			date > 2025.12.31
+			original_tag = POL
+			UKR = { has_war = yes }
+		}
+
+		available = {
+			NOT = { has_war = yes }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_pol_ukraine_aid"
+			add_political_power = -25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -200
+			}
+		}
+
+		remove_effect = {
+			UKR = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 200
+				}
+			}
+			add_opinion_modifier = { target = UKR modifier = md2026_solidarity_opinion }
+			UKR = { add_opinion_modifier = { target = POL modifier = md2026_solidarity_opinion } }
+			add_war_support = 0.02
+		}
+
+		ai_will_do = {
+			base = 70
+			modifier = {
+				factor = 2
+				UKR = { has_war_with = SOV }
+			}
+		}
+	}
+
+	#############################
+	### SPAIN DECISIONS ###
+	#############################
+
+	### Catalan Autonomy Negotiations ###
+	md2026_spr_catalan_negotiation = {
+		icon = generic_political_actions
+
+		cost = 100
+		fire_only_once = yes
+		days_remove = 120
+
+		visible = {
+			date > 2025.12.31
+			original_tag = SPR
+			NOT = { has_country_flag = md2026_spr_catalan_resolved }
+		}
+
+		available = {
+			has_government = democratic
+			has_stability > 0.3
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_spr_catalan_negotiation"
+			add_political_power = -75
+			add_stability = -0.03
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_spr_catalan_resolved
+			add_stability = 0.05
+			add_political_power = 25
+			if = {
+				limit = { has_idea = md2026_spr_territorial_tensions }
+				remove_ideas = md2026_spr_territorial_tensions
+			}
+			country_event = { id = md2026_europe.2 days = 5 }
+		}
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				has_idea = md2026_spr_territorial_tensions
+			}
+		}
+	}
+
+	### Renewable Energy Expansion ###
+	md2026_spr_renewable_expansion = {
+		icon = generic_economy
+
+		cost = 125
+		fire_only_once = yes
+		days_remove = 180
+
+		visible = {
+			date > 2025.12.31
+			original_tag = SPR
+			NOT = { has_idea = md2026_spr_renewable_leader }
+		}
+
+		available = {
+			has_political_power > 75
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_spr_renewable_expansion"
+			add_political_power = -75
+		}
+
+		remove_effect = {
+			add_ideas = md2026_spr_renewable_leader
+			41 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			169 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 55
+		}
+	}
+
+	### Stabilize Coalition ###
+	md2026_spr_stabilize_coalition = {
+		icon = generic_political_actions
+
+		cost = 75
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 365
+
+		visible = {
+			date > 2025.12.31
+			original_tag = SPR
+			has_government = democratic
+		}
+
+		available = {
+			has_stability < 0.6
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_spr_stabilize_coalition"
+			add_political_power = -50
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+			if = {
+				limit = { has_idea = md2026_spr_coalition_crisis }
+				remove_ideas = md2026_spr_coalition_crisis
+				add_ideas = md2026_spr_progressive_coalition
+			}
+		}
+
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 3
+				has_idea = md2026_spr_coalition_crisis
+			}
+		}
+	}
+}
