@@ -1,3 +1,0 @@
-# Millennium Dawn 2026 Rework - Startup Effects
-# Alliance setup was removed (not valid in on_actions scope).
-# Arrays should be managed through events or country history if needed.

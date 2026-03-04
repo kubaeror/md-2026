@@ -6424,7 +6424,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = NKO_kim_yo_jongs
+		id = NKO_kim_yo_jong
 		icon = kim_yo_jong
 
 		x = -1
@@ -6436,7 +6436,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
 
 		completion_reward = {
-			log = "[GetDateText]: [This.GetName]: focus NKO_kim_yo_jongs"
+			log = "[GetDateText]: [This.GetName]: focus NKO_kim_yo_jong"
 			add_ideas = NKO_sister_idea
 		}
 

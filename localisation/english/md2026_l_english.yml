@@ -1112,6 +1112,10 @@
  MD2026_NKO_eternal_leader:0 "Eternal Leader"
  MD2026_NKO_eternal_leader_desc:0 "Kim Jong-un consolidates absolute power — a nuclear-armed dictator defying the world."
 
+ # Override loc for renamed base MD focus (NKO_kim_yo_jongs -> NKO_kim_yo_jong)
+ NKO_kim_yo_jong:0 "Kim Yo-jong"
+ NKO_kim_yo_jong_desc:0 "Kim Yo-jong, the younger sister of Kim Jong-un, has emerged as a powerful political figure. Her influence within the regime continues to grow."
+
  ### FOCUS TREES - CANADA (CAN) ###
  MD2026_CAN_northern_shield:0 "Northern Shield"
  MD2026_CAN_northern_shield_desc:0 "Canada becomes the northern shield of the free world, defending democracy from the Arctic to the Pacific."
