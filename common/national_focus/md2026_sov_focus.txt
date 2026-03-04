@@ -348,3 +348,245 @@ shared_focus = {
 	}
 	ai_will_do = { base = 60 }
 }
+
+### TIER 3 — ESCALATION PATH ###
+
+shared_focus = {
+	id = MD2026_SOV_hybrid_warfare
+	icon = sov_special_services
+	x = 0
+	y = 1
+	relative_position_id = MD2026_SOV_total_mobilization
+	prerequisite = { focus = MD2026_SOV_total_mobilization }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_hybrid_warfare"
+		add_political_power = 50
+		army_experience = 25
+		add_ideas = md2026_sov_hybrid_warfare
+		add_tech_bonus = {
+			name = SOV_cyber_ops
+			bonus = 1.0
+			uses = 1
+			category = CAT_computing_tech
+		}
+	}
+	ai_will_do = { base = 50 }
+}
+
+shared_focus = {
+	id = MD2026_SOV_wagner_successor
+	icon = sov_pmc
+	x = 0
+	y = 1
+	relative_position_id = MD2026_SOV_nuclear_threats
+	prerequisite = { focus = MD2026_SOV_nuclear_threats }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_wagner_successor"
+		add_manpower = 100000
+		add_political_power = -50
+		add_war_support = 0.05
+		random_owned_controlled_state = {
+			limit = { is_core_of = SOV }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 30 }
+}
+
+### TIER 3 — FROZEN CONFLICT PATH ###
+
+shared_focus = {
+	id = MD2026_SOV_fortress_russia
+	icon = sov_army
+	x = -1
+	y = 1
+	relative_position_id = MD2026_SOV_consolidate_territories
+	prerequisite = { focus = MD2026_SOV_consolidate_territories }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_fortress_russia"
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_ideas = md2026_sov_fortress_russia
+		random_owned_controlled_state = {
+			limit = { is_core_of = SOV }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = MD2026_SOV_arctic_militarization
+	icon = northern_waters
+	x = 1
+	y = 1
+	relative_position_id = MD2026_SOV_consolidate_territories
+	prerequisite = { focus = MD2026_SOV_consolidate_territories }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_arctic_militarization"
+		navy_experience = 25
+		add_political_power = 50
+		random_owned_controlled_state = {
+			limit = { is_core_of = SOV is_coastal = yes }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_tech_bonus = {
+			name = SOV_arctic_tech
+			bonus = 1.0
+			uses = 1
+			category = CAT_naval_all
+		}
+	}
+	ai_will_do = { base = 40 }
+}
+
+### TIER 3 — ECONOMIC AUTARKY PATH ###
+
+shared_focus = {
+	id = MD2026_SOV_parallel_economy
+	icon = russian_investments
+	x = 0
+	y = 1
+	relative_position_id = MD2026_SOV_import_substitution
+	prerequisite = {
+		focus = MD2026_SOV_import_substitution
+		focus = MD2026_SOV_sanctions_circumvention
+	}
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_parallel_economy"
+		add_stability = 0.05
+		add_political_power = 75
+		add_ideas = md2026_sov_parallel_economy
+		random_owned_controlled_state = {
+			limit = { is_core_of = SOV }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = MD2026_SOV_rubles_for_oil
+	icon = russian_ruble
+	x = 0
+	y = 1
+	relative_position_id = MD2026_SOV_sanctions_circumvention
+	prerequisite = { focus = MD2026_SOV_sanctions_circumvention }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_TRADE }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_rubles_for_oil"
+		add_political_power = 50
+		add_stability = 0.03
+		random_owned_controlled_state = {
+			limit = { is_core_of = SOV }
+			add_resource = {
+				type = oil
+				amount = 12
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { is_core_of = SOV }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = synthetic_refinery
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 50 }
+}
+
+### TIER 3 — EASTERN PIVOT PATH ###
+
+shared_focus = {
+	id = MD2026_SOV_multipolar_world
+	icon = expand_the_east_trade_cooperation
+	x = 0
+	y = 1
+	relative_position_id = MD2026_SOV_china_trade
+	prerequisite = {
+		focus = MD2026_SOV_brics_leadership
+		focus = MD2026_SOV_china_trade
+	}
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_multipolar_world"
+		add_political_power = 100
+		add_stability = 0.05
+		add_opinion_modifier = { target = CHI modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = RAJ modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = BRA modifier = md2026_improved_relations }
+		add_ideas = md2026_sov_multipolar_world
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = MD2026_SOV_global_south_pivot
+	icon = big_papa_of_the_east
+	x = 0
+	y = 1
+	relative_position_id = MD2026_SOV_brics_leadership
+	prerequisite = { focus = MD2026_SOV_brics_leadership }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_global_south_pivot"
+		add_political_power = 75
+		add_opinion_modifier = { target = EGY modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = NGA modifier = md2026_improved_relations }
+		reverse_add_opinion_modifier = { target = EGY modifier = md2026_improved_relations }
+		reverse_add_opinion_modifier = { target = NGA modifier = md2026_improved_relations }
+		random_owned_controlled_state = {
+			limit = { is_core_of = SOV }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 50 }
+}

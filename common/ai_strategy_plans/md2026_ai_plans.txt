@@ -78,17 +78,25 @@ md2026_sov_historical = {
 		MD2026_SOV_escalation
 		MD2026_SOV_total_mobilization
 		MD2026_SOV_nuclear_threats
+		MD2026_SOV_hybrid_warfare
+		MD2026_SOV_wagner_successor
 		MD2026_SOV_economic_autarky
 		MD2026_SOV_import_substitution
 		MD2026_SOV_sanctions_circumvention
+		MD2026_SOV_parallel_economy
+		MD2026_SOV_rubles_for_oil
 		MD2026_SOV_eastern_pivot
 		MD2026_SOV_china_trade
 		MD2026_SOV_brics_leadership
+		MD2026_SOV_multipolar_world
+		MD2026_SOV_global_south_pivot
 	}
 
 	focus_factors = {
 		MD2026_SOV_frozen_conflict = 0
 		MD2026_SOV_consolidate_territories = 0
+		MD2026_SOV_fortress_russia = 0
+		MD2026_SOV_arctic_militarization = 0
 	}
 
 	weight = {
@@ -120,18 +128,26 @@ md2026_chi_historical = {
 		MD2026_CHI_great_rejuvenation
 		MD2026_CHI_taiwan_question
 		MD2026_CHI_taiwan_diplomacy
+		MD2026_CHI_taiwan_integration
 		MD2026_CHI_belt_road_2
 		MD2026_CHI_global_infrastructure
+		MD2026_CHI_digital_silk_road
+		MD2026_CHI_african_investment
 		MD2026_CHI_tech_dominance
 		MD2026_CHI_semiconductor_war
 		MD2026_CHI_space_program
+		MD2026_CHI_ai_supremacy
+		MD2026_CHI_lunar_program
 		MD2026_CHI_naval_expansion
 		MD2026_CHI_south_china_sea
 		MD2026_CHI_blue_water_navy
+		MD2026_CHI_island_fortification
+		MD2026_CHI_carrier_fleet
 	}
 
 	focus_factors = {
 		MD2026_CHI_taiwan_escalation = 0
+		MD2026_CHI_taiwan_blockade = 0
 	}
 
 	weight = {
@@ -164,17 +180,25 @@ md2026_ukr_historical = {
 		MD2026_UKR_counteroffensive
 		MD2026_UKR_western_weapons
 		MD2026_UKR_liberate_donbas
+		MD2026_UKR_international_legion
+		MD2026_UKR_crimea_question
 		MD2026_UKR_reconstruction
 		MD2026_UKR_defense_industry
 		MD2026_UKR_counter_offensive
+		MD2026_UKR_drone_warfare
 		MD2026_UKR_peace_negotiations
+		MD2026_UKR_energy_resilience
 		MD2026_UKR_frozen_conflict
+		MD2026_UKR_grain_corridor
+		MD2026_UKR_victory_plan
 	}
 
 	focus_factors = {
 		MD2026_UKR_diplomatic_path = 0
 		MD2026_UKR_nato_membership = 0
 		MD2026_UKR_eu_integration = 0
+		MD2026_UKR_security_guarantees = 0
+		MD2026_UKR_eu_candidate = 0
 	}
 
 	weight = {

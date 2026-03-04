@@ -353,3 +353,243 @@ shared_focus = {
 	}
 	ai_will_do = { base = 40 }
 }
+
+### TIER 3 — TAIWAN BRANCH ###
+
+shared_focus = {
+	id = MD2026_CHI_taiwan_blockade
+	icon = communist_navy
+	x = 0
+	y = 1
+	relative_position_id = MD2026_CHI_taiwan_escalation
+	prerequisite = { focus = MD2026_CHI_taiwan_escalation }
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_taiwan_blockade"
+		add_war_support = 0.10
+		add_stability = -0.10
+		navy_experience = 25
+		add_ideas = md2026_chi_naval_blockade
+		random_owned_controlled_state = {
+			limit = { is_core_of = CHI is_coastal = yes }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = MD2026_CHI_taiwan_integration
+	icon = trade_with_taiwan
+	x = 0
+	y = 1
+	relative_position_id = MD2026_CHI_taiwan_diplomacy
+	prerequisite = { focus = MD2026_CHI_taiwan_diplomacy }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_taiwan_integration"
+		add_political_power = 75
+		add_stability = 0.05
+		add_opinion_modifier = { target = TAI modifier = md2026_improved_relations }
+		reverse_add_opinion_modifier = { target = TAI modifier = md2026_improved_relations }
+		random_owned_controlled_state = {
+			limit = { is_core_of = CHI }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 60 }
+}
+
+### TIER 3 — BELT & ROAD BRANCH ###
+
+shared_focus = {
+	id = MD2026_CHI_digital_silk_road
+	icon = economic_robots
+	x = -1
+	y = 1
+	relative_position_id = MD2026_CHI_global_infrastructure
+	prerequisite = { focus = MD2026_CHI_global_infrastructure }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_digital_silk_road"
+		add_political_power = 50
+		add_ideas = md2026_chi_digital_silk_road
+		add_tech_bonus = {
+			name = CHI_digital_silk
+			bonus = 1.0
+			uses = 1
+			category = CAT_computing_tech
+		}
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = MD2026_CHI_african_investment
+	icon = focus_generic_population_growth
+	x = 1
+	y = 1
+	relative_position_id = MD2026_CHI_global_infrastructure
+	prerequisite = { focus = MD2026_CHI_global_infrastructure }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_TRADE }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_african_investment"
+		add_political_power = 75
+		add_opinion_modifier = { target = NGA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = EGY modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = SAF modifier = md2026_improved_relations }
+		reverse_add_opinion_modifier = { target = NGA modifier = md2026_improved_relations }
+		reverse_add_opinion_modifier = { target = EGY modifier = md2026_improved_relations }
+		random_owned_controlled_state = {
+			limit = { is_core_of = CHI }
+			add_resource = {
+				type = rare_earth
+				amount = 8
+			}
+		}
+	}
+	ai_will_do = { base = 50 }
+}
+
+### TIER 3 — TECH DOMINANCE BRANCH ###
+
+shared_focus = {
+	id = MD2026_CHI_ai_supremacy
+	icon = economic_robots
+	x = 0
+	y = 1
+	relative_position_id = MD2026_CHI_semiconductor_war
+	prerequisite = { focus = MD2026_CHI_semiconductor_war }
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_ai_supremacy"
+		add_political_power = 50
+		add_research_slot = 1
+		add_ideas = md2026_chi_ai_supremacy
+		random_owned_controlled_state = {
+			limit = { is_core_of = CHI }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = MD2026_CHI_lunar_program
+	icon = generic_space
+	x = 0
+	y = 1
+	relative_position_id = MD2026_CHI_space_program
+	prerequisite = { focus = MD2026_CHI_space_program }
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_lunar_program"
+		add_political_power = 100
+		add_stability = 0.05
+		add_tech_bonus = {
+			name = CHI_lunar_tech
+			bonus = 1.0
+			uses = 2
+			category = CAT_satellite
+		}
+		add_tech_bonus = {
+			name = CHI_rocket_tech
+			bonus = 1.0
+			uses = 1
+			category = CAT_missile
+		}
+	}
+	ai_will_do = { base = 40 }
+}
+
+### TIER 3 — NAVAL EXPANSION BRANCH ###
+
+shared_focus = {
+	id = MD2026_CHI_island_fortification
+	icon = carriers2
+	x = 0
+	y = 1
+	relative_position_id = MD2026_CHI_south_china_sea
+	prerequisite = { focus = MD2026_CHI_south_china_sea }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_island_fortification"
+		add_war_support = 0.05
+		navy_experience = 15
+		random_owned_controlled_state = {
+			limit = { is_core_of = CHI is_coastal = yes }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = coastal_bunker
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { is_core_of = CHI is_coastal = yes }
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 40 }
+}
+
+shared_focus = {
+	id = MD2026_CHI_carrier_fleet
+	icon = communist_navy
+	x = 0
+	y = 1
+	relative_position_id = MD2026_CHI_blue_water_navy
+	prerequisite = { focus = MD2026_CHI_blue_water_navy }
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_carrier_fleet"
+		navy_experience = 50
+		add_political_power = 75
+		add_ideas = md2026_chi_carrier_fleet
+		random_owned_controlled_state = {
+			limit = { is_core_of = CHI is_coastal = yes }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 50 }
+}
