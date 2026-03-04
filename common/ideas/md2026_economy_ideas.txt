@@ -56,10 +56,6 @@ ideas = {
 				stability_factor = -0.10
 			}
 		}
-	}
-}
-
-	country = {
 		md2026_mass_protests_unrest = {
 			picture = strike
 			
@@ -74,3 +70,4 @@ ideas = {
 			}
 		}
 	}
+}
