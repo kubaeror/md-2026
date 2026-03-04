@@ -1,0 +1,22 @@
+division_template = {
+	name = "Motorized Rifle Brigade"
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		armor = { x = 1 y = 0 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	division = {
+		name = "4th Guards Tank Division"
+		location = 10185
+		division_template = "Motorized Rifle Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+}

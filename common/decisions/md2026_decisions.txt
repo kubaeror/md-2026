@@ -1221,7 +1221,7 @@ md2026_internal_politics_category = {
 
 	### RUSSIA: War Economy Toggle ###
 
-	md2026_sov_war_economy = {
+	md2026_sov_war_economy_decision = {
 		icon = generic_economy
 
 		cost = 75
@@ -1240,7 +1240,7 @@ md2026_internal_politics_category = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision md2026_sov_war_economy"
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_sov_war_economy_decision"
 			add_political_power = -50
 			add_stability = -0.03
 		}

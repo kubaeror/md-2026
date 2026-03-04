@@ -1,0 +1,86 @@
+focus_tree = {
+	id = md2026_idn_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = IDN
+			has_global_flag = md2026_initialized
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = idn_nusantara_capital
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 2
+		y = 0
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50 add_building_construction = { type = industrial_complex amount = 1 instant_build = yes }
+		}
+	}
+	focus = {
+		id = idn_asean_leadership
+		icon = GFX_goal_generic_alliance
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = idn_nusantara_capital }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = idn_nickel_export
+		icon = GFX_goal_generic_trade
+		x = 4
+		y = 1
+		cost = 10
+		prerequisite = { focus = idn_nusantara_capital }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_building_construction = { type = industrial_complex amount = 2 instant_build = yes }
+		}
+	}
+	focus = {
+		id = idn_foreign_investment
+		icon = GFX_goal_generic_production
+		x = 2
+		y = 2
+		cost = 10
+		prerequisite = { focus = idn_asean_leadership focus = idn_nickel_export }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_building_construction = { type = arms_factory amount = 2 instant_build = yes }
+		}
+	}
+	focus = {
+		id = idn_maritime_defense
+		icon = GFX_goal_generic_build_navy
+		x = 2
+		y = 3
+		cost = 10
+		prerequisite = { focus = idn_foreign_investment }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = { name = naval_bonus bonus = 0.5 uses = 1 category = naval_equipment }
+		}
+	}
+	focus = {
+		id = idn_military_expansion
+		icon = GFX_goal_generic_army_motorized
+		x = 2
+		y = 4
+		cost = 10
+		prerequisite = { focus = idn_maritime_defense }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = { name = land_doc_bonus bonus = 0.5 uses = 1 category = land_doctrine }
+		}
+	}
+}

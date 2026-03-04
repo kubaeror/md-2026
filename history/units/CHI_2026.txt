@@ -1,0 +1,23 @@
+division_template = {
+	name = "Combined Arms Brigade"
+	regiments = {
+		mechanized = { x = 0 y = 0 }
+		mechanized = { x = 0 y = 1 }
+		mechanized = { x = 0 y = 2 }
+		armor = { x = 1 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st Amphibious Combined Arms Brigade"
+		location = 4478
+		division_template = "Combined Arms Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+}

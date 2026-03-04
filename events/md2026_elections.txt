@@ -1022,3 +1022,405 @@ country_event = {
 		}
 	}
 }
+
+### NEW ELECTIONS GENERATED ###
+
+country_event = {
+	id = md2026_elections.100
+	title = md2026_elections.100.t
+	desc = md2026_elections.100.desc
+	picture = GFX_report_event_generic_parliament
+
+	trigger = {
+		original_tag = RAJ
+		has_global_flag = md2026_initialized
+		date > 2029.1.1
+		date < 2029.12.31
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = md2026_elections.100.a0
+		create_country_leader = {
+			name = "Yogi Adityanath"
+			ideology = nationalist_Nat_Populism
+			picture = "gfx/leaders/RAJ/Yogi_Adityanath.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.100.a1
+		create_country_leader = {
+			name = "Rahul Gandhi"
+			ideology = western_socialism
+			picture = "gfx/leaders/RAJ/Rahul_Gandhi.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.100.a2
+		create_country_leader = {
+			name = "Arvind Kejriwal"
+			ideology = western_liberalism
+			picture = "gfx/leaders/RAJ/Arvind_Kejriwal.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = md2026_elections.110
+	title = md2026_elections.110.t
+	desc = md2026_elections.110.desc
+	picture = GFX_report_event_generic_parliament
+
+	trigger = {
+		original_tag = TUR
+		has_global_flag = md2026_initialized
+		date > 2028.1.1
+		date < 2028.12.31
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = md2026_elections.110.a0
+		create_country_leader = {
+			name = "Recep Tayyip Erdogan"
+			ideology = conservatism
+			picture = "gfx/leaders/TUR/Recep_Tayyip_Erdogan.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.110.a1
+		create_country_leader = {
+			name = "Ekrem Imamoglu"
+			ideology = western_socialism
+			picture = "gfx/leaders/TUR/Ekrem_Imamoglu.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.110.a2
+		create_country_leader = {
+			name = "Mansur Yavas"
+			ideology = western_liberalism
+			picture = "gfx/leaders/TUR/Mansur_Yavas.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = md2026_elections.120
+	title = md2026_elections.120.t
+	desc = md2026_elections.120.desc
+	picture = GFX_report_event_generic_parliament
+
+	trigger = {
+		original_tag = IDN
+		has_global_flag = md2026_initialized
+		date > 2029.1.1
+		date < 2029.12.31
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = md2026_elections.120.a0
+		create_country_leader = {
+			name = "Prabowo Subianto"
+			ideology = nationalist_Nat_Populism
+			picture = "gfx/leaders/IDN/Prabowo_Subianto.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.120.a1
+		create_country_leader = {
+			name = "Anies Baswedan"
+			ideology = western_liberalism
+			picture = "gfx/leaders/IDN/Anies_Baswedan.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.120.a2
+		create_country_leader = {
+			name = "Ganjar Pranowo"
+			ideology = conservatism
+			picture = "gfx/leaders/IDN/Ganjar_Pranowo.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = md2026_elections.130
+	title = md2026_elections.130.t
+	desc = md2026_elections.130.desc
+	picture = GFX_report_event_generic_parliament
+
+	trigger = {
+		original_tag = MEX
+		has_global_flag = md2026_initialized
+		date > 2030.1.1
+		date < 2030.12.31
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = md2026_elections.130.a0
+		create_country_leader = {
+			name = "Claudia Sheinbaum Successor"
+			ideology = western_socialism
+			picture = "gfx/leaders/MEX/Claudia_Sheinbaum_Successor.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.130.a1
+		create_country_leader = {
+			name = "PAN Candidate"
+			ideology = western_conservatism
+			picture = "gfx/leaders/MEX/PAN_Candidate.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.130.a2
+		create_country_leader = {
+			name = "PRI Candidate"
+			ideology = conservatism
+			picture = "gfx/leaders/MEX/PRI_Candidate.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = md2026_elections.140
+	title = md2026_elections.140.t
+	desc = md2026_elections.140.desc
+	picture = GFX_report_event_generic_parliament
+
+	trigger = {
+		original_tag = ZAF
+		has_global_flag = md2026_initialized
+		date > 2029.1.1
+		date < 2029.12.31
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = md2026_elections.140.a0
+		create_country_leader = {
+			name = "Cyril Ramaphosa"
+			ideology = western_socialism
+			picture = "gfx/leaders/ZAF/Cyril_Ramaphosa.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.140.a1
+		create_country_leader = {
+			name = "John Steenhuisen"
+			ideology = western_liberalism
+			picture = "gfx/leaders/ZAF/John_Steenhuisen.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.140.a2
+		create_country_leader = {
+			name = "Julius Malema"
+			ideology = socialism
+			picture = "gfx/leaders/ZAF/Julius_Malema.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = md2026_elections.150
+	title = md2026_elections.150.t
+	desc = md2026_elections.150.desc
+	picture = GFX_report_event_generic_parliament
+
+	trigger = {
+		original_tag = ARG
+		has_global_flag = md2026_initialized
+		date > 2027.1.1
+		date < 2027.12.31
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = md2026_elections.150.a0
+		create_country_leader = {
+			name = "Javier Milei"
+			ideology = western_liberalism
+			picture = "gfx/leaders/ARG/Javier_Milei.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.150.a1
+		create_country_leader = {
+			name = "Axel Kicillof"
+			ideology = western_socialism
+			picture = "gfx/leaders/ARG/Axel_Kicillof.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.150.a2
+		create_country_leader = {
+			name = "Mauricio Macri"
+			ideology = western_conservatism
+			picture = "gfx/leaders/ARG/Mauricio_Macri.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = md2026_elections.160
+	title = md2026_elections.160.t
+	desc = md2026_elections.160.desc
+	picture = GFX_report_event_generic_parliament
+
+	trigger = {
+		original_tag = CAN
+		has_global_flag = md2026_initialized
+		date > 2029.1.1
+		date < 2029.12.31
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = md2026_elections.160.a0
+		create_country_leader = {
+			name = "Justin Trudeau"
+			ideology = western_liberalism
+			picture = "gfx/leaders/CAN/Justin_Trudeau.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.160.a1
+		create_country_leader = {
+			name = "Pierre Poilievre"
+			ideology = western_conservatism
+			picture = "gfx/leaders/CAN/Pierre_Poilievre.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.160.a2
+		create_country_leader = {
+			name = "Jagmeet Singh"
+			ideology = western_socialism
+			picture = "gfx/leaders/CAN/Jagmeet_Singh.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = md2026_elections.170
+	title = md2026_elections.170.t
+	desc = md2026_elections.170.desc
+	picture = GFX_report_event_generic_parliament
+
+	trigger = {
+		original_tag = AST
+		has_global_flag = md2026_initialized
+		date > 2028.1.1
+		date < 2028.12.31
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = md2026_elections.170.a0
+		create_country_leader = {
+			name = "Anthony Albanese"
+			ideology = western_socialism
+			picture = "gfx/leaders/AST/Anthony_Albanese.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.170.a1
+		create_country_leader = {
+			name = "Peter Dutton"
+			ideology = western_conservatism
+			picture = "gfx/leaders/AST/Peter_Dutton.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	option = {
+		name = md2026_elections.170.a2
+		create_country_leader = {
+			name = "Adam Bandt"
+			ideology = socialism
+			picture = "gfx/leaders/AST/Adam_Bandt.dds"
+			traits = { career_politician }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
