@@ -881,4 +881,9 @@
 	complete_national_focus = GENERIC_submarines
 	complete_national_focus = GENERIC_surface_ships
 	complete_national_focus = GENERIC_trade_with_the_neighbors
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = md2026_zaf_anc_crisis
+	complete_national_focus = md2026_zaf_load_shedding
+	complete_national_focus = md2026_zaf_anti_corruption
 }

@@ -1257,4 +1257,12 @@
 	complete_national_focus = SPR_tedae
 	complete_national_focus = SPR_the_foreign_legion
 	complete_national_focus = SPR_the_regulares
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_SPR_espana_del_futuro
+	complete_national_focus = MD2026_SPR_coalition_survival
+	complete_national_focus = MD2026_SPR_mediterranean_security
+	complete_national_focus = MD2026_SPR_green_economy
+	complete_national_focus = MD2026_SPR_iberoamerican_ties
+	complete_national_focus = MD2026_SPR_eu_leadership
 }

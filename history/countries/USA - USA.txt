@@ -5240,13 +5240,17 @@ capital = 1182
 
 	# MD2026 Pre-completed focuses (already happened by Jan 2026)
 	complete_national_focus = MD2026_USA_trump_second_term
+	complete_national_focus = MD2026_USA_mass_deportations
+	complete_national_focus = MD2026_USA_border_security
+	complete_national_focus = MD2026_USA_doge
 	complete_national_focus = MD2026_USA_trade_tariffs
-	complete_national_focus = MD2026_USA_energy_dominance
-	complete_national_focus = MD2026_USA_nato_pressure
-	complete_national_focus = MD2026_USA_deal_with_russia
 	complete_national_focus = MD2026_USA_trade_war_china
+	complete_national_focus = MD2026_USA_energy_dominance
 	complete_national_focus = MD2026_USA_drill_baby_drill
+	complete_national_focus = MD2026_USA_nato_pressure
 	complete_national_focus = MD2026_USA_pentagon_budget
+	complete_national_focus = MD2026_USA_deal_with_russia
+	complete_national_focus = MD2026_USA_territorial_ambitions
 
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 	complete_national_focus = USA_continue_space_efforts
