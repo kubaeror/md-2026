@@ -1,0 +1,403 @@
+###################################
+# MD2026 Venezuela Crisis
+# Namespace: md2026_venezuela (.1-.6)
+# US military buildup, Maduro capture,
+# post-Maduro transition, regional fallout
+###################################
+
+add_namespace = md2026_venezuela
+
+###################################
+# .1 - USA: Caribbean Military Buildup
+# Auto-fires for USA after Aug 2025
+# Represents anti-narcotics deployment + pressure on Maduro
+###################################
+country_event = {
+	id = md2026_venezuela.1
+	title = md2026_venezuela.1.t
+	desc = md2026_venezuela.1.d
+	picture = GFX_report_event_generic_navy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 2025.8.1
+		NOT = { has_country_flag = md2026_caribbean_buildup }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		set_country_flag = md2026_caribbean_buildup
+	}
+
+	# Option A: Full deployment — maximum pressure
+	option = {
+		name = md2026_venezuela.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_venezuela.1 - Full Caribbean deployment"
+
+		add_political_power = -50
+		add_war_support = 0.05
+		navy_experience = 15
+
+		add_ideas = md2026_usa_caribbean_deployment
+
+		VEN = {
+			add_opinion_modifier = { target = USA modifier = md2026_military_pressure_anger }
+		}
+
+		# Designate Cartel of the Suns — FTO
+		country_event = { id = md2026_venezuela.2 days = 90 }
+
+		ai_chance = {
+			base = 70
+			modifier = {
+				factor = 2
+				has_government = nationalist
+			}
+		}
+	}
+
+	# Option B: Limited patrol — anti-narcotics only
+	option = {
+		name = md2026_venezuela.1.o2
+		log = "[GetDateText]: [This.GetName]: md2026_venezuela.1 - Limited patrol"
+
+		add_political_power = -25
+		navy_experience = 10
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+###################################
+# .2 - USA: Cartel of the Suns Designated FTO
+# Triggered by .1 option A — escalation
+# Maduro's inner circle labeled terrorist organization
+###################################
+country_event = {
+	id = md2026_venezuela.2
+	title = md2026_venezuela.2.t
+	desc = md2026_venezuela.2.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+
+	# Option A: Full sanctions + prepare military options
+	option = {
+		name = md2026_venezuela.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_venezuela.2 - FTO designation + military prep"
+
+		add_political_power = -75
+		add_war_support = 0.10
+
+		set_country_flag = md2026_ven_fto_designated
+
+		VEN = {
+			add_opinion_modifier = { target = USA modifier = md2026_sanctions_opinion }
+			country_event = { id = md2026_venezuela.3 days = 3 }
+		}
+
+		# Regional tension
+		every_country = {
+			limit = {
+				OR = {
+					tag = BRA
+					tag = COL
+					tag = MEX
+					tag = CUB
+				}
+			}
+			add_opinion_modifier = { target = USA modifier = md2026_diplomatic_disapproval }
+		}
+
+		# Prepare strike
+		country_event = { id = md2026_venezuela.4 days = 45 }
+
+		ai_chance = {
+			base = 60
+			modifier = {
+				factor = 2
+				has_government = nationalist
+			}
+		}
+	}
+
+	# Option B: Sanctions only — no military escalation
+	option = {
+		name = md2026_venezuela.2.o2
+		log = "[GetDateText]: [This.GetName]: md2026_venezuela.2 - Sanctions only"
+
+		add_political_power = -25
+
+		set_country_flag = md2026_ven_fto_designated
+
+		VEN = {
+			add_opinion_modifier = { target = USA modifier = md2026_sanctions_opinion }
+		}
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# .3 - Venezuela: Response to FTO Designation
+# Triggered by .2 — Maduro's regime reacts
+###################################
+country_event = {
+	id = md2026_venezuela.3
+	title = md2026_venezuela.3.t
+	desc = md2026_venezuela.3.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+
+	# Option A: Defiance — expel US interests, rally allies
+	option = {
+		name = md2026_venezuela.3.o1
+		log = "[GetDateText]: [This.GetName]: md2026_venezuela.3 - Defiant response"
+
+		add_political_power = -50
+		add_stability = -0.10
+		add_war_support = 0.15
+
+		add_ideas = md2026_ven_siege_mentality
+
+		USA = {
+			add_opinion_modifier = { target = VEN modifier = md2026_diplomatic_disapproval }
+		}
+
+		# Seek Russian and Chinese support
+		SOV = {
+			add_opinion_modifier = { target = VEN modifier = md2026_diplomatic_outreach }
+		}
+		CHI = {
+			add_opinion_modifier = { target = VEN modifier = md2026_diplomatic_outreach }
+		}
+
+		ai_chance = {
+			base = 70
+		}
+	}
+
+	# Option B: Attempt negotiation — offer concessions
+	option = {
+		name = md2026_venezuela.3.o2
+		log = "[GetDateText]: [This.GetName]: md2026_venezuela.3 - Negotiate"
+
+		add_political_power = 25
+		add_stability = 0.05
+
+		USA = {
+			add_opinion_modifier = { target = VEN modifier = md2026_diplomatic_outreach }
+		}
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+###################################
+# .4 - USA: Operation Caracas — Strike on Venezuela
+# Triggered by .2 option A — the culmination
+# Based on January 3, 2026 real events
+###################################
+country_event = {
+	id = md2026_venezuela.4
+	title = md2026_venezuela.4.t
+	desc = md2026_venezuela.4.d
+	picture = GFX_report_event_generic_air_raid
+
+	is_triggered_only = yes
+
+	# Option A: Full strike — capture Maduro
+	option = {
+		name = md2026_venezuela.4.o1
+		log = "[GetDateText]: [This.GetName]: md2026_venezuela.4 - Strike on Caracas"
+
+		add_political_power = -100
+		add_war_support = 0.15
+		add_stability = -0.10
+		army_experience = 25
+
+		# Maduro captured — regime falls
+		VEN = {
+			country_event = { id = md2026_venezuela.5 days = 3 }
+		}
+
+		# Global news
+		every_country = {
+			limit = { is_ai = no }
+			country_event = { id = md2026_venezuela.6 days = 1 }
+		}
+
+		# Regional backlash
+		every_country = {
+			limit = {
+				OR = {
+					tag = BRA
+					tag = MEX
+					tag = COL
+					tag = CUB
+					tag = BOL
+				}
+			}
+			add_opinion_modifier = { target = USA modifier = md2026_military_pressure_anger }
+		}
+
+		# Allied support
+		COL = {
+			add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		}
+
+		ai_chance = {
+			base = 60
+			modifier = {
+				factor = 2
+				has_government = nationalist
+			}
+		}
+	}
+
+	# Option B: Targeted sanctions + covert ops only
+	option = {
+		name = md2026_venezuela.4.o2
+		log = "[GetDateText]: [This.GetName]: md2026_venezuela.4 - Covert approach"
+
+		add_political_power = -50
+		add_war_support = 0.05
+
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+###################################
+# .5 - Venezuela: Post-Maduro Transition
+# Triggered by .4 option A — regime change
+# Delcy Rodriguez as interim, transition crisis
+###################################
+country_event = {
+	id = md2026_venezuela.5
+	title = md2026_venezuela.5.t
+	desc = md2026_venezuela.5.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+
+	# Option A: Democratic transition — cooperate with international community
+	option = {
+		name = md2026_venezuela.5.o1
+		log = "[GetDateText]: [This.GetName]: md2026_venezuela.5 - Democratic transition"
+
+		add_political_power = -100
+		add_stability = -0.20
+		add_war_support = -0.15
+
+		remove_ideas = md2026_ven_siege_mentality
+
+		add_ideas = md2026_ven_post_maduro_transition
+
+		# Improved relations with USA
+		USA = {
+			add_opinion_modifier = { target = VEN modifier = md2026_improved_relations }
+		}
+
+		# Sanctions relief
+		USA = {
+			add_opinion_modifier = { target = VEN modifier = md2026_sanctions_lifted_opinion }
+		}
+
+		ai_chance = {
+			base = 55
+		}
+	}
+
+	# Option B: Regime continuity — Chavista hardliners resist
+	option = {
+		name = md2026_venezuela.5.o2
+		log = "[GetDateText]: [This.GetName]: md2026_venezuela.5 - Regime continuity"
+
+		add_political_power = -150
+		add_stability = -0.30
+		add_war_support = 0.10
+
+		remove_ideas = md2026_ven_siege_mentality
+
+		add_ideas = md2026_ven_power_vacuum
+
+		USA = {
+			add_opinion_modifier = { target = VEN modifier = md2026_diplomatic_disapproval }
+		}
+
+		ai_chance = {
+			base = 45
+		}
+	}
+}
+
+###################################
+# .6 - Regional Reaction: US Strikes on Venezuela
+# News event for all players
+###################################
+country_event = {
+	id = md2026_venezuela.6
+	title = md2026_venezuela.6.t
+	desc = md2026_venezuela.6.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+
+	# Option A: Support American action
+	option = {
+		name = md2026_venezuela.6.o1
+		log = "[GetDateText]: [This.GetName]: md2026_venezuela.6 - Support US action"
+
+		trigger = {
+			NOT = {
+				OR = {
+					tag = SOV
+					tag = CHI
+					tag = CUB
+				}
+			}
+		}
+
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option B: Condemn American intervention
+	option = {
+		name = md2026_venezuela.6.o2
+		log = "[GetDateText]: [This.GetName]: md2026_venezuela.6 - Condemn intervention"
+
+		add_opinion_modifier = { target = USA modifier = md2026_military_pressure_anger }
+
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	# Option C: This does not concern us
+	option = {
+		name = md2026_venezuela.6.o3
+		log = "[GetDateText]: [This.GetName]: md2026_venezuela.6 - Neutral"
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}

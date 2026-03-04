@@ -1,0 +1,54 @@
+﻿l_english:
+
+ ### Venezuela Crisis Event Chain ###
+
+ # Event 1 - USA: Caribbean Military Buildup
+ md2026_venezuela.1.t:0 "Operation Southern Shield: Caribbean Deployment"
+ md2026_venezuela.1.d:0 "The Department of Defense has proposed a major military deployment to the southern Caribbean. Officially described as an anti-narcotics operation, the buildup would position naval warships including the USS Gerald R. Ford carrier strike group in waters near Venezuela. Intelligence reports confirm that the Maduro regime continues to use state apparatus for drug trafficking through the 'Cartel of the Suns' network. This deployment would serve dual purposes — interdicting narcotics and pressuring the Maduro regime."
+ md2026_venezuela.1.o1:0 "Full deployment — maximum pressure on the regime."
+ md2026_venezuela.1.o2:0 "Limited anti-narcotics patrol only."
+
+ # Event 2 - USA: Cartel of the Suns FTO Designation
+ md2026_venezuela.2.t:0 "Cartel of the Suns: FTO Designation"
+ md2026_venezuela.2.d:0 "Based on extensive intelligence, the State Department has recommended designating Venezuela's 'Cartel of the Suns' — a narcotics trafficking network allegedly headed by President Nicolás Maduro himself — as a Foreign Terrorist Organization. This unprecedented designation of a sitting head of state's inner circle as terrorists would authorize military action, freeze assets globally, and fundamentally alter our relationship with Venezuela."
+ md2026_venezuela.2.o1:0 "Designate the FTO and prepare military options."
+ md2026_venezuela.2.o2:0 "Proceed with sanctions only — no military escalation."
+
+ # Event 3 - Venezuela: Response to FTO Designation
+ md2026_venezuela.3.t:0 "The Empire Strikes Again"
+ md2026_venezuela.3.d:0 "The United States has designated the Cartel of the Suns as a Foreign Terrorist Organization, effectively labeling President Maduro and his inner circle as terrorists. This is an act of unprecedented aggression against our sovereignty. The Bolivarian Revolution stands at a crossroads — we can rally our allies and defy the imperialists, or we can attempt to negotiate from a position of rapidly diminishing strength."
+ md2026_venezuela.3.o1:0 "Defy the imperialists — rally Cuba, Russia, and China."
+ md2026_venezuela.3.o2:0 "Seek negotiation — offer limited concessions."
+
+ # Event 4 - USA: Operation Caracas
+ md2026_venezuela.4.t:0 "Operation Caracas"
+ md2026_venezuela.4.d:0 "The moment of decision has arrived. US forces positioned in the southern Caribbean have identified actionable intelligence on Maduro's location. The Joint Chiefs have prepared Operation Caracas — a precision strike package targeting key regime infrastructure in the Venezuelan capital, coupled with a special operations mission to capture Maduro. The operation carries enormous geopolitical risk but could decapitate the narco-state apparatus in a single stroke."
+ md2026_venezuela.4.o1:0 "Execute Operation Caracas — capture Maduro."
+ md2026_venezuela.4.o2:0 "Stand down — pursue covert operations and sanctions."
+
+ # Event 5 - Venezuela: Post-Maduro Transition
+ md2026_venezuela.5.t:0 "The Fall of Maduro"
+ md2026_venezuela.5.d:0 "American forces have captured Nicolás Maduro. The Bolivarian regime that has ruled Venezuela for over two decades is in disarray. Vice President Delcy Rodríguez has been sworn in as interim president, but her authority is contested. The military is fragmenting — some generals support a democratic transition, others want to preserve the Chavista system. The country's vast oil reserves hang in the balance as Venezuela faces its most critical moment since the Bolivarian Revolution."
+ md2026_venezuela.5.o1:0 "Democratic transition — cooperate with the international community."
+ md2026_venezuela.5.o2:0 "The revolution continues — Chavista hardliners will resist."
+
+ # Event 6 - Regional Reaction
+ md2026_venezuela.6.t:0 "US Military Strikes in Venezuela"
+ md2026_venezuela.6.d:0 "The United States has conducted military strikes on Caracas, capturing Venezuelan President Nicolás Maduro. The operation has sent shockwaves through Latin America and the international community. While some nations applaud the removal of an authoritarian narco-regime, others condemn what they see as naked American imperialism and a violation of national sovereignty."
+ md2026_venezuela.6.o1:0 "The removal of Maduro serves regional stability."
+ md2026_venezuela.6.o2:0 "This is a violation of sovereignty — condemn the intervention."
+ md2026_venezuela.6.o3:0 "This does not concern us."
+
+ ### National Spirit Localisation ###
+
+ md2026_usa_caribbean_deployment:0 "Caribbean Military Deployment"
+ md2026_usa_caribbean_deployment_desc:0 "The United States has deployed a carrier strike group and supporting naval assets to the southern Caribbean in a dual-purpose anti-narcotics and regime pressure operation. The deployment projects American power but carries ongoing costs."
+
+ md2026_ven_siege_mentality:0 "Siege Mentality"
+ md2026_ven_siege_mentality_desc:0 "Facing American military pressure and international isolation, the Maduro regime has adopted a siege mentality. Resources are diverted to military preparedness, trade relations suffer, and political paranoia grips the government."
+
+ md2026_ven_post_maduro_transition:0 "Post-Maduro Democratic Transition"
+ md2026_ven_post_maduro_transition_desc:0 "With Maduro captured and the Chavista regime collapsing, Venezuela has embarked on a fragile democratic transition. International aid is flowing, but decades of institutional decay, economic mismanagement, and political polarization make the path forward treacherous."
+
+ md2026_ven_power_vacuum:0 "Post-Maduro Power Vacuum"
+ md2026_ven_power_vacuum_desc:0 "Maduro has fallen, but the Chavista hardliners refuse to surrender power. Venezuela is fractured — military factions compete for control, the economy is in freefall, and the civilian population is caught between competing armed groups. A failed state looms."
