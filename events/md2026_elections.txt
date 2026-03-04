@@ -1138,7 +1138,7 @@ country_event = {
 	picture = GFX_report_event_generic_parliament
 
 	trigger = {
-		original_tag = IDN
+		original_tag = IND
 		has_global_flag = md2026_initialized
 		date > 2029.1.1
 		date < 2029.12.31
@@ -1152,7 +1152,7 @@ country_event = {
 		create_country_leader = {
 			name = "Prabowo Subianto"
 			ideology = nationalist_Nat_Populism
-			picture = "gfx/leaders/IDN/Prabowo_Subianto.dds"
+			picture = "gfx/leaders/IND/IND_Prabowo_Subianto.dds"
 			traits = { career_politician }
 		}
 		add_political_power = 50
@@ -1164,7 +1164,7 @@ country_event = {
 		create_country_leader = {
 			name = "Anies Baswedan"
 			ideology = western_liberalism
-			picture = "gfx/leaders/IDN/Anies_Baswedan.dds"
+			picture = "gfx/leaders/IND/IND_Anies_Baswedan.dds"
 			traits = { career_politician }
 		}
 		add_political_power = 50
@@ -1176,7 +1176,7 @@ country_event = {
 		create_country_leader = {
 			name = "Ganjar Pranowo"
 			ideology = conservatism
-			picture = "gfx/leaders/IDN/Ganjar_Pranowo.dds"
+			picture = "gfx/leaders/IND/Ganjar_Pranowo.dds"
 			traits = { career_politician }
 		}
 		add_political_power = 50

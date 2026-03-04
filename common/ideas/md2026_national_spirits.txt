@@ -1977,7 +1977,7 @@ ideas = {
 		# Indonesia
 		md2026_idn_foreign_investment = {
 			picture = generic_economic_increase
-			allowed = { original_tag = IDN }
+			allowed = { original_tag = IND }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = {
@@ -1989,7 +1989,7 @@ ideas = {
 
 		md2026_idn_archipelago_power = {
 			picture = generic_pp_unity_bonus
-			allowed = { original_tag = IDN }
+			allowed = { original_tag = IND }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = {
@@ -2003,7 +2003,7 @@ ideas = {
 		# Nigeria
 		md2026_nga_african_giant = {
 			picture = generic_pp_unity_bonus
-			allowed = { original_tag = NGA }
+			allowed = { original_tag = NIG }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = {

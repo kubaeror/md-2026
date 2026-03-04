@@ -581,9 +581,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_global_south_pivot"
 		add_political_power = 75
 		add_opinion_modifier = { target = EGY modifier = md2026_improved_relations }
-		add_opinion_modifier = { target = NGA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = NIG modifier = md2026_improved_relations }
 		reverse_add_opinion_modifier = { target = EGY modifier = md2026_improved_relations }
-		reverse_add_opinion_modifier = { target = NGA modifier = md2026_improved_relations }
+		reverse_add_opinion_modifier = { target = NIG modifier = md2026_improved_relations }
 		random_owned_controlled_state = {
 			limit = { is_core_of = SOV }
 			add_extra_state_shared_building_slots = 1

@@ -1,5 +1,5 @@
 ### MD2026 Nigeria Focus Branch ###
-# Shared focuses for Nigeria's 2026 focus tree branch
+# Shared focuses for Nigeria's 2026 focus tree branch (NIG)
 # Root focus at absolute x=38, y=0
 # 8 focuses: ECOWAS, oil/security branches, regional power capstone
 
@@ -10,7 +10,7 @@ shared_focus = {
 	y = 0
 	cost = 3.6
 	allow_branch = {
-		original_tag = NGA
+		original_tag = NIG
 		has_global_flag = md2026_initialized
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -38,14 +38,14 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_nga_oil_revenue"
 		add_political_power = 25
 		random_owned_controlled_state = {
-			limit = { is_core_of = NGA }
+			limit = { is_core_of = NIG }
 			add_resource = {
 				type = oil
 				amount = 12
 			}
 		}
 		random_owned_controlled_state = {
-			limit = { is_core_of = NGA }
+			limit = { is_core_of = NIG }
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
@@ -71,7 +71,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_nga_refinery_construction"
 		add_political_power = 25
 		random_owned_controlled_state = {
-			limit = { is_core_of = NGA }
+			limit = { is_core_of = NIG }
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = synthetic_refinery
@@ -97,7 +97,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_nga_economic_diversification"
 		add_stability = 0.05
 		random_owned_controlled_state = {
-			limit = { is_core_of = NGA }
+			limit = { is_core_of = NIG }
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = {
 				type = industrial_complex
@@ -151,7 +151,7 @@ shared_focus = {
 			category = CAT_land_doctrine
 		}
 		random_owned_controlled_state = {
-			limit = { is_core_of = NGA }
+			limit = { is_core_of = NIG }
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
@@ -208,7 +208,7 @@ shared_focus = {
 		add_war_support = 0.05
 		add_ideas = md2026_nga_african_giant
 		random_owned_controlled_state = {
-			limit = { is_core_of = NGA }
+			limit = { is_core_of = NIG }
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = {
 				type = industrial_complex

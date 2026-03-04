@@ -1514,16 +1514,16 @@ md2026_zaf_historical = {
 }
 
 # ============================================================
-# INDONESIA (IDN)
+# INDONESIA (IND)
 # No mutually exclusive focuses
 # ============================================================
 md2026_idn_historical = {
-	allowed = { original_tag = IDN }
+	allowed = { original_tag = IND }
 	name = "Indonesia 2026 Historical"
 	desc = "Nusantara capital: ASEAN leadership, nickel exports, maritime defense, archipelago power."
 
 	enable = {
-		original_tag = IDN
+		original_tag = IND
 		has_global_flag = md2026_initialized
 	}
 
@@ -1553,16 +1553,16 @@ md2026_idn_historical = {
 }
 
 # ============================================================
-# NIGERIA (NGA)
+# NIGERIA (NIG)
 # No mutually exclusive focuses
 # ============================================================
 md2026_nga_historical = {
-	allowed = { original_tag = NGA }
+	allowed = { original_tag = NIG }
 	name = "Nigeria 2026 Historical"
 	desc = "ECOWAS leadership, oil revenue, Boko Haram crackdown, African giant."
 
 	enable = {
-		original_tag = NGA
+		original_tag = NIG
 		has_global_flag = md2026_initialized
 	}
 

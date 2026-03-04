@@ -515,7 +515,7 @@ country_event = {
 	}
 }
 
-# Global South: BRICS becomes credible alternative - fires at IDN/ARG/NGA etc.
+# Global South: BRICS becomes credible alternative - fires at IND/ARG/NIG etc.
 country_event = {
 	id = md2026_brics.24
 	title = md2026_brics.24.t
@@ -528,9 +528,9 @@ country_event = {
 		NOT = { has_country_flag = md2026_brics_member }
 		NOT = { is_in_faction_with = USA }
 		OR = {
-			tag = IDN
+			tag = IND
 			tag = ARG
-			tag = NGA
+			tag = NIG
 			tag = MEX
 		}
 		count_triggers = {
