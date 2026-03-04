@@ -338,5 +338,25 @@ ideas = {
 				army_defence_factor = 0.10
 			}
 		}
+
+		md2026_proxy_warfare_cost = {
+			picture = political_violence
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.10
+			}
+		}
+
+		md2026_cyber_defense_active = {
+			picture = electronic_warfare
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				intelligence_agency_defense = 0.25
+				drift_defence_factor = 0.15
+			}
+		}
 	}
 }
