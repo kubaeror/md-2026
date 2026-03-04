@@ -1,0 +1,246 @@
+add_namespace = md2026_korea_crisis
+
+### South Korea Political Crisis Event Chain ###
+# .1  - Constitutional Court: Yoon Impeachment Verdict
+# .2  - Military Accountability: Martial Law Generals
+# .3  - Democratic Renewal: Constitutional Reform Debate
+# .4  - Political Polarization Deepens
+# .5  - US-ROK Alliance Reassurance
+# .6  - North Korea Tests the Waters
+
+### .1 - Constitutional Court: Yoon Impeachment Verdict ###
+country_event = {
+	id = md2026_korea_crisis.1
+	title = md2026_korea_crisis.1.t
+	desc = md2026_korea_crisis.1.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = KOR
+		has_global_flag = md2026_initialized
+		date > 2026.3.1
+		NOT = { has_country_flag = md2026_kor_yoon_verdict }
+	}
+
+	mean_time_to_happen = {
+		days = 45
+	}
+
+	# Yoon convicted and removed — democratic vindication
+	option = {
+		name = md2026_korea_crisis.1.a
+		ai_chance = { base = 70 }
+		set_country_flag = md2026_kor_yoon_verdict
+		set_country_flag = md2026_kor_yoon_convicted
+		add_stability = 0.08
+		add_political_power = 50
+		country_event = { id = md2026_korea_crisis.2 days = 30 }
+		country_event = { id = md2026_korea_crisis.3 days = 90 }
+	}
+
+	# Constitutional Court deadlocks — crisis prolonged
+	option = {
+		name = md2026_korea_crisis.1.b
+		ai_chance = { base = 30 }
+		set_country_flag = md2026_kor_yoon_verdict
+		add_stability = -0.10
+		add_political_power = -75
+		add_war_support = -0.05
+		country_event = { id = md2026_korea_crisis.4 days = 60 }
+	}
+}
+
+### .2 - Military Accountability: Martial Law Generals ###
+country_event = {
+	id = md2026_korea_crisis.2
+	title = md2026_korea_crisis.2.t
+	desc = md2026_korea_crisis.2.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Prosecute the generals — rule of law prevails
+	option = {
+		name = md2026_korea_crisis.2.a
+		ai_chance = { base = 60 }
+		add_stability = 0.05
+		add_political_power = 25
+		add_war_support = -0.05
+		army_experience = -15
+	}
+
+	# Quiet amnesty — preserve military cohesion
+	option = {
+		name = md2026_korea_crisis.2.b
+		ai_chance = { base = 40 }
+		add_stability = -0.05
+		add_war_support = 0.05
+		army_experience = 15
+		add_political_power = -25
+	}
+}
+
+### .3 - Democratic Renewal: Constitutional Reform Debate ###
+country_event = {
+	id = md2026_korea_crisis.3
+	title = md2026_korea_crisis.3.t
+	desc = md2026_korea_crisis.3.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Pass sweeping reforms — limit presidential power
+	option = {
+		name = md2026_korea_crisis.3.a
+		ai_chance = { base = 50 }
+		add_stability = 0.10
+		add_political_power = -50
+		swap_ideas = {
+			remove_idea = md2026_kor_political_crisis
+			add_idea = md2026_kor_democratic_renewal
+		}
+	}
+
+	# Modest reforms — maintain executive authority
+	option = {
+		name = md2026_korea_crisis.3.b
+		ai_chance = { base = 35 }
+		add_stability = 0.05
+		add_political_power = 25
+		remove_ideas = md2026_kor_political_crisis
+	}
+
+	# Reform blocked by partisan deadlock
+	option = {
+		name = md2026_korea_crisis.3.c
+		ai_chance = { base = 15 }
+		add_stability = -0.05
+		add_political_power = -25
+	}
+}
+
+### .4 - Political Polarization Deepens ###
+country_event = {
+	id = md2026_korea_crisis.4
+	title = md2026_korea_crisis.4.t
+	desc = md2026_korea_crisis.4.d
+	picture = GFX_report_event_generic_crisis
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Mass protests force resolution
+	option = {
+		name = md2026_korea_crisis.4.a
+		ai_chance = { base = 60 }
+		add_stability = -0.05
+		add_political_power = 50
+		set_country_flag = md2026_kor_yoon_convicted
+		country_event = { id = md2026_korea_crisis.2 days = 30 }
+		country_event = { id = md2026_korea_crisis.3 days = 120 }
+	}
+
+	# Standoff continues — institutional paralysis
+	option = {
+		name = md2026_korea_crisis.4.b
+		ai_chance = { base = 40 }
+		add_stability = -0.10
+		add_political_power = -50
+		add_war_support = -0.05
+	}
+}
+
+### .5 - US-ROK Alliance Reassurance ###
+country_event = {
+	id = md2026_korea_crisis.5
+	title = md2026_korea_crisis.5.t
+	desc = md2026_korea_crisis.5.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = KOR
+		has_global_flag = md2026_initialized
+		has_country_flag = md2026_kor_yoon_verdict
+		date > 2026.6.1
+		NOT = { has_country_flag = md2026_kor_us_reassurance }
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	# Reaffirm alliance — joint exercises and defense cooperation
+	option = {
+		name = md2026_korea_crisis.5.a
+		ai_chance = { base = 80 }
+		set_country_flag = md2026_kor_us_reassurance
+		add_war_support = 0.05
+		add_political_power = 50
+		USA = {
+			add_opinion_modifier = { target = KOR modifier = md2026_improved_relations }
+		}
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+	}
+
+	# Distance from Washington — pursue strategic autonomy
+	option = {
+		name = md2026_korea_crisis.5.b
+		ai_chance = { base = 20 }
+		set_country_flag = md2026_kor_us_reassurance
+		add_stability = 0.05
+		add_political_power = 25
+		USA = {
+			add_opinion_modifier = { target = KOR modifier = md2026_diplomatic_disapproval }
+		}
+	}
+}
+
+### .6 - North Korea Tests the Waters ###
+country_event = {
+	id = md2026_korea_crisis.6
+	title = md2026_korea_crisis.6.t
+	desc = md2026_korea_crisis.6.d
+	picture = GFX_report_event_generic_crisis
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = KOR
+		has_global_flag = md2026_initialized
+		has_country_flag = md2026_kor_yoon_verdict
+		date > 2026.4.1
+		NOT = { has_country_flag = md2026_kor_nk_provocation }
+	}
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	# Firm response — enhanced military readiness
+	option = {
+		name = md2026_korea_crisis.6.a
+		ai_chance = { base = 70 }
+		set_country_flag = md2026_kor_nk_provocation
+		add_war_support = 0.10
+		add_political_power = -25
+		NKO = {
+			add_opinion_modifier = { target = KOR modifier = md2026_military_pressure_anger }
+		}
+	}
+
+	# Restrained response — avoid escalation during crisis
+	option = {
+		name = md2026_korea_crisis.6.b
+		ai_chance = { base = 30 }
+		set_country_flag = md2026_kor_nk_provocation
+		add_stability = 0.03
+		add_political_power = 25
+		add_war_support = -0.05
+	}
+}

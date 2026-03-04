@@ -1283,6 +1283,9 @@
 	set_variable = { term_limit = 1 }
 	set_variable = { current_term = 1 }
 
+	# MD2026 National Spirit: Post-martial law political crisis
+	add_ideas = md2026_kor_political_crisis
+
 	# MD2026 Pre-completed focuses (already happened by Jan 2026)
 	complete_national_focus = MD2026_KOR_shield_freedom
 	complete_national_focus = MD2026_KOR_nk_deterrence

@@ -1,0 +1,45 @@
+﻿l_english:
+
+ ### South Korea Political Crisis Event Chain ###
+
+ # Event 1 - Constitutional Court: Yoon Impeachment Verdict
+ md2026_korea_crisis.1.t:0 "Constitutional Court: Yoon Impeachment Verdict"
+ md2026_korea_crisis.1.d:0 "The Constitutional Court of South Korea has reached its decision on the impeachment of President Yoon Suk-yeol, who shocked the nation by declaring martial law on December 3, 2024 — the first since democratization in 1987. The National Assembly voted unanimously to lift martial law within hours, and impeachment proceedings followed swiftly. The court's verdict will determine whether Korean democracy emerges stronger or descends further into crisis."
+ md2026_korea_crisis.1.a:0 "The Constitution prevails — Yoon is removed."
+ md2026_korea_crisis.1.b:0 "The court fails to reach a verdict."
+
+ # Event 2 - Military Accountability: Martial Law Generals
+ md2026_korea_crisis.2.t:0 "Military Accountability: The Martial Law Generals"
+ md2026_korea_crisis.2.d:0 "With the political crisis addressed, attention turns to the military officers who carried out President Yoon's martial law order. Several generals deployed troops to the National Assembly in an attempt to prevent lawmakers from voting to lift martial law. The question of accountability divides the nation — should they face prosecution as a warning to future would-be authoritarians, or should amnesty preserve military cohesion?"
+ md2026_korea_crisis.2.a:0 "Prosecute them — no one is above the law."
+ md2026_korea_crisis.2.b:0 "Quiet amnesty — the military must remain unified."
+
+ # Event 3 - Democratic Renewal: Constitutional Reform Debate
+ md2026_korea_crisis.3.t:0 "Democratic Renewal: Constitutional Reform"
+ md2026_korea_crisis.3.d:0 "The martial law crisis has exposed fundamental weaknesses in South Korea's constitutional framework. Calls grow louder for sweeping reforms to prevent a future president from ever again attempting to subvert democracy. Proposals include limiting emergency powers, strengthening the National Assembly's oversight role, and reforming the presidential system itself."
+ md2026_korea_crisis.3.a:0 "Pass sweeping reforms — limit presidential power."
+ md2026_korea_crisis.3.b:0 "Modest reforms are sufficient."
+ md2026_korea_crisis.3.c:0 "Partisan deadlock blocks all reform."
+
+ # Event 4 - Political Polarization Deepens
+ md2026_korea_crisis.4.t:0 "Political Polarization Deepens"
+ md2026_korea_crisis.4.d:0 "The Constitutional Court's failure to deliver a clear verdict on Yoon's impeachment has plunged South Korea deeper into political crisis. Massive protests erupt across Seoul, with both pro- and anti-Yoon factions clashing in the streets. The institutional paralysis threatens to undermine South Korea's international standing and its ability to respond to North Korean provocations."
+ md2026_korea_crisis.4.a:0 "The protests force a resolution."
+ md2026_korea_crisis.4.b:0 "The standoff continues — democracy in limbo."
+
+ # Event 5 - US-ROK Alliance Reassurance
+ md2026_korea_crisis.5.t:0 "US-ROK Alliance Reassurance"
+ md2026_korea_crisis.5.d:0 "Following the political upheaval, Washington seeks to reassure Seoul of the enduring strength of the US-ROK alliance. Joint military exercises are proposed to demonstrate unity against North Korean threats and signal continued American commitment to the defense of the Korean Peninsula."
+ md2026_korea_crisis.5.a:0 "Reaffirm the alliance — schedule joint exercises."
+ md2026_korea_crisis.5.b:0 "Pursue greater strategic autonomy."
+
+ # Event 6 - North Korea Tests the Waters
+ md2026_korea_crisis.6.t:0 "North Korea Tests the Waters"
+ md2026_korea_crisis.6.d:0 "Pyongyang has not missed the political chaos engulfing South Korea. Kim Jong-un's regime seizes the moment of weakness, conducting provocative missile tests and intensifying propaganda broadcasts. The crisis in Seoul has created a window of opportunity that North Korea is eager to exploit."
+ md2026_korea_crisis.6.a:0 "Respond firmly — enhanced military readiness."
+ md2026_korea_crisis.6.b:0 "Show restraint — avoid escalation during the crisis."
+
+ ### National Spirit Localisation ###
+
+ md2026_kor_democratic_renewal:0 "Democratic Renewal"
+ md2026_kor_democratic_renewal_desc:0 "Sweeping constitutional reforms passed in the wake of Yoon's martial law attempt have strengthened democratic institutions. Presidential emergency powers are curtailed, the National Assembly's oversight role is enhanced, and civil liberties protections are expanded."
