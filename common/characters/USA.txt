@@ -894,7 +894,7 @@ characters = {
 		}
 		advisor = {
 			slot = army_chief
-			idea_token = Joseph_Votel
+			idea_token = james_e_rainey
 			ledger = army
 			allowed = {
 				original_tag = USA
