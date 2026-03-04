@@ -1232,7 +1232,7 @@ country_event = {
 	picture = GFX_report_event_generic_parliament
 
 	trigger = {
-		original_tag = ZAF
+		original_tag = SAF
 		has_global_flag = md2026_initialized
 		date > 2029.1.1
 		date < 2029.12.31
@@ -1245,7 +1245,7 @@ country_event = {
 		create_country_leader = {
 			name = "Cyril Ramaphosa"
 			ideology = western_socialism
-			picture = "gfx/leaders/ZAF/Cyril_Ramaphosa.dds"
+			picture = "gfx/leaders/SAF/Cyril_Ramaphosa.dds"
 			traits = { career_politician }
 		}
 		add_political_power = 50
@@ -1256,7 +1256,7 @@ country_event = {
 		create_country_leader = {
 			name = "John Steenhuisen"
 			ideology = western_liberalism
-			picture = "gfx/leaders/ZAF/John_Steenhuisen.dds"
+			picture = "gfx/leaders/SAF/John_Steenhuisen.dds"
 			traits = { career_politician }
 		}
 		add_political_power = 50
@@ -1267,7 +1267,7 @@ country_event = {
 		create_country_leader = {
 			name = "Julius Malema"
 			ideology = socialism
-			picture = "gfx/leaders/ZAF/Julius_Malema.dds"
+			picture = "gfx/leaders/SAF/Julius_Malema.dds"
 			traits = { career_politician }
 		}
 		add_political_power = 50
