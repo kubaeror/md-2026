@@ -2010,14 +2010,6 @@
  md2026_proxy_warfare_cost:0 "Proxy War Support"
  md2026_proxy_warfare_cost_desc:0 "Our government is dedicating significant resources and political capital to support proxy forces abroad."
  
- md2026_proxy.1.t:0 "Proxy Operations Succeed"
- md2026_proxy.1.desc:0 "Our recent efforts to support allied militias and proxy forces abroad have yielded excellent results. They have secured key strategic objectives, enhancing our geopolitical standing and vindicating our strategy."
- md2026_proxy.1.a:0 "A geopolitical victory."
- 
- md2026_proxy.2.t:0 "Proxy Operations Suffer Setbacks"
- md2026_proxy.2.desc:0 "Reports from the front lines indicate that our proxy forces have suffered significant defeats. The loss of equipment and personnel is a blow to our regional influence, leading to domestic criticism of the operation's cost."
- md2026_proxy.2.a:0 "A costly failure."
-
  md2026_cyber_attack_infrastructure:0 "Cyberattack on Enemy Infrastructure"
  md2026_cyber_attack_infrastructure_desc:0 "Utilize our cyber warfare capabilities to disrupt the industrial and military infrastructure of our enemies."
  md2026_cyber_steal_technology:0 "Cyber Espionage Campaign"
@@ -2026,23 +2018,3 @@
  md2026_cyber_defense_upgrade_desc:0 "Invest in patching vulnerabilities and strengthening our digital perimeter against foreign intrusions."
  md2026_cyber_defense_active:0 "Active Cyber Defenses"
  md2026_cyber_defense_active_desc:0 "Our networks are currently operating under heightened security protocols."
- 
- md2026_cyber.1.t:0 "Critical Infrastructure Compromised"
- md2026_cyber.1.desc:0 "A sophisticated cyberattack has disrupted operations across several of our key industrial facilities. The origin of the attack is difficult to pinpoint, but the damage is already done."
- md2026_cyber.1.a:0 "A major security breach."
- 
- md2026_cyber.2.t:0 "Cyberattack Successful"
- md2026_cyber.2.desc:0 "Our cyber operatives have successfully infiltrated and disrupted the infrastructure of our adversaries, causing significant operational delays."
- md2026_cyber.2.a:0 "Excellent work."
- 
- md2026_cyber.3.t:0 "Cyber Intrusion Detected"
- md2026_cyber.3.desc:0 "Our cybersecurity agencies have detected and thwarted an attempted breach of our networks. Forensics suggest state-sponsored actors were behind the intrusion."
- md2026_cyber.3.a:0 "We must retaliate."
- 
- md2026_cyber.4.t:0 "Data Exfiltration Successful"
- md2026_cyber.4.desc:0 "Our cyber espionage campaign has paid off. We have successfully extracted valuable technological data that will accelerate our own research efforts."
- md2026_cyber.4.a:0 "Knowledge is power."
- 
- md2026_cyber.5.t:0 "Espionage Operation Fails"
- md2026_cyber.5.desc:0 "Our attempt to steal foreign technology has ended in failure. Our operatives were detected before they could extract any useful data, causing a minor diplomatic embarrassment."
- md2026_cyber.5.a:0 "Cover our tracks."
