@@ -80,7 +80,7 @@ shared_focus = {
 			name = UKR_western_arms
 			bonus = 1.0
 			uses = 2
-			category = armor
+			category = CAT_armor
 		}
 	}
 	ai_will_do = { base = 60 }
@@ -135,7 +135,7 @@ shared_focus = {
 			name = UKR_diplomatic_reform
 			bonus = 1.0
 			uses = 1
-			category = economics_tech
+			category = CAT_industry
 		}
 	}
 	ai_will_do = {

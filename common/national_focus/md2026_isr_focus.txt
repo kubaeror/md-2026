@@ -81,7 +81,7 @@ shared_focus = {
 			name = MD2026_ISR_border_defense
 			bonus = 1.0
 			uses = 2
-			category = CAT_army_all
+			category = CAT_Military
 		}
 		add_stability = 0.05
 	}

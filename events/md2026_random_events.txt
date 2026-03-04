@@ -242,7 +242,7 @@ country_event = {
 		name = md2026_random.5.o1
 		add_stability = -0.10
 		add_political_power = -50
-		consumer_goods_factor = 0.05
+		add_war_support = -0.10
 		ai_chance = { base = 50 }
 	}
 

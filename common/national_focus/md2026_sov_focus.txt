@@ -232,7 +232,7 @@ shared_focus = {
 			name = SOV_import_sub_bonus
 			bonus = 1.0
 			uses = 1
-			category = industry
+			category = CAT_industry
 		}
 	}
 	ai_will_do = { base = 60 }
@@ -286,7 +286,7 @@ shared_focus = {
 			name = SOV_eastern_tech
 			bonus = 1.0
 			uses = 1
-			category = electronics
+			category = CAT_computing_tech
 		}
 	}
 	ai_will_do = { base = 90 }

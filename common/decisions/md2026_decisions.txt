@@ -1236,7 +1236,7 @@ md2026_internal_politics_category = {
 
 		available = {
 			has_war = yes
-			NOT = { has_idea = md2026_sov_war_economy }
+			NOT = { has_idea = md2026_sov_wartime_mobilization }
 		}
 
 		complete_effect = {
@@ -1247,7 +1247,7 @@ md2026_internal_politics_category = {
 
 		remove_effect = {
 			add_timed_idea = {
-				idea = md2026_sov_war_economy
+				idea = md2026_sov_wartime_mobilization
 				days = 365
 			}
 		}
@@ -2000,7 +2000,7 @@ md2026_nuclear_category = {
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 1
-				category = CAT_rocketry
+				category = CAT_missile
 			}
 		}
 

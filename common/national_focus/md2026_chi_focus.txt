@@ -258,7 +258,7 @@ shared_focus = {
 			name = CHI_space_tech
 			bonus = 1.0
 			uses = 1
-			category = rocketry
+			category = CAT_missile
 		}
 	}
 	ai_will_do = { base = 50 }
@@ -348,7 +348,7 @@ shared_focus = {
 			name = CHI_naval_tech
 			bonus = 1.0
 			uses = 2
-			category = naval_equipment
+			category = CAT_naval_all
 		}
 	}
 	ai_will_do = { base = 40 }

@@ -135,8 +135,8 @@ md2026_can_go_nuclear = {
 	NOT = { md2026_is_nuclear_power = yes }
 	num_of_military_factories > 20
 	OR = {
-		has_tech = nuclear_reactor
-		has_tech = nukes
+		has_tech = nuclear_technology
+		has_tech = ICBM
 	}
 }
 

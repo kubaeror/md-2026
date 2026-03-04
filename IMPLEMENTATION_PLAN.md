@@ -556,3 +556,162 @@ Nazwy `picture = ` w ideas odwołują się do sprite'ów z `interface/MD_ideas.g
 | Scripted triggers | 6 |
 | Localisation keys | ~1900 |
 | Country histories | 66+ |
+
+---
+
+## Propozycje dalszego rozwoju
+
+### A. Gameplay — nowe mechaniki
+
+#### A1. AI strategy plans [WYSOKI]
+Bez plików AI mod opiera się na domyślnym zachowaniu — AI nie wie jak korzystać z nowych fokusów i decyzji. Potrzebne:
+- `common/ai_strategy/md2026_ai_strategies.txt` — priorytety budowania, badań, dyplomacji
+- `common/ai_strategy_plans/md2026_ai_plans.txt` — plany per-kraj (SOV: priorytet wojna, CHI: rozwój, USA: dyplomacja+obrona)
+- Wagi `ai_will_do` w fokusach (częściowo już są w decyzjach)
+
+#### A2. Event chainy krajowe (rozbudowane) [WYSOKI]
+Pełne łańcuchy fabularno-mechaniczne z wieloma etapami i rozgałęzieniami:
+- **Eskalacja tajwańska**: prowokacje → blokada → kryzys dyplomatyczny → inwazja lub deeskalacja (5-7 eventów)
+- **Rozpad Rosji**: bunty wewnętrzne → pucz wojskowy → secesje regionów lub konsolidacja (5-7 eventów)
+- **Arabska wiosna 2.0**: protesty → obalenie rządu lub represje → nowy ustrój (4-6 eventów, generyczny dla MENA)
+- **Kryzys migracyjny UE**: fale migracji → napięcia polityczne → skrajne partie zyskują → reforma lub rozpad Schengen (4-5 eventów)
+- **Indyjsko-pakistański kryzys**: incydent graniczny → mobilizacja → eskalacja nuklearna lub mediacja (5-6 eventów)
+
+#### A3. Proxy war system [ŚREDNI]
+Mechanika wojen zastępczych bez bezpośredniego konfliktu:
+- Decyzje: "Wspieraj proxy" (PER→Hezbollah/Houthi, SOV→Wagner w Afryce, USA→opozycja w Syrii)
+- Efekty: bonus attack/defence w docelowym kraju, opinion kary, koszt PP + consumer goods
+- Eventy konsekwencji: proxy sukces (zysk influence), proxy porażka (stab hit, exposure)
+- Triggerowane z `on_monthly` na bazie flag
+
+#### A4. Cyber warfare rozbudowa [ŚREDNI]
+Rozwinięcie istniejącej mechaniki cyber (`md2026_cyber_capability`):
+- Decyzje ofensywne: cyberatak na infrastrukturę wroga (damage building w losowym state), kradzież technologii (tech bonus)
+- Decyzje defensywne: cyber defence upgrade (idea z stacking bonusem)
+- Eventy: wykrycie cyberataku (opinion kara + decision unlocked: retaliacja), data breach (stab hit)
+- Integracja z espionage system HOI4 — custom operative traits
+
+#### A5. System ekonomiczny — cykl koniunkturalny [ŚREDNI]
+Tiered system jak sanctions, ale dla kondycji ekonomii:
+- Stany: `md2026_economy_boom` → `md2026_economy_stable` → `md2026_economy_recession` → `md2026_economy_crisis`
+- Monthly tick sprawdzający: wydatki vs fabryki, stabilność, wojny, sankcje
+- Każdy tier daje inne modyfikatory (boom: -consumer goods, +build speed; crisis: +consumer, -efficiency)
+- Decyzje: stimulus package, austerity measures, quantitative easing — przesuwające tier
+
+#### A6. Scenariusze alternatywne / dodatkowe bookmarki [NISKI]
+Nowe bookmarki z innymi warunkami startowymi:
+- **"Taiwan Crisis 2027"** — CHI zaczyna z wojskiem na granicy, TAI w pełnej mobilizacji, USA deployment w regionie
+- **"Russian Collapse 2028"** — SOV z krytycznym war exhaustion, bunty, separatyzmy
+- **"Middle East Inferno 2026"** — PER z bronią nuklearną, ISR w wojnie na wielu frontach
+- Wymagają osobnych plików history i bookmark
+
+---
+
+### B. Treść — nowe kraje i eventy
+
+#### B1. Nowe focus trees [WYSOKI]
+Kraje z wystarczającym znaczeniem geopolitycznym na dedykowane drzewka:
+
+| Kraj | Tag | Tematyka | Priorytet |
+|---|---|---|---|
+| Pakistan | PAK | Rywalizacja z Indiami, program nuklearny, talibowie, chiński sojusz, Kaszmir | wysoki |
+| Indonezja | IDN | ASEAN leadership, nowa stolica Nusantara, nikiel/palm oil, Morze Południowochińskie | wysoki |
+| Meksyk | MEX | Kartele, USMCA, migracja na granicy, dziedzictwo AMLO, nearshoring | średni |
+| RPA | ZAF | Kryzys ANC, BRICS, load shedding, nierówności, kopalnie | średni |
+| Argentyna | ARG | Reformy Milei, hiperinflacja, dolaryzacja, Falklandy, lit | średni |
+| Nigeria | NGA | Największa gospodarka Afryki, Boko Haram, ropa, wybory, ECOWAS | średni |
+| Wietnam | VIE | Boom gospodarczy, Morze Południowochińskie, US pivot, semiconductory | niski |
+| Filipiny | PHI | Spór z Chinami (shoals), bazy USA, Duterte legacy | niski |
+| Kolumbia | COL | Pokój z FARC, narkotyki, Wenezuela, Petro reformy | niski |
+| Ukraina (rozbudowa) | UKR | Rozwinięcie istniejącego drzewka o ścieżki: kontrofensywa / negocjacje / zamrożony konflikt | średni |
+
+#### B2. Więcej eventów wyborczych [ŚREDNI]
+Dodanie wyborów dla kolejnych krajów:
+
+| Event ID | Kraj | Rok | Kandydaci |
+|---|---|---|---|
+| `md2026_elections.100` | RAJ (Indie) | 2029 | Modi successor (BJP) / Congress / AAP |
+| `md2026_elections.110` | TUR (Turcja) | 2028 | Erdogan / CHP opozycja / nowa partia |
+| `md2026_elections.120` | IDN (Indonezja) | 2029 | Prabowo kontynuacja / opozycja |
+| `md2026_elections.130` | MEX (Meksyk) | 2030 | Morena / PAN / PRI |
+| `md2026_elections.140` | ZAF (RPA) | 2029 | ANC / DA / EFF |
+| `md2026_elections.150` | ARG (Argentyna) | 2027 | Milei / peronizm / radicales |
+| `md2026_elections.160` | CAN (Kanada) | 2029 | Liberal / Conservative / NDP |
+| `md2026_elections.170` | AST (Australia) | 2028 | Labor / Liberal-National / Greens |
+
+#### B3. Eventy regionalne [NISKI]
+Dodatkowe eventy tematyczne dla regionów bez dedykowanej fabuły:
+- Kryzys wenezuelski — masowa migracja, upadek Maduro lub konsolidacja
+- Myanmar junta — opór cywilny, sankcje, chińskie wpływy
+- Afganistan — głód, talibowie, terroryzm, opium
+- Sahel — puczy wojskowe, Wagner, dżihadyzm, exodus Francji
+- Morze Czerwone — Houthi ataki na żeglugę, interwencja koalicji
+
+---
+
+### C. Immersja i prezentacja
+
+#### C1. Newspaper events (global news) [ŚREDNI]
+News eventy widoczne dla WSZYSTKICH graczy (major = yes), informujące o kluczowych wydarzeniach:
+- "Nuclear Test Shocks the World" — gdy ktoś użyje `md2026_develop_nuclear_weapons`
+- "Historic Peace Agreement" — przy zakończeniu dużej wojny
+- "Economic Superpower Emerges" — gdy kraj przekroczy próg fabryk
+- "Alliance Shattered" — gdy kraj opuści NATO/BRICS
+- Format: krótki tytuł + opis + 1 opcja "acknowledge"
+
+#### C2. Dynamic country descriptions [NISKI]
+Scripted localisation zmieniająca opis kraju w bookmark w zależności od stanu gry:
+- UKR po odzyskaniu Krymu: inny opis
+- SOV po rozpadzie: inny opis
+- USA po zmianie rządu: inny opis
+- Wymaga `scripted_localisation` + custom triggers
+
+#### C3. Custom loading screen tips [NISKI]
+Porady i fakty wyświetlane podczas ładowania:
+- `common/loading_screen_tips/md2026_tips.txt`
+- "In 2026, global defense spending exceeded $2.4 trillion for the first time."
+- "The semiconductor industry is worth over $600 billion, with Taiwan producing 90% of advanced chips."
+- Gameplay tips: "Use the Internal Politics decisions to shape your country's domestic strategy."
+
+#### C4. Polska lokalizacja [ŚREDNI]
+Pełne tłumaczenie `md2026_l_english.yml` (1918 kluczy) na `md2026_l_polish.yml`.
+
+#### C5. Custom music [NISKI]
+Playlista pasująca do współczesnej ery:
+- `music/md2026_music.txt` + pliki `.ogg`
+- Ambient, news-style, tension tracks
+- Wymaga licencji lub royalty-free muzyki
+
+---
+
+### D. Techniczne i balans
+
+#### D1. Order of Battle (OOB) [ŚREDNI]
+Realistyczne szablony jednostek 2026 i startowe armie:
+- US Army: Brigade Combat Teams (BCT) — infantry, armor, Stryker
+- Rosja: Battalion Tactical Groups (BTG) — zmechanizowane, pancerne
+- Chiny: Combined Arms Brigades — nowa struktura PLA
+- NATO: standaryzowane szablony wg doktryny
+- Pliki: `history/units/XXX_2026.txt` + `common/units/` templates
+
+#### D2. Balansowanie i playtesting [WYSOKI]
+Iteracyjne dostrajanie na podstawie testów:
+- MTTH eventów random (czy nie za częste/rzadkie?)
+- Koszt vs reward decyzji (czy AI podejmuje sensowne decyzje?)
+- Focus tree timing (czy 70-dniowe fokusy są za szybkie?)
+- National spirit modyfikatory (czy nie za mocne/słabe?)
+- AI behavior bez plików ai_strategy
+- War exhaustion balance (czy SOV/UKR dostają odpowiednie tiers?)
+
+#### D3. Compatibility patches [NISKI]
+Patche kompatybilności z popularnymi submodami Millennium Dawn:
+- MD Music submod
+- MD Expanded (jeśli istnieje)
+- Road to 56 MD hybrid (jeśli ktoś łączy)
+- Wymaga testowania z konkretnymi modami
+
+#### D4. Naprawa duplikatu klucza [NISKI]
+Rozdzielenie `md2026_sov_war_economy` na dwa osobne klucze:
+- `md2026_sov_war_economy` — national spirit z fokusu (common/ideas/md2026_national_spirits.txt)
+- `md2026_sov_war_economy_decision` — idea z decyzji (common/ideas/md2026_decision_ideas.txt)
+- Aktualizacja referencji w decyzjach i lokalizacji

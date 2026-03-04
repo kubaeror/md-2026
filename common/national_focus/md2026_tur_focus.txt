@@ -345,8 +345,8 @@ shared_focus = {
 	relative_position_id = MD2026_TUR_east_med
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_TUR_libya_influence"
-		add_opinion_modifier = { target = LBY modifier = md2026_improved_relations }
-		LBY = { add_opinion_modifier = { target = TUR modifier = md2026_improved_relations } }
+		add_opinion_modifier = { target = LBA modifier = md2026_improved_relations }
+		LBA = { add_opinion_modifier = { target = TUR modifier = md2026_improved_relations } }
 		add_political_power = 50
 		navy_experience = 10
 	}

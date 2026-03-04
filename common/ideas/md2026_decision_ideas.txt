@@ -142,7 +142,7 @@ ideas = {
 
 		### Non-Western Decision Reward Ideas ###
 
-		md2026_sov_war_economy = {
+		md2026_sov_wartime_mobilization = {
 			picture = national_mobilization
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }

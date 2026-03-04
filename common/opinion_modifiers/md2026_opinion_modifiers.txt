@@ -199,4 +199,9 @@ opinion_modifiers = {
 		value = 20
 		decay = 1
 	}
+
+	md2026_border_conflict = {
+		value = -30
+		decay = 1
+	}
 }

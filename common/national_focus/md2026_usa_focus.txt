@@ -102,7 +102,7 @@ shared_focus = {
 			name = USA_tax_cuts_bonus
 			bonus = 1.0
 			uses = 1
-			category = economics_tech
+			category = CAT_industry
 		}
 	}
 	ai_will_do = { base = 60 }
@@ -149,7 +149,7 @@ shared_focus = {
 			name = USA_trade_war_tech
 			bonus = 1.0
 			uses = 1
-			category = computing_tech
+			category = CAT_computing_tech
 		}
 	}
 	ai_will_do = { base = 50 }
@@ -359,7 +359,7 @@ shared_focus = {
 			name = USA_space_force_tech
 			bonus = 1.0
 			uses = 1
-			category = rocketry
+			category = CAT_missile
 		}
 	}
 	ai_will_do = { base = 40 }

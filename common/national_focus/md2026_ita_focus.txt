@@ -378,7 +378,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ITA_libya_stabilization"
 		add_political_power = 50
 		add_war_support = 0.05
-		add_opinion_modifier = { target = LBY modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = LBA modifier = md2026_improved_relations }
 	}
 	ai_will_do = {
 		factor = 1
