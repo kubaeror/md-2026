@@ -610,6 +610,33 @@ ideas = {
 			}
 		}
 
+		md2026_syr_transitional_government = {
+			picture = political_establishment
+			allowed = { original_tag = SYR }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.05
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.05
+				war_support_factor = 0.05
+				democratic_drift = 0.02
+			}
+		}
+
+		md2026_syr_sanctions_relief = {
+			picture = economic_growth
+			allowed = { original_tag = SYR }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = 0.15
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.05
+				stability_factor = 0.03
+			}
+		}
+
 		### SOUTH AFRICA ###
 
 		md2026_saf_load_shedding = {

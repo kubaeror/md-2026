@@ -1,0 +1,46 @@
+﻿l_english:
+
+ ### New Syria Event Chain ###
+
+ # Event 1 - Western Sanctions Partially Lifted
+ md2026_new_syria.1.t:0 "Western Sanctions Partially Lifted"
+ md2026_new_syria.1.d:0 "The transitional Syrian government's cooperation with international inspectors and commitment to political reforms has convinced key Western nations to begin easing the crippling sanctions regime imposed during the Assad era. While full normalization remains distant, the partial lifting of sanctions opens the door to desperately needed foreign investment and humanitarian aid."
+ md2026_new_syria.1.a:0 "A new chapter for Syria begins."
+ md2026_new_syria.1.b:0 "We will not bend to foreign conditions."
+
+ # Event 2 - HTS Legitimacy: From Militia to Government
+ md2026_new_syria.2.t:0 "HTS Legitimacy: From Militia to Government"
+ md2026_new_syria.2.d:0 "Hayat Tahrir al-Sham, the armed faction that led the overthrow of Assad's regime, faces a defining moment. Ahmad al-Sharaa must decide whether to rebrand HTS as a legitimate national political movement — shedding its militant past and embracing governance — or maintain the revolutionary identity that brought them to power."
+ md2026_new_syria.2.a:0 "We are the government of all Syrians now."
+ md2026_new_syria.2.b:0 "The revolution is not yet complete."
+
+ # Event 3 - Arab League Readmission
+ md2026_new_syria.3.t:0 "Syria Readmitted to the Arab League"
+ md2026_new_syria.3.d:0 "After years of suspension following the civil war, Syria has been formally readmitted to the Arab League. The vote, led by Saudi Arabia and the UAE, signals a broader normalization of relations with the post-Assad government and opens new diplomatic and economic channels across the region."
+ md2026_new_syria.3.a:0 "Syria returns to the fold."
+ md2026_new_syria.3.b:0 "We do not need their league."
+
+ # Event 4 - Syria Stability Crisis
+ md2026_new_syria.4.t:0 "Syria Stability Crisis"
+ md2026_new_syria.4.d:0 "Despite the fall of Assad, Syria's transition has hit a critical juncture. Rival factions, economic collapse, and the lingering scars of civil war threaten to tear the country apart once more. The government must act decisively — either through an emergency national unity government or a crackdown on dissent."
+ md2026_new_syria.4.a:0 "Form an emergency national unity government."
+ md2026_new_syria.4.b:0 "Restore order by force."
+
+ # Event 5 - International Recognition Wave
+ md2026_new_syria.5.t:0 "International Recognition Wave"
+ md2026_new_syria.5.d:0 "Following the partial lifting of Western sanctions, a wave of international recognition has swept across the diplomatic landscape. Major powers are now formally acknowledging the transitional Syrian government, establishing embassies, and resuming diplomatic relations. This marks Syria's return to the international community."
+ md2026_new_syria.5.a:0 "The world recognizes our legitimacy."
+
+ # Event 6 - Refugee Return Begins
+ md2026_new_syria.6.t:0 "Refugee Return Begins"
+ md2026_new_syria.6.d:0 "With improved stability and the easing of sanctions, the first significant wave of Syrian refugees has begun returning home. Millions who fled to Turkey, Jordan, Lebanon, and Europe are cautiously making the journey back, bringing with them skills and determination to rebuild. The influx strains resources but promises long-term demographic and economic recovery."
+ md2026_new_syria.6.a:0 "Welcome our people home."
+ md2026_new_syria.6.b:0 "We cannot absorb them yet."
+
+ ### National Spirit Localisation ###
+
+ md2026_syr_transitional_government:0 "Transitional Government"
+ md2026_syr_transitional_government_desc:0 "The HTS-led transitional government has rebranded itself as a legitimate national movement, shedding its militant past. While stability remains fragile, the new governing structure has brought a measure of order and international credibility."
+
+ md2026_syr_sanctions_relief:0 "Sanctions Relief"
+ md2026_syr_sanctions_relief_desc:0 "The partial lifting of Western sanctions has opened new trade channels and attracted foreign investment to Syria's shattered economy. Reconstruction is now possible on a meaningful scale."

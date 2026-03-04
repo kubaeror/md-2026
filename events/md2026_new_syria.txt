@@ -1,0 +1,272 @@
+add_namespace = md2026_new_syria
+
+### Fall of Assad / New Syria Event Chain ###
+# .1  - Western Sanctions Partially Lifted (SYR, date-triggered)
+# .2  - HTS Legitimacy: From Militia to Government (SYR, date-triggered)
+# .3  - Arab League Readmission (SYR, triggered by focus)
+# .4  - Syria Stability Crisis (SYR, conditional on low stability)
+# .5  - International Recognition Wave (SYR, follows sanctions lift)
+# .6  - Refugee Return Begins (SYR, triggered by reconstruction)
+
+### .1 - Western Sanctions Partially Lifted ###
+country_event = {
+	id = md2026_new_syria.1
+	title = md2026_new_syria.1.t
+	desc = md2026_new_syria.1.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = SYR
+		has_global_flag = md2026_initialized
+		date > 2026.3.1
+		NOT = { has_country_flag = md2026_syr_sanctions_lifted }
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	# Accept conditions, lift sanctions
+	option = {
+		name = md2026_new_syria.1.a
+		ai_chance = { base = 80 }
+		set_country_flag = md2026_syr_sanctions_lifted
+		add_ideas = md2026_syr_sanctions_relief
+		add_political_power = 75
+		add_stability = 0.05
+		USA = {
+			add_opinion_modifier = { target = SYR modifier = md2026_improved_relations }
+		}
+		ENG = {
+			add_opinion_modifier = { target = SYR modifier = md2026_improved_relations }
+		}
+		every_country = {
+			limit = {
+				OR = {
+					original_tag = FRA
+					original_tag = GER
+					original_tag = ITA
+				}
+			}
+			add_opinion_modifier = { target = SYR modifier = md2026_improved_relations }
+		}
+		country_event = { id = md2026_new_syria.5 days = 60 }
+	}
+
+	# Reject foreign conditions
+	option = {
+		name = md2026_new_syria.1.b
+		ai_chance = { base = 20 }
+		add_stability = -0.05
+		add_political_power = 50
+		add_war_support = 0.05
+	}
+}
+
+### .2 - HTS Legitimacy: From Militia to Government ###
+country_event = {
+	id = md2026_new_syria.2
+	title = md2026_new_syria.2.t
+	desc = md2026_new_syria.2.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = SYR
+		has_global_flag = md2026_initialized
+		date > 2026.6.1
+		NOT = { has_country_flag = md2026_syr_hts_transition }
+	}
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	# Rebrand as legitimate national movement
+	option = {
+		name = md2026_new_syria.2.a
+		ai_chance = { base = 70 }
+		set_country_flag = md2026_syr_hts_transition
+		add_stability = 0.08
+		add_political_power = 50
+		swap_ideas = {
+			remove_idea = md2026_syr_post_assad
+			add_idea = md2026_syr_transitional_government
+		}
+	}
+
+	# Maintain revolutionary identity
+	option = {
+		name = md2026_new_syria.2.b
+		ai_chance = { base = 30 }
+		set_country_flag = md2026_syr_hts_transition
+		add_war_support = 0.10
+		add_stability = -0.05
+		add_political_power = -25
+	}
+}
+
+### .3 - Arab League Readmission ###
+country_event = {
+	id = md2026_new_syria.3
+	title = md2026_new_syria.3.t
+	desc = md2026_new_syria.3.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_new_syria.3.a
+		ai_chance = { base = 90 }
+		add_stability = 0.05
+		add_political_power = 75
+		every_country = {
+			limit = {
+				OR = {
+					original_tag = SAU
+					original_tag = UAE
+					original_tag = EGY
+					original_tag = JOR
+					original_tag = IRQ
+				}
+			}
+			add_opinion_modifier = { target = SYR modifier = md2026_normalization_opinion }
+		}
+	}
+
+	option = {
+		name = md2026_new_syria.3.b
+		ai_chance = { base = 10 }
+		add_political_power = -50
+	}
+}
+
+### .4 - Syria Stability Crisis ###
+country_event = {
+	id = md2026_new_syria.4
+	title = md2026_new_syria.4.t
+	desc = md2026_new_syria.4.d
+	picture = GFX_report_event_generic_crisis
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = SYR
+		has_global_flag = md2026_initialized
+		date > 2026.6.1
+		stability < 0.3
+		NOT = { has_country_flag = md2026_syr_stability_crisis }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	# Emergency national unity government
+	option = {
+		name = md2026_new_syria.4.a
+		ai_chance = { base = 60 }
+		set_country_flag = md2026_syr_stability_crisis
+		add_stability = 0.10
+		add_political_power = -75
+		add_war_support = 0.05
+	}
+
+	# Crackdown on dissent
+	option = {
+		name = md2026_new_syria.4.b
+		ai_chance = { base = 40 }
+		set_country_flag = md2026_syr_stability_crisis
+		add_stability = 0.05
+		add_war_support = 0.10
+		add_political_power = 25
+		every_country = {
+			limit = {
+				OR = {
+					original_tag = USA
+					original_tag = ENG
+					original_tag = FRA
+				}
+			}
+			add_opinion_modifier = { target = SYR modifier = md2026_diplomatic_disapproval }
+		}
+	}
+}
+
+### .5 - International Recognition Wave ###
+country_event = {
+	id = md2026_new_syria.5
+	title = md2026_new_syria.5.t
+	desc = md2026_new_syria.5.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_new_syria.5.a
+		add_stability = 0.05
+		add_political_power = 50
+		# Improve relations broadly
+		every_country = {
+			limit = {
+				is_major = yes
+				NOT = { tag = SYR }
+				NOT = { tag = SOV }
+			}
+			add_opinion_modifier = { target = SYR modifier = md2026_diplomatic_outreach }
+		}
+	}
+}
+
+### .6 - Refugee Return Begins ###
+country_event = {
+	id = md2026_new_syria.6
+	title = md2026_new_syria.6.t
+	desc = md2026_new_syria.6.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = SYR
+		has_global_flag = md2026_initialized
+		has_country_flag = md2026_syr_sanctions_lifted
+		stability > 0.35
+		date > 2026.6.1
+		NOT = { has_country_flag = md2026_syr_refugees_returning }
+	}
+
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	# Welcome returnees
+	option = {
+		name = md2026_new_syria.6.a
+		ai_chance = { base = 80 }
+		set_country_flag = md2026_syr_refugees_returning
+		add_manpower = 100000
+		add_stability = 0.03
+		add_political_power = 25
+		# Reduce refugee burden on neighbors
+		TUR = {
+			add_opinion_modifier = { target = SYR modifier = md2026_improved_relations }
+		}
+		JOR = {
+			add_opinion_modifier = { target = SYR modifier = md2026_improved_relations }
+		}
+	}
+
+	# Cannot absorb them yet
+	option = {
+		name = md2026_new_syria.6.b
+		ai_chance = { base = 20 }
+		add_stability = -0.05
+		add_political_power = -25
+	}
+}
