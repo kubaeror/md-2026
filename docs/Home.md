@@ -33,11 +33,11 @@ Welcome to the comprehensive documentation for the **Millennium Dawn 2026 Rework
 |--------|---------|
 | **Start Date** | January 1, 2026 |
 | **Countries Updated** | ~70 |
-| **Focus Trees** | 23 (shared focus branches) |
+| **Focus Trees** | 23 (7 compact + 16 expanded with 26 focuses each) |
 | **Events** | ~75 across 11 chains |
 | **National Spirits** | 45 |
 | **Decisions** | 20 across 5 categories |
 | **OOB Files** | 65 |
-| **Localisation Keys** | ~1,450 (English) |
+| **Localisation Keys** | ~1,600 (English) |
 | **Base Mod Required** | Millennium Dawn v1.12.3+ |
 | **HoI4 Version** | 1.17.x |

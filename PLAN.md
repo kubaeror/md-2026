@@ -325,12 +325,13 @@ Bloki technologiczne w `history/countries/` z odblokowanymi tech na 2026.
 
 ## FAZA 8: Focus Trees
 **Priorytet:** SREDNI | **Zlozonosc:** BARDZO WYSOKA | **Pliki:** 45 (23 shared + 22 base copies)
+**Status:** UKONCZONY
 
 ### Podejscie: Nowe galezi drzew dodawane do istniejacych (NIE zastepujemy calych drzew)
 
 ### 23 drzewa fokusowe:
-- **Oryginalne 13 (kompaktowe, ~8-12 fokusow):** USA, SOV, UKR, CHI, GER, RAJ, JAP, TUR, BRA, ISR, KOR, SAU, POL
-- **Rozszerzone 10 (26 fokusow, 5 galezi, ME, capstone):** FRA, ENG, PER, ITA, NKO, CAN, AST, TAI, EGY, SYR
+- [x] **Oryginalne 7 (kompaktowe, ~8-12 fokusow):** USA, SOV, UKR, CHI, BRA, SAU, POL
+- [x] **Rozszerzone 16 (26 fokusow, 5 galezi, ME, capstone):** GER, RAJ, JAP, TUR, ISR, KOR, FRA, ENG, PER, ITA, NKO, CAN, AST, TAI, EGY, SYR
 
 ### Struktura rozszerzonych drzew (26 fokusow):
 - 4 galeze non-ME: T1 → T2a + T2b → T3a + T3b (5 fokusow per galaz)
@@ -338,13 +339,26 @@ Bloki technologiczne w `history/countries/` z odblokowanymi tech na 2026.
 - 1 capstone: wymaga root + kilku T3
 - Pozycje galezi wzgledem root: x = -6, -3, 0, +3, +6
 
-### Pre-completion (210 fokusow):
-- Oryginalne 13: ~70 fokusow pre-completed
-- Rozszerzone 10: 14 fokusow per kraj (root + 5 T1 + 8 non-ME T2) = 140
+### Pre-completion md2026_ fokusow (336 fokusow):
+- [x] Oryginalne 7: ~70 fokusow pre-completed
+- [x] Rozszerzone 16: 14 fokusow per kraj (root + 5 T1 + 8 non-ME T2) = 224
+- [x] Dodatkowe 22 kraje (generic tree): bez md2026_ fokusow
 
-### Pary ME per kraj:
+### Pre-completion bazowych MD fokusow (root + T1, 2000-2026):
+- [x] **44 kraje z dedykowanymi drzewami** (Batch 1-5): indywidualnie dobrane fokusy z uwzglednieniem ME par i sciezek politycznych
+- [x] **15 krajow coastal (generic tree)**: 38 fokusow GENERIC (10 root + 28 T1)
+- [x] **7 krajow landlocked (generic tree)**: 33 fokusy GENERIC (9 root + 24 T1, bez naval)
+- Razem: ~2105 linii complete_national_focus w 66 plikach historii
+
+### Pary ME per kraj (rozszerzone 16):
 | Kraj | Opcja A | Opcja B |
 |------|---------|---------|
+| GER | atlantic_solidarity | european_defense_pillar |
+| RAJ | quad_deepening | brics_balance |
+| JAP | taiwan_contingency | korea_reconciliation |
+| TUR | nato_loyalty | eurasian_pivot |
+| ISR | preemptive_strike | covert_ops |
+| KOR | diplomatic_opening | maximum_pressure |
 | FRA | sahel_withdrawal | sahel_reengage |
 | ENG | cptpp | eu_rapprochement |
 | PER | nuclear_accelerate | nuclear_negotiate |

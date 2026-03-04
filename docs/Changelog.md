@@ -58,12 +58,15 @@ All notable changes to the Millennium Dawn 2026 Rework submod.
 
 ### Focus Trees (FAZA 8)
 - **23 shared focus trees**: USA, Russia, Ukraine, China, Germany, India, Japan, Turkey, Brazil, Israel, South Korea, Saudi Arabia, Poland + France, UK, Iran, Italy, North Korea, Canada, Australia, Taiwan, Egypt, Syria
-- **10 expanded trees** (FRA, ENG, PER, ITA, NKO, CAN, AST, TAI, EGY, SYR) with 26 focuses each — 5 branches, mutually exclusive paths, capstone focuses
-- **260 new focus nodes** across the 10 expanded trees
-- **9 base mod focus tree files** copied (france, uk, iran, italy, korea_north, canada, egypt, syria, generic) with `shared_focus` references
-- **210 pre-completed focuses** across all 23 countries (root + T1 + non-ME T2 focuses auto-completed in history files)
+- **16 expanded trees** with 26 focuses each — 5 branches, mutually exclusive paths, capstone focuses:
+  - Original 10: FRA, ENG, PER, ITA, NKO, CAN, AST, TAI, EGY, SYR
+  - Later expanded 6: GER (Zeitenwende 2026), JAP (Active Defense Era), KOR (Shield of Freedom), ISR (Iron Wall 2026), RAJ (India's Century), TUR (Turkiye's New Era)
+- **7 compact trees** (USA, SOV, UKR, CHI, BRA, SAU, POL) with ~8-12 focuses each
+- **416 new focus nodes** across the 16 expanded trees (26 × 16)
+- **22 base mod focus tree files** copied with `shared_focus` references
+- **Base MD pre-completion**: root + T1 focuses from original MD focus trees pre-completed for all 66 countries (~2105 lines added across all country history files)
+- **md2026_ pre-completion**: root + T1 + non-ME T2 focuses (14 per expanded country) auto-completed in history files
 - Branch gating via `allow_branch` + date check
-- 22 total copied original MD focus tree files with `shared_focus` references
 
 ### Events (FAZA 9)
 - **11 event files** with ~75 events total
@@ -76,8 +79,8 @@ All notable changes to the Millennium Dawn 2026 Rework submod.
 - Sanctions, NATO, military modernization, geopolitics, economy
 
 ### Localisation (FAZA 10)
-- ~1,450 English localisation keys
-- Covers all events, focuses (including 10 expanded trees), spirits, decisions, bookmarks
+- ~1,600 English localisation keys
+- Covers all events, focuses (including 16 expanded trees), spirits, decisions, bookmarks
 
 ### Order of Battle (FAZA 11 — part)
 - **65 OOB files** with optimized unit templates
@@ -148,3 +151,39 @@ Complete overhaul of all 65 OOB files to add real-world military detail:
 - Batch 11: Missile chains (Gotterdammerung + non-got)
 - Batch 12: Naval chains (hulls, weapons, systems, landing craft)
 - Batch 13: Industry & space chains (nanotech, 3D printing, biotech, energy, nuclear, construction, rail, agriculture, GNSS, COMSAT, SPYSAT, KILLSAT, OLV)
+
+### Focus Tree Expansion — 6 Trees (compact → 26 focuses)
+
+Expanded 6 previously compact focus trees (GER, JAP, KOR, ISR, RAJ, TUR) from ~8-12 focuses to the full 26-focus format with 5 branches, ME paths, and capstones:
+
+| Country | Root ID | Theme | ME Pair | Capstone |
+|---------|---------|-------|---------|----------|
+| GER | `MD2026_GER_zeitenwende_2026` | Zeitenwende 2026 | `atlantic_solidarity` ⊕ `european_defense_pillar` | `leading_europe` |
+| JAP | `MD2026_JAP_active_defense` | Active Defense Era | `taiwan_contingency` ⊕ `korea_reconciliation` | `normal_nation` |
+| KOR | `MD2026_KOR_shield_freedom` | Shield of Freedom | `diplomatic_opening` ⊕ `maximum_pressure` | `global_pivot_state` |
+| ISR | `MD2026_ISR_iron_wall` | Iron Wall 2026 | `preemptive_strike` ⊕ `covert_ops` | `startup_nation` |
+| RAJ | `MD2026_RAJ_indias_century` | India's Century | `quad_deepening` ⊕ `brics_balance` | `vishwaguru` |
+| TUR | `MD2026_TUR_new_era` | Turkiye's New Era | `nato_loyalty` ⊕ `eurasian_pivot` | `century_of_turkiye` |
+
+- 156 new focus nodes (26 × 6) replacing ~60 old compact focuses
+- Added localisation keys for all 6 expanded trees
+- Updated old compact tree sections in documentation
+
+### Base MD Focus Pre-Completion — All 66 Countries
+
+Pre-completed root + Tier 1 focuses from base Millennium Dawn focus trees in all 66 country history files, so that the 2026 bookmark starts with logically-completed focuses already done:
+
+| Batch | Countries |
+|-------|-----------|
+| 1 | JAP, ENG, FIN, SWE, GRE, SER, BRM |
+| 2 | CAN, KOR, ROM, BUL, MNT, KOS, TAJ, EST, BOS |
+| 3 | NOR, DEN, GEO, BLR, KAZ, ETH, NKO, BRA |
+| 4 | SAU, EGY, SYR, ISR, HOL, SPR, ITA, POL |
+| 5 | USA, SOV, UKR, CHI, GER, RAJ, TUR, FRA, PER, CZE, ARM, AFG |
+| 6 | 22 generic tree countries (15 coastal + 7 landlocked) |
+
+- ~2,105 `complete_national_focus` lines added across all history files
+- Coastal generic countries: 38 focuses (10 roots + 28 T1s)
+- Landlocked generic countries: 33 focuses (9 roots + 24 T1s)
+- Mutually exclusive pairs resolved to historically correct 2026 choices
+- Alt-history / communist paths skipped for democratic countries
