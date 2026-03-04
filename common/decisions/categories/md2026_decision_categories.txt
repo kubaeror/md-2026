@@ -139,3 +139,18 @@ md2026_nuclear_category = {
 		date > 2025.12.31
 	}
 }
+
+md2026_trumponomics_category = {
+	icon = generic_economy
+	picture = GFX_decision_cat_generic_economy
+	priority = 95
+
+	allowed = {
+		original_tag = USA
+	}
+
+	visible = {
+		date > 2025.12.31
+		has_government = nationalist
+	}
+}

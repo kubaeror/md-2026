@@ -73,6 +73,32 @@ on_actions = {
 			if = {
 				limit = { has_global_flag = md2026_initialized }
 
+				# Trumponomics: auto-trigger tariff events for CAN/MEX if focuses completed
+				USA = {
+					if = {
+						limit = {
+							has_completed_focus = MD2026_USA_trade_tariffs
+							NOT = { has_country_flag = md2026_tariffed_canada }
+							date > 2026.2.1
+						}
+						set_country_flag = md2026_tariffed_canada
+						CAN = {
+							country_event = { id = md2026_trumponomics.3 days = 3 }
+						}
+					}
+					if = {
+						limit = {
+							has_completed_focus = MD2026_USA_trade_tariffs
+							NOT = { has_country_flag = md2026_tariffed_mexico }
+							date > 2026.2.1
+						}
+						set_country_flag = md2026_tariffed_mexico
+						MEX = {
+							country_event = { id = md2026_trumponomics.4 days = 3 }
+						}
+					}
+				}
+
 				# Russia-Ukraine war exhaustion
 				SOV = {
 					if = {
@@ -240,6 +266,30 @@ on_actions = {
 						has_idea = md2026_usa_america_first
 					}
 					remove_ideas = md2026_usa_america_first
+				}
+
+				# USA: Remove DOGE spirits if no longer nationalist
+				if = {
+					limit = {
+						tag = USA
+						NOT = { has_government = nationalist }
+						OR = {
+							has_idea = md2026_usa_doge_cuts
+							has_idea = md2026_usa_doge_deep_cuts
+						}
+					}
+					remove_ideas = md2026_usa_doge_cuts
+					remove_ideas = md2026_usa_doge_deep_cuts
+				}
+
+				# USA: Remove Section 122 tariff if no longer nationalist
+				if = {
+					limit = {
+						tag = USA
+						NOT = { has_government = nationalist }
+						has_idea = md2026_usa_section122_tariff
+					}
+					remove_ideas = md2026_usa_section122_tariff
 				}
 
 				# Turkey: Remove autocracy spirit if government changes

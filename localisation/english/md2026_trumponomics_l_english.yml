@@ -1,0 +1,107 @@
+﻿l_english:
+
+ ### TRUMPONOMICS & DOGE ###
+
+ ## Events ##
+ md2026_trumponomics.1.t:0 "Department of Government Efficiency"
+ md2026_trumponomics.1.d:0 "President Trump has announced the creation of the Department of Government Efficiency (DOGE), led by Elon Musk. The initiative aims to slash federal spending by identifying waste, fraud, and inefficiency across all government agencies. Musk promises to cut trillions from the federal budget, but critics warn of devastating impacts on public services, federal workers, and essential programs."
+ md2026_trumponomics.1.a:0 "Unleash the DOGE!"
+ md2026_trumponomics.1.b:0 "This is too radical."
+
+ md2026_trumponomics.2.t:0 "Global Tariff Shock"
+ md2026_trumponomics.2.d:0 "The United States has imposed a universal 10% tariff on all imports under Section 122 of the Trade Act, following the Supreme Court's ruling that IEEPA-based tariffs were unconstitutional. This sweeping measure affects every trading partner and has sent shockwaves through global markets. Retaliatory measures are expected."
+ md2026_trumponomics.2.a:0 "The world economy trembles."
+
+ md2026_trumponomics.3.t:0 "American Tariffs Hit Canada"
+ md2026_trumponomics.3.d:0 "The United States has imposed 25% tariffs on Canadian imports, citing national security concerns under IEEPA. The tariffs target a broad range of Canadian goods including energy, lumber, and manufactured products. Canada's economy, deeply integrated with the American market, faces severe disruption. Ottawa must decide how to respond."
+ md2026_trumponomics.3.a:0 "Retaliate in kind."
+ md2026_trumponomics.3.b:0 "Seek a negotiated solution."
+
+ md2026_trumponomics.4.t:0 "American Tariffs Hit Mexico"
+ md2026_trumponomics.4.d:0 "The United States has imposed 25% tariffs on Mexican imports, ostensibly to pressure Mexico on border security and drug trafficking. The USMCA trade agreement is effectively suspended. Mexico's export-dependent economy faces a severe crisis as factories along the border begin laying off workers."
+ md2026_trumponomics.4.a:0 "We will not bow to pressure!"
+ md2026_trumponomics.4.b:0 "Comply with American demands."
+
+ md2026_trumponomics.5.t:0 "Supreme Court Strikes Down IEEPA Tariffs"
+ md2026_trumponomics.5.d:0 "The Supreme Court has ruled that the President's use of the International Emergency Economic Powers Act to impose broad tariffs is unconstitutional. The ruling invalidates the 25% tariffs on Canada and Mexico and the 10% tariffs on China imposed under IEEPA. The administration must find a new legal basis for its trade policy or abandon the tariff strategy."
+ md2026_trumponomics.5.a:0 "Pivot to Section 122."
+ md2026_trumponomics.5.b:0 "Defy the Court!"
+
+ md2026_trumponomics.6.t:0 "Section 122: Universal 10% Tariff"
+ md2026_trumponomics.6.d:0 "Following the Supreme Court's ruling, the administration has pivoted to Section 122 of the Trade Act, imposing a universal 10% tariff on all imports. While lower than the previous IEEPA tariffs, this measure is broader in scope, affecting every trading partner simultaneously. The effective average US tariff rate settles at approximately 13.7%."
+ md2026_trumponomics.6.a:0 "America First, everyone else pays."
+ md2026_trumponomics.6.b:0 "The tariff strategy has failed."
+
+ md2026_trumponomics.7.t:0 "The United States Demands Greenland"
+ md2026_trumponomics.7.d:0 "Washington has formally demanded that Denmark cede sovereignty over Greenland to the United States, citing strategic Arctic interests and the need to counter Russian and Chinese influence in the region. President Trump has threatened economic consequences including tariffs and reduced security cooperation if Denmark refuses. The demand has shocked NATO allies and raised questions about the alliance's cohesion."
+ md2026_trumponomics.7.a:0 "Greenland is not for sale!"
+ md2026_trumponomics.7.b:0 "Perhaps we should negotiate..."
+
+ md2026_trumponomics.8.t:0 "Greenland Crisis Fades"
+ md2026_trumponomics.8.d:0 "The crisis over Greenland has subsided. At the World Economic Forum in Davos, signals from Washington suggest the administration is stepping back from its territorial demands. While the issue remains sensitive, the immediate threat of economic consequences has passed."
+ md2026_trumponomics.8.a:0 "A welcome return to normalcy."
+
+ md2026_trumponomics.9.t:0 "Panama Canal: Authority Takes Control"
+ md2026_trumponomics.9.d:0 "The Panama Canal Authority has taken direct control of key port terminals previously operated by a Hong Kong-based conglomerate, asserting full national sovereignty over the waterway. An $8.5 billion modernization plan has been announced. The move was prompted by American pressure over Chinese influence in the canal zone, but Panama frames it as a matter of national sovereignty."
+ md2026_trumponomics.9.a:0 "The Canal is ours. Modernize it."
+ md2026_trumponomics.9.b:0 "Allow continued international oversight."
+
+ md2026_trumponomics.10.t:0 "DOGE Backlash"
+ md2026_trumponomics.10.d:0 "The Department of Government Efficiency's sweeping cuts have provoked a fierce backlash. Federal workers protest mass layoffs, essential services face disruption, and courts have begun blocking some of the most aggressive measures. Public opinion is sharply divided — supporters praise the fiscal discipline while critics call it government sabotage."
+ md2026_trumponomics.10.a:0 "Double down. Cut deeper."
+ md2026_trumponomics.10.b:0 "Scale back the cuts."
+
+ md2026_trumponomics.11.t:0 "Panama Canal Sovereignty Dispute"
+ md2026_trumponomics.11.d:0 "Panama has asserted full control over the Canal's key port terminals, removing the Chinese-linked operators. While this addresses some American concerns, Washington views it as insufficient and demands greater US oversight of this critical strategic waterway. The Monroe Doctrine echoes through the halls of the Pentagon."
+ md2026_trumponomics.11.a:0 "Apply diplomatic pressure."
+ md2026_trumponomics.11.b:0 "Respect Panama's sovereignty."
+
+ ## National Spirits ##
+ md2026_usa_doge_cuts:0 "DOGE: Government Efficiency Cuts"
+ md2026_usa_doge_cuts_desc:0 "The Department of Government Efficiency under Elon Musk is slashing federal spending across all agencies. While reducing the deficit, the cuts disrupt government services, reduce federal workforce capacity, and create political instability."
+ md2026_usa_doge_deep_cuts:0 "DOGE: Deep Government Cuts"
+ md2026_usa_doge_deep_cuts_desc:0 "DOGE has dramatically escalated its operations, implementing sweeping cuts that gut entire federal agencies. Research programs, regulatory bodies, and public services have been decimated. The fiscal savings are significant but the damage to governance and public trust is severe."
+ md2026_usa_section122_tariff:0 "Section 122 Universal Tariff"
+ md2026_usa_section122_tariff_desc:0 "A universal 10% tariff on all imports imposed under Section 122 of the Trade Act. Domestic manufacturing benefits from reduced foreign competition, but consumer prices rise and trading partners retaliate."
+ md2026_can_us_tariff_impact:0 "American Tariff Impact"
+ md2026_can_us_tariff_impact_desc:0 "The United States has imposed severe tariffs on Canadian exports, devastating industries dependent on cross-border trade. The Canadian economy suffers as its largest trading partner weaponizes commerce."
+ md2026_mex_us_tariff_impact:0 "American Tariff Impact"
+ md2026_mex_us_tariff_impact_desc:0 "Crushing American tariffs have devastated Mexico's export sector. Border factories face mass layoffs as supply chains are disrupted. The economic crisis threatens political stability."
+ md2026_pan_canal_modernization:0 "Canal Modernization Program"
+ md2026_pan_canal_modernization_desc:0 "An $8.5 billion modernization program is transforming the Panama Canal, improving infrastructure, expanding capacity, and asserting full national sovereignty over this strategic waterway."
+
+ ## Focus Tree ##
+ MD2026_USA_doge:0 "Establish DOGE"
+ MD2026_USA_doge_desc:0 "Create the Department of Government Efficiency under Elon Musk to identify waste, slash bureaucracy, and reduce federal spending across all government agencies."
+ MD2026_USA_doge_federal_cuts:0 "Federal Spending Cuts"
+ MD2026_USA_doge_federal_cuts_desc:0 "DOGE implements sweeping cuts across federal agencies, eliminating programs deemed wasteful and reducing the government workforce. The savings fund private sector investment."
+ MD2026_USA_doge_deregulation:0 "Mass Deregulation"
+ MD2026_USA_doge_deregulation_desc:0 "Eliminate thousands of federal regulations to unleash American enterprise. Environmental, financial, and labor regulations are rolled back to stimulate economic growth."
+ MD2026_USA_territorial_ambitions:0 "Territorial Ambitions"
+ MD2026_USA_territorial_ambitions_desc:0 "The administration signals interest in expanding American territorial influence, from the Arctic to the Caribbean, invoking the Monroe Doctrine and strategic necessity."
+ MD2026_USA_greenland_demand:0 "Demand Greenland"
+ MD2026_USA_greenland_demand_desc:0 "Formally demand that Denmark cede Greenland to the United States, citing Arctic strategic interests, rare earth mineral deposits, and the need to counter Russian and Chinese influence in the high north."
+ MD2026_USA_panama_canal:0 "Panama Canal Sovereignty"
+ MD2026_USA_panama_canal_desc:0 "Assert American strategic interest in the Panama Canal, pressuring Panama to limit Chinese influence and ensure continued US access to this vital waterway."
+
+ ## Decisions ##
+ md2026_trumponomics_category:0 "Trumponomics"
+ md2026_trumponomics_category_desc:0 "The Trump administration's economic and geopolitical agenda: tariffs, DOGE spending cuts, and territorial ambitions."
+ md2026_tariff_canada:0 "Impose Tariffs on Canada"
+ md2026_tariff_canada_desc:0 "Impose 25% tariffs on Canadian imports under IEEPA, citing national security. This will severely disrupt US-Canada trade relations but may pressure Ottawa on border and trade issues."
+ md2026_tariff_mexico:0 "Impose Tariffs on Mexico"
+ md2026_tariff_mexico_desc:0 "Impose 25% tariffs on Mexican imports, pressuring Mexico City on border security, drug trafficking, and trade practices."
+ md2026_demand_greenland:0 "Demand Greenland from Denmark"
+ md2026_demand_greenland_desc:0 "Formally demand that Denmark transfer sovereignty over Greenland to the United States. Threaten economic consequences if refused."
+ md2026_pressure_panama:0 "Pressure Panama Over Canal"
+ md2026_pressure_panama_desc:0 "Apply diplomatic and economic pressure on Panama to ensure American strategic access to the Canal and counter Chinese influence."
+ md2026_deepen_doge:0 "Deepen DOGE Cuts"
+ md2026_deepen_doge_desc:0 "Expand the Department of Government Efficiency's mandate to implement even deeper federal spending cuts."
+ md2026_dismantle_doge:0 "Dismantle DOGE"
+ md2026_dismantle_doge_desc:0 "Disband the Department of Government Efficiency and reverse its most damaging cuts. Stability must be restored."
+
+ ## Opinion Modifiers ##
+ md2026_tariff_anger:0 "American Tariffs"
+ md2026_tariff_retaliation:0 "Retaliatory Tariffs"
+ md2026_greenland_tension:0 "Greenland Demand"
+ md2026_panama_dispute:0 "Panama Canal Dispute"

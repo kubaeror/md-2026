@@ -1094,5 +1094,93 @@ ideas = {
 			}
 		}
 
+		### TRUMPONOMICS & DOGE ###
+
+		md2026_usa_doge_cuts = {
+			picture = economic_growth
+			allowed = { original_tag = USA }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				NOT = { has_government = nationalist }
+			}
+			modifier = {
+				consumer_goods_factor = -0.08
+				political_power_factor = 0.10
+				stability_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				conscription = -0.005
+			}
+		}
+
+		md2026_usa_doge_deep_cuts = {
+			picture = economic_growth
+			allowed = { original_tag = USA }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				NOT = { has_government = nationalist }
+			}
+			modifier = {
+				consumer_goods_factor = -0.15
+				political_power_factor = 0.15
+				stability_factor = -0.12
+				production_speed_buildings_factor = -0.10
+				conscription = -0.01
+				research_speed_factor = -0.05
+			}
+		}
+
+		md2026_usa_section122_tariff = {
+			picture = GENERIC_protectionism
+			allowed = { original_tag = USA }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				NOT = { has_government = nationalist }
+			}
+			modifier = {
+				trade_opinion_factor = -0.20
+				consumer_goods_factor = 0.08
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.03
+				stability_factor = -0.03
+			}
+		}
+
+		md2026_can_us_tariff_impact = {
+			picture = GENERIC_protectionism
+			allowed = { original_tag = CAN }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = -0.20
+				consumer_goods_factor = 0.08
+				industrial_capacity_factory = -0.10
+				stability_factor = -0.05
+			}
+		}
+
+		md2026_mex_us_tariff_impact = {
+			picture = GENERIC_protectionism
+			allowed = { original_tag = MEX }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = -0.25
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.12
+				stability_factor = -0.08
+				political_power_factor = -0.05
+			}
+		}
+
+		md2026_pan_canal_modernization = {
+			picture = infrastructure_key
+			allowed = { original_tag = PAN }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_infrastructure_factor = 0.20
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.03
+			}
+		}
+
 	}
 }

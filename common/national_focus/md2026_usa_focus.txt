@@ -437,3 +437,172 @@ shared_focus = {
 	}
 	ai_will_do = { base = 20 }
 }
+
+### DOGE BRANCH (far left) ###
+
+shared_focus = {
+	id = MD2026_USA_doge
+	icon = economic_aid
+	x = -6
+	y = 1
+	relative_position_id = MD2026_USA_trump_second_term
+	prerequisite = { focus = MD2026_USA_trump_second_term }
+	cost = 6.5
+
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_USA_doge"
+		country_event = { id = md2026_trumponomics.1 days = 3 }
+		add_political_power = 50
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = MD2026_USA_doge_federal_cuts
+	icon = generic_economy
+	x = -1
+	y = 1
+	relative_position_id = MD2026_USA_doge
+	prerequisite = { focus = MD2026_USA_doge }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_USA_doge_federal_cuts"
+		add_political_power = 75
+		add_stability = -0.05
+		random_owned_controlled_state = {
+			limit = { is_core_of = USA }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 50 }
+}
+
+shared_focus = {
+	id = MD2026_USA_doge_deregulation
+	icon = free_trade
+	x = 1
+	y = 1
+	relative_position_id = MD2026_USA_doge
+	prerequisite = { focus = MD2026_USA_doge }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_USA_doge_deregulation"
+		add_stability = -0.03
+		add_tech_bonus = {
+			name = USA_deregulation_bonus
+			bonus = 1.0
+			uses = 1
+			category = CAT_industry
+		}
+		random_owned_controlled_state = {
+			limit = { is_core_of = USA }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 50 }
+}
+
+### TERRITORIAL AMBITIONS BRANCH (far right) ###
+
+shared_focus = {
+	id = MD2026_USA_territorial_ambitions
+	icon = national_security
+	x = 6
+	y = 1
+	relative_position_id = MD2026_USA_trump_second_term
+	prerequisite = { focus = MD2026_USA_trump_second_term }
+	cost = 6.5
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_USA_territorial_ambitions"
+		add_political_power = -25
+		add_war_support = 0.05
+	}
+	ai_will_do = { base = 40 }
+}
+
+shared_focus = {
+	id = MD2026_USA_greenland_demand
+	icon = arctic_claim
+	x = -1
+	y = 1
+	relative_position_id = MD2026_USA_territorial_ambitions
+	prerequisite = { focus = MD2026_USA_territorial_ambitions }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_USA_greenland_demand"
+		add_political_power = -50
+		add_war_support = 0.03
+		DEN = {
+			set_country_flag = md2026_greenland_demanded
+			country_event = { id = md2026_trumponomics.7 days = 7 }
+		}
+		set_country_flag = md2026_greenland_demanded_usa
+		# Strain with EU allies
+		every_country = {
+			limit = {
+				is_in_faction_with = USA
+				NOT = { tag = USA }
+				OR = {
+					original_tag = GER
+					original_tag = FRA
+					original_tag = NOR
+					original_tag = FIN
+					original_tag = SWE
+				}
+			}
+			add_opinion_modifier = { target = USA modifier = md2026_greenland_tension }
+		}
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = MD2026_USA_panama_canal
+	icon = generic_naval
+	x = 1
+	y = 1
+	relative_position_id = MD2026_USA_territorial_ambitions
+	prerequisite = { focus = MD2026_USA_territorial_ambitions }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_USA_panama_canal"
+		add_political_power = -25
+		add_war_support = 0.05
+		navy_experience = 15
+		PAN = {
+			add_opinion_modifier = { target = USA modifier = md2026_panama_dispute }
+		}
+		# Military posturing
+		random_owned_controlled_state = {
+			limit = { is_core_of = USA is_coastal = yes }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 30 }
+}

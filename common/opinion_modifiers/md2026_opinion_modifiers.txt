@@ -211,4 +211,28 @@ opinion_modifiers = {
 		days = 1000
 		trade = yes
 	}
+
+	### Trumponomics modifiers ###
+
+	md2026_tariff_anger = {
+		value = -35
+		decay = 0.5
+		trade = yes
+	}
+
+	md2026_tariff_retaliation = {
+		value = -25
+		decay = 0.5
+		trade = yes
+	}
+
+	md2026_greenland_tension = {
+		value = -40
+		decay = 1
+	}
+
+	md2026_panama_dispute = {
+		value = -30
+		decay = 1
+	}
 }

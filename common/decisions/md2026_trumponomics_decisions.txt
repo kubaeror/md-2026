@@ -1,0 +1,271 @@
+### Millennium Dawn 2026 - Trumponomics Decisions ###
+# USA decisions for tariff escalation, DOGE, Greenland, Panama
+
+md2026_trumponomics_category = {
+
+	### Impose Tariffs on Canada ###
+
+	md2026_tariff_canada = {
+		icon = generic_economy
+
+		cost = 75
+		fire_only_once = yes
+		days_remove = 30
+
+		visible = {
+			date > 2025.12.31
+			original_tag = USA
+			NOT = { has_country_flag = md2026_tariffed_canada }
+		}
+
+		available = {
+			has_government = nationalist
+			NOT = { has_war_with = CAN }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_tariff_canada"
+			add_political_power = -25
+			add_stability = -0.02
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_tariffed_canada
+			CAN = {
+				country_event = { id = md2026_trumponomics.3 days = 3 }
+			}
+			add_opinion_modifier = { target = CAN modifier = md2026_tariff_anger }
+		}
+
+		ai_will_do = {
+			base = 60
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+
+	### Impose Tariffs on Mexico ###
+
+	md2026_tariff_mexico = {
+		icon = generic_economy
+
+		cost = 75
+		fire_only_once = yes
+		days_remove = 30
+
+		visible = {
+			date > 2025.12.31
+			original_tag = USA
+			NOT = { has_country_flag = md2026_tariffed_mexico }
+		}
+
+		available = {
+			has_government = nationalist
+			NOT = { has_war_with = MEX }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_tariff_mexico"
+			add_political_power = -25
+			add_stability = -0.02
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_tariffed_mexico
+			MEX = {
+				country_event = { id = md2026_trumponomics.4 days = 3 }
+			}
+			add_opinion_modifier = { target = MEX modifier = md2026_tariff_anger }
+		}
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+
+	### Demand Greenland from Denmark ###
+
+	md2026_demand_greenland = {
+		icon = generic_political_actions
+
+		cost = 100
+		fire_only_once = yes
+		days_remove = 14
+
+		visible = {
+			date > 2025.12.31
+			original_tag = USA
+			NOT = { has_country_flag = md2026_greenland_demanded_usa }
+		}
+
+		available = {
+			has_government = nationalist
+			NOT = { has_war_with = DEN }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_demand_greenland"
+			add_political_power = -50
+			add_war_support = 0.03
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_greenland_demanded_usa
+			DEN = {
+				set_country_flag = md2026_greenland_demanded
+				country_event = { id = md2026_trumponomics.7 days = 3 }
+			}
+		}
+
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	### Pressure Panama over Canal ###
+
+	md2026_pressure_panama = {
+		icon = generic_political_actions
+
+		cost = 75
+		fire_only_once = yes
+		days_remove = 30
+
+		visible = {
+			date > 2025.12.31
+			original_tag = USA
+			PAN = { has_country_flag = md2026_panama_canal_nationalized }
+			NOT = { has_country_flag = md2026_panama_pressured }
+		}
+
+		available = {
+			has_government = nationalist
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_pressure_panama"
+			add_political_power = -25
+		}
+
+		remove_effect = {
+			set_country_flag = md2026_panama_pressured
+			add_war_support = 0.02
+			PAN = {
+				add_opinion_modifier = { target = USA modifier = md2026_panama_dispute }
+				add_stability = -0.05
+			}
+			# Latin American solidarity with Panama
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = MEX
+						original_tag = BRA
+						original_tag = ARG
+						original_tag = COL
+						original_tag = VEN
+						original_tag = CHL
+					}
+				}
+				add_opinion_modifier = { target = USA modifier = md2026_panama_dispute }
+			}
+		}
+
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	### Deepen DOGE Cuts ###
+
+	md2026_deepen_doge = {
+		icon = generic_economy
+
+		cost = 50
+		fire_only_once = yes
+		days_remove = 60
+
+		visible = {
+			date > 2025.12.31
+			original_tag = USA
+			has_idea = md2026_usa_doge_cuts
+			NOT = { has_idea = md2026_usa_doge_deep_cuts }
+		}
+
+		available = {
+			has_government = nationalist
+			stability > 0.3
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_deepen_doge"
+			add_political_power = 25
+			add_stability = -0.05
+		}
+
+		remove_effect = {
+			swap_ideas = {
+				remove_idea = md2026_usa_doge_cuts
+				add_idea = md2026_usa_doge_deep_cuts
+			}
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			base = 30
+			modifier = {
+				factor = 0
+				stability < 0.4
+			}
+		}
+	}
+
+	### Dismantle DOGE ###
+
+	md2026_dismantle_doge = {
+		icon = generic_political_actions
+
+		cost = 75
+		fire_only_once = yes
+
+		visible = {
+			date > 2025.12.31
+			original_tag = USA
+			OR = {
+				has_idea = md2026_usa_doge_cuts
+				has_idea = md2026_usa_doge_deep_cuts
+			}
+		}
+
+		available = {
+			stability < 0.35
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_dismantle_doge"
+			if = {
+				limit = { has_idea = md2026_usa_doge_deep_cuts }
+				remove_ideas = md2026_usa_doge_deep_cuts
+			}
+			if = {
+				limit = { has_idea = md2026_usa_doge_cuts }
+				remove_ideas = md2026_usa_doge_cuts
+			}
+			add_stability = 0.10
+			add_political_power = -100
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 80
+				stability < 0.25
+			}
+		}
+	}
+}

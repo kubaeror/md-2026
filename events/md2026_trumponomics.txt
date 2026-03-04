@@ -1,0 +1,402 @@
+add_namespace = md2026_trumponomics
+
+### Trumponomics & DOGE Event Chain ###
+# .1  - DOGE Established (USA, startup-triggered)
+# .2  - Global Tariffs Shock (news, major)
+# .3  - Tariff Impact: Canada (CAN)
+# .4  - Tariff Impact: Mexico (MEX)
+# .5  - Supreme Court Strikes Down IEEPA Tariffs (USA, date-triggered)
+# .6  - Section 122: 10% Universal Tariff (USA, follow-up to .5)
+# .7  - Greenland Demand (DEN, from USA decision/focus)
+# .8  - Greenland Reversal at Davos (DEN, timed follow-up)
+# .9  - Panama Canal: Authority Takes Control (PAN, date-triggered)
+# .10 - DOGE Backlash (USA, timed after .1)
+
+### .1 - Department of Government Efficiency Established ###
+country_event = {
+	id = md2026_trumponomics.1
+	title = md2026_trumponomics.1.t
+	desc = md2026_trumponomics.1.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_trumponomics.1.a
+		ai_chance = { base = 80 }
+		add_ideas = md2026_usa_doge_cuts
+		add_political_power = 50
+		add_stability = -0.05
+		country_event = { id = md2026_trumponomics.10 days = 180 }
+	}
+
+	option = {
+		name = md2026_trumponomics.1.b
+		ai_chance = { base = 20 }
+		add_political_power = -25
+	}
+}
+
+### .2 - Global Tariff Shock ###
+news_event = {
+	id = md2026_trumponomics.2
+	title = md2026_trumponomics.2.t
+	desc = md2026_trumponomics.2.d
+	picture = GFX_news_event_generic_economy
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_trumponomics.2.a
+	}
+}
+
+### .3 - Tariff Impact: Canada ###
+country_event = {
+	id = md2026_trumponomics.3
+	title = md2026_trumponomics.3.t
+	desc = md2026_trumponomics.3.d
+	picture = GFX_report_event_generic_economy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Accept and retaliate
+	option = {
+		name = md2026_trumponomics.3.a
+		ai_chance = { base = 70 }
+		add_ideas = md2026_can_us_tariff_impact
+		add_opinion_modifier = { target = USA modifier = md2026_tariff_anger }
+		USA = {
+			add_opinion_modifier = { target = CAN modifier = md2026_tariff_retaliation }
+		}
+		add_stability = -0.05
+		add_political_power = -25
+	}
+
+	# Seek negotiation
+	option = {
+		name = md2026_trumponomics.3.b
+		ai_chance = { base = 30 }
+		add_timed_idea = {
+			idea = md2026_can_us_tariff_impact
+			days = 365
+		}
+		add_stability = -0.03
+		add_political_power = -50
+	}
+}
+
+### .4 - Tariff Impact: Mexico ###
+country_event = {
+	id = md2026_trumponomics.4
+	title = md2026_trumponomics.4.t
+	desc = md2026_trumponomics.4.d
+	picture = GFX_report_event_generic_economy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Accept and retaliate
+	option = {
+		name = md2026_trumponomics.4.a
+		ai_chance = { base = 60 }
+		add_ideas = md2026_mex_us_tariff_impact
+		add_opinion_modifier = { target = USA modifier = md2026_tariff_anger }
+		USA = {
+			add_opinion_modifier = { target = MEX modifier = md2026_tariff_retaliation }
+		}
+		add_stability = -0.08
+		add_political_power = -25
+	}
+
+	# Comply with US demands
+	option = {
+		name = md2026_trumponomics.4.b
+		ai_chance = { base = 40 }
+		add_timed_idea = {
+			idea = md2026_mex_us_tariff_impact
+			days = 365
+		}
+		add_stability = -0.03
+		add_political_power = -75
+		USA = {
+			add_opinion_modifier = { target = MEX modifier = md2026_improved_relations }
+		}
+	}
+}
+
+### .5 - Supreme Court Strikes Down IEEPA Tariffs ###
+country_event = {
+	id = md2026_trumponomics.5
+	title = md2026_trumponomics.5.t
+	desc = md2026_trumponomics.5.d
+	picture = GFX_report_event_election_vote
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = USA
+		has_global_flag = md2026_initialized
+		date > 2026.2.1
+		has_idea = md2026_usa_trade_war_tariffs
+		NOT = { has_country_flag = md2026_ieepa_struck_down }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	# Accept ruling, pivot to Section 122
+	option = {
+		name = md2026_trumponomics.5.a
+		ai_chance = { base = 80 }
+		set_country_flag = md2026_ieepa_struck_down
+		remove_ideas = md2026_usa_trade_war_tariffs
+		add_political_power = -50
+		add_stability = -0.03
+		country_event = { id = md2026_trumponomics.6 days = 14 }
+	}
+
+	# Defy the court
+	option = {
+		name = md2026_trumponomics.5.b
+		ai_chance = { base = 20 }
+		set_country_flag = md2026_ieepa_struck_down
+		add_stability = -0.10
+		add_political_power = -100
+		add_war_support = 0.03
+	}
+}
+
+### .6 - Section 122: 10% Universal Tariff ###
+country_event = {
+	id = md2026_trumponomics.6
+	title = md2026_trumponomics.6.t
+	desc = md2026_trumponomics.6.d
+	picture = GFX_report_event_generic_economy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Impose universal 10% tariff
+	option = {
+		name = md2026_trumponomics.6.a
+		ai_chance = { base = 90 }
+		add_ideas = md2026_usa_section122_tariff
+		add_stability = -0.02
+		# Notify major trading partners
+		every_country = {
+			limit = {
+				NOT = { tag = USA }
+				OR = {
+					is_in_faction_with = USA
+					is_major = yes
+				}
+			}
+			add_opinion_modifier = { target = USA modifier = md2026_tariff_anger }
+		}
+		# Fire global news
+		news_event = { id = md2026_trumponomics.2 days = 1 }
+	}
+
+	# Abandon tariff strategy
+	option = {
+		name = md2026_trumponomics.6.b
+		ai_chance = { base = 10 }
+		add_political_power = -75
+		add_stability = 0.05
+	}
+}
+
+### .7 - USA Demands Greenland ###
+country_event = {
+	id = md2026_trumponomics.7
+	title = md2026_trumponomics.7.t
+	desc = md2026_trumponomics.7.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Reject firmly
+	option = {
+		name = md2026_trumponomics.7.a
+		ai_chance = { base = 90 }
+		add_opinion_modifier = { target = USA modifier = md2026_greenland_tension }
+		USA = {
+			add_opinion_modifier = { target = DEN modifier = md2026_greenland_tension }
+		}
+		add_stability = -0.03
+		add_war_support = 0.05
+		# EU solidarity
+		every_country = {
+			limit = {
+				OR = {
+					original_tag = GER
+					original_tag = FRA
+					original_tag = ITA
+					original_tag = HOL
+					original_tag = BEL
+					original_tag = SWE
+					original_tag = FIN
+					original_tag = NOR
+				}
+			}
+			add_opinion_modifier = { target = DEN modifier = md2026_solidarity_opinion }
+		}
+	}
+
+	# Negotiate
+	option = {
+		name = md2026_trumponomics.7.b
+		ai_chance = { base = 10 }
+		add_stability = -0.10
+		add_political_power = -100
+		USA = {
+			add_opinion_modifier = { target = DEN modifier = md2026_improved_relations }
+		}
+	}
+}
+
+### .8 - Greenland Crisis Resolved at Davos ###
+country_event = {
+	id = md2026_trumponomics.8
+	title = md2026_trumponomics.8.t
+	desc = md2026_trumponomics.8.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = DEN
+		has_global_flag = md2026_initialized
+		has_country_flag = md2026_greenland_demanded
+		date > 2026.1.1
+		NOT = { has_country_flag = md2026_greenland_resolved }
+	}
+
+	mean_time_to_happen = {
+		days = 365
+	}
+
+	option = {
+		name = md2026_trumponomics.8.a
+		set_country_flag = md2026_greenland_resolved
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+
+### .9 - Panama Canal: Authority Takes Control ###
+country_event = {
+	id = md2026_trumponomics.9
+	title = md2026_trumponomics.9.t
+	desc = md2026_trumponomics.9.d
+	picture = GFX_report_event_generic_economy
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = PAN
+		has_global_flag = md2026_initialized
+		date > 2026.2.1
+		NOT = { has_country_flag = md2026_panama_canal_nationalized }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	# Assert sovereignty, accept modernization plan
+	option = {
+		name = md2026_trumponomics.9.a
+		ai_chance = { base = 80 }
+		set_country_flag = md2026_panama_canal_nationalized
+		add_ideas = md2026_pan_canal_modernization
+		add_stability = 0.05
+		add_political_power = 50
+		USA = {
+			add_opinion_modifier = { target = PAN modifier = md2026_panama_dispute }
+			country_event = { id = md2026_trumponomics.11 days = 7 }
+		}
+	}
+
+	# Allow foreign oversight
+	option = {
+		name = md2026_trumponomics.9.b
+		ai_chance = { base = 20 }
+		add_stability = -0.05
+		add_political_power = -50
+		USA = {
+			add_opinion_modifier = { target = PAN modifier = md2026_improved_relations }
+		}
+	}
+}
+
+### .10 - DOGE Backlash ###
+country_event = {
+	id = md2026_trumponomics.10
+	title = md2026_trumponomics.10.t
+	desc = md2026_trumponomics.10.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Double down on cuts
+	option = {
+		name = md2026_trumponomics.10.a
+		ai_chance = { base = 60 }
+		swap_ideas = {
+			remove_idea = md2026_usa_doge_cuts
+			add_idea = md2026_usa_doge_deep_cuts
+		}
+		add_stability = -0.08
+		add_political_power = 25
+	}
+
+	# Scale back
+	option = {
+		name = md2026_trumponomics.10.b
+		ai_chance = { base = 40 }
+		remove_ideas = md2026_usa_doge_cuts
+		add_stability = 0.05
+		add_political_power = -50
+	}
+}
+
+### .11 - Panama Canal Dispute (USA reaction) ###
+country_event = {
+	id = md2026_trumponomics.11
+	title = md2026_trumponomics.11.t
+	desc = md2026_trumponomics.11.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Diplomatic pressure
+	option = {
+		name = md2026_trumponomics.11.a
+		ai_chance = { base = 70 }
+		add_political_power = -25
+		PAN = {
+			add_opinion_modifier = { target = USA modifier = md2026_panama_dispute }
+		}
+		add_war_support = 0.02
+	}
+
+	# Accept Panama's sovereignty
+	option = {
+		name = md2026_trumponomics.11.b
+		ai_chance = { base = 30 }
+		add_stability = 0.02
+		PAN = {
+			add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		}
+	}
+}
