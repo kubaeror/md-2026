@@ -270,7 +270,7 @@ characters = {
 		}
 		advisor = {
 			slot = navy_chief
-			idea_token = tony_radakin
+			idea_token = ben_key
 			allowed = {
 				original_tag = ENG
 			}
