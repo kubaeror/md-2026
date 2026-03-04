@@ -1,0 +1,10 @@
+loading_screen_tips = {
+	"In 2026, global defense spending exceeded $2.4 trillion for the first time."
+	"The semiconductor industry is worth over $600 billion, with Taiwan producing 90% of advanced chips."
+	"Use the new Internal Politics decisions to shape your country's domestic strategy during times of crisis."
+	"Proxy wars allow you to project power and damage rivals without committing to a full-scale direct conflict."
+	"The war in Ukraine has reshaped the global energy market, pushing Europe to rapidly diversify its energy sources."
+	"Investing in Cyber Defenses is crucial. A successful enemy cyberattack can cripple your infrastructure and steal your technology."
+	"Nuclear deterrence remains the ultimate guarantor of national sovereignty, but pursuing it will isolate you from the international community."
+	"Manage your economy carefully. Stimulus packages can bring you out of a recession, but they cost significant political capital."
+}

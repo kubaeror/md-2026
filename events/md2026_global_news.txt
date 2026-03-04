@@ -1,0 +1,61 @@
+add_namespace = md2026_global_news
+
+# Nuclear Test Shocks the World
+# Triggered when someone takes the develop_nuclear_weapons decision
+news_event = {
+	id = md2026_global_news.1
+	title = md2026_global_news.1.t
+	desc = md2026_global_news.1.d
+	picture = GFX_news_event_nuclear_explosion
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = md2026_global_news.1.a
+	}
+}
+
+# Alliance Shattered
+# Triggered when a major country leaves NATO or BRICS
+news_event = {
+	id = md2026_global_news.2
+	title = md2026_global_news.2.t
+	desc = md2026_global_news.2.d
+	picture = GFX_news_event_generic_diplomacy
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = md2026_global_news.2.a
+	}
+}
+
+# Economic Superpower Emerges
+# Triggered when a non-traditional major hits 300+ factories
+news_event = {
+	id = md2026_global_news.3
+	title = md2026_global_news.3.t
+	desc = md2026_global_news.3.d
+	picture = GFX_news_event_generic_economy
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		num_of_factories > 300
+		NOT = { tag = USA }
+		NOT = { tag = CHI }
+		NOT = { tag = SOV }
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	option = {
+		name = md2026_global_news.3.a
+	}
+}
