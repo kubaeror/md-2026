@@ -13,6 +13,8 @@
 	shared_focus = md2026_zaf_anc_crisis
 	# MD2026: Argentina 2026 branch
 	shared_focus = md2026_arg_milei_reforms
+	# MD2026: Spain 2026 branch
+	shared_focus = MD2026_SPR_espana_del_futuro
 
 	country = { factor = 2 }
 	continuous_focus_position = { x = 5 y = 830 }
