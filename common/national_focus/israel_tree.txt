@@ -30832,7 +30832,7 @@ focus_tree = {
 				name = ISR_aerospace_industries_focus
 				bonus = 0.5
 				uses = 2
-				category = cat_satellite
+				category = CAT_satellite
 			}
 			set_temp_variable = {
 				treasury_change = -10
@@ -30865,7 +30865,7 @@ focus_tree = {
 				name = ISR_aerospace_industries_focus
 				bonus = 0.5
 				uses = 2
-				category = cat_space
+				category = CAT_space
 			}
 			set_temp_variable = {
 				treasury_change = -15
