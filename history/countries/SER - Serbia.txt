@@ -861,4 +861,19 @@ set_research_slots = 3
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 3 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = SER_economic_development
+	complete_national_focus = SER_serbian_armed_forces
+	complete_national_focus = SER_the_high_castle
+	complete_national_focus = SER_Belgrade_School_of_Medicine
+	complete_national_focus = SER_Ministry_of_Education
+	complete_national_focus = SER_anti_opposition_measures
+	complete_national_focus = SER_army
+	complete_national_focus = SER_avia
+	complete_national_focus = SER_begin_repairing_works1
+	complete_national_focus = SER_deals_with_criminal_world
+	complete_national_focus = SER_genshtab
+	complete_national_focus = SER_mvd
+	complete_national_focus = SER_vpk
 }

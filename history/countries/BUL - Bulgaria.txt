@@ -491,4 +491,25 @@ country_event = {
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = BUL_generic_army_effort
+	complete_national_focus = BUL_generic_political_effort
+	complete_national_focus = BUL_global_diplomacy
+	complete_national_focus = BUL_industrial_effort
+	complete_national_focus = BUL_inter_defence
+	complete_national_focus = BUL_astrabioplant
+	complete_national_focus = BUL_foreign
+	complete_national_focus = BUL_general_bank
+	complete_national_focus = BUL_railways
+	complete_national_focus = BUL_vivacom
+	complete_national_focus = BUL_help_army
+	complete_national_focus = BUL_new_army
+	complete_national_focus = BUL_revitalizing_militar_industry
+	complete_national_focus = BUL_collectivist_ethos
+	complete_national_focus = BUL_steady
+	complete_national_focus = BUL_align_to_nato
+	complete_national_focus = BUL_align_to_usa
+	complete_national_focus = BUL_align_russia
+	complete_national_focus = BUL_special_police_troops
 }

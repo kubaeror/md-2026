@@ -1289,4 +1289,29 @@
 	complete_national_focus = MD2026_KOR_k_defense
 	complete_national_focus = MD2026_KOR_k_economy
 	complete_national_focus = MD2026_KOR_kf21
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = KOR_economics_improvement
+	complete_national_focus = KOR_middle_power_diplomacy
+	complete_national_focus = KOR_state_of_the_republic
+	complete_national_focus = KOR_the_rok_armed_forces
+	complete_national_focus = KOR_CELLTRION
+	complete_national_focus = KOR_hyundai
+	complete_national_focus = KOR_lg
+	complete_national_focus = KOR_naver
+	complete_national_focus = KOR_posco
+	complete_national_focus = KOR_samsung
+	complete_national_focus = KOR_bridging_eurasia
+	complete_national_focus = KOR_engage_with_africa
+	complete_national_focus = KOR_peace_in_east_asia
+	complete_national_focus = KOR_southern_focus
+	complete_national_focus = KOR_turn_to_the_middle_east
+	complete_national_focus = KOR_electoral_reform
+	complete_national_focus = KOR_the_korean_left
+	complete_national_focus = KOR_the_korean_right
+	complete_national_focus = KOR_blue_water_navy
+	complete_national_focus = KOR_conscription_policy
+	complete_national_focus = KOR_foreign_procurement
+	complete_national_focus = KOR_korea_aerospace_industries
+	complete_national_focus = KOR_modernize_the_army
 }

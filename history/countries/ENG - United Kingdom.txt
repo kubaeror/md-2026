@@ -2585,4 +2585,14 @@ capital = 13
 	complete_national_focus = MD2026_ENG_science_innovation
 	complete_national_focus = MD2026_ENG_ai_strategy
 	complete_national_focus = MD2026_ENG_biotech_hub
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = ENG_british_armed_forces
+	complete_national_focus = ENG_the_future_of_britain
+	complete_national_focus = ENG_vitalize_westminster
+	complete_national_focus = ENG_democratic_tradition
+	complete_national_focus = ENG_economic_stimulus
+	complete_national_focus = ENG_focus_on_the_army
+	complete_national_focus = ENG_focus_on_the_navy
+	complete_national_focus = ENG_political_reform
 }

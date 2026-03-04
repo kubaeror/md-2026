@@ -761,4 +761,11 @@
 	add_ideas = {
 		md2026_fin_new_nato_member
 	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = FIN_government_expansion
+	complete_national_focus = FIN_expand_the_financial_ministry
+	complete_national_focus = FIN_expand_the_foreign_ministry
+	complete_national_focus = FIN_expand_the_interior_ministry
+	complete_national_focus = FIN_expand_the_ministry_of_defense
 }

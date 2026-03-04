@@ -379,4 +379,29 @@
 	add_ideas = {
 		md2026_blr_russian_satellite
 	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = BLR_presidential_election_of_2001
+	complete_national_focus = USSR_Legacy
+	complete_national_focus = BLR_Increase_funding_Police
+	complete_national_focus = BLR_assembly_shop_of_europe
+	complete_national_focus = BLR_soviet_system
+	complete_national_focus = BLR_church_reforms
+	complete_national_focus = BLR_china_friendship
+	complete_national_focus = BLR_Lykashenko
+	complete_national_focus = BLR_140_zavod
+	complete_national_focus = BLR_558_zavod
+	complete_national_focus = BLR_MZKT
+	complete_national_focus = BLR_mtz
+	complete_national_focus = BLR_MVD
+	complete_national_focus = BLR_kgb_expand
+	complete_national_focus = BLR_riot_finance
+	complete_national_focus = BLR_bountiful_fields
+	complete_national_focus = BLR_treading_on_thin_steel
+	complete_national_focus = BLR_free_weapon
+	complete_national_focus = BLR_new_church
+	complete_national_focus = BLR_work_army
+	complete_national_focus = BLR_church_state
+	complete_national_focus = BLR_Bel_G2
+	complete_national_focus = BLR_Chinese_Modernization_Railway
 }

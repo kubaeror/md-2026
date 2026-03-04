@@ -713,4 +713,25 @@
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = NOR_norwegian_armed_forces
+	complete_national_focus = NOR_the_norwegian_economy
+	complete_national_focus = NOR_party_of_labour
+	complete_national_focus = NOR_cyber_defense_force
+	complete_national_focus = NOR_german_technicians
+	complete_national_focus = NOR_norwegian_air_forces
+	complete_national_focus = NOR_norwegian_land_forces
+	complete_national_focus = NOR_norwegian_navy_forces
+	complete_national_focus = NOR_migration_to_norway
+	complete_national_focus = NOR_ministry_of_agriculture_and_food
+	complete_national_focus = NOR_ministry_of_transport_communication
+	complete_national_focus = NOR_norge_ming
+	complete_national_focus = NOR_norsk_industri
+	complete_national_focus = NOR_north_sea_oil
+	complete_national_focus = NOR_renewable_investments
+	complete_national_focus = NOR_standardize_infrastructure
+	complete_national_focus = NOR_modernization_of_the_welfare_state
+	complete_national_focus = NOR_the_political_earthquake
+	complete_national_focus = NOR_workers_youth_league
 }

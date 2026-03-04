@@ -1138,5 +1138,21 @@
 	complete_national_focus = MD2026_CAN_domestic_agenda
 	complete_national_focus = MD2026_CAN_reconciliation
 	complete_national_focus = MD2026_CAN_immigration_reform
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = CAN_Canadian_Armed_Forces
+	complete_national_focus = CAN_Canadian_Economy
+	complete_national_focus = CAN_Focus_On_Political_Spectrum
+	complete_national_focus = CAN_Canadian_Infrastructure
+	complete_national_focus = CAN_Heavy_Industries_Focus
+	complete_national_focus = CAN_Prospects_Oil
+	complete_national_focus = CAN_mining
+	complete_national_focus = CAN_Focus_On_Canada
+	complete_national_focus = CAN_Ministry_Of_Culture
+	complete_national_focus = CAN_economy
+	complete_national_focus = CAN_international_wargames
+	complete_national_focus = CAN_navy
+	complete_national_focus = CAN_rcaf
+	complete_national_focus = CAN_the_infantry
 }
 

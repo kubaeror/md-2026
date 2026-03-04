@@ -518,4 +518,17 @@ capital = 141
 	add_ideas = {
 		md2026_gre_economic_recovery
 	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = GRE_glass_cannon_economics
+	complete_national_focus = GRE_h_armed
+	complete_national_focus = GRE_turn_century
+	complete_national_focus = GRE_unemployed
+	complete_national_focus = GRE_arm
+	complete_national_focus = GRE_chi_investments
+	complete_national_focus = GRE_foreign_relations
+	complete_national_focus = GRE_h_navy
+	complete_national_focus = GRE_harf
+	complete_national_focus = GRE_the_hellenic_republic
+	complete_national_focus = GRE_strength
 }

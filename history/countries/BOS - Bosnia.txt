@@ -429,4 +429,21 @@ set_war_support = 0.27
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = BOS_House_of_Representatives
+	complete_national_focus = BOS_bosnian_elections
+	complete_national_focus = BOS_economic_revision
+	complete_national_focus = BOS_politicized_army
+	complete_national_focus = BOS_post_war_effort
+	complete_national_focus = BOS_Air_doctrine
+	complete_national_focus = BOS_army_of_republic_of_Srpska
+	complete_national_focus = BOS_army_of_the_federation_Bosnia_Herzegovina
+	complete_national_focus = BOS_land_doctrine
+	complete_national_focus = BOS_The_federation
+	complete_national_focus = BOS_elections_polical
+	complete_national_focus = BOS_the_state
+	complete_national_focus = BOS_grant_herzegovinians_more_rights
+	complete_national_focus = BOS_grant_more_rights_to_serbian_peoples
+	complete_national_focus = BOS_detain_serbian_generals
 }

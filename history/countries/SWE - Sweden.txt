@@ -1825,4 +1825,17 @@
 	add_ideas = {
 		md2026_swe_new_nato_member
 	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = SWE_internal_politics
+	complete_national_focus = SWE_swedish_projects
+	complete_national_focus = SWE_the_New_army
+	complete_national_focus = SWE_Airforce_structure
+	complete_national_focus = SWE_Armestaben
+	complete_national_focus = SWE_Navy_reforms
+	complete_national_focus = SWE_found_visit_sverige
+	complete_national_focus = SWE_infrastructure_projects
+	complete_national_focus = SWE_revitalize_the_nation
+	complete_national_focus = SWE_old_traditions
+	complete_national_focus = SWE_sverigedemokraterna
 }

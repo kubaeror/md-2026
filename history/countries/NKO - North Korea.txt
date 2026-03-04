@@ -1023,4 +1023,34 @@
 	complete_national_focus = MD2026_NKO_cyber_warfare
 	complete_national_focus = MD2026_NKO_crypto_theft
 	complete_national_focus = MD2026_NKO_information_warfare
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = NKO_Kim_Jong_il_Death
+	complete_national_focus = NKO_National_Defence_Force
+	complete_national_focus = NKO_People_Army
+	complete_national_focus = NKO_The_38th_Parallel
+	complete_national_focus = NKO_Struggle_for_Power
+	complete_national_focus = NKO_Red_Dawn
+	complete_national_focus = NKO_bureau_38
+	complete_national_focus = NKO_national_recovery_plan
+	complete_national_focus = NKO_promote_songun
+	complete_national_focus = NKO_solve_the_arduous_march
+	complete_national_focus = NKO_Kim_Jong_un
+	complete_national_focus = NKO_Orthodox_Successor
+	complete_national_focus = NKO_The_Road_to_War
+	complete_national_focus = NKO_Begin_Uranium_Enrichment
+	complete_national_focus = NKO_Naval_Modernization
+	complete_national_focus = NKO_People_Air_force
+	complete_national_focus = NKO_Revolutionary_Military_Spirit
+	complete_national_focus = NKO_Self-produced_rifles
+	complete_national_focus = NKO_emphasis_self_reliance
+	complete_national_focus = NKO_industrial_modernization
+	complete_national_focus = NKO_resource_extraction
+	complete_national_focus = NKO_food_production_boost
+	complete_national_focus = NKO_healthcare_reform
+	complete_national_focus = NKO_humanitarian_aid
+	complete_national_focus = NKO_international_black_market
+	complete_national_focus = NKO_red_star_os
+	complete_national_focus = NKO_sanction_evasions
+	complete_national_focus = NKO_korean_iron_fist
 }
