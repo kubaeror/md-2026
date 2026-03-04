@@ -1324,7 +1324,7 @@ md2026_ast_historical = {
 md2026_arg_historical = {
 	allowed = { original_tag = ARG }
 	name = "Argentina 2026 Historical"
-	desc = "Milei reforms: economic liberalization and Falklands rhetoric."
+	desc = "Milei reforms: dollarization, austerity, Vaca Muerta, western alignment."
 
 	enable = {
 		original_tag = ARG
@@ -1338,6 +1338,12 @@ md2026_arg_historical = {
 		md2026_arg_milei_reforms
 		md2026_arg_dollarization
 		md2026_arg_falklands_rhetoric
+		md2026_arg_austerity
+		md2026_arg_western_alignment
+		md2026_arg_privatization
+		md2026_arg_lithium_exports
+		md2026_arg_vaca_muerta
+		md2026_arg_new_argentina
 	}
 
 	weight = {
@@ -1355,7 +1361,7 @@ md2026_arg_historical = {
 md2026_mex_historical = {
 	allowed = { original_tag = MEX }
 	name = "Mexico 2026 Historical"
-	desc = "AMLO legacy: USMCA trade, cartel war, nearshoring, and PEMEX reform."
+	desc = "AMLO legacy: USMCA trade, nearshoring, cartel war, PEMEX reform, green transition."
 
 	enable = {
 		original_tag = MEX
@@ -1369,9 +1375,13 @@ md2026_mex_historical = {
 		md2026_mex_amlo_legacy
 		md2026_mex_usmca_trade
 		md2026_mex_cartel_war
+		md2026_mex_pemex_reform
 		md2026_mex_nearshoring
 		md2026_mex_national_guard
-		md2026_mex_pemex_reform
+		md2026_mex_tariff_response
+		md2026_mex_border_cooperation
+		md2026_mex_green_transition
+		md2026_mex_regional_power
 	}
 
 	weight = {
@@ -1384,12 +1394,13 @@ md2026_mex_historical = {
 
 # ============================================================
 # PAKISTAN (PAK)
-# No mutually exclusive focuses
+# Mutually exclusive: imf_bailout vs chinese_loans
+# Historical path: IMF bailout
 # ============================================================
 md2026_pak_historical = {
 	allowed = { original_tag = PAK }
 	name = "Pakistan 2026 Historical"
-	desc = "Economic crisis: IMF bailout, Kashmir issue, nuclear program, and military modernization."
+	desc = "Economic crisis: IMF bailout, tax reform, Kashmir issue, military modernization."
 
 	enable = {
 		original_tag = PAK
@@ -1402,16 +1413,64 @@ md2026_pak_historical = {
 	ai_national_focuses = {
 		md2026_pak_economic_crisis
 		md2026_pak_imf_bailout
-		md2026_pak_chinese_loans
+		md2026_pak_tax_reform
+		md2026_pak_privatization
 		md2026_pak_kashmir_issue
 		md2026_pak_nuclear_program
 		md2026_pak_military_modernization
+	}
+
+	focus_factors = {
+		md2026_pak_chinese_loans = {
+			modifier = {
+				factor = 0
+			}
+		}
 	}
 
 	weight = {
 		factor = 1.0
 		modifier = {
 			factor = 1.0
+		}
+	}
+}
+
+md2026_pak_china_path = {
+	allowed = { original_tag = PAK }
+	name = "Pakistan China Path"
+	desc = "Economic crisis: Chinese loans, CPEC expansion, Gwadar port."
+
+	enable = {
+		original_tag = PAK
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_pak_economic_crisis
+		md2026_pak_chinese_loans
+		md2026_pak_cpec_expansion
+		md2026_pak_gwadar_port
+		md2026_pak_kashmir_issue
+		md2026_pak_nuclear_program
+		md2026_pak_military_modernization
+	}
+
+	focus_factors = {
+		md2026_pak_imf_bailout = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+
+	weight = {
+		factor = 0.5
+		modifier = {
+			factor = 0.5
 		}
 	}
 }
@@ -1423,7 +1482,7 @@ md2026_pak_historical = {
 md2026_zaf_historical = {
 	allowed = { original_tag = SAF }
 	name = "South Africa 2026 Historical"
-	desc = "ANC crisis: load shedding, anti-corruption, BRICS ties, and regional power."
+	desc = "ANC crisis: load shedding, anti-corruption, BRICS ties, coalition governance, regional power."
 
 	enable = {
 		original_tag = SAF
@@ -1437,8 +1496,12 @@ md2026_zaf_historical = {
 		md2026_zaf_anc_crisis
 		md2026_zaf_load_shedding
 		md2026_zaf_anti_corruption
+		md2026_zaf_renewable_energy
 		md2026_zaf_brics_ties
 		md2026_zaf_mining_sector
+		md2026_zaf_coalition_governance
+		md2026_zaf_sadc_leadership
+		md2026_zaf_defense_modernization
 		md2026_zaf_regional_power
 	}
 
@@ -1457,7 +1520,7 @@ md2026_zaf_historical = {
 md2026_idn_historical = {
 	allowed = { original_tag = IDN }
 	name = "Indonesia 2026 Historical"
-	desc = "Nusantara capital: ASEAN leadership, nickel exports, and maritime defense."
+	desc = "Nusantara capital: ASEAN leadership, nickel exports, maritime defense, archipelago power."
 
 	enable = {
 		original_tag = IDN
@@ -1471,9 +1534,14 @@ md2026_idn_historical = {
 		md2026_idn_nusantara_capital
 		md2026_idn_asean_leadership
 		md2026_idn_nickel_export
-		md2026_idn_foreign_investment
 		md2026_idn_maritime_defense
+		md2026_idn_non_alignment
+		md2026_idn_foreign_investment
+		md2026_idn_south_china_sea_stance
+		md2026_idn_submarine_fleet
 		md2026_idn_military_expansion
+		md2026_idn_ev_battery_hub
+		md2026_idn_archipelago_power
 	}
 
 	weight = {
@@ -1491,7 +1559,7 @@ md2026_idn_historical = {
 md2026_nga_historical = {
 	allowed = { original_tag = NGA }
 	name = "Nigeria 2026 Historical"
-	desc = "ECOWAS leadership, oil revenue, and Boko Haram crackdown."
+	desc = "ECOWAS leadership, oil revenue, Boko Haram crackdown, African giant."
 
 	enable = {
 		original_tag = NGA
@@ -1505,6 +1573,11 @@ md2026_nga_historical = {
 		md2026_nga_ecowas_leadership
 		md2026_nga_oil_revenue
 		md2026_nga_boko_haram_crackdown
+		md2026_nga_refinery_construction
+		md2026_nga_economic_diversification
+		md2026_nga_military_reform
+		md2026_nga_sahel_intervention
+		md2026_nga_african_giant
 	}
 
 	weight = {

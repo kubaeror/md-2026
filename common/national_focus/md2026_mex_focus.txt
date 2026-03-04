@@ -1,114 +1,269 @@
 ### MD2026 Mexico Focus Branch ###
 # Shared focuses for Mexico's 2026 focus tree branch
 # Root focus at absolute x=38, y=0
+# 12 focuses: Sheinbaum era, trade/security/energy branches
 
 shared_focus = {
 	id = md2026_mex_amlo_legacy
-	icon = GFX_goal_generic_political_pressure
+	icon = generic_political_discourse
 	x = 38
 	y = 0
-	cost = 10
+	cost = 3.6
 	allow_branch = {
 		original_tag = MEX
 		has_global_flag = md2026_initialized
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_amlo_legacy"
 		add_political_power = 50
 		add_stability = 0.05
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { base = 100 }
 }
+
+### TRADE BRANCH (left) ###
 
 shared_focus = {
 	id = md2026_mex_usmca_trade
-	icon = GFX_goal_generic_trade
-	x = -2
+	icon = generic_trade
+	x = -3
 	y = 1
 	relative_position_id = md2026_mex_amlo_legacy
 	prerequisite = { focus = md2026_mex_amlo_legacy }
-	cost = 10
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_TRADE }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_usmca_trade"
-		add_building_construction = {
-			type = industrial_complex
-			level = 1
-			instant_build = yes
+		add_political_power = 25
+		random_owned_controlled_state = {
+			limit = { is_core_of = MEX }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
 		}
 	}
-	ai_will_do = { factor = 1 }
-}
-
-shared_focus = {
-	id = md2026_mex_cartel_war
-	icon = GFX_goal_generic_attack_allies
-	x = 2
-	y = 1
-	relative_position_id = md2026_mex_amlo_legacy
-	prerequisite = { focus = md2026_mex_amlo_legacy }
-	cost = 10
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_cartel_war"
-		add_war_support = 0.1
-		add_stability = -0.05
-	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { base = 70 }
 }
 
 shared_focus = {
 	id = md2026_mex_nearshoring
-	icon = GFX_goal_generic_production
-	x = -2
-	y = 2
-	relative_position_id = md2026_mex_amlo_legacy
+	icon = generic_economic_increase
+	x = -1
+	y = 1
+	relative_position_id = md2026_mex_usmca_trade
 	prerequisite = { focus = md2026_mex_usmca_trade }
-	cost = 10
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_nearshoring"
-		add_building_construction = {
-			type = industrial_complex
-			level = 3
-			instant_build = yes
+		add_political_power = 25
+		add_ideas = md2026_mex_nearshoring
+		random_owned_controlled_state = {
+			limit = { is_core_of = MEX }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
 		}
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { base = 80 }
+}
+
+shared_focus = {
+	id = md2026_mex_tariff_response
+	icon = generic_foreign_policy
+	x = 1
+	y = 1
+	relative_position_id = md2026_mex_usmca_trade
+	prerequisite = { focus = md2026_mex_usmca_trade }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_TRADE }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_tariff_response"
+		add_political_power = 50
+		add_stability = -0.03
+		add_opinion_modifier = { target = USA modifier = md2026_trade_war_opinion }
+	}
+	ai_will_do = { base = 40 }
+}
+
+### SECURITY BRANCH (center-right) ###
+
+shared_focus = {
+	id = md2026_mex_cartel_war
+	icon = generic_prepare_civil_war
+	x = 0
+	y = 1
+	relative_position_id = md2026_mex_amlo_legacy
+	prerequisite = { focus = md2026_mex_amlo_legacy }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_cartel_war"
+		add_war_support = 0.10
+		add_stability = -0.05
+		army_experience = 15
+	}
+	ai_will_do = { base = 60 }
 }
 
 shared_focus = {
 	id = md2026_mex_national_guard
-	icon = GFX_goal_generic_army_motorized
-	x = 2
-	y = 2
-	relative_position_id = md2026_mex_amlo_legacy
+	icon = generic_army_support
+	x = -1
+	y = 1
+	relative_position_id = md2026_mex_cartel_war
 	prerequisite = { focus = md2026_mex_cartel_war }
-	cost = 10
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_national_guard"
+		add_manpower = 50000
+		army_experience = 15
 		add_tech_bonus = {
-			name = land_doc_bonus
-			bonus = 0.5
+			name = MEX_guard_doctrine
+			bonus = 1.0
 			uses = 1
-			category = land_doctrine
+			category = CAT_land_doctrine
 		}
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { base = 50 }
 }
 
 shared_focus = {
+	id = md2026_mex_border_cooperation
+	icon = generic_western_influence
+	x = 1
+	y = 1
+	relative_position_id = md2026_mex_cartel_war
+	prerequisite = { focus = md2026_mex_cartel_war }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_border_cooperation"
+		add_stability = 0.05
+		add_political_power = 25
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		reverse_add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+	}
+	ai_will_do = { base = 50 }
+}
+
+### ENERGY BRANCH (right) ###
+
+shared_focus = {
 	id = md2026_mex_pemex_reform
-	icon = GFX_goal_generic_oil_refinery
-	x = 0
-	y = 3
+	icon = generic_oil
+	x = 3
+	y = 1
 	relative_position_id = md2026_mex_amlo_legacy
-	prerequisite = { focus = md2026_mex_nearshoring focus = md2026_mex_national_guard }
-	cost = 10
+	prerequisite = { focus = md2026_mex_amlo_legacy }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_pemex_reform"
-		add_building_construction = {
-			type = synthetic_refinery
-			level = 2
-			instant_build = yes
+		add_political_power = -25
+		random_owned_controlled_state = {
+			limit = { is_core_of = MEX }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = synthetic_refinery
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { is_core_of = MEX }
+			add_resource = {
+				type = oil
+				amount = 10
+			}
 		}
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_mex_green_transition
+	icon = generic_research_bonus
+	x = 0
+	y = 1
+	relative_position_id = md2026_mex_pemex_reform
+	prerequisite = { focus = md2026_mex_pemex_reform }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_green_transition"
+		add_political_power = 25
+		add_stability = 0.03
+		random_owned_controlled_state = {
+			limit = { is_core_of = MEX }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 40 }
+}
+
+### CAPSTONE ###
+
+shared_focus = {
+	id = md2026_mex_regional_power
+	icon = generic_pp_unity_bonus
+	x = 0
+	y = 4
+	relative_position_id = md2026_mex_amlo_legacy
+	prerequisite = {
+		focus = md2026_mex_nearshoring
+		focus = md2026_mex_tariff_response
+	}
+	prerequisite = {
+		focus = md2026_mex_national_guard
+		focus = md2026_mex_border_cooperation
+	}
+	prerequisite = {
+		focus = md2026_mex_green_transition
+	}
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_regional_power"
+		add_political_power = 100
+		add_stability = 0.10
+		add_ideas = md2026_mex_regional_power
+		random_owned_controlled_state = {
+			limit = { is_core_of = MEX }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 80 }
 }

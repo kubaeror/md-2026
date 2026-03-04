@@ -1,118 +1,318 @@
 ### MD2026 Indonesia Focus Branch ###
 # Shared focuses for Indonesia's 2026 focus tree branch
 # Root focus at absolute x=38, y=0
+# 12 focuses: Nusantara capital, ASEAN/resources/maritime branches, capstone
 
 shared_focus = {
 	id = md2026_idn_nusantara_capital
-	icon = GFX_goal_generic_construct_civ_factory
+	icon = generic_political_discourse
 	x = 38
 	y = 0
-	cost = 10
+	cost = 3.6
 	allow_branch = {
 		original_tag = IDN
 		has_global_flag = md2026_initialized
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_idn_nusantara_capital"
 		add_political_power = 50
-		add_building_construction = {
-			type = industrial_complex
-			level = 1
-			instant_build = yes
+		random_owned_controlled_state = {
+			limit = { is_core_of = IDN }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
 		}
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { base = 100 }
 }
+
+### ASEAN / DIPLOMACY BRANCH (left) ###
 
 shared_focus = {
 	id = md2026_idn_asean_leadership
-	icon = GFX_goal_generic_alliance
-	x = -2
+	icon = generic_western_influence
+	x = -3
 	y = 1
 	relative_position_id = md2026_idn_nusantara_capital
 	prerequisite = { focus = md2026_idn_nusantara_capital }
-	cost = 10
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_idn_asean_leadership"
-		add_political_power = 50
+		add_political_power = 75
+		add_stability = 0.05
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { base = 70 }
 }
 
 shared_focus = {
+	id = md2026_idn_non_alignment
+	icon = generic_foreign_policy
+	x = -1
+	y = 1
+	relative_position_id = md2026_idn_asean_leadership
+	prerequisite = { focus = md2026_idn_asean_leadership }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_idn_non_alignment"
+		add_political_power = 50
+		add_opinion_modifier = { target = CHI modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+	}
+	ai_will_do = { base = 50 }
+}
+
+shared_focus = {
+	id = md2026_idn_south_china_sea_stance
+	icon = generic_navy_bonus
+	x = 1
+	y = 1
+	relative_position_id = md2026_idn_asean_leadership
+	prerequisite = { focus = md2026_idn_asean_leadership }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_idn_south_china_sea_stance"
+		add_war_support = 0.05
+		add_political_power = 25
+		add_opinion_modifier = { target = CHI modifier = md2026_diplomatic_disapproval }
+		navy_experience = 15
+	}
+	ai_will_do = { base = 40 }
+}
+
+### RESOURCES / ECONOMY BRANCH (center) ###
+
+shared_focus = {
 	id = md2026_idn_nickel_export
-	icon = GFX_goal_generic_trade
-	x = 2
+	icon = generic_trade
+	x = 0
 	y = 1
 	relative_position_id = md2026_idn_nusantara_capital
 	prerequisite = { focus = md2026_idn_nusantara_capital }
-	cost = 10
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_TRADE }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_idn_nickel_export"
-		add_building_construction = {
-			type = industrial_complex
-			level = 2
-			instant_build = yes
+		add_political_power = 25
+		random_owned_controlled_state = {
+			limit = { is_core_of = IDN }
+			add_resource = {
+				type = rare_earth
+				amount = 12
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { is_core_of = IDN }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
 		}
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { base = 80 }
 }
 
 shared_focus = {
 	id = md2026_idn_foreign_investment
-	icon = GFX_goal_generic_production
+	icon = generic_economic_increase
 	x = 0
-	y = 2
-	relative_position_id = md2026_idn_nusantara_capital
-	prerequisite = { focus = md2026_idn_asean_leadership focus = md2026_idn_nickel_export }
-	cost = 10
+	y = 1
+	relative_position_id = md2026_idn_nickel_export
+	prerequisite = { focus = md2026_idn_nickel_export }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_ECONOMY }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_idn_foreign_investment"
-		add_building_construction = {
-			type = arms_factory
-			level = 2
-			instant_build = yes
+		add_political_power = 25
+		add_ideas = md2026_idn_foreign_investment
+		random_owned_controlled_state = {
+			limit = { is_core_of = IDN }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
 		}
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { base = 60 }
 }
 
 shared_focus = {
-	id = md2026_idn_maritime_defense
-	icon = GFX_goal_generic_build_navy
+	id = md2026_idn_ev_battery_hub
+	icon = generic_research_bonus
 	x = 0
-	y = 3
-	relative_position_id = md2026_idn_nusantara_capital
+	y = 2
+	relative_position_id = md2026_idn_nickel_export
 	prerequisite = { focus = md2026_idn_foreign_investment }
-	cost = 10
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus md2026_idn_maritime_defense"
-		add_tech_bonus = {
-			name = naval_bonus
-			bonus = 0.5
-			uses = 1
-			category = naval_equipment
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_idn_ev_battery_hub"
+		add_political_power = 50
+		random_owned_controlled_state = {
+			limit = { is_core_of = IDN }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
 		}
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { base = 50 }
+}
+
+### MARITIME DEFENSE BRANCH (right) ###
+
+shared_focus = {
+	id = md2026_idn_maritime_defense
+	icon = generic_navy_bonus
+	x = 3
+	y = 1
+	relative_position_id = md2026_idn_nusantara_capital
+	prerequisite = { focus = md2026_idn_nusantara_capital }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_idn_maritime_defense"
+		navy_experience = 25
+		add_war_support = 0.05
+		random_owned_controlled_state = {
+			limit = { is_core_of = IDN is_coastal = yes }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_idn_submarine_fleet
+	icon = generic_navy_bonus
+	x = -1
+	y = 1
+	relative_position_id = md2026_idn_maritime_defense
+	prerequisite = { focus = md2026_idn_maritime_defense }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_idn_submarine_fleet"
+		navy_experience = 25
+		add_tech_bonus = {
+			name = IDN_sub_tech
+			bonus = 1.0
+			uses = 1
+			category = CAT_naval_all
+		}
+		random_owned_controlled_state = {
+			limit = { is_core_of = IDN is_coastal = yes }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 40 }
 }
 
 shared_focus = {
 	id = md2026_idn_military_expansion
-	icon = GFX_goal_generic_army_motorized
+	icon = generic_army_support
+	x = 1
+	y = 1
+	relative_position_id = md2026_idn_maritime_defense
+	prerequisite = { focus = md2026_idn_maritime_defense }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_idn_military_expansion"
+		army_experience = 25
+		add_manpower = 50000
+		add_tech_bonus = {
+			name = IDN_army_modernize
+			bonus = 1.0
+			uses = 1
+			category = CAT_land_doctrine
+		}
+		random_owned_controlled_state = {
+			limit = { is_core_of = IDN }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 50 }
+}
+
+### CAPSTONE ###
+
+shared_focus = {
+	id = md2026_idn_archipelago_power
+	icon = generic_pp_unity_bonus
 	x = 0
 	y = 4
 	relative_position_id = md2026_idn_nusantara_capital
-	prerequisite = { focus = md2026_idn_maritime_defense }
-	cost = 10
+	prerequisite = {
+		focus = md2026_idn_non_alignment
+		focus = md2026_idn_south_china_sea_stance
+	}
+	prerequisite = {
+		focus = md2026_idn_ev_battery_hub
+	}
+	prerequisite = {
+		focus = md2026_idn_submarine_fleet
+		focus = md2026_idn_military_expansion
+	}
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus md2026_idn_military_expansion"
-		add_tech_bonus = {
-			name = land_doc_bonus
-			bonus = 0.5
-			uses = 1
-			category = land_doctrine
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_idn_archipelago_power"
+		add_political_power = 100
+		add_stability = 0.10
+		add_war_support = 0.05
+		add_ideas = md2026_idn_archipelago_power
+		random_owned_controlled_state = {
+			limit = { is_core_of = IDN }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
 		}
 	}
-	ai_will_do = { factor = 1 }
+	ai_will_do = { base = 80 }
 }

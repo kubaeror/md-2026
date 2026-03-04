@@ -1882,5 +1882,137 @@ ideas = {
 			}
 		}
 
+		### BATCH 3 - SMALLER COUNTRY SPIRITS ###
+
+		# Argentina
+		md2026_arg_dollarization = {
+			picture = generic_economic_increase
+			allowed = { original_tag = ARG }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_expected_value = -0.05
+				political_power_factor = -0.10
+			}
+		}
+
+		md2026_arg_new_argentina = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = ARG }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.15
+				consumer_goods_expected_value = -0.05
+				research_speed_factor = 0.05
+			}
+		}
+
+		# Mexico
+		md2026_mex_nearshoring = {
+			picture = generic_economic_increase
+			allowed = { original_tag = MEX }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				political_power_factor = 0.05
+				research_speed_factor = 0.03
+			}
+		}
+
+		md2026_mex_regional_power = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = MEX }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.15
+				war_support_factor = 0.05
+				consumer_goods_expected_value = -0.05
+			}
+		}
+
+		# Pakistan
+		md2026_pak_imf_reforms = {
+			picture = generic_economic_increase
+			allowed = { original_tag = PAK }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.05
+				consumer_goods_expected_value = -0.08
+			}
+		}
+
+		# South Africa
+		md2026_zaf_coalition_governance = {
+			picture = generic_political_discourse
+			allowed = { original_tag = SAF }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.10
+			}
+		}
+
+		md2026_zaf_regional_power = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = SAF }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.10
+				war_support_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+
+		# Indonesia
+		md2026_idn_foreign_investment = {
+			picture = generic_economic_increase
+			allowed = { original_tag = IDN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				political_power_factor = 0.05
+				research_speed_factor = 0.03
+			}
+		}
+
+		md2026_idn_archipelago_power = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = IDN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.10
+				war_support_factor = 0.05
+				navy_org_factor = 0.05
+			}
+		}
+
+		# Nigeria
+		md2026_nga_african_giant = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = NGA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.15
+				war_support_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+
 	}
 }
