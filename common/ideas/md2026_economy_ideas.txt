@@ -1,0 +1,76 @@
+ideas = {
+	country = {
+		md2026_economy_boom = {
+			picture = economic_boom
+			
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = 0.10
+				consumer_goods_expected_multiplier = -0.05
+				research_speed_factor = 0.05
+			}
+		}
+		
+		md2026_economy_stable = {
+			picture = economic_increase
+			
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		md2026_economy_recession = {
+			picture = generic_goods
+			
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				industrial_capacity_factory = -0.10
+				production_factory_max_efficiency_factor = -0.10
+				consumer_goods_expected_multiplier = 0.05
+			}
+		}
+		
+		md2026_economy_crisis = {
+			picture = strike
+			
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				industrial_capacity_factory = -0.25
+				production_factory_max_efficiency_factor = -0.20
+				consumer_goods_expected_multiplier = 0.10
+				political_power_gain = -0.15
+				stability_factor = -0.10
+			}
+		}
+	}
+}
+
+	country = {
+		md2026_mass_protests_unrest = {
+			picture = strike
+			
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				stability_factor = -0.20
+				political_power_gain = -0.25
+				industrial_capacity_factory = -0.15
+			}
+		}
+	}

@@ -1,0 +1,26 @@
+﻿l_english:
+ md2026_proxy_warfare_category:0 "Proxy Warfare"
+ md2026_proxy_warfare_category_desc:0 "Through the funding of non-state actors, rebel groups, and aligned governments, we can project power globally without direct military intervention. However, this comes at a domestic and diplomatic cost."
+ 
+ md2026_proxy_warfare_support:0 "Sponsor Proxy War in [From.GetName]"
+ md2026_proxy_warfare_support_desc:0 "By supplying arms, financial backing, and military advisors to [From.GetNameDef], we can tilt the balance of the conflict in their favor."
+ 
+ md2026_withdraw_proxy_support:0 "Withdraw Proxy Support from [From.GetName]"
+ md2026_withdraw_proxy_support_desc:0 "The costs of maintaining this proxy conflict are becoming too high. We will withdraw our support."
+ 
+ md2026_proxy_sponsor:0 "Proxy War Sponsor"
+ md2026_proxy_sponsor_desc:0 "We are currently funding and supplying foreign forces in a proxy conflict. This strains our civilian economy and political capital."
+ 
+ md2026_proxy_recipient:0 "Foreign Proxy Support"
+ md2026_proxy_recipient_desc:0 "Our forces are receiving significant financial and material support from a foreign power."
+ 
+ md2026_proxy_exposed:0 "Proxy Operations Exposed"
+ md2026_proxy_exposed_desc:0 "Our covert and overt support for foreign combatants has backfired, causing diplomatic embarrassment and domestic backlash."
+ 
+ md2026_proxy.1.t:0 "Proxy Conflict Concludes"
+ md2026_proxy.1.d:0 "The conflict involving our sponsored proxy has come to an end. With the hostilities ceasing, we can wind down our clandestine support operations. The success of our aligned forces has improved our geopolitical standing and demonstrated our reach."
+ md2026_proxy.1.a:0 "A successful operation."
+ 
+ md2026_proxy.2.t:0 "Proxy Forces Defeated"
+ md2026_proxy.2.d:0 "The forces we have been backing in their conflict have been decisively defeated and forced to capitulate. Our involvement is now public knowledge, and the failure of this intervention has led to international condemnation and domestic criticism over wasted resources."
+ md2026_proxy.2.a:0 "A major setback."

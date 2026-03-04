@@ -1,0 +1,56 @@
+focus_tree = {
+	id = md2026_arg_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ARG
+			has_global_flag = md2026_initialized
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = md2026_arg_milei_reforms
+		icon = GFX_goal_generic_political_pressure
+		cost = 7
+		
+		x = 2
+		y = 0
+		
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = md2026_arg_dollarization
+		icon = GFX_goal_generic_economic_control
+		cost = 10
+		prerequisite = { focus = md2026_arg_milei_reforms }
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = md2026_economy_stable
+		}
+	}
+
+	focus = {
+		id = md2026_arg_falklands_rhetoric
+		icon = GFX_goal_generic_demand_territory
+		cost = 7
+		prerequisite = { focus = md2026_arg_milei_reforms }
+		x = 4
+		y = 1
+		
+		completion_reward = {
+			add_war_support = 0.10
+			add_opinion_modifier = { target = ENG modifier = md2026_diplomatic_disapproval }
+		}
+	}
+}

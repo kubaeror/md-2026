@@ -1,0 +1,23 @@
+decision_categories = {
+	md2026_cyber_warfare_category = {
+		icon = generic_technology
+		picture = GFX_decision_cat_generic_technology
+		
+		allowed = {
+			has_global_flag = md2026_initialized
+			OR = {
+				is_major = yes
+				has_idea = md2026_cyber_capability
+				tag = ISR
+				tag = KOR
+				tag = NKO
+				tag = TAI
+				tag = PER
+			}
+		}
+		
+		visible = {
+			always = yes
+		}
+	}
+}

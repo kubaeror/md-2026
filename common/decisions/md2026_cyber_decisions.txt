@@ -1,0 +1,160 @@
+decisions = {
+	md2026_cyber_warfare_category = {
+		md2026_upgrade_cyber_defense = {
+			icon = generic_research
+			
+			cost = 50
+			days_re_enable = 365
+			fire_only_once = no
+			
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_political_power > 50
+			}
+			
+			effect = {
+				add_political_power = -50
+				if = {
+					limit = { NOT = { has_idea = md2026_cyber_defense_1 } NOT = { has_idea = md2026_cyber_defense_2 } NOT = { has_idea = md2026_cyber_defense_3 } }
+					add_idea = md2026_cyber_defense_1
+				}
+				else_if = {
+					limit = { has_idea = md2026_cyber_defense_1 }
+					swap_ideas = { remove_idea = md2026_cyber_defense_1 add_idea = md2026_cyber_defense_2 }
+				}
+				else_if = {
+					limit = { has_idea = md2026_cyber_defense_2 }
+					swap_ideas = { remove_idea = md2026_cyber_defense_2 add_idea = md2026_cyber_defense_3 }
+				}
+			}
+			
+			ai_will_do = {
+				base = 10
+				modifier = {
+					add = 20
+					has_political_power > 200
+				}
+				modifier = {
+					factor = 0
+					has_idea = md2026_cyber_defense_3
+				}
+			}
+		}
+	}
+}
+
+targeted_decisions = {
+	md2026_cyber_warfare_category = {
+		md2026_launch_cyber_attack_infrastructure = {
+			target_root_trigger = {
+				has_idea = md2026_cyber_capability
+			}
+			
+			target_trigger = {
+				has_war_with = ROOT
+			}
+			
+			target_array = enemies
+			
+			cost = 50
+			days_re_enable = 180
+			
+			visible = {
+				FROM = { has_war_with = ROOT }
+			}
+			
+			effect = {
+				add_command_power = -25
+				FROM = {
+					random_owned_state = {
+						limit = {
+							is_core_of = FROM
+						}
+						damage_building = {
+							type = infrastructure
+							damage = 3
+						}
+						damage_building = {
+							type = industrial_complex
+							damage = 1
+						}
+					}
+					country_event = { id = md2026_cyber.1 }
+				}
+			}
+			
+			ai_will_do = {
+				base = 10
+				modifier = {
+					add = 30
+					ROOT = { has_command_power > 50 }
+				}
+			}
+		}
+		
+		md2026_launch_cyber_espionage = {
+			target_root_trigger = {
+				has_idea = md2026_cyber_capability
+			}
+			
+			target_trigger = {
+				is_major = yes
+				NOT = { tag = ROOT }
+				NOT = { is_in_faction_with = ROOT }
+			}
+			
+			target_array = global_countries
+			
+			cost = 75
+			days_re_enable = 365
+			
+			visible = {
+				NOT = { has_war_with = FROM }
+			}
+			
+			effect = {
+				add_command_power = -50
+				# Chance to be discovered
+				random_list = {
+					60 = {
+						# Success, undetected
+						add_tech_bonus = {
+							name = md2026_stolen_tech_bonus
+							bonus = 1.0
+							uses = 1
+							category = computing_tech
+						}
+					}
+					40 = {
+						# Discovered
+						add_tech_bonus = {
+							name = md2026_stolen_tech_bonus
+							bonus = 0.5
+							uses = 1
+							category = computing_tech
+						}
+						FROM = {
+							country_event = { id = md2026_cyber.2 }
+						}
+					}
+				}
+			}
+			
+			ai_will_do = {
+				base = 0 # AI generally avoids random espionage to save PP, unless highly specific
+				modifier = {
+					add = 10
+					ROOT = { tag = CHI }
+					FROM = { tag = USA }
+				}
+				modifier = {
+					add = 10
+					ROOT = { tag = SOV }
+					FROM = { tag = USA }
+				}
+			}
+		}
+	}
+}

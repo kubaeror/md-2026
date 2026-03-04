@@ -1,0 +1,35 @@
+add_namespace = md2026_cyber
+
+# Hit by cyber attack on infrastructure
+country_event = {
+	id = md2026_cyber.1
+	title = md2026_cyber.1.t
+	desc = md2026_cyber.1.d
+	picture = GFX_report_event_generic_technology
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = md2026_cyber.1.a
+		add_stability = -0.02
+		add_war_support = 0.05
+	}
+}
+
+# Detected cyber espionage
+country_event = {
+	id = md2026_cyber.2
+	title = md2026_cyber.2.t
+	desc = md2026_cyber.2.d
+	picture = GFX_report_event_generic_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = md2026_cyber.2.a
+		add_political_power = 25
+		FROM = {
+			add_opinion_modifier = { target = ROOT modifier = md2026_cyber_attack_opinion }
+		}
+	}
+}

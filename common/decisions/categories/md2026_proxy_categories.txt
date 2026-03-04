@@ -1,0 +1,28 @@
+decision_categories = {
+	md2026_proxy_warfare_category = {
+		icon = generic_operations
+		picture = GFX_decision_cat_generic_foreign_policy
+		
+		allowed = {
+			has_global_flag = md2026_initialized
+			OR = {
+				is_major = yes
+				tag = PER
+				tag = TUR
+				tag = SAU
+				tag = ISR
+				tag = BRA
+				tag = RAJ
+				tag = SAF
+			}
+		}
+		
+		visible = {
+			any_country = {
+				has_war = yes
+				NOT = { has_war_with = ROOT }
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+}

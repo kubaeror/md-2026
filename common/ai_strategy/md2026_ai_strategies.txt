@@ -1,102 +1,75 @@
-ai_strategy = {
-	md2026_sov_war_priority = {
-		enable = {
-			original_tag = SOV
-			has_global_flag = md2026_initialized
-			has_war_with = UKR
-		}
-		
-		ai_strategy = {
-			type = conquer
-			id = "UKR"
-			value = 200
-		}
-		
-		ai_strategy = {
-			type = front_control
-			id = "UKR"
-			value = 100
-		}
-
-		ai_strategy = {
-			type = equipment_production_factor
-			id = infantry_weapons
-			value = 20
-		}
-		ai_strategy = {
-			type = equipment_production_factor
-			id = artillery
-			value = 15
-		}
+# MD2026 AI Strategies - Fine tuning behaviors
+md2026_usa_strategy = {
+	enable = { tag = USA has_global_flag = md2026_initialized }
+	
+	ai_strategy = {
+		type = diplomacy
+		id = CHI
+		value = -200
 	}
-
-	md2026_chi_development_priority = {
-		enable = {
-			original_tag = CHI
-			has_global_flag = md2026_initialized
-		}
-		
-		ai_strategy = {
-			type = build_building
-			id = industrial_complex
-			value = 50
-		}
-		
-		ai_strategy = {
-			type = build_building
-			id = arms_factory
-			value = 30
-		}
-		
-		ai_strategy = {
-			type = research_tech
-			id = computing_technology
-			value = 50
-		}
+	ai_strategy = {
+		type = diplomacy
+		id = SOV
+		value = -150
 	}
-
-	md2026_usa_defense_diplomacy = {
-		enable = {
-			original_tag = USA
-			has_global_flag = md2026_initialized
-		}
-		
-		ai_strategy = {
-			type = alliance
-			id = "UKR"
-			value = 100
-		}
-		
-		ai_strategy = {
-			type = contain
-			id = "SOV"
-			value = 100
-		}
-		
-		ai_strategy = {
-			type = contain
-			id = "CHI"
-			value = 100
-		}
+	ai_strategy = {
+		type = diplomacy
+		id = TAI
+		value = 200
+	}
+	ai_strategy = {
+		type = diplomacy
+		id = UKR
+		value = 150
 	}
 }
 
-	md2026_ukr_defense = {
-		enable = {
-			original_tag = UKR
-			has_global_flag = md2026_initialized
-			has_war_with = SOV
-		}
-		
-		ai_strategy = {
-			type = front_control
-			id = "SOV"
-			value = 200
-		}
-		
-		ai_strategy = {
-			type = alliance
-			id = "USA"
-			value = 100
-		}
+md2026_chi_strategy = {
+	enable = { tag = CHI has_global_flag = md2026_initialized }
+	
+	ai_strategy = {
+		type = diplomacy
+		id = USA
+		value = -200
 	}
+	ai_strategy = {
+		type = diplomacy
+		id = TAI
+		value = -300
+	}
+	ai_strategy = {
+		type = diplomacy
+		id = SOV
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = TAI
+		value = 200
+	}
+}
+
+md2026_sov_strategy = {
+	enable = { tag = SOV has_global_flag = md2026_initialized }
+	
+	ai_strategy = {
+		type = diplomacy
+		id = USA
+		value = -200
+	}
+	ai_strategy = {
+		type = diplomacy
+		id = UKR
+		value = -300
+	}
+	ai_strategy = {
+		type = diplomacy
+		id = CHI
+		value = 150
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = UKR
+		value = 200
+	}
+}

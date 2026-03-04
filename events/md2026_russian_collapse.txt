@@ -1,0 +1,174 @@
+add_namespace = md2026_rus_collapse
+add_namespace = md2026_rus_collapse_news
+
+# Monthly check for Russian Collapse
+# Handled in a hidden event or triggered by on_action.
+# Trigger condition: SOV has war exhaustion 3, stability < 20%.
+
+country_event = {
+	id = md2026_rus_collapse.1
+	title = md2026_rus_collapse.1.t
+	desc = md2026_rus_collapse.1.d
+	picture = GFX_report_event_generic_protest
+	
+	trigger = {
+		tag = SOV
+		has_idea = md2026_war_exhaustion_3
+		has_stability < 0.20
+		has_war = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = md2026_rus_collapse.1.a
+		add_stability = -0.15
+		add_political_power = -200
+		
+		# Protests erupt
+		set_country_flag = md2026_sov_collapse_started
+		
+		country_event = { id = md2026_rus_collapse.2 days = 15 }
+		
+		hidden_effect = {
+			news_event = { id = md2026_rus_collapse_news.1 hours = 6 }
+		}
+	}
+}
+
+# The Military Steps In (Coup attempt)
+country_event = {
+	id = md2026_rus_collapse.2
+	title = md2026_rus_collapse.2.t
+	desc = md2026_rus_collapse.2.d
+	picture = GFX_report_event_soviet_coup
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = md2026_rus_collapse.2.a # Purge the generals (Risk civil war)
+		add_political_power = -150
+		add_stability = -0.10
+		kill_country_leader = yes
+		
+		random_list = {
+			50 = { country_event = { id = md2026_rus_collapse.3 days = 7 } } # Civil War
+			50 = { country_event = { id = md2026_rus_collapse.4 days = 7 } } # State of Emergency
+		}
+		
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = {
+		name = md2026_rus_collapse.2.b # Concede to the military (Change leader, white peace)
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Military Junta"
+			desc = "A coalition of top generals who seized power to stop the collapse."
+			picture = "gfx/leaders/SOV/Portrait_SOV_Generic_land_3.dds"
+			ideology = conservatism
+			traits = { dictator }
+		}
+		
+		add_stability = 0.15
+		
+		# White peace with Ukraine
+		if = {
+			limit = { has_war_with = UKR }
+			white_peace = UKR
+		}
+		
+		remove_idea = md2026_war_exhaustion_3
+		
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+# Civil War Erupts / Warlord Era
+country_event = {
+	id = md2026_rus_collapse.3
+	title = md2026_rus_collapse.3.t
+	desc = md2026_rus_collapse.3.d
+	picture = GFX_report_event_generic_rebellion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = md2026_rus_collapse.3.a
+		add_stability = -0.30
+		
+		if = {
+			limit = { has_war_with = UKR }
+			white_peace = UKR
+		}
+		
+		# Trigger civil war (MD ideology based)
+		start_civil_war = {
+			ruling_party = communism
+			ideology = conservatism
+			size = 0.5
+		}
+		
+		hidden_effect = {
+			news_event = { id = md2026_rus_collapse_news.2 hours = 6 }
+		}
+	}
+}
+
+# State of Emergency
+country_event = {
+	id = md2026_rus_collapse.4
+	title = md2026_rus_collapse.4.t
+	desc = md2026_rus_collapse.4.d
+	picture = GFX_report_event_generic_protest
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = md2026_rus_collapse.4.a
+		add_stability = 0.05
+		add_war_support = 0.10
+		
+		# Martial Law idea
+		add_idea = md2026_sov_information_control
+	}
+}
+
+# News Events
+news_event = {
+	id = md2026_rus_collapse_news.1
+	title = md2026_rus_collapse_news.1.t
+	desc = md2026_rus_collapse_news.1.d
+	picture = GFX_news_event_generic_protest
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = md2026_rus_collapse_news.1.a
+	}
+}
+
+news_event = {
+	id = md2026_rus_collapse_news.2
+	title = md2026_rus_collapse_news.2.t
+	desc = md2026_rus_collapse_news.2.d
+	picture = GFX_news_event_generic_rebellion
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = md2026_rus_collapse_news.2.a
+	}
+}

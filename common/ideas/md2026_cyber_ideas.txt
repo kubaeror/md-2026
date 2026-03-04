@@ -1,0 +1,45 @@
+ideas = {
+	country = {
+		md2026_cyber_defense_1 = {
+			picture = electronic_warfare
+			
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				research_speed_factor = 0.02
+				industrial_capacity_factory = 0.02
+			}
+		}
+		
+		md2026_cyber_defense_2 = {
+			picture = electronic_warfare
+			
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				research_speed_factor = 0.04
+				industrial_capacity_factory = 0.04
+				army_bonus_air_superiority_factor = 0.05
+			}
+		}
+		
+		md2026_cyber_defense_3 = {
+			picture = electronic_warfare
+			
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.05
+				army_bonus_air_superiority_factor = 0.10
+				army_org = 2
+			}
+		}
+	}
+}

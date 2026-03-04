@@ -1,0 +1,104 @@
+decisions = {
+	md2026_economic_decisions_category = {
+		md2026_stimulus_package = {
+			icon = generic_economy
+			
+			cost = 100
+			days_re_enable = 365
+			fire_only_once = no
+			
+			allowed = {
+				has_global_flag = md2026_initialized
+			}
+			available = {
+				OR = {
+					has_idea = md2026_economy_recession
+					has_idea = md2026_economy_crisis
+				}
+				has_political_power > 100
+			}
+			
+			effect = {
+				add_political_power = -100
+				add_stability = 0.05
+				if = {
+					limit = { has_idea = md2026_economy_crisis }
+					swap_ideas = { remove_idea = md2026_economy_crisis add_idea = md2026_economy_recession }
+				}
+				else_if = {
+					limit = { has_idea = md2026_economy_recession }
+					swap_ideas = { remove_idea = md2026_economy_recession add_idea = md2026_economy_stable }
+				}
+			}
+			
+			ai_will_do = {
+				base = 10
+				modifier = {
+					add = 30
+					has_idea = md2026_economy_crisis
+					has_political_power > 150
+				}
+			}
+		}
+		
+		md2026_austerity_measures = {
+			icon = generic_economy
+			
+			cost = 0
+			days_re_enable = 365
+			fire_only_once = no
+			
+			allowed = {
+				has_global_flag = md2026_initialized
+			}
+			available = {
+				has_idea = md2026_economy_crisis
+			}
+			
+			effect = {
+				add_stability = -0.10
+				add_political_power = 50
+				swap_ideas = { remove_idea = md2026_economy_crisis add_idea = md2026_economy_recession }
+			}
+			
+			ai_will_do = {
+				base = 10
+				modifier = {
+					add = 20
+					has_political_power < 50
+					has_stability > 0.40
+				}
+			}
+		}
+		
+		md2026_quantitative_easing = {
+			icon = generic_economy
+			
+			cost = 50
+			days_re_enable = 365
+			fire_only_once = no
+			
+			allowed = {
+				has_global_flag = md2026_initialized
+			}
+			available = {
+				has_idea = md2026_economy_stable
+				has_political_power > 50
+			}
+			
+			effect = {
+				add_political_power = -50
+				add_stability = -0.05
+				swap_ideas = { remove_idea = md2026_economy_stable add_idea = md2026_economy_boom }
+			}
+			
+			ai_will_do = {
+				base = 5
+				modifier = {
+					add = 15
+					has_stability > 0.60
+				}
+			}
+		}
+	}
+}

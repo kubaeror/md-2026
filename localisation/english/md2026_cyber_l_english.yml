@@ -1,0 +1,29 @@
+﻿l_english:
+ md2026_cyber_warfare_category:0 "Cyber Warfare & Security"
+ md2026_cyber_warfare_category_desc:0 "In the 21st century, the digital front is as critical as the physical battlefield. Developing offensive capabilities and fortifying our networks against intrusion is a strategic imperative."
+ 
+ md2026_upgrade_cyber_defense:0 "Upgrade Cyber Defenses"
+ md2026_upgrade_cyber_defense_desc:0 "Invest in next-generation firewalls, secure domestic servers, and train cybersecurity specialists to harden our critical infrastructure against foreign interference."
+ 
+ md2026_launch_cyber_attack_infrastructure:0 "Cyberattack on [From.GetName]'s Infrastructure"
+ md2026_launch_cyber_attack_infrastructure_desc:0 "Launch a coordinated cyber offensive to disrupt the enemy's power grid, logistics, and industrial capacity. This will cause tangible damage to their war effort."
+ 
+ md2026_launch_cyber_espionage:0 "Cyber Espionage against [From.GetName]"
+ md2026_launch_cyber_espionage_desc:0 "Attempt to breach secure government and corporate databases to steal sensitive technological data and intellectual property."
+ 
+ md2026_cyber_defense_1:0 "Basic Cyber Security"
+ md2026_cyber_defense_1_desc:0 "We have implemented baseline protections across critical government networks."
+ md2026_cyber_defense_2:0 "Advanced Cyber Defense"
+ md2026_cyber_defense_2_desc:0 "Our military and civilian infrastructure is shielded by state-of-the-art cybersecurity protocols."
+ md2026_cyber_defense_3:0 "Impenetrable Digital Fortress"
+ md2026_cyber_defense_3_desc:0 "A fully integrated, AI-driven cybersecurity net protects our nation, practically neutralizing external digital threats."
+ 
+ md2026_cyber.1.t:0 "Critical Infrastructure Cyberattack"
+ md2026_cyber.1.d:0 "Multiple sectors of our national infrastructure have experienced severe outages following a sophisticated cyberattack. Power grids have been disrupted, and several industrial complexes report damaged control systems. Security analysts confirm this was a coordinated offensive operation originating from a hostile actor."
+ md2026_cyber.1.a:0 "We must harden our defenses immediately!"
+ 
+ md2026_cyber.2.t:0 "Foreign Cyber Espionage Detected"
+ md2026_cyber.2.d:0 "Our cybersecurity agencies have detected and isolated a major data breach attempt. Forensic analysis of the malware signatures points directly to state-sponsored hackers from [From.GetName]. While they managed to exfiltrate some data before being shut out, we have gathered enough evidence to publicly condemn their actions."
+ md2026_cyber.2.a:0 "A blatant violation of our sovereignty."
+ 
+ md2026_cyber_attack_opinion:0 "Detected Cyber Espionage"

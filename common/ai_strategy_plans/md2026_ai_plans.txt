@@ -1,93 +1,98 @@
-md2026_sov_historical_plan = {
-	name = "Historical 2026 Plan"
-	desc = "Russia prioritizes the war in Ukraine and military production."
+# MD2026 - AI Strategy Plans
+# These ensure that the AI takes logical steps regarding the 2026 mechanics and focus trees.
+
+md2026_usa_plan = {
+	name = "USA 2026 Strategy"
+	desc = "Prioritize confronting China and supporting allies while building up the economy."
 	
 	enable = {
-		original_tag = SOV
+		tag = USA
+		has_global_flag = md2026_initialized
 	}
+	
 	abort = {
-		NOT = { has_war_with = UKR }
+		always = no
+	}
+	
+	ai_national_focuses = {
+		md2026_usa_pacific_pivot
+		md2026_usa_taiwan_defense
+		md2026_usa_reshoring
+	}
+	
+	weight = {
+		factor = 100
+	}
+}
+
+md2026_chi_plan = {
+	name = "China 2026 Strategy"
+	desc = "Focus on the Taiwan contingency and technological self-reliance."
+	
+	enable = {
+		tag = CHI
+		has_global_flag = md2026_initialized
+	}
+	
+	abort = {
+		always = no
+	}
+	
+	ai_national_focuses = {
+		md2026_chi_taiwan_escalation
+		md2026_chi_pla_modernization
+		md2026_chi_tech_independence
+	}
+	
+	weight = {
+		factor = 100
+	}
+}
+
+md2026_sov_plan = {
+	name = "Russia 2026 Strategy"
+	desc = "Focus on the Ukrainian war effort and sanctions evasion."
+	
+	enable = {
+		tag = SOV
+		has_global_flag = md2026_initialized
+	}
+	
+	abort = {
+		always = no
 	}
 	
 	ai_national_focuses = {
 		md2026_sov_war_economy
-		md2026_sov_partial_mobilization
 		md2026_sov_shadow_fleet
-		md2026_sov_sanctions_evasion
+		md2026_sov_offensive
 	}
 	
-	research = {
-		infantry_weapons = 20
-		artillery = 15
-		armor = 10
+	weight = {
+		factor = 100
 	}
 }
 
-md2026_chi_historical_plan = {
-	name = "Historical 2026 Plan"
-	desc = "China focuses on tech self-reliance and Taiwan pressure."
+md2026_ukr_plan = {
+	name = "Ukraine 2026 Strategy"
+	desc = "Focus on survival, mobilization, and securing Western aid."
 	
 	enable = {
-		original_tag = CHI
+		tag = UKR
+		has_global_flag = md2026_initialized
 	}
+	
 	abort = {
-		has_civil_war = yes
+		always = no
 	}
 	
 	ai_national_focuses = {
-		md2026_chi_tech_self_sufficiency
-		md2026_chi_belt_road_expansion
-		md2026_chi_taiwan_pressure
-	}
-}
-
-md2026_usa_historical_plan = {
-	name = "Historical 2026 Plan"
-	desc = "USA balances domestic polarization with global defense."
-	
-	enable = {
-		original_tag = USA
-	}
-	abort = {
-		has_civil_war = yes
+		md2026_ukr_total_mobilization
+		md2026_ukr_western_weapons
+		md2026_ukr_drone_warfare
 	}
 	
-	ai_national_focuses = {
-		md2026_usa_domestic_focus
-		md2026_usa_nato_reassurance
-		md2026_usa_ukraine_aid
-	}
-}
-
-md2026_ukr_historical_plan = {
-	name = "Historical 2026 Plan"
-	desc = "Ukraine focuses on defense, Western aid, and integration."
-	
-	enable = {
-		original_tag = UKR
-	}
-	abort = {
-		NOT = { has_war = yes }
-	}
-	
-	ai_national_focuses = {
-		md2026_ukr_nato_candidate
-		md2026_ukr_resistance
-		md2026_ukr_counter_offensive
-	}
-}
-
-md2026_ger_zeitenwende_plan = {
-	name = "Zeitenwende Plan"
-	desc = "Germany reboots its military and leads Europe."
-	
-	enable = {
-		original_tag = GER
-	}
-	
-	ai_national_focuses = {
-		md2026_ger_zeitenwende_focus
-		md2026_ger_bundeswehr_reform
-		md2026_ger_eu_leadership
+	weight = {
+		factor = 100
 	}
 }

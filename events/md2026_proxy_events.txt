@@ -1,0 +1,35 @@
+add_namespace = md2026_proxy
+
+# Proxy war concludes successfully
+country_event = {
+	id = md2026_proxy.1
+	title = md2026_proxy.1.t
+	desc = md2026_proxy.1.d
+	picture = GFX_report_event_generic_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = md2026_proxy.1.a
+		add_political_power = 50
+		add_stability = 0.05
+		add_command_power = 25
+	}
+}
+
+# Proxy defeated (capitulates)
+country_event = {
+	id = md2026_proxy.2
+	title = md2026_proxy.2.t
+	desc = md2026_proxy.2.d
+	picture = GFX_report_event_generic_defeat
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = md2026_proxy.2.a
+		add_political_power = -25
+		add_stability = -0.05
+		add_idea = md2026_proxy_exposed
+	}
+}

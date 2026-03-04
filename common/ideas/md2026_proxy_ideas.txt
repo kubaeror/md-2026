@@ -1,0 +1,46 @@
+ideas = {
+	country = {
+		md2026_proxy_sponsor = {
+			picture = generic_intel_bonus
+			
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				consumer_goods_expected_multiplier = 0.05
+				political_power_gain = -0.1
+				army_org_regain = 0.05
+			}
+		}
+		
+		md2026_proxy_recipient = {
+			picture = volunteer_defenders
+			
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
+				army_org = 5
+				war_support_factor = 0.10
+			}
+		}
+		
+		md2026_proxy_exposed = {
+			picture = political_violence
+			
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.15
+				trade_opinion_factor = -0.20
+			}
+		}
+	}
+}

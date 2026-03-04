@@ -1,0 +1,74 @@
+on_actions = {
+	on_monthly = {
+		effect = {
+			# Cleanup proxies that are no longer at war
+			every_country = {
+				limit = {
+					has_idea = md2026_proxy_sponsor
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_country = {
+								has_target_flag = { flag = md2026_is_proxy_of target = PREV }
+								has_war = yes
+							}
+						}
+					}
+					remove_idea = md2026_proxy_sponsor
+					# Give a small reward for success, since they are no longer at war and probably won
+					add_political_power = 50
+					country_event = { id = md2026_proxy.1 }
+				}
+				
+				# Cleanup flags for specific countries that are at peace
+				every_country = {
+					limit = {
+						has_target_flag = { flag = md2026_is_proxy_of target = PREV }
+						NOT = { has_war = yes }
+					}
+					clear_target_flag = { flag = md2026_is_proxy_of target = PREV }
+					PREV = {
+						clear_target_flag = { flag = md2026_proxy_supported target = PREV }
+					}
+					remove_idea = md2026_proxy_recipient
+				}
+			}
+		}
+	}
+	
+	on_capitulation = {
+		effect = {
+			# If a country capitulates and it was a proxy, the sponsor loses
+			# ROOT is the loser, FROM is the winner.
+			if = {
+				limit = {
+					any_country = {
+						has_target_flag = { flag = md2026_proxy_supported target = ROOT }
+					}
+				}
+				every_country = {
+					limit = {
+						has_target_flag = { flag = md2026_proxy_supported target = ROOT }
+					}
+					country_event = { id = md2026_proxy.2 }
+					clear_target_flag = { flag = md2026_proxy_supported target = ROOT }
+					ROOT = {
+						clear_target_flag = { flag = md2026_is_proxy_of target = PREV }
+					}
+					
+					if = {
+						limit = {
+							NOT = {
+								any_country = {
+									has_target_flag = { flag = md2026_is_proxy_of target = PREV }
+								}
+							}
+						}
+						remove_idea = md2026_proxy_sponsor
+					}
+				}
+			}
+		}
+	}
+}

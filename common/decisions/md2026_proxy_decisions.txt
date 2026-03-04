@@ -1,0 +1,141 @@
+targeted_decisions = {
+	md2026_proxy_warfare_category = {
+		md2026_proxy_warfare_support = {
+			target_root_trigger = {
+				has_global_flag = md2026_initialized
+				OR = {
+					is_major = yes
+					tag = PER
+					tag = TUR
+					tag = SAU
+					tag = ISR
+					tag = BRA
+					tag = RAJ
+					tag = SAF
+				}
+			}
+			
+			target_trigger = {
+				has_war = yes
+				is_major = no
+				NOT = { has_war_with = ROOT }
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_idea = md2026_proxy_recipient }
+				NOT = { has_target_flag = { flag = md2026_is_proxy_of target = ROOT } }
+			}
+
+			target_array = global_countries
+			
+			custom_cost_trigger = {
+				has_political_power > 50
+				has_command_power > 25
+			}
+			cost = 0
+			
+			fire_only_once = no
+			days_re_enable = 30
+			
+			visible = {
+				FROM = {
+					has_war = yes
+					NOT = { has_war_with = ROOT }
+				}
+			}
+			
+			effect = {
+				add_political_power = -50
+				add_command_power = -25
+				add_idea = md2026_proxy_sponsor
+				set_target_flag = { flag = md2026_proxy_supported target = FROM }
+				
+				FROM = {
+					add_idea = md2026_proxy_recipient
+					set_target_flag = { flag = md2026_is_proxy_of target = ROOT }
+					
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 5000
+						producer = ROOT
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment_1
+						amount = 250
+						producer = ROOT
+					}
+				}
+			}
+			
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 50
+					has_political_power > 200
+					FROM = { has_government = ROOT }
+				}
+				modifier = {
+					add = 100
+					tag = PER
+					FROM = { tag = SYR }
+				}
+				modifier = {
+					add = 100
+					tag = SOV
+					FROM = { tag = SYR }
+				}
+			}
+		}
+		
+		md2026_withdraw_proxy_support = {
+			target_root_trigger = {
+				has_idea = md2026_proxy_sponsor
+			}
+			
+			target_trigger = {
+				has_target_flag = { flag = md2026_is_proxy_of target = ROOT }
+			}
+
+			target_array = global_countries
+			
+			cost = 25
+			
+			visible = {
+				FROM = {
+					has_target_flag = { flag = md2026_is_proxy_of target = ROOT }
+				}
+			}
+			
+			effect = {
+				clear_target_flag = { flag = md2026_proxy_supported target = FROM }
+				
+				FROM = {
+					clear_target_flag = { flag = md2026_is_proxy_of target = ROOT }
+					remove_idea = md2026_proxy_recipient
+				}
+				
+				# If the sponsor has no more proxies, remove the sponsor idea
+				if = {
+					limit = {
+						NOT = {
+							any_country = {
+								has_target_flag = { flag = md2026_is_proxy_of target = ROOT }
+							}
+						}
+					}
+					remove_idea = md2026_proxy_sponsor
+				}
+			}
+			
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 100
+					has_political_power < 50
+				}
+				modifier = {
+					add = 100
+					NOT = { FROM = { has_war = yes } }
+				}
+			}
+		}
+	}
+}
