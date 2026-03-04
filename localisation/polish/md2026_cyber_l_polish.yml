@@ -26,4 +26,16 @@
  md2026_cyber.2.d:0 "Our cybersecurity agencies have detected and isolated a major data breach attempt. Forensic analysis of the malware signatures points directly to state-sponsored hackers from [From.GetName]. While they managed to exfiltrate some data before being shut out, we have gathered enough evidence to publicly condemn their actions."
  md2026_cyber.2.a:0 "A blatant violation of our sovereignty."
  
+ md2026_cyber.3.t:0 "Cyber Intrusion Detected"
+ md2026_cyber.3.d:0 "Our cybersecurity agencies have detected and thwarted an attempted breach of our networks. Forensics suggest state-sponsored actors were behind the intrusion."
+ md2026_cyber.3.a:0 "We must retaliate."
+ 
+ md2026_cyber.4.t:0 "Data Exfiltration Successful"
+ md2026_cyber.4.d:0 "Our cyber espionage campaign has paid off. We have successfully extracted valuable technological data that will accelerate our own research efforts."
+ md2026_cyber.4.a:0 "Knowledge is power."
+ 
+ md2026_cyber.5.t:0 "Espionage Operation Fails"
+ md2026_cyber.5.d:0 "Our attempt to steal foreign technology has ended in failure. Our operatives were detected before they could extract any useful data, causing a minor diplomatic embarrassment."
+ md2026_cyber.5.a:0 "Cover our tracks."
+ 
  md2026_cyber_attack_opinion:0 "Detected Cyber Espionage"

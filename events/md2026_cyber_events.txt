@@ -33,3 +33,52 @@ country_event = {
 		}
 	}
 }
+
+# Attacker failure / Victim detected
+country_event = {
+	id = md2026_cyber.3
+	title = md2026_cyber.3.t
+	desc = md2026_cyber.3.d
+	picture = GFX_report_event_generic_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = md2026_cyber.3.a
+		add_political_power = 25
+		FROM = {
+			add_opinion_modifier = { target = ROOT modifier = md2026_diplomatic_disapproval }
+		}
+	}
+}
+
+# Steal tech success
+country_event = {
+	id = md2026_cyber.4
+	title = md2026_cyber.4.t
+	desc = md2026_cyber.4.d
+	picture = GFX_report_event_generic_technology
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = md2026_cyber.4.a
+		add_political_power = 25
+	}
+}
+
+# Steal tech failure
+country_event = {
+	id = md2026_cyber.5
+	title = md2026_cyber.5.t
+	desc = md2026_cyber.5.d
+	picture = GFX_report_event_generic_technology
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = md2026_cyber.5.a
+		add_political_power = -25
+		add_stability = -0.02
+	}
+}
