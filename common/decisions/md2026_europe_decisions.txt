@@ -29,7 +29,6 @@ md2026_europe_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision md2026_ger_sondervermogen"
-			add_political_power = -100
 			add_stability = 0.03
 		}
 
@@ -209,7 +208,6 @@ md2026_europe_category = {
 
 		remove_effect = {
 			set_country_flag = md2026_fra_g7_hosted
-			add_political_power = 50
 			add_stability = 0.03
 			add_war_support = 0.02
 			country_event = { id = md2026_europe.12 days = 5 }
@@ -498,7 +496,7 @@ md2026_europe_category = {
 	md2026_ita_electoral_reform = {
 		icon = generic_political_actions
 
-		cost = 125
+		cost = 75
 		fire_only_once = yes
 		days_remove = 180
 
@@ -515,7 +513,7 @@ md2026_europe_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision md2026_ita_electoral_reform"
-			add_political_power = -100
+			add_political_power = -50
 			add_stability = -0.05
 		}
 
@@ -560,7 +558,6 @@ md2026_europe_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision md2026_pol_cpk_construction"
-			add_political_power = -100
 			add_stability = -0.02
 		}
 
@@ -609,7 +606,7 @@ md2026_europe_category = {
 		remove_effect = {
 			army_experience = 10
 			add_equipment_to_stockpile = {
-				type = infantry_equipment
+				type = infantry_weapons3
 				amount = 500
 			}
 		}
@@ -649,7 +646,7 @@ md2026_europe_category = {
 
 		remove_effect = {
 			set_country_flag = md2026_pol_eu_presidency_done
-			add_political_power = 75
+			add_political_power = 25
 			add_stability = 0.03
 			add_opinion_modifier = { target = GER modifier = md2026_improved_relations }
 			add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
@@ -684,7 +681,7 @@ md2026_europe_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision md2026_pol_ukraine_aid"
 			add_political_power = -25
 			add_equipment_to_stockpile = {
-				type = infantry_equipment
+				type = infantry_weapons3
 				amount = -200
 			}
 		}
@@ -692,7 +689,7 @@ md2026_europe_category = {
 		remove_effect = {
 			UKR = {
 				add_equipment_to_stockpile = {
-					type = infantry_equipment
+					type = infantry_weapons3
 					amount = 200
 				}
 			}

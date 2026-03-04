@@ -204,7 +204,7 @@ md2026_trumponomics_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision md2026_deepen_doge"
-			add_political_power = 25
+			add_political_power = -25
 			add_stability = -0.05
 		}
 

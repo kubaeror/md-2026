@@ -249,9 +249,8 @@ md2026_nato_decisions_category = {
 		icon = generic_military
 
 		cost = 75
-		fire_only_once = no
+		fire_only_once = yes
 		days_remove = 120
-		days_re_enable = 365
 
 		visible = {
 			date > 2025.12.31
@@ -354,7 +353,7 @@ md2026_nato_decisions_category = {
 	md2026_nato_joint_exercises = {
 		icon = generic_military
 
-		cost = 50
+		cost = 75
 		fire_only_once = no
 		days_remove = 30
 		days_re_enable = 180
@@ -636,7 +635,7 @@ md2026_geopolitics_category = {
 			UKR = {
 				add_equipment_to_stockpile = {
 					type = infantry_weapons5
-					amount = 2000
+					amount = 500
 					producer = ROOT
 				}
 			}
@@ -732,11 +731,11 @@ md2026_military_modernization_category = {
 
 		visible = {
 			date > 2025.12.31
+			num_of_military_factories > 5
 		}
 
 		available = {
 			has_war = no
-			num_of_military_factories > 5
 		}
 
 		complete_effect = {
@@ -869,6 +868,7 @@ md2026_military_modernization_category = {
 
 		visible = {
 			date > 2025.12.31
+			num_divisions > 5
 		}
 
 		available = {
@@ -924,7 +924,33 @@ md2026_military_modernization_category = {
 		}
 
 		remove_effect = {
-			every_owned_state = {
+			random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						NOT = { is_controlled_by = ROOT }
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						NOT = { is_controlled_by = ROOT }
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
 				limit = {
 					is_controlled_by = ROOT
 					any_neighbor_state = {
@@ -1030,6 +1056,7 @@ md2026_economic_decisions_category = {
 
 		visible = {
 			date > 2025.12.31
+			num_of_civilian_factories > 10
 		}
 
 		available = {
@@ -1184,6 +1211,7 @@ md2026_economic_decisions_category = {
 
 		visible = {
 			date > 2025.12.31
+			has_government = democratic
 		}
 
 		available = {
@@ -1199,7 +1227,6 @@ md2026_economic_decisions_category = {
 
 		remove_effect = {
 			add_stability = 0.05
-			add_political_power = 50
 			add_war_support = 0.02
 		}
 
@@ -1365,7 +1392,7 @@ md2026_internal_politics_category = {
 
 		remove_effect = {
 			add_ideas = md2026_sov_partial_mobilization
-			add_manpower = 300000
+			add_manpower = 150000
 		}
 
 		ai_will_do = {
@@ -2087,7 +2114,10 @@ md2026_nuclear_category = {
 		available = {
 			has_war = no
 			num_of_military_factories > 15
-			NOT = { has_country_flag = md2026_per_sanctions_lifted }
+			if = {
+				limit = { original_tag = PER }
+				NOT = { has_country_flag = md2026_per_sanctions_lifted }
+			}
 		}
 
 		complete_effect = {

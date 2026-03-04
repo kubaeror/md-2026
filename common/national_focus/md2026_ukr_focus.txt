@@ -255,13 +255,13 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = md2026_ukr_counter_offensive
+	id = MD2026_UKR_counter_offensive
 	icon = GFX_goal_generic_attack_allies
 	x = 0
-	y = 5
+	y = 3
 	relative_position_id = MD2026_UKR_defense_industry
 	prerequisite = { focus = MD2026_UKR_defense_industry }
-	cost = 10
+	cost = 8.6
 	ai_will_do = { factor = 1 }
 	completion_reward = {
 		add_political_power = 50
@@ -270,13 +270,13 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = md2026_ukr_peace_negotiations
+	id = MD2026_UKR_peace_negotiations
 	icon = GFX_goal_generic_demand_territory
 	x = 2
-	y = 5
+	y = 3
 	relative_position_id = MD2026_UKR_defense_industry
 	prerequisite = { focus = MD2026_UKR_defense_industry }
-	cost = 10
+	cost = 8.6
 	ai_will_do = { factor = 1 }
 	completion_reward = {
 		add_political_power = 50
@@ -285,13 +285,13 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = md2026_ukr_frozen_conflict
+	id = MD2026_UKR_frozen_conflict
 	icon = GFX_goal_generic_construct_military
 	x = 4
-	y = 5
+	y = 3
 	relative_position_id = MD2026_UKR_defense_industry
 	prerequisite = { focus = MD2026_UKR_defense_industry }
-	cost = 10
+	cost = 8.6
 	ai_will_do = { factor = 1 }
 	completion_reward = {
 		add_political_power = 25

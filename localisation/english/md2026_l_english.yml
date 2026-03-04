@@ -149,6 +149,12 @@
  MD2026_UKR_reconstruction_desc:0 "Massive reconstruction effort to rebuild war-damaged infrastructure, cities, and industrial capacity with international aid."
  MD2026_UKR_defense_industry:0 "Defense Industry"
  MD2026_UKR_defense_industry_desc:0 "Developing a domestic defense industry capable of producing drones, armored vehicles, and ammunition to reduce dependence on foreign supplies."
+ MD2026_UKR_counter_offensive:0 "Counter-Offensive"
+ MD2026_UKR_counter_offensive_desc:0 "Launch a major counter-offensive to retake occupied territories, leveraging Western arms and battle-hardened forces."
+ MD2026_UKR_peace_negotiations:0 "Peace Negotiations"
+ MD2026_UKR_peace_negotiations_desc:0 "Enter peace negotiations to end the war, accepting a compromise to stop the bloodshed and begin reconstruction."
+ MD2026_UKR_frozen_conflict:0 "Frozen Conflict"
+ MD2026_UKR_frozen_conflict_desc:0 "Accept a frozen conflict status along current lines of control, focusing on rebuilding and Western integration."
 
  ## China Focuses ##
  MD2026_CHI_great_rejuvenation:0 "Great Rejuvenation"
