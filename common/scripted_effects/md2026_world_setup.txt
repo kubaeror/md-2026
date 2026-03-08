@@ -126,4 +126,11 @@ md2026_setup_world_borders_and_wars = {
         }
         add_ideas = md2026_economic_stabilizer
     }
+
+
+    # 7. Fire initial lore/flavour events for key nations
+    if = {
+        limit = { tag = USA }
+        USA = { country_event = { id = md2026_trumponomics.1 days = 2 } } # DOGE Established
+    }
 }
