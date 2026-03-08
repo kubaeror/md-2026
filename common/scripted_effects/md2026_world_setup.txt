@@ -1,0 +1,70 @@
+# MD2026 World Setup Script
+# Fired once at the start of the 2026 scenario
+
+md2026_setup_world_borders_and_wars = {
+    # 1. Russo-Ukrainian War
+    if = {
+        limit = { SOV = { exists = yes } UKR = { exists = yes } }
+        SOV = {
+            # Declare war on Ukraine
+            declare_war_on = { target = UKR type = annex_everything }
+            
+            # Transfer control of occupied regions to Russia
+            # Crimea (already owned by SOV in base MD usually, but just in case)
+            259 = { set_state_controller = SOV } # Crimea
+            
+            # Donbas (Luhansk & Donetsk)
+            260 = { set_state_controller = SOV } # Luhansk
+            261 = { set_state_controller = SOV } # Donetsk
+            
+            # Southern Ukraine (Zaporizhzhia & Kherson - partial control)
+            262 = { set_state_controller = SOV } # Zaporizhzhia
+            263 = { set_state_controller = SOV } # Kherson
+            
+            # Add core claims for Russia based on 2022 annexation
+            add_core_of = 260
+            add_core_of = 261
+            add_core_of = 262
+            add_core_of = 263
+        }
+    }
+
+    # 2. Gaza War (Israel vs Hamas/Palestine)
+    if = {
+        limit = { ISR = { exists = yes } PAL = { exists = yes } }
+        ISR = {
+            declare_war_on = { target = PAL type = annex_everything }
+            # Israel controls most of Gaza by 2026
+            310 = { set_state_controller = ISR } # Gaza Strip
+        }
+    }
+
+    # 3. NATO Expansion (Finland and Sweden)
+    if = {
+        limit = { FIN = { exists = yes } SWE = { exists = yes } USA = { exists = yes } }
+        USA = {
+            add_to_faction = FIN
+            add_to_faction = SWE
+        }
+        FIN = { set_country_flag = md2026_nato_member }
+        SWE = { set_country_flag = md2026_nato_member }
+    }
+    
+    # 4. Remove obsolete alliances / setup new ones
+    if = {
+        limit = { SOV = { exists = yes } }
+        SOV = {
+            # Strengthen ties with Iran and North Korea
+            add_opinion_modifier = { target = PER modifier = military_cooperation }
+            add_opinion_modifier = { target = NKO modifier = military_cooperation }
+            create_guarantee = NKO
+            create_guarantee = SYR
+        }
+        NKO = {
+            add_opinion_modifier = { target = SOV modifier = military_cooperation }
+        }
+        PER = {
+            add_opinion_modifier = { target = SOV modifier = military_cooperation }
+        }
+    }
+}
