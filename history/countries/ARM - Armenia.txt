@@ -372,6 +372,10 @@ country_event = {
 	}
 	set_variable = { overall_productivity = 400 }
 
+	### Artsakh Dissolution (Sept 2023) ###
+	# NKR was dissolved after Azerbaijan's 2023 offensive. Remove the spirit.
+	remove_ideas = ARM_has_artsakh_idea
+
 	### Politics & Parties ###
 	set_popularities = {
 		democratic = 20.0
