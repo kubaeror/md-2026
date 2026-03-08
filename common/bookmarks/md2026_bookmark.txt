@@ -1,0 +1,79 @@
+bookmarks = {
+	bookmark = {
+		name = "MD2026_BOOKMARK_NAME"
+		desc = "MD2026_BOOKMARK_DESC"
+		date = 2026.1.1.12
+		picture = "GFX_select_date_2017"
+		default_country = "USA"
+		default = yes
+
+		"USA" = {
+			history = "MD2026_USA_DESC"
+			ideology = Western_Autocracy
+			focuses = {
+				MD2026_USA_trump_second_term
+				MD2026_USA_doge
+				MD2026_USA_deal_with_russia
+			}
+		}
+		"SOV" = {
+			history = "MD2026_SOV_DESC"
+			ideology = Autocracy
+			focuses = {
+				MD2026_SOV_war_crossroads
+				MD2026_SOV_eastern_pivot
+				MD2026_SOV_economic_autarky
+			}
+		}
+		"CHI" = {
+			history = "MD2026_CHI_DESC"
+			ideology = Communist-State
+			focuses = {
+				MD2026_CHI_great_rejuvenation
+				MD2026_CHI_taiwan_question
+				MD2026_CHI_tech_dominance
+			}
+		}
+		"UKR" = {
+			history = "MD2026_UKR_DESC"
+			ideology = democratic
+			focuses = {
+				MD2026_UKR_war_path
+				MD2026_UKR_western_weapons
+				MD2026_UKR_defense_industry
+			}
+		}
+		"TAI" = {
+			history = "MD2026_TAI_DESC"
+			ideology = democratic
+			focuses = {
+				MD2026_TAI_porcupine_defense
+				MD2026_TAI_tech_sovereignty
+			}
+		}
+		"GER" = {
+			history = "MD2026_GER_DESC"
+			ideology = democratic
+			focuses = {
+				MD2026_GER_zeitenwende_2026
+				MD2026_GER_bundeswehr_reform
+			}
+		}
+		"ISR" = {
+			history = "MD2026_ISR_DESC"
+			ideology = democratic
+			focuses = {
+				MD2026_ISR_iron_wall
+				MD2026_ISR_gaza_aftermath
+			}
+		}
+		"POL" = {
+			history = "MD2026_POL_DESC"
+			ideology = democratic
+			focuses = {
+				MD2026_POL_eastern_shield
+				MD2026_POL_fortress_poland
+			}
+		}
+	}
+}
