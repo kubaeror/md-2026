@@ -2979,28 +2979,33 @@ capital = 45
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
 
-	# MD2026 Pre-completed focuses (already happened by Jan 2026)
-	complete_national_focus = MD2026_GER_zeitenwende_2026
-	complete_national_focus = MD2026_GER_energy_independence
-	complete_national_focus = MD2026_GER_eu_expansion
-	complete_national_focus = MD2026_GER_european_army
-	complete_national_focus = MD2026_GER_nato_2_percent
+	### ==========================================================
+	### COMPLETE NATIONAL FOCUS LIST — GER 2026 Bookmark
+	### ==========================================================
 
-	# Base MD pre-completed focuses (root + T1, 2000-2026)
-	complete_national_focus = GER_Alexander_von_humboldt_Institutes_Strengthen_reswarch_cooperations
-	complete_national_focus = GER_Digitale_Agenda
-	complete_national_focus = GER_Interventionism_for_democracy
-	complete_national_focus = GER_Neuer_Markt
-	complete_national_focus = GER_Reform_bundeswehr
-	complete_national_focus = GER_Regional_Innovation_Center
+	# ── MD2026 CUSTOM FOCUSES ──
+	complete_national_focus = MD2026_GER_zeitenwende_2026
+	complete_national_focus = MD2026_GER_bundeswehr_reform
+	complete_national_focus = MD2026_GER_nato_commitment
+	complete_national_focus = MD2026_GER_energy_transition
+	complete_national_focus = MD2026_GER_renewables_expansion
+	complete_national_focus = MD2026_GER_lng_terminals
+	complete_national_focus = MD2026_GER_wirtschaftswunder
+
+	# ── DIGITAL / TECH ROOTS (8 standalone) ──
 	complete_national_focus = GER_Schulen_ans_Netz
-	complete_national_focus = GER_Startup_Investments
-	complete_national_focus = GER_Tech_DAX
+	complete_national_focus = GER_Regional_Innovation_Center
+	complete_national_focus = GER_Digitale_Agenda
 	complete_national_focus = GER_UMTS_License_auction
-	complete_national_focus = GER_deutschland_industrie
-	complete_national_focus = GER_german_politics
-	complete_national_focus = GER_the_constitution_of_germany
+	complete_national_focus = GER_Startup_Investments
+	complete_national_focus = GER_Neuer_Markt
 	complete_national_focus = GER_home_Grown_Software
+	complete_national_focus = GER_Tech_DAX
+
+	# ── RESEARCH / HUMBOLDT ──
+	# Root
+	complete_national_focus = GER_Alexander_von_humboldt_Institutes_Strengthen_reswarch_cooperations
+	# 6 sub-branch roots
 	complete_national_focus = GER_DAAD_Expand_Academic_exchange_service
 	complete_national_focus = GER_Found_InWent
 	complete_national_focus = GER_KFW_Restructure
@@ -3008,22 +3013,303 @@ capital = 45
 	complete_national_focus = GER_Reform_and_Strenghen_of_german_foreign_intitutes
 	complete_national_focus = GER_Reform_the_DED
 	complete_national_focus = GER_found_Bundesagentur_fur_Aussenwirtschaft
-	complete_national_focus = GER_CDU_rises
-	complete_national_focus = GER_FDP
-	complete_national_focus = GER_agenda_2010
-	complete_national_focus = GER_green_alliance
-	complete_national_focus = GER_the_alternative
-	complete_national_focus = GER_the_left
-	complete_national_focus = GER_Restructure_Infrastructure
-	complete_national_focus = GER_alt_energy
-	complete_national_focus = GER_expand_mainstream_industry
-	complete_national_focus = GER_expand_oil_gas
-	complete_national_focus = GER_mining_in_germany
-	complete_national_focus = GER_unemployment_crisis
-	complete_national_focus = GER_Establish_Streitkrafte_basis
-	complete_national_focus = GER_Deutsche_Post_AG
-	complete_national_focus = GER_duetches_telekom
-	complete_national_focus = GER_dismantle_russian_aggression
+	# Sub-branch children (intermediates for strategic partnerships)
+	complete_national_focus = GER_International_education_projects        # DAAD child
+	complete_national_focus = GER_Education_for_stability                 # DAAD child
+	complete_national_focus = GER_Promote_the_german_language             # Goethe child
+	complete_national_focus = GER_Culture_andIntegration                  # Goethe child
+	complete_national_focus = GER_global_infrastructure_projects          # KFW child
+	complete_national_focus = GER_Green_finance_initiative                # KFW child
+	complete_national_focus = GER_International_cutting_edge_research     # Reform foreign institutes child
+	complete_national_focus = GER_Promote_academic_elites                 # Reform foreign institutes child
+	complete_national_focus = GER_Development_Projects                    # DED child
+	complete_national_focus = GER_Suitable_Agriculture_programs           # InWent child
+	complete_national_focus = GER_Securing_acces_to_Key_Ressources       # Bundesagentur child
+	complete_national_focus = GER_Promote_private_investments             # Bundesagentur child
+	# GIZ (merger of DED, InWent, Bundesagentur children)
+	complete_national_focus = GER_Found_the_GIZ
+	# 8 Strategic Partnerships
+	complete_national_focus = GER_Strategic_Partnership_Brazil            # ⚠️ fires GER_Diplomacy.3 → cross-country BRA
+	complete_national_focus = GER_Strategic_Partnership_China             # ⚠️ fires GER_Diplomacy.3 → cross-country CHI
+	complete_national_focus = GER_Strategic_Partnership_India             # ⚠️ fires GER_Diplomacy.3 → cross-country RAJ
+	complete_national_focus = GER_Strategic_Partnership_Israel            # ⚠️ fires GER_Diplomacy.3 → cross-country ISR
+	complete_national_focus = GER_Strategic_Partnership_Japan             # ⚠️ fires GER_Diplomacy.3 → cross-country JAP
+	complete_national_focus = GER_Strategic_Partnership_South_korea       # ⚠️ fires GER_Diplomacy.3 → cross-country KOR
+	complete_national_focus = GER_Strategic_Partnership_South_Afrika      # ⚠️ fires GER_Diplomacy.3 → cross-country SAF
+	complete_national_focus = GER_Strategic_Partnership_Vietnam           # ⚠️ fires GER_Diplomacy.3 → cross-country VIE
+
+	# ── CONSTITUTION ──
+	complete_national_focus = GER_the_constitution_of_germany
 	complete_national_focus = GER_expand_article_twenty
 	complete_national_focus = GER_expand_article_twenty_one
+
+	# ── INDUSTRY ──
+	# Root + tier 1
+	complete_national_focus = GER_deutschland_industrie
+	complete_national_focus = GER_expand_mainstream_industry
+	complete_national_focus = GER_expand_oil_gas
+	complete_national_focus = GER_mining_in_germany                      # ROOT ONLY — no children
+	complete_national_focus = GER_alt_energy
+	complete_national_focus = GER_unemployment_crisis
+	# Mainstream → workforce/tax → workshop → automobile
+	complete_national_focus = GER_appease_the_workforce
+	complete_national_focus = GER_corporate_tax_cut
+	complete_national_focus = GER_revive_the_german_workshop
+	complete_national_focus = GER_expand_automobile
+	complete_national_focus = GER_Form_Daimler_Chrysler_AG
+	complete_national_focus = GER_Fujian_Benz_Automotive                 # ⚠️ cross-country influence
+	complete_national_focus = GER_Volkswagen_Crisis
+	complete_national_focus = GER_Expand_Volkswagen_Nutzfahrzeuge        # ⚠️ cross-country influence
+	complete_national_focus = GER_BMW_Focus                              # ⚠️ fires event germany.66
+	complete_national_focus = GER_BMW_CKD_System
+	# Mainstream → shaking_up_the_system → pharma + healthcare
+	complete_national_focus = GER_shaking_up_the_system
+	complete_national_focus = GER_bigger_pharma                          # ⚠️ cross-country FRA/USA/BEL/SWI/ITA
+	complete_national_focus = GER_more_pfizer_contracts                  # ME choice (not asian_persuasion)
+	complete_national_focus = GER_more_healthcare_funding                # ⚠️ adds idea GER_idea_health_reforms
+	complete_national_focus = GER_construct_more_healthcare_centres      # ⚠️ swaps idea → GER_idea_health_reforms2
+	# Oil/Gas chain
+	complete_national_focus = GER_foreign_investors                      # ME choice (not domestic_oil)
+	complete_national_focus = GER_gazprom_ops                            # ME choice (not exxon/shell)
+	complete_national_focus = GER_nordstream_one                           # ⚠️ adds SOV ideas, cross-country SOV
+	complete_national_focus = GER_propose_nordstream_two                  # ⚠️ adds SOV ideas, cross-country SOV
+	# Energy / Renewables chain
+	complete_national_focus = GER_a_greener_germany                      # ME choice (not nuclear)
+	complete_national_focus = GER_renewable_energy_projects               # separate branch under alt_energy
+	complete_national_focus = GER_biomass_plants
+	complete_national_focus = GER_wind_power
+	complete_national_focus = GER_large_solar_farms
+	complete_national_focus = GER_complete_phase_one                     # ⚠️ adds idea GER_idea_renewable_energy_projects_phase_one
+	complete_national_focus = GER_committed_to_green_power
+	complete_national_focus = GER_more_biomass_plants
+	complete_national_focus = GER_national_solar_energy_scheme           # ⚠️ adds modifier GER_solar_panels
+	complete_national_focus = GER_offshore_windfarms                     # ⚠️ adds modifier GER_offshore_wind_farms
+	complete_national_focus = GER_complete_renewable_energy_projects     # ⚠️ swaps idea → GER_idea_renewable_energy_projects_complete
+	complete_national_focus = GER_carbon_neutral                         # capstone ⚠️ swaps idea → GER_idea_carbon_neutral
+	# Unemployment / Free market chain
+	complete_national_focus = GER_free_market_approach                   # ME choice (not control_over_market)
+	complete_national_focus = GER_foreign_policy_dedication
+	complete_national_focus = GER_International_business                 # ⚠️ swaps idea → GER_idea_unemployment_crisis2
+	complete_national_focus = GER_Investments_cologne
+	complete_national_focus = GER_Investments_stuggart
+	complete_national_focus = GER_foreign_investment_opportunities
+	complete_national_focus = GER_scientific_exchanges
+	complete_national_focus = GER_promote_german_startups
+	complete_national_focus = GER_education_investments
+	complete_national_focus = GER_International_schools
+	complete_national_focus = GER_a_digital_germany                     # ⚠️ removes idea GER_idea_unemployment_crisis2
+
+	# ── INFRASTRUCTURE ──
+	complete_national_focus = GER_Restructure_Infrastructure
+	# Deutsche Post / Telekom / DHL (via Digitale_Agenda chain)
+	complete_national_focus = GER_Deutsche_Post                          # ⚠️ adds idea GER_idea_Privatisation_Post
+	complete_national_focus = GER_Deutsche_Post_AG                       # ⚠️ swaps idea → GER_idea_Privatisation_Post_II
+	complete_national_focus = GER_duetches_telekom                       # ⚠️ adds idea GER_idea_deutsche_telekom
+	complete_national_focus = GER_Network_Infrastructure
+	complete_national_focus = GER_DHL                                    # ⚠️ swaps ideas → GER_idea_DHL, removes Post_II
+	# Deutsche Bahn
+	complete_national_focus = GER_Deutsche_Bahn                          # ⚠️ adds permanent modifier GER_Deutsch_Bahn_mod
+	complete_national_focus = GER_Deutsche_Bahn_AG                       # ⚠️ TIMED IDEA: GER_idea_duetch_reichsban (500 days)
+	complete_national_focus = GER_DB_Fernverkehr_AG
+	complete_national_focus = GER_DB_Netz_AG
+	complete_national_focus = GER_DB_Regio
+	complete_national_focus = GER_DB_Cargo
+	complete_national_focus = GER_DB_Schenker
+	# Bergbaufolgelandschaften / Forestry
+	complete_national_focus = GER_Bergbaufolgelandschaften               # ⚠️ adds idea GER_idea_Bergbaufolgelandschaften
+	complete_national_focus = GER_forestry
+	complete_national_focus = GER_Nature_reserve
+	complete_national_focus = GER_Military_trainings_area
+
+	# ── POLITICS: SPD / SCHRÖDER ──
+	complete_national_focus = GER_agenda_2010
+	complete_national_focus = GER_social_cuts
+	complete_national_focus = GER_health_cuts
+	complete_national_focus = GER_deregulations
+	complete_national_focus = GER_economic_growth
+	complete_national_focus = GER_hartz_reform
+	complete_national_focus = GER_tax_cuts
+	complete_national_focus = GER_hartz_ii
+	complete_national_focus = GER_psas
+	complete_national_focus = GER_hartz_iii
+	complete_national_focus = GER_shroders_legacy
+	complete_national_focus = GER_condemn_american_aggro
+	complete_national_focus = GER_friend_of_east
+	complete_national_focus = GER_partnership_with_companies
+	complete_national_focus = GER_chinese_visit
+	complete_national_focus = GER_drift_from_socialism
+	complete_national_focus = GER_companies_are_lazy
+	complete_national_focus = GER_move_from_nuclear_energy               # ⚠️ adds idea GER_idea_drift_from_nuclear
+	complete_national_focus = GER_renewable_shift
+
+	# ── POLITICS: CDU ──
+	complete_national_focus = GER_CDU_rises
+	complete_national_focus = GER_bmvi
+	complete_national_focus = GER_digitalrat
+	complete_national_focus = GER_strengthen_the_service_sector
+	complete_national_focus = GER_european_business_opportunities
+	complete_national_focus = GER_nuclear_confusion
+	complete_national_focus = GER_shutdown_plants                        # ME choice (not nuclear_lifeline)
+	complete_national_focus = GER_renewable_support
+	complete_national_focus = GER_relax_conscription
+	complete_national_focus = GER_Industrial_outsourcing
+	complete_national_focus = GER_redistribute_cap_subsidies
+	complete_national_focus = GER_animal_rights_reform
+	complete_national_focus = GER_sustainable_farming_practices
+	complete_national_focus = GER_animal_welfare
+	complete_national_focus = GER_stance_on_marriage
+	complete_national_focus = GER_affirmative_action                     # ME choice (not family_values)
+	complete_national_focus = GER_stance_on_migrants
+	complete_national_focus = GER_tighten_borders
+	complete_national_focus = GER_support_poland
+	complete_national_focus = GER_european_ties
+	complete_national_focus = GER_reaffirm_american_friendship
+	complete_national_focus = GER_european_values                        # ⚠️ TIMED IDEA (500 days)
+
+	# ── POLITICS: FDP ──
+	complete_national_focus = GER_FDP
+	complete_national_focus = GER_free_market_principles
+	complete_national_focus = GER_a_stronger_military
+	complete_national_focus = GER_nato_commitment
+	complete_national_focus = GER_social_welfare_reform
+	complete_national_focus = GER_need_based_assistance
+	complete_national_focus = GER_workfare_programs
+	complete_national_focus = GER_privatization_of_defense
+	complete_national_focus = GER_cybersecurity
+	complete_national_focus = GER_e_government
+	complete_national_focus = GER_cyber_workforce
+	complete_national_focus = GER_digital_democracy
+	complete_national_focus = GER_support_lgbt
+	complete_national_focus = GER_points_based_immigration
+	complete_national_focus = GER_legalization_of_cannabis
+	complete_national_focus = GER_modernization_initiative
+
+	# ── POLITICS: GREENS ──
+	complete_national_focus = GER_green_alliance
+	complete_national_focus = GER_sustainable_development
+	complete_national_focus = GER_support_for_ev
+	complete_national_focus = GER_halt_nuclear_expansion
+	complete_national_focus = GER_eu_green_deal
+	complete_national_focus = GER_progressive_taxation
+	complete_national_focus = GER_tighter_regulations
+	complete_national_focus = GER_rent_regulations
+	complete_national_focus = GER_a_better_minimum_wage
+	complete_national_focus = GER_the_peoples_germany
+	complete_national_focus = GER_equal_work_equal_pay
+	complete_national_focus = GER_sanctuary_for_lgbt
+	complete_national_focus = GER_partial_retirement_benefits
+	complete_national_focus = GER_eastward_expansion_nato
+	complete_national_focus = GER_a_hand_to_japan
+	complete_national_focus = GER_distance_from_china
+	complete_national_focus = GER_cancel_russian_deals
+
+	# ── POLITICS: AfD & DIE LINKE (root only) ──
+	complete_national_focus = GER_german_politics
+	complete_national_focus = GER_the_alternative
+	complete_national_focus = GER_the_left
+
+	# ── INTERVENTIONISM ──
+	complete_national_focus = GER_Interventionism_for_democracy
+	complete_national_focus = GER_dismantle_russian_aggression
+	# Baltic defense
+	complete_national_focus = GER_defense_for_baltic_states
+	complete_national_focus = GER_lithuanian_arms                        # ⚠️ cross-country LIT
+	complete_national_focus = GER_latvian_arms                           # ⚠️ cross-country LAT
+	complete_national_focus = GER_estonian_arms                          # ⚠️ cross-country EST
+	complete_national_focus = GER_estonian_base                          # ⚠️ fires Germany.410 → cross-country EST
+	complete_national_focus = GER_lithuanian_base                        # ⚠️ fires Germany.410 → cross-country LIT
+	# Ukraine
+	complete_national_focus = GER_ukrainian_assistance
+	complete_national_focus = GER_anti_russian_sentiment
+	complete_national_focus = GER_hearts_over_war                        # ⚠️ fires Germany.408
+	complete_national_focus = GER_support_ukrainian_unity                # ⚠️ cross-country UKR
+	# Belarus
+	complete_national_focus = GER_belarusian_democracy                   # ⚠️ fires Germany.237 → cross-country BLR
+	complete_national_focus = GER_topple_lukashenko                      # ME choice (not destroy_lukashenko)
+
+	# ── MILITARY: ARMY (Balanced) ──
+	complete_national_focus = GER_Reform_bundeswehr
+	complete_national_focus = GER_Establish_Streitkrafte_basis
+	complete_national_focus = Ger_Einsatzfuhrungskommando
+	complete_national_focus = GER_the_balanced_Army                      # ME choice (not KRK/HVK)
+	# Balanced Army doctrine sub-branches
+	complete_national_focus = GER_Joint_operation_Training
+	complete_national_focus = GER_Advanced_mechanized_tactic
+	complete_national_focus = GER_Improved_logistics
+	complete_national_focus = GER_Crisis_management_doctrine
+	complete_national_focus = GER_Infantry_Spezialisation
+	complete_national_focus = GER_Combined_exersice
+	complete_national_focus = GER_Advanced_Teritorial_defence
+	complete_national_focus = GER_Modernize_Armored_Tactics
+	complete_national_focus = GER_Rapid_Armor_deployment_training
+	# Convergence
+	complete_national_focus = GER_Balance_act
+	complete_national_focus = GER_Delay_training
+	complete_national_focus = GER_security_intervention
+	complete_national_focus = GER_Ready_to_transform                    # ⚠️ adds idea GER_idea_Transformation
+	# Post-transform education chain
+	complete_national_focus = GER_Reform_Fuhrungsakademie
+	complete_national_focus = GER_Reform_Zentrum_innere_Fuhrung          # ⚠️ swaps idea → GER_idea_Innere_fuhrung_II
+	complete_national_focus = GER_Invest_in_Universitat_der_Bundeswehr_Hamburg
+	complete_national_focus = GER_cooperation_in_education
+	complete_national_focus = GER_European_Anker_Army                    # ⚠️ fires GER_Cold_War.30
+	# Force structure
+	complete_national_focus = GER_Introduce_Medium_Forces                # ME choice (not light/heavy) ⚠️ swaps idea → Innere_fuhrung_3b
+	# AFV projects + contractor
+	complete_national_focus = GER_AFV_projects
+	complete_national_focus = GER_Cooperation_possible                   # ME choice KNDS (not Rheinmetall/KMW)
+	# Specialized forces
+	complete_national_focus = GER_Specialiced_forces
+	# SOF
+	complete_national_focus = GER_modernice_Special_forces
+	complete_national_focus = GER_Expand_KSK                            # ME choice (not SEK_M/EGB)
+	# Recon
+	complete_national_focus = GER_Update_rec_forces
+	complete_national_focus = GER_Introduce_drone_rec_troop              # ME choice (not terrain/FAC)
+
+	# ── MILITARY: AIR FORCE ──
+	complete_national_focus = GER_Airforce_structure                     # ⚠️ fires germany.580
+	complete_national_focus = GER_Restructure_Airdefense                 # ⚠️ fires germany.590
+	complete_national_focus = GER_Restructure_kommando_luftwaffe
+	complete_national_focus = GER_enhance_pilot_training
+	complete_national_focus = GER_Capability_focus
+	complete_national_focus = GER_Airsuperiority_focus                   # ME choice (not strike/REC)
+
+	# ── MILITARY: NAVY (Blue Water) ──
+	complete_national_focus = GER_Navy_focus
+	complete_national_focus = GER_Define_bluewater_strategy              # ME choice (not green/brown)
+	complete_national_focus = GER_Develope_Join_operation_Doctrine_I
+	complete_national_focus = GER_Expand_Sea_patroles
+	complete_national_focus = GER_Advanced_navy_training_I
+	complete_national_focus = GER_high_seas_warfare_training
+	complete_national_focus = GER_Global_intervention
+	complete_national_focus = GER_handle_asymetrick_threat
+	complete_national_focus = GER_Coasteal_and_open_sea_defense          # ME choice (not shallow)
+	# Shipyard
+	complete_national_focus = GER_Shipyards
+	complete_national_focus = GER_ThyssenKrupp_Marinesystem              # ME choice (not Blohm/HDW)
+
+	### ==========================================================
+	### CLEANUP BLOCK — remove anachronistic timed ideas + fix state
+	### ==========================================================
+	### complete_national_focus fires completion_reward at game init,
+	### so timed ideas / events fire fresh. We remove them here.
+
+	# ── TIMED IDEAS (would start fresh timers in 2026, wrong) ──
+	remove_ideas = GER_idea_european_values              # from GER_european_values (500d)
+	remove_ideas = GER_idea_restructure_Infrastructure   # from GER_Restructure_Infrastructure (365d)
+	remove_ideas = GER_idea_deutsche_bahn_investments    # from GER_Deutsche_Bahn (365d)
+	remove_ideas = GER_idea_duetch_reichsban             # from GER_Deutsche_Bahn_AG (500d)
+
+	# ── ANACHRONISTIC IDEAS ──
+	# GER_move_from_nuclear_energy adds this SPD-era idea;
+	# CDU governs in 2026 and carbon_neutral already swapped nuclear → non_nuclear_power
+	remove_ideas = GER_idea_drift_from_nuclear
+
+	# ── NORD STREAM CLEANUP ──
+	# GER_nordstream_one and GER_propose_nordstream_two add pipeline ideas to GER.
+	# Both pipelines were sabotaged / never operational by 2026.
+	# Removing from GER auto-cancels the linked SOV ideas via cancel trigger.
+	remove_ideas = SOV_nord_stream_idea                  # Nord Stream 1 (sabotaged Sep 2022)
+	remove_ideas = SOV_nord_stream2_idea                 # Nord Stream 2 (never operational)
 }
