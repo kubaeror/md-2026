@@ -467,6 +467,18 @@
 }
 
 2026.1.1 = {
+	### Technology 2026 ###
+	md2026_tier3_2026_techs = yes
+	
+	### OOB 2026 ###
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "MEX_2026_nsb"
+		else = {
+			set_oob = "MEX_2000_nonnsb"
+		}
+	}
+	
 	# MD2026 Pre-completed focuses (already happened by Jan 2026)
 	complete_national_focus = md2026_mex_amlo_legacy
 	complete_national_focus = md2026_mex_usmca_trade

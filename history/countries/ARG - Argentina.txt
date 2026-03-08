@@ -578,6 +578,18 @@
 }
 
 2026.1.1 = {
+	### Technology 2026 ###
+	md2026_tier3_2026_techs = yes
+	
+	### OOB 2026 ###
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "ARG_2026_nsb"
+		else = {
+			set_oob = "ARG_2000_nonnsb"
+		}
+	}
+	
 	# MD2026 Pre-completed focuses (already happened by Jan 2026)
 	complete_national_focus = md2026_arg_milei_reforms
 	complete_national_focus = md2026_arg_dollarization
