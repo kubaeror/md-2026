@@ -1,5 +1,17 @@
 ﻿focus_tree = {
 	id = generic_focus
+	shared_focus = md2026_zaf_anc_crisis
+
+	shared_focus = MD2026_TAI_porcupine_defense
+
+	shared_focus = md2026_pak_economic_crisis
+
+	shared_focus = md2026_mex_amlo_legacy
+
+	shared_focus = MD2026_AST_pacific_partner
+
+	shared_focus = md2026_arg_milei_reforms
+
 	shared_focus = MD2026_BALTIC_suwalki_shield
 
 	country = { factor = 2 }
