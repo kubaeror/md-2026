@@ -335,4 +335,18 @@
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = EST_armed_forces
+	complete_national_focus = EST_estonias_future
+	complete_national_focus = EST_air_defence
+	complete_national_focus = EST_fortify_islands
+	complete_national_focus = EST_joint_drills
+	complete_national_focus = EST_subsidize_defence
+	complete_national_focus = EST_estonian_defence_league
+	complete_national_focus = EST_encourage_far_right_thought
+	complete_national_focus = EST_energy_con
+	complete_national_focus = EST_looking_to_the_west
+	complete_national_focus = EST_the_estonian_party
+	complete_national_focus = EST_what_if
 }

@@ -932,4 +932,35 @@ capital = 46
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = HOL_Commissariaat_Militaire_Productie
+	complete_national_focus = HOL_Dutch_Economic_Landscape
+	complete_national_focus = HOL_Dutch_Legends
+	complete_national_focus = HOL_Paars
+	complete_national_focus = HOL_Shell
+	complete_national_focus = HOL_global_vision
+	complete_national_focus = HOL_Commando_Landstrijdkrachten
+	complete_national_focus = HOL_Dutch_Defense_Doctrine
+	complete_national_focus = HOL_Dutch_Water_Sector
+	complete_national_focus = HOL_Gay
+	complete_national_focus = HOL_Green_Shell
+	complete_national_focus = HOL_Koninklijke_Luchtmacht
+	complete_national_focus = HOL_Marinestudie
+	complete_national_focus = HOL_NAM
+	complete_national_focus = HOL_Randstad
+	complete_national_focus = HOL_Rijkswaterstaat
+	complete_national_focus = HOL_Royal_Wedding
+	complete_national_focus = HOL_Threats_Against_Politicians
+	complete_national_focus = HOL_Trade_Infrastructure
+	complete_national_focus = HOL_UN_Mission_Ehtiopia
+	complete_national_focus = HOL_atlantic_defence_commitments
+	complete_national_focus = HOL_bonaire_phosphate_mining
+	complete_national_focus = HOL_curacao_oil_refinery_expansion
+	complete_national_focus = HOL_delta_rhine_energy_corridor
+	complete_national_focus = HOL_dutch_american_friendship
+	complete_national_focus = HOL_economic_development_antilles
+	complete_national_focus = HOL_reinstate_werkspoor
+	complete_national_focus = HOL_space_efforts
+	complete_national_focus = HOL_suriname_alignment
 }

@@ -104,3 +104,38 @@ md2026_economic_decisions_category = {
 		date > 2025.12.31
 	}
 }
+
+md2026_internal_politics_category = {
+	icon = generic_political_actions
+	picture = GFX_decision_generic_political_discourse
+	priority = 65
+
+	visible = {
+		date > 2025.12.31
+	}
+}
+
+md2026_nuclear_category = {
+	icon = generic_military
+	picture = GFX_decision_cat_generic_military
+	priority = 60
+
+	allowed = {
+		OR = {
+			original_tag = USA
+			original_tag = SOV
+			original_tag = CHI
+			original_tag = FRA
+			original_tag = ENG
+			original_tag = RAJ
+			original_tag = PAK
+			original_tag = ISR
+			original_tag = NKO
+			original_tag = PER
+		}
+	}
+
+	visible = {
+		date > 2025.12.31
+	}
+}

@@ -2,7 +2,7 @@
 # Spain 2026
 
 division_template = {
-	name = "Brigada Acorazada 2026"
+	name = "Brigada Acorazada"
 	regiments = {
 		armor_Bat = { x = 0 y = 0 }
 		armor_Bat = { x = 0 y = 1 }
@@ -19,7 +19,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brigada de Infanteria 2026"
+	name = "Brigada de Infanteria"
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
 		Mot_Inf_Bat = { x = 0 y = 1 }
@@ -35,7 +35,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brigada de Infanteria Ligera 2026"
+	name = "Brigada de Infanteria Ligera"
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
@@ -50,7 +50,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brigada Paracaidista 2026"
+	name = "Brigada Paracaidista"
 	regiments = {
 		L_Air_Inf_Bat = { x = 0 y = 0 }
 		L_Air_Inf_Bat = { x = 0 y = 1 }
@@ -64,7 +64,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Infanteria de Marina 2026"
+	name = "Infanteria de Marina"
 	regiments = {
 		L_Marine_Bat = { x = 0 y = 0 }
 		L_Marine_Bat = { x = 0 y = 1 }
@@ -76,7 +76,7 @@ division_template = {
 }
 
 division_template = {
-	name = "MOE 2026"
+	name = "MOE"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -89,7 +89,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Legion 2026"
+	name = "Legion"
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
@@ -106,7 +106,7 @@ units = {
 	division = {
 		name = "Brigada 'Guadarrama' XII"
 		location = 6734
-		division_template = "Brigada Acorazada 2026"
+		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.85
 	}
@@ -114,7 +114,7 @@ units = {
 	division = {
 		name = "Brigada 'Guzmán el Bueno' X"
 		location = 875
-		division_template = "Brigada de Infanteria 2026"
+		division_template = "Brigada de Infanteria"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -122,7 +122,7 @@ units = {
 	division = {
 		name = "Brigada 'Extremadura' XI"
 		location = 6902
-		division_template = "Brigada de Infanteria 2026"
+		division_template = "Brigada de Infanteria"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -130,7 +130,7 @@ units = {
 	division = {
 		name = "Brigada 'Aragón' I"
 		location = 9767
-		division_template = "Brigada de Infanteria Ligera 2026"
+		division_template = "Brigada de Infanteria Ligera"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -138,7 +138,7 @@ units = {
 	division = {
 		name = "Brigada 'Galicia' VII"
 		location = 3938
-		division_template = "Brigada de Infanteria Ligera 2026"
+		division_template = "Brigada de Infanteria Ligera"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
@@ -146,7 +146,7 @@ units = {
 	division = {
 		name = "Brigada 'Rey Alfonso XIII' II (Legión)"
 		location = 3816
-		division_template = "Legion 2026"
+		division_template = "Legion"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.9
 	}
@@ -154,7 +154,7 @@ units = {
 	division = {
 		name = "Brigada Paracaidista 'Almogávares' VI"
 		location = 6734
-		division_template = "Brigada Paracaidista 2026"
+		division_template = "Brigada Paracaidista"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.9
 	}
@@ -162,7 +162,7 @@ units = {
 	division = {
 		name = "Brigada de Infantería de Marina"
 		location = 3799
-		division_template = "Infanteria de Marina 2026"
+		division_template = "Infanteria de Marina"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.9
 	}
@@ -170,7 +170,7 @@ units = {
 	division = {
 		name = "Mando de Operaciones Especiales"
 		location = 6734
-		division_template = "MOE 2026"
+		division_template = "MOE"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.9
 	}
@@ -178,9 +178,66 @@ units = {
 	division = {
 		name = "Mando de Canarias"
 		location = 1176
-		division_template = "Brigada de Infanteria Ligera 2026"
+		division_template = "Brigada de Infanteria Ligera"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
+	}
+
+	### Armada Española ###
+	## Grupo de Acción Naval (Rota) ##
+	fleet = {
+		name = "Grupo de Acción Naval"
+		naval_base = 279
+		task_force = {
+			name = "Grupo Anfibio"
+			location = 279
+			ship = { name = "SPS Juan Carlos I (L61)" definition = helicopter_operator pride_of_the_fleet = yes start_experience_factor = 0.65 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = SPR version_name = "Juan Carlos I Class" } } }
+			ship = { name = "SPS Galicia (L51)" definition = helicopter_operator pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = SPR version_name = "Galicia Class" } } }
+			ship = { name = "SPS Castilla (L52)" definition = helicopter_operator pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = SPR version_name = "Galicia Class" } } }
+		}
+		task_force = {
+			name = "Grupo de Escolta"
+			location = 279
+			ship = { name = "SPS Reina Sofia (F84)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SPR version_name = "Santa Maria Class" } } }
+			ship = { name = "SPS Navarra (F85)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SPR version_name = "Santa Maria Class" } } }
+			ship = { name = "SPS Canarias (F86)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SPR version_name = "Santa Maria Class" } } }
+		}
+	}
+
+	## 31a Escuadrilla de Escoltas (Ferrol) ##
+	fleet = {
+		name = "31a Escuadrilla de Escoltas"
+		naval_base = 758
+		task_force = {
+			name = "Fragatas F100"
+			location = 758
+			ship = { name = "SPS Alvaro de Bazan (F101)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = SPR version_name = "Alvaro de Bazan Class" } } }
+			ship = { name = "SPS Almirante Juan de Borbon (F102)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = SPR version_name = "Alvaro de Bazan Class" } } }
+			ship = { name = "SPS Blas de Lezo (F103)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = SPR version_name = "Alvaro de Bazan Class" } } }
+			ship = { name = "SPS Mendez Nunez (F104)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = SPR version_name = "Alvaro de Bazan Class" } } }
+			ship = { name = "SPS Cristobal Colon (F105)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = SPR version_name = "Alvaro de Bazan Class" } } }
+		}
+	}
+
+	## Flotilla de Submarinos y Patrulleros (Cartagena) ##
+	fleet = {
+		name = "Flotilla de Submarinos"
+		naval_base = 6906
+		task_force = {
+			name = "Escuadrilla de Submarinos"
+			location = 6906
+			ship = { name = "SPS Isaac Peral (S81)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = SPR version_name = "Isaac Peral Class" } } }
+		}
+		task_force = {
+			name = "Buques de Acción Marítima"
+			location = 6906
+			ship = { name = "SPS Meteoro (P41)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = SPR version_name = "Meteoro Class" } } }
+			ship = { name = "SPS Rayo (P42)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = SPR version_name = "Meteoro Class" } } }
+			ship = { name = "SPS Relampago (P43)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = SPR version_name = "Meteoro Class" } } }
+			ship = { name = "SPS Tornado (P44)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = SPR version_name = "Meteoro Class" } } }
+			ship = { name = "SPS Audaz (P45)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = SPR version_name = "Meteoro Class" } } }
+			ship = { name = "SPS Furor (P46)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { corvette_hull_2 = { amount = 1 owner = SPR version_name = "Meteoro Class" } } }
+		}
 	}
 }
 
@@ -189,5 +246,48 @@ instant_effect = {
 		type = infantry_weapons5
 		amount = 3000
 		producer = SPR
+	}
+}
+
+### Ejército del Aire ###
+air_wings = {
+	## Andalucía (Morón) ##
+	93 = {
+		medium_plane_fighter_airframe_2 = { owner = "SPR" amount = 36 version_name = "Eurofighter Typhoon" }
+		name = "Ala 11"
+		start_experience_factor = 0.6
+	}
+	93 = {
+		large_plane_maritime_patrol_airframe_1 = { owner = "SPR" creator = "USA" amount = 5 version_name = "P-3M Orion" }
+		name = "Grupo 22"
+		start_experience_factor = 0.55
+	}
+	## Castilla-La Mancha (Albacete/Los Llanos) ##
+	970 = {
+		medium_plane_fighter_airframe_2 = { owner = "SPR" amount = 37 version_name = "Eurofighter Typhoon" }
+		name = "Ala 14"
+		start_experience_factor = 0.6
+	}
+	## Madrid (Torrejón) ##
+	91 = {
+		medium_plane_airframe_2 = { owner = "SPR" creator = "USA" amount = 30 version_name = "EF-18A/B+ Hornet" }
+		name = "Ala 12"
+		start_experience_factor = 0.55
+	}
+	## Aragón (Zaragoza) ##
+	87 = {
+		medium_plane_airframe_2 = { owner = "SPR" creator = "USA" amount = 30 version_name = "EF-18A/B+ Hornet" }
+		name = "Ala 15"
+		start_experience_factor = 0.55
+	}
+	87 = {
+		large_plane_air_transport_airframe_2 = { owner = "SPR" amount = 14 version_name = "A400M Atlas" }
+		name = "31a Escuadrón de Transporte"
+		start_experience_factor = 0.6
+	}
+	87 = {
+		large_plane_air_transport_airframe_1 = { owner = "SPR" creator = "USA" amount = 7 version_name = "C-130H Hercules" }
+		name = "Ala 31 - Transporte"
+		start_experience_factor = 0.55
 	}
 }

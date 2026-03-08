@@ -1770,4 +1770,23 @@ capital = 615
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_JAP_active_defense
+	complete_national_focus = MD2026_JAP_constitutional_reform
+	complete_national_focus = MD2026_JAP_indo_pacific
+	complete_national_focus = MD2026_JAP_economic_revitalization
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = JAP_bushido
+	complete_national_focus = JAP_economic_reform
+	complete_national_focus = JAP_finish_nishiseto
+	complete_national_focus = JAP_air_force_focus
+	complete_national_focus = JAP_continental_campaigns
+	complete_national_focus = JAP_develop_honshu
+	complete_national_focus = JAP_invest_in_toyota
+	complete_national_focus = JAP_national_renewal
+	complete_national_focus = JAP_new_trade_policy
+	complete_national_focus = JAP_ocean_campaigns
+	complete_national_focus = JAP_southern_expressways
 }

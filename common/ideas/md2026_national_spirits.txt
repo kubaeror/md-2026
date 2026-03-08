@@ -27,11 +27,12 @@ ideas = {
 				has_country_flag = md2026_sov_demobilized
 			}
 			modifier = {
-				conscription = 0.05
+				conscription = 0.03
 				consumer_goods_factor = -0.10
 				army_attack_factor = 0.15
 				army_morale_factor = 0.10
-				stability_factor = -0.05
+				stability_factor = -0.10
+				political_power_factor = -0.10
 				production_speed_arms_factory_factor = 0.10
 			}
 		}
@@ -118,18 +119,19 @@ ideas = {
 			allowed = { original_tag = CHI }
 			allowed_civil_war = { always = yes }
 			modifier = {
-				experience_gain_army = 0.01
-				experience_gain_navy = 0.01
-				experience_gain_air = 0.01
-				army_attack_factor = 0.05
+				experience_gain_army = 0.02
+				experience_gain_navy = 0.02
+				experience_gain_air = 0.02
+				army_attack_factor = 0.10
 				production_speed_arms_factory_factor = 0.05
+				production_factory_max_efficiency_factor = -0.05
 			}
 		}
 
 		### GERMANY ###
 
 		md2026_ger_zeitenwende = {
-			picture = defense
+			picture = modernized_army
 			allowed = { original_tag = GER }
 			allowed_civil_war = { always = yes }
 			cancel = {
@@ -153,10 +155,11 @@ ideas = {
 			allowed = { original_tag = ENG }
 			allowed_civil_war = { always = yes }
 			modifier = {
-				trade_opinion_factor = -0.05
-				stability_factor = 0.03
+				trade_opinion_factor = -0.10
+				stability_factor = 0.05
 				drift_defence_factor = 0.05
-				political_power_factor = -0.03
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.03
 			}
 		}
 
@@ -172,7 +175,7 @@ ideas = {
 			modifier = {
 				army_defence_factor = 0.20
 				war_support_factor = 0.10
-				stability_factor = -0.15
+				stability_factor = -0.10
 				conscription = 0.02
 				consumer_goods_factor = 0.05
 				political_power_factor = -0.10
@@ -220,12 +223,12 @@ ideas = {
 			allowed = { original_tag = NKO }
 			allowed_civil_war = { always = yes }
 			modifier = {
-				trade_opinion_factor = -0.50
+				trade_opinion_factor = -0.40
 				conscription = 0.05
 				army_attack_factor = 0.20
 				consumer_goods_factor = 0.15
 				stability_factor = -0.10
-				production_factory_max_efficiency_factor = -0.30
+				production_factory_max_efficiency_factor = -0.20
 			}
 		}
 
@@ -261,7 +264,7 @@ ideas = {
 		### JAPAN (Focus Tree Rewards) ###
 
 		md2026_jap_article_9_reform = {
-			picture = defense
+			picture = modernized_army
 			allowed = { original_tag = JAP }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -287,7 +290,7 @@ ideas = {
 		### TURKEY (Focus Tree Rewards) ###
 
 		md2026_tur_defense_industry = {
-			picture = production
+			picture = generic_goods
 			allowed = { original_tag = TUR }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -301,7 +304,7 @@ ideas = {
 		### BRAZIL (Focus Tree Rewards) ###
 
 		md2026_bra_green_economy = {
-			picture = green_energy
+			picture = economic_road_idea
 			allowed = { original_tag = BRA }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -323,6 +326,7 @@ ideas = {
 				army_attack_factor = 0.10
 				experience_gain_army = 0.02
 				research_speed_factor = 0.03
+				consumer_goods_factor = 0.03
 			}
 		}
 
@@ -335,8 +339,7 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = 0.15
 				consumer_goods_factor = -0.05
-				stability_factor = 0.05
-				political_power_factor = 0.05
+				stability_factor = -0.03
 			}
 		}
 
@@ -352,13 +355,14 @@ ideas = {
 				conscription = 0.01
 				war_support_factor = 0.10
 				stability_factor = 0.03
+				consumer_goods_factor = 0.05
 			}
 		}
 
 		### FRANCE ###
 
 		md2026_fra_european_defense_leader = {
-			picture = defense
+			picture = modernized_army
 			allowed = { original_tag = FRA }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -433,7 +437,7 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			modifier = {
 				stability_factor = -0.10
-				political_power_factor = -0.15
+				political_power_factor = -0.10
 				war_support_factor = -0.05
 				consumer_goods_factor = 0.05
 			}
@@ -445,7 +449,8 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			modifier = {
 				war_support_factor = 0.10
-				army_defence_factor = 0.05
+				army_defence_factor = 0.10
+				stability_factor = 0.05
 				consumer_goods_factor = 0.03
 			}
 		}
@@ -461,6 +466,7 @@ ideas = {
 				research_speed_factor = 0.05
 				stability_factor = 0.05
 				industrial_capacity_factory = 0.10
+				consumer_goods_factor = 0.03
 			}
 		}
 
@@ -479,7 +485,7 @@ ideas = {
 		### AUSTRALIA ###
 
 		md2026_ast_aukus_partner = {
-			picture = defense
+			picture = NATO_member
 			allowed = { original_tag = AST }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -520,7 +526,7 @@ ideas = {
 		### FINLAND ###
 
 		md2026_fin_new_nato_member = {
-			picture = defense
+			picture = NATO_member
 			allowed = { original_tag = FIN }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -534,7 +540,7 @@ ideas = {
 		### SWEDEN ###
 
 		md2026_swe_new_nato_member = {
-			picture = defense
+			picture = NATO_member
 			allowed = { original_tag = SWE }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -552,9 +558,9 @@ ideas = {
 			allowed = { original_tag = GRE }
 			allowed_civil_war = { always = yes }
 			modifier = {
-				stability_factor = 0.03
-				consumer_goods_factor = -0.03
-				production_speed_buildings_factor = 0.05
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
 			}
 		}
 
@@ -579,11 +585,12 @@ ideas = {
 			allowed = { original_tag = BRM }
 			allowed_civil_war = { always = yes }
 			modifier = {
-				stability_factor = -0.20
+				stability_factor = -0.15
 				political_power_factor = -0.15
 				war_support_factor = -0.10
 				consumer_goods_factor = 0.10
 				industrial_capacity_factory = -0.15
+				conscription = 0.01
 			}
 		}
 
@@ -597,8 +604,9 @@ ideas = {
 				stability_factor = -0.15
 				political_power_factor = -0.10
 				consumer_goods_factor = 0.10
-				production_speed_buildings_factor = -0.20
+				production_speed_buildings_factor = -0.10
 				war_support_factor = 0.10
+				conscription = 0.005
 			}
 		}
 
@@ -656,6 +664,433 @@ ideas = {
 				political_power_factor = -0.05
 				democratic_drift = 0.03
 				consumer_goods_factor = -0.03
+			}
+		}
+
+		### JAPAN ###
+
+		md2026_jap_demographic_crisis = {
+			picture = population
+			allowed = { original_tag = JAP }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				conscription = -0.01
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.05
+				monthly_population = -0.10
+			}
+		}
+
+		### SOUTH KOREA ###
+
+		md2026_kor_political_crisis = {
+			picture = political_violence
+			allowed = { original_tag = KOR }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				has_country_flag = md2026_kor_crisis_resolved
+			}
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = -0.15
+				war_support_factor = -0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		### SAUDI ARABIA ###
+
+		md2026_sau_vision_2030 = {
+			picture = economic_increase
+			allowed = { original_tag = SAU }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.20
+				consumer_goods_factor = -0.05
+				stability_factor = -0.05
+				production_speed_industrial_complex_factor = 0.10
+				research_speed_factor = 0.03
+			}
+		}
+
+		### SUDAN ###
+
+		md2026_sud_civil_war = {
+			picture = political_violence
+			allowed = { original_tag = SUD }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				has_country_flag = md2026_sud_peace
+			}
+			modifier = {
+				stability_factor = -0.20
+				political_power_factor = -0.20
+				war_support_factor = -0.10
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.20
+				conscription = 0.02
+			}
+		}
+
+		### YEMEN ###
+
+		md2026_yem_houthi_division = {
+			picture = political_violence
+			allowed = { original_tag = YEM }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.25
+				political_power_factor = -0.20
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.15
+				war_support_factor = 0.10
+			}
+		}
+
+		### INDIA ###
+
+		md2026_raj_hindu_nationalism = {
+			picture = political_establishment
+			allowed = { original_tag = RAJ }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				NOT = { has_government = communism }
+			}
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = -0.05
+				drift_defence_factor = 0.10
+				war_support_factor = 0.05
+				conscription = 0.005
+			}
+		}
+
+		md2026_raj_digital_india = {
+			picture = electronic_warfare
+			allowed = { original_tag = RAJ }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				research_speed_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.03
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		### RUSSIA (additional) ###
+
+		md2026_sov_shadow_economy = {
+			picture = economic_increase
+			allowed = { original_tag = SOV }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = -0.15
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+				political_power_factor = -0.05
+			}
+		}
+
+		### ETHIOPIA ###
+
+		md2026_eth_post_tigray = {
+			picture = political_censorship
+			allowed = { original_tag = ETH }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.05
+				war_support_factor = -0.05
+			}
+		}
+
+		### UAE ###
+
+		md2026_uae_economic_diversification = {
+			picture = economic_boom
+			allowed = { original_tag = UAE }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+				trade_opinion_factor = 0.10
+			}
+		}
+
+		### HUNGARY ###
+
+		md2026_hun_illiberal_democracy = {
+			picture = political_censorship
+			allowed = { original_tag = HUN }
+			allowed_civil_war = { always = yes }
+			cancel = {
+				NOT = { has_government = nationalist }
+			}
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = -0.05
+				democratic_drift = -0.05
+				drift_defence_factor = 0.15
+				trade_opinion_factor = -0.10
+			}
+		}
+
+		###################################
+		### SYSTEMIC SPIRITS ###
+		###################################
+
+		### War Exhaustion (tiered, added by on_actions monthly tick) ###
+
+		md2026_war_exhaustion_1 = {
+			picture = army_problems
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.03
+				war_support_factor = -0.05
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		md2026_war_exhaustion_2 = {
+			picture = army_problems
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.08
+				war_support_factor = -0.12
+				political_power_factor = -0.10
+				consumer_goods_factor = 0.05
+				army_morale_factor = -0.05
+				conscription = -0.005
+			}
+		}
+
+		md2026_war_exhaustion_3 = {
+			picture = army_problems
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.20
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.10
+				army_morale_factor = -0.10
+				army_attack_factor = -0.05
+				conscription = -0.01
+			}
+		}
+
+		### Nuclear Deterrence ###
+
+		md2026_nuclear_deterrent = {
+			picture = rocket
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.10
+				army_defence_factor = 0.05
+				stability_factor = 0.03
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		### NATO Article 5 Active ###
+
+		md2026_nato_article5_active = {
+			picture = NATO_member
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = 0.10
+				army_defence_factor = 0.15
+				war_support_factor = 0.15
+				stability_factor = 0.05
+				conscription = 0.01
+			}
+		}
+
+		### Sanctions Tiers ###
+
+		md2026_sanctions_tier_mild = {
+			picture = embargo
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = -0.10
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		md2026_sanctions_tier_moderate = {
+			picture = embargo
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = -0.20
+				industrial_capacity_factory = -0.05
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+
+		md2026_sanctions_tier_severe = {
+			picture = embargo
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = -0.35
+				industrial_capacity_factory = -0.15
+				consumer_goods_factor = 0.10
+				production_factory_max_efficiency_factor = -0.10
+				research_speed_factor = -0.05
+			}
+		}
+
+		md2026_sanctions_tier_total = {
+			picture = embargo
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = -0.50
+				industrial_capacity_factory = -0.25
+				consumer_goods_factor = 0.15
+				production_factory_max_efficiency_factor = -0.20
+				research_speed_factor = -0.10
+				stability_factor = -0.05
+			}
+		}
+
+		### Post-war reconstruction ###
+
+		md2026_reconstruction_effort = {
+			picture = economic_road_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_speed_infrastructure_factor = 0.20
+				stability_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		### BRICS Development Bank ###
+
+		md2026_brics_development_bank = {
+			picture = bricks_bank
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.03
+				trade_opinion_factor = 0.05
+			}
+		}
+
+		### USA Focus Spirits ###
+
+		md2026_usa_labor_shortage = {
+			picture = strike
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				local_resources_factor = -0.05
+				consumer_goods_factor = 0.03
+				stability_factor = -0.03
+			}
+		}
+
+		md2026_usa_trade_war_tariffs = {
+			picture = GENERIC_protectionism
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = -0.25
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.03
+			}
+		}
+
+		### Russia Focus Spirits ###
+
+		md2026_sov_war_economy = {
+			picture = central_management
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				consumer_goods_factor = 0.05
+				war_support_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+
+		md2026_sov_sanctions_evasion = {
+			picture = entrepot_trade
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				consumer_goods_factor = -0.03
+				trade_opinion_factor = 0.10
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+
+		### Ukraine Focus Spirits ###
+
+		md2026_ukr_resistance = {
+			picture = volunteer_defenders
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_defence_factor = 0.10
+				war_support_factor = 0.10
+				army_morale_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		md2026_ukr_nato_candidate = {
+			picture = NATO_member
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_org_factor = 0.05
+				political_power_factor = 0.10
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		### China Focus Spirits ###
+
+		md2026_chi_national_rejuvenation = {
+			picture = national_mobilization
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				research_speed_factor = 0.05
+				stability_factor = 0.03
+				political_power_factor = 0.05
+			}
+		}
+
+		md2026_chi_tech_self_reliance = {
+			picture = electronic_warfare
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				research_speed_factor = 0.08
+				production_speed_industrial_complex_factor = 0.05
+				consumer_goods_factor = 0.03
 			}
 		}
 

@@ -1122,5 +1122,37 @@
 	add_ideas = {
 		md2026_can_nato_arctic
 	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_CAN_northern_shield
+	complete_national_focus = MD2026_CAN_arctic_sovereignty
+	complete_national_focus = MD2026_CAN_northwest_passage
+	complete_national_focus = MD2026_CAN_arctic_resources
+	complete_national_focus = MD2026_CAN_us_trade_tensions
+	complete_national_focus = MD2026_CAN_defense_modernization
+	complete_national_focus = MD2026_CAN_norad_renewal
+	complete_national_focus = MD2026_CAN_navy_expansion
+	complete_national_focus = MD2026_CAN_indo_pacific
+	complete_national_focus = MD2026_CAN_cptpp_engagement
+	complete_national_focus = MD2026_CAN_pacific_security
+	complete_national_focus = MD2026_CAN_domestic_agenda
+	complete_national_focus = MD2026_CAN_reconciliation
+	complete_national_focus = MD2026_CAN_immigration_reform
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = CAN_Canadian_Armed_Forces
+	complete_national_focus = CAN_Canadian_Economy
+	complete_national_focus = CAN_Focus_On_Political_Spectrum
+	complete_national_focus = CAN_Canadian_Infrastructure
+	complete_national_focus = CAN_Heavy_Industries_Focus
+	complete_national_focus = CAN_Prospects_Oil
+	complete_national_focus = CAN_mining
+	complete_national_focus = CAN_Focus_On_Canada
+	complete_national_focus = CAN_Ministry_Of_Culture
+	complete_national_focus = CAN_economy
+	complete_national_focus = CAN_international_wargames
+	complete_national_focus = CAN_navy
+	complete_national_focus = CAN_rcaf
+	complete_national_focus = CAN_the_infantry
 }
 

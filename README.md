@@ -14,12 +14,14 @@ This mod updates the world state to reflect geopolitical reality as of January 2
 - **Active conflicts** — Russo-Ukrainian War, Sudan Civil War, Myanmar Civil War, Yemen division
 - **32-member NATO**, CSTO, EU (27), BRICS+, AUKUS, SCO, Abraham Accords, Quad
 - **5-tier technology system** with DLC-aware gating (No Step Back, By Blood Alone, Gotterdammerung)
-- **13 shared focus trees** — USA, Russia, Ukraine, China, Germany, India, Japan, Turkey, Brazil, Israel, South Korea, Saudi Arabia, Poland
+- **23 shared focus trees** — USA, Russia, Ukraine, China, Germany, India, Japan, Turkey, Brazil, Israel, South Korea, Saudi Arabia, Poland + France, UK, Iran, Italy, North Korea, Canada, Australia, Taiwan, Egypt, Syria
+- **260 new focus nodes** across 10 expanded country trees (26 focuses each with 5 branches, mutually exclusive paths, and capstone focuses)
+- **210 pre-completed focuses** across 23 countries reflecting real-world events already occurred by Jan 2026
 - **~75 events** across 11 event chains — elections, NATO-Russia tensions, Taiwan crisis, BRICS expansion, Middle East, migration, climate, tech revolution, space race, demographics
-- **45 national spirits** (15 base + 22 expansion + 8 focus rewards) for major and regional powers
+- **45+ national spirits** (15 base + 22 expansion + 8 focus rewards) for major and regional powers
 - **20 strategic decisions** across 5 categories (sanctions, NATO, military, geopolitics, economy)
-- **65 OOB files** with optimized unit templates balanced for gameplay
-- **927 localisation keys** (English)
+- **65 OOB files** with real-world unit names, ~600 named ships across 40+ navies, 200+ air wings with accurate aircraft types and squadron designations, carrier air wings for 5 carrier nations, and `creator` tags for all imported equipment
+- **~1,450 localisation keys** (English)
 
 ## Requirements
 
@@ -55,14 +57,16 @@ The mod works without any DLC, but the technology system includes specialized br
 
 ## Countries
 
-### Tier A — Major Powers (full update)
+### Tier A — Major Powers (full update + focus trees)
 USA, Russia, China, UK, France, Germany, India, Japan, Turkey, Iran, Brazil, Ukraine
 
-### Tier B — NATO + Regional (full update)
-Poland, Italy, Spain, Canada, Romania, Netherlands, Belgium, Norway, Denmark, Portugal, Czechia, Greece, Hungary, Iceland, Luxembourg, Bulgaria, Croatia, Albania, Lithuania, Latvia, Estonia, Slovakia, Slovenia, Montenegro, North Macedonia, Finland, Sweden, Israel, Saudi Arabia, North Korea, South Korea, Australia
+### Tier B — NATO + Regional (full update, select countries with focus trees)
+Poland, Italy, Canada, South Korea, Saudi Arabia, Israel, North Korea, Australia — with focus trees
+Spain, Romania, Netherlands, Belgium, Norway, Denmark, Portugal, Czechia, Greece, Hungary, Iceland, Luxembourg, Bulgaria, Croatia, Albania, Lithuania, Latvia, Estonia, Slovakia, Slovenia, Montenegro, North Macedonia, Finland, Sweden
 
-### Tier C — Conflict Zones (partial update)
-Syria, Egypt, Myanmar, Sudan, Yemen, UAE, Ethiopia, South Africa, Taiwan
+### Tier C — Conflict Zones (partial update, select countries with focus trees)
+Taiwan, Egypt, Syria — with focus trees
+Myanmar, Sudan, Yemen, UAE, Ethiopia, South Africa
 
 ### Tier D — Minimal Update (leader + ideology)
 Belarus, Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan, Armenia, Georgia, Moldova, Serbia, Bosnia, Kosovo, Pakistan, Afghanistan
@@ -77,7 +81,7 @@ md-2026/
 │   ├── characters/          # Leader definitions for 66 countries
 │   ├── decisions/           # 20 strategic decisions + 5 categories
 │   ├── ideas/               # National spirits + decision reward ideas
-│   ├── national_focus/      # 13 shared focus trees + 13 base tree copies
+│   ├── national_focus/      # 23 shared focus trees + 22 base tree copies
 │   ├── on_actions/          # Startup event triggers
 │   ├── opinion_modifiers/   # Custom opinion modifiers
 │   ├── scripted_effects/    # Startup effects + technology tier system
@@ -88,7 +92,7 @@ md-2026/
 │   ├── states/              # 8 updated state files
 │   └── units/               # 65 OOB files
 └── localisation/
-    └── english/             # 927 localisation keys
+    └── english/             # ~1,450 localisation keys
 ```
 
 ## How It Works

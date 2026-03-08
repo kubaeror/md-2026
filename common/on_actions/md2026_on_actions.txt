@@ -1,16 +1,266 @@
-# Millennium Dawn 2026 Rework - On Actions
-# on_startup handler for 2026 bookmark initialization
+### Millennium Dawn 2026 - On Actions ###
+# Hooks into game events for initialization, war, peace, monthly ticks
 
 on_actions = {
+
+	### GAME STARTUP ###
 	on_startup = {
 		effect = {
-			# Only run for 2026 bookmark
+			# Initialize mod only once, only for 2026 bookmark
 			if = {
 				limit = {
 					date > 2025.12.31
+					NOT = { has_global_flag = md2026_initialized }
 				}
-				# Set global flag to indicate 2026 bookmark is active
-				set_global_flag = md2026_active
+				set_global_flag = md2026_initialized
+
+				# Fire intro news event
+				every_country = {
+					limit = { is_ai = no }
+					news_event = { id = md2026_system.1 hours = 1 }
+				}
+
+				# Set NATO member flags for all current members
+				every_country = {
+					limit = { is_in_faction_with = USA }
+					set_country_flag = md2026_nato_member
+				}
+
+				# Set BRICS member flags
+				every_country = {
+					limit = {
+						OR = {
+							tag = CHI
+							tag = SOV
+							tag = RAJ
+							tag = BRA
+							tag = SAF
+							tag = EGY
+							tag = ETH
+							tag = PER
+							tag = UAE
+							tag = SAU
+						}
+					}
+					set_country_flag = md2026_brics_member
+				}
+
+				# Set nuclear power flags
+				every_country = {
+					limit = {
+						OR = {
+							tag = USA
+							tag = SOV
+							tag = CHI
+							tag = FRA
+							tag = ENG
+							tag = RAJ
+							tag = PAK
+							tag = ISR
+							tag = NKO
+						}
+					}
+					set_country_flag = md2026_nuclear_power
+				}
+			}
+		}
+	}
+
+	### MONTHLY TICK ###
+	on_monthly = {
+		effect = {
+			# War exhaustion accumulation for active wars (only 2026 bookmark)
+			if = {
+				limit = { has_global_flag = md2026_initialized }
+
+				# Russia-Ukraine war exhaustion
+				SOV = {
+					if = {
+						limit = {
+							has_war_with = UKR
+							NOT = { has_idea = md2026_war_exhaustion_3 }
+						}
+						if = {
+							limit = {
+								has_idea = md2026_war_exhaustion_2
+								check_variable = { md2026_war_months > 36 }
+							}
+							swap_ideas = {
+								remove_idea = md2026_war_exhaustion_2
+								add_idea = md2026_war_exhaustion_3
+							}
+						}
+						if = {
+							limit = {
+								has_idea = md2026_war_exhaustion_1
+								NOT = { has_idea = md2026_war_exhaustion_2 }
+								check_variable = { md2026_war_months > 18 }
+							}
+							swap_ideas = {
+								remove_idea = md2026_war_exhaustion_1
+								add_idea = md2026_war_exhaustion_2
+							}
+						}
+						if = {
+							limit = {
+								NOT = { has_idea = md2026_war_exhaustion_1 }
+								NOT = { has_idea = md2026_war_exhaustion_2 }
+								NOT = { has_idea = md2026_war_exhaustion_3 }
+							}
+						add_ideas = md2026_war_exhaustion_1
+						set_variable = { md2026_war_months = 0 }
+					}
+					add_to_variable = { md2026_war_months = 1 }
+				}
+			}
+
+			# Ukraine war exhaustion
+			UKR = {
+				if = {
+					limit = {
+						has_war_with = SOV
+						NOT = { has_idea = md2026_war_exhaustion_3 }
+					}
+					if = {
+						limit = {
+							has_idea = md2026_war_exhaustion_2
+							check_variable = { md2026_war_months > 36 }
+						}
+						swap_ideas = {
+							remove_idea = md2026_war_exhaustion_2
+							add_idea = md2026_war_exhaustion_3
+						}
+					}
+					if = {
+						limit = {
+							has_idea = md2026_war_exhaustion_1
+							NOT = { has_idea = md2026_war_exhaustion_2 }
+							check_variable = { md2026_war_months > 18 }
+						}
+						swap_ideas = {
+							remove_idea = md2026_war_exhaustion_1
+							add_idea = md2026_war_exhaustion_2
+						}
+					}
+					if = {
+						limit = {
+							NOT = { has_idea = md2026_war_exhaustion_1 }
+							NOT = { has_idea = md2026_war_exhaustion_2 }
+							NOT = { has_idea = md2026_war_exhaustion_3 }
+						}
+						add_ideas = md2026_war_exhaustion_1
+							set_variable = { md2026_war_months = 0 }
+						}
+						add_to_variable = { md2026_war_months = 1 }
+					}
+				}
+			}
+		}
+	}
+
+	### WAR DECLARATION ###
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = { has_global_flag = md2026_initialized }
+
+				# NATO Article 5 check - if defender is NATO member
+				FROM = {
+					if = {
+						limit = {
+							has_country_flag = md2026_nato_member
+							NOT = { tag = ROOT }
+						}
+						# Alert NATO leader
+						USA = {
+							country_event = { id = md2026_nato_article5.1 days = 1 }
+						}
+						set_global_flag = md2026_article5_invoked
+					}
+				}
+			}
+		}
+	}
+
+	### PEACE CONFERENCE ENDED ###
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = { has_global_flag = md2026_initialized }
+
+				# Remove war mobilization spirits after peace
+				SOV = {
+					if = {
+						limit = {
+							NOT = { has_war_with = UKR }
+							has_idea = md2026_sov_war_mobilization
+						}
+						set_country_flag = md2026_sov_demobilized
+					}
+				}
+				UKR = {
+					if = {
+						limit = {
+							NOT = { has_war_with = SOV }
+							has_idea = md2026_ukr_defensive_mobilization
+						}
+						set_country_flag = md2026_ukr_demobilized
+					}
+				}
+
+				# Remove war exhaustion
+				every_country = {
+					limit = {
+						has_war = no
+						OR = {
+							has_idea = md2026_war_exhaustion_1
+							has_idea = md2026_war_exhaustion_2
+							has_idea = md2026_war_exhaustion_3
+						}
+					}
+					remove_ideas = md2026_war_exhaustion_1
+					remove_ideas = md2026_war_exhaustion_2
+					remove_ideas = md2026_war_exhaustion_3
+				}
+			}
+		}
+	}
+
+	### GOVERNMENT CHANGE ###
+	on_government_change = {
+		effect = {
+			if = {
+				limit = { has_global_flag = md2026_initialized }
+
+				# USA: Remove America First if no longer nationalist
+				if = {
+					limit = {
+						tag = USA
+						NOT = { has_government = nationalist }
+						has_idea = md2026_usa_america_first
+					}
+					remove_ideas = md2026_usa_america_first
+				}
+
+				# Turkey: Remove autocracy spirit if government changes
+				if = {
+					limit = {
+						tag = TUR
+						NOT = { has_government = communism }
+						has_idea = md2026_tur_erdogan_autocracy
+					}
+					remove_ideas = md2026_tur_erdogan_autocracy
+				}
+
+				# Italy: Remove right-wing spirit if government changes
+				if = {
+					limit = {
+						tag = ITA
+						NOT = { has_government = nationalist }
+						has_idea = md2026_ita_right_wing_government
+					}
+					remove_ideas = md2026_ita_right_wing_government
+				}
 			}
 		}
 	}

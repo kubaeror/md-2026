@@ -2,7 +2,7 @@
 # North Korea 2026 — Large but outdated army, Soviet/Chinese equipment
 
 division_template = {
-	name = "Armored Division 2026"
+	name = "Armored Division"
 	regiments = {
 		armor_Bat = { x = 0 y = 0 }
 		armor_Bat = { x = 0 y = 1 }
@@ -19,7 +19,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Mechanized Division 2026"
+	name = "Mechanized Division"
 	regiments = {
 		Mech_Inf_Bat = { x = 0 y = 0 }
 		Mech_Inf_Bat = { x = 0 y = 1 }
@@ -36,7 +36,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Infantry Division 2026"
+	name = "Infantry Division"
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
@@ -55,7 +55,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Artillery Division 2026"
+	name = "Artillery Division"
 	regiments = {
 		SP_Arty_Bat = { x = 0 y = 0 }
 		SP_Arty_Bat = { x = 0 y = 1 }
@@ -71,7 +71,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Light Infantry Brigade 2026"
+	name = "Light Infantry Brigade"
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
@@ -85,7 +85,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Sniper Brigade 2026"
+	name = "Sniper Brigade"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -109,14 +109,14 @@ units = {
 	division = {
 		name = "1st Corps - 1st Infantry Division"
 		location = 3187
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.6
 	}
 	division = {
 		name = "1st Corps - 3rd Infantry Division"
 		location = 3187
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.6
 	}
@@ -124,14 +124,14 @@ units = {
 	division = {
 		name = "2nd Corps - 6th Infantry Division"
 		location = 9981
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.6
 	}
 	division = {
 		name = "2nd Corps - 7th Infantry Division"
 		location = 9981
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.6
 	}
@@ -139,14 +139,14 @@ units = {
 	division = {
 		name = "4th Corps - 4th Infantry Division"
 		location = 3173
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.6
 	}
 	division = {
 		name = "4th Corps - 26th Infantry Division"
 		location = 3173
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.6
 	}
@@ -154,14 +154,14 @@ units = {
 	division = {
 		name = "5th Corps - 12th Infantry Division"
 		location = 12040
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.6
 	}
 	division = {
 		name = "5th Corps - 32nd Infantry Division"
 		location = 12040
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.6
 	}
@@ -172,7 +172,7 @@ units = {
 	division = {
 		name = "806th Mechanized Corps"
 		location = 10083
-		division_template = "Mechanized Division 2026"
+		division_template = "Mechanized Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
 	}
@@ -180,7 +180,7 @@ units = {
 	division = {
 		name = "815th Mechanized Corps"
 		location = 1003
-		division_template = "Mechanized Division 2026"
+		division_template = "Mechanized Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
 	}
@@ -188,7 +188,7 @@ units = {
 	division = {
 		name = "820th Armored Corps"
 		location = 3176
-		division_template = "Armored Division 2026"
+		division_template = "Armored Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
 	}
@@ -196,7 +196,7 @@ units = {
 	division = {
 		name = "108th Mechanized Corps"
 		location = 4052
-		division_template = "Mechanized Division 2026"
+		division_template = "Mechanized Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
 	}
@@ -207,28 +207,28 @@ units = {
 	division = {
 		name = "8th Corps - Infantry Division"
 		location = 3981
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
 	}
 	division = {
 		name = "9th Corps - Infantry Division"
 		location = 9790
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
 	}
 	division = {
 		name = "10th Corps - Infantry Division"
 		location = 6928
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
 	}
 	division = {
 		name = "12th Corps - Infantry Division"
 		location = 912
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
 	}
@@ -239,7 +239,7 @@ units = {
 	division = {
 		name = "Pyongyang Defence Artillery Division"
 		location = 6822
-		division_template = "Artillery Division 2026"
+		division_template = "Artillery Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.65
 	}
@@ -247,7 +247,7 @@ units = {
 	division = {
 		name = "620th Artillery Division"
 		location = 3187
-		division_template = "Artillery Division 2026"
+		division_template = "Artillery Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.65
 	}
@@ -258,14 +258,14 @@ units = {
 	division = {
 		name = "Special Operations Force - Sniper Bde 1"
 		location = 3191
-		division_template = "Sniper Brigade 2026"
+		division_template = "Sniper Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.65
 	}
 	division = {
 		name = "Special Operations Force - Sniper Bde 2"
 		location = 6963
-		division_template = "Sniper Brigade 2026"
+		division_template = "Sniper Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.65
 	}
@@ -273,16 +273,208 @@ units = {
 	division = {
 		name = "Light Infantry Bde - West"
 		location = 3189
-		division_template = "Light Infantry Brigade 2026"
+		division_template = "Light Infantry Brigade"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.6
 	}
 	division = {
 		name = "Light Infantry Bde - East"
 		location = 848
-		division_template = "Light Infantry Brigade 2026"
+		division_template = "Light Infantry Brigade"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.6
+	}
+
+	##### Additional Front Line — DMZ #####
+	division = {
+		name = "1st Corps - 2nd Infantry Division"
+		location = 3187
+		division_template = "Infantry Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2nd Corps - 8th Infantry Division"
+		location = 9981
+		division_template = "Infantry Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "4th Corps - 5th Infantry Division"
+		location = 3173
+		division_template = "Infantry Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "5th Corps - 13th Infantry Division"
+		location = 12040
+		division_template = "Infantry Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "3rd Corps - 15th Infantry Division"
+		location = 3187
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name = "3rd Corps - 16th Infantry Division"
+		location = 3187
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.45
+	}
+
+	##### Additional Second Echelon #####
+	division = {
+		name = "425th Mechanized Corps"
+		location = 10083
+		division_template = "Mechanized Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "105th Armored Corps"
+		location = 3176
+		division_template = "Armored Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "810th Mechanized Corps"
+		location = 1003
+		division_template = "Mechanized Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "107th Mechanized Corps"
+		location = 4052
+		division_template = "Mechanized Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+
+	##### Additional Rear Echelon #####
+	division = {
+		name = "6th Corps - Infantry Division"
+		location = 3981
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "7th Corps - Infantry Division"
+		location = 9790
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "11th Corps - Infantry Division"
+		location = 6928
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "13th Corps - Infantry Division"
+		location = 912
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.4
+	}
+
+	##### Additional Artillery #####
+	division = {
+		name = "610th Artillery Division"
+		location = 9981
+		division_template = "Artillery Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "630th Artillery Division"
+		location = 3173
+		division_template = "Artillery Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+
+	##### Additional Special Forces #####
+	division = {
+		name = "Special Operations Force - Sniper Bde 3"
+		location = 6822
+		division_template = "Sniper Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "Light Infantry Bde - Central"
+		location = 6822
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+
+	##### Korean People's Navy #####
+
+	# East Sea Fleet (Sea of Japan)
+	fleet = {
+		name = "East Sea Fleet"
+		naval_base = 848
+		task_force = {
+			name = "East Sea Surface Group"
+			location = 848
+			ship = { name = "DPRK Najin (631)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.25 equipment = { frigate_hull_1 = { amount = 1 owner = NKO version_name = "Najin-class" } } }
+			ship = { name = "DPRK Sariwon-class PCC-1" definition = corvette start_experience_factor = 0.2 equipment = { corvette_hull_1 = { amount = 1 owner = NKO version_name = "Sariwon-class" } } }
+			ship = { name = "DPRK Sariwon-class PCC-2" definition = corvette start_experience_factor = 0.2 equipment = { corvette_hull_1 = { amount = 1 owner = NKO version_name = "Sariwon-class" } } }
+		}
+		task_force = {
+			name = "East Sea Submarine Group"
+			location = 6944
+			ship = { name = "DPRK Romeo-class SS-1" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-2" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-3" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-4" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-5" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-6" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-7" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-8" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-9" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-10" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+		}
+	}
+
+	# West Sea Fleet (Yellow Sea)
+	fleet = {
+		name = "West Sea Fleet"
+		naval_base = 3189
+		task_force = {
+			name = "West Sea Surface Group"
+			location = 3189
+			ship = { name = "DPRK Najin (632)" definition = frigate start_experience_factor = 0.25 equipment = { frigate_hull_1 = { amount = 1 owner = NKO version_name = "Najin-class" } } }
+			ship = { name = "DPRK Sariwon-class PCC-3" definition = corvette start_experience_factor = 0.2 equipment = { corvette_hull_1 = { amount = 1 owner = NKO version_name = "Sariwon-class" } } }
+			ship = { name = "DPRK Sariwon-class PCC-4" definition = corvette start_experience_factor = 0.2 equipment = { corvette_hull_1 = { amount = 1 owner = NKO version_name = "Sariwon-class" } } }
+		}
+		task_force = {
+			name = "West Sea Submarine Group"
+			location = 3189
+			ship = { name = "DPRK Romeo-class SS-11" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-12" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-13" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-14" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-15" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-16" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-17" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-18" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-19" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-20" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+		}
 	}
 }
 
@@ -291,5 +483,46 @@ instant_effect = {
 		type = infantry_weapons3
 		amount = 15000
 		producer = NKO
+	}
+}
+
+##### Korean People's Air Force #####
+
+air_wings = {
+	# 57th Air Regiment — MiG-29 (Pyongyang/Sunchon)
+	602 = {
+		small_plane_airframe_2 = { owner = "NKO" creator = "SOV" amount = 18 version_name = "MiG-29S Fulcrum" }
+		name = "57th Air Regiment"
+		start_experience_factor = 0.3
+	}
+	# Ground Attack Regiment — Su-25 (Pyongyang area)
+	602 = {
+		small_plane_cas_airframe_2 = { owner = "NKO" creator = "SOV" amount = 35 version_name = "Su-25K Frogfoot" }
+		name = "CAS Air Regiment"
+		start_experience_factor = 0.25
+	}
+	# Kangwon Air Regiment — MiG-23 (DMZ area)
+	1199 = {
+		small_plane_airframe_2 = { owner = "NKO" creator = "SOV" amount = 40 version_name = "MiG-23ML Flogger" }
+		name = "Kangwon Air Regiment"
+		start_experience_factor = 0.2
+	}
+	# Hamgyong Air Regiment — MiG-21 (East coast)
+	601 = {
+		small_plane_airframe_2 = { owner = "NKO" creator = "SOV" amount = 50 version_name = "MiG-21bis Fishbed" }
+		name = "Hamgyong Air Regiment"
+		start_experience_factor = 0.15
+	}
+	# Hwanghae Air Regiment — J-7 (West DMZ)
+	603 = {
+		small_plane_airframe_2 = { owner = "NKO" creator = "CHI" amount = 60 version_name = "Chengdu J-7II" }
+		name = "Hwanghae Air Regiment"
+		start_experience_factor = 0.15
+	}
+	# North Pyongan Air Regiment — J-6/J-7 (Rear)
+	1200 = {
+		small_plane_airframe_2 = { owner = "NKO" creator = "CHI" amount = 30 version_name = "Shenyang J-6" }
+		name = "North Pyongan Air Regiment"
+		start_experience_factor = 0.1
 	}
 }

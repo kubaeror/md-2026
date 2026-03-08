@@ -798,4 +798,44 @@ capital = 114
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_POL_eastern_shield
+	complete_national_focus = MD2026_POL_fortress_poland
+	complete_national_focus = MD2026_POL_army_modernization
+	complete_national_focus = MD2026_POL_eu_powerhouse
+	complete_national_focus = MD2026_POL_k2_tanks
+	complete_national_focus = MD2026_POL_patriot_batteries
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = POL_sily_zbrojne_rzeczypospolitej_polskiej
+	complete_national_focus = POL_revitalize_government
+	complete_national_focus = POL_foreign_friends
+	complete_national_focus = POL_begin_contruction_of_space_company
+	complete_national_focus = POL_missile_company
+	complete_national_focus = POL_csto_is_the_enemy
+	complete_national_focus = POL_platforma_obivatelska
+	complete_national_focus = POL_pravda_i_spravedlivost
+	complete_national_focus = POL_intervention_in_ukraine
+	complete_national_focus = POL_lithuania_and_belarus
+	complete_national_focus = POL_closeup_of_the_visegrad_group
+	complete_national_focus = POL_socialdemocracy
+	complete_national_focus = POL_betray_the_communists
+	complete_national_focus = POL_continue_anti_corrpution
+	complete_national_focus = POL_discussion_of_the_world_situation
+	complete_national_focus = POL_expansion_of_ukrainian_grain_imports
+	complete_national_focus = POL_ground_air_systems
+	complete_national_focus = POL_honor_lost_army
+	complete_national_focus = POL_improve_civil_administration
+	complete_national_focus = POL_intercontinental_missiles_prototypes
+	complete_national_focus = POL_passing_the_homeland_defense_act
+	complete_national_focus = POL_polish_german_highway
+	complete_national_focus = POL_polsa_grand_opening
+	complete_national_focus = POL_preparations_against_kaliningrad
+	complete_national_focus = POL_promote_eu_values
+	complete_national_focus = POL_promote_industrial_quality
+	complete_national_focus = POL_rail_baltica
+	complete_national_focus = POL_speak_against_russia
+	complete_national_focus = POL_stay_on_track
+	complete_national_focus = POL_wolyn_recognition
 }

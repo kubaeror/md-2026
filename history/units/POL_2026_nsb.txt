@@ -3,7 +3,7 @@
 # HIMARS MLRS, AW149/Black Hawk helos, Patriot SAM
 
 division_template = {
-	name = "Dywizja Zmechanizowana 2026"		# Mechanized Division
+	name = "Dywizja Zmechanizowana"		# Mechanized Division
 
 	regiments = {
 		Arm_Inf_Bat = { x = 0 y = 0 }
@@ -26,7 +26,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Dywizja Kawalerii Pancernej 2026"	# Armored Cavalry Division
+	name = "Dywizja Kawalerii Pancernej"	# Armored Cavalry Division
 
 	regiments = {
 		armor_Bat = { x = 0 y = 0 }
@@ -51,7 +51,7 @@ division_template = {
 	priority = 2
 }
 division_template = {
-	name = "Brygada Piechoty Gorskiej 2026"		# Mountain Infantry Brigade
+	name = "Brygada Piechoty Gorskiej"		# Mountain Infantry Brigade
 
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
@@ -65,7 +65,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Kawaleria Powietrzna 2026"			# Air Cavalry Brigade
+	name = "Kawaleria Powietrzna"			# Air Cavalry Brigade
 
 	regiments = {
 		L_Air_assault_Bat = { x = 0 y = 0 }
@@ -80,7 +80,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Brygada Desantowa 2026"				# Airborne Brigade
+	name = "Brygada Desantowa"				# Airborne Brigade
 
 	regiments = {
 		L_Air_Inf_Bat = { x = 0 y = 0 }
@@ -94,7 +94,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Wojska Specjalne 2026"				# Special Forces (GROM/JWK/AGAT/FORMOZA)
+	name = "Wojska Specjalne"				# Special Forces (GROM/JWK/AGAT/FORMOZA)
 
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
@@ -104,7 +104,7 @@ division_template = {
 	priority = 2
 }
 division_template = {
-	name = "Brygada WOT 2026"					# Territorial Defense Brigade
+	name = "Brygada WOT"					# Territorial Defense Brigade
 
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
@@ -123,7 +123,7 @@ units = {
 	division = {
 		name = "11. Lubuska Dywizja Kawalerii Pancernej"
 		location = 3438		#Zagan
-		division_template = "Dywizja Kawalerii Pancernej 2026"
+		division_template = "Dywizja Kawalerii Pancernej"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.75
 	}
@@ -132,7 +132,7 @@ units = {
 	division = {
 		name = "12. Szczecinska Dywizja Zmechanizowana"
 		location = 6282		#Szczecin
-		division_template = "Dywizja Zmechanizowana 2026"
+		division_template = "Dywizja Zmechanizowana"
 		start_experience_factor = 0.65
 		start_equipment_factor = 0.75
 	}
@@ -141,7 +141,7 @@ units = {
 	division = {
 		name = "16. Pomorska Dywizja Zmechanizowana"
 		location = 3380		#Elblag
-		division_template = "Dywizja Zmechanizowana 2026"
+		division_template = "Dywizja Zmechanizowana"
 		start_experience_factor = 0.65
 		start_equipment_factor = 0.75
 	}
@@ -150,7 +150,7 @@ units = {
 	division = {
 		name = "18. Dywizja Zmechanizowana"
 		location = 524		#Siedlce/Warsaw
-		division_template = "Dywizja Zmechanizowana 2026"
+		division_template = "Dywizja Zmechanizowana"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.7
 	}
@@ -159,7 +159,7 @@ units = {
 	division = {
 		name = "21. Brygada Strzelcow Podhalanskich"
 		location = 6499		#Rzeszow
-		division_template = "Brygada Piechoty Gorskiej 2026"
+		division_template = "Brygada Piechoty Gorskiej"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.7
 	}
@@ -168,7 +168,7 @@ units = {
 	division = {
 		name = "25. Brygada Kawalerii Powietrznej"
 		location = 9508		#Lodz/Tomaszow
-		division_template = "Kawaleria Powietrzna 2026"
+		division_template = "Kawaleria Powietrzna"
 		start_experience_factor = 0.65
 		start_equipment_factor = 0.7
 	}
@@ -177,7 +177,7 @@ units = {
 	division = {
 		name = "6. Brygada Powietrznodesantowa"
 		location = 9427		#Krakow
-		division_template = "Brygada Desantowa 2026"
+		division_template = "Brygada Desantowa"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.7
 	}
@@ -186,7 +186,7 @@ units = {
 	division = {
 		name = "Wojska Specjalne RP"
 		location = 3544		#Warsaw
-		division_template = "Wojska Specjalne 2026"
+		division_template = "Wojska Specjalne"
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.85
 	}
@@ -195,16 +195,68 @@ units = {
 	division = {
 		name = "1. Brygada Obrony Terytorialnej"
 		location = 362		#Gdansk
-		division_template = "Brygada WOT 2026"
+		division_template = "Brygada WOT"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.5
 	}
 	division = {
 		name = "2. Brygada Obrony Terytorialnej"
 		location = 6512		#Nysa/SE Poland
-		division_template = "Brygada WOT 2026"
+		division_template = "Brygada WOT"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.5
+	}
+
+	### Additional Forces ###
+	division = {
+		name = "19. Lubelska Brygada Zmechanizowana"
+		location = 6499
+		division_template = "Dywizja Zmechanizowana"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "3. Brygada Obrony Terytorialnej"
+		location = 524
+		division_template = "Brygada WOT"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "4. Brygada Obrony Terytorialnej"
+		location = 3380
+		division_template = "Brygada WOT"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "5. Brygada Obrony Terytorialnej"
+		location = 6282
+		division_template = "Brygada WOT"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+
+	### 3. Flotylla Okretow (3rd Fleet) ###
+	fleet = {
+		name = "3. Flotylla Okretow"
+		naval_base = 362
+		task_force = {
+			name = "Dywizjon Okretow Bojowych"
+			location = 362
+			ship = { name = "ORP Slazak (341)" definition = corvette start_experience_factor = 0.7 equipment = { corvette_hull_2 = { amount = 1 owner = POL version_name = "Slazak Class" } } }
+			ship = { name = "ORP Orkan (421)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = POL version_name = "Orkan Class" } } }
+			ship = { name = "ORP Piorun (422)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = POL version_name = "Orkan Class" } } }
+			ship = { name = "ORP Grom (423)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = POL version_name = "Orkan Class" } } }
+			ship = { name = "ORP Kaszub (240)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_1 = { amount = 1 owner = POL version_name = "Kaszub Class" } } }
+		}
+		task_force = {
+			name = "Dywizjon Okretow Minowych"
+			location = 362
+			ship = { name = "ORP Kormoran (601)" definition = corvette start_experience_factor = 0.7 equipment = { corvette_hull_2 = { amount = 1 owner = POL version_name = "Kormoran II Class" } } }
+			ship = { name = "ORP Albatros (602)" definition = corvette start_experience_factor = 0.7 equipment = { corvette_hull_2 = { amount = 1 owner = POL version_name = "Kormoran II Class" } } }
+			ship = { name = "ORP Mewa (603)" definition = corvette start_experience_factor = 0.7 equipment = { corvette_hull_2 = { amount = 1 owner = POL version_name = "Kormoran II Class" } } }
+		}
 	}
 }
 
@@ -223,5 +275,51 @@ instant_effect = {
 		type = command_control_equipment2
 		amount = 5000
 		producer = POL
+	}
+	add_equipment_to_stockpile = {
+		type = small_plane_strike_airframe_2
+		variant_name = "F-35A Lightning II"
+		amount = 8
+		producer = USA
+	}
+}
+
+air_wings = {
+	111 = {
+		small_plane_strike_airframe_2 = { owner = "POL" creator = "USA" amount = 24 version_name = "F-16C Block 52+" }
+		name = "31. Baza Lotnictwa Taktycznego"
+		start_experience_factor = 0.6
+		#
+		large_plane_air_transport_airframe_1 = { owner = "POL" creator = "USA" amount = 5 version_name = "C-130E Hercules" }
+		name = "33. Eskadra Lotnictwa Transportowego"
+		start_experience_factor = 0.5
+		#
+		large_plane_air_transport_airframe_1 = { owner = "POL" creator = "SPR" amount = 12 version_name = "C-295M CASA" }
+		name = "8. Baza Lotnictwa Transportowego"
+		start_experience_factor = 0.5
+	}
+	433 = {
+		small_plane_strike_airframe_2 = { owner = "POL" creator = "USA" amount = 24 version_name = "F-16C Block 52+" }
+		name = "32. Baza Lotnictwa Taktycznego"
+		start_experience_factor = 0.6
+	}
+	114 = {
+		small_plane_airframe_2 = { owner = "POL" creator = "KOR" amount = 20 version_name = "FA-50 Fighting Eagle" }
+		name = "23. Baza Lotnictwa Taktycznego"
+		start_experience_factor = 0.5
+	}
+	113 = {
+		large_plane_maritime_patrol_airframe_1 = { owner = "POL" amount = 8 version_name = "M-28B Bryza" }
+		name = "Brygada Lotnictwa Marynarki Wojennej"
+		start_experience_factor = 0.5
+	}
+	628 = {
+		small_plane_suicide_airframe_2 = { owner = "POL" creator = "USA" amount = 4 version_name = "MQ-9A Reaper" }
+		name = "12. Baza Bezzalogowych Statkow Powietrznych"
+		start_experience_factor = 0.4
+		#
+		small_plane_suicide_airframe_2 = { owner = "POL" creator = "TUR" amount = 20 version_name = "Bayraktar TB2" }
+		name = "Eskadra Bezzalogowa"
+		start_experience_factor = 0.4
 	}
 }

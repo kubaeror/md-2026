@@ -113,3 +113,18 @@ instant_effect = {
 		producer = RAJ
 	}
 }
+
+##### Armenian Air Force #####
+air_wings = {
+	# Erebuni Air Base (Yerevan)
+	709 = {
+		medium_plane_fighter_airframe_2 = { owner = "ARM" creator = "SOV" amount = 4 version_name = "Su-30SM Flanker-H" }
+		name = "Fighter Squadron"
+		start_experience_factor = 0.4
+	}
+	709 = {
+		small_plane_cas_airframe_2 = { owner = "ARM" creator = "SOV" amount = 8 version_name = "Su-25" }
+		name = "Attack Aviation Squadron"
+		start_experience_factor = 0.35
+	}
+}

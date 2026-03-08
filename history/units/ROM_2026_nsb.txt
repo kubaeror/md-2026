@@ -2,7 +2,7 @@
 # Romania 2026 — NATO Eastern flank, modernizing
 
 division_template = {
-	name = "Brigada Mecanizata 2026"
+	name = "Brigada Mecanizata"
 	regiments = {
 		Mech_Inf_Bat = { x = 0 y = 0 }
 		Mech_Inf_Bat = { x = 0 y = 1 }
@@ -19,7 +19,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brigada Infanterie 2026"
+	name = "Brigada Infanterie"
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
 		Mot_Inf_Bat = { x = 0 y = 1 }
@@ -35,7 +35,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brigada Vanatori de Munte 2026"
+	name = "Brigada Vanatori de Munte"
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
@@ -50,7 +50,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brigada Operatii Speciale 2026"
+	name = "Brigada Operatii Speciale"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -69,7 +69,7 @@ units = {
 	division = {
 		name = "282 Brigada Mecanizata"
 		location = 9617
-		division_template = "Brigada Mecanizata 2026"
+		division_template = "Brigada Mecanizata"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -77,7 +77,7 @@ units = {
 	division = {
 		name = "1 Brigada Mecanizata"
 		location = 723
-		division_template = "Brigada Mecanizata 2026"
+		division_template = "Brigada Mecanizata"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -85,7 +85,7 @@ units = {
 	division = {
 		name = "9 Brigada Mecanizata"
 		location = 11655
-		division_template = "Brigada Mecanizata 2026"
+		division_template = "Brigada Mecanizata"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -96,7 +96,7 @@ units = {
 	division = {
 		name = "2 Brigada Infanterie"
 		location = 690
-		division_template = "Brigada Infanterie 2026"
+		division_template = "Brigada Infanterie"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.75
 	}
@@ -104,7 +104,7 @@ units = {
 	division = {
 		name = "15 Brigada Mecanizata"
 		location = 6652
-		division_template = "Brigada Mecanizata 2026"
+		division_template = "Brigada Mecanizata"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -112,7 +112,7 @@ units = {
 	division = {
 		name = "81 Brigada Mecanizata"
 		location = 9606
-		division_template = "Brigada Mecanizata 2026"
+		division_template = "Brigada Mecanizata"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -123,7 +123,7 @@ units = {
 	division = {
 		name = "2 Brigada Vanatori de Munte"
 		location = 637
-		division_template = "Brigada Vanatori de Munte 2026"
+		division_template = "Brigada Vanatori de Munte"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -131,7 +131,7 @@ units = {
 	division = {
 		name = "61 Brigada Vanatori de Munte"
 		location = 3694
-		division_template = "Brigada Vanatori de Munte 2026"
+		division_template = "Brigada Vanatori de Munte"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -139,9 +139,31 @@ units = {
 	division = {
 		name = "1 Brigada Operatii Speciale"
 		location = 723
-		division_template = "Brigada Operatii Speciale 2026"
+		division_template = "Brigada Operatii Speciale"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.85
+	}
+
+	##### Romanian Naval Forces (Fortele Navale Romane) #####
+
+	# Romanian Fleet (Constanta)
+	fleet = {
+		name = "Fortele Navale Romane"
+		naval_base = 657
+		task_force = {
+			name = "Frigate Division"
+			location = 657
+			ship = { name = "ROS Regele Ferdinand (F-221)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.35 equipment = { frigate_hull_1 = { amount = 1 owner = ROM version_name = "Type 22 (ex-Broadsword)" } } }
+			ship = { name = "ROS Regina Maria (F-222)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_1 = { amount = 1 owner = ROM version_name = "Type 22 (ex-Broadsword)" } } }
+		}
+		task_force = {
+			name = "Corvette Division"
+			location = 657
+			ship = { name = "ROS Amiral Petre Barbuneanu (F-260)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = ROM version_name = "Tetal II-class" } } }
+			ship = { name = "ROS Viceamiral Eugeniu Rosca (F-261)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = ROM version_name = "Tetal II-class" } } }
+			ship = { name = "ROS Contraamiral Eustatiu Sebastian (F-262)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = ROM version_name = "Tetal II-class" } } }
+			ship = { name = "ROS Contraamiral Horia Macellariu (F-263)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = ROM version_name = "Tetal II-class" } } }
+		}
 	}
 }
 
@@ -150,5 +172,40 @@ instant_effect = {
 		type = infantry_weapons5
 		amount = 3000
 		producer = ROM
+	}
+}
+
+##### Romanian Air Force (Fortele Aeriene Romane) #####
+
+air_wings = {
+	# 53rd Fighter Squadron — F-16AM MLU (Fetesti/Borcea)
+	284 = {
+		small_plane_strike_airframe_2 = { owner = "ROM" creator = "USA" amount = 17 version_name = "F-16AM MLU" }
+		name = "Escadrila 53 Vanatoare"
+		start_experience_factor = 0.4
+	}
+	# 48th Fighter Squadron — F-16AM MLU (Campia Turzii)
+	151 = {
+		small_plane_strike_airframe_2 = { owner = "ROM" creator = "USA" amount = 15 version_name = "F-16AM MLU" }
+		name = "Escadrila 48 Vanatoare"
+		start_experience_factor = 0.4
+	}
+	# 90th Airlift Group — C-130H (Bucharest/Otopeni)
+	150 = {
+		large_plane_air_transport_airframe_1 = { owner = "ROM" creator = "USA" amount = 4 version_name = "C-130H Hercules" }
+		name = "Grupul 90 Transport Aerian"
+		start_experience_factor = 0.35
+	}
+	# Tactical Airlift Group — C-27J Spartan (Bucharest)
+	150 = {
+		large_plane_air_transport_airframe_1 = { owner = "ROM" creator = "ITA" amount = 7 version_name = "C-27J Spartan" }
+		name = "Grupul Transport Tactic"
+		start_experience_factor = 0.35
+	}
+	# ISR Squadron — MQ-9A Reaper (Campia Turzii)
+	151 = {
+		small_plane_suicide_airframe_2 = { owner = "ROM" creator = "USA" amount = 4 version_name = "MQ-9A Reaper" }
+		name = "Escadrila ISR"
+		start_experience_factor = 0.35
 	}
 }

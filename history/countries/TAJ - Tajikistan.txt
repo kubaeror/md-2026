@@ -371,4 +371,18 @@
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 5 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = TAJ_central_asias_poorest
+	complete_national_focus = TAJ_rahmons_rotting_fruit
+	complete_national_focus = TAJ_the_peoples_party
+	complete_national_focus = TAJ_armed_forces
+	complete_national_focus = TAJ_his_excellency
+	complete_national_focus = TAJ_rejuvinate_the_opposition
+	complete_national_focus = TAJ_situation_in_pamir
+	complete_national_focus = TAJ_bode_to_industry
+	complete_national_focus = TAJ_rural_hunger
+	complete_national_focus = TAJ_strain_of_energy
+	complete_national_focus = TAJ_water_melon_economy
+	complete_national_focus = TAJ_minbari_khalq
 }

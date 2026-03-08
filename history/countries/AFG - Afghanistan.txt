@@ -306,4 +306,33 @@ capital = 411
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = AFG_Anjuman_Pass
+	complete_national_focus = AFG_Ashraf_Ghani
+	complete_national_focus = AFG_Basej_e_Milli
+	complete_national_focus = AFG_Endorse_the_american_candidate
+	complete_national_focus = AFG_Islamic_Democracy
+	complete_national_focus = AFG_Naveen
+	complete_national_focus = AFG_future_national_policy
+	complete_national_focus = AFG_Heirs_o_the_Mujahideen
+	complete_national_focus = AFG_IMU_Countermeasures
+	complete_national_focus = AFG_Massoud_s_MiG_and_Sukho
+	complete_national_focus = AFG_Shura_system
+	complete_national_focus = AFG_local_military_pressure
+	complete_national_focus = AFG_Centralise_the_Apparatus_of_the_State
+	complete_national_focus = AFG_Expand_the_Education_Ministry
+	complete_national_focus = AFG_Parliamentary_Illusion
+	complete_national_focus = AFG_Atlanticism
+	complete_national_focus = AFG_Standardised_taxation
+	complete_national_focus = AFG_The_Republic_Survives_Another_day
+	complete_national_focus = AFG_SAARC_Membership
+	complete_national_focus = AFG_The_New_Chairman
+	complete_national_focus = AFG_The_Islamic_Republic
+	complete_national_focus = AFG_Agricultural_Modernisation
+	complete_national_focus = AFG_Reinforce_the_Government
+	complete_national_focus = AFG_Counite_Masouds_works
+	complete_national_focus = AFG_New_class_of_Jam_iat_reformers
+	complete_national_focus = AFG_future_diplomacy
+	complete_national_focus = AFG_internal_policy
 }

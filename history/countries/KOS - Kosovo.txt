@@ -250,4 +250,31 @@
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = KOS_democratic_agenda
+	complete_national_focus = KOS_maintain_un
+	complete_national_focus = KOS_national_movement
+	complete_national_focus = KOS_pdk
+	complete_national_focus = KOS_security_troubles
+	complete_national_focus = KOS_struggle_for_recognition
+	complete_national_focus = KOS_the_dawn_of_the_new_scentenary
+	complete_national_focus = KOS_Industrial_Awakening
+	complete_national_focus = KOS_kren
+	complete_national_focus = KOS_patch_the_scars
+	complete_national_focus = KOS_attacking_the_right
+	complete_national_focus = KOS_kosovan_independence
+	complete_national_focus = KOS_military_funding
+	complete_national_focus = KOS_push_for_albanian_unity
+	complete_national_focus = KOS_support_minorities
+	complete_national_focus = KOS_call_for_investments
+	complete_national_focus = KOS_europeanization
+	complete_national_focus = KOS_campaign_asia
+	complete_national_focus = KOS_campaign_east_europe
+	complete_national_focus = KOS_campaign_south_america
+	complete_national_focus = KOS_kosvan_identity
+	complete_national_focus = KOS_welfare_programs
+	complete_national_focus = KOS_reform_kfor
+	complete_national_focus = KOS_un_economists
+	complete_national_focus = KOS_un_government_assistance
 }

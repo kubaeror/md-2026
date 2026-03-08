@@ -2723,4 +2723,45 @@ capital = 56
 		md2026_fra_european_defense_leader
 		md2026_fra_social_unrest
 	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_FRA_european_power
+	complete_national_focus = MD2026_FRA_european_defense
+	complete_national_focus = MD2026_FRA_nuclear_deterrent
+	complete_national_focus = MD2026_FRA_arms_exports
+	complete_national_focus = MD2026_FRA_african_policy
+	complete_national_focus = MD2026_FRA_domestic_reform
+	complete_national_focus = MD2026_FRA_2027_elections
+	complete_national_focus = MD2026_FRA_economic_competitiveness
+	complete_national_focus = MD2026_FRA_strategic_autonomy
+	complete_national_focus = MD2026_FRA_indo_pacific_presence
+	complete_national_focus = MD2026_FRA_eu_defense_fund
+	complete_national_focus = MD2026_FRA_energy_transition
+	complete_national_focus = MD2026_FRA_nuclear_energy
+	complete_national_focus = MD2026_FRA_green_industry
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = FRA_economic_policy
+	complete_national_focus = FRA_francosphere
+	complete_national_focus = FRA_french_armed_forces
+	complete_national_focus = FRA_state_of_french_politics
+	complete_national_focus = FRA_energy_sector
+	complete_national_focus = FRA_free_market
+	complete_national_focus = FRA_french_economic_intervention
+	complete_national_focus = FRA_luxury_goods
+	complete_national_focus = FRA_the_french_agriculture
+	complete_national_focus = FRA_total_sa
+	complete_national_focus = FRA_tourism_industry
+	complete_national_focus = FRA_French_pillar_of_counterterrorism
+	complete_national_focus = FRA_francafrique
+	complete_national_focus = FRA_haitian_coup
+	complete_national_focus = FRA_intervention_in_africa
+	complete_national_focus = FRA_repeal_the_ordiance
+	complete_national_focus = FRA_returning_to_indochina
+	complete_national_focus = FRA_the_levant_problem
+	complete_national_focus = FRA_french_navy
+	complete_national_focus = FRA_the_french_air_force
+	complete_national_focus = FRA_the_french_army
+	complete_national_focus = FRA_french_parliament
+	complete_national_focus = FRA_the_fifth_power
 }

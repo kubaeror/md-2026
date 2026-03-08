@@ -58,6 +58,19 @@ units = {
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.60
 	}
+
+	##### Estonian Navy (Tallinn) #####
+	fleet = {
+		name = "Estonian Navy"
+		naval_base = 3152
+		task_force = {
+			name = "Mine Countermeasures Division"
+			location = 3152
+			ship = { name = "EML Ugandi (M313)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = EST version_name = "Sandown Class" } } }
+			ship = { name = "EML Sakala (M314)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = EST version_name = "Sandown Class" } } }
+			ship = { name = "EML Wambola (M315)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = EST version_name = "Sandown Class" } } }
+		}
+	}
 }
 
 instant_effect = {

@@ -2,7 +2,7 @@
 # Myanmar 2026 — Civil war/insurgency, fragmented forces
 
 division_template = {
-	name = "Infantry Division 2026"
+	name = "Infantry Division"
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
@@ -19,7 +19,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Light Infantry Division 2026"
+	name = "Light Infantry Division"
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
@@ -33,7 +33,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Armoured Brigade 2026"
+	name = "Armoured Brigade"
 	regiments = {
 		armor_Bat = { x = 0 y = 0 }
 		armor_Bat = { x = 0 y = 1 }
@@ -53,7 +53,7 @@ units = {
 	division = {
 		name = "11th Light Infantry Division"
 		location = 4626
-		division_template = "Light Infantry Division 2026"
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
@@ -61,7 +61,7 @@ units = {
 	division = {
 		name = "22nd Light Infantry Division"
 		location = 4336
-		division_template = "Light Infantry Division 2026"
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
@@ -69,7 +69,7 @@ units = {
 	division = {
 		name = "33rd Light Infantry Division"
 		location = 10386
-		division_template = "Light Infantry Division 2026"
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
@@ -77,7 +77,7 @@ units = {
 	division = {
 		name = "44th Light Infantry Division"
 		location = 4585
-		division_template = "Light Infantry Division 2026"
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
@@ -85,7 +85,7 @@ units = {
 	division = {
 		name = "55th Light Infantry Division"
 		location = 1333
-		division_template = "Light Infantry Division 2026"
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
@@ -93,7 +93,7 @@ units = {
 	division = {
 		name = "66th Light Infantry Division"
 		location = 12127
-		division_template = "Light Infantry Division 2026"
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.45
 	}
@@ -101,7 +101,7 @@ units = {
 	division = {
 		name = "77th Light Infantry Division"
 		location = 7034
-		division_template = "Light Infantry Division 2026"
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.45
 	}
@@ -109,7 +109,7 @@ units = {
 	division = {
 		name = "88th Light Infantry Division"
 		location = 12449
-		division_template = "Light Infantry Division 2026"
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.45
 	}
@@ -117,7 +117,7 @@ units = {
 	division = {
 		name = "99th Light Infantry Division"
 		location = 4541
-		division_template = "Light Infantry Division 2026"
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.45
 	}
@@ -125,7 +125,7 @@ units = {
 	division = {
 		name = "101st Light Infantry Division"
 		location = 10486
-		division_template = "Light Infantry Division 2026"
+		division_template = "Light Infantry Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.4
 	}
@@ -136,49 +136,49 @@ units = {
 	division = {
 		name = "Central Command Infantry"
 		location = 139
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.55
 	}
 	division = {
 		name = "Southern Command Infantry"
 		location = 1330
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.55
 	}
 	division = {
 		name = "Northern Command Infantry"
 		location = 12464
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.55
 	}
 	division = {
 		name = "Eastern Command Infantry"
 		location = 7254
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.55
 	}
 	division = {
 		name = "Western Command Infantry"
 		location = 3651
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.55
 	}
 	division = {
 		name = "Yangon Command Infantry"
 		location = 141
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
 	}
 	division = {
 		name = "Naypyidaw Command Infantry"
 		location = 12256
-		division_template = "Infantry Division 2026"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
 	}
@@ -188,9 +188,32 @@ units = {
 	division = {
 		name = "Armoured Brigade"
 		location = 4454
-		division_template = "Armoured Brigade 2026"
+		division_template = "Armoured Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
+	}
+
+	##### Myanmar Navy #####
+
+	# Myanmar Navy (Yangon)
+	fleet = {
+		name = "Myanmar Navy"
+		naval_base = 1330
+		task_force = {
+			name = "Surface Flotilla"
+			location = 1330
+			ship = { name = "UMS Aung Zeya (F-11)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = BRM version_name = "Aung Zeya-class" } } }
+			ship = { name = "UMS Kyan Sittha (F-12)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = BRM version_name = "Aung Zeya-class" } } }
+			ship = { name = "UMS Mahar Bandoola (F-21)" definition = frigate start_experience_factor = 0.25 equipment = { frigate_hull_1 = { amount = 1 owner = BRM version_name = "Jianghu II-class" } } }
+			ship = { name = "UMS Mahar Thiha Thura (F-23)" definition = frigate start_experience_factor = 0.25 equipment = { frigate_hull_1 = { amount = 1 owner = BRM version_name = "Jianghu II-class" } } }
+			ship = { name = "UMS Tabinshwehti (PC-1)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = BRM version_name = "Tabinshwehti-class" } } }
+			ship = { name = "UMS Bayintnaung (PC-2)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = BRM version_name = "Tabinshwehti-class" } } }
+		}
+		task_force = {
+			name = "Submarine Group"
+			location = 1330
+			ship = { name = "UMS Minye Theinkhathu (S-1)" definition = attack_submarine start_experience_factor = 0.25 equipment = { attack_submarine_hull_2 = { amount = 1 owner = BRM version_name = "Kilo-class (Type 877EKM)" } } }
+		}
 	}
 }
 
@@ -199,5 +222,28 @@ instant_effect = {
 		type = infantry_weapons3
 		amount = 5000
 		producer = BRM
+	}
+}
+
+##### Myanmar Air Force #####
+
+air_wings = {
+	# Fighter Squadron — MiG-29 (Mingaladon/Yangon)
+	504 = {
+		small_plane_airframe_2 = { owner = "BRM" creator = "SOV" amount = 20 version_name = "MiG-29B Fulcrum" }
+		name = "Fighter Squadron"
+		start_experience_factor = 0.25
+	}
+	# Attack Squadron — Yak-130 (Meiktila/Upper Burma)
+	505 = {
+		small_plane_cas_airframe_2 = { owner = "BRM" creator = "SOV" amount = 12 version_name = "Yak-130" }
+		name = "Attack Squadron"
+		start_experience_factor = 0.2
+	}
+	# Transport Squadron — Y-8 (Meiktila)
+	505 = {
+		large_plane_air_transport_airframe_1 = { owner = "BRM" creator = "CHI" amount = 4 version_name = "Y-8 Transport" }
+		name = "Transport Squadron"
+		start_experience_factor = 0.2
 	}
 }

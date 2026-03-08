@@ -4405,4 +4405,37 @@ capital = 547
 			ruthless
 		}
 	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_CHI_great_rejuvenation
+	complete_national_focus = MD2026_CHI_belt_road_2
+	complete_national_focus = MD2026_CHI_naval_expansion
+	complete_national_focus = MD2026_CHI_tech_dominance
+	complete_national_focus = MD2026_CHI_taiwan_question
+	complete_national_focus = MD2026_CHI_south_china_sea
+	complete_national_focus = MD2026_CHI_semiconductor_war
+	complete_national_focus = MD2026_CHI_global_infrastructure
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = CHI_Chairman_Jiang_Reign
+	complete_national_focus = CHI_Global_Influence
+	complete_national_focus = CHI_One_China_Policy
+	complete_national_focus = CHI_Preserve_the_Revolution
+	complete_national_focus = CHI_Regional_Influence
+	complete_national_focus = CHI_The_Untapped_Market
+	complete_national_focus = CHI_End_PLA_Business_Ventures
+	complete_national_focus = CHI_Future_of_the_CPC
+	complete_national_focus = CHI_Three_Represents_Thought
+	complete_national_focus = CHI_Favor_Multipolarity
+	complete_national_focus = CHI_Form_the_SCO
+	complete_national_focus = CHI_Forum_on_China_African_Cooperation
+	complete_national_focus = CHI_Internet_Crackdown
+	complete_national_focus = CHI_Proper_State_Atheism
+	complete_national_focus = CHI_Two_Systems
+	complete_national_focus = CHI_Smash_the_Iron_Rice_Bowl
+	complete_national_focus = CHI_The_Indian_Subcontinent
+	complete_national_focus = CHI_The_Korean_Peninsula
+	complete_national_focus = CHI_The_Land_of_the_Rising_Sun
+	complete_national_focus = CHI_The_Northern_Shield
+	complete_national_focus = CHI_The_South_China_Sea
 }

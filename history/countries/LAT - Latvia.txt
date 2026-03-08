@@ -319,4 +319,43 @@
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = GENERIC_air_force_reform
+	complete_national_focus = GENERIC_army_reform
+	complete_national_focus = GENERIC_build_primary_schools
+	complete_national_focus = GENERIC_build_roads
+	complete_national_focus = GENERIC_ease_of_business_reforms
+	complete_national_focus = GENERIC_international_diplomacy
+	complete_national_focus = GENERIC_light_industry_investments
+	complete_national_focus = GENERIC_military_emergency
+	complete_national_focus = GENERIC_naval_reform
+	complete_national_focus = GENERIC_political_reform
+	complete_national_focus = GENERIC_agricultural_district_subsidization
+	complete_national_focus = GENERIC_air_doctrine_innovations
+	complete_national_focus = GENERIC_alignment_debate
+	complete_national_focus = GENERIC_anti_corruption_reforms
+	complete_national_focus = GENERIC_assure_access_to_education
+	complete_national_focus = GENERIC_attract_foreign_investors
+	complete_national_focus = GENERIC_build_highways
+	complete_national_focus = GENERIC_build_railways
+	complete_national_focus = GENERIC_cabinet_reform
+	complete_national_focus = GENERIC_capital_defense_scheme
+	complete_national_focus = GENERIC_debt_refactoring
+	complete_national_focus = GENERIC_diplomatic_positions
+	complete_national_focus = GENERIC_expand_the_secret_service
+	complete_national_focus = GENERIC_fighter_planes
+	complete_national_focus = GENERIC_heavy_industry_investments
+	complete_national_focus = GENERIC_land_doctrine_innovations
+	complete_national_focus = GENERIC_military_education_reform
+	complete_national_focus = GENERIC_military_equipment_procurement
+	complete_national_focus = GENERIC_military_exercises
+	complete_national_focus = GENERIC_mobilize_the_working_class
+	complete_national_focus = GENERIC_naval_bases
+	complete_national_focus = GENERIC_naval_doctrine_innovations
+	complete_national_focus = GENERIC_network_infrastructure
+	complete_national_focus = GENERIC_our_place
+	complete_national_focus = GENERIC_strengthen_government
+	complete_national_focus = GENERIC_submarines
+	complete_national_focus = GENERIC_surface_ships
+	complete_national_focus = GENERIC_trade_with_the_neighbors
 }

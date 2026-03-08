@@ -289,4 +289,25 @@ capital = 233
 	}
 	set_variable = { term_limit = 2 }
 	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = ETH_defense_of_ethiopia
+	complete_national_focus = ETH_eritrea_start
+	complete_national_focus = ETH_international_diplomacy
+	complete_national_focus = ETH_invite_foreign_investors
+	complete_national_focus = ETH_the_future_of_ethiopia
+	complete_national_focus = ETH_expand_the_endf
+	complete_national_focus = ETH_expand_the_etaf
+	complete_national_focus = ETH_secure_the_eritrean_border
+	complete_national_focus = ETH_eritrea_dissolve_assembly
+	complete_national_focus = ETH_eritrea_federation
+	complete_national_focus = ETH_african_economic_relationships
+	complete_national_focus = ETH_anti_corruption_measurements
+	complete_national_focus = ETH_european_economic_relationships
+	complete_national_focus = ETH_italian_ethiopian_friendship
+	complete_national_focus = ETH_refactor_our_debt
+	complete_national_focus = ETH_invite_coca_cola
+	complete_national_focus = ETH_invite_karuturi_global
+	complete_national_focus = ETH_invite_lifan_industry
+	complete_national_focus = ETH_strengthen_the_republic
 }

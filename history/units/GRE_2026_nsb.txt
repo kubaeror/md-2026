@@ -2,7 +2,7 @@
 # Greece 2026 — Large conscript army, Aegean defense focus
 
 division_template = {
-	name = "Tethorikmeno Taxiarchia 2026"
+	name = "Tethorikmeno Taxiarchia"
 	regiments = {
 		armor_Bat = { x = 0 y = 0 }
 		armor_Bat = { x = 0 y = 1 }
@@ -19,7 +19,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Michanokiniton Merarhia 2026"
+	name = "Michanokiniton Merarhia"
 	regiments = {
 		Mech_Inf_Bat = { x = 0 y = 0 }
 		Mech_Inf_Bat = { x = 0 y = 1 }
@@ -36,7 +36,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Pezikon Merarhia 2026"
+	name = "Pezikon Merarhia"
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
 		Mot_Inf_Bat = { x = 0 y = 1 }
@@ -52,7 +52,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Aleipton Katadromeon 2026"
+	name = "Aleipton Katadromeon"
 	regiments = {
 		L_Air_Inf_Bat = { x = 0 y = 0 }
 		L_Air_Inf_Bat = { x = 0 y = 1 }
@@ -64,7 +64,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Navtikon Pezikon 2026"
+	name = "Navtikon Pezikon"
 	regiments = {
 		L_Marine_Bat = { x = 0 y = 0 }
 		L_Marine_Bat = { x = 0 y = 1 }
@@ -76,7 +76,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Eidikon Dynameion 2026"
+	name = "Eidikon Dynameion"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -95,7 +95,7 @@ units = {
 	division = {
 		name = "XII Michanokiniton Merarhia"
 		location = 863
-		division_template = "Michanokiniton Merarhia 2026"
+		division_template = "Michanokiniton Merarhia"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -103,7 +103,7 @@ units = {
 	division = {
 		name = "XVI Tethorikmeno Merarhia"
 		location = 895
-		division_template = "Tethorikmeno Taxiarchia 2026"
+		division_template = "Tethorikmeno Taxiarchia"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -111,7 +111,7 @@ units = {
 	division = {
 		name = "D Corps Pezikon Merarhia"
 		location = 3973
-		division_template = "Pezikon Merarhia 2026"
+		division_template = "Pezikon Merarhia"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -122,7 +122,7 @@ units = {
 	division = {
 		name = "XX Tethorikmeno Merarhia"
 		location = 11818
-		division_template = "Tethorikmeno Taxiarchia 2026"
+		division_template = "Tethorikmeno Taxiarchia"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -130,14 +130,14 @@ units = {
 	division = {
 		name = "Aegean Islands Command"
 		location = 9837
-		division_template = "Pezikon Merarhia 2026"
+		division_template = "Pezikon Merarhia"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "Crete Defense Brigade"
 		location = 12058
-		division_template = "Pezikon Merarhia 2026"
+		division_template = "Pezikon Merarhia"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.75
 	}
@@ -148,7 +148,7 @@ units = {
 	division = {
 		name = "I Tethorikmeno Merarhia"
 		location = 3844
-		division_template = "Tethorikmeno Taxiarchia 2026"
+		division_template = "Tethorikmeno Taxiarchia"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -156,7 +156,7 @@ units = {
 	division = {
 		name = "II Michanokiniton Merarhia"
 		location = 11905
-		division_template = "Michanokiniton Merarhia 2026"
+		division_template = "Michanokiniton Merarhia"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
@@ -164,7 +164,7 @@ units = {
 	division = {
 		name = "III Pezikon Merarhia"
 		location = 11774
-		division_template = "Pezikon Merarhia 2026"
+		division_template = "Pezikon Merarhia"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -172,7 +172,7 @@ units = {
 	division = {
 		name = "IX Pezikon Merarhia"
 		location = 9791
-		division_template = "Pezikon Merarhia 2026"
+		division_template = "Pezikon Merarhia"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
@@ -183,7 +183,7 @@ units = {
 	division = {
 		name = "1i Taxiarchia Aleipton Katadromeon"
 		location = 3914
-		division_template = "Aleipton Katadromeon 2026"
+		division_template = "Aleipton Katadromeon"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.85
 	}
@@ -191,7 +191,7 @@ units = {
 	division = {
 		name = "Taxiarchia Navtikon Pezikon"
 		location = 6550
-		division_template = "Navtikon Pezikon 2026"
+		division_template = "Navtikon Pezikon"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.85
 	}
@@ -199,9 +199,44 @@ units = {
 	division = {
 		name = "Eidikon Dynameion"
 		location = 966
-		division_template = "Eidikon Dynameion 2026"
+		division_template = "Eidikon Dynameion"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.85
+	}
+
+	##### Hellenic Navy (Polemiko Navtiko) #####
+
+	# Hellenic Fleet (Salamis Naval Base)
+	fleet = {
+		name = "Hellenic Fleet"
+		naval_base = 4109
+		task_force = {
+			name = "Frigate Squadron"
+			location = 4109
+			ship = { name = "HS Hydra (F-452)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = GRE version_name = "Hydra-class (MEKO 200HN)" } } }
+			ship = { name = "HS Spetsai (F-453)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = GRE version_name = "Hydra-class (MEKO 200HN)" } } }
+			ship = { name = "HS Psara (F-454)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = GRE version_name = "Hydra-class (MEKO 200HN)" } } }
+			ship = { name = "HS Salamis (F-455)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = GRE version_name = "Hydra-class (MEKO 200HN)" } } }
+		}
+		task_force = {
+			name = "Fast Attack Squadron"
+			location = 4109
+			ship = { name = "HS Roussen (P-67)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Daniolos (P-68)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Krystallidis (P-69)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Grigoropoulos (P-70)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Kavaloudis (P-71)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Degiannis (P-72)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Laskaridis (P-73)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE version_name = "Roussen-class (Super Vita)" } } }
+		}
+		task_force = {
+			name = "Submarine Command"
+			location = 4109
+			ship = { name = "HS Papanikolis (S-120)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = GRE version_name = "Type 214" } } }
+			ship = { name = "HS Pipinos (S-121)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = GRE version_name = "Type 214" } } }
+			ship = { name = "HS Matrozos (S-122)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = GRE version_name = "Type 214" } } }
+			ship = { name = "HS Katsonis (S-123)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = GRE version_name = "Type 214" } } }
+		}
 	}
 }
 
@@ -210,5 +245,58 @@ instant_effect = {
 		type = infantry_weapons5
 		amount = 4000
 		producer = GRE
+	}
+}
+
+##### Hellenic Air Force (Polemiki Aeroporia) #####
+
+air_wings = {
+	# 332 Mira "Gerakia" — Rafale (Tanagra/Central Greece)
+	141 = {
+		medium_plane_airframe_2 = { owner = "GRE" creator = "FRA" amount = 24 version_name = "Rafale F3R" }
+		name = "332 Mira"
+		start_experience_factor = 0.45
+	}
+	# 340 Mira "Alepou" — F-16V Viper (Souda/Crete region, but based Thessaly)
+	139 = {
+		small_plane_strike_airframe_2 = { owner = "GRE" creator = "USA" amount = 40 version_name = "F-16V Viper" }
+		name = "340 Mira"
+		start_experience_factor = 0.45
+	}
+	# 347 Mira "Perseus" — F-16C Block 52+ (Nea Anchialos/Thessaly)
+	139 = {
+		small_plane_strike_airframe_2 = { owner = "GRE" creator = "USA" amount = 35 version_name = "F-16C Block 52+" }
+		name = "347 Mira"
+		start_experience_factor = 0.4
+	}
+	# 343 Mira "Asteri" — F-16C Block 52+ (West Thrace)
+	974 = {
+		small_plane_strike_airframe_2 = { owner = "GRE" creator = "USA" amount = 35 version_name = "F-16C Block 52+" }
+		name = "343 Mira"
+		start_experience_factor = 0.4
+	}
+	# 331 Mira "Thiseas" — Mirage 2000-5 (Tanagra/Central Greece)
+	141 = {
+		small_plane_airframe_2 = { owner = "GRE" creator = "FRA" amount = 18 version_name = "Mirage 2000-5 Mk.2" }
+		name = "331 Mira"
+		start_experience_factor = 0.4
+	}
+	# 380 Mira — E-2C Hawkeye (Eleusis/Central Greece)
+	141 = {
+		large_plane_awacs_airframe_1 = { owner = "GRE" creator = "USA" amount = 4 version_name = "E-2C Hawkeye" }
+		name = "380 Mira"
+		start_experience_factor = 0.4
+	}
+	# 356 MTM — C-130H Transport (Eleusis)
+	141 = {
+		large_plane_air_transport_airframe_1 = { owner = "GRE" creator = "USA" amount = 12 version_name = "C-130H Hercules" }
+		name = "356 MTM"
+		start_experience_factor = 0.35
+	}
+	# 353 Mira — P-3B Orion (Eleusis)
+	141 = {
+		large_plane_maritime_patrol_airframe_1 = { owner = "GRE" creator = "USA" amount = 6 version_name = "P-3B Orion" }
+		name = "353 Mira"
+		start_experience_factor = 0.3
 	}
 }

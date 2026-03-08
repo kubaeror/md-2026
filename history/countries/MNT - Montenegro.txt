@@ -243,4 +243,16 @@
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = MNT_Economy_baby
+	complete_national_focus = MNT_aremd_forces
+	complete_national_focus = MNT_foreign_affairs
+	complete_national_focus = MNT_independent_politics
+	complete_national_focus = MNT_dukanovic_rule
+	complete_national_focus = MNT_join_wto
+	complete_national_focus = MNT_restore_port
+	complete_national_focus = MNT_legacy_of_yugoslavia
+	complete_national_focus = MNT_eyes_on_east
+	complete_national_focus = MNT_eyes_on_west
 }

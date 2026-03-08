@@ -17,14 +17,14 @@ ideas = {
 		}
 
 		md2026_increased_defense_budget = {
-			picture = defense
+			picture = volunteer_defenders
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			modifier = {
 				production_speed_arms_factory_factor = 0.10
 				conscription = 0.005
 				consumer_goods_factor = 0.03
-				Military_Spending_cost_factor = -1.0
+				Military_Spending_cost_factor = -0.25
 			}
 		}
 
@@ -47,6 +47,18 @@ ideas = {
 				consumer_goods_factor = 0.05
 				production_speed_buildings_factor = -0.05
 				stability_factor = -0.02
+			}
+		}
+
+		md2026_trade_war_tariffs_usa = {
+			picture = GENERIC_protectionism
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = -0.10
+				consumer_goods_factor = 0.03
+				industrial_capacity_factory = 0.05
+				stability_factor = -0.01
 			}
 		}
 
@@ -84,7 +96,7 @@ ideas = {
 		}
 
 		md2026_special_forces_expansion = {
-			picture = special_forces
+			picture = reserve_divisions
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -95,7 +107,7 @@ ideas = {
 		}
 
 		md2026_energy_transition = {
-			picture = green_energy
+			picture = economic_road_idea
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -118,13 +130,212 @@ ideas = {
 		}
 
 		md2026_arms_exporter = {
-			picture = production
+			picture = generic_goods
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			modifier = {
 				production_speed_arms_factory_factor = 0.10
 				industrial_capacity_factory = 0.05
 				trade_opinion_factor = 0.10
+			}
+		}
+
+		### Non-Western Decision Reward Ideas ###
+
+		md2026_sov_wartime_mobilization = {
+			picture = national_mobilization
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_speed_arms_factory_factor = 0.15
+				stability_factor = -0.05
+				political_power_factor = -0.10
+			}
+		}
+
+		md2026_sov_information_control = {
+			picture = political_censorship
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.10
+				drift_defence_factor = 0.15
+				political_power_factor = -0.05
+			}
+		}
+
+		md2026_sov_shadow_fleet = {
+			picture = entrepot_trade
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = -0.10
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		md2026_sov_partial_mobilization = {
+			picture = national_mobilization
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				conscription = 0.02
+				army_attack_factor = 0.05
+				stability_factor = -0.08
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.10
+			}
+		}
+
+		md2026_chi_belt_road = {
+			picture = economic_road_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				trade_opinion_factor = 0.10
+				production_speed_buildings_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+		md2026_chi_taiwan_pressure = {
+			picture = threat
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = 0.05
+				war_support_factor = 0.10
+				stability_factor = -0.03
+				experience_gain_navy = 0.02
+			}
+		}
+
+		md2026_chi_tech_self_sufficiency = {
+			picture = electronic_warfare
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				research_speed_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		md2026_raj_make_in_india_decision = {
+			picture = generic_goods
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.05
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		md2026_raj_border_standoff = {
+			picture = fortification2
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_defence_factor = 0.10
+				war_support_factor = 0.05
+				conscription = 0.005
+			}
+		}
+
+		md2026_raj_space_program = {
+			picture = rocket
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_factor = 0.05
+				stability_factor = 0.03
+			}
+		}
+
+		md2026_nko_nuclear_test_effect = {
+			picture = rocket
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.15
+				army_defence_factor = 0.05
+				stability_factor = 0.05
+				trade_opinion_factor = -0.20
+			}
+		}
+
+		md2026_nko_missile_provocation_effect = {
+			picture = rocket
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = 0.05
+				war_support_factor = 0.10
+				stability_factor = -0.03
+			}
+		}
+
+		md2026_per_proxy_warfare = {
+			picture = political_violence
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = 0.05
+				war_support_factor = 0.10
+				stability_factor = -0.05
+				political_power_factor = -0.05
+			}
+		}
+
+		md2026_per_nuclear_program = {
+			picture = rocket
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				research_speed_factor = 0.03
+				stability_factor = -0.05
+				trade_opinion_factor = -0.15
+				war_support_factor = 0.10
+			}
+		}
+
+		md2026_sau_vision_2030_acceleration = {
+			picture = economic_boom
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.05
+				stability_factor = -0.03
+				research_speed_factor = 0.03
+			}
+		}
+
+		md2026_nuclear_modernization_effect = {
+			picture = rocket
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.05
+				army_defence_factor = 0.05
+				consumer_goods_factor = 0.03
+				research_speed_factor = 0.02
+			}
+		}
+
+		md2026_nuclear_posturing_effect = {
+			picture = rocket
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				war_support_factor = 0.15
+				stability_factor = -0.05
+				army_defence_factor = 0.10
 			}
 		}
 	}

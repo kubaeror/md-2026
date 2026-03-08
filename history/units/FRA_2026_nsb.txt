@@ -206,6 +206,97 @@ units = {
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.6
 	}
+
+	### Marine Nationale ###
+	fleet = {
+		name = "Force d'Action Navale"
+		naval_base = 911
+		task_force = {
+			name = "Groupe Aeronaval"
+			location = 911
+			ship = { name = "Charles de Gaulle (R91)" definition = carrier start_experience_factor = 0.75 equipment = { carrier_hull_2 = { amount = 1 owner = FRA version_name = "Charles de Gaulle Class" } } }
+			ship = { name = "Forbin (D620)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = FRA version_name = "Horizon Class" } } }
+			ship = { name = "Chevalier Paul (D621)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = FRA version_name = "Horizon Class" } } }
+			ship = { name = "Aquitaine (D650)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Normandie (D651)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Provence (D652)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Aquitaine Class" } } }
+		}
+		task_force = {
+			name = "Escadre de Frigates — Mediterranee"
+			location = 911
+			ship = { name = "Alsace (D656)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Alsace Class" } } }
+			ship = { name = "Lorraine (D657)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Alsace Class" } } }
+			ship = { name = "La Fayette (F710)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "La Fayette Class" } } }
+			ship = { name = "Surcouf (F711)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "La Fayette Class" } } }
+		}
+		task_force = {
+			name = "Force Amphibie"
+			location = 911
+			ship = { name = "Mistral (L9013)" definition = helicopter_operator start_experience_factor = 0.7 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = FRA version_name = "Mistral Class" } } }
+			ship = { name = "Tonnerre (L9014)" definition = helicopter_operator start_experience_factor = 0.7 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = FRA version_name = "Mistral Class" } } }
+			ship = { name = "Dixmude (L9015)" definition = helicopter_operator start_experience_factor = 0.65 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = FRA version_name = "Mistral Class" } } }
+		}
+	}
+	fleet = {
+		name = "Force d'Action Navale Atlantique"
+		naval_base = 3552
+		task_force = {
+			name = "Escadre de Frigates — Atlantique"
+			location = 3552
+			ship = { name = "Languedoc (D653)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Auvergne (D654)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Bretagne (D655)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Courbet (F712)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "La Fayette Class" } } }
+			ship = { name = "Aconit (F713)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "La Fayette Class" } } }
+			ship = { name = "Guepratte (F714)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "La Fayette Class" } } }
+		}
+	}
+	fleet = {
+		name = "Forces Sous-Marines"
+		naval_base = 911
+		task_force = {
+			name = "Escadrille des SNA"
+			location = 911
+			ship = { name = "Suffren (S635)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = FRA version_name = "Suffren Class" } } }
+			ship = { name = "Duguay-Trouin (S636)" definition = attack_submarine start_experience_factor = 0.7 equipment = { attack_submarine_hull_3 = { amount = 1 owner = FRA version_name = "Suffren Class" } } }
+			ship = { name = "Emeraude (S604)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = FRA version_name = "Rubis Class" } } }
+			ship = { name = "Perle (S606)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = FRA version_name = "Rubis Class" } } }
+		}
+		task_force = {
+			name = "Force Oceanique Strategique"
+			location = 3552
+			ship = { name = "Le Triomphant (S616)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA version_name = "Triomphant Class" } } }
+			ship = { name = "Le Temeraire (S617)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA version_name = "Triomphant Class" } } }
+			ship = { name = "Le Vigilant (S618)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA version_name = "Triomphant Class" } } }
+			ship = { name = "Le Terrible (S619)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA version_name = "Triomphant Class" } } }
+		}
+	}
+	fleet = {
+		name = "Forces Maritimes Outre-Mer"
+		naval_base = 13017
+		task_force = {
+			name = "Zone Maritime Ocean Indien"
+			location = 13017
+			ship = { name = "Floreal (F730)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA version_name = "Floreal Class" } } }
+			ship = { name = "Nivose (F732)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA version_name = "Floreal Class" } } }
+		}
+		task_force = {
+			name = "Zone Maritime Caraibes"
+			location = 177
+			ship = { name = "Ventose (F733)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA version_name = "Floreal Class" } } }
+			ship = { name = "Germinal (F735)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA version_name = "Floreal Class" } } }
+		}
+		task_force = {
+			name = "Zone Maritime Pacifique"
+			location = 12132
+			ship = { name = "Vendemiaire (F734)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA version_name = "Floreal Class" } } }
+		}
+		task_force = {
+			name = "Zone Maritime Polynesie"
+			location = 12148
+			ship = { name = "Prairial (F731)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA version_name = "Floreal Class" } } }
+		}
+	}
 }
 
 ### Equipment Stockpile ###
@@ -219,5 +310,75 @@ instant_effect = {
 		type = artillery_equipment
 		amount = 400
 		producer = FRA
+	}
+}
+
+### Armee de l'Air et de l'Espace & Aeronavale ###
+air_wings = {
+	# BA 113 Saint-Dizier — Rafale (EC 4 Gascogne/La Fayette/Provence)
+	305 = {
+		medium_plane_airframe_2 = { owner = "FRA" amount = 45 version_name = "Dassault Rafale C/B" }
+		name = "Escadre de Chasse 4 — Saint-Dizier"
+		start_experience_factor = 0.65
+	}
+	# BA 118 Mont-de-Marsan — Rafale (EC 30 Normandie-Niemen/Lorraine)
+	60 = {
+		medium_plane_airframe_2 = { owner = "FRA" amount = 30 version_name = "Dassault Rafale C/B" }
+		name = "Escadre de Chasse 30 — Mont-de-Marsan"
+		start_experience_factor = 0.6
+	}
+	# BA 133 Nancy-Ochey — Mirage 2000D (EC 3 Ardennes)
+	57 = {
+		medium_plane_cas_airframe_1 = { owner = "FRA" amount = 40 version_name = "Mirage 2000D" }
+		name = "Escadre de Chasse 3 — Nancy"
+		start_experience_factor = 0.55
+	}
+	# BA 116 Luxeuil — Mirage 2000-5F (EC 2 Cigognes)
+	963 = {
+		small_plane_airframe_2 = { owner = "FRA" amount = 18 version_name = "Mirage 2000-5F" }
+		name = "Escadre de Chasse 2 — Luxeuil"
+		start_experience_factor = 0.5
+	}
+	# BA 123 Orleans-Bricy — Strategic/Tactical Airlift (ET 1/61)
+	59 = {
+		large_plane_air_transport_airframe_2 = { owner = "FRA" amount = 18 version_name = "A400M Atlas" }
+		name = "Escadre de Transport 1/61 — Orleans"
+		start_experience_factor = 0.6
+	}
+	# BA 123 Orleans — C-130H/J Hercules (ET 2/61)
+	59 = {
+		large_plane_air_transport_airframe_1 = { owner = "FRA" creator = "USA" amount = 14 version_name = "C-130H/J Hercules" }
+		name = "Escadre de Transport 2/61 — Orleans"
+		start_experience_factor = 0.55
+	}
+	# BA 709 Cognac — MQ-9A Reaper (ED 1/33 Belfort)
+	958 = {
+		small_plane_suicide_airframe_2 = { owner = "FRA" creator = "USA" amount = 6 version_name = "MQ-9A Reaper" }
+		name = "Escadron de Drones 1/33 Belfort"
+		start_experience_factor = 0.55
+	}
+	# BAN Landivisiau — Rafale M shore-based (Flottilles 11F/17F)
+	64 = {
+		medium_plane_airframe_2 = { owner = "FRA" amount = 20 version_name = "Dassault Rafale M" }
+		name = "Flottilles 11F/17F — Landivisiau"
+		start_experience_factor = 0.65
+	}
+	# BAN Lann-Bihoue — Atlantique 2 Maritime Patrol (Flottilles 21F/23F)
+	64 = {
+		large_plane_maritime_patrol_airframe_1 = { owner = "FRA" amount = 18 version_name = "Atlantique 2" }
+		name = "Flottilles 21F/23F — Lann-Bihoue"
+		start_experience_factor = 0.6
+	}
+	# Groupe Aerien Embarque — Charles de Gaulle (Rafale M)
+	"Charles de Gaulle (R91)" = {
+		cv_medium_plane_fighter_airframe_2 = { owner = "FRA" amount = 18 version_name = "Dassault Rafale M" }
+		name = "Groupe Aerien Embarque"
+		start_experience_factor = 0.7
+	}
+	# Charles de Gaulle — E-2C Hawkeye (Flottille 4F)
+	"Charles de Gaulle (R91)" = {
+		cv_medium_plane_scout_airframe_2 = { owner = "FRA" creator = "USA" amount = 3 version_name = "E-2C Hawkeye" }
+		name = "Flottille 4F — Det. CdG"
+		start_experience_factor = 0.6
 	}
 }

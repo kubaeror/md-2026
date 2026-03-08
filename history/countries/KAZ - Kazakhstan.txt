@@ -479,4 +479,17 @@
 	add_ideas = {
 		md2026_kaz_multi_vector_diplomacy
 	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = CES_our_state_kaz
+	complete_national_focus = CES_newly_reestab_militar
+	complete_national_focus = CES_economic_affairs
+	complete_national_focus = CES_oligarchic_drift
+	complete_national_focus = CES_raise_from_ash
+	complete_national_focus = CES_assemble_generals
+	complete_national_focus = CES_buying_tanks
+	complete_national_focus = CES_improve_borderline_guards
+	complete_national_focus = CES_infantr_guns
+	complete_national_focus = CES_kaz_reform_vs
+	complete_national_focus = CES_navy
 }

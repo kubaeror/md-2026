@@ -113,3 +113,18 @@ instant_effect = {
 		producer = USA
 	}
 }
+
+##### Georgian Air Force #####
+air_wings = {
+	# Marneuli / Vaziani Air Base (Eastern Georgia)
+	708 = {
+		small_plane_cas_airframe_2 = { owner = "GEO" creator = "SOV" amount = 12 version_name = "Su-25KM Scorpion" }
+		name = "Tactical Aviation Brigade"
+		start_experience_factor = 0.4
+	}
+	708 = {
+		small_plane_suicide_airframe_2 = { owner = "GEO" creator = "TUR" amount = 8 version_name = "Bayraktar TB2" }
+		name = "UAV Squadron"
+		start_experience_factor = 0.3
+	}
+}

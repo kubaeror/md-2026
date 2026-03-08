@@ -199,3 +199,25 @@ instant_effect = {
 		producer = SOV
 	}
 }
+
+##### Sudanese Air Force (depleted by civil war) #####
+air_wings = {
+	# MiG-29 (surviving fighters)
+	221 = {
+		small_plane_airframe_2 = { owner = "SUD" creator = "SOV" amount = 8 version_name = "MiG-29SE Fulcrum" }
+		name = "SAF Fighter Squadron"
+		start_experience_factor = 0.3
+	}
+	# Su-25 (ground attack, some operational)
+	221 = {
+		small_plane_cas_airframe_2 = { owner = "SUD" creator = "SOV" amount = 8 version_name = "Su-25 Frogfoot" }
+		name = "SAF Attack Squadron"
+		start_experience_factor = 0.3
+	}
+	# Bayraktar TB2 drones
+	221 = {
+		small_plane_suicide_airframe_2 = { owner = "SUD" creator = "TUR" amount = 6 version_name = "Bayraktar TB2" }
+		name = "SAF UAV Squadron"
+		start_experience_factor = 0.35
+	}
+}

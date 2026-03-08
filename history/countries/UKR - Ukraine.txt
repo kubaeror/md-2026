@@ -1104,4 +1104,42 @@ capital = 698
 	}
 	set_variable = { term_limit = 1 }
 	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_UKR_war_path
+	complete_national_focus = MD2026_UKR_reconstruction
+	complete_national_focus = MD2026_UKR_defense_industry
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = UKR_invest_in_ministry_of_infrastructure
+	complete_national_focus = UKR_kucha_second_terms
+	complete_national_focus = UKR_legacy_of_the_ukr_ind
+	complete_national_focus = UKR_security_start
+	complete_national_focus = UKR_ukraine_elections
+	complete_national_focus = UKR_war_on_donbass_experience
+	complete_national_focus = UKR_start_war_against_russia
+	complete_national_focus = UKR_our_ukraine_start
+	complete_national_focus = UKR_party_regions_start
+	complete_national_focus = UKR_poroshenko_start
+	complete_national_focus = UKR_cpu_start
+	complete_national_focus = UKR_spu_start
+	complete_national_focus = UKR_vitrenko_party
+	complete_national_focus = UKR_Ukraine_Always_Right
+	complete_national_focus = UKR_border_guard
+	complete_national_focus = UKR_hur
+	complete_national_focus = UKR_sbu_start
+	complete_national_focus = UKR_reform_vv
+	complete_national_focus = UKR_bronetank
+	complete_national_focus = UKR_kraz
+	complete_national_focus = UKR_naftogaz
+	complete_national_focus = UKR_national_steel_companies
+	complete_national_focus = UKR_pivdenmash_udo
+	complete_national_focus = UKR_ukrainian_railways
+	complete_national_focus = UKR_ukrainian_armed_forces_reform
+	complete_national_focus = UKR_hur_expanded
+	complete_national_focus = UKR_inter_legion
+	complete_national_focus = UKR_tro_expanded
+	complete_national_focus = UKR_reform_national_guard
+	complete_national_focus = UKR_reform_programm
+	complete_national_focus = UKR_reform_vsu
 }

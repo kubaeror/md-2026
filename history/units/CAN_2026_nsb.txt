@@ -2,7 +2,7 @@
 # Canada 2026 — Small professional force
 
 division_template = {
-	name = "Mechanized Brigade Group 2026"
+	name = "Mechanized Brigade Group"
 	regiments = {
 		Arm_Inf_Bat = { x = 0 y = 0 }
 		Arm_Inf_Bat = { x = 0 y = 1 }
@@ -19,7 +19,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Light Infantry Battalion Group 2026"
+	name = "Light Infantry Battalion Group"
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
@@ -33,7 +33,7 @@ division_template = {
 }
 
 division_template = {
-	name = "CANSOF 2026"
+	name = "CANSOF"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -46,7 +46,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Reserve Brigade Group 2026"
+	name = "Reserve Brigade Group"
 	regiments = {
 		Militia_Bat = { x = 0 y = 0 }
 		Militia_Bat = { x = 0 y = 1 }
@@ -64,7 +64,7 @@ units = {
 	division = {
 		name = "1 Canadian Mechanized Brigade Group"
 		location = 3010
-		division_template = "Mechanized Brigade Group 2026"
+		division_template = "Mechanized Brigade Group"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.9
 	}
@@ -72,7 +72,7 @@ units = {
 	division = {
 		name = "2 Canadian Mechanized Brigade Group"
 		location = 4872
-		division_template = "Mechanized Brigade Group 2026"
+		division_template = "Mechanized Brigade Group"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.9
 	}
@@ -80,7 +80,7 @@ units = {
 	division = {
 		name = "5 Canadian Mechanized Brigade Group"
 		location = 1408
-		division_template = "Mechanized Brigade Group 2026"
+		division_template = "Mechanized Brigade Group"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.9
 	}
@@ -88,7 +88,7 @@ units = {
 	division = {
 		name = "3rd Canadian Division (Light)"
 		location = 3706
-		division_template = "Light Infantry Battalion Group 2026"
+		division_template = "Light Infantry Battalion Group"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.85
 	}
@@ -96,7 +96,7 @@ units = {
 	division = {
 		name = "CANSOFCOM"
 		location = 4872
-		division_template = "CANSOF 2026"
+		division_template = "CANSOF"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.9
 	}
@@ -104,37 +104,77 @@ units = {
 	division = {
 		name = "31 Canadian Brigade Group (Reserve)"
 		location = 3706
-		division_template = "Reserve Brigade Group 2026"
+		division_template = "Reserve Brigade Group"
 		start_experience_factor = 0.15
 		start_equipment_factor = 0.6
 	}
 	division = {
 		name = "32 Canadian Brigade Group (Reserve)"
 		location = 9634
-		division_template = "Reserve Brigade Group 2026"
+		division_template = "Reserve Brigade Group"
 		start_experience_factor = 0.15
 		start_equipment_factor = 0.6
 	}
 	division = {
 		name = "33 Canadian Brigade Group (Reserve)"
 		location = 722
-		division_template = "Reserve Brigade Group 2026"
+		division_template = "Reserve Brigade Group"
 		start_experience_factor = 0.15
 		start_equipment_factor = 0.6
 	}
 	division = {
 		name = "34 Canadian Brigade Group (Reserve)"
 		location = 3775
-		division_template = "Reserve Brigade Group 2026"
+		division_template = "Reserve Brigade Group"
 		start_experience_factor = 0.15
 		start_equipment_factor = 0.6
 	}
 	division = {
 		name = "38 Canadian Brigade Group (Reserve)"
 		location = 3010
-		division_template = "Reserve Brigade Group 2026"
+		division_template = "Reserve Brigade Group"
 		start_experience_factor = 0.15
 		start_equipment_factor = 0.6
+	}
+
+	##### Royal Canadian Navy #####
+
+	fleet = {
+		name = "Maritime Forces Atlantic"
+		naval_base = 7361
+		task_force = {
+			name = "Maritime Forces Atlantic"
+			location = 7361
+			ship = { name = "HMCS Halifax (FFH-330)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Charlottetown (FFH-339)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Fredericton (FFH-337)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Montreal (FFH-336)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS St. John's (FFH-340)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Toronto (FFH-333)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Ville de Québec (FFH-332)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Windsor (SSK-877)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = CAN version_name = "Victoria Class" } } }
+			ship = { name = "HMCS Corner Brook (SSK-878)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = CAN version_name = "Victoria Class" } } }
+			ship = { name = "HMCS Harry DeWolf (AOPV-430)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN version_name = "Harry DeWolf Class" } } }
+			ship = { name = "HMCS Margaret Brooke (AOPV-431)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN version_name = "Harry DeWolf Class" } } }
+		}
+	}
+
+	fleet = {
+		name = "Maritime Forces Pacific"
+		naval_base = 7259
+		task_force = {
+			name = "Maritime Forces Pacific"
+			location = 7259
+			ship = { name = "HMCS Calgary (FFH-335)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Ottawa (FFH-341)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Regina (FFH-334)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Vancouver (FFH-331)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Winnipeg (FFH-338)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Victoria (SSK-876)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = CAN version_name = "Victoria Class" } } }
+			ship = { name = "HMCS Chicoutimi (SSK-879)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = CAN version_name = "Victoria Class" } } }
+			ship = { name = "HMCS Max Bernays (AOPV-432)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN version_name = "Harry DeWolf Class" } } }
+			ship = { name = "HMCS William Hall (AOPV-433)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN version_name = "Harry DeWolf Class" } } }
+		}
 	}
 }
 
@@ -143,5 +183,45 @@ instant_effect = {
 		type = infantry_weapons5
 		amount = 2000
 		producer = CAN
+	}
+}
+
+##### Royal Canadian Air Force #####
+
+air_wings = {
+	# CFB Cold Lake (Alberta)
+	755 = {
+		small_plane_strike_airframe_2 = { owner = "CAN" creator = "USA" amount = 30 version_name = "CF-188 Hornet" }
+		name = "4 Wing Cold Lake"
+		start_experience_factor = 0.45
+	}
+	# CFB Bagotville (Quebec)
+	762 = {
+		small_plane_strike_airframe_2 = { owner = "CAN" creator = "USA" amount = 25 version_name = "CF-188 Hornet" }
+		name = "3 Wing Bagotville"
+		start_experience_factor = 0.45
+	}
+	# CFB Trenton (Ontario)
+	763 = {
+		large_plane_air_transport_airframe_1 = { owner = "CAN" creator = "USA" amount = 17 version_name = "CC-130J Hercules" }
+		name = "8 Wing Trenton"
+		start_experience_factor = 0.4
+	}
+	763 = {
+		large_plane_air_transport_airframe_2 = { owner = "CAN" creator = "USA" amount = 5 version_name = "CC-177 Globemaster III" }
+		name = "429 Transport Squadron"
+		start_experience_factor = 0.45
+	}
+	# CFB Greenwood (Nova Scotia)
+	760 = {
+		large_plane_maritime_patrol_airframe_1 = { owner = "CAN" creator = "USA" amount = 5 version_name = "CP-140 Aurora" }
+		name = "14 Wing Greenwood"
+		start_experience_factor = 0.45
+	}
+	# CFB Comox (British Columbia)
+	754 = {
+		large_plane_maritime_patrol_airframe_1 = { owner = "CAN" creator = "USA" amount = 5 version_name = "CP-140 Aurora" }
+		name = "19 Wing Comox"
+		start_experience_factor = 0.45
 	}
 }

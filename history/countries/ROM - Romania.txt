@@ -1089,4 +1089,21 @@ capital = 150
 	add_ideas = {
 		md2026_rom_frontline_nato
 	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = ROM_armed_forces
+	complete_national_focus = ROM_death_of_the_king
+	complete_national_focus = ROM_economy
+	complete_national_focus = ROM_political_scene
+	complete_national_focus = ROM_air_force
+	complete_national_focus = ROM_army
+	complete_national_focus = ROM_navy
+	complete_national_focus = ROM_foundation_of_the_romanian_it_sector
+	complete_national_focus = ROM_natural_resources
+	complete_national_focus = ROM_problem_of_aging_infrastructure
+	complete_national_focus = ROM_reverse_industrial_decline
+	complete_national_focus = ROM_revitalize_romanian_agriculture
+	complete_national_focus = ROM_issue_of_corruption
+	complete_national_focus = ROM_political_parties
+	complete_national_focus = ROM_queen_margareta
 }

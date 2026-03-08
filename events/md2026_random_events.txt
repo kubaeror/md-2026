@@ -1,0 +1,398 @@
+###################################
+# MD2026 Random Events
+# MTTH-based crises, breakthroughs, incidents
+###################################
+
+add_namespace = md2026_random
+
+###################################
+# md2026_random.1 - Regional Crisis: Border Incident
+###################################
+country_event = {
+	id = md2026_random.1
+	title = md2026_random.1.t
+	desc = md2026_random.1.d
+	picture = GFX_report_event_generic_military
+
+	trigger = {
+		has_global_flag = md2026_initialized
+		any_neighbor_country = {
+			OR = {
+				has_war = yes
+				has_offensive_war = yes
+			}
+		}
+		NOT = { has_country_flag = md2026_recent_border_incident }
+		is_ai = no
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			factor = 0.5
+			any_neighbor_country = { has_war_with = ROOT }
+		}
+	}
+
+	immediate = {
+		set_country_flag = { flag = md2026_recent_border_incident days = 365 value = 1 }
+	}
+
+	# Diplomatic response
+	option = {
+		name = md2026_random.1.o1
+		add_political_power = -25
+		add_stability = 0.03
+		ai_chance = { base = 60 }
+	}
+
+	# Military posturing
+	option = {
+		name = md2026_random.1.o2
+		add_war_support = 0.05
+		add_stability = -0.03
+		army_experience = 5
+		ai_chance = { base = 40 }
+	}
+}
+
+###################################
+# md2026_random.2 - Natural Disaster
+###################################
+country_event = {
+	id = md2026_random.2
+	title = md2026_random.2.t
+	desc = md2026_random.2.d
+	picture = GFX_report_event_generic_diplomacy
+
+	trigger = {
+		has_global_flag = md2026_initialized
+		NOT = { has_country_flag = md2026_recent_disaster }
+	}
+
+	mean_time_to_happen = {
+		months = 72
+	}
+
+	immediate = {
+		set_country_flag = { flag = md2026_recent_disaster days = 365 value = 1 }
+	}
+
+	# Emergency relief
+	option = {
+		name = md2026_random.2.o1
+		add_political_power = -50
+		add_stability = -0.05
+		random_owned_controlled_state = {
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+		}
+		ai_chance = { base = 70 }
+	}
+
+	# International aid appeal
+	option = {
+		name = md2026_random.2.o2
+		add_political_power = -25
+		add_stability = -0.03
+		every_country = {
+			limit = {
+				is_major = yes
+				NOT = { tag = ROOT }
+				NOT = { has_war_with = ROOT }
+			}
+			add_opinion_modifier = { target = ROOT modifier = md2026_diplomatic_outreach }
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+###################################
+# md2026_random.3 - Technology Breakthrough
+###################################
+country_event = {
+	id = md2026_random.3
+	title = md2026_random.3.t
+	desc = md2026_random.3.d
+	picture = GFX_report_event_generic_diplomacy
+
+	trigger = {
+		has_global_flag = md2026_initialized
+		is_major = yes
+		NOT = { has_country_flag = md2026_recent_tech_breakthrough }
+	}
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.5
+			num_of_civilian_factories > 30
+		}
+	}
+
+	immediate = {
+		set_country_flag = { flag = md2026_recent_tech_breakthrough days = 730 value = 1 }
+	}
+
+	# Invest in commercialization
+	option = {
+		name = md2026_random.3.o1
+		add_political_power = -25
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = CAT_computing_tech
+		}
+		add_stability = 0.03
+		ai_chance = { base = 60 }
+	}
+
+	# Military applications
+	option = {
+		name = md2026_random.3.o2
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = CAT_land_doctrine
+		}
+		army_experience = 15
+		ai_chance = { base = 40 }
+	}
+}
+
+###################################
+# md2026_random.4 - Terrorism Incident
+###################################
+country_event = {
+	id = md2026_random.4
+	title = md2026_random.4.t
+	desc = md2026_random.4.d
+	picture = GFX_report_event_generic_military
+
+	trigger = {
+		has_global_flag = md2026_initialized
+		NOT = { has_country_flag = md2026_recent_terrorism }
+		OR = {
+			is_major = yes
+			is_in_faction_with = USA
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 96
+		modifier = {
+			factor = 0.5
+			has_idea = md2026_fra_social_unrest
+		}
+		modifier = {
+			factor = 0.7
+			any_neighbor_country = { has_war = yes }
+		}
+	}
+
+	immediate = {
+		set_country_flag = { flag = md2026_recent_terrorism days = 365 value = 1 }
+	}
+
+	# Security crackdown
+	option = {
+		name = md2026_random.4.o1
+		add_stability = -0.08
+		add_war_support = 0.10
+		add_political_power = -25
+		ai_chance = { base = 60 }
+	}
+
+	# Unity and resilience
+	option = {
+		name = md2026_random.4.o2
+		add_stability = -0.05
+		add_war_support = 0.05
+		add_political_power = 25
+		ai_chance = { base = 40 }
+	}
+}
+
+###################################
+# md2026_random.5 - Pandemic Scare
+###################################
+country_event = {
+	id = md2026_random.5
+	title = md2026_random.5.t
+	desc = md2026_random.5.d
+	picture = GFX_report_event_generic_diplomacy
+
+	trigger = {
+		has_global_flag = md2026_initialized
+		NOT = { has_global_flag = md2026_pandemic_scare }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	immediate = {
+		set_global_flag = md2026_pandemic_scare
+	}
+
+	# Lockdown measures
+	option = {
+		name = md2026_random.5.o1
+		add_stability = -0.10
+		add_political_power = -50
+		add_war_support = -0.10
+		ai_chance = { base = 50 }
+	}
+
+	# Keep economy open
+	option = {
+		name = md2026_random.5.o2
+		add_stability = -0.05
+		add_war_support = -0.05
+		ai_chance = { base = 50 }
+	}
+}
+
+###################################
+# md2026_random.6 - Economic Shock: Market Crash
+###################################
+country_event = {
+	id = md2026_random.6
+	title = md2026_random.6.t
+	desc = md2026_random.6.d
+	picture = GFX_report_event_generic_diplomacy
+
+	trigger = {
+		has_global_flag = md2026_initialized
+		is_major = yes
+		NOT = { has_country_flag = md2026_recent_market_crash }
+	}
+
+	mean_time_to_happen = {
+		months = 84
+		modifier = {
+			factor = 0.5
+			has_war = yes
+		}
+	}
+
+	immediate = {
+		set_country_flag = { flag = md2026_recent_market_crash days = 730 value = 1 }
+	}
+
+	# Bailout package
+	option = {
+		name = md2026_random.6.o1
+		add_political_power = -75
+		add_stability = -0.05
+		ai_chance = { base = 50 }
+	}
+
+	# Let market correct
+	option = {
+		name = md2026_random.6.o2
+		add_stability = -0.10
+		add_political_power = 25
+		ai_chance = { base = 50 }
+	}
+}
+
+###################################
+# md2026_random.7 - Cyber Attack on Critical Infrastructure
+###################################
+country_event = {
+	id = md2026_random.7
+	title = md2026_random.7.t
+	desc = md2026_random.7.d
+	picture = GFX_report_event_generic_diplomacy
+
+	trigger = {
+		has_global_flag = md2026_initialized
+		NOT = { has_country_flag = md2026_recent_cyber_attack }
+		OR = {
+			is_major = yes
+			is_in_faction_with = USA
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.5
+			has_idea = md2026_cyber_capability
+		}
+	}
+
+	immediate = {
+		set_country_flag = { flag = md2026_recent_cyber_attack days = 365 value = 1 }
+	}
+
+	# Invest in cyber defense
+	option = {
+		name = md2026_random.7.o1
+		add_political_power = -50
+		add_stability = -0.03
+		ai_chance = { base = 60 }
+	}
+
+	# Retaliatory cyber operations
+	option = {
+		name = md2026_random.7.o2
+		add_political_power = -25
+		add_war_support = 0.03
+		ai_chance = { base = 40 }
+	}
+}
+
+###################################
+# md2026_random.8 - Mass Protests
+###################################
+country_event = {
+	id = md2026_random.8
+	title = md2026_random.8.t
+	desc = md2026_random.8.d
+	picture = GFX_report_event_generic_diplomacy
+
+	trigger = {
+		has_global_flag = md2026_initialized
+		has_stability < 0.4
+		NOT = { has_country_flag = md2026_recent_protests }
+	}
+
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			has_stability < 0.25
+		}
+	}
+
+	immediate = {
+		set_country_flag = { flag = md2026_recent_protests days = 180 value = 1 }
+	}
+
+	# Make concessions
+	option = {
+		name = md2026_random.8.o1
+		add_stability = 0.05
+		add_political_power = -50
+		ai_chance = { base = 50 }
+	}
+
+	# Crack down
+	option = {
+		name = md2026_random.8.o2
+		add_stability = -0.05
+		add_war_support = 0.03
+		add_political_power = 25
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 2
+				NOT = { has_government = democratic }
+			}
+		}
+	}
+}

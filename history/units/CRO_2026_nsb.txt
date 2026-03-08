@@ -94,6 +94,23 @@ units = {
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.80
 	}
+
+	##### Hrvatska Ratna Mornarica (Croatian Navy) #####
+	fleet = {
+		name = "Hrvatska Ratna Mornarica"
+		naval_base = 3924		# Split
+		task_force = {
+			name = "Flotila"
+			location = 3924
+			# Helsinki-class missile boats (ex-Finnish)
+			ship = { name = "RTOP-41 Vukovar" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = CRO version_name = "Helsinki class" } } }
+			ship = { name = "RTOP-42 Dubrovnik" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = CRO version_name = "Helsinki class" } } }
+			# Kralj-class patrol vessels
+			ship = { name = "OB-51 Omiš" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = CRO version_name = "Kralj class" } } }
+			ship = { name = "OB-52 Šibenik" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = CRO version_name = "Kralj class" } } }
+			ship = { name = "OB-53 Cavtat" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = CRO version_name = "Kralj class" } } }
+		}
+	}
 }
 
 instant_effect = {
@@ -101,5 +118,15 @@ instant_effect = {
 		type = infantry_weapons5
 		amount = 2000
 		producer = CRO
+	}
+}
+
+##### Hrvatsko Ratno Zrakoplovstvo (Croatian Air Force) #####
+air_wings = {
+	# Rafale F3-R (delivered from France 2024-2025)
+	126 = {
+		medium_plane_fighter_airframe_2 = { owner = "CRO" creator = "FRA" amount = 12 version_name = "Rafale F3-R" }
+		name = "Eskadrila Lovaca"
+		start_experience_factor = 0.4
 	}
 }

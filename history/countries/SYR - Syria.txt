@@ -470,4 +470,50 @@
 	add_ideas = {
 		md2026_syr_post_assad
 	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_SYR_new_syria
+	complete_national_focus = MD2026_SYR_national_governance
+	complete_national_focus = MD2026_SYR_reconstruction
+	complete_national_focus = MD2026_SYR_refugee_return
+	complete_national_focus = MD2026_SYR_infrastructure_rebuild
+	complete_national_focus = MD2026_SYR_security_consolidation
+	complete_national_focus = MD2026_SYR_new_army
+	complete_national_focus = MD2026_SYR_kurdish_question
+	complete_national_focus = MD2026_SYR_international_recognition
+	complete_national_focus = MD2026_SYR_western_engagement
+	complete_national_focus = MD2026_SYR_arab_reintegration
+	complete_national_focus = MD2026_SYR_economic_recovery
+	complete_national_focus = MD2026_SYR_foreign_investment
+	complete_national_focus = MD2026_SYR_agriculture_revival
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = SYR_death_of_hafez_al_assad
+	complete_national_focus = SYR_diplomatic_effort
+	complete_national_focus = SYR_economic_improvements
+	complete_national_focus = SYR_military_reform
+	complete_national_focus = SYR_affirm_presence_in_lebanon
+	complete_national_focus = SYR_concentrate_on_lebanon
+	complete_national_focus = SYR_affirm_claims_on_golan
+	complete_national_focus = SYR_assassinate_lebanese_prime_minister
+	complete_national_focus = SYR_bashar_al_assad
+	complete_national_focus = SYR_conscription_army
+	complete_national_focus = SYR_decrease_agricultural_subsidies
+	complete_national_focus = SYR_expand_tartus_base
+	complete_national_focus = SYR_harbor_extremists
+	complete_national_focus = SYR_invest_in_lebanon
+	complete_national_focus = SYR_iranian_sponsorship
+	complete_national_focus = SYR_legalise_private_banking
+	complete_national_focus = SYR_meeting_with_kings
+	complete_national_focus = SYR_military_production
+	complete_national_focus = SYR_reaffirm_claims_on_hatay
+	complete_national_focus = SYR_reduce_presence
+	complete_national_focus = SYR_reduced_political_liberty
+	complete_national_focus = SYR_relocate_lebanese_industry
+	complete_national_focus = SYR_repair_relations_with_iraq
+	complete_national_focus = SYR_replace_ghazi_kanaan
+	complete_national_focus = SYR_support_hezbollah
+	complete_national_focus = SYR_technological_investments
+	complete_national_focus = SYR_trade_deal_with_egypt
+	complete_national_focus = SYR_withdraw_from_lebanon
 }

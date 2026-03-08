@@ -87,6 +87,39 @@ units = {
 		start_experience_factor = 0.65
 		start_equipment_factor = 0.90
 	}
+
+	##### Koninklijke Marine (Royal Netherlands Navy) #####
+	fleet = {
+		name = "Koninklijke Marine"
+		naval_base = 14945		# Rotterdam / Den Helder
+		task_force = {
+			name = "Eskader"
+			location = 14945
+			# De Zeven Provinciën-class LCF frigates
+			ship = { name = "HNLMS De Zeven Provinciën (F802)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = HOL version_name = "De Zeven Provinciën class" } } }
+			ship = { name = "HNLMS Tromp (F803)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = HOL version_name = "De Zeven Provinciën class" } } }
+			ship = { name = "HNLMS De Ruyter (F804)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = HOL version_name = "De Zeven Provinciën class" } } }
+			ship = { name = "HNLMS Evertsen (F805)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = HOL version_name = "De Zeven Provinciën class" } } }
+			# Karel Doorman JSS
+			ship = { name = "HNLMS Karel Doorman (A833)" definition = helicopter_operator equipment = { helicopter_operator_hull_2 = { amount = 1 owner = HOL version_name = "Karel Doorman class" } } }
+		}
+		task_force = {
+			name = "Holland-klasse Patrouilleschepen"
+			location = 14945
+			# Holland-class OPVs
+			ship = { name = "HNLMS Holland (P840)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = HOL version_name = "Holland class" } } }
+			ship = { name = "HNLMS Zeeland (P841)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = HOL version_name = "Holland class" } } }
+			ship = { name = "HNLMS Friesland (P842)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = HOL version_name = "Holland class" } } }
+			ship = { name = "HNLMS Groningen (P843)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = HOL version_name = "Holland class" } } }
+		}
+		task_force = {
+			name = "Onderzeedienst"
+			location = 14945
+			# Walrus-class submarines
+			ship = { name = "HNLMS Walrus (S802)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = HOL version_name = "Walrus class" } } }
+			ship = { name = "HNLMS Zeeleeuw (S803)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = HOL version_name = "Walrus class" } } }
+		}
+	}
 }
 
 instant_effect = {
@@ -94,5 +127,33 @@ instant_effect = {
 		type = infantry_weapons5
 		amount = 3000
 		producer = HOL
+	}
+}
+
+##### Koninklijke Luchtmacht (Royal Netherlands Air Force) #####
+air_wings = {
+	# Leeuwarden Air Base - F-35A
+	1169 = {
+		small_plane_strike_airframe_2 = { owner = "HOL" creator = "USA" amount = 26 version_name = "F-35A Lightning II" }
+		name = "322 & 323 Squadron"
+		start_experience_factor = 0.55
+	}
+	# Volkel Air Base - F-35A
+	47 = {
+		small_plane_strike_airframe_2 = { owner = "HOL" creator = "USA" amount = 26 version_name = "F-35A Lightning II" }
+		name = "312 & 313 Squadron"
+		start_experience_factor = 0.55
+	}
+	# MQ-9A Reaper
+	46 = {
+		small_plane_suicide_airframe_2 = { owner = "HOL" creator = "USA" amount = 4 version_name = "MQ-9A Reaper" }
+		name = "306 Squadron"
+		start_experience_factor = 0.5
+	}
+	# C-130H / C-130J Transport
+	46 = {
+		large_plane_air_transport_airframe_1 = { owner = "HOL" creator = "USA" amount = 4 version_name = "C-130H Hercules" }
+		name = "336 Squadron"
+		start_experience_factor = 0.5
 	}
 }

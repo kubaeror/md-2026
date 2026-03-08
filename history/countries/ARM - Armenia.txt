@@ -420,4 +420,49 @@ country_event = {
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = ARM_army
+	complete_national_focus = ARM_defence
+	complete_national_focus = ARM_echoes_of_1999
+	complete_national_focus = ARM_economy_lavash
+	complete_national_focus = ARM_foreseeing_the_prophecy
+	complete_national_focus = ARM_in_between_empires
+	complete_national_focus = ARM_Kocharjan
+	complete_national_focus = ARM_Sargsyan
+	complete_national_focus = ARM_triump_revolution_barhat
+	complete_national_focus = ARM_inner_troops
+	complete_national_focus = ARM_institute_mo_ra
+	complete_national_focus = ARM_intern_cooperat
+	complete_national_focus = ARM_militia
+	complete_national_focus = ARM_vazgen_academy
+	complete_national_focus = ARM_nss
+	complete_national_focus = ARM_police
+	complete_national_focus = ARM_economy_armenian_card
+	complete_national_focus = ARM_economy_grand_candy
+	complete_national_focus = ARM_economy_ml_mining
+	complete_national_focus = ARM_economy_orange
+	complete_national_focus = ARM_economy_techout_mining
+	complete_national_focus = ARM_economy_tobacco
+	complete_national_focus = ARM_economy_tourism
+	complete_national_focus = ARM_economy_wto
+	complete_national_focus = ARM_economy_ycrdi
+	complete_national_focus = ARM_economy_yerevan_ararat_factory
+	complete_national_focus = ARM_economy_yerevan_destiny_brandy
+	complete_national_focus = ARM_economy_yerevan_factori_restore
+	complete_national_focus = ARM_economy_zangezur_copper
+	complete_national_focus = ARM_government_subsid_it_sphere
+	complete_national_focus = ARM_higher_educ_sph_development
+	complete_national_focus = ARM_friendship_syria
+	complete_national_focus = ARM_gods_land
+	complete_national_focus = ARM_levons_legacy
+	complete_national_focus = ARM_mithridates_legacy
+	complete_national_focus = ARM_northern_neighbor
+	complete_national_focus = ARM_polish_cherries
+	complete_national_focus = ARM_post_ussr_partnersh
+	complete_national_focus = ARM_relat_in_kurdistan
+	complete_national_focus = ARM_relations_with_america
+	complete_national_focus = ARM_relations_with_europe
+	complete_national_focus = ARM_relations_with_iran
+	complete_national_focus = ARM_relations_with_russia
 }

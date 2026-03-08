@@ -1,214 +1,573 @@
-### MD2026 Germany Focus Branch ###
-# Shared focuses for Germany's 2026 focus tree branch
-# Root focus at absolute x=38, y=0
-# Gated by date > 2025.12.31
+###################################
+# MD2026 Germany (GER) Focus Tree
+# 2026 Shared Focuses - Zeitenwende 2026
+# 26 focuses: 1 root + 5 branches + capstone
+###################################
 
 shared_focus = {
 	id = MD2026_GER_zeitenwende_2026
 	icon = bundeswehr_reserve
 	x = 38
 	y = 0
+	cost = 3.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	allow_branch = {
 		original_tag = GER
 		date > 2025.12.31
 	}
-	cost = 3.6
-
-	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_zeitenwende_2026"
-		add_political_power = 75
+		add_political_power = 100
 		add_stability = 0.05
 	}
-	ai_will_do = { base = 100 }
+	ai_will_do = {
+		factor = 1
+	}
 }
 
-### EUROPEAN ARMY BRANCH (left) ###
-
+### B1: Bundeswehr Modernization (x=-6) ###
 shared_focus = {
-	id = MD2026_GER_european_army
-	icon = coalition_army
-	x = -3
+	id = MD2026_GER_bundeswehr_reform
+	icon = bundeswehr_help
+	x = -6
 	y = 1
-	relative_position_id = MD2026_GER_zeitenwende_2026
-	prerequisite = { focus = MD2026_GER_zeitenwende_2026 }
-	cost = 12.9
-
+	cost = 8.6
 	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_GER_zeitenwende_2026 }
+	relative_position_id = MD2026_GER_zeitenwende_2026
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_european_army"
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_bundeswehr_reform"
 		army_experience = 25
 		add_war_support = 0.10
-		add_political_power = -50
 	}
-	ai_will_do = { base = 60 }
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 shared_focus = {
-	id = MD2026_GER_bundeswehr_expansion
-	icon = bundeswehr_help
+	id = MD2026_GER_leopard_program
+	icon = GFX_goal_generic_build_tank
 	x = -1
 	y = 1
-	relative_position_id = MD2026_GER_european_army
-	prerequisite = { focus = MD2026_GER_european_army }
 	cost = 8.6
-
 	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_GER_bundeswehr_reform }
+	relative_position_id = MD2026_GER_bundeswehr_reform
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_bundeswehr_expansion"
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_leopard_program"
+		add_tech_bonus = {
+			name = MD2026_GER_leopard_program
+			bonus = 1.0
+			uses = 2
+			category = CAT_armor
+		}
 		army_experience = 25
-		add_manpower = 50000
-		add_war_support = 0.05
 	}
-	ai_will_do = { base = 70 }
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 shared_focus = {
-	id = MD2026_GER_nato_2_percent
-	icon = blr_nato_cooperation
+	id = MD2026_GER_eurofighter_upgrade
+	icon = GFX_goal_generic_air_fighter2
 	x = 1
 	y = 1
-	relative_position_id = MD2026_GER_european_army
-	prerequisite = { focus = MD2026_GER_european_army }
 	cost = 8.6
-
-	search_filters = { FOCUS_FILTER_EXPENDITURE }
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_GER_bundeswehr_reform }
+	relative_position_id = MD2026_GER_bundeswehr_reform
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_nato_2_percent"
-		add_political_power = -25
-		add_stability = -0.03
-		add_war_support = 0.05
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_eurofighter_upgrade"
+		air_experience = 25
+		add_tech_bonus = {
+			name = MD2026_GER_eurofighter_upgrade
+			bonus = 1.0
+			uses = 2
+			category = CAT_l_fighter
+		}
 	}
-	ai_will_do = { base = 50 }
+	ai_will_do = {
+		factor = 1
+	}
 }
 
-### ENERGY INDEPENDENCE BRANCH (center) ###
+shared_focus = {
+	id = MD2026_GER_european_army_corps
+	icon = coalition_army
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_GER_leopard_program }
+	relative_position_id = MD2026_GER_leopard_program
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_european_army_corps"
+		add_manpower = 50000
+		add_war_support = 0.05
+		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
+		FRA = { add_opinion_modifier = { target = GER modifier = md2026_improved_relations } }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
 shared_focus = {
-	id = MD2026_GER_energy_independence
+	id = MD2026_GER_air_defense_shield
+	icon = GFX_goal_generic_air_defense
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_GER_eurofighter_upgrade }
+	relative_position_id = MD2026_GER_eurofighter_upgrade
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_air_defense_shield"
+		add_tech_bonus = {
+			name = MD2026_GER_air_defense_shield
+			bonus = 1.0
+			uses = 2
+			category = CAT_aa
+		}
+		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B2: NATO Commitment (x=-3, ME) ###
+shared_focus = {
+	id = MD2026_GER_nato_commitment
+	icon = blr_nato_cooperation
+	x = -3
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_GER_zeitenwende_2026 }
+	relative_position_id = MD2026_GER_zeitenwende_2026
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_nato_commitment"
+		add_political_power = 50
+		add_war_support = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GER_atlantic_solidarity
+	icon = align_to_usa
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_GER_nato_commitment }
+	relative_position_id = MD2026_GER_nato_commitment
+	mutually_exclusive = { focus = MD2026_GER_european_defense_pillar }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_atlantic_solidarity"
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		USA = { add_opinion_modifier = { target = GER modifier = md2026_improved_relations } }
+		add_war_support = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GER_european_defense_pillar
+	icon = EU_reform
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_GER_nato_commitment }
+	relative_position_id = MD2026_GER_nato_commitment
+	mutually_exclusive = { focus = MD2026_GER_atlantic_solidarity }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_european_defense_pillar"
+		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
+		FRA = { add_opinion_modifier = { target = GER modifier = md2026_improved_relations } }
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GER_defense_spending
+	icon = GFX_goal_generic_construct_mil_factory
+	x = 0
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_EXPENDITURE }
+	prerequisite = { focus = MD2026_GER_atlantic_solidarity focus = MD2026_GER_european_defense_pillar }
+	relative_position_id = MD2026_GER_nato_commitment
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_defense_spending"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+		}
+		add_political_power = -25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B3: Energy Transition (x=0) ###
+shared_focus = {
+	id = MD2026_GER_energy_transition
 	icon = BRA_renewable_energy_funds
 	x = 0
 	y = 1
-	relative_position_id = MD2026_GER_zeitenwende_2026
-	prerequisite = { focus = MD2026_GER_zeitenwende_2026 }
 	cost = 8.6
-
 	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_GER_zeitenwende_2026 }
+	relative_position_id = MD2026_GER_zeitenwende_2026
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_energy_independence"
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_energy_transition"
 		add_political_power = 50
 		add_stability = 0.03
 	}
-	ai_will_do = { base = 80 }
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 shared_focus = {
-	id = MD2026_GER_renewables_push
+	id = MD2026_GER_renewables_expansion
 	icon = green_projects
 	x = -1
 	y = 1
-	relative_position_id = MD2026_GER_energy_independence
-	prerequisite = { focus = MD2026_GER_energy_independence }
-	mutually_exclusive = { focus = MD2026_GER_nuclear_revival }
 	cost = 8.6
-
 	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_GER_energy_transition }
+	relative_position_id = MD2026_GER_energy_transition
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_renewables_push"
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_renewables_expansion"
 		add_stability = 0.05
-		add_political_power = 25
-	}
-	ai_will_do = { base = 60 }
-}
-
-shared_focus = {
-	id = MD2026_GER_nuclear_revival
-	icon = nuclear_energy
-	x = 1
-	y = 1
-	relative_position_id = MD2026_GER_energy_independence
-	prerequisite = { focus = MD2026_GER_energy_independence }
-	mutually_exclusive = { focus = MD2026_GER_renewables_push }
-	cost = 8.6
-
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_nuclear_revival"
-		add_stability = -0.05
-		add_political_power = -25
 		random_owned_controlled_state = {
-			limit = { is_core_of = GER }
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
 			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
 		}
 	}
-	ai_will_do = { base = 40 }
+	ai_will_do = {
+		factor = 1
+	}
 }
 
-### EU EXPANSION BRANCH (right) ###
+shared_focus = {
+	id = MD2026_GER_lng_terminals
+	icon = GFX_goal_generic_oil_refinery
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_GER_energy_transition }
+	relative_position_id = MD2026_GER_energy_transition
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_lng_terminals"
+		add_resource = { type = oil amount = 5 state = 56 }
+		add_political_power = 25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
 shared_focus = {
-	id = MD2026_GER_eu_expansion
+	id = MD2026_GER_hydrogen_economy
+	icon = GFX_focus_research
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	prerequisite = { focus = MD2026_GER_renewables_expansion }
+	relative_position_id = MD2026_GER_renewables_expansion
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_hydrogen_economy"
+		add_tech_bonus = {
+			name = MD2026_GER_hydrogen_economy
+			bonus = 1.0
+			uses = 2
+			category = CAT_computing_tech
+		}
+		add_stability = 0.03
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GER_industrial_resilience
+	icon = GFX_goal_generic_construct_civ_factory
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_GER_lng_terminals }
+	relative_position_id = MD2026_GER_lng_terminals
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_industrial_resilience"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B4: EU Leadership (x=3) ###
+shared_focus = {
+	id = MD2026_GER_eu_leadership
 	icon = eu_investments
 	x = 3
 	y = 1
-	relative_position_id = MD2026_GER_zeitenwende_2026
-	prerequisite = { focus = MD2026_GER_zeitenwende_2026 }
 	cost = 8.6
-
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_GER_zeitenwende_2026 }
+	relative_position_id = MD2026_GER_zeitenwende_2026
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_eu_expansion"
-		add_political_power = 50
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_eu_leadership"
+		add_political_power = 75
 		add_stability = 0.03
 	}
-	ai_will_do = { base = 70 }
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 shared_focus = {
-	id = MD2026_GER_ukraine_eu_accession
+	id = MD2026_GER_eu_enlargement
 	icon = EU_reform
 	x = -1
 	y = 1
-	relative_position_id = MD2026_GER_eu_expansion
-	prerequisite = { focus = MD2026_GER_eu_expansion }
-	cost = 12.9
-
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_GER_eu_leadership }
+	relative_position_id = MD2026_GER_eu_leadership
 	available = {
 		UKR = { NOT = { has_war = yes } }
 	}
-
-	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_ukraine_eu_accession"
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_eu_enlargement"
 		add_political_power = 75
 		add_stability = 0.05
-		add_opinion_modifier = { target = UKR modifier = improve_relation }
-		reverse_add_opinion_modifier = { target = UKR modifier = improve_relation }
+		add_opinion_modifier = { target = UKR modifier = md2026_improved_relations }
+		UKR = { add_opinion_modifier = { target = GER modifier = md2026_improved_relations } }
 	}
-	ai_will_do = { base = 50 }
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 shared_focus = {
-	id = MD2026_GER_balkans_integration
-	icon = nato_nation
+	id = MD2026_GER_franco_german_engine
+	icon = GFX_goal_generic_alliance
 	x = 1
 	y = 1
-	relative_position_id = MD2026_GER_eu_expansion
-	prerequisite = { focus = MD2026_GER_eu_expansion }
 	cost = 8.6
-
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_GER_eu_leadership }
+	relative_position_id = MD2026_GER_eu_leadership
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_balkans_integration"
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_franco_german_engine"
+		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
+		FRA = { add_opinion_modifier = { target = GER modifier = md2026_improved_relations } }
 		add_political_power = 50
-		add_opinion_modifier = { target = SER modifier = improve_relation }
-		add_opinion_modifier = { target = BOS modifier = improve_relation }
-		add_opinion_modifier = { target = ALB modifier = improve_relation }
 	}
-	ai_will_do = { base = 40 }
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GER_balkans_accession
+	icon = nato_nation
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_GER_eu_enlargement }
+	relative_position_id = MD2026_GER_eu_enlargement
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_balkans_accession"
+		add_opinion_modifier = { target = SER modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = BOS modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = ALB modifier = md2026_improved_relations }
+		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GER_eu_defense_fund
+	icon = GFX_goal_generic_military_deal
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_GER_franco_german_engine }
+	relative_position_id = MD2026_GER_franco_german_engine
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_eu_defense_fund"
+		add_war_support = 0.05
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### B5: Economic & Technology (x=6) ###
+shared_focus = {
+	id = MD2026_GER_wirtschaftswunder
+	icon = GFX_goal_generic_consumer_goods
+	x = 6
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	prerequisite = { focus = MD2026_GER_zeitenwende_2026 }
+	relative_position_id = MD2026_GER_zeitenwende_2026
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_wirtschaftswunder"
+		add_research_slot = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GER_ai_leadership
+	icon = GFX_goal_generic_scientific_exchange
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	prerequisite = { focus = MD2026_GER_wirtschaftswunder }
+	relative_position_id = MD2026_GER_wirtschaftswunder
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_ai_leadership"
+		add_tech_bonus = {
+			name = MD2026_GER_ai_leadership
+			bonus = 1.0
+			uses = 2
+			category = CAT_computing_tech
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GER_mittelstand_innovation
+	icon = GFX_goal_generic_construct_civ_factory
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	prerequisite = { focus = MD2026_GER_wirtschaftswunder }
+	relative_position_id = MD2026_GER_wirtschaftswunder
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_mittelstand_innovation"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GER_digital_sovereignty
+	icon = GFX_goal_generic_secret_weapon
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	prerequisite = { focus = MD2026_GER_ai_leadership }
+	relative_position_id = MD2026_GER_ai_leadership
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_digital_sovereignty"
+		add_political_power = 100
+		add_tech_bonus = {
+			name = MD2026_GER_digital_sovereignty
+			bonus = 1.0
+			uses = 1
+			category = CAT_computing_tech
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GER_green_technology
+	icon = green_projects
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	prerequisite = { focus = MD2026_GER_mittelstand_innovation }
+	relative_position_id = MD2026_GER_mittelstand_innovation
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_green_technology"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+		add_political_power = 50
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Capstone ###
+shared_focus = {
+	id = MD2026_GER_leading_europe
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 5
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_GER_zeitenwende_2026 }
+	prerequisite = { focus = MD2026_GER_european_army_corps focus = MD2026_GER_air_defense_shield }
+	relative_position_id = MD2026_GER_zeitenwende_2026
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GER_leading_europe"
+		add_political_power = 150
+		add_stability = 0.10
+		add_war_support = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
 }

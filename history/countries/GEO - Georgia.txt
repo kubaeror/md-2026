@@ -348,4 +348,28 @@
 	add_ideas = {
 		md2026_geo_eu_aspirations
 	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = GEO_Military
+	complete_national_focus = GEO_geo_elections2003
+	complete_national_focus = GEO_geo_elections2013
+	complete_national_focus = GEO_geopolice
+	complete_national_focus = GEO_money_from_outside
+	complete_national_focus = GEO_shervad_victory
+	complete_national_focus = GEO_whyareyouhere
+	complete_national_focus = GEO_Geo_air_mil
+	complete_national_focus = GEO_Geo_navy_mil
+	complete_national_focus = GEO_kick_russian_troops
+	complete_national_focus = GEO_gergiandream2013
+	complete_national_focus = GEO_bring_back_order
+	complete_national_focus = GEO_budget_deficit
+	complete_national_focus = GEO_electro_problems
+	complete_national_focus = GEO_gas_postavka
+	complete_national_focus = GEO_geo_railway
+	complete_national_focus = GEO_polminmeet
+	complete_national_focus = GEO_tbilisi_aero
+	complete_national_focus = GEO_transit_tax
+	complete_national_focus = GEO_unesco_bablo
+	complete_national_focus = GEO_help_chechens_pankis
+	complete_national_focus = GEO_polt_crisis_aknowl
 }

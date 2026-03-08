@@ -57,9 +57,16 @@ All notable changes to the Millennium Dawn 2026 Rework submod.
 - 11 decision reward ideas
 
 ### Focus Trees (FAZA 8)
-- **13 shared focus trees**: USA, Russia, Ukraine, China, Germany, India, Japan, Turkey, Brazil, Israel, South Korea, Saudi Arabia, Poland
+- **23 shared focus trees**: USA, Russia, Ukraine, China, Germany, India, Japan, Turkey, Brazil, Israel, South Korea, Saudi Arabia, Poland + France, UK, Iran, Italy, North Korea, Canada, Australia, Taiwan, Egypt, Syria
+- **16 expanded trees** with 26 focuses each — 5 branches, mutually exclusive paths, capstone focuses:
+  - Original 10: FRA, ENG, PER, ITA, NKO, CAN, AST, TAI, EGY, SYR
+  - Later expanded 6: GER (Zeitenwende 2026), JAP (Active Defense Era), KOR (Shield of Freedom), ISR (Iron Wall 2026), RAJ (India's Century), TUR (Turkiye's New Era)
+- **7 compact trees** (USA, SOV, UKR, CHI, BRA, SAU, POL) with ~8-12 focuses each
+- **416 new focus nodes** across the 16 expanded trees (26 × 16)
+- **22 base mod focus tree files** copied with `shared_focus` references
+- **Base MD pre-completion**: root + T1 focuses from original MD focus trees pre-completed for all 66 countries (~2105 lines added across all country history files)
+- **md2026_ pre-completion**: root + T1 + non-ME T2 focuses (14 per expanded country) auto-completed in history files
 - Branch gating via `allow_branch` + date check
-- 13 copied original MD focus tree files with `shared_focus` references
 
 ### Events (FAZA 9)
 - **11 event files** with ~75 events total
@@ -72,13 +79,41 @@ All notable changes to the Millennium Dawn 2026 Rework submod.
 - Sanctions, NATO, military modernization, geopolitics, economy
 
 ### Localisation (FAZA 10)
-- 927 English localisation keys
-- Covers all events, focuses, spirits, decisions, bookmarks
+- ~1,600 English localisation keys
+- Covers all events, focuses (including 16 expanded trees), spirits, decisions, bookmarks
 
 ### Order of Battle (FAZA 11 — part)
 - **65 OOB files** with optimized unit templates
 - Tiered deployment matching country military capabilities
 - Custom templates for infantry, armor, mechanized, special forces, naval, air
+
+### OOB Expansion — Fleets, Air Wings & Real Unit Names (30 commits on `dev`)
+
+Complete overhaul of all 65 OOB files to add real-world military detail:
+
+**Template cleanup:**
+- Removed "2026" suffix from all division template names across 23 countries (e.g. `"Armored Brigade 2026"` -> `"Armored Brigade"`)
+
+**Naval forces added (fleets with real ship names and hull numbers):**
+- **Tier 1:** USA (76 ships / 7 fleets), Russia (56 ships / 4 fleets), China (60 ships / 3 fleets, 3 carriers)
+- **Tier 2a:** UK (36 ships, 2 carriers), France (33 ships, 1 carrier), Japan (44 ships), Germany (24 ships), India (40 ships, 2 carriers)
+- **Tier 2b:** Turkey (~30 ships), Poland (8 ships), South Korea (30 ships), Israel (13 ships)
+- **Tier 3a:** Italy (20), SAU (11), EGY (16), PAK (13), UKR (6), NKO (26), PER (11, 2 fleets), BRA (11), TAI (25), AST (21)
+- **Tier 3b:** CAN (22), SPR (18), SAF (10), SWE (9), FIN (9), GRE (15), ROM (6), BRM (7)
+- **Tier 3c-d:** SYR (2), HOL (11), NOR (16), DEN (9), BEL (2), POR (9), BUL (4), CRO (5), UAE (8), LIT (4), LAT (5), EST (3), ALB (2)
+
+**Air wings added (real squadron names, accurate aircraft types, correct creator tags):**
+- 5th-gen fighters: F-35A/B/C (USA, ENG, ITA, NOR, DEN, BEL, HOL, AST, JAP, KOR, ISR), F-22A (USA), J-20A (CHI)
+- 4th-gen fighters: Typhoon, Rafale, F-15, F-16, Su-30/35, MiG-29, Gripen, FA-50, JF-17, J-10CE, F-CK-1
+- CAS/Strike: Su-25, Su-24, A-10C, Tornado IDS, Mirage 2000D, AMX, Su-34
+- AWACS/AEW: E-3, E-7, E-767, E-2C/D, A-50U, KJ-500, G550 CAEW, E-99M, GlobalEye
+- MPA: P-8A, P-1, P-3C, Atlantique 2
+- Transport: C-17, C-130H/J, A400M, KC-390, C-2, C-27J, C-295M, Il-76
+- Drones/UCAV: MQ-9A, Bayraktar TB2/TB3, Akinci, Heron TP, Hermes 900, Wing Loong II, Mohajer-6, Samad-3/Shahed-136
+- Carrier air wings: USA (5x CVN), UK (2x QE), France (CdG), China (3x), India (2x)
+
+**Countries with no air/naval additions (ground forces only):**
+- Afghanistan (Taliban — no air force), Bosnia, Kosovo, Slovenia, Montenegro, North Macedonia — no significant air or naval assets to model
 
 ---
 
@@ -116,3 +151,39 @@ All notable changes to the Millennium Dawn 2026 Rework submod.
 - Batch 11: Missile chains (Gotterdammerung + non-got)
 - Batch 12: Naval chains (hulls, weapons, systems, landing craft)
 - Batch 13: Industry & space chains (nanotech, 3D printing, biotech, energy, nuclear, construction, rail, agriculture, GNSS, COMSAT, SPYSAT, KILLSAT, OLV)
+
+### Focus Tree Expansion — 6 Trees (compact → 26 focuses)
+
+Expanded 6 previously compact focus trees (GER, JAP, KOR, ISR, RAJ, TUR) from ~8-12 focuses to the full 26-focus format with 5 branches, ME paths, and capstones:
+
+| Country | Root ID | Theme | ME Pair | Capstone |
+|---------|---------|-------|---------|----------|
+| GER | `MD2026_GER_zeitenwende_2026` | Zeitenwende 2026 | `atlantic_solidarity` ⊕ `european_defense_pillar` | `leading_europe` |
+| JAP | `MD2026_JAP_active_defense` | Active Defense Era | `taiwan_contingency` ⊕ `korea_reconciliation` | `normal_nation` |
+| KOR | `MD2026_KOR_shield_freedom` | Shield of Freedom | `diplomatic_opening` ⊕ `maximum_pressure` | `global_pivot_state` |
+| ISR | `MD2026_ISR_iron_wall` | Iron Wall 2026 | `preemptive_strike` ⊕ `covert_ops` | `startup_nation` |
+| RAJ | `MD2026_RAJ_indias_century` | India's Century | `quad_deepening` ⊕ `brics_balance` | `vishwaguru` |
+| TUR | `MD2026_TUR_new_era` | Turkiye's New Era | `nato_loyalty` ⊕ `eurasian_pivot` | `century_of_turkiye` |
+
+- 156 new focus nodes (26 × 6) replacing ~60 old compact focuses
+- Added localisation keys for all 6 expanded trees
+- Updated old compact tree sections in documentation
+
+### Base MD Focus Pre-Completion — All 66 Countries
+
+Pre-completed root + Tier 1 focuses from base Millennium Dawn focus trees in all 66 country history files, so that the 2026 bookmark starts with logically-completed focuses already done:
+
+| Batch | Countries |
+|-------|-----------|
+| 1 | JAP, ENG, FIN, SWE, GRE, SER, BRM |
+| 2 | CAN, KOR, ROM, BUL, MNT, KOS, TAJ, EST, BOS |
+| 3 | NOR, DEN, GEO, BLR, KAZ, ETH, NKO, BRA |
+| 4 | SAU, EGY, SYR, ISR, HOL, SPR, ITA, POL |
+| 5 | USA, SOV, UKR, CHI, GER, RAJ, TUR, FRA, PER, CZE, ARM, AFG |
+| 6 | 22 generic tree countries (15 coastal + 7 landlocked) |
+
+- ~2,105 `complete_national_focus` lines added across all history files
+- Coastal generic countries: 38 focuses (10 roots + 28 T1s)
+- Landlocked generic countries: 33 focuses (9 roots + 24 T1s)
+- Mutually exclusive pairs resolved to historically correct 2026 choices
+- Alt-history / communist paths skipped for democratic countries

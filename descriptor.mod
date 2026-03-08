@@ -11,6 +11,7 @@ tags={
 	"Map"
 }
 name="Millennium Dawn 2026 Rework"
+picture="thumbnail.png"
 supported_version="1.17.*"
 dependencies={
 	"Millennium Dawn: A Modern Day Mod"

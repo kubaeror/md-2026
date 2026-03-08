@@ -58,13 +58,13 @@ These files are complete copies of MD originals with our `2026.1.1` blocks appen
 | `history/countries/` | 66 files | Country history with 2026 date blocks |
 | `history/states/` | 8 files | State ownership changes |
 | `common/characters/` | 66 files | Leader definitions |
-| `common/national_focus/` | 13 files | Original trees + `shared_focus` refs |
+| `common/national_focus/` | 22 files | Original trees + `shared_focus` refs |
 
 ### New Files (additive, md2026_ prefix)
 
 | Directory | Files | Purpose |
 |-----------|-------|---------|
-| `common/national_focus/` | 13 `md2026_*` files | Shared focus definitions |
+| `common/national_focus/` | 23 `md2026_*` files | Shared focus definitions |
 | `common/scripted_effects/` | 2 files | Startup + technology effects |
 | `common/ideas/` | 2 files | National spirits + decision ideas |
 | `common/decisions/` | 1 file | Strategic decisions |

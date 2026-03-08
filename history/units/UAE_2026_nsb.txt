@@ -97,6 +97,30 @@ units = {
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.85
 	}
+
+	##### UAE Navy #####
+	fleet = {
+		name = "UAE Navy"
+		naval_base = 3689		# Abu Dhabi
+		task_force = {
+			name = "Corvette Squadron"
+			location = 3689
+			# Baynunah-class corvettes
+			ship = { name = "UAES Baynunah (P171)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE version_name = "Baynunah class" } } }
+			ship = { name = "UAES Al Hesen (P172)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE version_name = "Baynunah class" } } }
+			ship = { name = "UAES Al Dhafra (P173)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE version_name = "Baynunah class" } } }
+			ship = { name = "UAES Mezyad (P174)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE version_name = "Baynunah class" } } }
+			ship = { name = "UAES Al Jahili (P175)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE version_name = "Baynunah class" } } }
+			ship = { name = "UAES Shahama (P176)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE version_name = "Baynunah class" } } }
+		}
+		task_force = {
+			name = "Patrol Squadron"
+			location = 3689
+			# Falaj 2-class patrol vessels
+			ship = { name = "UAES Ghantoot (P251)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = UAE version_name = "Falaj 2 class" } } }
+			ship = { name = "UAES Salahah (P252)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = UAE version_name = "Falaj 2 class" } } }
+		}
+	}
 }
 
 instant_effect = {
@@ -109,5 +133,39 @@ instant_effect = {
 		type = infantry_weapons6
 		amount = 1000
 		producer = USA
+	}
+}
+
+##### UAE Air Force #####
+air_wings = {
+	# F-16E/F Block 60 Desert Falcon
+	180 = {
+		small_plane_strike_airframe_2 = { owner = "UAE" creator = "USA" amount = 79 version_name = "F-16E/F Block 60 Desert Falcon" }
+		name = "Al Dhafra Fighter Wings"
+		start_experience_factor = 0.55
+	}
+	# Mirage 2000-9
+	180 = {
+		medium_plane_fighter_airframe_2 = { owner = "UAE" creator = "FRA" amount = 55 version_name = "Mirage 2000-9" }
+		name = "Al Minhad Fighter Wings"
+		start_experience_factor = 0.5
+	}
+	# GlobalEye AEW&C
+	180 = {
+		large_plane_awacs_airframe_2 = { owner = "UAE" creator = "SWE" amount = 3 version_name = "GlobalEye AEW&C" }
+		name = "AEW Squadron"
+		start_experience_factor = 0.5
+	}
+	# C-17A Globemaster III
+	180 = {
+		large_plane_air_transport_airframe_2 = { owner = "UAE" creator = "USA" amount = 6 version_name = "C-17A Globemaster III" }
+		name = "Transport Wing"
+		start_experience_factor = 0.5
+	}
+	# Wing Loong II + MQ-1 drones
+	180 = {
+		small_plane_suicide_airframe_2 = { owner = "UAE" creator = "CHI" amount = 10 version_name = "Wing Loong II" }
+		name = "UAV Squadron"
+		start_experience_factor = 0.55
 	}
 }

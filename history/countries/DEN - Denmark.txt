@@ -767,4 +767,35 @@
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = DEN_a_modern_military
+	complete_national_focus = DEN_international_diplomacy
+	complete_national_focus = DEN_the_governance_of_denmark
+	complete_national_focus = DEN_the_politics_of_denmark
+	complete_national_focus = DEN_Specialforces_equipment
+	complete_national_focus = DEN_air_force
+	complete_national_focus = DEN_army
+	complete_national_focus = DEN_joint_material_command
+	complete_national_focus = DEN_royal_navy
+	complete_national_focus = DEN_secret_service
+	complete_national_focus = DEN_Agriculture
+	complete_national_focus = DEN_banking_reforms
+	complete_national_focus = DEN_centralized_government_empowerment
+	complete_national_focus = DEN_energy_initiatives
+	complete_national_focus = DEN_found_Visitdenmark
+	complete_national_focus = DEN_jutlandic_traffic_mafia
+	complete_national_focus = DEN_private_industry
+	complete_national_focus = DEN_status_of_the_colonies
+	complete_national_focus = DEN_the_euro_question
+	complete_national_focus = DEN_the_industrial_base_of_denmark
+	complete_national_focus = DEN_the_status_of_the_amts
+	complete_national_focus = DEN_urban_improvement_fund
+	complete_national_focus = DEN_Danish_culture
+	complete_national_focus = DEN_the_queens_truth
+	complete_national_focus = DEN_the_socialist_agenda
+	complete_national_focus = DEN_western_Democracy
+	complete_national_focus = DEN_tollerate_the_eu
+	complete_national_focus = DEN_reaffirm_nato
+	complete_national_focus = DEN_Transatlantic_focus
 }

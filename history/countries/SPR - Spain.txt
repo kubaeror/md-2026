@@ -1216,4 +1216,45 @@
 	add_ideas = {
 		md2026_spr_territorial_tensions
 	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = SPR_armada_espanola
+	complete_national_focus = SPR_economia_espanola
+	complete_national_focus = SPR_ejercito_de_tierra
+	complete_national_focus = SPR_ejercito_del_aire
+	complete_national_focus = SPR_fuerzas_aeromoviles_del_ejercito_de_tierra
+	complete_national_focus = SPR_industria_espanola
+	complete_national_focus = SPR_sector_defensa
+	complete_national_focus = SPR_the_political_sphere
+	complete_national_focus = SPR_agricultura_espanola
+	complete_national_focus = SPR_apc_modernization
+	complete_national_focus = SPR_bases_aereas_del_norte
+	complete_national_focus = SPR_begin_army_reforms
+	complete_national_focus = SPR_calm_before_the_typhoon
+	complete_national_focus = SPR_close_air_support
+	complete_national_focus = SPR_comercio_espanol
+	complete_national_focus = SPR_energia_espanola
+	complete_national_focus = SPR_escuela_naval_militar
+	complete_national_focus = SPR_eurocopter_cougar
+	complete_national_focus = SPR_eurocopter_tigre
+	complete_national_focus = SPR_expand_the_high_speed_rail_network
+	complete_national_focus = SPR_fabricacion_espanola
+	complete_national_focus = SPR_fabricas_de_armas
+	complete_national_focus = SPR_faith_in_the_constitution
+	complete_national_focus = SPR_floan
+	complete_national_focus = SPR_floan_r_and_d
+	complete_national_focus = SPR_guard_our_coasts
+	complete_national_focus = SPR_hug_the_hornets_nest
+	complete_national_focus = SPR_hybrid_territorial_model
+	complete_national_focus = SPR_infraestructura_maritima_del_norte
+	complete_national_focus = SPR_integrate_the_underground_economy
+	complete_national_focus = SPR_mineria_espanola
+	complete_national_focus = SPR_programa_coraza_2000
+	complete_national_focus = SPR_reverse_engineering_fighters
+	complete_national_focus = SPR_sector_servicios_espanol
+	complete_national_focus = SPR_spanish_ifv_programme
+	complete_national_focus = SPR_start_a_bomber_fleet
+	complete_national_focus = SPR_tedae
+	complete_national_focus = SPR_the_foreign_legion
+	complete_national_focus = SPR_the_regulares
 }

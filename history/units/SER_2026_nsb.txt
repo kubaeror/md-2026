@@ -141,3 +141,19 @@ instant_effect = {
 		producer = SOV
 	}
 }
+
+##### Ratno Vazduhoplovstvo (Serbian Air Force) #####
+air_wings = {
+	# MiG-29 (upgraded)
+	131 = {
+		small_plane_airframe_2 = { owner = "SER" creator = "SOV" amount = 10 version_name = "MiG-29B/UB Fulcrum" }
+		name = "101. Lovačka Eskadrila"
+		start_experience_factor = 0.4
+	}
+	# J-22 Orao (ground attack)
+	131 = {
+		small_plane_cas_airframe_2 = { owner = "SER" amount = 10 version_name = "J-22 Orao" }
+		name = "241. Lovačko-Bombarderska Eskadrila"
+		start_experience_factor = 0.35
+	}
+}

@@ -20,7 +20,7 @@ Millennium Dawn uses a custom ideology system mapped onto HoI4's five base ideol
 
 ## Tier A — Major Powers
 
-Full update with focus trees, national spirits, events, and detailed OOB.
+Full update with focus trees, national spirits, events, and detailed OOB. All 12 countries have shared focus tree branches.
 
 | Country | Tag | Leader (2026) | Ideology | Notes |
 |---------|-----|---------------|----------|-------|
@@ -41,14 +41,14 @@ Full update with focus trees, national spirits, events, and detailed OOB.
 
 ## Tier B — NATO & Regional Powers
 
-Full update with leaders, politics, military, alliances.
+Full update with leaders, politics, military, alliances. Countries marked with * have shared focus tree branches.
 
 | Country | Tag | Leader (2026) | Ideology |
 |---------|-----|---------------|----------|
-| Poland | POL | Donald Tusk | democratic / liberalism |
-| Italy | ITA | Giorgia Meloni | nationalist / Nat_Populism |
+| Poland* | POL | Donald Tusk | democratic / liberalism |
+| Italy* | ITA | Giorgia Meloni | nationalist / Nat_Populism |
 | Spain | SPR | Pedro Sanchez | democratic / socialism |
-| Canada | CAN | Mark Carney | democratic / liberalism |
+| Canada* | CAN | Mark Carney | democratic / liberalism |
 | Romania | ROM | Marcel Ciolacu | democratic / conservatism |
 | Netherlands | HOL | Dick Schoof | democratic / conservatism |
 | Belgium | BEL | Alexander De Croo | democratic / liberalism |
@@ -72,29 +72,29 @@ Full update with leaders, politics, military, alliances.
 | North Macedonia | FYR | Hristijan Mickoski | democratic / conservatism |
 | Finland | FIN | Petteri Orpo | democratic / conservatism |
 | Sweden | SWE | Ulf Kristersson | democratic / conservatism |
-| Israel | ISR | Benjamin Netanyahu | democratic / conservatism |
-| Saudi Arabia | SAU | Mohammed bin Salman | fascism / Kingdom |
-| North Korea | NKO | Kim Jong-un | communism / Communist-State |
-| South Korea | KOR | Han Duck-soo (acting) | democratic / conservatism |
-| Australia | AST | Anthony Albanese | democratic / socialism |
+| Israel* | ISR | Benjamin Netanyahu | democratic / conservatism |
+| Saudi Arabia* | SAU | Mohammed bin Salman | fascism / Kingdom |
+| North Korea* | NKO | Kim Jong-un | communism / Communist-State |
+| South Korea* | KOR | Han Duck-soo (acting) | democratic / conservatism |
+| Australia* | AST | Anthony Albanese | democratic / socialism |
 
 ---
 
 ## Tier C — Conflict Zones
 
-Partial update — leaders, borders, active wars.
+Partial update — leaders, borders, active wars. Countries marked with * have shared focus tree branches.
 
 | Country | Tag | Leader (2026) | Context |
 |---------|-----|---------------|---------|
-| Syria | SYR | Ahmad al-Sharaa (HTS) | Post-Assad, Dec 2024 regime change |
-| Egypt | EGY | Abdel Fattah el-Sisi | Economic crisis, BRICS member |
+| Syria* | SYR | Ahmad al-Sharaa (HTS) | Post-Assad, Dec 2024 regime change |
+| Egypt* | EGY | Abdel Fattah el-Sisi | Economic crisis, BRICS member |
 | Myanmar | BRM | Min Aung Hlaing | Military junta, civil war |
 | Sudan | SUD | Abdel Fattah al-Burhan | Civil war (SAF vs RSF) |
 | Yemen | YEM | Houthi control | Divided country |
 | UAE | UAE | Mohammed bin Zayed | Abraham Accords, BRICS |
 | Ethiopia | ETH | Abiy Ahmed | Post-Tigray, BRICS+ |
 | South Africa | SAF | Cyril Ramaphosa | BRICS host |
-| Taiwan | TAI | Lai Ching-te | Cross-strait tensions |
+| Taiwan* | TAI | Lai Ching-te | Cross-strait tensions |
 
 ---
 

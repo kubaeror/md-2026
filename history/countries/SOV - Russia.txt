@@ -5814,4 +5814,51 @@ capital = 652
 			rational
 		}
 	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_SOV_war_crossroads
+	complete_national_focus = MD2026_SOV_economic_autarky
+	complete_national_focus = MD2026_SOV_eastern_pivot
+	complete_national_focus = MD2026_SOV_import_substitution
+	complete_national_focus = MD2026_SOV_sanctions_circumvention
+	complete_national_focus = MD2026_SOV_china_trade
+	complete_national_focus = MD2026_SOV_brics_leadership
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = SOV_economic_russian
+	complete_national_focus = SOV_economic_reform_rosneft
+	complete_national_focus = SOV_groznyy_offensive
+	complete_national_focus = SOV_reign_of_yeltsin
+	complete_national_focus = SOV_safe_russia
+	complete_national_focus = SOV_new_russia
+	complete_national_focus = SOV_slavic_corps
+	complete_national_focus = SOV_economic_belarus_integrate
+	complete_national_focus = SOV_putin
+	complete_national_focus = SOV_subjects
+	complete_national_focus = SOV_zhirinovsky
+	complete_national_focus = SOV_zyuganov
+	complete_national_focus = SOV_FSB_expansion
+	complete_national_focus = SOV_inner_army
+	complete_national_focus = SOV_outer
+	complete_national_focus = SOV_cis_return
+	complete_national_focus = SOV_co_op_wagner
+	complete_national_focus = SOV_wagner_cadres
+	complete_national_focus = SOV_wagner_minoboroni
+	complete_national_focus = SOV_delay_sibirneft_merger
+	complete_national_focus = SOV_economic_aeroflot
+	complete_national_focus = SOV_economic_efko
+	complete_national_focus = SOV_economic_glonass
+	complete_national_focus = SOV_economic_mmvb
+	complete_national_focus = SOV_economic_rao_ues
+	complete_national_focus = SOV_economic_rjd
+	complete_national_focus = SOV_economic_rubber
+	complete_national_focus = SOV_economic_rusagro
+	complete_national_focus = SOV_economic_severstal
+	complete_national_focus = SOV_remove_guzinsky
+	complete_national_focus = SOV_found_rosatom
+	complete_national_focus = SOV_economic_use_yukos
+	complete_national_focus = SOV_economic_140_annex
+	complete_national_focus = SOV_economic_mzkt_annex
+	complete_national_focus = SOV_economic_peleng_annex
+	complete_national_focus = SOV_finish_1998_reforms
 }

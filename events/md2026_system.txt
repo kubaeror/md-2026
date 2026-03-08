@@ -1,0 +1,142 @@
+###################################
+# MD2026 System Events
+# Intro news event, bookmark initialization
+###################################
+
+add_namespace = md2026_system
+
+###################################
+# md2026_system.1 - The World in 2026 (Intro News Event)
+# Fired on_startup for all human players
+###################################
+news_event = {
+	id = md2026_system.1
+	title = md2026_system.1.t
+	desc = md2026_system.1.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	major = yes
+
+	# Acknowledge
+	option = {
+		name = md2026_system.1.o1
+		trigger = {
+			OR = {
+				tag = USA
+				tag = ENG
+				tag = FRA
+				tag = GER
+				is_in_faction_with = USA
+			}
+		}
+	}
+
+	option = {
+		name = md2026_system.1.o2
+		trigger = {
+			OR = {
+				tag = SOV
+				tag = CHI
+				tag = NKO
+				tag = PER
+				tag = BLR
+			}
+		}
+	}
+
+	option = {
+		name = md2026_system.1.o3
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = USA
+					tag = SOV
+					tag = CHI
+					tag = NKO
+					tag = PER
+					tag = BLR
+				}
+			}
+		}
+	}
+}
+
+###################################
+# md2026_system.2 - Year Anniversary Marker (monthly check)
+# Fires at start of 2027 as a progress marker
+###################################
+news_event = {
+	id = md2026_system.2
+	title = md2026_system.2.t
+	desc = md2026_system.2.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	trigger = {
+		is_ai = no
+		has_global_flag = md2026_initialized
+		date > 2026.12.31
+		NOT = { has_global_flag = md2026_year_2027_fired }
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	immediate = {
+		set_global_flag = md2026_year_2027_fired
+	}
+
+	option = {
+		name = md2026_system.2.o1
+	}
+}
+
+###################################
+# md2026_system.3 - Global Economic Turbulence
+# Random event that can fire for any major economy
+###################################
+country_event = {
+	id = md2026_system.3
+	title = md2026_system.3.t
+	desc = md2026_system.3.d
+	picture = GFX_report_event_generic_diplomacy
+
+	trigger = {
+		has_global_flag = md2026_initialized
+		is_major = yes
+		NOT = { has_country_flag = md2026_recent_economic_shock }
+	}
+
+	mean_time_to_happen = {
+		months = 36
+		modifier = {
+			factor = 0.5
+			has_war = yes
+		}
+	}
+
+	immediate = {
+		set_country_flag = { flag = md2026_recent_economic_shock days = 365 value = 1 }
+	}
+
+	# Implement austerity measures
+	option = {
+		name = md2026_system.3.o1
+		add_stability = -0.05
+		add_political_power = 25
+		add_timed_idea = {
+			idea = md2026_additional_sanctions_effect
+			days = 180
+		}
+		ai_chance = { base = 50 }
+	}
+
+	# Stimulus spending
+	option = {
+		name = md2026_system.3.o2
+		add_political_power = -50
+		add_stability = 0.03
+		ai_chance = { base = 50 }
+	}
+}

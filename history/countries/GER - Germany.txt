@@ -2978,4 +2978,52 @@ capital = 45
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_GER_zeitenwende_2026
+	complete_national_focus = MD2026_GER_energy_independence
+	complete_national_focus = MD2026_GER_eu_expansion
+	complete_national_focus = MD2026_GER_european_army
+	complete_national_focus = MD2026_GER_nato_2_percent
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = GER_Alexander_von_humboldt_Institutes_Strengthen_reswarch_cooperations
+	complete_national_focus = GER_Digitale_Agenda
+	complete_national_focus = GER_Interventionism_for_democracy
+	complete_national_focus = GER_Neuer_Markt
+	complete_national_focus = GER_Reform_bundeswehr
+	complete_national_focus = GER_Regional_Innovation_Center
+	complete_national_focus = GER_Schulen_ans_Netz
+	complete_national_focus = GER_Startup_Investments
+	complete_national_focus = GER_Tech_DAX
+	complete_national_focus = GER_UMTS_License_auction
+	complete_national_focus = GER_deutschland_industrie
+	complete_national_focus = GER_german_politics
+	complete_national_focus = GER_the_constitution_of_germany
+	complete_national_focus = GER_home_Grown_Software
+	complete_national_focus = GER_DAAD_Expand_Academic_exchange_service
+	complete_national_focus = GER_Found_InWent
+	complete_national_focus = GER_KFW_Restructure
+	complete_national_focus = GER_Modernize_Goethe_Institutes
+	complete_national_focus = GER_Reform_and_Strenghen_of_german_foreign_intitutes
+	complete_national_focus = GER_Reform_the_DED
+	complete_national_focus = GER_found_Bundesagentur_fur_Aussenwirtschaft
+	complete_national_focus = GER_CDU_rises
+	complete_national_focus = GER_FDP
+	complete_national_focus = GER_agenda_2010
+	complete_national_focus = GER_green_alliance
+	complete_national_focus = GER_the_alternative
+	complete_national_focus = GER_the_left
+	complete_national_focus = GER_Restructure_Infrastructure
+	complete_national_focus = GER_alt_energy
+	complete_national_focus = GER_expand_mainstream_industry
+	complete_national_focus = GER_expand_oil_gas
+	complete_national_focus = GER_mining_in_germany
+	complete_national_focus = GER_unemployment_crisis
+	complete_national_focus = GER_Establish_Streitkrafte_basis
+	complete_national_focus = GER_Deutsche_Post_AG
+	complete_national_focus = GER_duetches_telekom
+	complete_national_focus = GER_dismantle_russian_aggression
+	complete_national_focus = GER_expand_article_twenty
+	complete_national_focus = GER_expand_article_twenty_one
 }

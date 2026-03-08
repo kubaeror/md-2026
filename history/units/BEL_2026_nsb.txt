@@ -75,6 +75,19 @@ units = {
 		start_experience_factor = 0.60
 		start_equipment_factor = 0.85
 	}
+
+	##### Marinecomponent (Belgian Naval Component) #####
+	fleet = {
+		name = "Marinecomponent"
+		naval_base = 6560		# Zeebrugge
+		task_force = {
+			name = "Fregatten Divisie"
+			location = 6560
+			# Leopold I-class frigates (ex-Karel Doorman M-class)
+			ship = { name = "BNS Leopold I (F930)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BEL version_name = "Leopold I class" } } }
+			ship = { name = "BNS Louise-Marie (F931)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BEL version_name = "Leopold I class" } } }
+		}
+	}
 }
 
 instant_effect = {
@@ -82,5 +95,26 @@ instant_effect = {
 		type = infantry_weapons5
 		amount = 2000
 		producer = BEL
+	}
+}
+
+##### Luchtcomponent (Belgian Air Component) #####
+air_wings = {
+	# Kleine Brogel - F-35A (early deliveries) + remaining F-16AM
+	50 = {
+		small_plane_strike_airframe_2 = { owner = "BEL" creator = "USA" amount = 10 version_name = "F-35A Lightning II" }
+		name = "10 Tactical Wing"
+		start_experience_factor = 0.5
+	}
+	50 = {
+		small_plane_strike_airframe_2 = { owner = "BEL" creator = "USA" amount = 30 version_name = "F-16AM Fighting Falcon" }
+		name = "2 Tactical Wing"
+		start_experience_factor = 0.5
+	}
+	# A400M Transport
+	52 = {
+		large_plane_air_transport_airframe_2 = { owner = "BEL" amount = 4 version_name = "A400M Atlas" }
+		name = "15 Transport Wing"
+		start_experience_factor = 0.45
 	}
 }

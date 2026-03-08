@@ -166,3 +166,13 @@ instant_effect = {
 		producer = SOV
 	}
 }
+
+##### Houthi Drone/Missile Forces (no conventional air force) #####
+air_wings = {
+	# Samad / Shahed-type attack drones
+	195 = {
+		small_plane_suicide_airframe_2 = { owner = "YEM" creator = "PER" amount = 20 version_name = "Samad-3 / Shahed-136" }
+		name = "Ansar Allah UAV Force"
+		start_experience_factor = 0.5
+	}
+}

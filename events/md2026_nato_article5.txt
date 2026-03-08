@@ -1,0 +1,209 @@
+###################################
+# MD2026 NATO Article 5 Event Chain
+# Triggered when a NATO member is attacked
+###################################
+
+add_namespace = md2026_nato_article5
+
+###################################
+# md2026_nato_article5.1 - NATO Under Attack!
+# USA receives alert that a NATO ally was attacked
+# Triggered from on_declare_war hook
+###################################
+country_event = {
+	id = md2026_nato_article5.1
+	title = md2026_nato_article5.1.t
+	desc = md2026_nato_article5.1.d
+	picture = GFX_report_event_generic_military
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	trigger = {
+		tag = USA
+		has_global_flag = md2026_initialized
+	}
+
+	# Option A: Invoke Article 5 - Collective Defense
+	option = {
+		name = md2026_nato_article5.1.o1
+		log = "[GetDateText]: [This.GetName]: NATO Article 5 invoked"
+
+		add_political_power = -75
+		add_war_support = 0.15
+		add_stability = 0.05
+
+		set_global_flag = md2026_article5_activated
+
+		# Notify all NATO members
+		every_country = {
+			limit = {
+				has_country_flag = md2026_nato_member
+				NOT = { tag = USA }
+			}
+			country_event = { id = md2026_nato_article5.2 days = 1 }
+		}
+
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 0.2
+				has_government = nationalist
+			}
+		}
+	}
+
+	# Option B: Condemn but don't invoke Article 5
+	option = {
+		name = md2026_nato_article5.1.o2
+		log = "[GetDateText]: [This.GetName]: NATO Article 5 NOT invoked"
+
+		add_political_power = -25
+		add_stability = -0.05
+		add_war_support = -0.10
+
+		# NATO allies lose trust
+		every_country = {
+			limit = {
+				has_country_flag = md2026_nato_member
+				NOT = { tag = USA }
+			}
+			add_opinion_modifier = { target = USA modifier = md2026_article5_betrayal }
+		}
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 3
+				has_government = nationalist
+			}
+		}
+	}
+}
+
+###################################
+# md2026_nato_article5.2 - Article 5 Invoked: Rally to the Alliance
+# NATO members decide whether to commit to collective defense
+###################################
+country_event = {
+	id = md2026_nato_article5.2
+	title = md2026_nato_article5.2.t
+	desc = md2026_nato_article5.2.d
+	picture = GFX_report_event_generic_military
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	trigger = {
+		has_country_flag = md2026_nato_member
+	}
+
+	# Option A: Full commitment - mobilize forces
+	option = {
+		name = md2026_nato_article5.2.o1
+		log = "[GetDateText]: [This.GetName]: Full Article 5 commitment"
+
+		add_ideas = md2026_nato_article5_active
+		add_war_support = 0.10
+		add_stability = 0.03
+		army_experience = 10
+
+		USA = {
+			add_opinion_modifier = { target = ROOT modifier = md2026_article5_solidarity }
+		}
+
+		ai_chance = {
+			base = 70
+			modifier = {
+				factor = 2
+				any_neighbor_country = { has_war = yes }
+			}
+		}
+	}
+
+	# Option B: Limited support only
+	option = {
+		name = md2026_nato_article5.2.o2
+		log = "[GetDateText]: [This.GetName]: Limited Article 5 support"
+
+		add_war_support = 0.05
+		add_political_power = -15
+
+		USA = {
+			add_opinion_modifier = { target = ROOT modifier = md2026_article5_reluctance }
+		}
+
+		ai_chance = {
+			base = 25
+		}
+	}
+
+	# Option C: Refuse to participate (risk leaving alliance)
+	option = {
+		name = md2026_nato_article5.2.o3
+		log = "[GetDateText]: [This.GetName]: Refused Article 5"
+
+		add_stability = -0.05
+		add_war_support = -0.05
+
+		USA = {
+			add_opinion_modifier = { target = ROOT modifier = md2026_article5_betrayal }
+		}
+
+		every_country = {
+			limit = {
+				has_country_flag = md2026_nato_member
+				NOT = { tag = ROOT }
+				NOT = { tag = USA }
+			}
+			add_opinion_modifier = { target = ROOT modifier = md2026_article5_reluctance }
+		}
+
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 3
+				has_government = nationalist
+			}
+		}
+	}
+}
+
+###################################
+# md2026_nato_article5.3 - Article 5 Stand Down
+# Fired after peace conference if Article 5 was active
+###################################
+country_event = {
+	id = md2026_nato_article5.3
+	title = md2026_nato_article5.3.t
+	desc = md2026_nato_article5.3.d
+	picture = GFX_report_event_generic_diplomacy
+
+	trigger = {
+		has_global_flag = md2026_article5_activated
+		has_idea = md2026_nato_article5_active
+		has_war = no
+		NOT = { has_global_flag = md2026_article5_stood_down }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { tag = USA }
+				set_global_flag = md2026_article5_stood_down
+			}
+		}
+	}
+
+	# Stand down
+	option = {
+		name = md2026_nato_article5.3.o1
+		remove_ideas = md2026_nato_article5_active
+		add_stability = 0.05
+		add_political_power = 25
+	}
+}

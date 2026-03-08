@@ -559,4 +559,31 @@
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_SAU_vision_2030
+	complete_national_focus = MD2026_SAU_diversification
+	complete_national_focus = MD2026_SAU_oil_strategy
+	complete_national_focus = MD2026_SAU_regional_balance
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = GCC_foreign_affairs
+	complete_national_focus = GCC_military_affairs
+	complete_national_focus = GCC_political_affairs
+	complete_national_focus = GCC_shia
+	complete_national_focus = GCC_socio_economic_affairs
+	complete_national_focus = GCC_absolute_monarchy
+	complete_national_focus = GCC_asymmetric_warfare
+	complete_national_focus = GCC_diversify_the_economy
+	complete_national_focus = GCC_equipment_modernizations
+	complete_national_focus = GCC_expand_oil_extraction
+	complete_national_focus = GCC_expanded_recruitment
+	complete_national_focus = GCC_influence_muslim_europe
+	complete_national_focus = GCC_influence_north_africa
+	complete_national_focus = GCC_influence_south_asia
+	complete_national_focus = GCC_influence_the_levant
+	complete_national_focus = GCC_invest_in_the_metal_industry
+	complete_national_focus = GCC_migrant_rights
+	complete_national_focus = GCC_rally_sunnis
+	complete_national_focus = GCC_weaken_the_mutaween
 }

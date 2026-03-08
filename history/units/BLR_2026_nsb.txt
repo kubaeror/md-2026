@@ -139,3 +139,37 @@ instant_effect = {
 		producer = SOV
 	}
 }
+
+##### Belarusian Air Force & Air Defence #####
+air_wings = {
+	# Su-30SM (delivered from Russia 2019-2023)
+	703 = {
+		medium_plane_fighter_airframe_2 = { owner = "BLR" creator = "SOV" amount = 12 version_name = "Su-30SM Flanker-H" }
+		name = "61st Fighter Air Base"
+		start_experience_factor = 0.45
+	}
+	# MiG-29 fighters
+	1093 = {
+		small_plane_airframe_2 = { owner = "BLR" creator = "SOV" amount = 32 version_name = "MiG-29BM Fulcrum" }
+		name = "927th Fighter Air Base"
+		start_experience_factor = 0.4
+	}
+	# Su-25 attack aircraft
+	702 = {
+		small_plane_cas_airframe_2 = { owner = "BLR" creator = "SOV" amount = 30 version_name = "Su-25SM Frogfoot" }
+		name = "206th Assault Air Base"
+		start_experience_factor = 0.4
+	}
+	# Yak-130 trainer/light attack
+	702 = {
+		small_plane_cas_airframe_2 = { owner = "BLR" creator = "SOV" amount = 12 version_name = "Yak-130 Mitten" }
+		name = "116th Assault Air Base"
+		start_experience_factor = 0.35
+	}
+	# Il-76MD transport
+	703 = {
+		large_plane_air_transport_airframe_2 = { owner = "BLR" creator = "SOV" amount = 4 version_name = "Il-76MD" }
+		name = "50th Transport Air Base"
+		start_experience_factor = 0.4
+	}
+}
