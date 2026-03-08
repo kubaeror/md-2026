@@ -1,4 +1,5 @@
 generate_*.py
+parse_*.py
 nul
 temp_*
 session-*
