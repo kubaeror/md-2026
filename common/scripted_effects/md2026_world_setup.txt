@@ -117,4 +117,13 @@ md2026_setup_world_borders_and_wars = {
             if = { limit = { has_character = CHI_zhang_wannian } retire_character = CHI_zhang_wannian }
         }
     }
+
+
+    # 6. Apply economic stabilizer to prevent instant bankruptcies
+    every_country = {
+        limit = {
+            has_idea = MD_economic_boom_idea # Or any sign they exist
+        }
+        add_ideas = md2026_economic_stabilizer
+    }
 }

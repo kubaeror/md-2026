@@ -71,3 +71,18 @@ ideas = {
 		}
 	}
 }
+
+ideas = {
+	hidden_ideas = {
+		# MD2026 prevents instant bankruptcy from the massive 2026 debt loads
+		# applied to major economies in the setup script
+		md2026_economic_stabilizer = {
+			modifier = {
+				# Reduces the crushing interest rates of high debt to let AI/player breathe
+				interest_rate = -0.05
+				# Small boost to avoid instantaneous economic collapse
+				national_tax_mod = 0.05
+			}
+		}
+	}
+}
