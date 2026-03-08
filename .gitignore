@@ -4,3 +4,10 @@ temp_*
 session-*
 .ruff_cache/
 __pycache__/
+
+# Analysis/working files
+all_focus_ids.txt
+raw_ids.txt
+*_focus_tree_analysis.txt
+*_focuses.json
+*_focus_ids.txt
