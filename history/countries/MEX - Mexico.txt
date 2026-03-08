@@ -469,5 +469,9 @@
 2026.1.1 = {
 	# MD2026 Pre-completed focuses (already happened by Jan 2026)
 	complete_national_focus = md2026_mex_amlo_legacy
+	complete_national_focus = md2026_mex_usmca_trade
+	complete_national_focus = md2026_mex_nearshoring
 	complete_national_focus = md2026_mex_cartel_war
+	complete_national_focus = md2026_mex_national_guard
+	complete_national_focus = md2026_mex_pemex_reform
 }
