@@ -2740,28 +2740,178 @@ capital = 56
 	complete_national_focus = MD2026_FRA_nuclear_energy
 	complete_national_focus = MD2026_FRA_green_industry
 
-	# Base MD pre-completed focuses (root + T1, 2000-2026)
-	complete_national_focus = FRA_economic_policy
-	complete_national_focus = FRA_francosphere
-	complete_national_focus = FRA_french_armed_forces
-	complete_national_focus = FRA_state_of_french_politics
-	complete_national_focus = FRA_energy_sector
-	complete_national_focus = FRA_free_market
-	complete_national_focus = FRA_french_economic_intervention
-	complete_national_focus = FRA_luxury_goods
-	complete_national_focus = FRA_the_french_agriculture
-	complete_national_focus = FRA_total_sa
-	complete_national_focus = FRA_tourism_industry
-	complete_national_focus = FRA_French_pillar_of_counterterrorism
-	complete_national_focus = FRA_francafrique
-	complete_national_focus = FRA_haitian_coup
-	complete_national_focus = FRA_intervention_in_africa
-	complete_national_focus = FRA_repeal_the_ordiance
-	complete_national_focus = FRA_returning_to_indochina
-	complete_national_focus = FRA_the_levant_problem
-	complete_national_focus = FRA_french_navy
-	complete_national_focus = FRA_the_french_air_force
-	complete_national_focus = FRA_the_french_army
-	complete_national_focus = FRA_french_parliament
-	complete_national_focus = FRA_the_fifth_power
+	# Base MD pre-completed focuses (2000-2026)
+
+	### POLITICS — Liberty path (centrist liberal) ###
+	complete_national_focus = FRA_state_of_french_politics       # root — PP: 200
+	complete_national_focus = FRA_french_parliament               # prereq: state_of_french_politics — stability/war support
+	complete_national_focus = FRA_the_fifth_power                 # prereq: state_of_french_politics — adds FRA_idea_fifth_power
+	complete_national_focus = FRA_liberty                         # ME choice (vs equality/fraternity) — centrist liberal path
+	complete_national_focus = FRA_stricter_policing               # prereq: liberty — increase policing budget
+	complete_national_focus = FRA_euro_investments                # prereq: liberty — EU single market investments (GER/ITA/ENG/SPR/BEL/HOL/POR)
+	complete_national_focus = FRA_the_national_assembly           # prereq: liberty — stability
+	complete_national_focus = FRA_global_economics                # prereq: stricter_policing — opinion modifiers from all countries
+	complete_national_focus = FRA_french_nato_restructures        # prereq: stricter_policing + euro_investments — TIMED IDEA 730d (cleanup below)
+	complete_national_focus = FRA_competitive_education           # prereq: euro_investments — education budget
+	complete_national_focus = FRA_french_political_reformation    # prereq: national_assembly — adds FRA_administrative_reforms_1
+	complete_national_focus = FRA_french_autonomy                 # prereq: global_economics — swaps reforms_1 → reforms_2
+	complete_national_focus = FRA_strength_in_the_eu              # prereq: nato_restructures + global_economics + competitive_education — EU opinion
+	complete_national_focus = FRA_european_investments2            # prereq: competitive_education + political_reformation — EU investments (POL/CZE/etc)
+	complete_national_focus = FRA_vive_la_france                  # prereq: french_autonomy — adds FRA_idea_vive_la_france
+	complete_national_focus = FRA_the_will_of_the_people          # prereq: french_autonomy — adds idea_focus_generic_will_of_the_people
+	complete_national_focus = FRA_european_expanisonism            # prereq: strength_in_eu + european_investments2 — La République en Marche
+	complete_national_focus = FRA_cooperation_in_union             # ME choice (vs a_united_union) — Sorbonne Speech (Macron)
+	complete_national_focus = FRA_invitations_to_the_eu            # prereq: cooperation_in_union — Aachen Treaty (FRA+GER)
+	complete_national_focus = FRA_french_political_dominance       # prereq: invitations_to_eu + cooperation_in_union — EU influence
+	complete_national_focus = FRA_a_international_language          # prereq: french_political_dominance — influence on EU members
+	complete_national_focus = FRA_the_new_seat                     # prereq: french_political_dominance — EU seat, PP: 50
+
+	### ECONOMY — root + branches ###
+	complete_national_focus = FRA_economic_policy                  # root — stability
+	complete_national_focus = FRA_free_market                      # prereq: economic_policy — exports + opinion
+	complete_national_focus = FRA_total_sa                         # prereq: economic_policy — resources (TotalEnergies)
+	complete_national_focus = FRA_french_economic_intervention     # prereq: economic_policy — adds FRA_idea_economic_interventionism
+	complete_national_focus = FRA_reduction_in_taxes               # prereq: free_market — adds FRA_taxation_reform_idea
+	complete_national_focus = FRA_deregulation                     # prereq: free_market — buildings/slots
+	complete_national_focus = FRA_state_stock_in_sa                # prereq: total_sa — adds FRA_state_investments_in_sa
+	complete_national_focus = FRA_paris_employment_projects        # prereq: french_economic_intervention — buildings
+	complete_national_focus = FRA_nationalization_of_steel          # prereq: french_economic_intervention — resources
+	complete_national_focus = FRA_private_contracting              # prereq: reduction_in_taxes — adds FRA_idea_private_contracting_companies
+	complete_national_focus = FRA_tapping_resources                # prereq: deregulation — resources
+	complete_national_focus = FRA_offshore_oilrigs                 # prereq: state_stock_in_sa — resources (GUY/SUR)
+	complete_national_focus = FRA_state_run_construction           # prereq: paris_employment_projects — industrial complex
+	complete_national_focus = FRA_infrastructure_projects           # prereq: nationalization_of_steel — adds FRA_idea_infrastructure_projects
+	complete_national_focus = FRA_centralization                    # ME choice (vs decentralization) — adds bureau_03 + FRA_idea_central
+
+	# Post-centralization
+	complete_national_focus = FRA_french_healthcare                # prereq: centralization — stability/war support
+	complete_national_focus = FRA_reformed_universal_healthcare    # prereq: french_healthcare — healthcare budget
+	complete_national_focus = FRA_french_arms_industries           # prereq: centralization + offshore_oilrigs — war support
+	complete_national_focus = FRA_nexter                           # prereq: french_arms_industries — ground equipment production
+	complete_national_focus = FRA_dassault                         # prereq: french_arms_industries — aircraft production
+	complete_national_focus = FRA_thales_group                     # prereq: french_arms_industries — electronics/radar production
+	complete_national_focus = FRA_research_and_dev_projects        # prereq: centralization — adds FRA_idea_expanding_r_and_d
+	complete_national_focus = FRA_usa_fra_collaboration            # prereq: research_and_dev — swaps r_and_d → r_and_d1, adds fra_usa_collab
+
+	# Railways (from infrastructure_projects)
+	complete_national_focus = FRA_improved_railways                # prereq: infrastructure_projects
+	complete_national_focus = FRA_focus_on_rails                   # prereq: improved_railways
+	complete_national_focus = FRA_high_speed_rail_lines            # prereq: focus_on_rails — swaps infrastructure_projects → A_new_transport_revolution
+
+	### AGRICULTURE ###
+	complete_national_focus = FRA_the_french_agriculture           # prereq: economic_policy — adds FRA_idea_French_Agriculture
+	complete_national_focus = FRA_the_vineyard_industries          # prereq: french_agriculture — swaps Agriculture → Agriculture_2
+	complete_national_focus = FRA_mechanized_agriculture           # prereq: french_agriculture
+	complete_national_focus = FRA_the_dairy_industry               # prereq: vineyard_industries — swaps Agriculture_2 → Agriculture_3
+	complete_national_focus = FRA_packaging_industries             # prereq: mechanized_agriculture — buildings
+	complete_national_focus = FRA_wheat_industry                   # prereq: dairy_industry — swaps Agriculture_3 → Agriculture_4
+	complete_national_focus = FRA_agriculture_industry             # prereq: packaging_industries — adds FRA_food_autonomy
+
+	### LUXURY ###
+	complete_national_focus = FRA_luxury_goods                     # prereq: economic_policy — buildings/slots
+
+	### TOURISM ###
+	complete_national_focus = FRA_tourism_industry                 # prereq: economic_policy — adds FRA_Impact_of_tourism
+	complete_national_focus = FRA_the_gorgeous_coasts              # prereq: tourism_industry — buildings
+	complete_national_focus = FRA_the_spaces_between               # prereq: gorgeous_coasts — buildings
+	complete_national_focus = FRA_beaches_of_france                # prereq: spaces_between — swaps Impact_of_tourism → Balanced_and_profitable_tourism
+
+	### ENERGY ###
+	complete_national_focus = FRA_energy_sector                    # prereq: economic_policy — adds FRA_idea_Energy_in_France
+	complete_national_focus = FRA_renewable_investments            # prereq: energy_sector — buildings (solar)
+	complete_national_focus = FRA_solar_investments                # prereq: renewable_investments — buildings
+	complete_national_focus = FRA_wind_investments                 # prereq: solar_investments — buildings (wind)
+	complete_national_focus = FRA_the_northern_reactors            # prereq: energy_sector — buildings (nuclear)
+	complete_national_focus = FRA_improved_nuclear_waste_management # prereq: northern_reactors
+	complete_national_focus = FRA_expanded_enrichment_facilities   # prereq: improved_nuclear_waste — enrichment
+	complete_national_focus = FRA_the_new_energy_dawn              # prereq: wind_investments + expanded_enrichment — adds FRA_idea_Light_for_Europe
+
+	### MILITARY — all 3 branches (army → air → navy fires sequentially = FRA_idea_the_french_military) ###
+	complete_national_focus = FRA_french_armed_forces              # root — war support
+	complete_national_focus = FRA_the_french_army                  # prereq: armed_forces — adds military_improvement_army
+	complete_national_focus = FRA_the_french_air_force             # prereq: armed_forces — swaps army → army_and_air_force
+	complete_national_focus = FRA_french_navy                      # prereq: armed_forces — swaps army_and_air_force → FRA_idea_the_french_military
+
+	# Army equipment branch
+	complete_national_focus = FRA_amx_leclerc                     # prereq: french_army — Leclerc MBT
+	complete_national_focus = FRA_network_centric_warfare          # prereq: french_army — NCW
+	complete_national_focus = FRA_land_air_coordination            # prereq: french_army OR air_force
+	complete_national_focus = FRA_amx_10                           # prereq: amx_leclerc — AMX-10 RC
+	complete_national_focus = FRA_vbci                             # prereq: network_centric_warfare — VBCI IFV
+	complete_national_focus = FRA_forward_air_bases                # prereq: land_air_coordination — buildings
+	complete_national_focus = FRA_ifv_investment                   # prereq: amx_10 — adds FRA_idea_french_armored_production
+	complete_national_focus = FRA_national_arms_exports            # prereq: vbci — adds rifle_production_bonus2
+	complete_national_focus = FRA_honour_and_fidelity              # prereq: ifv_investment + national_arms_exports — army XP + doctrine
+
+	# Air Force equipment branch
+	complete_national_focus = FRA_the_mirage                       # prereq: air_force — Mirage
+	complete_national_focus = FRA_maritime_fighters                # prereq: air_force OR navy
+	complete_national_focus = FRA_mirage_2000d                     # prereq: the_mirage — adds fighter_production_bonus
+	complete_national_focus = FRA_carrier_fighters                 # prereq: maritime_fighters — carrier aircraft
+
+	# Navy equipment branch
+	complete_national_focus = FRA_lafayette_class                  # prereq: navy — Lafayette-class frigate
+	complete_national_focus = FRA_de_gaulle_class                  # prereq: navy — Charles de Gaulle carrier
+	complete_national_focus = FRA_med_naval_bases                  # prereq: lafayette_class — Mediterranean bases
+	complete_national_focus = FRA_triomphant_class                 # prereq: de_gaulle_class — Triomphant SSBN
+	complete_national_focus = FRA_floreal_class                    # prereq: med_naval_bases — Floréal OPV
+	complete_national_focus = FRA_laredoubtable_class              # prereq: triomphant_class — Le Redoutable
+	complete_national_focus = FRA_honour_homeland_valour_discipline # prereq: floreal + laredoubtable — navy XP + doctrine
+
+	# Space program (from forward_air_bases + mirage_2000d + carrier_fighters)
+	complete_national_focus = FRA_the_space_program                # prereq: forward_air_bases + mirage_2000d + carrier_fighters — adds space_agency_1
+	complete_national_focus = FRA_cnes_budgeting                   # prereq: space_program — swaps space_agency_1 → 2, adds FRA_idea_cnes_failing
+	complete_national_focus = FRA_international_space_research     # prereq: space_program — swaps space_agency_2 → 3, adds nasa_partnership
+	complete_national_focus = FRA_kourou_launch_pad                # prereq: space_program — swaps space_agency_3 → 4, buildings
+	complete_national_focus = FRA_french_space                     # prereq: cnes + international + kourou — swaps space_agency_4 → reformed_cnes
+
+	### FRANCOSPHERE — foreign influence ###
+	complete_national_focus = FRA_francosphere                     # root — adds FRA_idea_the_francosphere
+
+	# Levant
+	complete_national_focus = FRA_the_levant_problem               # prereq: francosphere — PP: 100
+	complete_national_focus = FRA_supporting_armenia               # prereq: levant_problem — AZE opinion, event france_md.100
+	complete_national_focus = FRA_antagonize_syria                 # prereq: levant_problem — SYR opinion, influence
+	# SKIPPED: anti_assad_regime_message (timed idea on SYR — can't clean from FRA)
+	# SKIPPED: escalation_from_damascus_spring (timed idea on SYR — can't clean from FRA)
+	# SKIPPED: collaboration_with_fsa, oil_and_gas_investments, agriculture_works (depend on skipped)
+	# SKIPPED: reminder_of_taif_agreement (bypass fires — Lebanon independent by 2026)
+	# SKIPPED: root_out_hezbollah (depends on skipped)
+
+	# Counterterrorism
+	complete_national_focus = FRA_French_pillar_of_counterterrorism # prereq: francosphere — adds FRA_idea_the_french_pillar_of_counterterroism
+	complete_national_focus = FRA_the_french_foreign_legion        # prereq: counterterrorism — adds FRA_idea_the_french_foreign_legion
+
+	# Africa interventions
+	complete_national_focus = FRA_intervention_in_africa           # prereq: francosphere — war support
+	complete_national_focus = FRA_oef_hoa                          # prereq: intervention — OEF-HOA (military support SOM)
+	complete_national_focus = FRA_operation_licorne                # prereq: intervention — Ivory Coast (event france_md.102)
+	complete_national_focus = FRA_the_second_ivory_coast_civil_war # prereq: operation_licorne — 2nd Ivory Coast (event france_md.103)
+	complete_national_focus = FRA_operation_artemis                # prereq: intervention — Congo (event france_md.104)
+	complete_national_focus = FRA_CAR_intervention                 # prereq: intervention — Central African Republic (event france_md.106)
+	complete_national_focus = FRA_senegalese_civil_war             # prereq: intervention — Senegal (event france_md.105)
+	complete_national_focus = FRA_operation_serval                 # prereq: intervention — Mali (event france_md.107)
+	complete_national_focus = FRA_takuba_task_force                # prereq: operation_serval — Takuba (event france_md.108)
+	complete_national_focus = FRA_haitian_coup                     # prereq: francosphere — Haiti (event france_md.109)
+	complete_national_focus = FRA_repeal_the_ordiance              # prereq: francosphere — Haiti influence + opinion
+
+	# Francafrique
+	complete_national_focus = FRA_francafrique                     # prereq: francosphere — African nation influence/opinion
+	complete_national_focus = FRA_francophone_solidarity           # ME choice (vs continue_cold_war_mentality) — solidarity path
+	complete_national_focus = FRA_NEPAD_development                # prereq: francophone_solidarity — dynamic modifiers (1095d, cleanup below)
+	complete_national_focus = FRA_CFA_Reforms                     # prereq: francophone_solidarity + NEPAD — swaps cfa_franc → cfa_franc_2
+
+	# Indochina
+	complete_national_focus = FRA_returning_to_indochina           # prereq: francosphere — influence CBD/VIE/LAO
+	complete_national_focus = FRA_former_indian_colonial           # prereq: returning_to_indochina — influence SEY/MRT/COM/SRI/MLD
+
+	### CLEANUP — remove timed ideas and expired dynamic modifiers ###
+	# FRA_french_nato_restructures adds FRA_idea_french_nato_restructures (730d) — would have expired years ago
+	remove_ideas = FRA_idea_french_nato_restructures
+
+	# FRA_NEPAD_development adds FRA_idea_nepad_modifier (1095d dynamic) — NEPAD launched 2001, expired by ~2004
+	remove_dynamic_modifier = { modifier = FRA_idea_nepad_modifier }
+
+	# FRA_cnes_budgeting adds FRA_idea_cnes_failing — negative idea representing early CNES budget struggles, no longer relevant
+	remove_ideas = FRA_idea_cnes_failing
 }
