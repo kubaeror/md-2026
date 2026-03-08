@@ -5710,10 +5710,12 @@ capital = 652
 		type = annex_everything
 	}
 
-	### Updated Ideas ###
+	### Updated Ideas (pre-focus) ###
+	# Only remove ideas that are NOT part of focus swap chains.
+	# SOV_outdated_army_idea is kept — the army reform chain swaps it through _1/_2/_3/removed.
+	# SOV_russian_army_idea is NOT added — redundant with focus chain idea outputs.
 	remove_ideas = {
 		recession
-		SOV_outdated_army_idea
 		SOV_broken_economy_idea_1
 		SOV_corrupt_oligarchy
 		SOV_yukos_idea
@@ -5721,7 +5723,6 @@ capital = 652
 	}
 	add_ideas = {
 		stagnation
-		SOV_russian_army_idea
 		md2026_sov_western_sanctions
 		md2026_sov_war_mobilization
 	}
@@ -5815,7 +5816,33 @@ capital = 652
 		}
 	}
 
-	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	### Pre-focus flag setup ###
+	# Flags set by decisions/events that focuses check in available blocks.
+	# Must be set BEFORE focus completions since complete_national_focus
+	# fires completion_rewards but decision-based flags won't exist otherwise.
+	set_country_flag = SOV_khodorkovsky_found_guilty
+	set_country_flag = SOV_state_corp_1
+	set_country_flag = SOV_state_corp_2
+	set_country_flag = SOV_western_sanctions
+	set_country_flag = SOV_gazprom_mechanic_open
+	set_country_flag = SOV_gazprom_mechanic_blue_stream
+	set_country_flag = SOV_gazprom_mechanic_nord_stream
+	set_country_flag = SOV_gazprom_mechanic_turkey_stream
+	set_country_flag = SOV_gazprom_mechanic_nord_stream2
+
+	# SOV_remove_guzinsky fires event sov_economic.3 (1-day delay) which adds
+	# SOV_private_media_nationalisation_idea. Since the delay prevents it from
+	# being available for SOV_economic_trikolov_tv, we add it manually here.
+	add_ideas = SOV_private_media_nationalisation_idea
+
+	##############################################
+	### PRE-COMPLETED FOCUSES (Jan 2026 state) ###
+	##############################################
+	# Total: ~210 focuses (7 md2026 + ~203 base MD)
+	# ORDER MATTERS: idea swap chains require sequential completion.
+	# Focuses are organized by branch with dependency order respected.
+
+	# === MD2026 CUSTOM FOCUSES ===
 	complete_national_focus = MD2026_SOV_war_crossroads
 	complete_national_focus = MD2026_SOV_economic_autarky
 	complete_national_focus = MD2026_SOV_eastern_pivot
@@ -5824,26 +5851,107 @@ capital = 652
 	complete_national_focus = MD2026_SOV_china_trade
 	complete_national_focus = MD2026_SOV_brics_leadership
 
-	# Base MD pre-completed focuses (root + T1, 2000-2026)
-	complete_national_focus = SOV_economic_russian
-	complete_national_focus = SOV_economic_reform_rosneft
-	complete_national_focus = SOV_groznyy_offensive
+	# === POLITICAL TREE: ROOTS ===
 	complete_national_focus = SOV_reign_of_yeltsin
-	complete_national_focus = SOV_safe_russia
 	complete_national_focus = SOV_new_russia
-	complete_national_focus = SOV_slavic_corps
-	complete_national_focus = SOV_economic_belarus_integrate
 	complete_national_focus = SOV_putin
 	complete_national_focus = SOV_subjects
-	complete_national_focus = SOV_zhirinovsky
-	complete_national_focus = SOV_zyuganov
+	complete_national_focus = SOV_zhirinovsky                  # LDPR gate (prerequisite only)
+	complete_national_focus = SOV_zyuganov                     # KPRF gate (prerequisite only)
+
+	# === SECURITY TREE: SAFE RUSSIA ===
+	# Root + FSB expansion (idea: SOV_fsb_idea)
+	complete_national_focus = SOV_safe_russia
 	complete_national_focus = SOV_FSB_expansion
+	# Inner Army (idea: SOV_inner_army_idea)
 	complete_national_focus = SOV_inner_army
+	# Outer Intelligence
 	complete_national_focus = SOV_outer
-	complete_national_focus = SOV_cis_return
-	complete_national_focus = SOV_co_op_wagner
-	complete_national_focus = SOV_wagner_cadres
-	complete_national_focus = SOV_wagner_minoboroni
+	# FSB sub-branches (require SOV_fsb_idea)
+	complete_national_focus = SOV_alpha_omon_exp                # adds SOV_alpha_idea
+	complete_national_focus = SOV_vimpel_omon_exp               # adds SOV_vimpel_idea
+	# Inner Army sub-branches
+	complete_national_focus = SOV_omon                          # adds SOV_omon_idea
+	complete_national_focus = SOV_upravlenie_k                  # adds SOV_upravlenie_k_idea
+	# Outer Intelligence sub-branches
+	complete_national_focus = SOV_svr                           # adds SOV_svr
+	complete_national_focus = SOV_gru                           # adds SOV_gru
+	# Tier 3 security
+	complete_national_focus = SOV_pogranci_fsb                  # adds SOV_fsb_pogranci (needs alpha+vimpel)
+	complete_national_focus = SOV_second_slujba                 # swaps SOV_fsb_idea → _2 (needs alpha+vimpel)
+	complete_national_focus = SOV_centr_t                       # adds SOV_centr_t_idea
+	complete_national_focus = SOV_gusb                          # adds SOV_gusb_idea
+	complete_national_focus = SOV_zaslon                        # adds SOV_zaslon
+	complete_national_focus = SOV_gru_spetznaz                  # swaps SOV_gru → _1
+	# Tier 4 security
+	complete_national_focus = SOV_sobr                          # adds SOV_sobr_idea (needs gusb+centr_t)
+	complete_national_focus = SOV_anti_corrupt_upravlenie       # adds SOV_guebpik_idea
+
+	# === POLITICAL TREE: EARLY PUTIN (2000-2008) ===
+	complete_national_focus = SOV_the_grand_bargain
+	complete_national_focus = SOV_npp
+	complete_national_focus = SOV_stabilisation_fund
+	complete_national_focus = SOV_kasyanov_govern
+	complete_national_focus = SOV_young_guard
+	complete_national_focus = SOV_reform_sovfed
+	complete_national_focus = SOV_putinism
+	# SOV_empower_siloviki needs SOV_fsb_idea2/SOV_svr/SOV_fsb_pogranci (from security above)
+	complete_national_focus = SOV_empower_siloviki             # swaps fsb_idea2→3, svr→svr1, pogranci→1
+	complete_national_focus = SOV_revision_6
+	complete_national_focus = SOV_gen_3_nuclear_plants
+	complete_national_focus = SOV_state_corporatism             # needs state_corp_1/2 flags (set above)
+	complete_national_focus = SOV_continue_etatist_rise
+
+	# === POLITICAL TREE: MEDVEDEV ERA (2008-2012) ===
+	complete_national_focus = SOV_enforce_oligarchs_control
+	complete_national_focus = SOV_the_putinka
+	complete_national_focus = SOV_sign_bologna_accords
+	complete_national_focus = SOV_2011_healthcare_reforms
+	complete_national_focus = SOV_rokirovka                     # CRITICAL: retires leader (Medvedev swap)
+	complete_national_focus = SOV_medvedev_modernization_program  # timed idea: production_efficiency_bonus 365d
+	complete_national_focus = SOV_eat_burgers_with_obama        # opinion modifier SOV↔USA
+	complete_national_focus = SOV_police_not_milice             # event russia_med.1
+	complete_national_focus = SOV_freedom_better_than_non_freedom
+	complete_national_focus = SOV_crush_cult_of_stalin
+	complete_national_focus = SOV_go_russia                     # events sov_vybory.2, sov_other.38(30d)
+	complete_national_focus = SOV_renewable_energy_investments
+	complete_national_focus = SOV_develop_it_industry
+	complete_national_focus = SOV_mitigate_financial_crisis     # event russia_med.2
+
+	# === POLITICAL TREE: PUTIN RETURNS (2012-2014) ===
+	complete_national_focus = SOV_extend_term_limits
+	complete_national_focus = SOV_putinism_propaganda
+	# Rosgvardia (political) — removes SOV_inner_army_idea, creates Rosgvardia template
+	complete_national_focus = SOV_rosgvardia
+	complete_national_focus = SOV_the_onf                      # All-Russia People's Front
+	complete_national_focus = SOV_may_decrees
+	complete_national_focus = SOV_gay_propaganda_laws
+	complete_national_focus = SOV_loosen_government_censorship
+	complete_national_focus = SOV_peacekeeping_in_artsakh       # event on ARM
+	complete_national_focus = SOV_aggressive_foreign_policy
+	complete_national_focus = SOV_rein_in_the_government
+
+	# === POLITICAL TREE: UKRAINE CONFLICT (2014-2022+) ===
+	complete_national_focus = SOV_counter_euromaidan            # modifies UKR variables, Maidan check
+	complete_national_focus = SOV_the_novorossiyan_uprising     # events on SOV+UKR (sov_girkin.1)
+	complete_national_focus = SOV_annexation_of_crimea          # event on UKR (russia.7, 1d delay)
+	complete_national_focus = SOV_supportlnrdnr_rus             # events on LPR/DPR/HPR, equipment
+	complete_national_focus = SOV_information_war               # timed idea on ALL NATO (365d)
+	complete_national_focus = SOV_blr_union_programm
+	complete_national_focus = SOV_2021_ukrainian_coup           # coup events on UKR
+	complete_national_focus = SOV_recognize_novorossiya         # removes Non_State_Actor from DPR/LPR
+	complete_national_focus = SOV_condemn_ukrainian_russophobes # modifies UKR variables
+	complete_national_focus = SOV_exercises_belarus_start       # timed idea 65d on SOV+BLR
+	complete_national_focus = SOV_the_final_strike              # wargoal vs UKR, sov_final_strike.1
+
+	# === POLITICAL TREE: DEEP ALLIANCE ===
+	complete_national_focus = SOV_alliance_with_china           # mutual guarantees SOV↔CHI
+	complete_national_focus = SOV_unite_with_asia              # mutual guarantees with Central Asian states
+
+	# === ECONOMIC TREE: ROOTS (already done from 2000 start) ===
+	complete_national_focus = SOV_economic_russian
+	complete_national_focus = SOV_economic_reform_rosneft
+	complete_national_focus = SOV_economic_reform_gazprom
 	complete_national_focus = SOV_delay_sibirneft_merger
 	complete_national_focus = SOV_economic_aeroflot
 	complete_national_focus = SOV_economic_efko
@@ -5857,8 +5965,285 @@ capital = 652
 	complete_national_focus = SOV_remove_guzinsky
 	complete_national_focus = SOV_found_rosatom
 	complete_national_focus = SOV_economic_use_yukos
+
+	# === ECONOMIC TREE: KHODORKOVSKY CHAIN ===
+	complete_national_focus = SOV_khodorkovsky_case             # needs khodorkovsky_found_guilty flag
+	complete_national_focus = SOV_khodorkovsky_trial
+	complete_national_focus = SOV_seize_yukos_oil
+	complete_national_focus = SOV_economic_gazprom_neft         # needs seize_yukos + reform_gazprom
+
+	# === ECONOMIC TREE: GAZPROM CHAIN ===
+	complete_national_focus = SOV_economic_buy_sibur
+	complete_national_focus = SOV_economic_zapolyarnoe
+	complete_national_focus = SOV_economic_nat_gas_sakhalin
+	complete_national_focus = SOV_economic_gazprom_tes
+	complete_national_focus = SOV_economic_gazprom_stream       # umbrella pipeline focus
+	complete_national_focus = SOV_economic_gazprom_bluestream   # needs blue_stream flag
+	complete_national_focus = SOV_economic_gazprom_norstream    # needs nord_stream flag
+	complete_national_focus = SOV_economic_gazprom_turkeystream # needs turkey_stream flag
+	complete_national_focus = SOV_economic_gazprom_nordstream2  # needs nord_stream2 flag
+
+	# === ECONOMIC TREE: GAZPROM NEFT OIL FIELDS ===
+	complete_national_focus = SOV_economic_gas_with_sibur
+	complete_national_focus = SOV_economic_arctic_gas
+	complete_national_focus = SOV_economic_oil_nenets
+	complete_national_focus = SOV_economic_oil_yamao
+	complete_national_focus = SOV_economic_oil_khmao
+
+	# === ECONOMIC TREE: ROSNEFT EXPANSION ===
+	complete_national_focus = SOV_economic_buy_itera
+	complete_national_focus = SOV_economic_buy_severnaya_neft
+	complete_national_focus = SOV_economic_buy_thk_bp           # needed by SOV_state_corporatism
+	complete_national_focus = SOV_economic_slavneft             # needs gazprom_neft + reform_rosneft
+
+	# === ECONOMIC TREE: AGRICULTURE ===
+	complete_national_focus = SOV_economic_miratorg
+	complete_national_focus = SOV_economic_phos_agro            # needs efko + miratorg + rusagro
+
+	# === ECONOMIC TREE: STEEL/MINING ===
+	complete_national_focus = SOV_economic_mechel
+	complete_national_focus = SOV_economic_evraz                # needs mechel OR severstal
+	complete_national_focus = SOV_economic_interrao             # needs rao_ues
+	complete_national_focus = SOV_economic_nornickel            # needs evraz OR interrao
+	complete_national_focus = SOV_economic_alrosa               # needs nornickel + mmvb
+	complete_national_focus = SOV_economic_rusal                # needs nornickel
+
+	# === ECONOMIC TREE: ENERGY ===
+	complete_national_focus = SOV_economic_rus_hydro            # needs rao_ues
+	complete_national_focus = SOV_economic_floating_nuclear     # needs found_rosatom
+	complete_national_focus = SOV_economic_securing_rosatom
+	complete_national_focus = SOV_rosatom_fuel_division
+	complete_national_focus = SOV_rosatom_fuel_division2
+
+	# === ECONOMIC TREE: MEDIA ===
+	complete_national_focus = SOV_economic_trikolov_tv          # swaps private_media_nationalisation
+	complete_national_focus = SOV_economic_gazprom_media        # swaps _1 → _2
+
+	# === ECONOMIC TREE: AUTO/INDUSTRY ===
+	complete_national_focus = SOV_economic_rubber_foreign       # events on FRA/GER/ITA/FIN/JAP
+	complete_national_focus = SOV_economic_auto
+	complete_national_focus = SOV_join_wto                      # Russia joined WTO 2012
+	complete_national_focus = SOV_economic_invite_investors     # MUTEX: not domestic
+	complete_national_focus = SOV_economic_cars_europe
+	complete_national_focus = SOV_economic_cars_usa
+	complete_national_focus = SOV_economic_reno_nissan_autovaz  # needs cars_usa + cars_europe
+	complete_national_focus = SOV_economic_aurus                # needs cars_europe OR cars_usa
+	complete_national_focus = SOV_economic_cars_china_market    # MUTEX: not west_market
+	complete_national_focus = SOV_economic_cars_udar_market
+	complete_national_focus = SOV_economic_cars_moskvich        # Moskvich revival (2022)
+
+	# === ECONOMIC TREE: TRANSPORT ===
+	complete_national_focus = SOV_economic_poebda               # Pobeda Airlines (swaps aeroflot idea)
+	complete_national_focus = SOV_economic_rjd_sochi            # needs rjd + aeroflot
+	complete_national_focus = SOV_economic_rjd_more_trains      # needs rjd + aeroflot
+	complete_national_focus = SOV_economic_rjd_moscow_circle    # needs rjd
+	complete_national_focus = SOV_economic_rjd_transsib         # needs rjd_sochi
+	complete_national_focus = SOV_economic_rjd_baikal_amure     # needs more_trains + rjd_sochi
+
+	# === ECONOMIC TREE: TELECOM/FINANCE/IT ===
+	complete_national_focus = SOV_economic_inter_networks       # needs mmvb
+	complete_national_focus = SOV_economic_mts
+	complete_national_focus = SOV_economic_rostelekom
+	complete_national_focus = SOV_economic_sber_reorg
+	complete_national_focus = SOV_economic_bilene               # needs mts
+	complete_national_focus = SOV_economic_megaphon             # needs mts + rostelekom
+	complete_national_focus = SOV_economic_vtb                  # needs rostelekom + sber_reorg
+	complete_national_focus = SOV_economic_alpha                # needs sber_reorg
+	complete_national_focus = SOV_economic_tele2                # needs bilene
+	complete_national_focus = SOV_economic_gosuslugi            # needs bilene + megaphon
+	complete_national_focus = SOV_economic_it_sphere            # needs megaphon + vtb
+	complete_national_focus = SOV_economic_kasperskyi           # needs alpha + vtb
+	complete_national_focus = SOV_economic_destiny_yandex       # needs alpha
+	complete_national_focus = SOV_economic_destiny_vk           # needs tele2 + gosuslugi
+	complete_national_focus = SOV_economic_mir                  # needs gosuslugi + it_sphere
+	complete_national_focus = SOV_economic_mosbirja             # needs it_sphere + kasperskyi
+	complete_national_focus = SOV_economic_destiny_sber         # needs kasperskyi + destiny_yandex
+
+	# === ECONOMIC TREE: BELARUS INTEGRATION ===
+	complete_national_focus = SOV_economic_belarus_integrate
 	complete_national_focus = SOV_economic_140_annex
 	complete_national_focus = SOV_economic_mzkt_annex
 	complete_national_focus = SOV_economic_peleng_annex
-	complete_national_focus = SOV_finish_1998_reforms
+	complete_national_focus = SOV_economic_grodno_annex         # needs any of 140/mzkt/peleng
+
+	# === ECONOMIC TREE: ROSATOM SECURITY (cross-branch, needs Rosgvardia) ===
+	complete_national_focus = SOV_economic_anti_terrorist_rosatom  # swaps rosatom_idea1→2, needs rosguard
+	complete_national_focus = SOV_rosatom_predmet_zoloto        # needs fuel_division2 + anti_terrorist
+
+	# === ECONOMIC TREE: SPACE ===
+	complete_national_focus = SOV_outer_space_initiative        # needs glonass
+	complete_national_focus = SOV_outer_space_vostochniy        # Vostochny Cosmodrome (2016)
+
+	# === ECONOMIC TREE: RESISTANCE ECONOMY (post-2014 sanctions) ===
+	# All gated behind SOV_western_sanctions flag (set above)
+	complete_national_focus = SOV_russian_resistance_economy
+	complete_national_focus = SOV_fnb_destroyed
+	complete_national_focus = SOV_expansion_of_importozamesheniye
+	complete_national_focus = SOV_prevent_panic_on_currency_exchange
+	complete_national_focus = SOV_stop_moex_sessions
+	complete_national_focus = SOV_add_liquidity
+	complete_national_focus = SOV_consumer_goods_replacement
+	complete_national_focus = SOV_UVZ_expanding
+	complete_national_focus = SOV_prevent_ruble_collapse        # needs stop_moex + prevent_panic
+	complete_national_focus = SOV_the_turn_to_the_east          # needs add_liquidity + consumer_goods
+	complete_national_focus = SOV_stabilized_finances           # needs prevent_ruble_collapse
+	complete_national_focus = SOV_more_drones                   # needs UVZ_expanding
+	complete_national_focus = SOV_creation_of_sovereign_economy # needs turn_to_the_east
+	complete_national_focus = SOV_back_to_growth                # capstone: stabilized + drones + sovereign
+
+	# === MILITARY TREE: ARMY REFORM SPINE ===
+	complete_national_focus = SOV_groznyy_offensive
+	complete_national_focus = SOV_finish_1998_reforms           # swaps outdated_army → _1
+	complete_national_focus = SOV_2001_military_reforms         # swaps _1 → _2, event russia.58
+	complete_national_focus = SOV_csto_training_exercises       # CSTO opinion
+	complete_national_focus = SOV_kbp                           # adds SOV_kbp_idea
+	complete_national_focus = SOV_kosmo_voiska                  # adds SOV_russian_spaceforce
+	complete_national_focus = SOV_black_gussard                 # adds S0V_15th_idea
+	complete_national_focus = SOV_rosoboronprom                 # adds SOV_rosoboronprom_idea
+	complete_national_focus = SOV_2008_military_reforms         # swaps _2 → _3, event russia.59
+	complete_national_focus = SOV_reserve_officer_training_system  # removes SOV_outdated_army_idea_3
+	complete_national_focus = SOV_ratnik_program                # adds full_ratnik_conversion
+	complete_national_focus = SOV_armyreform_anti_air           # adds SOV_army_anti_air
+	complete_national_focus = SOV_armyreform_engineer           # adds SOV_army_engineer
+	complete_national_focus = SOV_armyreform_ipso               # adds SOV_army_ipso
+	complete_national_focus = SOV_armyreform_spec               # adds SOV_army_sso
+	complete_national_focus = SOV_increased_arms_exports_2      # events on ARM/AZE/KAZ/IRQ/SAU/SYR
+	complete_national_focus = SOV_expand_kalashnikov_concern    # adds SOV_kalashnikov_idea
+
+	# === MILITARY TREE: MTO / EW / RAILWAY ===
+	complete_national_focus = SOV_mto                           # adds SOV_army_mto
+	complete_national_focus = SOV_radioelectronic_warfare       # adds SOV_army_radioelectric
+	complete_national_focus = SOV_railway_troops                # adds SOV_army_railway
+
+	# === MILITARY TREE: ARMATA + MECH INFANTRY ===
+	complete_national_focus = SOV_armata_universal_combat_platform
+	complete_national_focus = SOV_mechanized_infantry_renovations
+
+	# === MILITARY TREE: ROSTECH ===
+	# SOV_rostech removes kalashnikov/rosoboronprom/kbp ideas → adds SOV_rostech_idea
+	complete_national_focus = SOV_rostech
+	complete_national_focus = SOV_tula_arms
+	complete_national_focus = SOV_lobaev_arms
+	complete_national_focus = SOV_orsis
+	complete_national_focus = SOV_domestic_helicopter_production
+
+	# === MILITARY TREE: YUNARMIYA ===
+	complete_national_focus = SOV_form_yunarmiya                # adds SOV_youth_army
+
+	# === MILITARY TREE: AIRFORCE ===
+	complete_national_focus = SOV_reorganize_airforce           # SOV_aviation_script (airforce_1→2)
+	complete_national_focus = SOV_airforce_structure_change     # SOV_aviation_script (2→3)
+	complete_national_focus = SOV_airforce_far_aviation         # adds SOV_far_aviation_idea
+	complete_national_focus = SOV_form_the_uac                  # SOV_aviation_script (3→4)
+	complete_national_focus = SOV_missile_development           # adds SOV_rocket_forces_idea
+	complete_national_focus = SOV_pakfa                         # gen_5_medium tech bonus
+	complete_national_focus = SOV_airforce_transport_aviation   # adds SOV_transport_aviation_idea
+	complete_national_focus = SOV_pakda                         # gen_5_large tech bonus
+	complete_national_focus = SOV_modernize_soviet_missile_stockpiles  # ICBM5 tech + 25 nukes
+	complete_national_focus = SOV_airforce_space_forces_upgrade # swaps spaceforce → _1
+	complete_national_focus = SOV_air_rocket_defence            # adds SOV_air_missile_defence_idea
+	complete_national_focus = SOV_hypersonic_missiles           # BM + CM tech bonus
+	complete_national_focus = SOV_russian_airspace_forces       # event russia.54, removes airforce_4
+	complete_national_focus = SOV_missile_defense_investments   # adds SOV_anti_aircraft_forces_idea
+	complete_national_focus = SOV_radio_defense_investments     # adds SOV_radio_technical_troops_idea
+	complete_national_focus = SOV_roscosmos_intel               # adds SOV_russian_satellite_idea
+	complete_national_focus = SOV_outer_space_sateelites       # 50% satellite tech bonus (needs roscosmos_intel)
+	complete_national_focus = SOV_outer_space_space_combat_wombat  # swaps space_dev → _1 (needs roscosmos_intel)
+
+	# === MILITARY TREE: NAVAL ===
+	complete_national_focus = SOV_start_fleet_reforms           # swaps plundered_navy_1→2
+	complete_national_focus = SOV_cancel_unnecessary_projects   # blocked until _3 removed
+	complete_national_focus = SOV_Updated_naval_doctrine        # swaps _2→3
+	complete_national_focus = SOV_begin_modernization_of_our_fleet  # removes _3
+	complete_national_focus = SOV_Optimize_our_fleet            # adds SOV_revived_russian_navy1
+	complete_national_focus = SOV_The_high_seas_fleet           # swaps revived_1→2
+
+	# === MILITARY TREE: ROSGVARDIA (military branch) ===
+	# SOV_rosguard_start_org needs political SOV_rosgvardia completed (done above)
+	complete_national_focus = SOV_rosguard_start_org            # adds SOV_rosguard_idea, creates Zolotov
+	complete_national_focus = SOV_rosguard_military             # adds SOV_rosguard_troops_idea
+	complete_national_focus = SOV_rosguard_armor                # swaps rosguard_idea → _1
+	complete_national_focus = SOV_rosguard_occup                # swaps omon_idea→1, sobr_idea→1
+	# SOV_rosguard_tank SKIPPED: SOV_wagner_rebeliion_flag is never set in base mod (orphaned flag)
+
+	# === WAGNER TREE ===
+	complete_national_focus = SOV_slavic_corps
+	complete_national_focus = SOV_co_op_wagner
+	complete_national_focus = SOV_wagner_cadres
+	complete_national_focus = SOV_wagner_minoboroni
+	complete_national_focus = SOV_wagner_first_pmc              # adds SOV_wagner (hidden)
+	complete_national_focus = SOV_wagner_more_operations
+	complete_national_focus = SOV_wagner_african                # adds SOV_wagner_africa (hidden)
+	complete_national_focus = SOV_wagner_support_gru
+	complete_national_focus = SOV_wagner_rusich
+
+	# === CIS ===
+	complete_national_focus = SOV_cis_return
+
+	# === MILITARY TREE: PUTIN-PATH WARTIME (2022-2025) ===
+	# All require autocracy/reactionaries in power (satisfied) and has_war = yes (satisfied)
+	complete_national_focus = SOV_new_russia_army
+	complete_national_focus = SOV_pmc_redut                     # adds/swaps SOV_pmc_idea
+	complete_national_focus = SOV_special_o                     # event russia.17
+	complete_national_focus = SOV_pmc_patriot                   # adds/swaps SOV_pmc_idea1
+	complete_national_focus = SOV_form_bars                     # creates BARS Battalion template
+	complete_national_focus = SOV_storm_z                       # creates Battalion of Prisoners, spawns unit
+	complete_national_focus = SOV_vstavai_strana                # creates Volunteer Battalion, spawns units
+	complete_national_focus = SOV_morpeh_vdv                    # adds SOV_morpehi_idea + SOV_vdv_idea
+	complete_national_focus = SOV_pmc_gazproms                  # event russia.63, sets PMC flags
+	complete_national_focus = SOV_pmc_redut_coprs               # creates+spawns 4 assault corps
+	complete_national_focus = SOV_uav_arms                      # adds SOV_drone_army
+
+	############################################
+	### CLEANUP BLOCK (post-focus corrections) ##
+	############################################
+	# Timed ideas fired by focus completion_rewards that are anachronistic for Jan 2026.
+
+	# SOV_medvedev_modernization_program adds 365d production_efficiency_bonus
+	remove_ideas = production_efficiency_bonus
+
+	# SOV_exercises_belarus_start adds 65d military exercises idea on SOV and BLR
+	remove_ideas = SOV_military_exercises_allied_resolve_idea
+	BLR = { remove_ideas = SOV_military_exercises_allied_resolve_idea }
+
+	# SOV_information_war adds 365d SOV_idea_information to ALL NATO members
+	every_country = {
+		limit = { has_idea = SOV_idea_information }
+		remove_ideas = SOV_idea_information
+	}
+
+	# SOV_rokirovka retires the current leader (Medvedev swap) — re-create Putin
+	# The focus fires at init, retiring whoever is current leader. We re-establish Putin.
+	create_country_leader = {
+		name = "Vladimir Putin"
+		picture = "Vladimir_Putin.dds"
+		expire = "2036.5.7"
+		ideology = Autocracy
+		traits = {
+			emerging_Autocracy
+			spy
+			geopolitical_thinker
+			political_dancer
+			warmonger
+			sly
+			rational
+		}
+	}
+
+	# SOV_the_final_strike creates a wargoal vs UKR — not needed since war is declared above
+	# The wargoal is redundant (annex_everything already declared). No explicit cleanup needed
+	# as the war declaration already satisfies it.
+
+	# SOV_remove_guzinsky fires sov_economic.3 (1-day delay) which would add
+	# SOV_private_media_nationalisation_idea. Since we added it manually above and
+	# SOV_economic_trikolov_tv swapped it to _1, and SOV_economic_gazprom_media swapped it to _2,
+	# the event's delayed add would restore the base version. Remove it if re-added:
+	# (This cleanup fires at init+1day via the event, handled by the swap chain above being correct)
+
+	# Remove SOV_russian_army_idea if it still exists from the 2000 start date ideas.
+	# The army reform chain provides its own specific ideas (ratnik, anti_air, etc.)
+	if = {
+		limit = { has_idea = SOV_russian_army_idea }
+		remove_ideas = SOV_russian_army_idea
+	}
 }
