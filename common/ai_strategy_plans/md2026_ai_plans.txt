@@ -1626,3 +1626,45 @@ md2026_rom_historical = {
 		}
 	}
 }
+
+# ============================================================
+# BALTICS (EST, LAT, LIT)
+# ============================================================
+md2026_baltic_historical = {
+	allowed = { 
+		OR = {
+			original_tag = EST
+			original_tag = LAT
+			original_tag = LIT
+		}
+	}
+	name = "Baltic 2026 Historical"
+	desc = "Suwalki Shield: NATO tripwire, HIMARS acquisition, conscription, and cyber resilience."
+
+	enable = {
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_BALTIC_suwalki_shield
+		MD2026_BALTIC_nato_efp
+		MD2026_BALTIC_suwalki_gap_defense
+		MD2026_BALTIC_himars_acquisition
+		MD2026_BALTIC_conscription_expansion
+		MD2026_BALTIC_russian_border
+		MD2026_BALTIC_cyber_resilience
+		MD2026_BALTIC_poland_alliance
+		MD2026_BALTIC_baltic_tiger
+		MD2026_BALTIC_fortress_baltic
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

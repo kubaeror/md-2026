@@ -319,6 +319,10 @@
 	}
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_BALTIC_suwalki_shield
+	complete_national_focus = MD2026_BALTIC_nato_efp
+
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 	complete_national_focus = GENERIC_air_force_reform
 	complete_national_focus = GENERIC_army_reform
