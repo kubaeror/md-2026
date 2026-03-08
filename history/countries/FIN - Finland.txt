@@ -764,8 +764,33 @@
 
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 	complete_national_focus = FIN_government_expansion
-	complete_national_focus = FIN_expand_the_financial_ministry
-	complete_national_focus = FIN_expand_the_foreign_ministry
 	complete_national_focus = FIN_expand_the_interior_ministry
-	complete_national_focus = FIN_expand_the_ministry_of_defense
+	complete_national_focus = FIN_conscription_reform
+	complete_national_focus = FIN_northern_road_maintenance
+	complete_national_focus = FIN_industrial_expansion_policy
+	complete_national_focus = FIN_timber_export_policy
+	complete_national_focus = FIN_focus_on_civilian_industry
+	complete_national_focus = FIN_focus_on_military_industry
+	complete_national_focus = FIN_expand_the_financial_ministry
+	complete_national_focus = FIN_export_focus
+	complete_national_focus = FIN_expand_valtatie_1
+	complete_national_focus = FIN_adopt_an_economic_doctrine
+	complete_national_focus = FIN_industrialize_turku
+	complete_national_focus = FIN_industrialize_helsinki
+	complete_national_focus = FIN_expand_the_foreign_ministry
+	complete_national_focus = FIN_adopt_a_foreign_policy_doctrine
+	complete_national_focus = FIN_secure_european_trade_deals
+	complete_national_focus = FIN_trade_with_the_nordics
+	complete_national_focus = FIN_trade_with_russia
+	complete_national_focus = FIN_trade_with_the_united_states
+	complete_national_focus = FIN_trade_with_china
+	complete_national_focus = FIN_proximity_to_russia
+	complete_national_focus = FIN_distance_from_russia
+	complete_national_focus = FIN_proximity_to_sweden
+	complete_national_focus = FIN_distance_from_sweden
+	complete_national_focus = FIN_proximity_to_the_nordic_countries
+	complete_national_focus = FIN_distance_from_the_nordic_countries
+	complete_national_focus = FIN_proximity_to_germany
+	complete_national_focus = FIN_distance_from_germany
+	complete_national_focus = FIN_proximity_to_the_united_states
 }
