@@ -67,4 +67,54 @@ md2026_setup_world_borders_and_wars = {
             add_opinion_modifier = { target = SOV modifier = military_cooperation }
         }
     }
+
+
+    # 5. Clean up dead/retired 2000s leaders and generals
+    # USA
+    if = {
+        limit = { tag = USA }
+        USA = {
+            # Remove old military leaders
+            if = { limit = { has_character = USA_tommy_franks } retire_character = USA_tommy_franks }
+            if = { limit = { has_character = USA_colin_powell } retire_character = USA_colin_powell }
+            if = { limit = { has_character = USA_donald_rumsfeld } retire_character = USA_donald_rumsfeld }
+            if = { limit = { has_character = USA_norman_schwarzkopf } retire_character = USA_norman_schwarzkopf }
+            if = { limit = { has_character = USA_richard_myers } retire_character = USA_richard_myers }
+            # Promote modern military leaders
+            if = { limit = { has_character = USA_mark_milley } promote_character = USA_mark_milley }
+        }
+    }
+
+    # RUSSIA
+    if = {
+        limit = { tag = SOV }
+        SOV = {
+            if = { limit = { has_character = SOV_boris_yeltsin } retire_character = SOV_boris_yeltsin }
+            if = { limit = { has_character = SOV_igor_sergeyev } retire_character = SOV_igor_sergeyev }
+            if = { limit = { has_character = SOV_anatoly_kvashnin } retire_character = SOV_anatoly_kvashnin }
+            if = { limit = { has_character = SOV_vladimir_kuroyedov } retire_character = SOV_vladimir_kuroyedov }
+            if = { limit = { has_character = SOV_yevgeny_prigozhin } retire_character = SOV_yevgeny_prigozhin } # Dead by 2026
+            if = { limit = { has_character = SOV_dmitry_utkin } retire_character = SOV_dmitry_utkin } # Dead by 2026
+        }
+    }
+    
+    # UKRAINE
+    if = {
+        limit = { tag = UKR }
+        UKR = {
+            if = { limit = { has_character = UKR_valerii_zaluzhnyi } retire_character = UKR_valerii_zaluzhnyi } # Removed from command
+            if = { limit = { has_character = UKR_oleksandr_syrskyi } promote_character = UKR_oleksandr_syrskyi } # New commander in chief
+        }
+    }
+    
+    # CHINA
+    if = {
+        limit = { tag = CHI }
+        CHI = {
+            if = { limit = { has_character = CHI_jiang_zemin } retire_character = CHI_jiang_zemin }
+            if = { limit = { has_character = CHI_hu_jintao } retire_character = CHI_hu_jintao }
+            if = { limit = { has_character = CHI_chi_haotian } retire_character = CHI_chi_haotian }
+            if = { limit = { has_character = CHI_zhang_wannian } retire_character = CHI_zhang_wannian }
+        }
+    }
 }
