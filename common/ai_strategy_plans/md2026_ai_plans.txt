@@ -1587,3 +1587,42 @@ md2026_nga_historical = {
 		}
 	}
 }
+
+# ============================================================
+# ROMANIA (ROM)
+# No mutually exclusive focuses
+# ============================================================
+md2026_rom_historical = {
+	allowed = { original_tag = ROM }
+	name = "Romania 2026 Historical"
+	desc = "Eastern Flank: F-35 procurement, NATO Base MK, energy independence, and Moldova unification support."
+
+	enable = {
+		original_tag = ROM
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_ROM_eastern_flank
+		MD2026_ROM_nato_base
+		MD2026_ROM_mihail_kogalniceanu
+		MD2026_ROM_f35_procurement
+		MD2026_ROM_black_sea_fleet
+		MD2026_ROM_anti_ship_batteries
+		MD2026_ROM_ukraine_support
+		MD2026_ROM_moldova_unification
+		MD2026_ROM_energy_independence
+		MD2026_ROM_neptun_deep
+		MD2026_ROM_regional_power
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

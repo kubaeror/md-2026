@@ -1090,6 +1090,11 @@ capital = 150
 		md2026_rom_frontline_nato
 	}
 
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_ROM_eastern_flank
+	complete_national_focus = MD2026_ROM_nato_base
+	complete_national_focus = MD2026_ROM_ukraine_support
+
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 	complete_national_focus = ROM_armed_forces
 	complete_national_focus = ROM_death_of_the_king
