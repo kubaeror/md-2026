@@ -5238,7 +5238,10 @@ capital = 1182
 	set_variable = { term_limit = 2 }
 	set_variable = { current_term = 2 }
 
-	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	### PRE-COMPLETED FOCUSES ###
+	# Total: 99 focuses (12 md2026 + 87 base MD)
+
+	# === MD2026 Custom Focuses (Trump 2nd Term, 2025) ===
 	complete_national_focus = MD2026_USA_trump_second_term
 	complete_national_focus = MD2026_USA_mass_deportations
 	complete_national_focus = MD2026_USA_border_security
@@ -5252,33 +5255,64 @@ capital = 1182
 	complete_national_focus = MD2026_USA_deal_with_russia
 	complete_national_focus = MD2026_USA_territorial_ambitions
 
-	# Base MD pre-completed focuses (root + T1, 2000-2026)
-	complete_national_focus = USA_continue_space_efforts
+	# === Election Gates (auto-bypass, 2000-2016) ===
 	complete_national_focus = USA_focus_2004_republicans
 	complete_national_focus = USA_focus_2008_democrats
 	complete_national_focus = USA_focus_2012_democrats
 	complete_national_focus = USA_focus_2016_republican_victory
+
+	# === Root / Early Chain (pre-2000 foundations) ===
 	complete_national_focus = USA_focus_ending_clintonomics
-	complete_national_focus = USA_focus_foreign_policy_plan
-	complete_national_focus = USA_focus_iraq_leadership_problems
-	complete_national_focus = USA_focus_the_2000_joint_exercises
-	complete_national_focus = USA_focus_the_afghanistan_question
-	complete_national_focus = USA_focus_the_arab_spring
-	complete_national_focus = USA_focus_the_regulatory_merry_go_round
-	complete_national_focus = USA_new_millennia_new_media
-	complete_national_focus = USA_scars_from_the_forever_war
-	complete_national_focus = USA_focus_congressional_chaos
-	complete_national_focus = USA_finance_private_space_ventures
-	complete_national_focus = USA_focus_2004_economic_deregulation
-	complete_national_focus = USA_focus_2004_military_contracts
-	complete_national_focus = USA_focus_2008_environmental_safeguards
-	complete_national_focus = USA_focus_2008_inter_economic_deals
-	complete_national_focus = USA_focus_2009_tax_reforms
-	complete_national_focus = USA_focus_riding_green_wave
-	complete_national_focus = USA_focus_greater_plains_act
-	complete_national_focus = USA_focus_lithium_act
 	complete_national_focus = USA_focus_enjoy_surplus
 	complete_national_focus = USA_focus_limited_indust_expansion
+	complete_national_focus = USA_focus_rise_internet
+	complete_national_focus = USA_focus_late_renew_investments
+	complete_national_focus = USA_focus_43rd_administration
+
+	# === Bush 2000 Administration (domestic) ===
+	complete_national_focus = USA_focus_early_admin_dereg
+	complete_national_focus = USA_focus_2000_increase_military
+	complete_national_focus = USA_focus_2001_tax_cuts
+	complete_national_focus = USA_focus_2000_education_reforms
+	complete_national_focus = USA_focus_2000_limited_deregulation
+	complete_national_focus = USA_focus_2000_reform_financial
+	complete_national_focus = USA_focus_2000_central_free_trade
+
+	# === Bush 2004 Administration (domestic) ===
+	complete_national_focus = USA_focus_2004_economic_deregulation
+	complete_national_focus = USA_focus_2004_investments
+	complete_national_focus = USA_focus_2004_healthcare
+	complete_national_focus = USA_focus_2004_less_red_Tape
+	complete_national_focus = USA_focus_2004_budget_balancing
+	complete_national_focus = USA_focus_2007_tax_cuts
+	complete_national_focus = USA_focus_2004_urbanization
+
+	# === Obama 2008 Administration (domestic) ===
+	complete_national_focus = USA_focus_2008_inter_economic_deals
+	complete_national_focus = USA_focus_2009_tax_reforms
+	complete_national_focus = USA_focus_2008_social_security
+	complete_national_focus = USA_focus_2008_healthcare
+	complete_national_focus = USA_focus_2008_police
+	complete_national_focus = USA_focus_2008_urbanization
+	complete_national_focus = USA_focus_ending_2011_fiscal_year
+
+	# === Obama 2012 Administration (domestic) ===
+	complete_national_focus = USA_focus_2008_environmental_safeguards
+	complete_national_focus = USA_focus_riding_green_wave
+	complete_national_focus = USA_focus_2012_renewable_invest
+	complete_national_focus = USA_focus_2012_renewable_refitting
+	complete_national_focus = USA_focus_2012_renewable_research
+	complete_national_focus = USA_focus_2014_infrastructure
+	complete_national_focus = USA_focus_2012_blue_chip
+	complete_national_focus = USA_focus_2012_digital_classroom
+	complete_national_focus = USA_focus_urbanization_ii
+
+	# === Trump 2016 Administration (domestic) ===
+	complete_national_focus = USA_focus_the_regulatory_merry_go_round
+	complete_national_focus = USA_focus_the_better_business_act
+	complete_national_focus = USA_focus_blue_collar_programs
+
+	# === Regional Development (all 8 regions) ===
 	complete_national_focus = USA_focus_great_plains_states_region
 	complete_national_focus = USA_focus_greater_lakes_region
 	complete_national_focus = USA_focus_near_western_states_region
@@ -5287,20 +5321,52 @@ capital = 1182
 	complete_national_focus = USA_focus_the_lone_south
 	complete_national_focus = USA_focus_the_northeastern_region
 	complete_national_focus = USA_focus_the_southeastern_region
+	complete_national_focus = USA_focus_greater_plains_act
+	complete_national_focus = USA_focus_lithium_act
+
+	# === Foreign Policy (War on Terror, Middle East) ===
+	complete_national_focus = USA_focus_foreign_policy_plan
+	complete_national_focus = USA_focus_the_2000_joint_exercises
 	complete_national_focus = USA_focus_arming_our_horse
 	complete_national_focus = USA_focus_indirect_support_of_freedom
 	complete_national_focus = USA_focus_starting_the_war_on_terror
 	complete_national_focus = USA_focus_kuwait_defensive_aid
 	complete_national_focus = USA_focus_oil_for_aid
+	complete_national_focus = USA_focus_the_afghanistan_question
+	complete_national_focus = USA_focus_iraq_leadership_problems
 	complete_national_focus = USA_focus_war_on_terror_phase_two
+	complete_national_focus = USA_focus_the_arab_spring
 	complete_national_focus = USA_focus_advisory_policy
 	complete_national_focus = USA_focus_monetary_policy
 	complete_national_focus = USA_focus_war_on_terror_policy
 	complete_national_focus = USA_focus_support_the_democratic_movement
 	complete_national_focus = USA_focus_support_the_nationalist_movement
 	complete_national_focus = USA_focus_the_interventionist_will
+
+	# === Pentagon (roots only — Low/High Tech sub-branches left to player) ===
 	complete_national_focus = USA_focus_the_pentagon_wars
-	complete_national_focus = USA_focus_secretary_to_president
+	complete_national_focus = USA_focus_2004_military_contracts
+	complete_national_focus = USA_focus_united_states_army
+	complete_national_focus = USA_focus_united_states_navy
+	complete_national_focus = USA_focus_united_states_air_force
+
+	# === Space Program ===
+	complete_national_focus = USA_continue_space_efforts
+	complete_national_focus = USA_finance_private_space_ventures
+	complete_national_focus = USA_establishment_of_the_space_force
+
+	# === Media Branch (MUST be in order — idea swap chain) ===
+	# us_mass_media_problems → _two_a → _three_a → _four_a → _five_a
+	complete_national_focus = USA_new_millennia_new_media
 	complete_national_focus = USA_more_opinion_pieces
+	complete_national_focus = USA_redefining_news_channel
+	complete_national_focus = USA_appealing_to_the_masses
+	complete_national_focus = USA_party_lines_and_view_times
+
+	# === Drug War Branch (MUST be in order — idea swap chain) ===
+	# us_war_on_drugs → _two → _three_b → _four_b → _five_b
+	complete_national_focus = USA_scars_from_the_forever_war
 	complete_national_focus = USA_cutting_failed_programs
+	complete_national_focus = USA_repurposing_budgets
+	complete_national_focus = USA_holding_our_ground
 }
