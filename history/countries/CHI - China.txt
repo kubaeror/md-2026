@@ -4406,36 +4406,333 @@ capital = 547
 		}
 	}
 
-	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	##############################################
+	### PRE-COMPLETED FOCUSES (230 total)      ###
+	### 8 MD2026 custom + 222 base MD          ###
+	### Reflects China's path through Jan 2026 ###
+	##############################################
+
+	# --- MD2026 Custom Focuses (8) ---
 	complete_national_focus = MD2026_CHI_great_rejuvenation
 	complete_national_focus = MD2026_CHI_belt_road_2
+	complete_national_focus = MD2026_CHI_global_infrastructure
 	complete_national_focus = MD2026_CHI_naval_expansion
 	complete_national_focus = MD2026_CHI_tech_dominance
+	complete_national_focus = MD2026_CHI_semiconductor_war
 	complete_national_focus = MD2026_CHI_taiwan_question
 	complete_national_focus = MD2026_CHI_south_china_sea
-	complete_national_focus = MD2026_CHI_semiconductor_war
-	complete_national_focus = MD2026_CHI_global_infrastructure
 
-	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	# --- Party Politics Branch (43) ---
+	# Jiang era
 	complete_national_focus = CHI_Chairman_Jiang_Reign
-	complete_national_focus = CHI_Global_Influence
-	complete_national_focus = CHI_One_China_Policy
-	complete_national_focus = CHI_Preserve_the_Revolution
-	complete_national_focus = CHI_Regional_Influence
-	complete_national_focus = CHI_The_Untapped_Market
 	complete_national_focus = CHI_End_PLA_Business_Ventures
 	complete_national_focus = CHI_Future_of_the_CPC
 	complete_national_focus = CHI_Three_Represents_Thought
-	complete_national_focus = CHI_Favor_Multipolarity
-	complete_national_focus = CHI_Form_the_SCO
-	complete_national_focus = CHI_Forum_on_China_African_Cooperation
-	complete_national_focus = CHI_Internet_Crackdown
+	complete_national_focus = CHI_Permit_Entrepreneurs_to_Join_the_CPC
+	complete_national_focus = CHI_Invigorate_Country_Through_STE
+	# Faction choice: balanced
+	complete_national_focus = CHI_Preserve_CPC_Unity
+	# Hu Jintao era
+	complete_national_focus = CHI_Hu_Jintao_Agenda
+	complete_national_focus = CHI_8_Honours_8_Shames
+	complete_national_focus = CHI_Peaceful_Rise
+	complete_national_focus = CHI_Scientific_Outlook_on_Development
+	complete_national_focus = CHI_Harmonious_Society
+	complete_national_focus = CHI_Green_GDP
+	complete_national_focus = CHI_Set_up_Confucius_Institutes
+	complete_national_focus = CHI_Global_Chinese_Culture
+	complete_national_focus = CHI_Develop_Chinese_Cinema
+	# Succession + Xi transition
+	complete_national_focus = CHI_Succession_Question
+	complete_national_focus = CHI_Promote_Youth_League_Members
+	complete_national_focus = CHI_Wang_Lijun_Incident
+	# Xi Jinping era
+	complete_national_focus = CHI_Xi_Jinping_Agenda
+	complete_national_focus = CHI_Xi_Jinping_Thought
+	complete_national_focus = CHI_China_Dream
+	complete_national_focus = CHI_Xiaokang_Society
+	complete_national_focus = CHI_Four_Pronged_Comprehensive_Strategy
+	complete_national_focus = CHI_Third_Plenum
+	complete_national_focus = CHI_2_Child_Policy
+	complete_national_focus = CHI_Restructure_the_Penal_System
+	complete_national_focus = CHI_Establish_the_National_Security_Commission
+	complete_national_focus = CHI_Anti_Corruption_Campaigns
+	complete_national_focus = CHI_Establish_the_Central_Group_for_Military_Reform
+	complete_national_focus = CHI_Weaken_the_Youth_League
+	complete_national_focus = CHI_Take_Down_the_Big_Tigers
+	complete_national_focus = CHI_Centralize_Power
+	complete_national_focus = CHI_Amend_the_Constitution
+	complete_national_focus = CHI_Remove_Term_Limits
+	complete_national_focus = CHI_Cult_of_Personality
+	# Military reform chain
+	complete_national_focus = CHI_Scrap_Military_Commands
+	complete_national_focus = CHI_Cut_Ground_Troop_Numbers
+	complete_national_focus = CHI_Stamp_Out_Corruption
+	complete_national_focus = CHI_Naval_Capability_Enhancements
+	complete_national_focus = CHI_Aerial_Capability_Enhancements
+	complete_national_focus = CHI_Network_Centric_Warfare
+	complete_national_focus = CHI_New_Era_PLA
+
+	# --- Internal Security Branch (23) ---
+	complete_national_focus = CHI_Preserve_the_Revolution
 	complete_national_focus = CHI_Proper_State_Atheism
+	complete_national_focus = CHI_Crush_the_Falun_Gong
+	complete_national_focus = CHI_Combat_Islamism
+	complete_national_focus = CHI_Crush_the_Turkistan_Islamic_Party
+	complete_national_focus = CHI_Xinjiang_Reeducation_Camps
+	# Internet path: Netizen Nation -> Golden Shield (enables Great Firewall chain)
+	complete_national_focus = CHI_Netizen_Nation
+	complete_national_focus = CHI_Golden_Shield_Project
+	complete_national_focus = CHI_The_Great_Firewall_of_China
+	complete_national_focus = CHI_Facial_Recognition_Surveillance
+	complete_national_focus = CHI_Social_Credit_Scheme
+	complete_national_focus = CHI_Skynet
+	complete_national_focus = CHI_50_Cent_Army
+	complete_national_focus = CHI_PLA_Cyber_Army
+	complete_national_focus = CHI_Industrial_Espionage
+	complete_national_focus = CHI_Mandate_Backdoors
+	complete_national_focus = CHI_QQ
+	complete_national_focus = CHI_WeChat
+	complete_national_focus = CHI_Study_and_Strengthen_Nation
+	complete_national_focus = CHI_Sina_Weibo
+	complete_national_focus = CHI_Bilibili
+	complete_national_focus = CHI_Mihoyo
+	complete_national_focus = CHI_Tik_Tok
+
+	# --- One China Branch (9) ---
+	complete_national_focus = CHI_One_China_Policy
 	complete_national_focus = CHI_Two_Systems
+	complete_national_focus = CHI_Extend_Interpretation_of_the_Systems
+	complete_national_focus = CHI_Consider_Electoral_Reform_in_Hong_Kong
+	complete_national_focus = CHI_The_NPCSC_Decision_on_Hong_Kong
+	complete_national_focus = CHI_Hong_Kong_Future
+	complete_national_focus = CHI_Dialogue_with_the_Taiwan_Self_Government
+	complete_national_focus = CHI_Three_Links
+	complete_national_focus = CHI_Cross_Strait_Service_Trade_Agreement
+
+	# --- Economy Root (8) ---
+	complete_national_focus = CHI_The_Untapped_Market
 	complete_national_focus = CHI_Smash_the_Iron_Rice_Bowl
-	complete_national_focus = CHI_The_Indian_Subcontinent
-	complete_national_focus = CHI_The_Korean_Peninsula
-	complete_national_focus = CHI_The_Land_of_the_Rising_Sun
-	complete_national_focus = CHI_The_Northern_Shield
+	complete_national_focus = CHI_Ratification_of_WTO
+	complete_national_focus = CHI_Protect_State_Owned_Businesses
+	complete_national_focus = CHI_Chinese_Model_of_Manufacturing
+	complete_national_focus = CHI_German_Joint_Ventures
+	complete_national_focus = CHI_Export_Driven_Economy
+	complete_national_focus = CHI_Factory_of_the_World
+
+	# --- Megaprojects (53) ---
+	complete_national_focus = CHI_Chinese_Megaprojects
+	# High Speed Rail
+	complete_national_focus = CHI_Chinese_High_Speed_Rail_System
+	complete_national_focus = CHI_Deutsche_Bahn
+	# Belt and Road Initiative
+	complete_national_focus = CHI_Belt_and_Road_Initiative
+	complete_national_focus = CHI_Begin_CCWAEC
+	complete_national_focus = CHI_The_Uzbek_Link
+	complete_national_focus = CHI_The_Kyrgyz_Link
+	complete_national_focus = CHI_The_Turkmen_Link
+	complete_national_focus = CHI_The_Tajik_Link
+	complete_national_focus = CHI_The_Persian_Link
+	complete_national_focus = CHI_The_Turkish_Link
+	complete_national_focus = CHI_African_Railway_Projects
+	complete_national_focus = CHI_Mombasa_Nairobi_Standard_Gauge_Railway
+	complete_national_focus = CHI_Abuja_Kaduna_Railway_Line
+	complete_national_focus = CHI_Addis_Ababa_Djibouti_Railway
+	complete_national_focus = CHI_The_China_Pakistan_Economic_Corridor
+	complete_national_focus = CHI_Hambantota_Port_Expansion
+	complete_national_focus = CHI_The_Hambantota_Port_Lease
+	complete_national_focus = CHI_Piraeus_Port_Expansion
+	complete_national_focus = CHI_The_Pan_Asia_Railway_Network
+	complete_national_focus = CHI_Western_Route
+	complete_national_focus = CHI_Central_Route_Laos
+	complete_national_focus = CHI_Central_Route_Thailand
+	complete_national_focus = CHI_Central_Route_Malaysia
+	complete_national_focus = CHI_Eastern_Route
+	# Water Transfer
+	complete_national_focus = CHI_North_South_Water_Transfer
+	complete_national_focus = CHI_Ecological_Preservation_Movement
+	complete_national_focus = CHI_Water_Conservation_Projects
+	# Energy
+	complete_national_focus = CHI_Renewable_Strategy
+	complete_national_focus = CHI_Nuclear_Boom
+	complete_national_focus = CHI_Construct_Nuclear_Waste_Repository
+	# Megacities
+	complete_national_focus = CHI_First_Tier_Megacity_Development
+	complete_national_focus = CHI_Jing_Jin_Ji_Megacity
+	complete_national_focus = CHI_Pearl_River_Megalopolis
+	complete_national_focus = CHI_Four_Provinces_of_Mountains_and_Rivers
+	complete_national_focus = CHI_Northeast_Industry_Base
+	complete_national_focus = CHI_Yangtze_River_Midreaches_Megacity
+	complete_national_focus = CHI_Yangtze_River_Delta_Megacity
+	complete_national_focus = CHI_zhejiang_megacity
+	# Western Development
+	complete_national_focus = CHI_Western_Development_Strategy
+	complete_national_focus = CHI_Qinghai_Tibet_Railway
+	complete_national_focus = CHI_New_Eurasian_Land_Bridge_Railway
+	complete_national_focus = CHI_Southwest_Railway
+	complete_national_focus = CHI_West_Triangle_Economic_Zone
+	complete_national_focus = CHI_Qinghai_Tibet_Development_Plan
+	complete_national_focus = CHI_Xinjiang_Development_Plan
+	complete_national_focus = CHI_Southwest_Development_Plan
+	# Prairie / Northern development
+	complete_national_focus = CHI_A_Complete_Prairie
+	complete_national_focus = CHI_Northern_New_Artery
+	complete_national_focus = CHI_Mongolia_Ore_Production
+	complete_national_focus = CHI_Mongolia_Development_Plan
+	complete_national_focus = CHI_Prosperous_Borderland
+	# Nanjing airport
+	complete_national_focus = CHI_nanjing_airport
+
+	# --- Strategic Industries + Space (39) ---
+	complete_national_focus = CHI_Strategic_Industries
+	# NORINCO
+	complete_national_focus = CHI_Norinco_Projects
+	complete_national_focus = CHI_Small_Arms_Development
+	complete_national_focus = CHI_Air_Burst_Weapons
+	complete_national_focus = CHI_Armored_Vehicles
+	complete_national_focus = CHI_Advanced_MBTs
+	# CSIC Shipyards
+	complete_national_focus = CHI_Expand_CSIC
+	complete_national_focus = CHI_Tianjin_Drydocks
+	complete_national_focus = CHI_Bohai_Shipyard
+	complete_national_focus = CHI_Dalian_Shipbuilding
+	complete_national_focus = CHI_Jiangnan_Shipbuilding
+	complete_national_focus = CHI_Qingdao_Dockyards
+	complete_national_focus = CHI_Global_Shipyard
+	# Aerospace + Space
+	complete_national_focus = CHI_Aerospace_Industry
+	complete_national_focus = CHI_Mobile_Launcher_Platforms
+	complete_national_focus = CHI_Seaborne_Spaceflight
+	complete_national_focus = CHI_Bolster_the_CNSA
+	complete_national_focus = CHI_State_Sponsored_Space_Endeavors
+	# AVIC
+	complete_national_focus = CHI_Invest_in_AVIC
+	complete_national_focus = CHI_Aircraft_Improvements
+	complete_national_focus = CHI_Develop_Stealth_Fighters
+	# Automotive — NOTE: Electric_Car_Project MUST come before Xiaomi (idea swap dependency)
+	complete_national_focus = CHI_Automotive_Industry
+	complete_national_focus = CHI_Domestic_Development
+	complete_national_focus = CHI_Improve_RD
+	complete_national_focus = CHI_Implement_Safety_Standards
+	complete_national_focus = CHI_Develop_World_Class_Cars
+	complete_national_focus = CHI_Electric_Car_Project
+	complete_national_focus = CHI_Expand_Abroad
+	# Electronics (after Electric_Car_Project so Xiaomi can swap the idea)
+	complete_national_focus = CHI_Electronic_Industry
+	complete_national_focus = CHI_Lenovo
+	complete_national_focus = CHI_Huawei
+	complete_national_focus = CHI_Xiaomi
+	complete_national_focus = CHI_Chinese_Tech_Dominance
+	complete_national_focus = CHI_Cheaper_Production
+	complete_national_focus = CHI_Superior_Transistors
+	# Space combat + navigation
+	complete_national_focus = CHI_establishment_space_combat_support_force
+	complete_national_focus = CHI_beidou_satelite_navigation
+	complete_national_focus = CHI_visit_dark_side_moon
+	complete_national_focus = CHI_shanxi_launch_pad
+
+	# --- Regional Influence (32) ---
+	complete_national_focus = CHI_Regional_Influence
+	# South China Sea
 	complete_national_focus = CHI_The_South_China_Sea
+	complete_national_focus = CHI_Enforce_the_9_Dash_Line
+	complete_national_focus = CHI_Provocative_Fleet_Exercises
+	complete_national_focus = CHI_Island_Building
+	complete_national_focus = CHI_Ramp_Up_Tensions
+	# Korea — Status Quo path, full depth
+	complete_national_focus = CHI_The_Korean_Peninsula
+	complete_national_focus = CHI_The_Status_Quo
+	complete_national_focus = CHI_Strengthen_Relations_with_the_South
+	complete_national_focus = CHI_China_Republic_of_Korea_Free_Trade_Agreement
+	complete_national_focus = CHI_Joint_Condemnation_of_Japan
+	complete_national_focus = CHI_Maintain_Commitment_to_Denuclearization
+	complete_national_focus = CHI_Increase_Exports_to_the_North
+	complete_national_focus = CHI_Encourage_Economic_Reforms
+	# Indian Subcontinent
+	complete_national_focus = CHI_The_Indian_Subcontinent
+	complete_national_focus = CHI_Respect_Nepalese_Neutrality
+	complete_national_focus = CHI_Guarantee_Bangladesh
+	complete_national_focus = CHI_Doklam_Road_Standoff
+	# Pakistan
+	complete_national_focus = CHI_Iron_Brothers
+	complete_national_focus = CHI_Joint_Military_Projects
+	complete_national_focus = CHI_Cooperate_on_Counterterrorism
+	complete_national_focus = CHI_The_Quadrilateral_Cooperation_and_Coordination_Mechanism
+	complete_national_focus = CHI_Support_Negotiations
+	complete_national_focus = CHI_Tackle_the_Root_Causes_of_Radicalization
+	# Japan
+	complete_national_focus = CHI_The_Land_of_the_Rising_Sun
+	complete_national_focus = CHI_Maintain_Historical_Enmity
+	complete_national_focus = CHI_Demand_the_Senkaku_Islands
+	complete_national_focus = CHI_Incite_Anti_Japanese_Sentiment
+	complete_national_focus = CHI_Clash_Over_the_East_China_Sea
+	# Mongolia
+	complete_national_focus = CHI_The_Northern_Shield
+	complete_national_focus = CHI_Sino_Mongol_Friendship_Treaty
+	complete_national_focus = CHI_Aid_Outer_Mongolia
+
+	# --- Global Influence (15) ---
+	complete_national_focus = CHI_Global_Influence
+	complete_national_focus = CHI_Favor_Multipolarity
+	complete_national_focus = CHI_Peacekeeping_Contributions
+	# SCO
+	complete_national_focus = CHI_Form_the_SCO
+	complete_national_focus = CHI_Emphasize_Political_Cooperation
+	complete_national_focus = CHI_Crack_Down_on_the_Three_Evils
+	# FOCAC
+	complete_national_focus = CHI_Forum_on_China_African_Cooperation
+	complete_national_focus = CHI_China_Africa_Development_Fund
+	complete_national_focus = CHI_Invest_in_Cheap_Energy
+	complete_national_focus = CHI_Invest_in_Clean_Energy
+	complete_national_focus = CHI_Agriculture
+	complete_national_focus = CHI_Develop_Hospitals
+	complete_national_focus = CHI_Friendship_Schools
+	complete_national_focus = CHI_Joint_Research
+	complete_national_focus = CHI_TV_and_Internet_Access
+
+	########################################
+	### CLEANUP BLOCK                    ###
+	### Fixes side effects from          ###
+	### complete_national_focus firing    ###
+	### completion_rewards at game start ###
+	########################################
+
+	# --- Remove expired timed ideas ---
+	# CHI_End_PLA_Business_Ventures fires CHI_PLA_Business_Ventures2 (1080d, expired ~2002)
+	remove_ideas = CHI_PLA_Business_Ventures2
+	# CHI_2_Child_Policy fires two_child_policy (2920d, expired ~2024)
+	remove_ideas = two_child_policy
+	# CHI_Ratification_of_WTO fires recently_acceded_to_wto (180d, expired ~2002)
+	remove_ideas = recently_acceded_to_wto
+	# CHI_First_Tier_Megacity_Development fires CHI_megacity_development (90d, expired)
+	remove_ideas = CHI_megacity_development
+	# CHI_Western_Development_Strategy fires CHI_western_development (180d, expired)
+	remove_ideas = CHI_western_development
+	# CHI_A_Complete_Prairie fires CHI_new_boundary (240d, expired)
+	remove_ideas = CHI_new_boundary
+
+	# --- Cross-country cleanup ---
+	# CHI_Joint_Condemnation_of_Japan fires our_national_enemy (180d) on both CHI and KOR
+	remove_ideas = our_national_enemy
+	KOR = {
+		remove_ideas = our_national_enemy
+	}
+
+	# --- Re-create Xi Jinping with correct 2026 traits ---
+	# Focus completions override the initial leader creation with old focus-era traits.
+	# CHI_Xi_Jinping_Agenda creates Xi with Communist-State ideology + old traits.
+	# We must re-create him with Autocracy ideology and 2026 traits.
+	create_country_leader = {
+		name = "Xi Jinping"
+		picture = "xi_jinping.dds"
+		expire = "2040.1.1"
+		ideology = Autocracy
+		traits = {
+			emerging_Autocracy
+			geopolitical_thinker
+			captain_of_industry
+			stubborn
+			ruthless
+		}
+	}
 }
