@@ -5710,6 +5710,12 @@ capital = 652
 		type = annex_everything
 	}
 
+	### Chechnya Annexation ###
+	# The Second Chechen War (1999-2009) ended with Chechnya remaining a
+	# Russian federal subject. The 2000 block declares war on CHE, so we
+	# must annex it here to resolve that war for the 2026 bookmark.
+	annex_country = { target = CHE transfer_troops = yes }
+
 	### Updated Ideas (pre-focus) ###
 	# Only remove ideas that are NOT part of focus swap chains.
 	# SOV_outdated_army_idea is kept — the army reform chain swaps it through _1/_2/_3/removed.
