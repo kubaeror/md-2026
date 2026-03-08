@@ -2,16 +2,18 @@ import os, re, glob
 
 base = r"C:\Users\kuba\Documents\md\md\md-2026"
 
-# Step 1: Extract all localization keys
-loc_file = os.path.join(base, "localisation", "english", "md2026_l_english.yml")
-with open(loc_file, "r", encoding="utf-8-sig") as f:
-    loc_content = f.read()
+# Step 1: Extract all localization keys from ALL yml files
+loc_dir = os.path.join(base, "localisation", "english")
+loc_files = glob.glob(os.path.join(loc_dir, "md2026_*l_english.yml"))
 
 loc_keys = set()
-for m in re.finditer(r"^\s+(\S+):0\s", loc_content, re.MULTILINE):
-    loc_keys.add(m.group(1))
+for loc_file in loc_files:
+    with open(loc_file, "r", encoding="utf-8-sig") as f:
+        loc_content = f.read()
+    for m in re.finditer(r"^\s+(\S+):0\s", loc_content, re.MULTILINE):
+        loc_keys.add(m.group(1))
 
-print(f"Total localization keys found: {len(loc_keys)}")
+print(f"Total localization keys found: {len(loc_keys)} (from {len(loc_files)} files)")
 
 # Step 2a: Extract all focus IDs from md2026_*_focus.txt files
 focus_files = glob.glob(
@@ -26,25 +28,29 @@ for fp in focus_files:
 
 print(f"Total focus IDs found: {len(focus_ids)}")
 
-# Step 2b: Extract all national spirit IDs
-ns_file = os.path.join(base, "common", "ideas", "md2026_national_spirits.txt")
-with open(ns_file, "r", encoding="utf-8") as f:
-    ns_content = f.read()
+# Step 2b: Extract all national spirit / idea IDs from ALL idea files
+idea_files = glob.glob(os.path.join(base, "common", "ideas", "md2026_*.txt"))
 ns_ids = set()
-for m in re.finditer(r"^\s+(md2026_\w+)\s*=\s*\{", ns_content, re.MULTILINE):
-    ns_ids.add(m.group(1))
+for ns_file in idea_files:
+    with open(ns_file, "r", encoding="utf-8") as f:
+        ns_content = f.read()
+    for m in re.finditer(r"^\s+(md2026_\w+)\s*=\s*\{", ns_content, re.MULTILINE):
+        ns_ids.add(m.group(1))
 
-print(f"Total national spirit IDs found: {len(ns_ids)}")
+print(
+    f"Total national spirit/idea IDs found: {len(ns_ids)} (from {len(idea_files)} files)"
+)
 
-# Step 2c: Extract decision IDs
-dec_file = os.path.join(base, "common", "decisions", "md2026_decisions.txt")
-with open(dec_file, "r", encoding="utf-8") as f:
-    dec_content = f.read()
+# Step 2c: Extract decision IDs from ALL decision files
+dec_files = glob.glob(os.path.join(base, "common", "decisions", "md2026_*.txt"))
 dec_ids = set()
-for m in re.finditer(r"^\t(md2026_\w+)\s*=\s*\{", dec_content, re.MULTILINE):
-    dec_ids.add(m.group(1))
+for dec_file in dec_files:
+    with open(dec_file, "r", encoding="utf-8") as f:
+        dec_content = f.read()
+    for m in re.finditer(r"^\t(md2026_\w+)\s*=\s*\{", dec_content, re.MULTILINE):
+        dec_ids.add(m.group(1))
 
-print(f"Total decision IDs found: {len(dec_ids)}")
+print(f"Total decision IDs found: {len(dec_ids)} (from {len(dec_files)} files)")
 
 # Step 2d: Decision category IDs
 cat_file = os.path.join(
@@ -58,24 +64,31 @@ for m in re.finditer(r"^(md2026_\w+)\s*=\s*\{", cat_content, re.MULTILINE):
 
 print(f"Total decision category IDs found: {len(cat_ids)}")
 
-# Step 2e: Decision ideas IDs
-di_file = os.path.join(base, "common", "ideas", "md2026_decision_ideas.txt")
-with open(di_file, "r", encoding="utf-8") as f:
-    di_content = f.read()
-di_ids = set()
-for m in re.finditer(r"^\s+(md2026_\w+)\s*=\s*\{", di_content, re.MULTILINE):
-    di_ids.add(m.group(1))
+# Step 2e: (Merged into step 2b — all idea files scanned together)
 
-print(f"Total decision idea IDs found: {len(di_ids)}")
-
-# Step 2f: Extract event IDs and their options
+# Step 2f: Extract event IDs, explicit title/desc keys, and option keys
 event_files = glob.glob(os.path.join(base, "events", "md2026_*.txt"))
 event_ids = []
+# Track explicit title= and desc= keys per event ID
+event_explicit_title = {}  # event_id -> explicit title key
+event_explicit_desc = {}  # event_id -> explicit desc key
+current_event_id = None
 for fp in event_files:
     with open(fp, "r", encoding="utf-8") as f:
         content = f.read()
     for m in re.finditer(r"^\s+id\s*=\s*(md2026_\w+\.\d+)", content, re.MULTILINE):
         event_ids.append(m.group(1))
+    # Parse explicit title and desc assignments per event
+    for line in content.splitlines():
+        id_m = re.match(r"\s+id\s*=\s*(md2026_\w+\.\d+)", line)
+        if id_m:
+            current_event_id = id_m.group(1)
+        title_m = re.match(r"\s+title\s*=\s*(md2026_[\w.]+)", line)
+        if title_m and current_event_id:
+            event_explicit_title[current_event_id] = title_m.group(1)
+        desc_m = re.match(r"\s+desc\s*=\s*(md2026_[\w.]+)", line)
+        if desc_m and current_event_id:
+            event_explicit_desc[current_event_id] = desc_m.group(1)
 
 event_ids = sorted(set(event_ids))
 print(f"Total event IDs found: {len(event_ids)}")
@@ -146,19 +159,10 @@ for cid in sorted(cat_ids):
     if (cid + "_desc") not in loc_keys:
         missing_keys.append(("DEC CATEGORY DESC", cid + "_desc"))
 
-# Decision idea IDs need both name and desc
-for diid in sorted(di_ids):
-    needed_keys.add(diid)
-    needed_keys.add(diid + "_desc")
-    if diid not in loc_keys:
-        missing_keys.append(("DEC IDEA NAME", diid))
-    if (diid + "_desc") not in loc_keys:
-        missing_keys.append(("DEC IDEA DESC", diid + "_desc"))
-
-# Event IDs need .t and .d, plus option keys
+# Event IDs need title and desc keys (use explicit keys if set, else default .t/.d)
 for eid in sorted(event_ids):
-    t_key = eid + ".t"
-    d_key = eid + ".d"
+    t_key = event_explicit_title.get(eid, eid + ".t")
+    d_key = event_explicit_desc.get(eid, eid + ".d")
     needed_keys.add(t_key)
     needed_keys.add(d_key)
     if t_key not in loc_keys:
@@ -223,10 +227,9 @@ print("=" * 70)
 print(
     f"  Focus IDs:              {len(focus_ids)} (need {len(focus_ids) * 2} loc keys)"
 )
-print(f"  National Spirit IDs:    {len(ns_ids)} (need {len(ns_ids) * 2} loc keys)")
+print(f"  National Spirit/Idea IDs: {len(ns_ids)} (need {len(ns_ids) * 2} loc keys)")
 print(f"  Decision IDs:           {len(dec_ids)} (need {len(dec_ids) * 2} loc keys)")
 print(f"  Decision Category IDs:  {len(cat_ids)} (need {len(cat_ids) * 2} loc keys)")
-print(f"  Decision Idea IDs:      {len(di_ids)} (need {len(di_ids) * 2} loc keys)")
 print(
     f"  Event IDs:              {len(event_ids)} (need {len(event_ids) * 2} title+desc keys)"
 )

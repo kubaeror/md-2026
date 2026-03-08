@@ -1,2 +1,6 @@
 generate_*.py
 nul
+temp_*
+session-*
+.ruff_cache/
+__pycache__/

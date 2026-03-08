@@ -464,6 +464,9 @@
 	recruit_character = MEX_miguel_canchola
 	recruit_character = MEX_juan_organitos
 
+}
+
+2026.1.1 = {
 	# MD2026 Pre-completed focuses (already happened by Jan 2026)
 	complete_national_focus = md2026_mex_amlo_legacy
 	complete_national_focus = md2026_mex_cartel_war

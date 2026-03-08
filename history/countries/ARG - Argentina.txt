@@ -575,6 +575,9 @@
 	recruit_character = ARG_guillermo_cormick
 	recruit_character = ARG_jorge_chevalier
 
+}
+
+2026.1.1 = {
 	# MD2026 Pre-completed focuses (already happened by Jan 2026)
 	complete_national_focus = md2026_arg_milei_reforms
 }

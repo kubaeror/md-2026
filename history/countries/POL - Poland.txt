@@ -799,7 +799,9 @@ capital = 114
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
 
+	# =====================================================================
 	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	# =====================================================================
 	complete_national_focus = MD2026_POL_eastern_shield
 	complete_national_focus = MD2026_POL_fortress_poland
 	complete_national_focus = MD2026_POL_army_modernization
@@ -807,35 +809,190 @@ capital = 114
 	complete_national_focus = MD2026_POL_k2_tanks
 	complete_national_focus = MD2026_POL_patriot_batteries
 
-	# Base MD pre-completed focuses (root + T1, 2000-2026)
-	complete_national_focus = POL_sily_zbrojne_rzeczypospolitej_polskiej
+	# =====================================================================
+	# Base MD pre-completed focuses (2000-2026)
+	# Ordered by prerequisite chain — prereqs before dependents
+	# =====================================================================
+
+	# --- Root focuses (no prerequisites) ---
+	complete_national_focus = POL_stay_on_track
 	complete_national_focus = POL_revitalize_government
+	complete_national_focus = POL_sily_zbrojne_rzeczypospolitej_polskiej
 	complete_national_focus = POL_foreign_friends
-	complete_national_focus = POL_begin_contruction_of_space_company
-	complete_national_focus = POL_missile_company
-	complete_national_focus = POL_csto_is_the_enemy
-	complete_national_focus = POL_platforma_obivatelska
-	complete_national_focus = POL_pravda_i_spravedlivost
-	complete_national_focus = POL_intervention_in_ukraine
-	complete_national_focus = POL_lithuania_and_belarus
-	complete_national_focus = POL_closeup_of_the_visegrad_group
 	complete_national_focus = POL_socialdemocracy
 	complete_national_focus = POL_betray_the_communists
-	complete_national_focus = POL_continue_anti_corrpution
-	complete_national_focus = POL_discussion_of_the_world_situation
-	complete_national_focus = POL_expansion_of_ukrainian_grain_imports
-	complete_national_focus = POL_ground_air_systems
-	complete_national_focus = POL_honor_lost_army
-	complete_national_focus = POL_improve_civil_administration
-	complete_national_focus = POL_intercontinental_missiles_prototypes
-	complete_national_focus = POL_passing_the_homeland_defense_act
-	complete_national_focus = POL_polish_german_highway
-	complete_national_focus = POL_polsa_grand_opening
-	complete_national_focus = POL_preparations_against_kaliningrad
+
+	# --- Early democratic path (2000-2005) ---
+	# POL_stay_on_track → ...
+	complete_national_focus = POL_reassure_elections
+	complete_national_focus = POL_poland_our_home
+	complete_national_focus = POL_continue_transition
+	complete_national_focus = POL_finish_social_program
+	complete_national_focus = POL_socialists_win
+	complete_national_focus = POL_united_we_stand
+	complete_national_focus = POL_security_summit
+	# Exclusive: privatization path (Poland privatized heavily in 2000s)
+	complete_national_focus = POL_speed_up_privatization
+	# Exclusive: innovation path (IT/services modernization)
+	complete_national_focus = POL_innovative_approach
+	complete_national_focus = POL_secure_unions_support
+	# EU integration sub-branch
+	complete_national_focus = POL_continue_eu_intergration
+	complete_national_focus = POL_eu_funding
+	complete_national_focus = POL_connections_to_eu_members
+	# Exclusive: economic focus (Poland focused on economic EU integration)
+	complete_national_focus = POL_focus_on_economic_deals
+	complete_national_focus = POL_new_ideals
+	# War on terror sub-branch (Iraq/Afghanistan deployments)
+	complete_national_focus = POL_support_war_on_terror
+	complete_national_focus = POL_polish_volunteer_corps
+	complete_national_focus = POL_study_allied_reports
+	# Shifting politics (needs new_ideals + secure_unions_support)
+	complete_national_focus = POL_shifting_politics
+
+	# --- PO Branch (Platforma Obywatelska, 2007-2015) ---
+	complete_national_focus = POL_platforma_obivatelska
+	# PO left: EU values path
 	complete_national_focus = POL_promote_eu_values
+	complete_national_focus = POL_bio_fuel
+	complete_national_focus = POL_new_market_for_farms
+	complete_national_focus = POL_it_giant
+	complete_national_focus = POL_foreign_investors
+	complete_national_focus = POL_reducing_unemployment
+	# PO right: civil administration path
+	complete_national_focus = POL_improve_civil_administration
+	complete_national_focus = POL_construction_tax_cuts
+	complete_national_focus = POL_railways_for_poland
+
+	# --- PiS Branch (Prawo i Sprawiedliwość, 2015-2023) ---
+	complete_national_focus = POL_pravda_i_spravedlivost
+	# PiS center: anti-corruption → law → family
+	complete_national_focus = POL_continue_anti_corrpution
+	complete_national_focus = POL_empower_the_law
+	complete_national_focus = POL_guarantee_family_support
+	complete_national_focus = POL_criticize_lgbt
+	complete_national_focus = POL_christian_priority
+	# PiS left economic: industry → regional → eastern
 	complete_national_focus = POL_promote_industrial_quality
-	complete_national_focus = POL_rail_baltica
+	complete_national_focus = POL_fight_regional_inequality
+	complete_national_focus = POL_eastern_infrastructure
+	# PiS Eurozone/border chain
+	complete_national_focus = POL_eurozone_opposition
+	complete_national_focus = POL_strengthen_east_border
+	complete_national_focus = POL_disapproval_of_accepting_illegal_immigrants
+	complete_national_focus = POL_condemnation_of_russian_policy
+	# PiS capital/mining/reform chain
+	complete_national_focus = POL_development_of_the_capitals_office_sector
+	complete_national_focus = POL_maintenance_of_silesian_mines
+	complete_national_focus = POL_judicial_reform
+	complete_national_focus = POL_demand_full_war_reparations_from_germany
+	# PiS farms
+	complete_national_focus = POL_support_for_farms
+	complete_national_focus = POL_mod_and_trad
+	# PiS right national: democratic values → decommunization
+	complete_national_focus = POL_honor_lost_army
+	complete_national_focus = POL_perpetuating_democratic_values
+	complete_national_focus = POL_ban_communist_symbols
+	complete_national_focus = POL_removal_of_communist_monuments
+	complete_national_focus = POL_question_of_socialism
+	# PiS education chain (exclusive: traditional/old-school path)
+	complete_national_focus = POL_revisit_education_programs
+	complete_national_focus = POL_continuation_of_old_school
+	complete_national_focus = POL_focus_on_general_knowledge
+	complete_national_focus = POL_emphasis_on_the_polish_history
+	complete_national_focus = POL_free_coursebooks_in_elementary_schools
+
+	# --- Armed Forces Branch ---
+	complete_national_focus = POL_passing_the_homeland_defense_act
+	# Land forces
+	complete_national_focus = POL_wojska_ladowe
+	complete_national_focus = POL_mechanized_army
+	complete_national_focus = POL_creation_of_the_territorial_defense_forces
+	complete_national_focus = POL_modernization_of_armored_forces
+	complete_national_focus = POL_missile_and_artillery_forces
+	# Exclusive: western artillery modernization
+	complete_national_focus = POL_artillery_modernization_with_the_west
+	complete_national_focus = POL_ahs_krab
+	complete_national_focus = POL_support_weapons
+	# Air defense chain (non-exclusive, linear)
+	complete_national_focus = POL_air_defense_troops
+	complete_national_focus = POL_pilica_plus
+	complete_national_focus = POL_narew
+	complete_national_focus = POL_wisla
+	# Air forces
+	complete_national_focus = POL_sily_powietrzne
+	# Navy
+	complete_national_focus = POL_marynarka_wojenna_rzeczypospolitej
+	complete_national_focus = POL_expansion_of_the_naval_port_in_gdynia
+	complete_national_focus = POL_expansion_of_the_naval_port_in_swinoujscie
+	complete_national_focus = POL_expansion_of_the_naval_port_in_kolobrzeg
+	complete_national_focus = POL_miecznik
+	complete_national_focus = POL_expansion_of_the_naval_industry
+
+	# --- Foreign Policy ---
 	complete_national_focus = POL_speak_against_russia
-	complete_national_focus = POL_stay_on_track
+	complete_national_focus = POL_csto_is_the_enemy
+	complete_national_focus = POL_intervention_in_ukraine
+	complete_national_focus = POL_expansion_of_ukrainian_grain_imports
+	complete_national_focus = POL_destroying_russian_influence
+	complete_national_focus = POL_discussion_of_the_world_situation
+	complete_national_focus = POL_preparations_against_kaliningrad
+	complete_national_focus = POL_polish_german_highway
+	complete_national_focus = POL_ncbr
+	complete_national_focus = POL_ukrainian_exchange_of_nuclear_energy_experience
+	complete_national_focus = POL_measures_for_cyber_security
+	complete_national_focus = POL_rail_baltica
+	complete_national_focus = POL_lithuania_and_belarus
 	complete_national_focus = POL_wolyn_recognition
+
+	# --- Space ---
+	complete_national_focus = POL_begin_contruction_of_space_company
+	complete_national_focus = POL_polsa_grand_opening
+	complete_national_focus = POL_missile_company
+	complete_national_focus = POL_intercontinental_missiles_prototypes
+	complete_national_focus = POL_ground_air_systems
+
+	# --- Visegrád ---
+	complete_national_focus = POL_closeup_of_the_visegrad_group
+	complete_national_focus = POL_mission_hungary
+
+	# =====================================================================
+	# CLEANUP: Remove anachronistic effects from pre-completed focuses
+	# complete_national_focus fires completion_reward at game init.
+	# Timed ideas from focuses completed years/decades ago should not
+	# be active in 2026. Permanent state changes from PiS era (2015-2023)
+	# need reversal where KO government has changed course.
+	# =====================================================================
+
+	# --- Remove ALL timed ideas (expired by 2026) ---
+	# From early democratic path (2000s)
+	remove_ideas = POL_2000_social_program
+	remove_ideas = encryption_bonus
+	remove_ideas = idea_focus_volunteer_corps
+	# From PO era (2007-2015)
+	remove_ideas = POL_friendly_neighbor_idea
+	remove_ideas = POL_improved_administration
+	remove_ideas = POL_promoted_industrial_quality
+	remove_ideas = POL_grain_import_idea
+	remove_ideas = POL_contruction_taxes
+	remove_ideas = POL_investors_idea
+	remove_ideas = POL_new_workplaces_idea
+	# From PiS era (2015-2023)
+	remove_ideas = POL_sexual_intolerance_idea
+	remove_ideas = POL_bribed_courts_idea
+	remove_ideas = POL_democratic_country_idea
+	remove_ideas = agricultural_investments2
+	remove_ideas = POL_advanced_production_of_artillery_idea
+	remove_ideas = POL_ncbr_idea
+	remove_ideas = POL_modernization_and_tradition
+	remove_ideas = POL_school_funding_idea
+
+	# --- Reverse PiS-era permanent state changes ---
+	# POL_christian_priority added POL_christian_state_1, but KO (liberal)
+	# is in power since 2023 — swap to liberal state
+	swap_ideas = { remove_idea = POL_christian_state_1 add_idea = POL_liberal_state }
+
+	# POL_judicial_reform bumped centralization bureau_04 → bureau_05.
+	# KO has been reversing PiS judicial reforms since 2023.
+	swap_ideas = { remove_idea = bureau_05 add_idea = bureau_04 }
 }

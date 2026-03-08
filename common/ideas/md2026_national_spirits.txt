@@ -1694,6 +1694,70 @@ ideas = {
 			}
 		}
 
+		md2026_pol_us_permanent_base = {
+			picture = NATO_member
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.10
+				war_support_factor = 0.10
+				stability_factor = 0.05
+				conscription = 0.005
+			}
+		}
+
+		md2026_pol_cyber_command = {
+			picture = electronic_warfare
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+				decryption_factor = 0.15
+				political_power_factor = 0.05
+			}
+		}
+
+		md2026_pol_nato_spearhead = {
+			picture = modernized_army
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.10
+				army_org_factor = 0.05
+				experience_gain_army = 0.03
+				war_support_factor = 0.05
+			}
+		}
+
+		md2026_pol_startup_ecosystem = {
+			picture = generic_research_bonus
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_industrial_complex_factor = 0.10
+				consumer_goods_factor = -0.03
+				political_power_factor = 0.05
+			}
+		}
+
+		md2026_pol_baltic_fleet = {
+			picture = generic_navy_bonus
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				navy_org_factor = 0.10
+				naval_strike_attack_factor = 0.10
+				experience_gain_navy = 0.03
+				war_support_factor = 0.05
+			}
+		}
+
 		### RUSSIA TIER 3 FOCUS SPIRITS ###
 
 		md2026_sov_hybrid_warfare = {
