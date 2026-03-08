@@ -809,15 +809,17 @@ capital = 159
 	set_variable = { overall_productivity = 650 }
 
 	### Politics & Parties ###
+	# AKP is Neutral_Muslim_Brotherhood (index 12) under neutrality.
+	# The Turkey_FP_banned flag triggers scripted localisation to show AKP party names.
 	set_popularities = {
 		democratic = 20.0
-		communism = 35.0
+		communism = 5.0
 		fascism = 0.0
-		neutrality = 15.0
-		nationalist = 30.0
+		neutrality = 40.0
+		nationalist = 35.0
 	}
 	set_politics = {
-		ruling_party = communism
+		ruling_party = neutrality
 		last_election = "2023.5.14"
 		election_frequency = 60
 		elections_allowed = yes
@@ -825,7 +827,7 @@ capital = 159
 
 	start_politics_input = yes
 
-	set_variable = { party_pop_array^7 = 0.350 }   #Autocracy (AKP/Erdogan)
+	set_variable = { party_pop_array^12 = 0.350 }  #Neutral_Muslim_Brotherhood (AKP)
 	set_variable = { party_pop_array^1 = 0.100 }   #conservatism (CHP reform wing)
 	set_variable = { party_pop_array^3 = 0.100 }   #socialism (CHP left wing)
 	set_variable = { party_pop_array^20 = 0.200 }  #Nat_Populism (MHP)
@@ -835,17 +837,23 @@ capital = 159
 	set_variable = { party_pop_array^4 = 0.050 }   #Communist-State (HDP/DEM)
 	set_variable = { party_pop_array^16 = 0.050 }  #libertarians
 
-	add_to_array = { ruling_party = 7 }             #Autocracy (AKP)
+	add_to_array = { ruling_party = 12 }            #Neutral_Muslim_Brotherhood (AKP)
 	add_to_array = { gov_coalition_array = 20 }      #Nat_Populism (MHP)
 	add_to_array = { gov_coalition_array = 22 }      #Nat_Autocracy
 
 	# 2023 election results
-	set_variable = { party_pop_elect_array^7 = 0.355 }  #AKP
+	set_variable = { party_pop_elect_array^12 = 0.355 } #AKP
 	set_variable = { party_pop_elect_array^20 = 0.102 } #MHP
 	set_variable = { party_pop_elect_array^3 = 0.254 }  #CHP
 	set_variable = { party_pop_elect_array^2 = 0.097 }  #IYI
 
 	startup_politics = yes
+
+	### FP Ban (historical: Fazilet Partisi banned in 2001) ###
+	# This flag activates scripted localisation to display AKP party names
+	set_country_flag = Turkey_FP_banned
+	# Remove the FP-era national spirit (no longer relevant by 2026)
+	remove_ideas = TUR_rise_of_fp
 
 	### 2026 National Spirits ###
 	add_ideas = {
@@ -857,9 +865,9 @@ capital = 159
 		name = "Recep Tayyip Erdogan"
 		picture = "gfx/leaders/TUR/Recep_Erdogan.dds"
 		expire = "2028.6.1"
-		ideology = Autocracy
+		ideology = Neutral_Muslim_Brotherhood
 		traits = {
-			emerging_Autocracy
+			neutrality_Neutral_Muslim_Brotherhood
 			career_politician
 			populist_demagogue
 			stubborn
