@@ -2586,13 +2586,87 @@ capital = 13
 	complete_national_focus = MD2026_ENG_ai_strategy
 	complete_national_focus = MD2026_ENG_biotech_hub
 
-	# Base MD pre-completed focuses (root + T1, 2000-2026)
-	complete_national_focus = ENG_british_armed_forces
-	complete_national_focus = ENG_the_future_of_britain
+	# Base MD pre-completed focuses (2000-2026)
+	# === Branch 1: Economic/Industrial (ENG_vitalize_westminster) ===
 	complete_national_focus = ENG_vitalize_westminster
-	complete_national_focus = ENG_democratic_tradition
 	complete_national_focus = ENG_economic_stimulus
-	complete_national_focus = ENG_focus_on_the_army
-	complete_national_focus = ENG_focus_on_the_navy
+	complete_national_focus = ENG_english_industry
+	complete_national_focus = ENG_scottish_industry
+	complete_national_focus = ENG_imperial_industry
+	complete_national_focus = ENG_dockyards_1
+	complete_national_focus = ENG_north_sea_oil
+	complete_national_focus = ENG_imperial_dockyards
+	complete_national_focus = ENG_dockyards_2
+	complete_national_focus = ENG_fortify_the_empire
+	complete_national_focus = ENG_english_factories
+	complete_national_focus = ENG_scottish_factories
+	complete_national_focus = ENG_extra_research_slot_1
+
+	# --- Domestic Policy ---
 	complete_national_focus = ENG_political_reform
+	complete_national_focus = ENG_expand_the_home_ministry
+	complete_national_focus = ENG_expand_the_foreign_ministry
+	complete_national_focus = ENG_the_future_of_the_NHS
+
+	# --- Home Ministry: security_first path ---
+	complete_national_focus = ENG_security_first
+	complete_national_focus = ENG_public_CCTV_systems
+	complete_national_focus = ENG_internet_surveillance
+
+	# --- Foreign Ministry: go_with_the_commonwealth ---
+	complete_national_focus = ENG_go_with_the_commonwealth
+
+	# === Branch 2: Political Direction (ENG_the_future_of_britain) ===
+	complete_national_focus = ENG_the_future_of_britain
+	complete_national_focus = ENG_democratic_tradition
+
+	# --- careful_cooperation sub-branch ---
+	complete_national_focus = ENG_careful_cooperation
+	complete_national_focus = ENG_special_treatment
+	complete_national_focus = ENG_investments_abroad_1
+	complete_national_focus = ENG_investments_at_home
+	complete_national_focus = ENG_investments_abroad_2
+	complete_national_focus = ENG_develop_infrastructure
+	complete_national_focus = ENG_investments_abroad_3
+
+	# === Branch 3: Military (ENG_british_armed_forces) ===
+	complete_national_focus = ENG_british_armed_forces
+
+	# --- Army sub-branch ---
+	complete_national_focus = ENG_focus_on_the_army
+	complete_national_focus = ENG_industry_in_manchester
+	complete_national_focus = ENG_army_training
+	complete_national_focus = ENG_artillery_for_britain
+	complete_national_focus = ENG_tanks_for_britain
+	complete_national_focus = ENG_army_doctrine_1
+	complete_national_focus = ENG_school_for_strategic_warfare
+	complete_national_focus = ENG_army_doctrine_2
+	complete_national_focus = ENG_army_of_quality
+	complete_national_focus = ENG_army_doctrine_3
+	complete_national_focus = ENG_royal_army
+
+	# --- Air sub-branch ---
+	complete_national_focus = ENG_expand_the_air_force
+	complete_national_focus = ENG_develop_our_fighters
+	complete_national_focus = ENG_develop_heavy_planes
+	complete_national_focus = ENG_air_force_doctrine_1
+	complete_national_focus = ENG_ground_support_planes
+	complete_national_focus = ENG_air_force_doctrine_2
+	complete_national_focus = ENG_ground_crew_training
+
+	# --- Navy sub-branch ---
+	complete_national_focus = ENG_focus_on_the_navy
+	complete_national_focus = ENG_naval_prototypes
+	complete_national_focus = ENG_industry_in_liverpool
+	complete_national_focus = ENG_develop_submarines
+	complete_national_focus = ENG_develop_carriers
+	complete_national_focus = ENG_naval_doctrine_1
+	complete_national_focus = ENG_naval_support_planes
+	complete_national_focus = ENG_naval_doctrine_2
+	complete_national_focus = ENG_improve_our_small_ships
+	complete_national_focus = ENG_improve_our_large_ships
+	complete_national_focus = ENG_naval_doctrine_3
+	complete_national_focus = ENG_britannia_rules_the_waves
+
+	# No cleanup block needed — UK focuses have no timed ideas
 }
