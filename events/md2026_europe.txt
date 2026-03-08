@@ -17,14 +17,14 @@ country_event = {
 
 	option = {
 		name = md2026_europe.1.o1
-		ai_chance = { factor = 60 }
+		ai_chance = { base = 60 }
 		add_stability = -0.05
 		add_political_power = -50
 		add_ideas = md2026_spr_coalition_crisis
 	}
 	option = {
 		name = md2026_europe.1.o2
-		ai_chance = { factor = 40 }
+		ai_chance = { base = 40 }
 		add_stability = -0.10
 		add_political_power = 75
 	}
@@ -41,7 +41,7 @@ country_event = {
 
 	option = {
 		name = md2026_europe.2.o1
-		ai_chance = { factor = 50 }
+		ai_chance = { base = 50 }
 		add_stability = -0.05
 		if = {
 			limit = { has_idea = md2026_spr_territorial_tensions }
@@ -51,7 +51,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_europe.2.o2
-		ai_chance = { factor = 50 }
+		ai_chance = { base = 50 }
 		add_stability = 0.05
 		add_political_power = -50
 	}
@@ -102,7 +102,7 @@ country_event = {
 
 	option = {
 		name = md2026_europe.4.o1
-		ai_chance = { factor = 70 }
+		ai_chance = { base = 70 }
 		add_political_power = 50
 		add_stability = 0.05
 		add_ideas = md2026_eng_eu_reset
@@ -114,7 +114,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_europe.4.o2
-		ai_chance = { factor = 30 }
+		ai_chance = { base = 30 }
 		add_political_power = -25
 		set_country_flag = md2026_eu_uk_reset
 	}
@@ -139,7 +139,7 @@ country_event = {
 
 	option = {
 		name = md2026_europe.5.o1
-		ai_chance = { factor = 60 }
+		ai_chance = { base = 60 }
 		add_ideas = md2026_eng_defense_review
 		add_war_support = 0.10
 		army_experience = 15
@@ -147,7 +147,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_europe.5.o2
-		ai_chance = { factor = 40 }
+		ai_chance = { base = 40 }
 		add_war_support = 0.05
 		add_political_power = 50
 		set_country_flag = md2026_eng_sdr_done
@@ -174,7 +174,7 @@ country_event = {
 
 	option = {
 		name = md2026_europe.6.o1
-		ai_chance = { factor = 70 }
+		ai_chance = { base = 70 }
 		add_stability = 0.05
 		add_political_power = -50
 		add_ideas = md2026_eng_nhs_reform
@@ -182,7 +182,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_europe.6.o2
-		ai_chance = { factor = 30 }
+		ai_chance = { base = 30 }
 		add_stability = -0.05
 		add_political_power = 25
 		set_country_flag = md2026_nhs_reform_done
@@ -208,7 +208,7 @@ country_event = {
 
 	option = {
 		name = md2026_europe.7.o1
-		ai_chance = { factor = 50 }
+		ai_chance = { base = 50 }
 		add_stability = 0.05
 		add_war_support = -0.05
 		add_political_power = 25
@@ -216,7 +216,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_europe.7.o2
-		ai_chance = { factor = 50 }
+		ai_chance = { base = 50 }
 		add_stability = -0.05
 		add_political_power = 50
 		set_country_flag = md2026_eng_immigration_wp
@@ -243,14 +243,14 @@ country_event = {
 
 	option = {
 		name = md2026_europe.8.o1
-		ai_chance = { factor = 60 }
+		ai_chance = { base = 60 }
 		add_stability = -0.05
 		add_popularity = { ideology = nationalist popularity = 0.05 }
 		set_country_flag = md2026_reform_uk_surge
 	}
 	option = {
 		name = md2026_europe.8.o2
-		ai_chance = { factor = 40 }
+		ai_chance = { base = 40 }
 		add_stability = -0.10
 		add_political_power = -50
 		set_country_flag = md2026_reform_uk_surge
@@ -276,7 +276,7 @@ country_event = {
 
 	option = {
 		name = md2026_europe.9.o1
-		ai_chance = { factor = 70 }
+		ai_chance = { base = 70 }
 		add_ideas = md2026_fra_nuclear_expansion
 		add_war_support = 0.10
 		add_opinion_modifier = { target = ENG modifier = md2026_improved_relations }
@@ -285,7 +285,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_europe.9.o2
-		ai_chance = { factor = 30 }
+		ai_chance = { base = 30 }
 		add_political_power = 50
 		set_country_flag = md2026_fra_nuclear_doctrine
 	}
@@ -310,7 +310,7 @@ country_event = {
 
 	option = {
 		name = md2026_europe.10.o1
-		ai_chance = { factor = 60 }
+		ai_chance = { base = 60 }
 		add_stability = -0.10
 		add_political_power = -75
 		add_ideas = md2026_fra_pm_carousel
@@ -318,7 +318,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_europe.10.o2
-		ai_chance = { factor = 40 }
+		ai_chance = { base = 40 }
 		add_stability = -0.05
 		add_political_power = -25
 		set_country_flag = md2026_fra_pm_crisis
@@ -344,7 +344,7 @@ country_event = {
 
 	option = {
 		name = md2026_europe.11.o1
-		ai_chance = { factor = 70 }
+		ai_chance = { base = 70 }
 		add_ideas = md2026_fra_defense_surge
 		army_experience = 15
 		add_war_support = 0.05
@@ -352,7 +352,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_europe.11.o2
-		ai_chance = { factor = 30 }
+		ai_chance = { base = 30 }
 		add_political_power = 50
 		add_stability = 0.05
 		set_country_flag = md2026_fra_defense_boost
@@ -406,7 +406,7 @@ country_event = {
 
 	option = {
 		name = md2026_europe.13.o1
-		ai_chance = { factor = 80 }
+		ai_chance = { base = 80 }
 		add_political_power = 50
 		add_stability = 0.05
 		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
@@ -415,7 +415,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_europe.13.o2
-		ai_chance = { factor = 20 }
+		ai_chance = { base = 20 }
 		add_political_power = -25
 		set_country_flag = md2026_ger_merz_macron
 	}
@@ -440,7 +440,7 @@ country_event = {
 
 	option = {
 		name = md2026_europe.14.o1
-		ai_chance = { factor = 70 }
+		ai_chance = { base = 70 }
 		add_ideas = md2026_ger_infrastructure_fund
 		random_owned_controlled_state = {
 			limit = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } }
@@ -450,7 +450,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_europe.14.o2
-		ai_chance = { factor = 30 }
+		ai_chance = { base = 30 }
 		add_political_power = 50
 		add_stability = -0.05
 		set_country_flag = md2026_ger_sondervermoegen
@@ -476,14 +476,14 @@ country_event = {
 
 	option = {
 		name = md2026_europe.15.o1
-		ai_chance = { factor = 50 }
+		ai_chance = { base = 50 }
 		add_stability = -0.05
 		add_popularity = { ideology = nationalist popularity = 0.03 }
 		set_country_flag = md2026_ger_state_elections
 	}
 	option = {
 		name = md2026_europe.15.o2
-		ai_chance = { factor = 50 }
+		ai_chance = { base = 50 }
 		add_stability = 0.05
 		add_political_power = 25
 		set_country_flag = md2026_ger_state_elections
@@ -535,7 +535,7 @@ country_event = {
 
 	option = {
 		name = md2026_europe.17.o1
-		ai_chance = { factor = 60 }
+		ai_chance = { base = 60 }
 		add_stability = -0.05
 		add_political_power = -50
 		add_ideas = md2026_ita_austerity_pressure
@@ -543,7 +543,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_europe.17.o2
-		ai_chance = { factor = 40 }
+		ai_chance = { base = 40 }
 		add_stability = -0.10
 		add_political_power = 50
 		set_country_flag = md2026_ita_budget_crisis
@@ -570,14 +570,14 @@ country_event = {
 
 	option = {
 		name = md2026_europe.18.o1
-		ai_chance = { factor = 60 }
+		ai_chance = { base = 60 }
 		add_stability = -0.05
 		add_political_power = 75
 		set_country_flag = md2026_ita_electoral_reform
 	}
 	option = {
 		name = md2026_europe.18.o2
-		ai_chance = { factor = 40 }
+		ai_chance = { base = 40 }
 		add_stability = 0.05
 		add_political_power = -25
 		set_country_flag = md2026_ita_electoral_reform
@@ -627,14 +627,14 @@ country_event = {
 
 	option = {
 		name = md2026_europe.20.o1
-		ai_chance = { factor = 70 }
+		ai_chance = { base = 70 }
 		add_war_support = 0.05
 		army_experience = 10
 		add_political_power = -25
 	}
 	option = {
 		name = md2026_europe.20.o2
-		ai_chance = { factor = 30 }
+		ai_chance = { base = 30 }
 		add_political_power = 25
 	}
 }
@@ -710,7 +710,7 @@ country_event = {
 
 	option = {
 		name = md2026_europe.22.o1
-		ai_chance = { factor = 60 }
+		ai_chance = { base = 60 }
 		add_political_power = 75
 		add_war_support = 0.05
 		GER = { country_event = { id = md2026_europe.23 days = 5 } }
@@ -718,7 +718,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_europe.22.o2
-		ai_chance = { factor = 40 }
+		ai_chance = { base = 40 }
 		add_political_power = 25
 	}
 }
@@ -734,7 +734,7 @@ country_event = {
 
 	option = {
 		name = md2026_europe.23.o1
-		ai_chance = { factor = 70 }
+		ai_chance = { base = 70 }
 		add_political_power = 25
 		add_war_support = 0.05
 		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
@@ -742,7 +742,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_europe.23.o2
-		ai_chance = { factor = 30 }
+		ai_chance = { base = 30 }
 		add_political_power = -25
 	}
 }
@@ -793,7 +793,7 @@ country_event = {
 
 	option = {
 		name = md2026_europe.25.o1
-		ai_chance = { factor = 60 }
+		ai_chance = { base = 60 }
 		add_ideas = md2026_pol_cpk_megaproject
 		random_owned_controlled_state = {
 			limit = { free_building_slots = { building = infrastructure size > 0 include_locked = yes } }
@@ -803,7 +803,7 @@ country_event = {
 	}
 	option = {
 		name = md2026_europe.25.o2
-		ai_chance = { factor = 40 }
+		ai_chance = { base = 40 }
 		add_political_power = -50
 		add_stability = -0.05
 		set_country_flag = md2026_pol_cpk_progress
