@@ -1,4 +1,4 @@
-﻿characters = {
+characters = {
 	SWE_micael_byden = {
 		name = "Micael Bydén"
 		portraits = {

@@ -1,4 +1,4 @@
-﻿# Author(s): Angriest Bird, The_GhosT, DrCthulhuFace
+# Author(s): Angriest Bird, The_GhosT, DrCthulhuFace
 focus_tree = {
 	id = spanish_focus
 	shared_focus = MD2026_SPR_espana_del_futuro

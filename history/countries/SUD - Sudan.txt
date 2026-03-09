@@ -1,4 +1,4 @@
-﻿capital = 220
+capital = 220
 2000.1.1 = {
 	if = {
 		limit = { has_dlc = "No Step Back" }
@@ -26,7 +26,7 @@
 	set_variable = { gdp_per_capita = 4.041 }
 
 
-	add_idea = {
+	add_ideas = {
 		crippling_corruption
 		sunni
 		youth_radicalization

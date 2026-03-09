@@ -1,4 +1,4 @@
-﻿characters = {
+characters = {
 	ISR_tamir_hayman = {
 		name = "Tamir Hayman"
 		portraits = {

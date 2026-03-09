@@ -1,4 +1,4 @@
-﻿characters = {
+characters = {
 	POL_zbigniew_glowienka = {
 		name = "Zbigniew Glowienka"
 		portraits = {

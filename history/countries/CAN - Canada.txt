@@ -1,4 +1,4 @@
-﻿capital = 763
+capital = 763
 2000.1.1 = {
 	set_cosmetic_tag = CAN
 	set_country_flag = dynamic_flag
@@ -789,7 +789,7 @@
 
 		complete_special_project = sp:sp_helicopter_project
 
-	add_idea = {
+	add_ideas = {
 		#Economic Cycle
 		stable_growth
 		#Corruption
@@ -1112,7 +1112,7 @@
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
 
-	add_idea = {
+	add_ideas = {
 		md2026_can_nato_arctic
 	}
 

@@ -30,6 +30,6 @@ country_event = {
 		name = md2026_proxy.2.a
 		add_political_power = -25
 		add_stability = -0.05
-		add_idea = md2026_proxy_exposed
+		add_ideas = md2026_proxy_exposed
 	}
 }

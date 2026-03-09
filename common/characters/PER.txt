@@ -1,4 +1,4 @@
-﻿characters = {
+characters = {
 	PER_ahmadreza_pourdastan = {
 		name = "Ahmadreza Pourdastan"
 		portraits = {

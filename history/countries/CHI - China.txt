@@ -1,4 +1,4 @@
-﻿capital = 547
+capital = 547
 2000.1.1 = {
 	set_cosmetic_tag = CHI_AUTH_S
 	set_country_flag = dynamic_flag
@@ -1271,7 +1271,7 @@
 	set_variable = { enrichment_facilities = 1 }
 	add_to_array = { global.enrichment_countries = THIS.id }
 
-	add_idea = {
+	add_ideas = {
 		multi_ethnic_state_idea
 		economic_boom
 		rampant_corruption
@@ -4386,7 +4386,7 @@
 	startup_politics = yes
 
 	### 2026 National Spirits ###
-	add_idea = {
+	add_ideas = {
 		md2026_chi_economic_slowdown
 		md2026_chi_military_modernization
 	}
@@ -4699,23 +4699,23 @@
 
 	# --- Remove expired timed ideas ---
 	# CHI_End_PLA_Business_Ventures fires CHI_PLA_Business_Ventures2 (1080d, expired ~2002)
-	remove_idea = CHI_PLA_Business_Ventures2
+	remove_ideas = CHI_PLA_Business_Ventures2
 	# CHI_2_Child_Policy fires two_child_policy (2920d, expired ~2024)
-	remove_idea = two_child_policy
+	remove_ideas = two_child_policy
 	# CHI_Ratification_of_WTO fires recently_acceded_to_wto (180d, expired ~2002)
-	remove_idea = recently_acceded_to_wto
+	remove_ideas = recently_acceded_to_wto
 	# CHI_First_Tier_Megacity_Development fires CHI_megacity_development (90d, expired)
-	remove_idea = CHI_megacity_development
+	remove_ideas = CHI_megacity_development
 	# CHI_Western_Development_Strategy fires CHI_western_development (180d, expired)
-	remove_idea = CHI_western_development
+	remove_ideas = CHI_western_development
 	# CHI_A_Complete_Prairie fires CHI_new_boundary (240d, expired)
-	remove_idea = CHI_new_boundary
+	remove_ideas = CHI_new_boundary
 
 	# --- Cross-country cleanup ---
 	# CHI_Joint_Condemnation_of_Japan fires our_national_enemy (180d) on both CHI and KOR
-	remove_idea = our_national_enemy
+	remove_ideas = our_national_enemy
 	KOR = {
-		remove_idea = our_national_enemy
+		remove_ideas = our_national_enemy
 	}
 
 	# --- Re-create Xi Jinping with correct 2026 traits ---

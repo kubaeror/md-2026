@@ -1,4 +1,4 @@
-﻿capital = 716
+capital = 716
 2000.1.1 = {
 	set_country_flag = dynamic_flag
 	set_country_flag = dynamic_rebel_flag
@@ -26,7 +26,7 @@
 	}
 
 	set_cosmetic_tag = KAZ
-	add_idea = {
+	add_ideas = {
 		crippling_corruption
 		sunni
 		rentier_state
@@ -291,7 +291,7 @@
 
 
 
-	add_idea = {
+	add_ideas = {
 		rampant_corruption
 		sunni
 		rentier_state
@@ -476,7 +476,7 @@
 	set_variable = { term_limit = 1 }
 	set_variable = { current_term = 1 }
 
-	add_idea = {
+	add_ideas = {
 		md2026_kaz_multi_vector_diplomacy
 	}
 

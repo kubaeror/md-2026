@@ -1,4 +1,4 @@
-﻿capital = 110
+capital = 110
 2000.1.1 = {
 	set_country_flag = dynamic_flag
 	set_country_flag = dynamic_rebel_flag
@@ -25,7 +25,7 @@
 	set_cosmetic_tag = LIT
 	set_variable = { gdp_per_capita = 13.847 }
 
-	add_idea = {
+	add_ideas = {
 		christian
 		defence_01
 		edu_03

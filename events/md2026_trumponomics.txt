@@ -1,4 +1,4 @@
-﻿add_namespace = md2026_trumponomics
+add_namespace = md2026_trumponomics
 
 ### Trumponomics & DOGE Event Chain ###
 # .1  - DOGE Established (USA, startup-triggered)

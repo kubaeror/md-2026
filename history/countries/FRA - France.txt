@@ -1,4 +1,4 @@
-﻿capital = 56
+capital = 56
 2000.1.1 = {
 	set_cosmetic_tag = FRA
 	set_country_flag = dynamic_flag
@@ -33,7 +33,7 @@
 		}
 	}
 
-	add_idea = {
+	add_ideas = {
 		medium_corruption
 		labour_unions
 		defense_industry
@@ -2706,7 +2706,7 @@
 	set_variable = { current_term = 2 }
 
 	### National Spirits ###
-	add_idea = {
+	add_ideas = {
 		md2026_fra_european_defense_leader
 		md2026_fra_social_unrest
 	}
@@ -2894,11 +2894,11 @@
 
 	### CLEANUP — remove timed ideas and expired dynamic modifiers ###
 	# FRA_french_nato_restructures adds FRA_idea_french_nato_restructures (730d) — would have expired years ago
-	remove_idea = FRA_idea_french_nato_restructures
+	remove_ideas = FRA_idea_french_nato_restructures
 
 	# FRA_NEPAD_development adds FRA_idea_nepad_modifier (1095d dynamic) — NEPAD launched 2001, expired by ~2004
 	remove_dynamic_modifier = { modifier = FRA_idea_nepad_modifier }
 
 	# FRA_cnes_budgeting adds FRA_idea_cnes_failing — negative idea representing early CNES budget struggles, no longer relevant
-	remove_idea = FRA_idea_cnes_failing
+	remove_ideas = FRA_idea_cnes_failing
 }

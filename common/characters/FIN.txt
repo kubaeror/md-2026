@@ -1,4 +1,4 @@
-﻿characters = {
+characters = {
 	FIN_jarmo_lindberg = {
 		name = "Jarmo Lindberg"
 		portraits = {

@@ -1,4 +1,4 @@
-﻿###################################
+###################################
 # MD2026 Venezuela Crisis
 # Namespace: md2026_venezuela (.1-.6)
 # US military buildup, Maduro capture,
@@ -43,7 +43,7 @@ country_event = {
 		add_war_support = 0.05
 		navy_experience = 15
 
-		add_idea = md2026_usa_caribbean_deployment
+		add_ideas = md2026_usa_caribbean_deployment
 
 		VEN = {
 			add_opinion_modifier = { target = USA modifier = md2026_military_pressure_anger }
@@ -168,7 +168,7 @@ country_event = {
 		add_stability = -0.10
 		add_war_support = 0.15
 
-		add_idea = md2026_ven_siege_mentality
+		add_ideas = md2026_ven_siege_mentality
 
 		USA = {
 			add_opinion_modifier = { target = VEN modifier = md2026_diplomatic_disapproval }
@@ -303,9 +303,9 @@ country_event = {
 		add_stability = -0.20
 		add_war_support = -0.15
 
-		remove_idea = md2026_ven_siege_mentality
+		remove_ideas = md2026_ven_siege_mentality
 
-		add_idea = md2026_ven_post_maduro_transition
+		add_ideas = md2026_ven_post_maduro_transition
 
 		# Improved relations with USA
 		USA = {
@@ -331,9 +331,9 @@ country_event = {
 		add_stability = -0.30
 		add_war_support = 0.10
 
-		remove_idea = md2026_ven_siege_mentality
+		remove_ideas = md2026_ven_siege_mentality
 
-		add_idea = md2026_ven_power_vacuum
+		add_ideas = md2026_ven_power_vacuum
 
 		USA = {
 			add_opinion_modifier = { target = VEN modifier = md2026_diplomatic_disapproval }

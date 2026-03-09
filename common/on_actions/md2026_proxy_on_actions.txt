@@ -10,12 +10,12 @@ on_actions = {
 					limit = {
 						NOT = {
 							any_country = {
-								has_target_flag = { flag = md2026_is_proxy_of target = PREV }
+								has_country_flag = md2026_is_proxy_of_someone
 								has_war = yes
 							}
 						}
 					}
-					remove_idea = md2026_proxy_sponsor
+					remove_ideas = md2026_proxy_sponsor
 					# Give a small reward for success, since they are no longer at war and probably won
 					add_political_power = 50
 					country_event = { id = md2026_proxy.1 }
@@ -24,14 +24,11 @@ on_actions = {
 				# Cleanup flags for specific countries that are at peace
 				every_country = {
 					limit = {
-						has_target_flag = { flag = md2026_is_proxy_of target = PREV }
+						has_country_flag = md2026_is_proxy_of_someone
 						NOT = { has_war = yes }
 					}
-					clear_target_flag = { flag = md2026_is_proxy_of target = PREV }
-					PREV = {
-						clear_target_flag = { flag = md2026_proxy_supported target = PREV }
-					}
-					remove_idea = md2026_proxy_recipient
+					clr_country_flag = md2026_is_proxy_of_someone
+					remove_ideas = md2026_proxy_recipient
 				}
 			}
 		}
@@ -43,30 +40,29 @@ on_actions = {
 			# ROOT is the loser, FROM is the winner.
 			if = {
 				limit = {
-					any_country = {
-						has_target_flag = { flag = md2026_proxy_supported target = ROOT }
-					}
+					ROOT = { has_country_flag = md2026_is_proxy_of_someone }
 				}
 				every_country = {
 					limit = {
-						has_target_flag = { flag = md2026_proxy_supported target = ROOT }
+						has_idea = md2026_proxy_sponsor
 					}
 					country_event = { id = md2026_proxy.2 }
-					clear_target_flag = { flag = md2026_proxy_supported target = ROOT }
-					ROOT = {
-						clear_target_flag = { flag = md2026_is_proxy_of target = PREV }
-					}
 					
 					if = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_target_flag = { flag = md2026_is_proxy_of target = PREV }
+									has_country_flag = md2026_is_proxy_of_someone
+									has_war = yes
+									NOT = { tag = ROOT }
 								}
 							}
 						}
-						remove_idea = md2026_proxy_sponsor
+						remove_ideas = md2026_proxy_sponsor
 					}
+				}
+				ROOT = {
+					clr_country_flag = md2026_is_proxy_of_someone
 				}
 			}
 		}

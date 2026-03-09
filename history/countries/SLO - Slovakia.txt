@@ -1,4 +1,4 @@
-﻿capital = 119
+capital = 119
 
 2000.1.1 = {
 	if = {
@@ -26,7 +26,7 @@
 
 
 
-	add_idea = {
+	add_ideas = {
 		#Economic Cycle
 		fast_growth
 		#Corruption

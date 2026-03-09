@@ -1,4 +1,4 @@
-﻿capital = 176
+capital = 176
 
 2000.1.1 = {
 	if = {
@@ -29,7 +29,7 @@
 
 
 
-	add_idea = {
+	add_ideas = {
 		sunni
 		systematic_corruption
 		LoAS_member

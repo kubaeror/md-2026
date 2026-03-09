@@ -1,4 +1,4 @@
-﻿characters = {
+characters = {
 	CAN_mike_jeffery = {
 		name = "Mike Jeffery"
 		portraits = {

@@ -1,4 +1,4 @@
-﻿capital = 46
+capital = 46
 2000.1.1 = {
 	set_cosmetic_tag = HOL
 	set_country_flag = dynamic_flag
@@ -589,7 +589,7 @@
 
 		complete_special_project = sp:sp_helicopter_project
 
-	add_idea = {
+	add_ideas = {
 		#Economic Cycle
 		stable_growth
 		#Corruption

@@ -1,4 +1,4 @@
-﻿capital = 725
+capital = 725
 2000.1.1 = {
 	set_cosmetic_tag = UZB_AUTH
 	set_country_flag = dynamic_flag
@@ -23,7 +23,7 @@
 	set_variable = { UZB_uzbeks_opinion = 70 }			# Starting opinion of Uzbeks
 	set_variable = { event_counter_1_conflicts = 2 } # For random events
 
-	add_idea = {
+	add_ideas = {
 		crippling_corruption
 		sunni
 		youth_radicalization

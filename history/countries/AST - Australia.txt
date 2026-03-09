@@ -1,4 +1,4 @@
-﻿capital = 742
+capital = 742
 2000.1.1 = {
 	set_country_flag = dynamic_flag
 	set_country_flag = dynamic_rebel_flag
@@ -388,7 +388,7 @@
 		add_to_array = { cyber_targets = NKO }
 	}
 
-	add_idea = {
+	add_ideas = {
 		slight_corruption
 		pluralist
 		stable_growth
@@ -744,7 +744,7 @@
 	set_variable = { current_term = 1 }
 
 	### National Spirits ###
-	add_idea = {
+	add_ideas = {
 		md2026_ast_aukus_partner
 	}
 

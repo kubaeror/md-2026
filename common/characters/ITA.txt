@@ -1,4 +1,4 @@
-﻿
+
 
 #For unused officers look in the Italy folder in modding resources
 characters = {

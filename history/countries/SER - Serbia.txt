@@ -1,4 +1,4 @@
-﻿capital = 131
+capital = 131
 set_research_slots = 3
 2000.1.1 = {
 
@@ -30,7 +30,7 @@ set_research_slots = 3
 	set_variable = { SER_Montenegro_separatism = 40 }
 
 
-	add_idea = {
+	add_ideas = {
 		#Economic Cycle
 		stagnation
 		#Corruption

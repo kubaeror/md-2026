@@ -1,4 +1,4 @@
-﻿### Millennium Dawn 2026 - Decisions ###
+### Millennium Dawn 2026 - Decisions ###
 
 ##################################
 ### SANCTIONS DECISIONS ###
@@ -87,7 +87,7 @@ md2026_sanctions_category = {
 		remove_effect = {
 			SOV = {
 				set_country_flag = md2026_sanctions_lifted
-				remove_idea = md2026_sov_western_sanctions
+				remove_ideas = md2026_sov_western_sanctions
 				add_opinion_modifier = { target = ROOT modifier = md2026_sanctions_lifted_opinion }
 			}
 			every_country = {
@@ -176,7 +176,7 @@ md2026_sanctions_category = {
 		remove_effect = {
 			PER = {
 				set_country_flag = md2026_per_sanctions_lifted
-				remove_idea = md2026_per_international_sanctions
+				remove_ideas = md2026_per_international_sanctions
 				add_opinion_modifier = { target = USA modifier = md2026_nuclear_deal_opinion }
 			}
 			ISR = {
@@ -269,7 +269,7 @@ md2026_nato_decisions_category = {
 		}
 
 		remove_effect = {
-			add_idea = md2026_increased_defense_budget
+			add_ideas = md2026_increased_defense_budget
 			add_war_support = 0.05
 		}
 
@@ -802,7 +802,7 @@ md2026_military_modernization_category = {
 		}
 
 		remove_effect = {
-			add_idea = md2026_cyber_capability
+			add_ideas = md2026_cyber_capability
 			army_experience = 10
 		}
 
@@ -843,7 +843,7 @@ md2026_military_modernization_category = {
 		}
 
 		remove_effect = {
-			add_idea = md2026_military_ai_systems
+			add_ideas = md2026_military_ai_systems
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
@@ -1031,7 +1031,7 @@ md2026_economic_decisions_category = {
 		}
 
 		remove_effect = {
-			add_idea = md2026_energy_transition
+			add_ideas = md2026_energy_transition
 			add_stability = 0.03
 		}
 
@@ -1141,7 +1141,7 @@ md2026_economic_decisions_category = {
 		}
 
 		remove_effect = {
-			add_idea = md2026_digital_transformation
+			add_ideas = md2026_digital_transformation
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 1
@@ -1178,7 +1178,7 @@ md2026_economic_decisions_category = {
 		}
 
 		remove_effect = {
-			add_idea = md2026_arms_exporter
+			add_ideas = md2026_arms_exporter
 			add_war_support = 0.02
 		}
 
@@ -1313,7 +1313,7 @@ md2026_internal_politics_category = {
 		}
 
 		remove_effect = {
-			add_idea = md2026_sov_information_control
+			add_ideas = md2026_sov_information_control
 		}
 
 		ai_will_do = {
@@ -1391,7 +1391,7 @@ md2026_internal_politics_category = {
 		}
 
 		remove_effect = {
-			add_idea = md2026_sov_partial_mobilization
+			add_ideas = md2026_sov_partial_mobilization
 			add_manpower = 150000
 		}
 
@@ -1528,7 +1528,7 @@ md2026_internal_politics_category = {
 		}
 
 		remove_effect = {
-			add_idea = md2026_chi_tech_self_sufficiency
+			add_ideas = md2026_chi_tech_self_sufficiency
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
@@ -1651,7 +1651,7 @@ md2026_internal_politics_category = {
 		}
 
 		remove_effect = {
-			add_idea = md2026_raj_space_program
+			add_ideas = md2026_raj_space_program
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 1
@@ -1877,7 +1877,7 @@ md2026_internal_politics_category = {
 		}
 
 		remove_effect = {
-			add_idea = md2026_per_nuclear_program
+			add_ideas = md2026_per_nuclear_program
 			set_country_flag = md2026_nuclear_power
 			every_country = {
 				limit = {
@@ -1924,7 +1924,7 @@ md2026_internal_politics_category = {
 		}
 
 		remove_effect = {
-			add_idea = md2026_sau_vision_2030_acceleration
+			add_ideas = md2026_sau_vision_2030_acceleration
 			random_owned_controlled_state = {
 				add_building_construction = {
 					type = industrial_complex
@@ -2022,7 +2022,7 @@ md2026_nuclear_category = {
 		}
 
 		remove_effect = {
-			add_idea = md2026_nuclear_modernization_effect
+			add_ideas = md2026_nuclear_modernization_effect
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 1
@@ -2127,7 +2127,7 @@ md2026_nuclear_category = {
 
 		remove_effect = {
 			set_country_flag = md2026_nuclear_power
-			add_idea = md2026_nuclear_deterrent
+			add_ideas = md2026_nuclear_deterrent
 			every_country = {
 				limit = {
 					OR = {

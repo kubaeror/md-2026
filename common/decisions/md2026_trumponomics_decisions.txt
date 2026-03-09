@@ -1,4 +1,4 @@
-﻿### Millennium Dawn 2026 - Trumponomics Decisions ###
+### Millennium Dawn 2026 - Trumponomics Decisions ###
 # USA decisions for tariff escalation, DOGE, Greenland, Panama
 
 md2026_trumponomics_category = {

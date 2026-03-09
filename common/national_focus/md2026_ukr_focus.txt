@@ -1,4 +1,4 @@
-﻿### MD2026 Ukraine Focus Branch ###
+### MD2026 Ukraine Focus Branch ###
 # Shared focuses for Ukraine's 2026 focus tree branch
 # Root focus at absolute x=38, y=0
 # Gated by date > 2025.12.31
@@ -19,7 +19,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_UKR_war_path"
 		add_political_power = 75
 		add_war_support = 0.10
-		add_idea = md2026_ukr_resistance
+		add_ideas = md2026_ukr_resistance
 	}
 	ai_will_do = { base = 100 }
 }
@@ -166,7 +166,7 @@ shared_focus = {
 		add_political_power = 150
 		add_stability = 0.10
 		add_war_support = 0.10
-		add_idea = md2026_ukr_nato_candidate
+		add_ideas = md2026_ukr_nato_candidate
 	}
 	ai_will_do = { base = 80 }
 }
@@ -303,7 +303,7 @@ shared_focus = {
 		add_political_power = 100
 		add_stability = 0.10
 		add_war_support = -0.10
-		add_idea = md2026_ukr_peace_process
+		add_ideas = md2026_ukr_peace_process
 		country_event = { id = md2026_ru_ukr.5 days = 30 }
 	}
 	ai_will_do = {
@@ -330,7 +330,7 @@ shared_focus = {
 		add_political_power = 75
 		add_stability = 0.05
 		add_war_support = -0.05
-		add_idea = md2026_ukr_frozen_conflict
+		add_ideas = md2026_ukr_frozen_conflict
 		random_owned_controlled_state = {
 			limit = { is_core_of = UKR }
 			add_extra_state_shared_building_slots = 1
@@ -366,7 +366,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_UKR_international_legion"
 		add_manpower = 75000
 		army_experience = 15
-		add_idea = md2026_ukr_international_legion
+		add_ideas = md2026_ukr_international_legion
 		add_tech_bonus = {
 			name = UKR_foreign_tactics
 			bonus = 1.0
@@ -421,7 +421,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_UKR_security_guarantees"
 		add_political_power = 100
 		add_stability = 0.10
-		add_idea = md2026_ukr_security_guarantees
+		add_ideas = md2026_ukr_security_guarantees
 		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = ENG modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
@@ -443,7 +443,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_UKR_eu_candidate"
 		add_political_power = 75
 		add_stability = 0.05
-		add_idea = md2026_ukr_eu_candidate
+		add_ideas = md2026_ukr_eu_candidate
 		random_owned_controlled_state = {
 			limit = { is_core_of = UKR }
 			add_extra_state_shared_building_slots = 2
@@ -474,7 +474,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_UKR_drone_warfare"
 		army_experience = 25
 		air_experience = 25
-		add_idea = md2026_ukr_drone_warfare
+		add_ideas = md2026_ukr_drone_warfare
 		add_tech_bonus = {
 			name = UKR_drone_tech
 			bonus = 1.0
@@ -574,7 +574,7 @@ shared_focus = {
 		add_political_power = 150
 		add_stability = 0.10
 		add_war_support = 0.10
-		add_idea = md2026_ukr_victory_plan
+		add_ideas = md2026_ukr_victory_plan
 		random_owned_controlled_state = {
 			limit = { is_core_of = UKR }
 			add_extra_state_shared_building_slots = 3

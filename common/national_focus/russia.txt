@@ -1,4 +1,4 @@
-﻿## RUSSIA FOCUS TREE
+## RUSSIA FOCUS TREE
 ## Authors: LordBogdanoff,heastel, alexmarkel0v, crocomoth, BoNDeX, DarkCloud, Reid, PAKMAN, scotch and BirdyBoi
 focus_tree = {
 	id = russia_focus

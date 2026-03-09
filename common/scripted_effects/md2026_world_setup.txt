@@ -1,4 +1,4 @@
-﻿# MD2026 World Setup Script
+# MD2026 World Setup Script
 # Fired once at the start of the 2026 scenario
 
 md2026_setup_world_borders_and_wars = {
@@ -124,7 +124,7 @@ md2026_setup_world_borders_and_wars = {
         limit = {
             has_idea = MD_economic_boom_idea # Or any sign they exist
         }
-        add_idea = md2026_economic_stabilizer
+        add_ideas = md2026_economic_stabilizer
     }
 
 

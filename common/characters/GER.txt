@@ -1,4 +1,4 @@
-﻿characters = {
+characters = {
 	#Generalleutnant
 	GER_Rudiger_Drews = {
 		name = "Rüdiger Drews"

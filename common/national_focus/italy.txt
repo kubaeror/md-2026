@@ -1,4 +1,4 @@
-﻿### original tree by Angriest Bird/Tortoise
+### original tree by Angriest Bird/Tortoise
 ### rework by Simone - Traiano
 
 focus_tree = {

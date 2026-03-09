@@ -1,4 +1,4 @@
-﻿capital = 652
+capital = 652
 
 2000.1.1 = {
 	set_cosmetic_tag = SOV
@@ -4277,7 +4277,7 @@
 	}
 	complete_special_project = sp:sp_helicopter_project
 
-	add_idea = {
+	add_ideas = {
 		russian_legacy
 		orthodox_christian
 		crippling_corruption
@@ -5716,14 +5716,14 @@
 	# Only remove ideas that are NOT part of focus swap chains.
 	# SOV_outdated_army_idea is kept — the army reform chain swaps it through _1/_2/_3/removed.
 	# SOV_russian_army_idea is NOT added — redundant with focus chain idea outputs.
-	remove_idea = {
+	remove_ideas = {
 		recession
 		SOV_broken_economy_idea_1
 		SOV_corrupt_oligarchy
 		SOV_yukos_idea
 		SOV_rao_ues
 	}
-	add_idea = {
+	add_ideas = {
 		stagnation
 		md2026_sov_western_sanctions
 		md2026_sov_war_mobilization
@@ -5835,7 +5835,7 @@
 	# SOV_remove_guzinsky fires event sov_economic.3 (1-day delay) which adds
 	# SOV_private_media_nationalisation_idea. Since the delay prevents it from
 	# being available for SOV_economic_trikolov_tv, we add it manually here.
-	add_idea = SOV_private_media_nationalisation_idea
+	add_ideas = SOV_private_media_nationalisation_idea
 
 	##############################################
 	### PRE-COMPLETED FOCUSES (Jan 2026 state) ###
@@ -6202,16 +6202,16 @@
 	# Timed ideas fired by focus completion_rewards that are anachronistic for Jan 2026.
 
 	# SOV_medvedev_modernization_program adds 365d production_efficiency_bonus
-	remove_idea = production_efficiency_bonus
+	remove_ideas = production_efficiency_bonus
 
 	# SOV_exercises_belarus_start adds 65d military exercises idea on SOV and BLR
-	remove_idea = SOV_military_exercises_allied_resolve_idea
+	remove_ideas = SOV_military_exercises_allied_resolve_idea
 	BLR = { remove_idea = SOV_military_exercises_allied_resolve_idea }
 
 	# SOV_information_war adds 365d SOV_idea_information to ALL NATO members
 	every_country = {
 		limit = { has_idea = SOV_idea_information }
-		remove_idea = SOV_idea_information
+		remove_ideas = SOV_idea_information
 	}
 
 	# SOV_rokirovka retires the current leader (Medvedev swap) — re-create Putin
@@ -6246,6 +6246,6 @@
 	# The army reform chain provides its own specific ideas (ratnik, anti_air, etc.)
 	if = {
 		limit = { has_idea = SOV_russian_army_idea }
-		remove_idea = SOV_russian_army_idea
+		remove_ideas = SOV_russian_army_idea
 	}
 }

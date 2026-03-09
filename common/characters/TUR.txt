@@ -1,4 +1,4 @@
-﻿characters = {
+characters = {
 	TUR_hulusi_akar = {
 		name = "Hulusi Akar"
 		portraits = {

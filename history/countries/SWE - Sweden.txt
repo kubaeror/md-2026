@@ -1,4 +1,4 @@
-﻿capital = 34
+capital = 34
 
 2000.1.1 = {
 	set_country_flag = dynamic_flag
@@ -27,7 +27,7 @@
 	}
 
 
-	add_idea = {
+	add_ideas = {
 		#Economic Cycle
 		fast_growth
 		#Corruption
@@ -1825,7 +1825,7 @@
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
 
-	add_idea = {
+	add_ideas = {
 		md2026_swe_new_nato_member
 	}
 

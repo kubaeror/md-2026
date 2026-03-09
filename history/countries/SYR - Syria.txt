@@ -1,4 +1,4 @@
-﻿capital = 186
+capital = 186
 
 2000.1.1 = {
 	if = {
@@ -128,7 +128,7 @@
 		}
 	}
 
-	add_idea = {
+	add_ideas = {
 		rampant_corruption
 		shia
 		LoAS_member
@@ -467,7 +467,7 @@
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
 
-	add_idea = {
+	add_ideas = {
 		md2026_syr_post_assad
 	}
 

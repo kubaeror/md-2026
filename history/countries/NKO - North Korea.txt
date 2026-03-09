@@ -1,4 +1,4 @@
-﻿capital = 602
+capital = 602
 2000.1.1 = {
 	set_cosmetic_tag = NKO_AUTH_S
 	set_country_flag = dynamic_flag
@@ -731,7 +731,7 @@
 
 		complete_special_project = sp:sp_helicopter_project
 
-	add_idea = {
+	add_ideas = {
 		paralyzing_corruption
 		cheondo
 		stagnation
@@ -989,7 +989,7 @@
 	startup_politics = yes
 
 	### 2026 National Spirits ###
-	add_idea = {
+	add_ideas = {
 		md2026_nko_total_isolation
 	}
 

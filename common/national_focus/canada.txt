@@ -1,4 +1,4 @@
-﻿# Author(s): Angriest Bird
+# Author(s): Angriest Bird
 focus_tree = {
 	id = canada_focus
 

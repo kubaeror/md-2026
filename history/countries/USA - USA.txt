@@ -1,4 +1,4 @@
-﻿capital = 1182
+capital = 1182
 2000.1.1 = {
 	# If a country has specific cosmetic tags or configuration
 	set_cosmetic_tag = USA
@@ -201,7 +201,7 @@
 		}
 	}
 
-	add_idea = {
+	add_ideas = {
 		#Economic Cycle
 		stable_growth
 		#Corruption
@@ -257,7 +257,7 @@
 		landmark_ICBMsilominot_hidden
 	}
 	if = { limit = { is_ai = yes }
-		add_idea = USA_additional_pp_ai
+		add_ideas = USA_additional_pp_ai
 	}
 
 	# Congressional Configuration Decision Menu
@@ -5123,12 +5123,12 @@
 
 	### Updated Ideas ###
 	# Remove outdated ideas and add 2026-specific ones
-	remove_idea = {
+	remove_ideas = {
 		stable_growth
 		modest_corruption
 		nuclear_power_off
 	}
-	add_idea = {
+	add_ideas = {
 		fast_growth
 		modest_corruption
 		nuclear_power_off

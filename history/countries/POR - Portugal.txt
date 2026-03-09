@@ -1,4 +1,4 @@
-﻿capital = 96
+capital = 96
 2000.1.1 = {
 	set_cosmetic_tag = POR
 	set_country_flag = dynamic_flag
@@ -28,7 +28,7 @@
 	}
 
 
-	add_idea = {
+	add_ideas = {
 		#Economic Cycle
 		stagnation
 		#Corruption

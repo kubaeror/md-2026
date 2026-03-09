@@ -1,4 +1,4 @@
-﻿# Author(s):
+# Author(s):
 #Those who got lost in development:
 #Samrparker12 (Discord) @samrparker (Gitlab)
 #RainyAngel (Discord) @SinfulJade (Gitlab)

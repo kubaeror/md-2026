@@ -1,4 +1,4 @@
-﻿capital = 431
+capital = 431
 2000.1.1 = {
 	set_cosmetic_tag = RAJ
 	set_country_flag = dynamic_flag
@@ -55,7 +55,7 @@
 	447 = { add_dynamic_modifier = { modifier = RAJ_hoxaists_rebel } }
 	455 = { add_dynamic_modifier = { modifier = RAJ_hoxaists_rebel } }
 
-	add_idea = {
+	add_ideas = {
 		rampant_corruption
 		hindu
 		fast_growth

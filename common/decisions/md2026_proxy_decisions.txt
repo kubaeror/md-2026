@@ -1,4 +1,4 @@
-﻿md2026_geopolitics_category = {
+md2026_geopolitics_category = {
 
 	### Proxy War System ###
 	
@@ -17,13 +17,13 @@
 		}
 		complete_effect = {
 			set_country_flag = md2026_proxy_war_active
-			add_idea = md2026_proxy_warfare_cost
+			add_ideas = md2026_proxy_warfare_cost
 			add_opinion_modifier = { target = USA modifier = md2026_proxy_war_anger }
 			add_opinion_modifier = { target = FRA modifier = md2026_proxy_war_anger }
 		}
 		remove_effect = {
 			clr_country_flag = md2026_proxy_war_active
-			remove_idea = md2026_proxy_warfare_cost
+			remove_ideas = md2026_proxy_warfare_cost
 			random_list = {
 				50 = { country_event = { id = md2026_proxy.1 } } # Success
 				50 = { country_event = { id = md2026_proxy.2 } } # Failure
@@ -46,13 +46,13 @@
 		}
 		complete_effect = {
 			set_country_flag = md2026_proxy_war_active
-			add_idea = md2026_proxy_warfare_cost
+			add_ideas = md2026_proxy_warfare_cost
 			add_opinion_modifier = { target = SOV modifier = md2026_proxy_war_anger }
 			add_opinion_modifier = { target = PER modifier = md2026_proxy_war_anger }
 		}
 		remove_effect = {
 			clr_country_flag = md2026_proxy_war_active
-			remove_idea = md2026_proxy_warfare_cost
+			remove_ideas = md2026_proxy_warfare_cost
 			random_list = {
 				50 = { country_event = { id = md2026_proxy.1 } } # Success
 				50 = { country_event = { id = md2026_proxy.2 } } # Failure
@@ -75,14 +75,14 @@
 		}
 		complete_effect = {
 			set_country_flag = md2026_proxy_war_active
-			add_idea = md2026_proxy_warfare_cost
+			add_ideas = md2026_proxy_warfare_cost
 			add_opinion_modifier = { target = ISR modifier = md2026_proxy_war_anger }
 			add_opinion_modifier = { target = SAU modifier = md2026_proxy_war_anger }
 			add_opinion_modifier = { target = USA modifier = md2026_proxy_war_anger }
 		}
 		remove_effect = {
 			clr_country_flag = md2026_proxy_war_active
-			remove_idea = md2026_proxy_warfare_cost
+			remove_ideas = md2026_proxy_warfare_cost
 			random_list = {
 				50 = { country_event = { id = md2026_proxy.1 } } # Success
 				50 = { country_event = { id = md2026_proxy.2 } } # Failure

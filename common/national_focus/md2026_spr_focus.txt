@@ -1,4 +1,4 @@
-﻿###################################
+###################################
 # MD2026 Spain (SPR) Focus Tree
 # 2026 Shared Focuses - La España del Futuro
 # 26 focuses: 1 root + 5 branches + capstone
@@ -59,7 +59,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SPR_sumar_pact"
 		add_stability = 0.10
 		add_political_power = 50
-		add_idea = md2026_spr_progressive_coalition
+		add_ideas = md2026_spr_progressive_coalition
 	}
 	ai_will_do = {
 		factor = 1
@@ -99,7 +99,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SPR_catalan_question"
 		if = {
 			limit = { has_idea = md2026_spr_territorial_tensions }
-			remove_idea = md2026_spr_territorial_tensions
+			remove_ideas = md2026_spr_territorial_tensions
 		}
 		add_stability = 0.10
 		add_political_power = 50
@@ -273,7 +273,7 @@ shared_focus = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
 		}
-		add_idea = md2026_spr_renewable_leader
+		add_ideas = md2026_spr_renewable_leader
 	}
 	ai_will_do = {
 		factor = 1

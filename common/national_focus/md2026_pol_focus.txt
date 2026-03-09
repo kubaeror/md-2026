@@ -1,4 +1,4 @@
-﻿###################################
+###################################
 # MD2026 Poland (POL) Focus Tree
 # 2026 Shared Focuses - Eastern Shield
 # 40 focuses: 1 root + 6 branches (3-4 deep) + capstone
@@ -37,7 +37,7 @@ shared_focus = {
 	relative_position_id = MD2026_POL_eastern_shield
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_fortress_poland"
-		add_idea = md2026_pol_fortress_poland
+		add_ideas = md2026_pol_fortress_poland
 		# Fortify eastern border
 		92 = { add_building_construction = { type = bunker province = 3393 level = 3 instant_build = yes } }
 		97 = { add_building_construction = { type = bunker province = 6303 level = 3 instant_build = yes } }
@@ -304,7 +304,7 @@ shared_focus = {
 	relative_position_id = MD2026_POL_iron_dome_east
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_fort_trump"
-		add_idea = md2026_pol_us_permanent_base
+		add_ideas = md2026_pol_us_permanent_base
 		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
 		USA = { add_opinion_modifier = { target = POL modifier = md2026_improved_relations } }
 		add_war_support = 0.10
@@ -403,7 +403,7 @@ shared_focus = {
 	relative_position_id = MD2026_POL_drone_warfare
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_cyber_forces"
-		add_idea = md2026_pol_cyber_command
+		add_ideas = md2026_pol_cyber_command
 		add_tech_bonus = {
 			name = MD2026_POL_cyber_forces
 			bonus = 1.0
@@ -450,7 +450,7 @@ shared_focus = {
 	relative_position_id = MD2026_POL_energy_independence
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_nuclear_power"
-		add_idea = md2026_pol_nuclear_program
+		add_ideas = md2026_pol_nuclear_program
 		random_owned_controlled_state = {
 			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
 			add_extra_state_shared_building_slots = 2
@@ -647,7 +647,7 @@ shared_focus = {
 	relative_position_id = MD2026_POL_nato_eastern_hq
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_nato_spearhead"
-		add_idea = md2026_pol_nato_spearhead
+		add_ideas = md2026_pol_nato_spearhead
 		army_experience = 25
 		add_war_support = 0.10
 	}
@@ -736,7 +736,7 @@ shared_focus = {
 	relative_position_id = MD2026_POL_cpk_hub
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_tech_sector"
-		add_idea = md2026_pol_tech_hub
+		add_ideas = md2026_pol_tech_hub
 		add_political_power = 50
 	}
 	ai_will_do = {
@@ -779,7 +779,7 @@ shared_focus = {
 	relative_position_id = MD2026_POL_tech_sector
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_startup_nation"
-		add_idea = md2026_pol_startup_ecosystem
+		add_ideas = md2026_pol_startup_ecosystem
 		add_political_power = 50
 		random_owned_controlled_state = {
 			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
@@ -897,7 +897,7 @@ shared_focus = {
 	relative_position_id = MD2026_POL_miecznik_frigates
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_POL_baltic_dominance"
-		add_idea = md2026_pol_baltic_fleet
+		add_ideas = md2026_pol_baltic_fleet
 		navy_experience = 25
 		add_opinion_modifier = { target = SWE modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = DEN modifier = md2026_improved_relations }

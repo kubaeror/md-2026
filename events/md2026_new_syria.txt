@@ -1,4 +1,4 @@
-﻿add_namespace = md2026_new_syria
+add_namespace = md2026_new_syria
 
 ### Fall of Assad / New Syria Event Chain ###
 # .1  - Western Sanctions Partially Lifted (SYR, date-triggered)

@@ -1,4 +1,4 @@
-﻿# Author(s): Jumaron & Angriest Bird
+# Author(s): Jumaron & Angriest Bird
 # Last Modified: Feb. 03 2022 by Angriest Bird
 focus_tree = {
 	id = united_kingdom_focus

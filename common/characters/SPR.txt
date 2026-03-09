@@ -1,4 +1,4 @@
-﻿characters = {
+characters = {
 	###Generals###
 	SPR_alfonso_pardo_de_santayana_y_coloma = {
 		name = "Alfonso Pardo de Santayana y Coloma"

@@ -1,4 +1,4 @@
-﻿capital = 159
+capital = 159
 2000.1.1 = {
 	set_cosmetic_tag = TUR
 	set_country_flag = dynamic_flag
@@ -611,7 +611,7 @@
 
 	}
 
-	add_idea = {
+	add_ideas = {
 		unrestrained_corruption
 		pluralist
 		liberal_society
@@ -853,10 +853,10 @@
 	# This flag activates scripted localisation to display AKP party names
 	set_country_flag = Turkey_FP_banned
 	# Remove the FP-era national spirit (no longer relevant by 2026)
-	remove_idea = TUR_rise_of_fp
+	remove_ideas = TUR_rise_of_fp
 
 	### 2026 National Spirits ###
-	add_idea = {
+	add_ideas = {
 		md2026_tur_erdogan_autocracy
 	}
 

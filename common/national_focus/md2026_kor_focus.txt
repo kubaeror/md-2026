@@ -1,4 +1,4 @@
-﻿###################################
+###################################
 # MD2026 South Korea (KOR) Focus Tree
 # 2026 Shared Focuses - Shield of Freedom
 # 26 focuses: 1 root + 5 branches + capstone
@@ -235,7 +235,7 @@ shared_focus = {
 	relative_position_id = MD2026_KOR_shield_freedom
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_KOR_k_defense"
-		add_idea = md2026_kor_k_defense
+		add_ideas = md2026_kor_k_defense
 		random_owned_controlled_state = {
 			limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
 			add_extra_state_shared_building_slots = 2

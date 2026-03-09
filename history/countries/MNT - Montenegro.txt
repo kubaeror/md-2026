@@ -1,11 +1,11 @@
-﻿capital = 134
+capital = 134
 2000.1.1 = {
 	set_cosmetic_tag = MNT
 
 	set_country_flag = dynamic_flag
 	set_variable = { gdp_per_capita = 12.419 }
 
-	add_idea = {
+	add_ideas = {
 		orthodox_christian
 		rampant_corruption
 		stable_growth

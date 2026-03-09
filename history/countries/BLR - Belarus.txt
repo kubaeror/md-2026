@@ -1,4 +1,4 @@
-﻿capital = 703
+capital = 703
 2000.1.1 = {
 	set_cosmetic_tag = BLR
 	set_country_flag = dynamic_flag
@@ -84,7 +84,7 @@
 	add_opinion_modifier = { target = ABK modifier = russian_proficient }
 	reverse_add_opinion_modifier = { target = ABK modifier = russian_proficient }
 
-	add_idea = {
+	add_ideas = {
 		# Economic/Factions
 		stagnation
 		rampant_corruption
@@ -376,7 +376,7 @@
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 7 }
 
-	add_idea = {
+	add_ideas = {
 		md2026_blr_russian_satellite
 	}
 

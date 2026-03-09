@@ -1,4 +1,4 @@
-﻿###################################
+###################################
 # MD2026 Brazil (BRA) Focus Tree
 # 2026 Shared Focuses - Brazil's Return
 ###################################
@@ -57,7 +57,7 @@ shared_focus = {
 	relative_position_id = MD2026_BRA_amazon_protection
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_BRA_green_economy"
-		add_idea = md2026_bra_green_economy
+		add_ideas = md2026_bra_green_economy
 		random_owned_controlled_state = {
 			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
 			add_extra_state_shared_building_slots = 2

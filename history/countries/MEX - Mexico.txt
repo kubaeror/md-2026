@@ -1,4 +1,4 @@
-﻿capital = 835
+capital = 835
 2000.1.1 = {
 	set_cosmetic_tag = MEX
 
@@ -312,7 +312,7 @@
 
 			tech_landing_craft = 1
 		}
-	add_idea = {
+	add_ideas = {
 		#Economic Cycle
 		stagnation
 		#Corruption

@@ -1,4 +1,4 @@
-﻿capital = 724
+capital = 724
 2000.1.1 = {
 	set_cosmetic_tag = TAJ
 	set_country_flag = TAJ_dictatorship_flag
@@ -26,7 +26,7 @@
 	}
 	country_lock_all_division_template = yes
 
-	add_idea = {
+	add_ideas = {
 		crippling_corruption
 		sunni
 		stagnation
@@ -163,7 +163,7 @@
 		}
 	}
 
-	add_idea = {
+	add_ideas = {
 		sunni
 		defence_01
 		edu_02

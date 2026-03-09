@@ -1,4 +1,4 @@
-﻿add_namespace = md2026_rus_collapse
+add_namespace = md2026_rus_collapse
 add_namespace = md2026_rus_collapse_news
 
 # Monthly check for Russian Collapse
@@ -84,7 +84,7 @@ country_event = {
 			white_peace = UKR
 		}
 		
-		remove_idea = md2026_war_exhaustion_3
+		remove_ideas = md2026_war_exhaustion_3
 		
 		ai_chance = {
 			base = 40
@@ -138,7 +138,7 @@ country_event = {
 		add_war_support = 0.10
 		
 		# Martial Law idea
-		add_idea = md2026_sov_information_control
+		add_ideas = md2026_sov_information_control
 	}
 }
 

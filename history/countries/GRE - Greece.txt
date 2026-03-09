@@ -1,4 +1,4 @@
-﻿
+
 capital = 141
 2000.1.1 = {
 	set_cosmetic_tag = GRE
@@ -35,7 +35,7 @@ capital = 141
 		}
 	}
 
-	add_idea = {
+	add_ideas = {
 		#Economic Cycle
 		stagnation
 		#Corruption
@@ -515,7 +515,7 @@ capital = 141
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
 
-	add_idea = {
+	add_ideas = {
 		md2026_gre_economic_recovery
 	}
 

@@ -1,4 +1,4 @@
-﻿capital = 133
+capital = 133
 2000.1.1 = {
 	oob = "KOS_2000"
 	set_convoys = 5
@@ -7,7 +7,7 @@
 
 	set_variable = { gdp_per_capita = 7.032 }
 
-	add_idea = {
+	add_ideas = {
 		rampant_corruption
 		KOS_Land_Mines
 		KOS_Yugoslav_war_state

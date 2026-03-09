@@ -1,4 +1,4 @@
-﻿### MD2026 USA Focus Branch ###
+### MD2026 USA Focus Branch ###
 # These shared focuses are added to the USA focus tree via shared_focus reference
 # Root focus positioned at absolute x=38, y=0 (right side of tree, avoiding existing content)
 # Gated by allow_branch date > 2025.12.31 so only visible in 2026 bookmark
@@ -20,7 +20,7 @@ shared_focus = {
 		add_political_power = 100
 		add_stability = -0.05
 		add_war_support = 0.05
-		add_idea = md2026_usa_america_first
+		add_ideas = md2026_usa_america_first
 	}
 	ai_will_do = { base = 100 }
 }
@@ -43,7 +43,7 @@ shared_focus = {
 		add_war_support = 0.05
 		add_manpower = -50000
 		add_political_power = -50
-		add_idea = md2026_usa_labor_shortage
+		add_ideas = md2026_usa_labor_shortage
 	}
 	ai_will_do = { base = 50 }
 }
@@ -125,7 +125,7 @@ shared_focus = {
 		add_political_power = -25
 		add_opinion_modifier = { target = CHI modifier = embargo }
 		reverse_add_opinion_modifier = { target = CHI modifier = embargo }
-		add_idea = md2026_usa_trade_war_tariffs
+		add_ideas = md2026_usa_trade_war_tariffs
 	}
 	ai_will_do = { base = 70 }
 }

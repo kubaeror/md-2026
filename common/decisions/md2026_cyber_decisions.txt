@@ -1,4 +1,4 @@
-﻿md2026_military_modernization_category = {
+md2026_military_modernization_category = {
 
 	### Cyber Warfare System ###
 
@@ -28,7 +28,7 @@
 					random_other_country = {
 						limit = { has_war_with = ROOT }
 						random_owned_controlled_state = {
-							limit = { has_building = industrial_complex }
+							limit = { industrial_complex > 0 }
 							damage_building = { type = industrial_complex damage = 1 }
 						}
 						country_event = { id = md2026_cyber.1 }
@@ -69,7 +69,7 @@
 			random_list = {
 				50 = {
 					# Success
-					add_tech_bonus = { name = computing_bonus bonus = 0.5 uses = 1 category = computing }
+					add_tech_bonus = { name = computing_bonus bonus = 0.5 uses = 1 category = electronics }
 					country_event = { id = md2026_cyber.4 }
 				}
 				50 = {

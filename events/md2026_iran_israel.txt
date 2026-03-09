@@ -1,4 +1,4 @@
-﻿###################################
+###################################
 # MD2026 Iran-Israel Escalation
 # Extends md2026_mideast namespace (.23-.28)
 # Israeli strikes on Iranian nuclear facilities,
@@ -34,7 +34,7 @@ country_event = {
 		add_war_support = 0.15
 		air_experience = 25
 
-		add_idea = md2026_isr_wartime_escalation
+		add_ideas = md2026_isr_wartime_escalation
 
 		# Iran receives the strike
 		PER = {
@@ -121,7 +121,7 @@ country_event = {
 		add_stability = -0.10
 		add_war_support = 0.20
 
-		add_idea = md2026_per_nuclear_setback
+		add_ideas = md2026_per_nuclear_setback
 
 		# Proxy activation
 		set_country_flag = md2026_per_proxy_retaliation
@@ -148,7 +148,7 @@ country_event = {
 		add_war_support = 0.15
 		add_stability = -0.05
 
-		add_idea = md2026_per_nuclear_setback
+		add_ideas = md2026_per_nuclear_setback
 
 		set_country_flag = md2026_per_proxy_retaliation
 
@@ -171,7 +171,7 @@ country_event = {
 		add_stability = 0.05
 		add_war_support = -0.10
 
-		add_idea = md2026_per_nuclear_setback
+		add_ideas = md2026_per_nuclear_setback
 
 		# International sympathy
 		every_country = {
@@ -219,7 +219,7 @@ country_event = {
 		}
 
 		# Deploy naval assets to Persian Gulf
-		add_idea = md2026_usa_persian_gulf_deployment
+		add_ideas = md2026_usa_persian_gulf_deployment
 
 		ai_chance = {
 			base = 50
@@ -297,7 +297,7 @@ country_event = {
 		add_stability = -0.15
 		add_war_support = 0.20
 
-		add_idea = md2026_per_hormuz_blockade
+		add_ideas = md2026_per_hormuz_blockade
 
 		# Global oil crisis
 		every_country = {

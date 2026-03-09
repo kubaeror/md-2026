@@ -1,4 +1,4 @@
-﻿capital = 207
+capital = 207
 2000.1.1 = {
 	set_country_flag = ISR_good_size_knesset
 	set_country_flag = ISR_parliament_block
@@ -40,7 +40,7 @@
 
 	set_variable = { small_medium_business_owners = 75 }
 
-	add_idea = {
+	add_ideas = {
 		widespread_corruption
 		judaism
 		oslo_accords_1
@@ -1902,7 +1902,7 @@
 	startup_politics = yes
 
 	### 2026 National Spirits ###
-	add_idea = {
+	add_ideas = {
 		md2026_isr_wartime_footing
 	}
 

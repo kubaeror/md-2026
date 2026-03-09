@@ -1,4 +1,4 @@
-﻿# Author(s): Angriest Bird
+# Author(s): Angriest Bird
 # Last Modified 16/04/2025 by Angriest Bird
 focus_tree = {
 	id = nigeria_focus

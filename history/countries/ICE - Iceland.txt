@@ -1,11 +1,11 @@
-﻿capital = 7
+capital = 7
 2000.1.1 = {
 	oob = "ICE_2017"
 
 	set_cosmetic_tag = ICE
 	set_variable = { gdp_per_capita = 41.531 }
 
-	add_idea = {
+	add_ideas = {
 		#Corruption
 		slight_corruption
 		#Faction 1

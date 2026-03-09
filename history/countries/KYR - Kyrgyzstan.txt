@@ -1,4 +1,4 @@
-﻿capital = 720
+capital = 720
 2000.1.1 = {
 	set_country_flag = dynamic_flag
 	set_country_flag = dynamic_rebel_flag
@@ -22,7 +22,7 @@
 	}
 
 	set_cosmetic_tag = KYR
-	add_idea = {
+	add_ideas = {
 		crippling_corruption
 		sunni
 		fast_growth

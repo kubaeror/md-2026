@@ -1,4 +1,4 @@
-﻿###################################
+###################################
 # MD2026 NATO Article 5 Event Chain
 # Triggered when a NATO member is attacked
 ###################################
@@ -103,7 +103,7 @@ country_event = {
 		name = md2026_nato_article5.2.o1
 		log = "[GetDateText]: [This.GetName]: Full Article 5 commitment"
 
-		add_idea = md2026_nato_article5_active
+		add_ideas = md2026_nato_article5_active
 		add_war_support = 0.10
 		add_stability = 0.03
 		army_experience = 10
@@ -202,7 +202,7 @@ country_event = {
 	# Stand down
 	option = {
 		name = md2026_nato_article5.3.o1
-		remove_idea = md2026_nato_article5_active
+		remove_ideas = md2026_nato_article5_active
 		add_stability = 0.05
 		add_political_power = 25
 	}

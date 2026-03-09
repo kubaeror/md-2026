@@ -1,4 +1,4 @@
-﻿### MD2026 South Africa Focus Branch ###
+### MD2026 South Africa Focus Branch ###
 # Shared focuses for South Africa's 2026 focus tree branch
 # Root focus at absolute x=38, y=0
 # 12 focuses: ANC crisis, energy/governance branches, mining, BRICS
@@ -176,7 +176,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_zaf_coalition_governance"
 		add_stability = 0.10
 		add_political_power = 75
-		add_idea = md2026_zaf_coalition_governance
+		add_ideas = md2026_zaf_coalition_governance
 	}
 	ai_will_do = { base = 50 }
 }
@@ -253,7 +253,7 @@ shared_focus = {
 		add_political_power = 100
 		add_stability = 0.10
 		add_war_support = 0.05
-		add_idea = md2026_zaf_regional_power
+		add_ideas = md2026_zaf_regional_power
 	}
 	ai_will_do = { base = 70 }
 }

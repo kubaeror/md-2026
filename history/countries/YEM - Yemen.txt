@@ -1,4 +1,4 @@
-﻿capital = 195
+capital = 195
 2000.1.1 = {
 	if = {
 		limit = { has_dlc = "No Step Back" }
@@ -24,7 +24,7 @@
 	#israel blockade
 	set_country_flag = blockade_israel_yes
 
-	add_idea = {
+	add_ideas = {
 		sunni
 		hybrid_regime_western
 		conservative_society
@@ -110,7 +110,7 @@
 			}
 		}
 	}
-	add_idea = {
+	add_ideas = {
 		rampant_corruption
 		youth_radicalization
 		LoAS_member

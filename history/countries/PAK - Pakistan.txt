@@ -1,4 +1,4 @@
-﻿capital = 422
+capital = 422
 2000.1.1 = {
 	set_cosmetic_tag = PAK
 	set_country_flag = dynamic_flag
@@ -56,7 +56,7 @@
 	add_opinion_modifier = { target = SPR modifier = large_commercial_relations }
 	add_opinion_modifier = { target = USA modifier = large_commercial_relations }
 
-	add_idea = {
+	add_ideas = {
 		crippling_corruption
 		sunni
 		youth_radicalization
@@ -669,7 +669,7 @@
 	set_variable = { current_term = 1 }
 
 	### National Spirits ###
-	add_idea = {
+	add_ideas = {
 		md2026_pak_political_instability
 		md2026_pak_nuclear_deterrent
 	}

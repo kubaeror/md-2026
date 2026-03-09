@@ -1,4 +1,4 @@
-﻿# Author(s): Tasos, Kor, XilingoHotel, Reid, Angel, Jame, Bond, Alex, BirdyBoi, DROID
+# Author(s): Tasos, Kor, XilingoHotel, Reid, Angel, Jame, Bond, Alex, BirdyBoi, DROID
 focus_tree = {
 	id = EST_focus_tree
 	shared_focus = MD2026_BALTIC_suwalki_shield

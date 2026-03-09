@@ -1,4 +1,4 @@
-﻿capital = 124
+capital = 124
 
 2000.1.1 = {
 	if = {
@@ -30,7 +30,7 @@
 
 
 
-	add_idea = {
+	add_ideas = {
 		#Economic Cycle
 		stable_growth
 		#Corruption

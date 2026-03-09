@@ -1,4 +1,4 @@
-﻿characters = {
+characters = {
 	RAJ_abhay_krishna = {
 		name = "Abhay Krishna"
 		portraits = {

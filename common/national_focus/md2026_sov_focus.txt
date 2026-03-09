@@ -1,4 +1,4 @@
-﻿### MD2026 Russia Focus Branch ###
+### MD2026 Russia Focus Branch ###
 # Shared focuses for Russia's 2026 focus tree branch
 # Root focus at absolute x=38, y=0 (right side, avoiding existing content)
 # Gated by date > 2025.12.31
@@ -19,7 +19,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_war_crossroads"
 		add_political_power = 50
 		add_war_support = 0.05
-		add_idea = md2026_sov_war_economy
+		add_ideas = md2026_sov_war_economy
 	}
 	ai_will_do = { base = 100 }
 }
@@ -251,7 +251,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_sanctions_circumvention"
 		add_political_power = 25
-		add_idea = md2026_sov_sanctions_evasion
+		add_ideas = md2026_sov_sanctions_evasion
 		random_owned_controlled_state = {
 			limit = { is_core_of = SOV }
 			add_extra_state_shared_building_slots = 1
@@ -365,7 +365,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_hybrid_warfare"
 		add_political_power = 50
 		army_experience = 25
-		add_idea = md2026_sov_hybrid_warfare
+		add_ideas = md2026_sov_hybrid_warfare
 		add_tech_bonus = {
 			name = SOV_cyber_ops
 			bonus = 1.0
@@ -420,7 +420,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_fortress_russia"
 		add_stability = 0.05
 		add_war_support = 0.05
-		add_idea = md2026_sov_fortress_russia
+		add_ideas = md2026_sov_fortress_russia
 		random_owned_controlled_state = {
 			limit = { is_core_of = SOV }
 			add_extra_state_shared_building_slots = 2
@@ -490,7 +490,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SOV_parallel_economy"
 		add_stability = 0.05
 		add_political_power = 75
-		add_idea = md2026_sov_parallel_economy
+		add_ideas = md2026_sov_parallel_economy
 		random_owned_controlled_state = {
 			limit = { is_core_of = SOV }
 			add_extra_state_shared_building_slots = 3
@@ -562,7 +562,7 @@ shared_focus = {
 		add_opinion_modifier = { target = CHI modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = RAJ modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = BRA modifier = md2026_improved_relations }
-		add_idea = md2026_sov_multipolar_world
+		add_ideas = md2026_sov_multipolar_world
 	}
 	ai_will_do = { base = 60 }
 }

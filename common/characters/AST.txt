@@ -1,4 +1,4 @@
-﻿characters = {
+characters = {
 	AST_david_hurley = {
 		name = "David Hurley"
 		portraits = {

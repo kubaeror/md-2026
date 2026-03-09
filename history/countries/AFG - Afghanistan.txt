@@ -1,4 +1,4 @@
-﻿capital = 411
+capital = 411
 2000.1.1 = {
 	set_country_flag = dynamic_rebel_flag
 	set_cosmetic_tag = AFG_NOR
@@ -94,7 +94,7 @@
 
 	add_dynamic_modifier = { modifier = AFG_National_Assembly }
 
-	add_idea = {
+	add_ideas = {
 		rampant_corruption
 		multi_ethnic_state_idea
 		sunni

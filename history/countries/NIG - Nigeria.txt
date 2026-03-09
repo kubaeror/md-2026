@@ -1,4 +1,4 @@
-﻿capital = 337
+capital = 337
 2000.1.1 = {
 	set_cosmetic_tag = NIG
 	set_country_flag = dynamic_flag
@@ -58,7 +58,7 @@
 			set_air_oob = "NIG_2000_nonbba"
 		}
 	}
-	add_idea = {
+	add_ideas = {
 		paralyzing_corruption
 		ecowas_member_state
 		fifty_fifty_divide

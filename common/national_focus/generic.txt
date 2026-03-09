@@ -1,4 +1,4 @@
-﻿focus_tree = {
+focus_tree = {
 	id = generic_focus
 	shared_focus = md2026_zaf_anc_crisis
 

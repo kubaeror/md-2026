@@ -1,4 +1,4 @@
-﻿capital = 32
+capital = 32
 2000.1.1 = {
 	set_cosmetic_tag = NOR
 
@@ -104,7 +104,7 @@
 
 		complete_special_project = sp:sp_helicopter_project
 
-	add_idea = {
+	add_ideas = {
 		fast_growth
 		slight_corruption
 		labour_unions
