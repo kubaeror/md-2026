@@ -1957,48 +1957,30 @@ capital = 45
 	}
 
 	#Airforce
-	recruit_character = GER_rolf_portz
-	recruit_character = GER_gerhard_back
-	recruit_character = GER_klaus_peter_stieglitz
-	recruit_character = GER_harald_kujat
-	recruit_character = GER_ulf_von_krause
+	recruit_character = GER_ingo_gerhartz
+	recruit_character = GER_lutz_kohlhaus
 
 	#Army
-	recruit_character = GER_helmut_willmann
-	recruit_character = GER_Rudiger_Drews
-	recruit_character = GER_klaus_reinhardt
-	recruit_character = GER_Hans-Joachim_Frohlich
-	recruit_character = GER_gert_gudera
-	recruit_character = GER_egon_ramms
+	recruit_character = GER_carsten_breuer
+	recruit_character = GER_alfons_mais
+	recruit_character = GER_alexander_sollfrank
+	recruit_character = GER_markus_laubenthal
 	recruit_character = GER_Kersten_Lahl
-	recruit_character = GER_hans_otto_budde
 	recruit_character = GER_Hans-Christian_Beck
-	recruit_character = GER_wolfgang_schneiderhan
-	recruit_character = GER_werner_freers
-	recruit_character = GER_hans-peter_von_kirchbach
-	recruit_character = GER_Hans_Heinrich_Dieter
 	recruit_character = GER_Rainer_Schuwirth
 	recruit_character = GER_Gotz_Gliemeroth
 
 	#Navy
-	recruit_character = GER_wolfgang_nolting
-	recruit_character = GER_lutz_feldt
-	recruit_character = GER_wolfram_kuhn
-	recruit_character = GER_horst_dieter_kolletschke
-	recruit_character = GER_Christoph_Diehl
-	recruit_character = GER_Hans-Joachim_Stricker
-	recruit_character = GER_Henning_Hoops
-	recruit_character = GER_Heinz-Eugen_Eberbach
-	recruit_character = GER_Bernd_Heise
-	recruit_character = GER_hans_lussow
+	recruit_character = GER_jan_christian_kaack
+	recruit_character = GER_kaack_replacement
 
 	#Politics
-	recruit_character = GER_Joschka_Fischer #grüne
-	recruit_character = GER_Wolfgang_Schauble #cdu
-	recruit_character = GER_Wolfgang_Gerhardt #fdp
-	recruit_character = GER_Gregor_Gysi #pds
-	recruit_character = GER_Udo_Voigt #npd
-	recruit_character = GER_Rolf_Schlierer #rep
+	recruit_character = GER_Robert_Habeck #grüne
+	recruit_character = GER_Olaf_Scholz #spd
+	recruit_character = GER_Christian_Lindner #fdp
+	recruit_character = GER_Janine_Wissler #pds
+	recruit_character = GER_Alice_Weidel #afd
+	recruit_character = GER_Tino_Chrupalla #afd
 
 	#Scientists
 	if = {

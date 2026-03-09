@@ -1,4 +1,4 @@
-characters = {
+﻿characters = {
 	#Generalleutnant
 	GER_Rudiger_Drews = {
 		name = "Rüdiger Drews"
@@ -1515,6 +1515,178 @@ GER_jorg_vollmer = {
 			skills = {
 				specialization_land = 2
 			}
+		}
+	}
+
+	GER_ingo_gerhartz = {
+		name = "Ingo Gerhartz"
+		portraits = {
+			army = { large = "gfx/leaders/GER/Ingo_Gerhartz.dds" }
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = ingo_gerhartz
+			ledger = air
+			allowed = { original_tag = GER }
+			traits = { air_chief_reform_3 }
+			cost = 100
+		}
+	}
+	GER_lutz_kohlhaus = {
+		name = "Lutz Kohlhaus"
+		portraits = {
+			army = { large = "gfx/leaders/GER/Lutz_Kohlhaus.dds" }
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	GER_carsten_breuer = {
+		name = "Carsten Breuer"
+		portraits = {
+			army = { large = "gfx/leaders/GER/Carsten_Breuer.dds" }
+		}
+		field_marshal = {
+			traits = { logistics_wizard }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 4
+		}
+	}
+	GER_alfons_mais = {
+		name = "Alfons Mais"
+		portraits = {
+			army = { large = "gfx/leaders/GER/Alfons_Mais.dds" }
+		}
+		corps_commander = {
+			traits = { infantry_officer organizer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	GER_alexander_sollfrank = {
+		name = "Alexander Sollfrank"
+		portraits = {
+			army = { large = "gfx/leaders/GER/Alexander_Sollfrank.dds" }
+		}
+		corps_commander = {
+			traits = { commando }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	GER_markus_laubenthal = {
+		name = "Markus Laubenthal"
+		portraits = {
+			army = { large = "gfx/leaders/GER/Markus_Laubenthal.dds" }
+		}
+		corps_commander = {
+			traits = { panzer_leader }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	GER_jan_christian_kaack = {
+		name = "Jan Christian Kaack"
+		portraits = {
+			army = { large = "gfx/leaders/GER/Jan_Christian_Kaack.dds" }
+		}
+		navy_leader = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			maneuvering_skill = 3
+			coordination_skill = 4
+		}
+	}
+	GER_kaack_replacement = {
+		name = "Stephan Haisch"
+		portraits = {
+			army = { large = "gfx/leaders/GER/Stephan_Haisch.dds" }
+		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+	}
+
+	GER_Robert_Habeck = {
+		name = "Robert Habeck"
+		portraits = { civilian = { large = "gfx/leaders/GER/Robert_Habeck.dds" } }
+		country_leader = {
+			ideology = Neutral_green
+			traits = { neutrality_neutral_Social }
+			expire = "2100.1.1.1"
+			id = -1
+		}
+	}
+	GER_Olaf_Scholz = {
+		name = "Olaf Scholz"
+		portraits = { civilian = { large = "gfx/leaders/GER/Olaf_Scholz.dds" } }
+		country_leader = {
+			ideology = socialism
+			traits = { western_socialism }
+			expire = "2100.1.1.1"
+			id = -1
+		}
+	}
+	GER_Christian_Lindner = {
+		name = "Christian Lindner"
+		portraits = { civilian = { large = "gfx/leaders/GER/Christian_Lindner.dds" } }
+		country_leader = {
+			ideology = liberalism
+			traits = { western_liberalism }
+			expire = "2100.1.1.1"
+			id = -1
+		}
+	}
+	GER_Janine_Wissler = {
+		name = "Janine Wissler"
+		portraits = { civilian = { large = "gfx/leaders/GER/Janine_Wissler.dds" } }
+		country_leader = {
+			ideology = anarchist_communism
+			traits = { anarcho_communist_leader }
+			expire = "2100.1.1.1"
+			id = -1
+		}
+	}
+	GER_Alice_Weidel = {
+		name = "Alice Weidel"
+		portraits = { civilian = { large = "gfx/leaders/GER/Alice_Weidel.dds" } }
+		country_leader = {
+			ideology = fascism
+			traits = { national_populism }
+			expire = "2100.1.1.1"
+			id = -1
+		}
+	}
+	GER_Tino_Chrupalla = {
+		name = "Tino Chrupalla"
+		portraits = { civilian = { large = "gfx/leaders/GER/Tino_Chrupalla.dds" } }
+		country_leader = {
+			ideology = Nat_Fascism
+			traits = { right_wing_populist }
+			expire = "2100.1.1.1"
+			id = -1
 		}
 	}
 }
