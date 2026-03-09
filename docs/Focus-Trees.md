@@ -1,6 +1,6 @@
 # Focus Trees
 
-The mod adds 23 new focus tree branches for major and regional countries. These are implemented as **shared focuses** that attach to existing Millennium Dawn focus trees, appearing only when playing the 2026 bookmark.
+The mod adds 25 new focus tree branches for major and regional countries. These are implemented as **shared focuses** that attach to existing Millennium Dawn focus trees, appearing only when playing the 2026 bookmark.
 
 The 7 compact trees (USA, Russia, Ukraine, China, Brazil, Saudi Arabia, Poland) have branches of ~8-12 focuses. The **16 expanded trees** (France, UK, Iran, Italy, North Korea, Canada, Australia, Taiwan, Egypt, Syria, Germany, Japan, South Korea, Israel, India, Turkey) each have **26 focuses** across 5 branches with mutually exclusive paths and capstone focuses.
 

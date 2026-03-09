@@ -19,6 +19,9 @@ The mod includes approximately 75 events organized into 11 event chains, coverin
 | `md2026_tech_revolution.txt` | `md2026_tech_revolution` | ~6 | AI breakthroughs, cyber attacks |
 | `md2026_space.txt` | `md2026_space` | ~5 | Space race, ASAT incidents |
 | `md2026_demographics.txt` | `md2026_demographics` | ~5 | Aging crisis, urbanization, brain drain |
+| `md2026_trumponomics.txt` | `md2026_trumponomics` | ~10 | DOGE, Tariffs, Global Trade War |
+| `md2026_venezuela.txt` | `md2026_venezuela` | ~6 | US Military Buildup, Maduro Crisis |
+| `md2026_arab_spring.txt` | `md2026_arab_spring` | ~8 | New wave of Middle East protests |
 
 ---
 

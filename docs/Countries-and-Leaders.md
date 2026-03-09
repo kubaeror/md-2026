@@ -153,3 +153,11 @@ capital = STATE_ID
 ```
 
 The `2026.1.1` block only contains what **changes** from the 2000 start. The game engine applies it as an overlay when the 2026 bookmark is selected.
+
+### Historical Pre-Completed Focuses
+To accurately simulate the jump from 2000 to 2026, over 70 country history files have been loaded with `complete_national_focus` definitions. These ensure that upon starting in 2026, nations already possess the political alignment, industrial expansions, and military doctrines they historically developed over the past 25 years. 
+
+**Tiers of Pre-Completion:**
+- **Tier 1 (100+ focuses):** Major powers heavily altered (Russia, Germany, China, USA, France, Poland).
+- **Tier 2 (40-90 focuses):** Regional powers properly scaled (UK, Italy, India, Turkey, Iran, Egypt, Indonesia, North/South Korea, Israel).
+- **Tier 3 (10-30 focuses):** Smaller nations brought up to modern standards (Baltics, Romania, Spain, Argentina, Mexico).
