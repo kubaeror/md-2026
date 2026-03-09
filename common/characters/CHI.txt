@@ -1,4 +1,4 @@
-characters = {
+﻿characters = {
 	#2000 Army Chiefs
 	CHI_fu_quanyou = {
 		name = "Fu Quanyou"
@@ -819,29 +819,7 @@ characters = {
 			}
 		}
 	}
-	CHI_liu_zhenli = {
-		name = "Liu Zhenli"
-		portraits = {
-			army = {
-				small = "gfx/leaders/CHI/small/Liu_Zhenli_small.dds"
-				large = "gfx/leaders/CHI/Liu_Zhenli.dds"
-			}
-		}
-		advisor = {
-			slot = army_chief
-			idea_token = liu_zhenli
-			allowed = {
-				original_tag = CHI
-			}
-			traits = {
-				army_chief_reform_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
+
 	#2000 Navy Chiefs
 	CHI_shi_yunsheng = {
 		name = "Shi Yunsheng"
@@ -1798,6 +1776,13 @@ characters = {
 			planning_skill = 4
 			logistics_skill = 3
 		}
+	
+		advisor = {
+			slot = army_chief
+			idea_token = liu_zhenli
+			allowed = {
+				original_tag = CHI
+			}
 	}
 
 	CHI_wang_jianwu = {

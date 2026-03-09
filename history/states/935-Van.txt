@@ -1,4 +1,4 @@
-﻿state = {
+state = {
 	id = 935
 	name = "STATE_935"
 

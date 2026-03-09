@@ -1,4 +1,4 @@
-# MD2026 - AI Strategy Plans
+﻿# MD2026 - AI Strategy Plans
 # Guides AI focus tree selection for all countries with md2026 focus trees.
 # Each plan lists focuses in logical top-down order so the AI takes root focuses first.
 # For mutually exclusive branches, the "historical" path is chosen as default.
@@ -44,15 +44,6 @@ md2026_usa_historical = {
 		MD2026_USA_panama_canal
 	}
 
-	focus_factors = {
-		MD2026_USA_abandon_ukraine = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -92,18 +83,6 @@ md2026_sov_historical = {
 		MD2026_SOV_global_south_pivot
 	}
 
-	focus_factors = {
-		MD2026_SOV_frozen_conflict = 0
-		MD2026_SOV_consolidate_territories = 0
-		MD2026_SOV_fortress_russia = 0
-		MD2026_SOV_arctic_militarization = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -145,16 +124,6 @@ md2026_chi_historical = {
 		MD2026_CHI_carrier_fleet
 	}
 
-	focus_factors = {
-		MD2026_CHI_taiwan_escalation = 0
-		MD2026_CHI_taiwan_blockade = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -193,19 +162,6 @@ md2026_ukr_historical = {
 		MD2026_UKR_victory_plan
 	}
 
-	focus_factors = {
-		MD2026_UKR_diplomatic_path = 0
-		MD2026_UKR_nato_membership = 0
-		MD2026_UKR_eu_integration = 0
-		MD2026_UKR_security_guarantees = 0
-		MD2026_UKR_eu_candidate = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -254,15 +210,6 @@ md2026_ger_historical = {
 		MD2026_GER_leading_europe
 	}
 
-	focus_factors = {
-		MD2026_GER_european_defense_pillar = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -311,15 +258,6 @@ md2026_fra_historical = {
 		MD2026_FRA_grande_nation
 	}
 
-	focus_factors = {
-		MD2026_FRA_sahel_reengage = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -368,15 +306,6 @@ md2026_eng_historical = {
 		MD2026_ENG_global_reach
 	}
 
-	focus_factors = {
-		MD2026_ENG_eu_rapprochement = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -425,15 +354,6 @@ md2026_ita_historical = {
 		MD2026_ITA_italian_renaissance
 	}
 
-	focus_factors = {
-		MD2026_ITA_south_development = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -538,15 +458,6 @@ md2026_spr_historical = {
 		MD2026_SPR_nueva_espana
 	}
 
-	focus_factors = {
-		MD2026_SPR_sumar_pact = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -595,15 +506,6 @@ md2026_isr_historical = {
 		MD2026_ISR_startup_nation
 	}
 
-	focus_factors = {
-		MD2026_ISR_preemptive_strike = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -652,15 +554,6 @@ md2026_tur_historical = {
 		MD2026_TUR_century_of_turkiye
 	}
 
-	focus_factors = {
-		MD2026_TUR_eurasian_pivot = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -709,15 +602,6 @@ md2026_kor_historical = {
 		MD2026_KOR_global_pivot_state
 	}
 
-	focus_factors = {
-		MD2026_KOR_diplomatic_opening = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -766,15 +650,6 @@ md2026_tai_historical = {
 		MD2026_TAI_fortress_taiwan
 	}
 
-	focus_factors = {
-		MD2026_TAI_japan_cooperation = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -823,15 +698,6 @@ md2026_nko_historical = {
 		MD2026_NKO_eternal_leader
 	}
 
-	focus_factors = {
-		MD2026_NKO_diplomatic_leverage = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -880,15 +746,6 @@ md2026_jap_historical = {
 		MD2026_JAP_normal_nation
 	}
 
-	focus_factors = {
-		MD2026_JAP_korea_reconciliation = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -937,15 +794,6 @@ md2026_raj_historical = {
 		MD2026_RAJ_vishwaguru
 	}
 
-	focus_factors = {
-		MD2026_RAJ_brics_balance = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -994,15 +842,6 @@ md2026_per_historical = {
 		MD2026_PER_regional_hegemon
 	}
 
-	focus_factors = {
-		MD2026_PER_nuclear_negotiate = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -1034,17 +873,6 @@ md2026_sau_historical = {
 		MD2026_SAU_military_modernization
 	}
 
-	focus_factors = {
-		MD2026_SAU_tourism = 0
-		MD2026_SAU_green_hydrogen = 0
-		MD2026_SAU_abraham_accords = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -1093,15 +921,6 @@ md2026_egy_historical = {
 		MD2026_EGY_arab_leader
 	}
 
-	focus_factors = {
-		MD2026_EGY_diversify_suppliers = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -1150,15 +969,6 @@ md2026_syr_historical = {
 		MD2026_SYR_new_dawn
 	}
 
-	focus_factors = {
-		MD2026_SYR_islamic_governance = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -1190,16 +1000,6 @@ md2026_bra_historical = {
 		MD2026_BRA_un_reform
 	}
 
-	focus_factors = {
-		MD2026_BRA_agri_superpower = 0
-		MD2026_BRA_mercosur = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -1248,15 +1048,6 @@ md2026_can_historical = {
 		MD2026_CAN_middle_power
 	}
 
-	focus_factors = {
-		MD2026_CAN_us_accommodation = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -1305,15 +1096,6 @@ md2026_ast_historical = {
 		MD2026_AST_indo_pacific_anchor
 	}
 
-	focus_factors = {
-		MD2026_AST_china_engage = 0
-	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 	}
 }
 
@@ -1420,12 +1202,7 @@ md2026_pak_historical = {
 		md2026_pak_military_modernization
 	}
 
-	focus_factors = {
-		md2026_pak_chinese_loans = {
-			modifier = {
-				factor = 0
-			}
-		}
+	}
 	}
 
 	weight = {
@@ -1459,12 +1236,7 @@ md2026_pak_china_path = {
 		md2026_pak_military_modernization
 	}
 
-	focus_factors = {
-		md2026_pak_imf_bailout = {
-			modifier = {
-				factor = 0
-			}
-		}
+	}
 	}
 
 	weight = {

@@ -1,4 +1,4 @@
-﻿state = {
+state = {
 	id = 838
 	name = "STATE_838"
 	manpower = 8872176

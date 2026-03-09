@@ -1,4 +1,4 @@
-### MD2026 Argentina Focus Branch ###
+﻿### MD2026 Argentina Focus Branch ###
 # Shared focuses for Argentina's 2026 focus tree branch
 # Root focus at absolute x=38, y=0
 # 9 focuses: Milei reforms, economic/foreign branches, capstone
@@ -192,7 +192,7 @@ shared_focus = {
 		random_owned_controlled_state = {
 			limit = { is_core_of = ARG }
 			add_resource = {
-				type = rare_earth
+				type = tungsten
 				amount = 10
 			}
 		}

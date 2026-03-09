@@ -990,29 +990,7 @@ GER_jorg_vollmer = {
 			}
 		}
 	}
-	GER_alfons_mais = {
-		name = "Alfons Mais"
-		portraits = {
-			army = {
-				small = "gfx/leaders/GER/small/Alfons_Mais_small.dds"
-				large = "gfx/leaders/GER/Alfons_Mais.dds"
-			}
-		}
-		advisor = {
-			slot = army_chief
-			idea_token = alfons_mais
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				army_chief_maneuver_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
+
 	GER_andreas_krause = {
 		name = "Andreas Krause"
 		portraits = {
@@ -1059,29 +1037,7 @@ GER_jorg_vollmer = {
 			}
 		}
 	}
-	GER_jan_christian_kaack = {
-		name = "Jan Christian Kaack"
-		portraits = {
-			army = {
-				small = "gfx/leaders/GER/small/Jan_Christian_Kaack_small.dds"
-				large = "gfx/leaders/GER/Jan_Christian_Kaack.dds"
-			}
-		}
-		advisor = {
-			slot = navy_chief
-			idea_token = jan_christian_kaack
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				navy_chief_maneuver_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
+
 	GER_karl_mullner = {
 		name = "Karl Müllner"
 		portraits = {
@@ -1105,29 +1061,7 @@ GER_jorg_vollmer = {
 			}
 		}
 	}
-	GER_ingo_gerhartz = {
-		name = "Ingo Gerhartz"
-		portraits = {
-			army = {
-				small = "gfx/leaders/GER/small/Ingo_Gerhartz_small.dds"
-				large = "gfx/leaders/GER/Ingo_Gerhartz.dds"
-			}
-		}
-		advisor = {
-			slot = air_chief
-			idea_token = ingo_gerhartz
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				air_chief_night_operations_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
+
 	GER_rainer_brinkmann = {
 		name = "Rainer Brinkmann"
 		portraits = {
@@ -1673,7 +1607,7 @@ GER_jorg_vollmer = {
 		name = "Alice Weidel"
 		portraits = { civilian = { large = "gfx/leaders/GER/Alice_Weidel.dds" } }
 		country_leader = {
-			ideology = fascism
+			ideology = Nat_Populism
 			traits = { national_populism }
 			expire = "2100.1.1.1"
 			id = -1

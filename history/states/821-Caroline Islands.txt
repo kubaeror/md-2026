@@ -1,4 +1,4 @@
-﻿state = {
+state = {
 	id = 821
 	name = "STATE_821" #Micronesia
 	manpower = 119511

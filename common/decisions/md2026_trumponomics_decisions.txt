@@ -1,4 +1,4 @@
-### Millennium Dawn 2026 - Trumponomics Decisions ###
+﻿### Millennium Dawn 2026 - Trumponomics Decisions ###
 # USA decisions for tariff escalation, DOGE, Greenland, Panama
 
 md2026_trumponomics_category = {
@@ -203,7 +203,7 @@ md2026_trumponomics_category = {
 
 		available = {
 			has_government = nationalist
-			stability > 0.3
+			has_stability > 0.3
 		}
 
 		complete_effect = {
@@ -214,8 +214,8 @@ md2026_trumponomics_category = {
 
 		remove_effect = {
 			swap_ideas = {
-				remove_idea = md2026_usa_doge_cuts
-				add_idea = md2026_usa_doge_deep_cuts
+				remove_ideas = md2026_usa_doge_cuts
+				add_ideas = md2026_usa_doge_deep_cuts
 			}
 			add_stability = -0.05
 		}
@@ -224,7 +224,7 @@ md2026_trumponomics_category = {
 			base = 30
 			modifier = {
 				factor = 0
-				stability < 0.4
+				has_stability < 0.4
 			}
 		}
 	}
@@ -247,7 +247,7 @@ md2026_trumponomics_category = {
 		}
 
 		available = {
-			stability < 0.35
+			has_stability < 0.35
 		}
 
 		complete_effect = {
@@ -268,7 +268,7 @@ md2026_trumponomics_category = {
 			base = 0
 			modifier = {
 				add = 80
-				stability < 0.25
+				has_stability < 0.25
 			}
 		}
 	}

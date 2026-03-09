@@ -1,4 +1,4 @@
-### MD2026 China Focus Branch ###
+﻿### MD2026 China Focus Branch ###
 # Shared focuses for China's 2026 focus tree branch
 # Root focus at absolute x=38, y=0
 # Gated by date > 2025.12.31
@@ -348,7 +348,7 @@ shared_focus = {
 			name = CHI_naval_tech
 			bonus = 1.0
 			uses = 2
-			category = CAT_naval_all
+			category = CAT_naval_all_all
 		}
 	}
 	ai_will_do = { base = 40 }
@@ -434,7 +434,7 @@ shared_focus = {
 			name = CHI_digital_silk
 			bonus = 1.0
 			uses = 1
-			category = CAT_computing_tech
+			category = CAT_computing_tech_tech
 		}
 	}
 	ai_will_do = { base = 60 }
@@ -461,7 +461,7 @@ shared_focus = {
 		random_owned_controlled_state = {
 			limit = { is_core_of = CHI }
 			add_resource = {
-				type = rare_earth
+				type = tungsten
 				amount = 8
 			}
 		}

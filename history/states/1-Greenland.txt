@@ -1,4 +1,4 @@
-﻿state = {
+state = {
 	id = 1
 	name = "STATE_1" # Greenland
 	manpower = 650

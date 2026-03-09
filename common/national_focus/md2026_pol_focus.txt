@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # MD2026 Poland (POL) Focus Tree
 # 2026 Shared Focuses - Eastern Shield
 # 40 focuses: 1 root + 6 branches (3-4 deep) + capstone
@@ -408,7 +408,7 @@ shared_focus = {
 			name = MD2026_POL_cyber_forces
 			bonus = 1.0
 			uses = 2
-			category = CAT_computing
+			category = CAT_computing_tech
 		}
 	}
 	ai_will_do = {
@@ -627,7 +627,7 @@ shared_focus = {
 		add_political_power = 100
 		add_opinion_modifier = { target = UKR modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = GEO modifier = md2026_improved_relations }
-		add_opinion_modifier = { target = MOL modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = MLV modifier = md2026_improved_relations }
 		UKR = { add_opinion_modifier = { target = POL modifier = md2026_improved_relations } }
 		GEO = { add_opinion_modifier = { target = POL modifier = md2026_improved_relations } }
 	}
@@ -851,7 +851,7 @@ shared_focus = {
 			name = MD2026_POL_miecznik_frigates
 			bonus = 1.0
 			uses = 2
-			category = CAT_naval
+			category = CAT_naval_all
 		}
 		add_opinion_modifier = { target = ENG modifier = md2026_improved_relations }
 		ENG = { add_opinion_modifier = { target = POL modifier = md2026_improved_relations } }
@@ -876,7 +876,7 @@ shared_focus = {
 			name = MD2026_POL_orka_submarines
 			bonus = 1.0
 			uses = 2
-			category = CAT_naval
+			category = CAT_naval_all
 		}
 		navy_experience = 15
 	}

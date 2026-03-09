@@ -1,4 +1,4 @@
-add_namespace = md2026_new_syria
+﻿add_namespace = md2026_new_syria
 
 ### Fall of Assad / New Syria Event Chain ###
 # .1  - Western Sanctions Partially Lifted (SYR, date-triggered)
@@ -93,8 +93,8 @@ country_event = {
 		add_stability = 0.08
 		add_political_power = 50
 		swap_ideas = {
-			remove_idea = md2026_syr_post_assad
-			add_idea = md2026_syr_transitional_government
+			remove_ideas = md2026_syr_post_assad
+			add_ideas = md2026_syr_transitional_government
 		}
 	}
 
@@ -158,7 +158,7 @@ country_event = {
 		original_tag = SYR
 		has_global_flag = md2026_initialized
 		date > 2026.6.1
-		stability < 0.3
+		has_stability < 0.3
 		NOT = { has_country_flag = md2026_syr_stability_crisis }
 	}
 
@@ -236,7 +236,7 @@ country_event = {
 		original_tag = SYR
 		has_global_flag = md2026_initialized
 		has_country_flag = md2026_syr_sanctions_lifted
-		stability > 0.35
+		has_stability > 0.35
 		date > 2026.6.1
 		NOT = { has_country_flag = md2026_syr_refugees_returning }
 	}

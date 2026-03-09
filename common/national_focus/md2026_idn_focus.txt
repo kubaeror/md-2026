@@ -1,4 +1,4 @@
-### MD2026 Indonesia Focus Branch ###
+﻿### MD2026 Indonesia Focus Branch ###
 # Shared focuses for Indonesia's 2026 focus tree branch (IND)
 # Root focus at absolute x=38, y=0
 # 12 focuses: Nusantara capital, ASEAN/resources/maritime branches, capstone
@@ -107,7 +107,7 @@ shared_focus = {
 		random_owned_controlled_state = {
 			limit = { is_core_of = IND }
 			add_resource = {
-				type = rare_earth
+				type = tungsten
 				amount = 12
 			}
 		}
@@ -223,7 +223,7 @@ shared_focus = {
 			name = IDN_sub_tech
 			bonus = 1.0
 			uses = 1
-			category = CAT_naval_all
+			category = CAT_naval_all_all
 		}
 		random_owned_controlled_state = {
 			limit = { is_core_of = IND is_coastal = yes }

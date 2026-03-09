@@ -1,4 +1,4 @@
-md2026_military_modernization_category = {
+﻿md2026_military_modernization_category = {
 
 	### Cyber Warfare System ###
 

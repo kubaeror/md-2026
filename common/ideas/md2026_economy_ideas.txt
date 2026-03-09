@@ -79,9 +79,9 @@ ideas = {
 		md2026_economic_stabilizer = {
 			modifier = {
 				# Reduces the crushing interest rates of high debt to let AI/player breathe
-				interest_rate = -0.05
+				interest_rate_multiplier_modifier = -0.5
 				# Small boost to avoid instantaneous economic collapse
-				national_tax_mod = 0.05
+				tax_gain_multiplier_modifier = 0.05
 			}
 		}
 	}

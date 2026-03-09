@@ -1,4 +1,4 @@
-### MD2026 South Africa Focus Branch ###
+﻿### MD2026 South Africa Focus Branch ###
 # Shared focuses for South Africa's 2026 focus tree branch
 # Root focus at absolute x=38, y=0
 # 12 focuses: ANC crisis, energy/governance branches, mining, BRICS
@@ -145,7 +145,7 @@ shared_focus = {
 		random_owned_controlled_state = {
 			limit = { is_core_of = SAF }
 			add_resource = {
-				type = rare_earth
+				type = tungsten
 				amount = 12
 			}
 		}
