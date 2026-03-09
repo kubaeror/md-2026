@@ -1,4 +1,4 @@
-characters = {
+﻿characters = {
 	RAJ_abhay_krishna = {
 		name = "Abhay Krishna"
 		portraits = {
@@ -454,6 +454,81 @@ characters = {
 			defense_skill = 2
 			maneuvering_skill = 2
 			coordination_skill = 3
+		}
+	}
+
+	RAJ_anil_chauhan = {
+		name = "Anil Chauhan"
+		portraits = {
+			army = { large = "gfx/leaders/RAJ/Anil_Chauhan.dds" }
+		}
+		field_marshal = {
+			traits = { logistics_wizard }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = anil_chauhan
+			ledger = army
+			allowed = { original_tag = RAJ }
+			traits = { army_chief_reform_2 }
+			cost = 150
+		}
+	}
+
+	RAJ_upendra_dwivedi = {
+		name = "Upendra Dwivedi"
+		portraits = {
+			army = { large = "gfx/leaders/RAJ/Upendra_Dwivedi.dds" }
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+
+	RAJ_dinesh_tripathi = {
+		name = "Dinesh K Tripathi"
+		portraits = {
+			army = { large = "gfx/leaders/RAJ/Dinesh_Tripathi.dds" }
+		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = dinesh_tripathi
+			ledger = navy
+			allowed = { original_tag = RAJ }
+			traits = { navy_chief_reform_2 }
+			cost = 150
+		}
+	}
+
+	RAJ_amar_preet_singh = {
+		name = "Amar Preet Singh"
+		portraits = {
+			army = { large = "gfx/leaders/RAJ/Amar_Preet_Singh.dds" }
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = amar_preet_singh
+			ledger = air
+			allowed = { original_tag = RAJ }
+			traits = { air_chief_reform_2 }
+			cost = 150
 		}
 	}
 }
