@@ -1808,12 +1808,11 @@ capital = 207
 		}
 	}
 
-	recruit_character = ISR_tamir_hayman
+	recruit_character = ISR_herzi_halevi
+	recruit_character = ISR_tomer_bar
+	recruit_character = ISR_david_salama
 	recruit_character = ISR_yossi_bachar
-	recruit_character = ISR_hassan_alian
-	recruit_character = ISR_eyal_eizenberg
 	recruit_character = ISR_amir_abulaifa
-	recruit_character = ISR_amir_baram
 	recruit_character = ISR_gadi_eizenkot
 	recruit_character = ISR_kobi_barak
 	recruit_character = ISR_aviv_kochavi

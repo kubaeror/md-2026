@@ -666,11 +666,11 @@
 	}
 	set_variable = { overall_productivity = 975 }
 
-	recruit_character = FIN_jarmo_lindberg
-	recruit_character = FIN_juha_rannikko
-	recruit_character = FIN_seppo_toivonen
+	recruit_character = FIN_janne_jaakkola
+	recruit_character = FIN_pasi_valimaki
+	recruit_character = FIN_tuomas_tiilikainen
+	recruit_character = FIN_juha_pekka_keranen
 	recruit_character = FIN_kim_jaameri2000
-	recruit_character = FIN_timo_kivinen
 	recruit_character = FIN_eero_pyotsia
 }
 ##############################

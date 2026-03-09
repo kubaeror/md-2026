@@ -1933,42 +1933,36 @@ capital = 81
 #Scientists
 	recruit_character = ITA_simone
 #Capi di Stato Maggiore della Difesa
+	recruit_character = ITA_luciano_portolano
 	recruit_character = ITA_mario_arpino
 	recruit_character = ITA_guido_venturoni
 	recruit_character = ITA_rolando_mosca_moschini
-	recruit_character = ITA_giampaolo_di_paola
-	recruit_character = ITA_vincenzo_camporini
-	recruit_character = ITA_claudio_graziano
 	recruit_character = ITA_stefano_tortora
 
 #Capi di stato maggiore esercito
+	recruit_character = ITA_carmine_masiello
 	recruit_character = ITA_francesco_cervoni
 	recruit_character = ITA_gianfranco_ottogalli
 	recruit_character = ITA_giulio_fraticelli
 	recruit_character = ITA_filiberto_cecchi
-	recruit_character = ITA_danilo_errico
 	recruit_character = ITA_giuseppe_valotto
 
 #Capi di Stato Maggiore Marina
-	recruit_character = ITA_umberto_guarnieri
+	recruit_character = ITA_enrico_credendino
 	recruit_character = ITA_marcello_de_donno
 	recruit_character = ITA_sergio_biraghi
-	recruit_character = ITA_paolo_la_rosa
 	recruit_character = ITA_angelo_mariani
 
 #Capi di Stato Maggiore aeronautica
+	recruit_character = ITA_luca_goretti
 	recruit_character = ITA_andrea_fornasiero
 	recruit_character = ITA_sandro_ferracuti
 	recruit_character = ITA_leonardo_tricario
-	recruit_character = ITA_daniele_tei
-	recruit_character = ITA_stefano_angioni
 	recruit_character = ITA_enzo_vecciarelli
 
 #Ammiragli
-	recruit_character = ITA_rinaldo_veri
 	recruit_character = ITA_flavio_biaggi
 	recruit_character = ITA_giuseppe_abbamonte
-	recruit_character = ITA_donato_marzano
 
 #Comandanti
 	recruit_character = ITA_giovanni_ridinò
