@@ -1,4 +1,4 @@
-characters = {
+﻿characters = {
 	TUR_hulusi_akar = {
 		name = "Hulusi Akar"
 		portraits = {
@@ -444,4 +444,72 @@ characters = {
 		}
 	}
 
+
+	TUR_metin_gurak = {
+		name = "Metin Gürak"
+		portraits = {
+			army = { large = "gfx/leaders/TUR/Metin_Gurak.dds" }
+		}
+		field_marshal = {
+			traits = { logistics_wizard }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 4
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = metin_gurak
+			ledger = army
+			allowed = { original_tag = TUR }
+			traits = { army_chief_reform_2 }
+			cost = 150
+		}
+	}
+
+	TUR_selcuk_bayraktaroglu = {
+		name = "Selçuk Bayraktaroğlu"
+		portraits = {
+			army = { large = "gfx/leaders/TUR/Selcuk_Bayraktaroglu.dds" }
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+
+	TUR_ziya_cemal_kadioglu = {
+		name = "Ziya Cemal Kadıoğlu"
+		portraits = {
+			army = { large = "gfx/leaders/TUR/Ziya_Cemal_Kadioglu.dds" }
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = ziya_cemal_kadioglu
+			ledger = air
+			allowed = { original_tag = TUR }
+			traits = { air_chief_reform_2 }
+			cost = 150
+		}
+	}
+
+	TUR_atilla_gulan = {
+		name = "Atilla Gülan"
+		portraits = {
+			army = { large = "gfx/leaders/TUR/Atilla_Gulan.dds" }
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
 }

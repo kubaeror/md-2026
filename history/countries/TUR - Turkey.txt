@@ -756,17 +756,17 @@ capital = 159
 
 	recruit_character = TUR_bulent_ecevit
 
-	recruit_character = TUR_hulusi_akar
+	recruit_character = TUR_metin_gurak
+	recruit_character = TUR_selcuk_bayraktaroglu
+	recruit_character = TUR_ziya_cemal_kadioglu
+	recruit_character = TUR_atilla_gulan
 	recruit_character = TUR_zeki_colak
 	recruit_character = TUR_abdullah_recep
 	recruit_character = TUR_galip_mendi
 	recruit_character = TUR_izzet_cetingoz
 	recruit_character = TUR_erdal_ozturk
 	recruit_character = TUR_mehmet_faruk_sengun
-	recruit_character = TUR_ali_sivri
 	recruit_character = TUR_yilmaz_uyar
-	recruit_character = TUR_abidin_unal
-	recruit_character = TUR_akin_ozturk
 	recruit_character = TUR_mehmet_sanver
 	recruit_character = TUR_veysel_kosele
 	recruit_character = TUR_hasan_usaklioglu
