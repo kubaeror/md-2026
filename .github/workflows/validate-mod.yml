@@ -1,0 +1,141 @@
+name: Validate Mod
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      md_ref:
+        description: "Millennium Dawn branch/tag"
+        required: false
+        default: "main"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write    # for PR comments
+
+    steps:
+      - name: Checkout submod
+        uses: actions/checkout@v4
+        with:
+          path: submod
+
+      - name: Checkout Millennium Dawn
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.MD_REPO }}
+          ref: ${{ inputs.md_ref || vars.MD_REF || 'main' }}
+          path: millennium_dawn
+          token: ${{ secrets.MD_ACCESS_TOKEN }}
+        # If MD is private and token is missing, the step will fail gracefully
+        continue-on-error: true
+
+      - name: Cache MD index
+        uses: actions/cache@v4
+        with:
+          path: submod/.validator_cache/
+          key: md-index-${{ hashFiles('millennium_dawn/**/*.txt') }}
+          restore-keys: |
+            md-index-
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install validator dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r submod/requirements.txt
+
+      - name: Run validation (JSON + annotations)
+        id: validate
+        working-directory: submod
+        env:
+          MD_PATH: ${{ github.workspace }}/millennium_dawn
+        run: |
+          python -m hoi4_mod_validator.main \
+            --config validator.yml \
+            --format json \
+            --output validation-report.json \
+            --summary-output validation-summary.md \
+            --annotations \
+            --verbose
+        # Allow failure so we can still upload artifacts and post comments
+        continue-on-error: true
+
+      - name: Write step summary
+        if: always()
+        working-directory: submod
+        run: |
+          if [ -f validation-summary.md ]; then
+            cat validation-summary.md >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Generate HTML report
+        if: always()
+        working-directory: submod
+        env:
+          MD_PATH: ${{ github.workspace }}/millennium_dawn
+        run: |
+          python -m hoi4_mod_validator.main \
+            --config validator.yml \
+            --format html \
+            --output validation-report.html
+        continue-on-error: true
+
+      - name: Upload validation artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: validation-report-${{ github.run_number }}
+          path: |
+            submod/validation-report.json
+            submod/validation-report.html
+            submod/validation-summary.md
+          retention-days: 30
+
+      - name: Post PR comment
+        if: github.event_name == 'pull_request' && always()
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          path: submod/validation-summary.md
+          header: hoi4-mod-validator
+        continue-on-error: true
+
+      - name: Fail on errors
+        if: always()
+        working-directory: submod
+        run: |
+          python -c "
+          import json, sys, os
+
+          report_path = 'validation-report.json'
+          if not os.path.exists(report_path):
+              print('::error::validation-report.json not found — validator may have crashed')
+              sys.exit(1)
+
+          with open(report_path) as f:
+              report = json.load(f)
+
+          summary = report.get('summary', {})
+          errors   = summary.get('error_count', 0)
+          warnings = summary.get('warning_count', 0)
+          files    = summary.get('files_scanned', 0)
+
+          print(f'Files scanned: {files}')
+          print(f'Errors:   {errors}')
+          print(f'Warnings: {warnings}')
+
+          if errors > 0:
+              print(f'::error::Validation FAILED with {errors} error(s). See validation-report artifact for details.')
+              sys.exit(1)
+          else:
+              print(f'Validation PASSED. Warnings: {warnings}')
+          "

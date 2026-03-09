@@ -1,0 +1,37 @@
+add_namespace = submod_test
+
+country_event = {
+	id = submod_test.1
+	title = submod_test.1.t
+	desc = submod_test.1.d
+	picture = GFX_report_event_generic
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = SOV
+		has_idea = md_test_idea
+	}
+
+	option = {
+		name = submod_test.1.o1
+		add_political_power = 75
+		add_stability = 0.03
+		add_opinion_modifier = { target = CHI modifier = improve_relation }
+		country_event = { id = submod_test.2 days = 7 }
+	}
+}
+
+country_event = {
+	id = submod_test.2
+	title = submod_test.2.t
+	desc = submod_test.2.d
+	picture = GFX_report_event_generic
+
+	is_triggered_only = yes
+
+	option = {
+		name = submod_test.2.o1
+		add_stability = 0.05
+	}
+}

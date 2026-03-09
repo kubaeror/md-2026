@@ -1,0 +1,21 @@
+add_namespace = md_test
+
+country_event = {
+	id = md_test.1
+	title = md_test.1.t
+	desc = md_test.1.d
+	picture = GFX_report_event_md_generic
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_government = democratic
+	}
+
+	option = {
+		name = md_test.1.o1
+		add_political_power = 100
+		add_stability = 0.05
+	}
+}

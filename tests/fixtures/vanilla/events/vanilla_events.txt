@@ -1,0 +1,15 @@
+add_namespace = test_vanilla
+
+country_event = {
+	id = test_vanilla.1
+	title = test_vanilla.1.t
+	desc = test_vanilla.1.d
+	picture = GFX_report_event_generic
+
+	is_triggered_only = yes
+
+	option = {
+		name = test_vanilla.1.o1
+		add_political_power = 50
+	}
+}

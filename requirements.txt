@@ -1,0 +1,12 @@
+# HoI4 Mod Validator — Python dependencies
+#
+# Core validator has NO third-party dependencies beyond the Python stdlib.
+# The only external dependency is PyYAML for reading validator.yml config,
+# and pytest for running the test suite.
+
+# Configuration parsing
+PyYAML>=6.0
+
+# Testing (dev/CI only)
+pytest>=7.4
+pytest-cov>=4.1
