@@ -11,15 +11,15 @@ md2026_setup_world_borders_and_wars = {
             
             # Transfer control of occupied regions to Russia
             # Crimea (already owned by SOV in base MD usually, but just in case)
-            259 = { set_controller = SOV } # Crimea
+            14 = { set_state_controller = SOV } # Crimea
             
             # Donbas (Luhansk & Donetsk)
-            260 = { set_controller = SOV } # Luhansk
-            261 = { set_controller = SOV } # Donetsk
+            260 = { set_state_controller = SOV } # Luhansk
+            261 = { set_state_controller = SOV } # Donetsk
             
             # Southern Ukraine (Zaporizhzhia & Kherson - partial control)
-            262 = { set_controller = SOV } # Zaporizhzhia
-            263 = { set_controller = SOV } # Kherson
+            262 = { set_state_controller = SOV } # Zaporizhzhia
+            263 = { set_state_controller = SOV } # Kherson
             
             # Add core claims for Russia based on 2022 annexation
             260 = { add_core_of = PREV }
@@ -35,7 +35,7 @@ md2026_setup_world_borders_and_wars = {
         ISR = {
             declare_war_on = { target = PAL type = annex_everything }
             # Israel controls most of Gaza by 2026
-            310 = { set_controller = ISR } # Gaza Strip
+            310 = { set_state_controller = ISR } # Gaza Strip
         }
     }
 
@@ -57,8 +57,8 @@ md2026_setup_world_borders_and_wars = {
             # Strengthen ties with Iran and North Korea
             add_opinion_modifier = { target = PER modifier = military_cooperation }
             add_opinion_modifier = { target = NKO modifier = military_cooperation }
-            create_guarantee = NKO
-            create_guarantee = SYR
+            guarantee_country = { target = NKO }
+            guarantee_country = { target = SYR }
         }
         NKO = {
             add_opinion_modifier = { target = SOV modifier = military_cooperation }

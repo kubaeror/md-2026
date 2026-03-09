@@ -3096,8 +3096,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus IND_curb_fpi"
 			custom_effect_tooltip = IND_sal_4
 			hidden_effect = { swap_ideas = {
-				remove_ideas = IND_growing_radicalization_3
-				add_ideas = IND_growing_radicalization_4
+				remove_idea = IND_growing_radicalization_3
+				add_idea = IND_growing_radicalization_4
 				}
 			}
 		}

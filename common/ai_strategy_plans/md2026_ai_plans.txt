@@ -1155,13 +1155,13 @@ md2026_pak_historical = {
 		md2026_pak_nuclear_program
 		md2026_pak_military_modernization
 	}
-}
-
+	
 	weight = {
 		factor = 1.0
 		modifier = {
 			factor = 1.0
 		}
+	}
 }
 
 md2026_pak_china_path = {
@@ -1186,13 +1186,13 @@ md2026_pak_china_path = {
 		md2026_pak_nuclear_program
 		md2026_pak_military_modernization
 	}
-}
 
 	weight = {
 		factor = 0.5
 		modifier = {
 			factor = 0.5
 		}
+	}
 }
 
 # ============================================================

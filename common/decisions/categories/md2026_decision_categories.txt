@@ -1,8 +1,6 @@
 ### Millennium Dawn 2026 - Decision Categories ###
 
-decision_categories = {
-
-	md2026_sanctions_category = {
+md2026_sanctions_category = {
 		icon = generic_economy
 		picture = GFX_decision_cat_generic_economy
 		priority = 90
@@ -177,4 +175,4 @@ decision_categories = {
 			date > 2025.12.31
 		}
 	}
-}
+

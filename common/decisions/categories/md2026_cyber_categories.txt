@@ -1,5 +1,4 @@
-decision_categories = {
-	md2026_cyber_warfare_category = {
+md2026_cyber_warfare_category = {
 		icon = generic_technology
 		picture = GFX_decision_cat_generic_technology
 		
@@ -20,4 +19,4 @@ decision_categories = {
 			always = yes
 		}
 	}
-}
+

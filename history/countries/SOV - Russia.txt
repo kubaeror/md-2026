@@ -6206,7 +6206,7 @@ capital = 652
 
 	# SOV_exercises_belarus_start adds 65d military exercises idea on SOV and BLR
 	remove_ideas = SOV_military_exercises_allied_resolve_idea
-	BLR = { remove_idea = SOV_military_exercises_allied_resolve_idea }
+	BLR = { remove_ideas = SOV_military_exercises_allied_resolve_idea }
 
 	# SOV_information_war adds 365d SOV_idea_information to ALL NATO members
 	every_country = {

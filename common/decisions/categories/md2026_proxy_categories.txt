@@ -1,5 +1,4 @@
-decision_categories = {
-	md2026_proxy_warfare_category = {
+md2026_proxy_warfare_category = {
 		icon = generic_operations
 		picture = GFX_decision_cat_generic_foreign_policy
 		
@@ -25,4 +24,4 @@ decision_categories = {
 			}
 		}
 	}
-}
+

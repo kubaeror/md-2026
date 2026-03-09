@@ -69,7 +69,7 @@ md2026_military_modernization_category = {
 			random_list = {
 				50 = {
 					# Success
-					add_tech_bonus = { name = computing_bonus bonus = 0.5 uses = 1 category = electronics }
+					add_tech_bonus = { name = computing_bonus bonus = 0.5 uses = 1 }
 					country_event = { id = md2026_cyber.4 }
 				}
 				50 = {
