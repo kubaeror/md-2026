@@ -4,6 +4,25 @@ All notable changes to the Millennium Dawn 2026 Rework submod.
 
 ---
 
+## v1.1.0 — 2026 Continuity Update (March 2026)
+
+### Demographics & Economy
+- **Global Population Rework:** Updated `manpower` in all 1213 states to reflect global population growth from 2000 to 2026 (approx. +30% increase).
+- **Economic Calibration:** Fine-tuned starting variables (GDP, debt, tax rates) for major powers to match Jan 2026 estimates.
+
+### Characters & GFX
+- **Military Command Overhaul:** Purged deceased or long-retired generals from all Tier A and major Tier B countries (USA, SOV, CHI, GER, ENG, FRA, JAP, UKR, TUR, RAJ, PER, POL, FIN, ISR, ITA, SPR, SWE).
+- **Contemporary Commanders:** Added active 2024-2026 military leadership, including:
+  - **USA:** Charles Q. Brown Jr., Christopher Cavoli, Lisa Franchetti, Randy George.
+  - **SOV:** Mikhail Teplinsky, Viktor Afzalov, Aleksandr Moiseyev, Alexander Dvornikov.
+  - **UKR:** Oleksandr Syrskyi, Kyrylo Budanow, Valerii Zaluzhnyi (advisor), Mykola Oleshchuk.
+  - **POL:** Wiesław Kukuła, Maciej Klisz, Sławomir Drumowicz.
+  - **And dozens more** for GER, ENG, FRA, JAP, TUR, RAJ, PER, FIN, ISR, ITA, SPR, SWE.
+- **Portraits (GFX):** Added 61+ new high-quality `.dds` portraits for previously missing leaders and generals, automatically sourced and formatted from contemporary records.
+- **Political Cabinet Refresh:** Updated party leaders and political advisors for major European powers (GER, FRA, ENG).
+
+---
+
 ## v1.0.0 — Initial Release
 
 ### Infrastructure (FAZA 0)

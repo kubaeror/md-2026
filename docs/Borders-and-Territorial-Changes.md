@@ -89,6 +89,16 @@ The war is set up via `declare_war_on` in the startup scripted effects, with app
 
 ---
 
+## Demographics & Population
+
+As of the v1.1.0 update, the submod includes a **Global Population Rework**. 
+
+The base Millennium Dawn mod uses year 2000 population data for its states. To reflect the 26 years of global growth leading up to our start date, we have applied a uniform **+30% increase** to the `manpower` variable in all **1213 states** globally (adjusting from ~6.1 billion to ~8.0 billion global population).
+
+*   **Exceptions:** Conflict zones with significant displacement or localized data (e.g., specific Ukrainian oblasts) have been manually adjusted to reflect more accurate 2026 estimates rather than a flat multiplier.
+
+---
+
 ## State History Implementation
 
 State changes are implemented in `history/states/ID-Name.txt` files. Date blocks go **inside** the `history = { }` block:

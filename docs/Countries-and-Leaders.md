@@ -18,6 +18,27 @@ Millennium Dawn uses a custom ideology system mapped onto HoI4's five base ideol
 
 ---
 
+## Military Command & Advisors
+
+In the v1.1.0 update, we performed a comprehensive overhaul of military leadership for all major and regional powers. 
+
+### Leadership Purge
+We identified and removed over 150 characters who are either deceased, retired from active service, or no longer hold relevant positions as of January 2026. This ensures the general roster is not cluttered with legacy characters from the year 2000 start date.
+
+### Contemporary Rosters (2024-2026)
+Added over 80 new historical generals, admirals, and air marshals with accurate traits and contemporary portraits. Key additions include:
+
+*   **NATO Command:** Christopher Cavoli (SACEUR), Tony Radakin (UK), Thierry Burkhard (FRA), Carsten Breuer (GER), Wiesław Kukuła (POL).
+*   **US Joint Chiefs:** Charles Q. Brown Jr. (Chairman), Randy George (Army), Lisa Franchetti (Navy).
+*   **Russian High Command:** Mikhail Teplinsky (VDW), Viktor Afzalov (VKS), Aleksandr Moiseyev (Navy).
+*   **Ukrainian Leadership:** Oleksandr Syrskyi (Commander-in-Chief), Kyrylo Budanov (HUR), Valerii Zaluzhnyi (Advisor).
+*   **Indo-Pacific:** Zhang Youxia (CHI), Shigeru Ishiba (JAP - PM), Anil Chauhan (RAJ).
+
+### Political Leaders
+Updated starting political setups for 2026, including coalition governments (e.g., Poland's Tusk cabinet, Germany's 2025/26 election candidates).
+
+---
+
 ## Tier A — Major Powers
 
 Full update with focus trees, national spirits, events, and detailed OOB. All 12 countries have shared focus tree branches.
