@@ -1022,19 +1022,12 @@
 		}
 	}
 
-	recruit_character = CAN_mike_jeffery
-	recruit_character = CAN_rick_hillier
-	recruit_character = CAN_marc_caron
-	recruit_character = CAN_andrew_leslie
+	recruit_character = CAN_jennie_carignan
+	recruit_character = CAN_michael_wright
+	recruit_character = CAN_angus_topshee
+	recruit_character = CAN_eric_kenny
 	recruit_character = CAN_lloyd_campbell
-	recruit_character = CAN_ken_pennie
 	recruit_character = CAN_angus_watt
-	recruit_character = CAN_greg_maddison
-	recruit_character = CAN_ronald_buck
-	recruit_character = CAN_bruce_maclean
-	recruit_character = CAN_maurice_baril
-	recruit_character = CAN_ray_henault
-	recruit_character = CAN_walter_natynczyk
 	recruit_character = CAN_alain_guimond
 	recruit_character = CAN_dean_milner
 	recruit_character = CAN_bill_fletcher
