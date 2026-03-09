@@ -700,16 +700,16 @@ capital = 114
 	set_variable = { term_limit = 2 }
 	set_variable = { current_term = 1 }
 
+	recruit_character = POL_wieslaw_kukula
+	recruit_character = POL_maciej_klisz
+	recruit_character = POL_slawomir_drumowicz
+	recruit_character = POL_tomasz_piotrowski
+	recruit_character = POL_krzysztof_radomski
+	recruit_character = POL_dariusz_ryczkowski
+	recruit_character = POL_artur_kepczynski
 	recruit_character = POL_leszek_surawski
 	recruit_character = POL_stanislaw_kaczynski
 	recruit_character = POL_szymon_lepiarz
-	recruit_character = POL_tomasz_mathea
-	recruit_character = POL_lech_majewski
-	recruit_character = POL_bronsilaw_kwiatkowski
-	recruit_character = POL_franczisek_gagor
-	recruit_character = POL_roman_polko
-	recruit_character = POL_janusz_adamczak
-	recruit_character = POL_edward_pietrzyk
 }
 
 ##############################
