@@ -1,0 +1,35 @@
+﻿state = {
+	id = 479
+	name = "STATE_479"
+	manpower = 398180
+	state_category = state_01
+
+	history = {
+		owner = RAJ
+		victory_points = { 12251 1 } #Port Blair
+		victory_points = { 10321 1 } #Car Nicobar
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 6
+			12251 = {
+				naval_base = 8
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+			10321 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = RAJ
+	}
+
+	provinces = {
+		12251 10321 14179
+	}
+}

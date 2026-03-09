@@ -1,0 +1,26 @@
+﻿state = {
+	id = 1144
+	name = "STATE_1144"
+
+	history = {
+		owner = PER
+		victory_points = {
+			14664 9
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			10922 = {
+				nuclear_facility = 1
+			}
+		}
+		add_core_of = PER
+	}
+
+	provinces = {
+		10922 14664
+	}
+	manpower = 1375413
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

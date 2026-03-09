@@ -1,0 +1,31 @@
+﻿state = {
+	id = 223
+	name = "STATE_223"
+
+	history = {
+		owner = SUD
+		victory_points = {
+			4133 5
+		}
+		victory_points = {
+			11056 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }		
+		add_core_of = SUD
+		add_claim_by = SSU
+		
+	}
+
+	provinces = {
+		2016 4133 7925 8084 10827 11056
+	}
+	manpower = 2829283
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

@@ -1,0 +1,25 @@
+﻿state = {
+	id = 937
+	name = "STATE_937"
+
+	history = {
+		owner = SML
+		victory_points = {
+			10777 2
+		}
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = SML
+		add_core_of = SOM
+		add_core_of = SNA
+		
+	}
+
+	provinces = {
+		10777 13851
+	}
+	manpower = 585000
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

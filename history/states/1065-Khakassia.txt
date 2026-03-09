@@ -1,0 +1,32 @@
+﻿state = {
+	id = 1065
+	name = "STATE_1065"
+	manpower = 660570
+	state_category = state_01
+
+	resources = {
+		aluminium = 10
+	}
+
+	history = {
+		owner = SOV
+		victory_points = { 10649 3 } #Abakan
+		victory_points = { 10712 1 } #Sharypovo
+		victory_points = { 4711 1 } #Sayanogorsk
+		victory_points = { 14928 1 } #Abaza
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			air_base = 4
+		}
+		add_core_of = KHS
+		add_core_of = SOV
+		set_variable = { hydroelectric_energy_production_var = 3.719 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		1702 1816 4711 10580 10649 10712 14928
+	}
+}

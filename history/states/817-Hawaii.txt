@@ -1,0 +1,45 @@
+﻿state = {
+	id = 817
+	name = "STATE_817"
+	manpower = 1574998
+	state_category = state_02
+
+	history = {
+		owner = USA
+		add_core_of = USA
+		add_core_of = HWI
+		victory_points = { 4180 10 } #Honolulu
+		victory_points = { 7195 2 } #Kahului
+		victory_points = { 12021 2 } #Hilo
+		victory_points = { 10048 2 } #Kailua
+		victory_points = { 7112 2 } #Kapaa
+
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			dockyard = 2
+			air_base = 10
+			offices = 3
+			anti_air_building = 1
+			radar_station = 3
+			4180 = {
+				naval_base = 10
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.445 }
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { geothermal_energy_production_var = 0.342 }
+		add_dynamic_modifier = { modifier = geothermal_infrastructure_in_state }
+	}
+
+	provinces = {
+		4180 7112 7195 10048 12021
+	}
+}

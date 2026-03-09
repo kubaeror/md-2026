@@ -1,0 +1,40 @@
+﻿state = {
+	id = 400
+	name = "STATE_400"
+	resources = {
+		oil = 30
+		steel = 2.000
+		aluminium = 5
+	}
+
+	history = {
+		owner = PER
+		victory_points = {
+			14682 12
+		}
+		victory_points = {
+			3865 1
+		}
+		victory_points = {
+			14270 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			air_base = 3
+			offices = 1
+			nuclear_reactor = 1
+			anti_air_building = 2
+		}
+		add_core_of = PER
+		
+
+	}
+
+	provinces = {
+		421 555 649 3865 4928 4966 5089 6485 6604 8117 10881 12832 14266 14269 14270 14451 14670 14682
+	}
+	manpower = 5188480
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

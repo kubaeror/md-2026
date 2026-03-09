@@ -1,0 +1,50 @@
+﻿state = {
+	id = 758
+	name = "STATE_758"
+
+	resources = {
+		chromium = 16
+	}
+
+	history = {
+		owner = CAN
+		victory_points = {
+			7813 3
+		}
+		victory_points = {
+			3691 1
+		}
+		victory_points = {
+			10721 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			air_base = 1
+			7813 = {
+				naval_base = 2
+
+			}
+			10721 = {
+				naval_base = 1
+
+			}
+			1712 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		add_core_of = CAN
+		
+	}
+
+	provinces = {
+		1712 2947 3691 7813 8962 10721 13188 13190 13191 
+	}
+	manpower = 35695
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

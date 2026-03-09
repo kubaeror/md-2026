@@ -1,0 +1,30 @@
+﻿state = {
+	id = 348
+	name = "STATE_348"
+
+	history = {
+		owner = GAH
+		victory_points = {
+			8039 5
+		}
+		victory_points = {
+			8096 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+
+		}
+		set_variable = { hydroelectric_energy_production_var = 0.189 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = GAH
+	}
+
+	provinces = {
+		8039 8096 9632 9643 9672
+	}
+	manpower = 4235868
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

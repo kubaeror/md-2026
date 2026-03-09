@@ -1,0 +1,52 @@
+﻿
+state = {
+	id = 834
+	name = "STATE_834"
+
+	resources = {
+		steel = 1
+	}
+
+	history = {
+		owner = MEX
+		victory_points = {
+			2008 5
+		}
+		victory_points = {
+			4956 5
+		}
+		victory_points = {
+			10172 5
+		}
+		victory_points = {
+			2011 3
+		}
+		victory_points = {
+			7913 3
+		}
+		victory_points = {
+			12804 3
+		}
+		victory_points = {
+			2083 3
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 5
+			offices = 2
+			agriculture_district = 1
+		}
+		add_core_of = MEX
+		add_core_of = TAM
+		set_variable = { geothermal_energy_production_var = 0.600 }
+		add_dynamic_modifier = { modifier = geothermal_infrastructure_in_state }
+	}
+
+	provinces = {
+		1952 2008 2011 2083 4956 7913 10172 10738 12804 11798 12066 57
+	}
+	manpower = 17891963
+	buildings_max_level_factor = 1.000
+	state_category = state_10
+}

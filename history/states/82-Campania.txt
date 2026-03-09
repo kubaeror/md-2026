@@ -1,0 +1,40 @@
+﻿state = {
+	id = 82
+	name = "STATE_82"
+
+	history = {
+		owner = ITA
+		victory_points = {
+			819 7
+		}
+		victory_points = {
+			955 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			arms_factory = 1
+			industrial_complex = 3
+			offices = 1
+			dockyard = 1
+			air_base = 3
+			synthetic_refinery = 1 #aggregate of all italian renewable power in 2000
+			agriculture_district = 2
+			819 = {
+				naval_base = 6
+				nuclear_facility = 1
+			}
+		}
+		set_variable = { hydroelectric_energy_production_var = 1.411 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = ITA
+	}
+
+	provinces = {
+		819 851 955 9826 11803
+	}
+	manpower = 6934969
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

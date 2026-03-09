@@ -1,0 +1,31 @@
+﻿state = {
+	id = 464
+	name = "STATE_464"
+	manpower = 19891757
+	state_category = state_11
+
+	resources = {
+		rubber = 24
+	}
+
+	history = {
+		owner = RAJ
+		victory_points = { 7363 5 } #Coimbatore
+		victory_points = { 8067 5 } #Salem
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			arms_factory = 1
+			synthetic_refinery = 1
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }		
+		add_core_of = RAJ
+		
+	}
+
+	provinces = {
+		7363 12247 10246 8067 1268 10808 4420
+	}
+}

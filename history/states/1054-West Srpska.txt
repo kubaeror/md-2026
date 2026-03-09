@@ -1,0 +1,29 @@
+﻿
+state = {
+	id = 1054
+	name = "STATE_1054"
+
+	history = {
+		owner = BOS
+		add_core_of = BOS
+		add_claim_by = SER
+		add_core_of = RSK
+
+		victory_points = { 9588 1 }
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+		}
+		set_variable = { hydroelectric_energy_production_var = 0.309 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+	   6619 6983 9588 9591 11572
+	}
+	manpower = 1288656
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

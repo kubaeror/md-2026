@@ -1,0 +1,37 @@
+﻿state = {
+	id = 329
+	name = "STATE_329"
+
+	history = {
+		owner = NGR
+		victory_points = {
+			14559 1
+		}
+		victory_points = {
+			11324 1
+		}
+		victory_points = {
+			10758 5
+		}
+		victory_points = {
+			8028 4
+		}
+		victory_points = {
+			11286 2
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }
+		add_core_of = NGR
+		add_core_of = TUA
+		set_variable = { hydroelectric_energy_production_var = 0.308 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		4913 8028 10758 10805 10917 11286 11308 11314 11323 11324 13282 14559 14768 14769 14770 14771
+	}
+	manpower = 6900420
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

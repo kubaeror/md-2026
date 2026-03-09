@@ -1,0 +1,27 @@
+﻿state = {
+	id = 1028
+	name = "STATE_1028"
+	manpower = 4476972
+
+	state_category = state_04
+
+	history = {
+		owner = BRA
+
+		victory_points = { 2227 5 } #João Pessoa
+		victory_points = { 7561 1 } #Patos
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			offices = 2
+			industrial_complex = 4
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }		
+		add_core_of = BRA
+		
+	}
+	provinces = {
+		1446 2227 7561
+ 	}
+}

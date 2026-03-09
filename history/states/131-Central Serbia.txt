@@ -1,0 +1,41 @@
+﻿
+state = {
+	id = 131
+	name = "STATE_131"
+	resources = {
+		oil = 15
+		aluminium = 3.000
+	}
+
+	history = {
+		owner = SER
+		victory_points = {
+			11586 9
+		}
+		victory_points = {
+			414 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			arms_factory = 2
+			offices = 1
+			industrial_complex = 2
+			air_base = 5
+			11586 = {
+				land_facility = 1
+			}
+		}
+		add_core_of = SER
+		set_variable = { hydroelectric_energy_production_var = 0.7736 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		414 937 3609 3939 3956 3984 6970 6998 9599 11586
+	}
+	manpower = 4782950
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

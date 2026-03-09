@@ -1,0 +1,39 @@
+﻿state = {
+	id = 406
+	name = "STATE_406"
+	resources = {
+		oil = 28
+	}
+
+	history = {
+		owner = PER
+		victory_points = {
+			15483 3
+		}
+		victory_points = {
+			9074 1
+		}
+		victory_points = {
+			1922 1
+		}
+		victory_points = {
+			3908 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			air_base = 4
+			industrial_complex = 3
+		}
+		add_core_of = PER
+		add_core_of = LOR
+		
+	}
+
+	provinces = {
+		1922 3908 5050 9074 14735 14736 14737 14738 15480 15483 16154
+	}
+	manpower = 3687165
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

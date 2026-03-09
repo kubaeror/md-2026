@@ -1,0 +1,29 @@
+﻿state = {
+	id = 859
+	name = "STATE_859"
+	manpower = 4682232
+	state_category = state_04
+
+	history = {
+		owner = HAI
+		victory_points = { 1594 3 } #Cap-Haitien
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			1594 = {
+				naval_base = 1
+			}
+
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }		
+		add_core_of = HAI
+		
+	}
+
+	provinces = {
+		  1594
+
+		}
+}

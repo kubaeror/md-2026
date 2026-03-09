@@ -1,0 +1,33 @@
+﻿state = {
+	id = 5
+	name = "STATE_5"
+
+	history = {
+		owner = DEN
+		victory_points = {
+			14542 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			anti_air_building = 1
+			dockyard = 1
+			air_base = 1
+			offices = 1
+			14542 = {
+				naval_base = 3
+			}
+
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }
+		add_core_of = DEN
+	}
+
+	provinces = {
+		14542 14545
+	}
+	manpower = 597842
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

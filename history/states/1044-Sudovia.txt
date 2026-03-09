@@ -1,0 +1,29 @@
+﻿
+state = {
+	id = 1044
+	name = "STATE_1044"
+	resources = {
+		aluminium = 11.000
+	}
+
+	history = {
+		owner = LIT
+		victory_points = {
+			6281 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+		}
+		add_core_of = LIT
+		
+
+	}
+
+	provinces = {
+		6281 6407 11312
+	}
+	manpower = 422983
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

@@ -1,0 +1,26 @@
+﻿state = {
+	id = 330
+	name = "STATE_330"
+
+	history = {
+		owner = NGR
+		victory_points = {
+			14316 1
+		}
+		victory_points = {
+			11303 1
+		}
+		buildings = {
+			air_base = 1
+		}
+		add_core_of = NGR
+		add_core_of = TUA
+	}
+
+	provinces = {
+		1975 7939 11301 11303 13271 14316 14759 14760 14761 14762 14763 14764 14765 14766 14767 14849
+	}
+	manpower = 5249335
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

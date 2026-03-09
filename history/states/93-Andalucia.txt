@@ -1,0 +1,80 @@
+﻿
+state = {
+	id = 93
+	name = "STATE_93"
+	resources = {
+		tungsten = 5.000
+		steel = 8.000
+		oil = 10
+	}
+
+	history = {
+		owner = SPR
+		victory_points = {
+			7183 5
+		}
+		victory_points = {
+			9979 5
+		}
+		victory_points = {
+			875 2
+		}
+		victory_points = {
+			1176 1
+		}
+		victory_points = {
+			14155 1
+		}
+		victory_points = {
+			12038 1
+		}
+		victory_points = {
+			7068 1
+		}
+		victory_points = {
+			12070 1
+		}
+		victory_points = {
+			279 1
+		}
+		victory_points = {
+			10111 1
+		}
+		victory_points = {
+			747 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			offices = 2
+			arms_factory = 1
+			dockyard = 1
+			industrial_complex = 1
+			air_base = 3
+			279 = {
+				naval_base = 5
+			}
+			9979 = {
+				naval_base = 2
+			}
+			747 = {
+				naval_base = 1
+			}
+		}
+
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }
+		add_core_of = SPR
+		add_core_of = SPA
+		set_variable = { hydroelectric_energy_production_var = 0.272 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		279 747 875 950 1090 1176 1192 3810 4182 6744 7068 7098 7183 9815 9979 10063 10111 11749 11956 12038 12070 14155
+	}
+	manpower = 9399345
+	buildings_max_level_factor = 1.000
+	state_category = state_07
+}

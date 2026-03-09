@@ -1,0 +1,26 @@
+﻿state = {
+	id = 1177
+	name = "STATE_1177"
+
+	history = {
+		owner = MOR
+		victory_points = {
+			10070 5
+		}
+		victory_points = {
+			15484 1
+		}
+		add_core_of = MOR
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+		}
+	}
+
+	provinces = {
+		1079 10070 15484 16153
+	}
+	manpower = 5099923
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

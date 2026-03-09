@@ -1,0 +1,23 @@
+﻿state = {
+	id = 1143
+	name = "STATE_1143"
+
+	history = {
+		owner = IRQ
+		victory_points = {
+			3221 5
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+		}
+		add_core_of = IRQ
+	}
+
+	provinces = {
+		3221 
+	}
+	manpower = 1026499
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

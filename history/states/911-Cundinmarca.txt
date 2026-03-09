@@ -1,0 +1,31 @@
+﻿state = {
+	id = 911
+	name = "STATE_911"
+
+
+	history = {
+		owner = COL
+		victory_points = {
+			10747 20
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 4
+			offices = 2
+			arms_factory = 5
+			air_base = 6
+		}
+		set_variable = { hydroelectric_energy_production_var = 0.694 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = COL
+	}
+
+	provinces = {
+		10747 10983 10997
+	}
+	manpower = 11174423
+	buildings_max_level_factor = 1.000
+	state_category = state_08
+}

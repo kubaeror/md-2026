@@ -1,0 +1,36 @@
+﻿state = {
+	id = 27
+	name = "STATE_27"
+	resources = {
+		steel = 3.000
+	}
+
+	history = {
+		owner = IRE
+		victory_points = {
+			13939 8
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 1
+			offices = 1
+			air_base = 3
+			13939 = {
+				naval_base = 6
+				land_facility = 1
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }
+		add_core_of = IRE
+		
+	}
+
+	provinces = {
+		285 369 3342 3359 11293 13937 13938 13939
+	}
+	manpower = 2839571
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

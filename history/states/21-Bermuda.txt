@@ -1,0 +1,23 @@
+﻿state = {
+	id = 21
+	name = "STATE_21"
+	manpower = 74259
+	state_category = state_00
+
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 3
+			internet_station = 1
+			air_base = 2
+			13010 = {
+				naval_base = 3
+			}
+		}
+		
+	}
+
+	provinces = {
+		13010
+	}
+}

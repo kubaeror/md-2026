@@ -1,0 +1,36 @@
+﻿state = {
+	id = 979
+	name = "STATE_979"
+
+	history = {
+		owner = PER
+		victory_points = {
+			7604 5
+		}
+		victory_points = {
+			1822 1
+		}
+		victory_points = {
+			14268 1
+		}
+		victory_points = {
+			14314 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			industrial_complex = 1
+		}
+		add_core_of = PER
+		add_core_of = IKR
+		
+
+	}
+
+	provinces = {
+		1822 7604 14268 14314 14729
+	}
+	manpower = 2589834
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

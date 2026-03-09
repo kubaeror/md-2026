@@ -1,0 +1,36 @@
+﻿state = {
+	id = 961
+	name = "STATE_961"
+
+	history = {
+		owner = FRA
+		victory_points = {
+			9898 2
+		}
+		victory_points = {
+			9853 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			arms_factory = 2
+			offices = 2
+			air_base = 2
+			fuel_silo = 1
+			industrial_complex = 1
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }
+		add_core_of = FRA
+		set_variable = { hydroelectric_energy_production_var = 0.600 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		760 6770 6915 6917 6960 9853 9898 11711
+	}
+	manpower = 3349931
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

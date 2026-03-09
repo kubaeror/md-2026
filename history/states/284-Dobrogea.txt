@@ -1,0 +1,37 @@
+﻿state = {
+	id = 284
+	name = "STATE_284"
+	resources = {
+		oil = 7
+	}
+
+	history = {
+		owner = ROM
+		victory_points = {
+			657 2
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			air_base = 2
+			dockyard = 1
+			offices = 1
+			arms_factory = 1
+			industrial_complex = 1
+			nuclear_reactor = 1
+			657 = {
+				naval_base = 6
+				naval_facility = 1
+			}
+		}
+		add_core_of = ROM
+		
+	}
+
+	provinces = {
+		646 657 687 3076 9635 14287
+	}
+	manpower = 1300384
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

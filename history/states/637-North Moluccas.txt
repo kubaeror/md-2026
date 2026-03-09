@@ -1,0 +1,34 @@
+﻿state = {
+	id = 637
+	name = "STATE_637"
+	manpower = 1364810
+	state_category = state_02
+	resources = {
+		rubber = 4
+	}
+
+	history = {
+		owner = IND
+		victory_points = { 7413 5 } #Ternate
+		victory_points = { 1419 1 } #Tobelo
+
+
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+
+			7413 = {
+				naval_base = 2
+
+			}
+
+		}
+		add_core_of = IND
+		
+	}
+
+	provinces = {
+		10342 1437 7413 10141 1419
+
+		}
+}

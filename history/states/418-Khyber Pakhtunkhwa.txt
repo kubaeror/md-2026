@@ -1,0 +1,41 @@
+﻿state = {
+	id = 418
+	name = "STATE_418"
+
+	resources = {
+		oil = 2
+	}
+
+	history = {
+		owner = PAK
+		add_claim_by = AFG
+		add_claim_by = TAL
+		victory_points = {
+			14484 5
+		}
+		victory_points = {
+			6746 1
+		}
+		victory_points = {
+			6856 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			industrial_complex = 1
+			arms_factory = 2
+		}
+
+		add_core_of = PAK
+		set_variable = { hydroelectric_energy_production_var = 1.644 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		4558 4998 6097 6492 6746 6818 6856 12763 14484 14588 14591
+	}
+	manpower = 24199206
+	buildings_max_level_factor = 1.000
+	state_category = state_11
+}

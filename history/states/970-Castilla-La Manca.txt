@@ -1,0 +1,32 @@
+﻿state = {
+	id = 970
+	name = "STATE_970"
+	resources = {
+		steel = 28
+	}
+	history = {
+		owner = SPR
+		victory_points = {
+			3835 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			offices = 1
+			industrial_complex = 1
+			air_base = 6
+			agriculture_district = 2
+		}
+		add_core_of = SPR
+		set_variable = { hydroelectric_energy_production_var = 0.321 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		858 888 896 942 3835 3945 3986 6800 6879 6896 6948 6993 9757 9778 9785 9852 9903 9933 11863 12083 13924 14062 14063
+	}
+	manpower = 2280435
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

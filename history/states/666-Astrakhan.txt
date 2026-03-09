@@ -1,0 +1,32 @@
+﻿state = {
+	id = 666
+	name = "STATE_666"
+	manpower = 1305426
+	state_category = state_02
+
+	resources = {
+		oil = 18
+		tungsten = 3
+	}
+
+	history = {
+		owner = SOV
+		victory_points = {
+			9753 4
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }		
+		add_core_of = SOV
+		
+	}
+
+	provinces = {
+		757 3435 3487 6486 6758 9440 9503 9735 9753 11429 11579
+	}
+}

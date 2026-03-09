@@ -1,0 +1,51 @@
+﻿state = {
+	id = 806
+	name = "STATE_806"
+	manpower = 6669821
+	state_category = state_05
+
+	resources = {
+		tungsten = 6
+		oil = 4
+	}
+
+	history = {
+		owner = USA
+		victory_points = { 15145 13 } #Phoenix
+		victory_points = { 15137 9 } #Tucson
+		victory_points = { 15155 6 } #Flagstaff
+		victory_points = { 15139 8 } #Yuma
+		victory_points = { 15136 5 } #Sierra Vista
+		victory_points = { 15150 5 } #Lake Havasu City
+		victory_points = { 1793 5 } #Prescott
+		victory_points = { 15144 1 } #Globe
+		victory_points = { 15141 1 } #Safford
+		victory_points = { 15153 1 } #Holbrook
+		victory_points = { 10573 1 } #Round Rock
+		victory_points = { 7821 1 } #Paige
+		victory_points = { 15161 1 } #Colorado City
+		victory_points = { 15143 5 } #Casa Grande
+		victory_points = { 853 7 } #Buckeye
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			arms_factory = 3
+			air_base = 5
+			industrial_complex = 2
+			offices = 3
+			nuclear_reactor = 1
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.065 }		
+		add_core_of = USA
+		add_core_of = UDT
+		
+	}
+
+	provinces = {
+		  850 853 1793 3834 4796 6897 7747 7821 7920 8115 10573 10783 11814 12765 15136 15137 15138 15139 
+		  15140 15141 15142 15143 15144 15145 15146 15147 15148 15149 15150 15151 15152 15153 15154 15155 
+		  15156 15157 15158 15159 15160 15161 15162
+	}
+}

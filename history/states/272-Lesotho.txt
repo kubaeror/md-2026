@@ -1,0 +1,27 @@
+﻿state = {
+	id = 272
+	name = "STATE_272"
+	manpower = 2429700
+	state_category = state_03
+
+	resources = {
+		chromium = 32
+	}
+
+	history = {
+		owner = LES
+		victory_points = { 4556 3 } #Maseru
+		
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			air_base = 1
+			industrial_complex = 1
+		}
+		add_core_of = LES
+		
+	}
+	provinces = {
+		4556 475 
+	}
+}

@@ -1,0 +1,27 @@
+﻿state = {
+	id = 983
+	name = "STATE_983"
+
+	history = {
+		owner = BHU
+		add_core_of = BHU
+		victory_points = {
+			7359 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+
+		}
+		
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.2 }
+	}
+
+	provinces = {
+		7359 11756 12860
+	}
+	manpower = 328334
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

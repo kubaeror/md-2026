@@ -1,0 +1,24 @@
+﻿state = {
+	id = 1020
+	name = "STATE_1020"
+	manpower = 306247
+	state_category = state_00
+
+	history = {
+		owner = DJI
+
+		victory_points = { 4985 1 } #Tadjourah
+
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.50 }
+		add_core_of = DJI
+		
+	}
+	provinces = {
+		4985 13790
+ 	}
+}

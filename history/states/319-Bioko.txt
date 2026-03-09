@@ -1,0 +1,33 @@
+﻿state = {
+	id = 319
+	name = "STATE_319"
+	manpower = 191909
+	state_category = state_00
+
+	resources = {
+	oil = 5 #Petroleum
+}
+
+
+	history = {
+		owner = EGU
+		victory_points = { 1903 5 } #Malabo
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			air_base = 2
+			industrial_complex = 1
+			1903 = {
+				naval_base = 2
+			}
+
+		}
+		add_core_of = EGU
+		
+	}
+
+	provinces = {
+		1903
+	}
+}

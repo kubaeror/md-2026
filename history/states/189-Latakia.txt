@@ -1,0 +1,37 @@
+﻿state = {
+	id = 189
+	name = "STATE_189"
+	manpower = 1748301
+	state_category = state_02
+
+	history = {
+		owner = SYR #Gov
+
+		victory_points = { 
+			1088 5
+		}
+		victory_points = { 
+			10087 3
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			air_base = 6
+			10087 = {
+				naval_base = 6
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }		
+		add_core_of = SYR
+		add_core_of = ALA
+		
+	}
+
+	provinces = {
+		1088 10087
+
+		}
+}
+
+

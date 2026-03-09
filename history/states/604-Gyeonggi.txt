@@ -1,0 +1,87 @@
+﻿state = {
+	id = 604
+	name = "STATE_604"
+	resources = {
+		steel = 35
+	}
+
+	history = {
+		owner = KOR
+		victory_points = {
+			7221 53
+		}
+		victory_points = {
+			3308 21
+		}
+		victory_points = {
+			3285 9
+		}
+		victory_points = {
+			1100 8
+		}
+		victory_points = {
+			10036 2
+		}
+		victory_points = {
+			3310 2
+		}
+		victory_points = {
+			7021 1
+		}
+		victory_points = {
+			7125 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 9
+			offices = 7
+			arms_factory = 5
+			dockyard = 1
+			air_base = 10
+			radar_station = 1
+			nuclear_reactor = 1
+			agriculture_district = 2
+			stronghold_network = 1 #South Korean DMZ depots, etc
+			3308 = {
+				naval_base = 8
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+			12011 = {
+				naval_base = 8
+			}
+			3285 = {
+				naval_base = 8
+			}
+			7125 = {
+				bunker = 1
+			}
+			4004 = {
+				bunker = 1
+			}
+			11958 = {
+				bunker = 1
+			}
+			7221 = {
+				# Hyandai heavy
+				land_facility = 1
+				bunker = 2
+			}
+		}
+		add_core_of = NKO
+		add_core_of = KOR
+
+	}
+
+	provinces = {
+		1100 1148 4004 7021 7125 7221 10036 11958 12011 3285 3308 3310
+	}
+	manpower = 31588453
+	buildings_max_level_factor = 1.000
+	state_category = state_13
+}

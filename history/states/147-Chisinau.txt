@@ -1,0 +1,27 @@
+﻿state = {
+	id = 147
+	name = "STATE_147"
+
+	history = {
+		owner = MLV
+		victory_points = {
+			11686 5
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			industrial_complex = 2
+			air_base = 2
+		}
+		add_core_of = MLV
+		add_core_of = ROM
+		
+	}
+
+	provinces = {
+		3707 3724 6743 11686
+	}
+	manpower = 1993434
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

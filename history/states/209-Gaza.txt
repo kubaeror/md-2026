@@ -1,0 +1,30 @@
+﻿state = {
+	id = 209
+	name = "STATE_209"
+
+	history = {
+		owner = HAM
+		add_core_of = PAL
+		add_core_of = HAM
+		add_claim_by = ISR
+		victory_points = {
+			13207 5
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			13207 = {
+				naval_base = 1
+			}
+			industrial_complex = 1
+		}
+		
+	}
+
+	provinces = {
+		13207
+	}
+	manpower = 1469000
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

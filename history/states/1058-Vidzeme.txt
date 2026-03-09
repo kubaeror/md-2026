@@ -1,0 +1,28 @@
+﻿state = {
+	id = 1058
+	name = "STATE_1058"
+
+	history = {
+		owner = LAT
+		victory_points = {
+			3388 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			air_base = 4
+			industrial_complex = 2
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }		
+		add_core_of = LAT
+		
+	}
+
+	provinces = {
+		3388 7482 9240 9317 10323 11302 13932
+	}
+	manpower = 458858
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

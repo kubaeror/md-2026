@@ -1,0 +1,26 @@
+﻿# 4670 6018
+state = {
+	id = 1039
+	name = "STATE_1039"
+
+	history = {
+		owner = PER
+		victory_points = {
+			1636 1
+		}
+		add_core_of = PER
+		add_core_of = IKR
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+		}
+		
+	}
+
+	provinces = {
+		1636 4618 6070
+	}
+	manpower = 878322
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

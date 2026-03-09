@@ -1,0 +1,70 @@
+﻿state = {
+	id = 38
+	name = "STATE_38"
+	manpower = 11160324
+	state_category = state_08
+
+	resources = {
+		steel = 17
+		oil = 24
+	}
+
+	history = {
+		owner = GER
+		victory_points = {
+			3326 5
+		}
+		victory_points = {
+			6377 4
+		}
+		victory_points = {
+			9375 1
+		}
+		victory_points = {
+			14632 1
+		}
+		victory_points = {
+			11388 1
+		}
+		victory_points = {
+			9375 1
+		}
+		victory_points = {
+			11493 1
+		}
+		buildings = {
+			air_base = 3
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 3
+			arms_factory = 2
+			anti_air_building = 1
+			offices = 2
+			dockyard = 1
+			fuel_silo = 5
+			nuclear_reactor = 2
+			agriculture_district = 2
+			241 = {
+				naval_base = 8
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+			6349 = {
+				# Lurrsen
+				naval_facility = 1
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		add_core_of = GER
+
+	}
+
+	provinces = {
+		241 309 526 3234 3271 3326 6263 6349 6377 9238 9264 9281 9375 11264 11360 11388 11493 14632
+	}
+}

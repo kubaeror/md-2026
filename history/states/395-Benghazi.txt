@@ -1,0 +1,33 @@
+﻿state = {
+	id = 395
+	name = "STATE_395"
+
+	history = {
+		owner = LBA
+		victory_points = {
+			11954 6
+		}
+		victory_points = {
+			4151 3
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 4
+			11954 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = LBA
+		add_core_of = CYR
+		
+	}
+
+	provinces = {
+		1062 4063 4120 4151 10049 10123 11954
+	}
+	manpower = 1922758
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

@@ -1,0 +1,30 @@
+﻿state = {
+	id = 344
+	name = "STATE_344"
+
+	history = {
+		owner = BEN
+		victory_points = {
+			10919 10
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			air_base = 1
+			10919 = {
+				naval_base = 2
+
+			}
+			industrial_complex = 1
+		}
+		add_core_of = BEN
+		
+	}
+
+	provinces = {
+		10919 9709
+	}
+	manpower = 5582509
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

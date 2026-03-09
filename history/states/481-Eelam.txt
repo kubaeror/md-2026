@@ -1,0 +1,37 @@
+﻿state = {
+	id = 481
+	name = "STATE_481"
+
+	history = {
+		owner = SRI
+		victory_points = {
+			10201 1
+		}
+		victory_points = {
+			10229 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			arms_factory = 2
+			industrial_complex = 2
+			air_base = 2
+			10201 = {
+				naval_base = 2
+
+			}
+
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }		
+		add_core_of = SRI
+		
+	}
+
+	provinces = {
+		7344 10201 10229 12258 6954
+	}
+	manpower = 4114572
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

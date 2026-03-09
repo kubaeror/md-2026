@@ -1,0 +1,47 @@
+﻿state = {
+	id = 563
+	name = "STATE_563"
+
+	history = {
+		owner = PAK
+		victory_points = {
+			8106 5
+		}
+		victory_points = {
+			4979 1
+		}
+		victory_points = {
+			6197 10
+		}
+		victory_points = {
+			10887 5
+		}
+		victory_points = {
+			9084 5
+		}
+		victory_points = {
+			10066 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 4
+			industrial_complex = 3
+			offices = 1
+			arms_factory = 2
+			agriculture_district = 2
+		}
+		set_variable = { hydroelectric_energy_production_var = 0.056 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = PAK
+		add_claim_by = KHA
+	}
+
+	provinces = {
+		4979 8106 9084 10066 10887 12005 6107 6197
+	}
+	manpower = 37832285
+	buildings_max_level_factor = 1.000
+	state_category = state_14
+}

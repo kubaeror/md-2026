@@ -1,0 +1,44 @@
+﻿state = {
+	id = 176
+	name = "STATE_176"
+	resources = {
+		oil = 35
+	}
+
+	history = {
+		owner = SAU
+		victory_points = {
+			3378 43
+		}
+		victory_points = {
+			14468 5
+		}
+		victory_points = {
+			12727 2
+		}
+		victory_points = {
+			10892 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 1
+			offices = 2
+			arms_factory = 9
+			air_base = 8
+			3378 = {
+				land_facility = 1
+			}
+		}
+		add_core_of = SAU
+		add_core_of = NEJ
+		
+	}
+
+	provinces = {
+		716 3356 3378 3403 3406 5093 6552 8004 8060 9633 9648 10870 10892 10923 12727 12813 12870 13995 14468
+	}
+	manpower = 8643879
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

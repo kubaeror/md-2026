@@ -1,0 +1,34 @@
+﻿state = {
+	id = 179
+	name = "STATE_179"
+
+	resources = {
+		oil = 15
+		aluminium = 38
+	}
+
+	history = {
+		owner = UAE
+		victory_points = {
+			3725 25
+		}
+		victory_points = {
+			10904 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			offices = 2
+			arms_factory = 2
+		}
+		add_core_of = UAE
+		
+	}
+
+	provinces = {
+		10904 3709 3725
+	}
+	manpower = 3137563
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

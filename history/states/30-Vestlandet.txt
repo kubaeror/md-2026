@@ -1,0 +1,46 @@
+﻿state = {
+	id = 30
+	name = "STATE_30"
+	resources = {
+		oil = 29
+		aluminium = 28
+	}
+
+	history = {
+		owner = NOR
+		victory_points = {
+			122 2
+		}
+		victory_points = {
+			6176 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			offices = 1
+			fuel_silo = 1
+			air_base = 2
+			dockyard = 1
+			6176 = {
+				naval_base = 2
+			}
+			122 = {
+				naval_base = 6
+				naval_facility = 1
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }
+		set_variable = { hydroelectric_energy_production_var = 1.784 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = NOR
+	}
+
+	provinces = {
+		53 65 102 122 137 188 199 3090 3114 3188 3192 6145 6176 6204 9047 9127 9216 11100 11101
+	}
+	manpower = 1504553
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

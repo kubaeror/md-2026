@@ -1,0 +1,25 @@
+﻿state = {
+	id = 1062
+	name = "STATE_1062"
+
+	history = {
+		owner = GRE
+		victory_points = {
+			10203 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			offices = 1
+		}
+		add_core_of = GRE
+		
+	}
+
+	provinces = {
+		1106 10203
+	}
+	manpower = 275137
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

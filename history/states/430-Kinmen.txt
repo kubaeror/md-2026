@@ -1,0 +1,31 @@
+﻿state = {
+	id = 430
+	name = "STATE_430"
+
+	history = {
+		owner = TAI
+		victory_points = {
+			13275 3
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			air_base = 2
+			13275 = {
+				naval_base = 3
+
+			}
+
+		}
+		add_core_of = TAI
+		add_core_of = CHI
+		
+	}
+
+	provinces = {
+		13275
+	}
+	manpower = 85551
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

@@ -1,0 +1,46 @@
+﻿state = {
+	id = 973
+	name = "STATE_973"
+	manpower = 1951489
+	state_category = state_03
+
+	resources = {
+		aluminium = 18.000
+	}
+
+	history = {
+		owner = ENG
+		victory_points = {
+			540 2
+		}
+		victory_points = {
+			3463 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			arms_factory = 1
+			industrial_complex = 2
+			offices = 2
+			air_base = 10
+			radar_station = 2
+			540 = {
+				naval_base = 8
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }
+		add_core_of = ENG
+	}
+
+	provinces = {
+		540 3463 6526 11406 13261
+	}
+}

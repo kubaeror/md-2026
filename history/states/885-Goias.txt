@@ -1,0 +1,55 @@
+﻿state = {
+	id = 885
+	name = "STATE_885"
+	resources = {
+		steel = 5
+		aluminium = 1
+		tungsten = 3
+	}
+
+	history = {
+		owner = BRA
+		victory_points = {
+			1616 15
+		}
+		victory_points = {
+			920 5
+		}
+		victory_points = {
+			5208 1
+		}
+		victory_points = {
+			5115 3
+		}
+		victory_points = {
+			12987 1
+		}
+		victory_points = {
+			12959 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 4
+			offices = 4
+			synthetic_refinery = 2
+			air_base = 2
+			arms_factory = 2
+			anti_air_building = 1
+			1616 = {
+				nuclear_facility = 1
+			}
+		}
+		add_core_of = BRA
+		set_variable = { hydroelectric_energy_production_var = 1.504 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		5115 5208 8140 12959 12987 726 755 903 920 1346 1616 3447 3534 3579 14096
+	}
+	manpower = 12616152
+	buildings_max_level_factor = 1.000
+	state_category = state_08
+}

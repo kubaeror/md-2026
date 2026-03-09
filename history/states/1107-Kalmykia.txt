@@ -1,0 +1,26 @@
+﻿state = {
+	id = 1107
+	name = "STATE_1107"
+	manpower = 386167
+	state_category = state_00
+
+	resources = {
+		oil = 5
+		tungsten = 3
+	}
+
+	history = {
+		owner = SOV
+		victory_points = {
+			11724 1
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }		
+		add_core_of = SOV
+		add_core_of = KLM
+	}
+
+	provinces = {
+		481 742 745 759 3439 3726 3779 6760 6765 6791 6794 9442 9594 11566 11724 14600 14601 14602 14603
+	}
+}

@@ -1,0 +1,29 @@
+﻿state = {
+	id = 630
+	name = "STATE_630"
+
+	history = {
+		owner = PUK
+		victory_points = {
+			3302 5
+		}
+		victory_points = {
+			3300 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+		}
+		add_core_of = KUR
+		add_core_of = PUK
+		add_core_of = IRQ
+		
+	}
+
+	provinces = {
+		1336 3300 3302 11340 11365 11384 11443
+	}
+	manpower = 1649521
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

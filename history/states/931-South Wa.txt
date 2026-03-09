@@ -1,0 +1,24 @@
+﻿state = {
+	id = 931
+	name = "STATE_931"
+
+	history = {
+		owner = WAA
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = WAA
+		add_core_of = SHN
+		add_core_of = BRM
+		add_core_of = NHN
+		
+
+	}
+
+	provinces = {
+		13242
+	}
+	manpower = 130000
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

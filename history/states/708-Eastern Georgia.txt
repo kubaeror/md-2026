@@ -1,0 +1,25 @@
+﻿state = {
+	id = 708
+	name = "STATE_708"
+
+	history = {
+		owner = GEO
+		victory_points = {
+			4534 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 2
+		}
+		add_core_of = GEO
+		
+	}
+
+	provinces = {
+		303 1164 3667 4534 6763 7114
+	}
+	manpower = 572224
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

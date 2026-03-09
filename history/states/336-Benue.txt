@@ -1,0 +1,31 @@
+﻿state = {
+	id = 336
+	name = "STATE_336"
+
+	history = {
+		owner = NIG
+		victory_points = {
+			10820 7
+		}
+		victory_points = {
+			4889 4
+		}
+		victory_points = {
+			11230 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+
+		}
+		add_core_of = NIG
+		
+	}
+
+	provinces = {
+		4889 10820 11230 13316 13317 13318 13319 13320
+	}
+	manpower = 13224913
+	buildings_max_level_factor = 1.000
+	state_category = state_09
+}

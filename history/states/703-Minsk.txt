@@ -1,0 +1,42 @@
+﻿state = {
+	id = 703
+	name = "STATE_703"
+
+	history = {
+		owner = BLR
+		victory_points = {
+			11370 14
+		}
+		victory_points = {
+			11313 1
+		}
+		victory_points = {
+			216 1
+		}
+		victory_points = {
+			11453 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 1
+			offices = 1
+			arms_factory = 1
+			air_base = 6
+			11370 = {
+				land_facility = 1
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.20 }		
+		add_core_of = BLR
+		
+	}
+
+	provinces = {
+		216 277 294 360 386 406 3267 3759 6292 9236 9249 11313 11322 11355 11370 11453 14480
+	}
+	manpower = 4893107
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

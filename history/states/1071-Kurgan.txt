@@ -1,0 +1,37 @@
+﻿state = {
+	id = 1071
+	name = "STATE_1071"
+	manpower = 1177644
+	state_category = state_01
+
+	resources = {
+		steel = 20
+	}
+
+	history = {
+		owner = SOV
+		victory_points = { 1292 5 } #Kurgan
+		victory_points = { 4242 3 } #Shadrinsk
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			offices = 1
+			arms_factory = 1
+			air_base = 6
+			1292 = {
+				# KurganMash
+				land_facility = 1
+			}
+		}
+
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }
+		add_core_of = SOV
+		
+	}
+
+	provinces = {
+		1292 1294 1327 1775 4242 10170 10542 14044 14203 14204
+	}
+}

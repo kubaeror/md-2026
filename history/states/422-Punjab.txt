@@ -1,0 +1,40 @@
+﻿state = {
+	id = 422
+	name = "STATE_422"
+
+
+	history = {
+		owner = PAK
+		victory_points = {
+			14589 12
+		}
+		victory_points = {
+			6515 5
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			industrial_complex = 4
+			offices = 1
+			arms_factory = 2
+			air_base = 10
+			anti_air_building = 2
+			radar_station = 1
+			14589 = {
+				land_facility = 1
+			}
+		}
+
+		add_core_of = PAK
+		add_claim_by = KHA
+		
+
+	}
+
+	provinces = {
+		6379 6450 6515 8022 10173 14586 14589
+	}
+	manpower = 24901427
+	buildings_max_level_factor = 1.000
+	state_category = state_12
+}

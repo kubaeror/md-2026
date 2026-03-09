@@ -1,0 +1,31 @@
+﻿state = {
+	id = 120
+	name = "STATE_120"
+
+	resources = {
+
+		steel = 6
+	}
+
+	history = {
+		owner = SLO
+		victory_points = {
+			6573 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		add_core_of = SLO
+		
+	}
+
+	provinces = {
+		541 581 3537 3565 3581 6573 9539 9551 11539 561
+	}
+	manpower = 3813799
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

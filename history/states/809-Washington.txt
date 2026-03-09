@@ -1,0 +1,59 @@
+﻿state = {
+	id = 809
+	name = "STATE_809"
+	manpower = 7662357
+	state_category = state_06
+
+	resources = {
+		steel = 2
+		aluminium = 3
+	}
+
+	history = {
+		owner = USA
+		victory_points = { 7315 15 } #Seattle
+		victory_points = { 1690 9 } #Spokane
+		victory_points = { 10690 7 } #Kennewick
+		victory_points = { 7386 10 } #Olympia
+		victory_points = { 10157 6 } #Bellingham
+		victory_points = { 10155 5 } #Yakima
+		victory_points = { 12214 3 } #Wenatchee
+		victory_points = { 10271 3 } #Longview
+		victory_points = { 15111 3 } #Walla Walla
+		victory_points = { 12673 3 } #Pullman
+		victory_points = { 10327 2 } #Moses Lake
+		victory_points = { 4398 1 } #Naselle
+		victory_points = { 10242 1 } #Forks
+		victory_points = { 4296 1 } #Brinnon
+		victory_points = { 7442 1 } #Eatonville
+
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			arms_factory = 4
+			dockyard = 6
+			air_base = 6
+			industrial_complex = 2
+			offices = 4
+			radar_station = 1
+			nuclear_reactor = 1
+			7315 = {
+				naval_base = 6
+			}
+			7386 = {
+				naval_base = 6
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
+		set_variable = { hydroelectric_energy_production_var = 11.590 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = USA
+	}
+
+	provinces = {
+		1320 1690 4296 4398 4747 7255 7315 7386 7414 7442 10155 10157 10198 10242
+		10271 10327 10687 10690 10693 12155 12214 12673 15111 15112 15113 15114 15115
+	}
+}

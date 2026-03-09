@@ -1,0 +1,27 @@
+﻿state = {
+	id = 1009
+	name = "STATE_1009"
+	manpower = 488732
+	state_category = state_01
+
+	history = {
+		owner = FRA
+		victory_points = { 177 1 } #Fort-de-France
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			air_base = 1
+			177 = {
+				naval_base = 3
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }		
+		add_core_of = FRA
+		
+	}
+
+	provinces = {
+		177
+	}
+}

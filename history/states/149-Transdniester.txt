@@ -1,0 +1,33 @@
+﻿state = {
+	id = 149
+	name = "STATE_149"
+
+	resources = {
+		steel = 3
+	}
+
+	history = {
+		owner = PMR
+		victory_points = {
+			13202 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			air_base = 2
+			industrial_complex = 1
+		}
+		add_core_of = MLV
+		add_core_of = PMR
+		add_core_of = ROM
+		
+
+	}
+
+	provinces = {
+		13202 13203 13204
+	}
+	manpower = 875040
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

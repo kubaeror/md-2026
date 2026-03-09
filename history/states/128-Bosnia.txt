@@ -1,0 +1,31 @@
+﻿state = {
+	id = 128
+	name = "STATE_128"
+	resources = {
+		aluminium = 2.000
+	}
+
+	history = {
+		owner = BOS
+		victory_points = {
+			11899 2
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 2
+			air_base = 2
+		}
+		set_variable = { hydroelectric_energy_production_var = 0.639 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = BOS
+	}
+
+	provinces = {
+		6799 9922 11872 11899 370 378
+	}
+	manpower = 2463584
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

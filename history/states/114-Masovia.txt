@@ -1,0 +1,46 @@
+﻿state = {
+	id = 114
+	name = "STATE_114"
+	resources = {
+		aluminium = 1.000
+		tungsten = 2.000
+		oil = 15
+	}
+
+	history = {
+		owner = POL
+		victory_points = {
+			3544 13
+		}
+		victory_points = {
+			3458 1
+		}
+		victory_points = {
+			6259 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			arms_factory = 1
+			industrial_complex = 2
+			offices = 3
+			air_base = 5
+			agriculture_district = 1
+			3544 = {
+				# PGZ
+				land_facility = 1
+			}
+		}
+		add_core_of = POL
+		set_variable = { hydroelectric_energy_production_var = 0.162 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		402 467 524 3458 3544 6259 6321 6567 9290 9316 9400 9544 11385 11492 12562
+	}
+	manpower = 6970228
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

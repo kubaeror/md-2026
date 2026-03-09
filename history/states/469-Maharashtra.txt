@@ -1,0 +1,55 @@
+﻿state = {
+	id = 469
+	name = "STATE_469"
+	manpower = 70846812
+	state_category = state_17
+
+	resources = {
+		steel = 10
+	}
+
+	history = {
+		owner = RAJ
+		victory_points = {
+			4072 5
+		}
+		victory_points = {
+			7060 5
+		}
+		victory_points = {
+			10019 3
+		}
+		victory_points = {
+			7177 1
+		}
+		victory_points = {
+			1405 1
+		}
+		victory_points = {
+			5063 1
+		}
+		victory_points = {
+			10270 5
+		}
+		victory_points = {
+			4395 5
+		}
+		victory_points = {
+			10210 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			arms_factory = 3
+			industrial_complex = 5
+			offices = 1
+			agriculture_district = 4
+		}
+		add_core_of = RAJ
+		
+	}
+
+	provinces = {
+		1405 4072 4353 4395 5063 7060 7119 7177 7232 10019 10210 10270 10311 12182 12269
+	}
+}

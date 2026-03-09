@@ -1,0 +1,47 @@
+﻿state = {
+	id = 84
+	name = "STATE_84"
+	manpower = 1981067
+	state_category = state_03
+
+	resources = {
+		aluminium = 4
+	}
+
+	history = {
+		owner = ITA
+		victory_points = {
+			902 1
+		}
+		victory_points = {
+			9772 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			offices = 1
+			industrial_complex = 1
+			air_base = 5
+			radar_station = 2
+			902 = {
+				naval_base = 4
+			}
+			9772 = {
+				naval_base = 5
+			}
+			6891 = {
+				naval_base = 3
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
+		add_core_of = ITA
+		set_variable = { hydroelectric_energy_production_var = 0.437 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		902 6891 9772 11755 11773 11824
+	}
+}

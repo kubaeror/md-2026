@@ -1,0 +1,44 @@
+﻿state = {
+	id = 374
+	name = "STATE_374"
+
+	resources = {
+		steel = 18
+	}
+	history = {
+		owner = MOR
+		victory_points = {
+			9945 7
+		}
+		victory_points = {
+			15500 3
+		}
+		victory_points = {
+			15495 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 1
+			9945 = {
+				naval_base = 8
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }
+		add_core_of = MOR
+	}
+
+	provinces = {
+		9945 15468 15495 15500
+	}
+	manpower = 3959741
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

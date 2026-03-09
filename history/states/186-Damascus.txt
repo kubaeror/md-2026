@@ -1,0 +1,27 @@
+﻿state = {
+	id = 186
+	name = "STATE_186"
+
+	history = {
+		owner = SYR
+		victory_points = {
+			4111 18
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 1
+			air_base = 4
+
+		}
+		add_core_of = SYR
+		
+	}
+
+	provinces = {
+		4111 4550 7184 11107 11116
+	}
+	manpower = 5171292
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

@@ -1,0 +1,38 @@
+﻿state = {
+	id = 488
+	name = "STATE_488"
+	manpower = 130
+	state_category = state_military_base
+
+	history = {
+		owner = USA
+		add_core_of = KUW
+		victory_points = {
+			11178 1
+		}
+		add_extra_state_shared_building_slots = 1
+
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			air_base = 10
+			radar_station = 3
+			stronghold_network = 1 #Large US Middle East base, supply and all. Also help prevent US AI attrition there
+			11178 = {
+				naval_base = 10
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
+	}
+
+	provinces = {
+		11178
+	}
+}

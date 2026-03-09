@@ -1,0 +1,26 @@
+﻿state = {
+	id = 587
+	name = "STATE_587"
+
+	history = {
+		owner = ISR
+		victory_points = {
+			13205 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+		}
+		add_core_of = ISR
+		add_core_of = SYR
+		add_core_of = DRU
+		
+	}
+
+	provinces = {
+		13205
+	}
+	manpower = 52317
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

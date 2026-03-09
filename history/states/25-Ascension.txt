@@ -1,0 +1,24 @@
+﻿state = {
+	id = 25
+	name = "STATE_25"
+	manpower = 1777
+	state_category = state_00
+
+	history = {
+		owner = ENG
+		add_core_of = STH
+		buildings = {
+		air_base = 1
+			infrastructure = 2
+			internet_station = 1
+			13013 = {
+				naval_base = 1
+			}
+		}
+		
+	}
+
+	provinces = {
+		13013
+	}
+}

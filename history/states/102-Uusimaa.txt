@@ -1,0 +1,56 @@
+﻿
+state = {
+	id = 102
+	name = "STATE_102"
+
+	history = {
+		owner = FIN
+		victory_points = {
+			11105 5
+		}
+		victory_points = {
+			9129 2
+		}
+		victory_points = {
+			6144 1
+		}
+		victory_points = {
+			3083 1
+		}
+		victory_points = {
+			9073 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			air_base = 5
+			industrial_complex = 2
+			offices = 2
+			dockyard = 1
+			nuclear_reactor = 1
+			agriculture_district = 1
+			11105 = {
+				naval_base = 5
+
+			}
+			3083 = {
+				naval_base = 3
+				naval_facility = 1	#Aker Finnyards in Turku
+			}
+
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }		
+		add_core_of = FIN
+		
+
+	}
+
+	provinces = {
+		67 169 204 3083 6009 6066 6108 6144 9073 9094 9129 9167 9194 11066 11105 11172 11211 13101 
+	}
+	manpower = 3062441
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+	local_supplies = 0.000
+}

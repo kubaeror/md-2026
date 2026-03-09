@@ -1,0 +1,40 @@
+﻿state = {
+	id = 483
+	name = "STATE_483"
+
+	resources = {
+		rubber = 24
+	}
+
+	history = {
+		owner = SRI
+		victory_points = {
+			6927 5
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			arms_factory = 2
+			industrial_complex = 2
+			offices = 1
+			air_base = 4
+			7260 = {
+				naval_base = 6
+			}
+			6927 = {
+				land_facility = 1
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }		
+		add_core_of = SRI
+		
+	}
+
+	provinces = {
+		4219 7260 6927
+	}
+	manpower = 12489110
+	buildings_max_level_factor = 1.000
+	state_category = state_08
+}

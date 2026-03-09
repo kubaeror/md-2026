@@ -1,0 +1,100 @@
+﻿state = {
+	id = 567
+	name = "STATE_567"
+	manpower = 111523478
+	state_category = state_18
+
+	resources = {
+		aluminium = 4
+		chromium = 16
+	}
+
+	history = {
+		owner = CHI
+		victory_points = {
+			9958 10
+		}
+		victory_points = {
+			4144 5
+		}
+		victory_points = {
+			1139 5
+		}
+		victory_points = {
+			14301 3
+		}
+		victory_points = {
+			10446 2
+		}
+		victory_points = {
+			11933 1
+		}
+		victory_points = {
+			4606 1
+		}
+		victory_points = {
+			11931 5
+		}
+		victory_points = {
+			10098 1
+		}
+		victory_points = {
+			7540 1
+		}
+		victory_points = {
+			7126 1
+		}
+		victory_points = {
+			1004 1
+		}
+		victory_points = {
+			6932 1
+		}
+		victory_points = {
+			10364 1
+		}
+		victory_points = {
+			7459 5
+		}
+		victory_points = {
+			12012 5
+		}
+		victory_points = {
+			12426 1
+		}
+		victory_points = {
+			7568 1
+		}
+		victory_points = {
+			7656 1
+		}
+		victory_points = {
+			10434 1
+		}
+		victory_points = {
+			14756 1
+		}
+		victory_points = {
+			14757 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			offices = 2
+			industrial_complex = 10
+			arms_factory = 2
+			synthetic_refinery = 1
+			air_base = 8
+		}
+		set_variable = { hydroelectric_energy_production_var = 1.146 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = CHI
+		add_core_of = TAI
+
+	}
+
+	provinces = {
+		1004 1139 1603 4066 4114 4144 4519 4547 4606 6932 7074 7085 7126 7459 7508 7540 7568 7656 9958 10098 10364 10434 10446 11931 11933 12012 12426 14301 14307 14756 14757 14758 16045 16159 16160 16226 16227 16228 16229 16230 16231 16232 16236 16237
+	}
+}

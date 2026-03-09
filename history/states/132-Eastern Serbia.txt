@@ -1,0 +1,37 @@
+﻿state = {
+	id = 132
+	name = "STATE_132"
+
+	resources = {
+		tungsten = 3
+		steel = 2
+	}
+
+	history = {
+		owner = SER
+		victory_points = {
+			11887 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 2
+			11887 = {
+				air_facility = 1
+			}
+		}
+		add_core_of = SER
+		set_variable = { hydroelectric_energy_production_var = 1.559 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		388 392 630 6634 9602 9756 9906 11583 11868 11887
+	}
+	manpower = 2229034
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

@@ -1,0 +1,43 @@
+﻿state = {
+	id = 410
+	name = "STATE_410"
+	resources = {
+		steel = 1.000
+		tungsten = 1.000
+	}
+
+	history = {
+		owner = TAL
+		victory_points = {
+			6186 5
+		}
+		victory_points = {
+			12248 1
+		}
+		victory_points = {
+			7448 1
+		}
+		victory_points = {
+			12314 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+
+		}
+		AFG = {
+			set_province_controller = 12314
+		}
+		add_core_of = AFG
+		add_core_of = TAL
+		
+
+	}
+
+	provinces = {
+		6186 7448 7584 12248 12314 12877 14692 14693 14694 14695 14696
+	}
+	manpower = 5450328
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

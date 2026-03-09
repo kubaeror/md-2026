@@ -1,0 +1,27 @@
+﻿state = {
+	id = 327
+	name = "STATE_327"
+	manpower = 1803765
+	state_category = state_02
+
+	history = {
+		owner = CHA
+		victory_points = {
+			14397 1
+		}
+		victory_points = {
+			4902 1
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.45 }
+		set_variable = { hydroelectric_energy_production_var = 1.255 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = CHA
+		add_core_of = TIE
+	}
+
+	provinces = {
+		4902 4961 5136 14592 9202 14397 14400 11503 14547 4897 3123
+	}
+}

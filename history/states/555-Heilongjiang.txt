@@ -1,0 +1,63 @@
+﻿state = {
+	id = 555
+	name = "STATE_555"
+	manpower = 16403821
+	state_category = state_09
+
+	resources = {
+		oil = 30
+	}
+
+	history = {
+		owner = CHI
+		victory_points = {
+			1645 5
+		}
+		victory_points = {
+			4506 5
+		}
+		victory_points = {
+			7767 5
+		}
+		victory_points = {
+			1545 5
+		}
+		victory_points = {
+			12618 1
+		}
+		victory_points = {
+			7832 1
+		}
+		victory_points = {
+			7848 1
+		}
+		victory_points = {
+			1588 1
+		}
+		victory_points = {
+			7526 1
+		}
+		victory_points = {
+			7582 1
+		}
+		victory_points = {
+			7897 1
+		}
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			offices = 1
+			industrial_complex = 5
+			arms_factory = 1
+			air_base = 6
+			agriculture_district = 1
+		}
+		add_core_of = CHI
+		add_core_of = TAI
+	}
+
+	provinces = {
+		1545 1588 1645 1693 1732 4506 4592 4649 7526 7582 7613 7767 7832 7848 7897 10379 10675 10698 12548 12618 14020 14021 14022 14331 14332 14333 14334 14335 14336 14337 14338 15396 15397 15398 15399 15400 15401
+	}
+}

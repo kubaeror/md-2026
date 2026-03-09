@@ -1,0 +1,31 @@
+﻿state = {
+	id = 962
+	name = "STATE_962"
+
+	history = {
+		owner = FRA
+		victory_points = {
+			9593 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			arms_factory = 1
+			industrial_complex = 2
+			offices = 1
+			air_base = 4
+			agriculture_district = 1
+		}
+		add_core_of = FRA
+		set_variable = { hydroelectric_energy_production_var = 0.928 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		590 769 3770 6644 6773 9593 9609 9748 11576
+	}
+	manpower = 1690143
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

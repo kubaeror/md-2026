@@ -1,0 +1,32 @@
+﻿state = {
+	id = 244
+	name = "STATE_244"
+
+	resources = {
+		steel = 5
+	}
+	history = {
+		owner = KEN
+		victory_points = {
+			9097 5
+		}
+		victory_points = {
+			11145 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			industrial_complex = 1
+		}
+		set_variable = { geothermal_energy_production_var = 0.215 }
+		add_dynamic_modifier = { modifier = geothermal_infrastructure_in_state }
+		add_core_of = KEN
+	}
+
+	provinces = {
+		5160 5196 10860 10962 11145 9097 9107 13135 13698 13699 13700 13701 13702 13703 13704 13705 13711 13712 13713
+	}
+	manpower = 9083146
+	buildings_max_level_factor = 1.000
+	state_category = state_07
+}

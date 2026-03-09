@@ -1,0 +1,29 @@
+﻿state = {
+	id = 119
+	name = "STATE_119"
+	manpower = 3191900
+	state_category = state_03
+
+	history = {
+		owner = SLO
+		victory_points = { 9692 3 } #Bratislava
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			offices = 1
+			industrial_complex = 2
+			air_base = 3
+			nuclear_reactor = 1
+			9692 = {
+				land_facility = 1
+			}
+		}
+		add_core_of = SLO
+		
+	}
+
+	provinces = {
+		3484 9692 3716 11679 11522
+	}
+}

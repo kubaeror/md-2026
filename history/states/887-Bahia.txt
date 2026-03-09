@@ -1,0 +1,73 @@
+﻿state = {
+	id = 887
+	name = "STATE_887"
+
+	resources = {
+		steel = 5
+		tungsten = 2
+		rubber = 6
+	}
+
+	history = {
+		owner = BRA
+		victory_points = {
+			10946 10
+		}
+		victory_points = {
+			12422 3
+		}
+		victory_points = {
+			8129 1
+		}
+		victory_points = {
+			10419 3
+		}
+		victory_points = {
+			11002 1
+		}
+		victory_points = {
+			8242 1
+		}
+		victory_points = {
+			4617 1
+		}
+		victory_points = {
+			10392 1
+		}
+		victory_points = {
+			8184 1
+		}
+		victory_points = {
+			8177 1
+		}
+		victory_points = {
+			5194 1
+		}
+		victory_points = {
+			5218 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			synthetic_refinery = 1
+			air_base = 2
+			agriculture_district = 1
+			10946 = {
+				naval_base = 5
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		add_core_of = BRA
+		set_variable = { hydroelectric_energy_production_var = 3.091 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		4617 5174 5194 5218 8129 8177 8184 8197 8242 10392 10419 10926 10946 11002 12422 969 3476 3536 3598 3758 3771 3773 3845 3892 14098 14099 14100
+	}
+	manpower = 17348232
+	buildings_max_level_factor = 1.000
+	state_category = state_10
+}

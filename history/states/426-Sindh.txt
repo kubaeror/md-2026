@@ -1,0 +1,55 @@
+﻿state = {
+	id = 426
+	name = "STATE_426"
+
+	resources = {
+		oil = 13
+	}
+
+	history = {
+		owner = PAK
+		victory_points = {
+			4110 5
+		}
+		victory_points = {
+			1971 5
+		}
+		victory_points = {
+			10735 1
+		}
+		victory_points = {
+			7084 1
+		}
+		victory_points = {
+			3866 15
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			industrial_complex = 4
+			offices = 2
+			dockyard = 1
+			arms_factory = 3
+			air_base = 6
+			nuclear_reactor = 1
+			3866 = {
+				naval_base = 10
+				naval_facility = 1
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		add_core_of = PAK
+	}
+
+	provinces = {
+		1147 1971 1980 4003 4110 4382 7049 7084 10108 10735 3886 3909 3456 3866
+	}
+	manpower = 43032958
+	buildings_max_level_factor = 1.000
+	state_category = state_14
+}

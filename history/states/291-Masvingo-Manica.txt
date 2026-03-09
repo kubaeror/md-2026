@@ -1,0 +1,33 @@
+﻿state = {
+	id = 291
+	name = "STATE_291"
+
+	resources = {
+		steel = 4
+		tungsten = 16
+	}
+
+	history = {
+		owner = ZIM
+		victory_points = {
+			11273 4
+		}
+		victory_points = {
+			2151 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+
+		}
+		add_core_of = ZIM
+		
+	}
+
+	provinces = {
+		2151 7842 11205 11273
+	}
+	manpower = 4034273
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

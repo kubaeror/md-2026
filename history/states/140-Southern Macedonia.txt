@@ -1,0 +1,34 @@
+﻿state = {
+	id = 140
+	name = "STATE_140"
+	resources = {
+		aluminium = 1.000
+		chromium = 12
+	}
+
+	history = {
+		owner = GRE
+		victory_points = {
+			11818 3
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			arms_factory = 1
+			offices = 1
+			air_base = 2
+			11818 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = GRE
+		
+	}
+
+	provinces = {
+		895 936 966 3844 9791 9837 9930 11818 472
+	}
+	manpower = 3017292
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

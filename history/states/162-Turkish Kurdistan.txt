@@ -1,0 +1,40 @@
+﻿state = {
+	id = 162
+	name = "STATE_162"
+
+	history = {
+		owner = TUR
+		victory_points = {
+			4512 5
+		}
+		victory_points = {
+			10497 2
+		}
+		victory_points = {
+			876 2
+		}
+		victory_points = {
+			12416 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			industrial_complex = 3
+			arms_factory = 1
+			offices = 1
+			air_base = 6
+		}
+		add_core_of = TUR
+		add_core_of = PKK
+		set_variable = { hydroelectric_energy_production_var = 0.505 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		871 876 1463 3933 4512 7530 10399 10497 11739 12387 12416 12476 13925
+	}
+	manpower = 5369124
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

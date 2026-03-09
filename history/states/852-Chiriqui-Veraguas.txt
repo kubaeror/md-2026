@@ -1,0 +1,29 @@
+﻿state = {
+	id = 852
+	name = "STATE_852"
+
+	history = {
+		owner = PAN		
+		victory_points = {
+			1633 1 
+		}
+		victory_points = {
+			4611 1 
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 1
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }		
+		add_core_of = PAN
+	}
+
+	provinces = {
+		1633 4611 9710 16286
+	}
+	manpower = 1807950
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

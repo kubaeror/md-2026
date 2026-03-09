@@ -1,0 +1,36 @@
+﻿state = {
+	id = 535
+	name = "STATE_535"
+	manpower = 1041484
+	state_category = state_02
+
+	history = {
+		owner = FIJ
+		victory_points = { 4286 3 } #Suva
+		victory_points = { 7302 1 } #Lautoka
+		victory_points = { 12159 1 } #Labasa
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			air_base = 2
+			industrial_complex = 1
+
+			4286 = {
+				naval_base = 2
+			}
+
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { hydroelectric_energy_production_var = 0.080 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+
+		add_core_of = FIJ
+	}
+
+	provinces = {
+		4286 7302 12159
+	}
+}

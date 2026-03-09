@@ -1,0 +1,46 @@
+﻿state = {
+	id = 1060
+	name = "STATE_1060"
+
+	history = {
+		owner = ITA
+		victory_points = {
+			6788 5
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			offices = 2
+			dockyard = 3
+			6788 = {
+				naval_base = 8
+				# fincantieri mil department
+				naval_facility = 1
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+			14604 = {
+				naval_base = 10
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		add_core_of = ITA
+
+	}
+
+	provinces = {
+		6788 11891 14604
+	}
+	manpower = 1895845
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

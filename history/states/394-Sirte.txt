@@ -1,0 +1,20 @@
+﻿state = {
+	id = 394
+	name = "STATE_394"
+
+	impassable = yes
+
+	history = {
+		owner = ALG
+		add_core_of = ALG
+		
+
+	}
+
+	provinces = {
+		6348
+	}
+	manpower = 62996
+	buildings_max_level_factor = 1.000
+	state_category = state_inhospitable
+}

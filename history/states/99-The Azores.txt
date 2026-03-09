@@ -1,0 +1,27 @@
+﻿state = {
+	id = 99
+	name = "STATE_99"
+	manpower = 303033
+	state_category = state_00
+
+	history = {
+		owner = POR
+		victory_points = { 1751 1 } #Ponta Delgada
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			1751 = {
+				naval_base = 3
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		add_core_of = POR
+		set_variable = { geothermal_energy_production_var = 0.2415 }
+		add_dynamic_modifier = { modifier = geothermal_infrastructure_in_state }
+	}
+
+	provinces = {
+		1751
+	}
+}

@@ -1,0 +1,63 @@
+﻿
+state = {
+	id = 467
+	name = "STATE_467"
+	resources = {
+		steel = 7
+		rubber = 26
+	}
+
+	history = {
+		owner = RAJ
+		victory_points = {
+			8011 10
+		}
+		victory_points = {
+			4315 5
+		}
+		victory_points = {
+			10190 5
+		}
+		victory_points = {
+			10208 1
+		}
+		victory_points = {
+			1412 1
+		}
+		victory_points = {
+			8100 1
+		}
+		victory_points = {
+			4344 1
+		}
+		victory_points = {
+			5032 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			arms_factory = 2
+			offices = 1
+			fuel_silo = 1
+			air_base = 10
+			10190 = {
+				naval_base = 2
+			}
+			8011 = {
+				# Aerospace
+				air_facility = 1
+			}
+		}
+		set_variable = { hydroelectric_energy_production_var = 1.047 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = RAJ
+	}
+
+	provinces = {
+		1412 4315 4344 5032 7244 8011 8100 10190 10208 12146 12734
+	}
+	manpower = 38488388
+	buildings_max_level_factor = 1
+	state_category = state_14
+}

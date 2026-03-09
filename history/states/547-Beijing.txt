@@ -1,0 +1,36 @@
+﻿state = {
+	id = 547
+	name = "STATE_547"
+	manpower = 27534308
+	state_category = state_12
+
+	resources = {
+		steel = 60
+	}
+
+	history = {
+		owner = CHI
+		victory_points = {
+			11761 20
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 14
+			offices = 3
+			arms_factory = 5
+			air_base = 10
+			11761 = {
+				# NORINCO
+				land_facility = 1
+			}
+		}
+		add_core_of = CHI
+		add_core_of = TAI
+
+	}
+
+	provinces = {
+		4140 9843 11761 3160 15667 15668 15669
+	}
+}

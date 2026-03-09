@@ -1,0 +1,34 @@
+﻿state = {
+	id = 502
+	name = "STATE_502"
+	manpower = 2080276
+	state_category = state_03
+
+	resources = {
+		oil = 4
+	}
+
+	history = {
+		owner = BRM
+		victory_points = { 3651 1 } #Toungup
+
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			air_base = 1
+
+			3651 = {
+				naval_base = 2
+			}
+
+		}
+		add_core_of = ARK
+		add_core_of = BRM
+		
+	}
+
+	provinces = {
+		3651 10182
+
+	}
+}

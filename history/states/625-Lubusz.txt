@@ -1,0 +1,29 @@
+﻿state = {
+	id = 625
+	name = "STATE_625"
+
+	history = {
+		owner = POL
+		victory_points = {
+			9387 1
+		}
+		victory_points = {
+			3438 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 1
+			offices = 1
+		}
+		add_core_of = POL
+		
+	}
+
+	provinces = {
+		444 3438 3473 9387
+	}
+	manpower = 1321556
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

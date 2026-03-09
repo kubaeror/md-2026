@@ -1,0 +1,25 @@
+﻿state = {
+	id = 545
+	name = "STATE_545"
+	manpower = 2690359
+	state_category = state_03
+
+	history = {
+		owner = GER
+		victory_points = { 6524 1 } #Erfurt
+		victory_points = { 538 1 } #Weimar
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 1
+			offices = 1
+			synthetic_refinery = 2
+		}
+		add_core_of = GER
+		
+	}
+
+	provinces = {
+		482 538 3500 3561 6524 9497
+	}
+}

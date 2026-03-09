@@ -1,0 +1,29 @@
+﻿state = {
+	id = 212
+	name = "STATE_212"
+	manpower = 304891
+	state_category = state_00
+
+	history = {
+		owner = JOR
+		victory_points = { 4115 1 } #Aqaba
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			air_base = 3
+			arms_factory = 1
+			4115 = {
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }		
+		add_core_of = JOR
+		
+	}
+
+	provinces = {
+		  4115 4017 11976 4603 4562 4591
+
+		}
+}

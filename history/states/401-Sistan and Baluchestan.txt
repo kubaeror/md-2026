@@ -1,0 +1,42 @@
+﻿state = {
+	id = 401
+	name = "STATE_401"
+	resources = {
+		tungsten = 2.000
+	}
+
+	history = {
+		owner = PER
+		victory_points = {
+			12895 5
+		}
+		victory_points = {
+			3879 1
+		}
+		victory_points = {
+			13082 1
+		}
+		victory_points = {
+			14944 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 1
+			14944 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = PER
+		add_core_of = BLC
+		
+
+	}
+
+	provinces = {
+		68 2039 2070 3879 4891 10782 12895 13082 14262 14943 14944 14947 14948
+	}
+	manpower = 2938093
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

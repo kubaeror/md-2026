@@ -1,0 +1,38 @@
+﻿state = {
+	id = 861
+	name = "STATE_861"
+
+	history = {
+		owner = DOM
+		victory_points = {
+			9507 10
+		}
+		victory_points = {
+			7632 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 2
+			offices = 2
+			arms_factory = 1
+			air_base = 4
+			9507 = {
+				naval_base = 4
+
+			}
+
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }		
+		add_core_of = DOM
+		
+	}
+
+	provinces = {
+		7632 7660 9495 9507
+	}
+	manpower = 7677211
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

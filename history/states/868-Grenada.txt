@@ -1,0 +1,31 @@
+﻿state = {
+	id = 868
+	name = "STATE_868"
+	manpower = 134078
+	state_category = state_00
+
+	history = {
+		owner = GRA
+		victory_points = { 11106 1 } #St. Georges
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			air_base = 1
+			industrial_complex = 1
+			11106 = {
+				naval_base = 1
+			}
+
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }		
+		add_core_of = GRA
+		
+	}
+
+	provinces = {
+		  11106
+
+		}
+}

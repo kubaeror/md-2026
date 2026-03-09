@@ -1,0 +1,25 @@
+﻿state = {
+	id = 918
+	name = "STATE_918"
+
+	history = {
+		owner = LBA
+		add_core_of = TUA
+		add_core_of = LBA
+		add_core_of = FEZ
+		victory_points = {
+			5004 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+		}
+		
+	}
+	provinces = {
+		5004 6285 9114
+	}
+	manpower = 23797
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

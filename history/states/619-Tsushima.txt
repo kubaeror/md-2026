@@ -1,0 +1,24 @@
+﻿state = {
+	id = 619
+	name = "STATE_619"
+	manpower = 45423
+	state_category = state_00
+
+	history = {
+		owner = JAP
+		victory_points = { 10011 1 } #Tsushima
+		buildings = {
+			infrastructure = 1
+			internet_station = 2
+			10011 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = JAP
+	#	add_core_of = KOR
+	}
+
+	provinces = {
+	  10011
+	}
+}

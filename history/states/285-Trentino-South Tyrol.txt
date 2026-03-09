@@ -1,0 +1,35 @@
+﻿state = {
+	id = 285
+	name = "STATE_285"
+
+	resources = {
+		tungsten = 3
+	}
+
+	history = {
+		owner = ITA
+		add_core_of = ITA
+		victory_points = {
+			11598 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			industrial_complex = 1
+			11598 = {
+				# IVECO
+				land_facility = 1
+			}
+		}
+		set_variable = { hydroelectric_energy_production_var = 3.009 }
+		set_variable = { hydroelectric_energy_storage_var = 200 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		6631 6675 9630 11598
+	}
+	manpower = 1372173
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

@@ -1,0 +1,41 @@
+﻿state = {
+	id = 953
+	name = "STATE_953"
+
+	history = {
+		owner = BRA
+		victory_points = {
+			10405 5
+		}
+		victory_points = {
+			4548 1
+		}
+		victory_points = {
+			1529 1
+		}
+		victory_points = {
+			12905 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			synthetic_refinery = 2
+			air_base = 3
+			10405 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = BRA
+		add_core_of = SUL
+		set_variable = { hydroelectric_energy_production_var = 1.047 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		12905 1529 10405 4548
+	}
+	manpower = 6963268
+	buildings_max_level_factor = 1.000
+	state_category = state_10
+}

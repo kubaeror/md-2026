@@ -1,0 +1,34 @@
+﻿state = {
+	id = 277
+	name = "STATE_277"
+
+	history = {
+		owner = SAF
+		victory_points = {
+			12648 5
+		}
+		victory_points = {
+			1391 2
+		}
+		victory_points = {
+			12064 1
+		}
+		victory_points = {
+			1358 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+
+		}
+		add_core_of = SAF
+		
+	}
+
+	provinces = {
+		5231 12064 12648 1314 1335 1358 1391 1397
+	}
+	manpower = 2798426
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

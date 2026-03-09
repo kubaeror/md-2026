@@ -1,0 +1,57 @@
+﻿state = {
+	id = 601
+	name = "STATE_601"
+
+	resources = {
+		steel = 13
+		aluminium = 4
+		tungsten = 7
+		oil = 5
+	}
+
+	history = {
+		owner = NKO
+		victory_points = {
+			6928 6
+		}
+		victory_points = {
+			6822 5
+		}
+		victory_points = {
+			6922 2
+		}
+		victory_points = {
+			6944 1
+		}
+		victory_points = {
+			11878 1
+		}
+		victory_points = {
+			898 1
+		}
+		victory_points = {
+			3852 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 6
+			6944 = {
+				naval_base = 2
+			}
+			3852 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = NKO
+		add_core_of = KOR
+		
+	}
+
+	provinces = {
+		852 898 959 3803 3852 3860 3904 3981 6822 6922 6928 6944 9899 11878 3191 3210 3245
+	}
+	manpower = 8236787
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

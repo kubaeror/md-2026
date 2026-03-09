@@ -1,0 +1,37 @@
+﻿state = {
+	id = 618
+	name = "STATE_618"
+	manpower = 1853540
+	state_category = state_02
+
+	resources = {
+		oil = 3
+	}
+
+	history = {
+		owner = JAP
+		victory_points = { 11932 5 } #Naha
+		victory_points = { 10124 2 } #Nago
+		victory_points = { 1123 1 } #Amami
+		victory_points = { 13281 1 } #Ishigaki
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 1
+			offices = 1
+			air_base = 4
+			11932 = {
+				naval_base = 4
+			}
+			13281 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = JAP
+		add_core_of = RYU
+	}
+
+	provinces = {
+		1123 10124 11932 13281
+	}
+}

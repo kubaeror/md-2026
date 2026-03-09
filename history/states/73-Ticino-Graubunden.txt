@@ -1,0 +1,25 @@
+﻿state = {
+	id = 73
+	name = "STATE_73"
+
+	history = {
+		owner = SWI
+		victory_points = {
+			9600 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			stronghold_network = 1 #swiss underground bunkers
+		}
+		add_core_of = SWI
+		
+	}
+
+	provinces = {
+		658 3660 9600
+	}
+	manpower = 593596
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

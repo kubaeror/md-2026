@@ -1,0 +1,45 @@
+﻿state = {
+	id = 727
+	name = "STATE_727"
+	resources = {
+		oil = 5.000
+	}
+
+	history = {
+		owner = UZB
+		victory_points = {
+			1479 5
+		}
+		victory_points = {
+			12465 3
+		}
+		victory_points = {
+			1576 1
+		}
+		victory_points = {
+			1614 1
+		}
+		victory_points = {
+			10435 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 2
+
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.33 }		
+		add_core_of = KRP
+		add_core_of = UZB
+		
+
+	}
+
+	provinces = {
+		1479 1576 1614 1721 3163 7541 10395 10435 12233 12465 13217 13219 13222 14293 14346
+	}
+	manpower = 4527478
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

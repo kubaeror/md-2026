@@ -1,0 +1,29 @@
+﻿state = {
+	id = 138
+	name = "STATE_138"
+
+	history = {
+		owner = ALB
+		victory_points = {
+			914 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			914 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = ALB
+		set_variable = { hydroelectric_energy_production_var = 0.340 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		914 3448 3884 9875
+	}
+	manpower = 1601649
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

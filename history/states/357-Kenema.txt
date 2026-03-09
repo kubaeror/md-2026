@@ -1,0 +1,31 @@
+﻿state = {
+	id = 357
+	name = "STATE_357"
+
+	resources = {
+		chromium = 52
+	}
+
+	history = {
+		owner = AFR
+		victory_points = {
+			1897 3
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+
+		}
+		add_core_of = SIE
+		add_core_of = AFR
+		
+
+	}
+
+	provinces = {
+		1897 2094 7377
+	}
+	manpower = 2324656
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

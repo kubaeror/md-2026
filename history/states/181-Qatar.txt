@@ -1,0 +1,39 @@
+﻿state = {
+	id = 181
+	name = "STATE_181"
+	resources = {
+		oil = 36
+		aluminium = 19
+		steel = 3
+	}
+
+	history = {
+		owner = QAT
+		victory_points = {
+			3738 9
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			offices = 1
+			air_base = 10
+			3738 = {
+				naval_base = 10
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		add_core_of = QAT
+	}
+
+	provinces = {
+		8051 3728 3738 6712
+	}
+	manpower = 802318
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

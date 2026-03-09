@@ -1,0 +1,38 @@
+﻿state = {
+	id = 205
+	name = "STATE_205"
+
+	resources = {
+		steel = 3
+	}
+
+	history = {
+		owner = ISR
+		add_core_of = ISR
+		add_core_of = PAL
+		victory_points = {
+			1065 2
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			air_base = 4
+			arms_factory = 1
+			fuel_silo = 1
+			radar_station = 2
+			anti_air_building = 4
+			1065 = {
+				naval_base = 6
+				air_facility = 1
+			}
+		}
+		
+	}
+
+	provinces = {
+		1065 12839
+	}
+	manpower = 1960098
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

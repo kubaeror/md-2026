@@ -1,0 +1,34 @@
+﻿state = {
+	id = 827
+	name = "STATE_827"
+	manpower = 130
+	state_category = state_00
+
+	history = {
+		owner = USA
+		victory_points = { 7115 1 }
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			air_base = 10
+			radar_station = 1
+			7115 = {
+				naval_base = 10
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		add_core_of = USA
+		add_core_of = JAP
+		add_core_of = RYU
+
+	}
+
+	provinces = {
+		7115
+	}
+}

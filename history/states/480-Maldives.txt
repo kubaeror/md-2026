@@ -1,0 +1,28 @@
+﻿state = {
+	id = 480
+	name = "STATE_480"
+	manpower = 355206
+	state_category = state_00
+
+	history = {
+		owner = MLD
+		victory_points = { 4967 3 } #Malé
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			air_base = 3
+			4967 = {
+				naval_base = 2
+			}
+			industrial_complex = 1
+		}
+		add_core_of = MLD
+		
+	}
+
+	provinces = {
+		 4967
+
+		}
+}

@@ -1,0 +1,49 @@
+﻿state = {
+	id = 720
+	name = "STATE_720"
+	resources = {
+		steel = 2.000
+	}
+
+	history = {
+		owner = KYR
+		victory_points = {
+			12583 5
+		}
+		victory_points = {
+			4768 3
+		}
+		victory_points = {
+			4316 3
+		}
+		victory_points = {
+			7706 1
+		}
+		victory_points = {
+			5062 1
+		}
+		victory_points = {
+			4224 1
+		}
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 2
+
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.20 }
+		set_variable = { hydroelectric_energy_production_var = 1.403 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = KYR
+	}
+
+	provinces = {
+		1591 1675 1825 4224 4316 4391 4768 5062 7706 10408 12511 12583 13212 13213 948 977 1174 1198 13147 14137 14138 14139 14140 14141 14142 14201 14202 14924
+	}
+	manpower = 4224654
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

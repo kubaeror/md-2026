@@ -1,0 +1,49 @@
+﻿state = {
+	id = 416
+	name = "STATE_416"
+
+	resources = {
+		tungsten = 10
+	}
+
+	history = {
+		owner = PAK
+		victory_points = {
+			12774 1
+		}
+		victory_points = {
+			8066 1
+		}
+		victory_points = {
+			8013 1
+		}
+		victory_points = {
+			1179 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 2
+			12774 = {
+				naval_base = 8
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }
+		add_core_of = PAK
+		add_core_of = BLC
+	}
+
+	provinces = {
+		1179 5043 5075 7917 8013 8066 8098 10813 12761 12774 3953
+	}
+	manpower = 6385891
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

@@ -1,0 +1,30 @@
+﻿state = {
+	id = 548
+	name = "STATE_548"
+	manpower = 20744165
+	state_category = state_10
+
+	history = {
+		owner = CHI
+		victory_points = {
+			10068 10
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			industrial_complex = 7
+			arms_factory = 3
+			dockyard = 1
+			10068 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = CHI
+		add_core_of = TAI
+
+	}
+
+	provinces = {
+		4137 10068 3156 15664 15665
+	}
+}

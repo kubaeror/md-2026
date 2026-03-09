@@ -1,0 +1,40 @@
+﻿state = {
+	id = 77
+	name = "STATE_77"
+
+	resources = {
+		steel = 22
+		aluminium = 14
+	}
+	history = {
+		owner = ITA
+		victory_points = {
+			6780 6
+		}
+		victory_points = {
+			3782 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			arms_factory = 1
+			offices = 4
+			air_base = 4
+			6780 = {
+				# Alenia
+				air_facility = 1
+			}
+		}
+		add_core_of = ITA
+		set_variable = { hydroelectric_energy_production_var = 3.205 }
+		set_variable = { hydroelectric_energy_storage_var = 200 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		770 771 3782 6635 6780 9706 9738 9741 11721
+	}
+	manpower = 5313310
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

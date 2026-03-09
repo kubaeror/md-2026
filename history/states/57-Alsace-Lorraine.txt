@@ -1,0 +1,42 @@
+﻿state = {
+	id = 57
+	name = "STATE_57"
+
+	resources = {
+		steel = 12
+	}
+
+	history = {
+		owner = FRA
+		victory_points = {
+			521 2
+		}
+		victory_points = {
+			11502 1
+		}
+		victory_points = {
+			678 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			offices = 1
+			synthetic_refinery = 1
+			air_base = 5
+			industrial_complex = 1
+			nuclear_reactor = 2
+			anti_air_building = 2
+		}
+		add_core_of = FRA
+		set_variable = { hydroelectric_energy_production_var = 0.140 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		521 678 3629 6529 9559 11502
+	}
+	manpower = 3685138
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

@@ -1,0 +1,39 @@
+﻿state = {
+	id = 237
+	name = "STATE_237"
+
+	resources = {
+		steel = 4
+	}
+	history = {
+		owner = SML
+		victory_points = {
+			10833 7
+		}
+		victory_points = {
+			3199 5
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			air_base = 2
+			3199 = {
+				naval_base = 5
+
+			}
+			industrial_complex = 1
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }		
+		add_core_of = SML
+		add_core_of = SOM
+		
+	}
+
+	provinces = {
+		3199 5068 10833 12759 13852 13853 13854 13855
+	}
+	manpower = 2278728
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

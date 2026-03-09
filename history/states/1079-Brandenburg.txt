@@ -1,0 +1,33 @@
+﻿state = {
+	id = 1079
+	name = "STATE_1079"
+	manpower = 3263352
+	state_category = state_04
+
+	resources = {
+		steel = 30
+	}
+
+	history = {
+		owner = GER
+		victory_points = {
+			3499 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			arms_factory = 1
+			industrial_complex = 1
+			offices = 1
+			air_base = 6
+			radar_station = 2
+			agriculture_district = 1
+		}
+		add_core_of = GER
+		
+	}
+
+	provinces = {
+		375 478 3207 3499 9428 9496 11219 11444 14394
+	}
+}

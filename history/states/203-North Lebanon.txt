@@ -1,0 +1,23 @@
+﻿state = {
+	id = 203
+	name = "STATE_203"
+	manpower = 1700225
+	state_category = state_02
+
+	history = {
+		owner = LEB
+		victory_points = { 13278 2 } #Tripoli
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			arms_factory = 1
+		}
+		add_core_of = LEB
+		add_core_of = HEZ
+		
+	}
+
+	provinces = {
+		1108 13278
+	}
+}

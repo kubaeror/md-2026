@@ -1,0 +1,45 @@
+﻿state = {
+	id = 733
+	name = "STATE_733"
+
+	resources = {
+		rubber = 16
+	}
+
+	history = {
+		owner = PAP
+		victory_points = {
+			4304 1
+		}
+		victory_points = {
+			7339 1
+		}
+		victory_points = {
+			1361 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			7339 = {
+				naval_base = 1
+
+			}
+			4304 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }		
+		add_core_of = PAP
+		
+	}
+
+	provinces = {
+		1301 1361 4304 4421 7251 7339 14405
+	}
+	manpower = 805259
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

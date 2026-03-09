@@ -1,0 +1,26 @@
+﻿state = {
+	id = 1056
+	name = "STATE_1056"
+	manpower = 596827
+
+	state_category = state_01
+
+	history = {
+		owner = POR
+		victory_points = {
+			6933 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			industrial_complex = 1
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.20 }
+		add_core_of = POR
+		
+	}
+	provinces = {
+		980 3846 6884 6933 6986 13253 14125
+	}
+}

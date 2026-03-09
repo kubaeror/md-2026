@@ -1,0 +1,36 @@
+﻿state = {
+	id = 230
+	name = "STATE_230"
+	manpower = 645352
+	state_category = state_01
+
+	history = {
+		owner = DJI
+
+		victory_points = { 8124 5 } #Djibouti
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 8
+			industrial_complex = 1
+			8124 = {
+				naval_base = 8
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }
+		add_core_of = DJI
+		add_core_of = SOM
+	}
+
+	provinces = {
+		8124
+ 	}
+}

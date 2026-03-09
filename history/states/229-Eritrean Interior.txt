@@ -1,0 +1,32 @@
+﻿state = {
+	id = 229
+	name = "STATE_229"
+
+	history = {
+		owner = ERI
+		victory_points = {
+			5017 1
+		}
+		victory_points = {
+			97 1
+		}
+		victory_points = {
+			81 5
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			air_base = 1
+			industrial_complex = 1
+		}
+		add_core_of = ERI
+		
+	}
+
+	provinces = {
+		5017 12723 81 97 13795 13796 13797 13798 13799
+	}
+	manpower = 3416441
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

@@ -1,0 +1,40 @@
+﻿state = {
+	id = 115
+	name = "STATE_115"
+	resources = {
+		aluminium = 1.000
+		tungsten = 9.000
+		steel = 18
+		oil = 16
+	}
+
+	history = {
+		owner = POL
+		victory_points = {
+			6464 4
+		}
+		victory_points = {
+			506 2
+		}
+		victory_points = {
+			11467 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			arms_factory = 1
+			air_base = 5
+			industrial_complex = 1
+		}
+		add_core_of = POL
+		add_core_of = SIL
+		
+	}
+
+	provinces = {
+		479 506 6464 6512 9457 9511 11467
+	}
+	manpower = 6722339
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

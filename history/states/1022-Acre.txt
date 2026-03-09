@@ -1,0 +1,31 @@
+﻿state = {
+	id = 1022
+	name = "STATE_1022"
+	manpower = 724783
+	state_category = state_00
+
+	resources = {
+		rubber = 1
+	}
+
+	history = {
+		owner = BRA
+
+		victory_points = {
+			3891 3
+		}
+		victory_points = {
+			5216 1
+		}
+
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+		}
+		add_core_of = BRA
+		
+	}
+	provinces = {
+		3891 5216 14084
+ 	}
+}

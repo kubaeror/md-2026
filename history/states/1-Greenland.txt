@@ -1,0 +1,17 @@
+﻿state = {
+	id = 1
+	name = "STATE_1" # Greenland
+	manpower = 650
+
+	state_category = state_inhospitable
+	impassable = yes
+
+	history = {
+		owner = DEN
+		buildings = {			
+		}	
+		add_core_of = DEN
+		add_core_of = GRL
+	}
+	provinces = { 13058 }
+}

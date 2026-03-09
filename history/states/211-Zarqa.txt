@@ -1,0 +1,24 @@
+﻿state = {
+	id = 211
+	name = "STATE_211"
+
+	history = {
+		owner = JOR
+		victory_points = {
+			7001 5
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+		}
+		add_core_of = JOR
+		
+	}
+
+	provinces = {
+		1544 4440 7001 9652
+	}
+	manpower = 1318483
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

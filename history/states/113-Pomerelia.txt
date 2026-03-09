@@ -1,0 +1,50 @@
+﻿state = {
+	id = 113
+	name = "STATE_113"
+
+	resources = {
+		steel = 23
+	}
+	history = {
+		owner = POL
+		victory_points = {
+			362 5
+		}
+		victory_points = {
+			14485 2
+		}
+		victory_points = {
+			676 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			dockyard = 1
+			air_base = 3
+			industrial_complex = 1
+			362 = {
+				naval_base = 10
+				naval_facility = 1
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		add_core_of = POL
+		set_variable = { hydroelectric_energy_production_var = 0.716 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		362 389 3380 11288 11316 676 14485 14487
+	}
+	manpower = 3007946
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

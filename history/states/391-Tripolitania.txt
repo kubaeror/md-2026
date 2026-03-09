@@ -1,0 +1,49 @@
+﻿state = {
+	id = 391
+	name = "STATE_391"
+	history = {
+		owner = LBA
+		victory_points = {
+			1149 8
+		}
+		victory_points = {
+			9980 7
+		}
+		victory_points = {
+			1189 1
+		}
+		victory_points = {
+			7209 2
+		}
+		victory_points = {
+			4194 1
+		}
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 6
+			offices = 2
+			1149 = {
+				naval_base = 6
+			}
+			9980 = {
+				naval_base = 4
+			}
+			4194 = {
+				naval_base = 1
+				nuclear_facility = 1	#Tajura Nuclear Research Facility
+			}
+		}
+		add_core_of = LBA
+		add_core_of = TRP
+		
+	}
+
+	provinces = {
+		1149 1189 4176 4194 7066 9980 12009 12039 7209
+	}
+	manpower = 3232526
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

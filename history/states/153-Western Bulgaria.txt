@@ -1,0 +1,43 @@
+﻿state = {
+	id = 153
+	name = "STATE_153"
+	resources = {
+		tungsten = 5.000
+		steel = 3.000
+		oil = 5
+	}
+
+	history = {
+		owner = BUL
+		victory_points = {
+			949 9
+		}
+		victory_points = {
+			11813 2
+		}
+		victory_points = {
+			3796 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			offices = 1
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 3
+			nuclear_reactor = 2
+			949 = {
+				land_facility = 1
+			}
+		}
+		add_core_of = BUL
+		
+	}
+
+	provinces = {
+		793 893 935 949 3796 3819 3937 3971 6857 6923 6982 9771 9818 11754 11813
+	}
+	manpower = 6393487
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

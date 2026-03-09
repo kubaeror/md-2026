@@ -1,0 +1,46 @@
+﻿state = {
+	id = 460
+	name = "STATE_460"
+
+	resources = {
+		chromium = 16
+	}
+
+	history = {
+		owner = RAJ
+		victory_points = {
+			7340 5
+		}
+		victory_points = {
+			10152 5
+		}
+		victory_points = {
+			4321 5
+		}
+		victory_points = {
+			1430 1
+		}
+		buildings = {
+			infrastructure = 0
+			arms_factory = 1
+			industrial_complex = 5
+			internet_station = 0
+			offices = 1
+			air_base = 4
+			7340 = {
+				naval_base = 4
+			}
+		}
+		set_variable = { hydroelectric_energy_production_var = 1.255 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = RAJ
+	}
+
+	provinces = {
+		1430 4321 4365 7340 10152 12180
+	}
+	manpower = 22052001
+	buildings_max_level_factor = 1.000
+	state_category = state_11
+}

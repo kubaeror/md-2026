@@ -1,0 +1,36 @@
+﻿state = {
+	id = 753
+	name = "STATE_753"
+
+	history = {
+		owner = CAN
+		victory_points = {
+			7869 3
+		}
+		victory_points = {
+			10527 3
+		}
+		victory_points = {
+			13075 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			air_base = 1
+
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.22 }		
+		add_core_of = CAN
+
+		
+
+	}
+
+	provinces = {
+		3606 4272 7696 7830 7869 7891 7901 8653 10527 10703 13075 13189 14748 14749
+	}
+	manpower = 92166
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

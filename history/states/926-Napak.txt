@@ -1,0 +1,22 @@
+﻿state = {
+	id = 926
+	name = "STATE_926"
+	history = {
+		owner = KEN
+		add_core_of = KEN
+		add_claim_by = SSU
+		add_claim_by = SUD
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+
+		}
+		
+	}
+	provinces = {
+		9360
+	}
+	manpower = 878
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

@@ -1,0 +1,31 @@
+﻿state = {
+	id = 466
+	name = "STATE_466"
+	manpower = 517652
+	state_category = state_01
+	resources = {
+		steel = 1.000
+	}
+
+	history = {
+		owner = GEO
+		victory_points = {
+			3653 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			air_base = 1
+			3653 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = GEO
+		add_core_of = ADJ
+		
+	}
+
+	provinces = {
+		3653
+	}
+}

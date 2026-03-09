@@ -1,0 +1,40 @@
+﻿state = {
+	id = 655
+	name = "STATE_655"
+
+	resources = {
+		steel = 4.000
+	}
+
+	history = {
+		owner = SOV
+		victory_points = {
+			11379 5
+		}
+		victory_points = {
+			3387 1
+		}
+		victory_points = {
+			6284 1
+		}
+		victory_points = {
+			11294 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			arms_factory = 1
+			offices = 1
+			industrial_complex = 1
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }		
+		add_core_of = SOV
+	}
+
+	provinces = {
+		269 330 3275 3387 6230 6284 9266 9273 9313 11258 11294 11379 15432 16051 16187 16192 16196 16197 16198 16199
+	}
+	manpower = 1456650
+	state_category = state_02
+}

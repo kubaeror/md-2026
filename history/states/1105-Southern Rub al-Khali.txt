@@ -1,0 +1,20 @@
+﻿state = {
+	id = 1105
+	name = "STATE_1105"
+	manpower = 3389
+	state_category = state_inhospitable
+	impassable = yes
+
+	history = {
+		owner = YEM
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+		}
+		add_core_of = YEM
+	}
+
+	provinces = {
+		13079
+	}
+}

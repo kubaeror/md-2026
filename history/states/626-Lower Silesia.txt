@@ -1,0 +1,38 @@
+﻿state = {
+	id = 626
+	name = "STATE_626"
+
+	resources = {
+		steel = 7
+		aluminium = 3
+	}
+	history = {
+		owner = POL
+		victory_points = {
+			9570 5
+		}
+		victory_points = {
+			3485 1
+		}
+		victory_points = {
+			6595 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 1
+			synthetic_refinery = 1
+			offices = 2
+		}
+		add_core_of = POL
+		add_core_of = SIL
+		
+	}
+
+	provinces = {
+		3283 3485 3510 3545 6595 9570
+	}
+	manpower = 3771879
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

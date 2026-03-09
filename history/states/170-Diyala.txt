@@ -1,0 +1,28 @@
+﻿state = {
+	id = 170
+	name = "STATE_170"
+	resources = {
+		oil = 10
+	}
+
+	history = {
+		owner = IRQ
+		victory_points = {
+			10793 2
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+		}
+		add_core_of = IRQ
+		add_core_of = PUK
+
+	}
+
+	provinces = {
+		1455 10793 11112 11284 14058 14659
+	}
+	manpower = 1378982
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

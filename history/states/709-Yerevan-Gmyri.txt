@@ -1,0 +1,37 @@
+﻿state = {
+	id = 709
+	name = "STATE_709"
+	resources = {
+		tungsten = 7.000
+	}
+
+	history = {
+		owner = ARM
+		victory_points = {
+			12320 8
+		}
+		victory_points = {
+			12441 1
+		}
+		victory_points = {
+			12380 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			air_base = 4
+			nuclear_reactor = 1
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		add_core_of = ARM
+		
+	}
+
+	provinces = {
+		1210 3564 12320 12380 12441
+	}
+	manpower = 3446164
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

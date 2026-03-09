@@ -1,0 +1,44 @@
+﻿state = {
+	id = 356
+	name = "STATE_356"
+
+	resources = {
+		chromium = 42
+	}
+
+	history = {
+		owner = LUR
+		victory_points = {
+			7959 10
+		}
+		victory_points = {
+			13241 5
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			air_base = 1
+			7959 = {
+				naval_base = 1
+
+			}
+			industrial_complex = 1
+
+		}
+		add_core_of = LIB
+		add_core_of = LUR
+		LIB = {
+			set_province_controller = 13240
+			set_province_controller = 7959
+			set_province_controller = 13239
+		}
+		
+	}
+
+	provinces = {
+		7959 13239 13240 13241
+	}
+	manpower = 2620913
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

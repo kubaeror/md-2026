@@ -1,0 +1,35 @@
+﻿state = {
+	id = 498
+	name = "STATE_498"
+
+	resources = {
+		tungsten = 2
+	}
+
+	history = {
+		owner = SHN
+		victory_points = {
+			130 5
+		}
+		victory_points = {
+			7603 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			air_base = 1
+			industrial_complex = 1
+		}
+		add_core_of = SHN
+		add_core_of = BRM
+		add_core_of = NHN
+		
+	}
+
+	provinces = {
+		1607 7603 130 7647
+	}
+	manpower = 420474
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

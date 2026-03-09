@@ -1,0 +1,34 @@
+﻿state = {
+	id = 193
+	name = "STATE_193"
+
+	resources = {
+		oil = 3
+	}
+
+	history = {
+		owner = SYR
+		victory_points = {
+			3129 3
+		}
+		victory_points = {
+			1549 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 4
+			agriculture_district = 1
+		}
+		add_core_of = SYR
+		add_core_of = KUR
+		
+	}
+
+	provinces = {
+		1549 1578 3129 6362 7671 10882
+	}
+	manpower = 1464505
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

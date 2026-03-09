@@ -1,0 +1,41 @@
+﻿state = {
+	id = 675
+	name = "STATE_675"
+	manpower = 4453644
+	state_category = state_05
+
+	resources = {
+		steel = 42
+	}
+
+	history = {
+		owner = SOV
+
+		victory_points = { 9292 10 } #Chelyabinsk
+		victory_points = { 10256 5 } #Magnitogorsk
+		victory_points = { 10185 3 } #Zlatoust
+		victory_points = { 7285 3 } #Ozyorsk
+		victory_points = { 12584 1 } #Snezhinsk
+		victory_points = { 10213 3 } #Troitsk
+		victory_points = { 1334 3 } #Miass
+		victory_points = { 4411 1 } #Kartaly
+		victory_points = { 4265 1 } #Tryokhgorny
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			offices = 1
+			arms_factory = 1
+			air_base = 2
+			industrial_complex = 1
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
+		add_core_of = SOV
+		
+	}
+
+	provinces = {
+		11223 10329 1233 12287 12157 10213 9292 12584 7285 4411 10256 7401 7328 1334 10185 4265
+	}
+}

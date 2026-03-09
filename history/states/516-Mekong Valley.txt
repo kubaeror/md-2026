@@ -1,0 +1,41 @@
+﻿state = {
+	id = 516
+	name = "STATE_516"
+
+
+	history = {
+		owner = LAO
+		victory_points = {
+			1464 10
+		}
+		victory_points = {
+			10496 1
+		}
+		victory_points = {
+			1507 1
+		}
+		victory_points = {
+			10330 1
+		}
+		victory_points = {
+			12332 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			industrial_complex = 1
+			air_base = 2
+		}
+		set_variable = { hydroelectric_energy_production_var = 0.275 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = LAO
+	}
+
+	provinces = {
+		1464 1507 7356 10330 10356 10456 10496 12332 180 181
+	}
+	manpower = 2385945
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

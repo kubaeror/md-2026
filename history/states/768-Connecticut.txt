@@ -1,0 +1,39 @@
+﻿state = {
+	id = 768
+	name = "STATE_768"
+	manpower = 4490049
+	state_category = state_05
+
+	history = {
+		owner = USA
+		victory_points = { 9847 5 } #New Haven
+		victory_points = { 6909 1 } #Essex
+		victory_points = { 9850 10 } #Hartford
+		victory_points = { 9832 1 } #Norwich
+		victory_points = { 11830 1 } #Storrs
+
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			dockyard = 2
+			industrial_complex = 1
+			nuclear_reactor = 1
+			offices = 2
+			9832 = {
+				naval_base = 10
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		add_core_of = USA
+
+	}
+
+	provinces = {
+		11830 9832 6909 9850 9847
+	}
+}

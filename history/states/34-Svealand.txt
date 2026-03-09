@@ -1,0 +1,60 @@
+﻿
+state = {
+	id = 34
+	name = "STATE_34"
+
+	resources = {
+		tungsten = 2.000
+	}
+
+	history = {
+		owner = SWE
+		victory_points = {
+			6050 10 #Stockholm
+		}
+		victory_points = {
+			9149 3 #Uppsala
+		}
+		victory_points = {
+			11188 3 #Eskilstuna
+		}
+		victory_points = {
+			11163 3 #Södertälje
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			arms_factory = 1
+			industrial_complex = 1
+			offices = 2
+			air_base = 6
+			dockyard = 1
+			nuclear_reactor = 1
+			agriculture_district = 1
+			6050 = {
+				naval_base = 5
+				nuclear_facility = 1
+			}
+			9149 = {
+				nuclear_facility = 1
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		add_core_of = SWE
+		set_variable = { hydroelectric_energy_production_var = 4.681 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		set_variable = { hydroelectric_energy_production_var = 0.179 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		3182 6050 6127 9149 11082 11163 11188 11278 13097 13098
+	}
+	manpower = 3457233
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+	local_supplies = 0.000
+}

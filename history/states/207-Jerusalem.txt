@@ -1,0 +1,31 @@
+﻿state = {
+	id = 207
+	name = "STATE_207"
+	manpower = 1078405
+	state_category = state_02
+
+	history = {
+		owner = ISR
+		victory_points = { 1086 8 } #Jerusalem
+
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			anti_air_building = 4
+			arms_factory = 1
+			offices = 1
+			1086 = {
+				landmark_domeofrock = {
+					level = 1
+				}
+			}
+		}
+		add_core_of = ISR
+		add_core_of = PAL
+		
+	}
+
+	provinces = {
+		1086
+	}
+}

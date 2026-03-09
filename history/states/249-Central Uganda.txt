@@ -1,0 +1,30 @@
+﻿state = {
+	id = 249
+	name = "STATE_249"
+
+	history = {
+		owner = UGA
+		victory_points = {
+			12989 10
+		}
+		victory_points = {
+			6561 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			industrial_complex = 1
+			air_base = 3
+
+		}
+		add_core_of = UGA
+		
+	}
+
+	provinces = {
+		12989 6561 6575 13728 13729 13730 13731
+	}
+	manpower = 9301410
+	buildings_max_level_factor = 1.000
+	state_category = state_07
+}

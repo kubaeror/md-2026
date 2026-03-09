@@ -1,0 +1,24 @@
+﻿state = {
+	id = 711
+	name = "STATE_711"
+	manpower = 542870
+	state_category = state_01
+
+	history = {
+		owner = AZE
+		victory_points = {
+			6997 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			air_base = 1
+		}
+		add_core_of = AZE
+		
+	}
+
+	provinces = {
+		3594 6997
+	}
+}

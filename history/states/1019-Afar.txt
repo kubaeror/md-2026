@@ -1,0 +1,22 @@
+﻿state = {
+	id = 1019
+	name = "STATE_1019"
+
+	history = {
+		owner = ETH
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+
+		}
+		add_core_of = ETH
+		
+	}
+
+	provinces = {
+		374 397 510 518 5041 13802 13803 13804 13805 13806 13807 13808
+	}
+	manpower = 1926494
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

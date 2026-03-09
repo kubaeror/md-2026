@@ -1,0 +1,29 @@
+﻿state = {
+	id = 398
+	name = "STATE_398"
+	manpower = 568100
+	state_category = state_01
+
+	history = {
+		owner = VER
+		victory_points = { 13014 3 } #Praia
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 1
+
+			13014 = {
+				naval_base = 1
+			}
+			industrial_complex = 1
+		}
+		add_core_of = VER
+		
+	}
+
+	provinces = {
+		 13014
+
+		}
+}

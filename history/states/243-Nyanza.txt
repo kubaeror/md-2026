@@ -1,0 +1,28 @@
+﻿state = {
+	id = 243
+	name = "STATE_243"
+
+	history = {
+		owner = KEN
+		victory_points = {
+			9082 5
+		}
+		victory_points = {
+			9200 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+
+		}
+		add_core_of = KEN
+		
+	}
+
+	provinces = {
+		9082 9200 13696 13697
+	}
+	manpower = 10076263
+	buildings_max_level_factor = 1.000
+	state_category = state_07
+}

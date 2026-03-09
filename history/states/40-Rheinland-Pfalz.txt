@@ -1,0 +1,45 @@
+﻿state = {
+	id = 40
+	name = "STATE_40"
+	manpower = 5288223
+	state_category = state_05
+
+	resources = {
+		steel = 40
+	}
+
+	history = {
+		owner = GER
+		victory_points = {
+			11560 1
+		}
+		victory_points = {
+			3558 1
+		}
+		victory_points = {
+			3423 1
+		}
+		victory_points = {
+			9575 1
+		}
+		buildings = {
+			air_base = 2
+			anti_air_building = 1
+			infrastructure = 3
+			internet_station = 2
+			offices = 2
+			synthetic_refinery = 1
+			industrial_complex = 2
+			11560 = {
+				# TRIGA-Mainz
+				nuclear_facility = 1
+			}
+		}
+		add_core_of = GER
+
+	}
+
+	provinces = {
+		529 3423 3558 6444 9575 11547 11560 11470 11494
+	}
+}

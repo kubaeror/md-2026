@@ -1,0 +1,28 @@
+﻿state = {
+	id = 343
+	name = "STATE_343"
+
+	history = {
+		owner = BEN
+		victory_points = {
+			12874 3
+		}
+		victory_points = {
+			12762 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+
+		}
+		add_core_of = BEN
+		
+	}
+
+	provinces = {
+		12762 12874 9731
+	}
+	manpower = 2868327
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

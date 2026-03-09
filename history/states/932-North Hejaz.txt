@@ -1,0 +1,29 @@
+﻿state = {
+	id = 932
+	name = "STATE_932"
+
+	history = {
+		owner = SAU
+		victory_points = {
+			2027 5
+		}
+		buildings = {
+			infrastructure = 2
+			air_base = 3
+			offices = 1
+			industrial_complex = 2
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.525 }
+		add_core_of = SAU
+		add_core_of = HEJ
+		
+	}
+
+	provinces = {
+		573 1033 2027 3367 3368 5099 8092 11415 11545 12101 12455 14431
+	}
+	manpower = 771439
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

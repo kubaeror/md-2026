@@ -1,0 +1,49 @@
+﻿state = {
+	id = 74
+	name = "STATE_74"
+	resources = {
+		steel = 2.000
+		aluminium = 2.000
+		chromium = 12
+	}
+
+	history = {
+		owner = SWI
+		victory_points = {
+			663 1
+		}
+		victory_points = {
+			9638 1
+		}
+		victory_points = {
+			9620 3
+		}	
+		victory_points = {
+			11623 3
+		}		
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			arms_factory = 1
+			industrial_complex = 2
+			offices = 2
+			air_base = 4
+			fuel_silo = 1
+			nuclear_reactor = 1
+			agriculture_district = 1
+			stronghold_network = 1 #swiss underground bunkers
+			9620 = {
+				land_facility = 1
+			}
+		}
+		add_core_of = SWI
+		
+	}
+
+	provinces = {
+		318 636 663 9620 9638 11601 11604 11623
+	}
+	manpower = 6327720
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

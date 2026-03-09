@@ -1,0 +1,38 @@
+﻿state = {
+	id = 328
+	name = "STATE_328"
+
+	resources = {
+		oil = 2
+	}
+
+	history = {
+		owner = CHA
+		victory_points = {
+			2081 10
+		}
+		victory_points = {
+			1473 1
+		}
+		victory_points = {
+			3181 1
+		}
+		victory_points = {
+			11500 1
+		}
+		buildings = {
+			infrastructure = 1
+			air_base = 2
+			industrial_complex = 1
+		}
+		add_core_of = CHA
+		
+	}
+
+	provinces = {
+		1473 2081 3181 4978 9152 11484 11489 11500 13138 14553
+	}
+	manpower = 3951105
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

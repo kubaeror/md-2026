@@ -1,0 +1,35 @@
+﻿state = {
+	id = 767
+	name = "STATE_767"
+	manpower = 8253826
+	state_category = state_06
+
+	history = {
+		owner = USA
+		victory_points = { 6732 10 } #Boston
+		victory_points = { 3710 1 } #Sturbridge
+		victory_points = { 718 1 } #Shelburne Falls
+		victory_points = { 3906 1 } #Plymouth
+		victory_points = { 905 1 } #Barnstable
+		victory_points = { 14576 1 } #New Bedford
+		victory_points = { 715 5 } #Fitchburg
+		victory_points = { 908 5 } #Westfield
+
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			dockyard = 3
+			air_base = 6
+			industrial_complex = 2
+			offices = 4
+
+			6732 = { naval_base = 4 }
+		}
+		add_core_of = USA
+		
+	}
+
+	provinces = {
+		6732 3906 905 715 3710 718 908 14576 
+	}
+}

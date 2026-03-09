@@ -1,0 +1,36 @@
+﻿state = {
+	id = 164
+	name = "STATE_164"
+	resources = {
+		oil = 9.000
+	}
+
+	history = {
+		owner = KUR
+		victory_points = {
+			3916 11
+		}
+		victory_points = {
+			5014 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 2
+			air_base = 4
+			arms_factory = 1
+		}
+		add_core_of = IRQ
+		add_core_of = KUR
+		add_core_of = PUK
+		
+
+	}
+
+	provinces = {
+		3916 5014
+	}
+	manpower = 1562220
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

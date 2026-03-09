@@ -1,0 +1,26 @@
+﻿state = {
+	id = 1100
+	name = "STATE_1100"
+
+	history = {
+		owner = LBA
+		add_core_of = LBA	
+		add_core_of = CYR
+		add_core_of = TIE
+		victory_points = {
+			1057 1
+		}
+		buildings = {
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }		
+		
+	}
+
+	provinces = {
+		14502 14499 1057
+	}
+	manpower = 50663
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

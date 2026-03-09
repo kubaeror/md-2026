@@ -1,0 +1,30 @@
+﻿state = {
+	id = 292
+	name = "STATE_292"
+
+
+	history = {
+		owner = ZAM
+		victory_points = {
+			5199 10
+		}
+		victory_points = {
+			7872 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 4
+			industrial_complex = 1
+		}
+		add_core_of = ZAM
+		
+	}
+
+	provinces = {
+		5199 7872 9545 9564 9581
+	}
+	manpower = 4127167
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

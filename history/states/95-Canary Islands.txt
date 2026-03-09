@@ -1,0 +1,29 @@
+﻿state = {
+	id = 95
+	name = "STATE_95"
+	manpower = 2424754
+	state_category = state_03
+
+	history = {
+		owner = SPR
+		victory_points = { 13071 3 } #Las Palmas
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			offices = 2
+			13071 = {
+				naval_base = 1
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }
+		add_core_of = SPR
+		add_core_of = CNR
+		
+	}
+
+	provinces = {
+		13071
+	}
+}
+

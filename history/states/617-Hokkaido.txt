@@ -1,0 +1,50 @@
+﻿state = {
+	id = 617
+	name = "STATE_617"
+	manpower = 6991831
+	state_category = state_06
+
+	resources = {
+		oil = 4
+		aluminium = 1
+	}
+
+	history = {
+		owner = JAP
+		victory_points = { 10444 10 } #Sapporo
+		victory_points = { 3962 2 } #Hakodate
+		victory_points = { 12352 3 } #Asahikawa
+		victory_points = { 1512 1 } #Kushiro
+		victory_points = { 4646 1 } #Abashiri
+		victory_points = { 4576 1 } #Wakkanai
+		victory_points = { 7595 1 } #Wakkanai
+		victory_points = { 12421 1 } #Furano
+		victory_points = { 12493 1 } #Obhiro
+		victory_points = { 14884 1 } #Nemuro
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			arms_factory = 1
+			industrial_complex = 3
+			offices = 7
+			fuel_silo = 2
+			air_base = 6
+			nuclear_reactor = 2
+			10444 = {
+				naval_base = 2
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }
+		set_variable = { hydroelectric_energy_production_var = 0.277 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		set_variable = { geothermal_energy_production_var = 0.0345 }
+		add_dynamic_modifier = { modifier = geothermal_infrastructure_in_state }
+		add_core_of = JAP
+	}
+
+	provinces = {
+		3962 7532 10444 12352 4576 1642 4646 1512 12493 10512 12421 7595 14880 14881 14882 14883 14884 14887
+	}
+}

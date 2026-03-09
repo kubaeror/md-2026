@@ -1,0 +1,55 @@
+﻿state = {
+	id = 634
+	name = "STATE_634"
+
+	resources = {
+		oil = 3
+		rubber = 26
+	}
+
+	history = {
+		owner = IND
+		victory_points = {
+			4608 10
+		}
+		victory_points = {
+			10479 5
+		}
+		victory_points = {
+			12472 2
+		}
+		victory_points = {
+			1209 2
+		}
+		victory_points = {
+			4306 1
+		}
+		victory_points = {
+			7654 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 5
+			arms_factory = 1
+			dockyard = 1
+			offices = 2
+			air_base = 4
+			4608 = {
+				naval_base = 4
+				nuclear_facility = 1
+			}
+		}
+		set_variable = { hydroelectric_energy_production_var = 0.105 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = IND
+	}
+
+	provinces = {
+		1209 4306 4608 6074 7654 10479 10491 12472
+	}
+	manpower = 45218732
+	buildings_max_level_factor = 1.000
+	state_category = state_15
+}

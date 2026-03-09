@@ -1,0 +1,29 @@
+﻿state = {
+	id = 992
+	name = "STATE_992"
+
+	history = {
+		owner = TUR
+		victory_points = {
+			9893 11
+		}
+		victory_points = {
+			3889 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			industrial_complex = 1
+			air_base = 4
+		}
+		add_core_of = TUR
+		
+	}
+
+	provinces = {
+		1109 3889 6956 9893
+	}
+	manpower = 2859056
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

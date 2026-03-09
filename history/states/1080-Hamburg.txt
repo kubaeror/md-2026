@@ -1,0 +1,36 @@
+﻿state = {
+	id = 1080
+	name = "STATE_1080"
+	manpower = 2440080
+	state_category = state_03
+
+	resources = {
+		tungsten = 5
+		chromium = 3
+	}
+
+	history = {
+		owner = GER
+		victory_points = {
+			9347 14
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 1
+			offices = 2
+			dockyard = 1
+			9347 = {
+				naval_base = 5
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		add_core_of = GER
+		
+	}
+
+	provinces = {
+		6325 9347
+	}
+}

@@ -1,0 +1,23 @@
+﻿state = {
+	id = 946
+	name = "STATE_946"
+	history = {
+		owner = MNC
+		add_core_of = MNC
+		buildings = {
+			infrastructure = 4
+			internet_station = 3
+			offices = 1
+		}
+		
+		victory_points = {
+			13288 1
+		}
+	}
+	provinces = {
+		13288
+	}
+	manpower = 41626
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

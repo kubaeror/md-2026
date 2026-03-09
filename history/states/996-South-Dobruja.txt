@@ -1,0 +1,25 @@
+﻿state = {
+	id = 996
+	name = "STATE_996"
+
+	history = {
+		owner = BUL
+		victory_points = {
+			13301 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+
+		}
+		add_core_of = BUL
+		
+	}
+
+	provinces = {
+		13300 13301
+	}
+	manpower = 387073
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

@@ -1,0 +1,59 @@
+﻿state = {
+	id = 755
+	name = "STATE_755"
+	resources = {
+		oil = 86
+		steel = 1.000
+	}
+
+	history = {
+		owner = CAN
+		victory_points = {
+			3010 5
+		}
+		victory_points = {
+			3706 5
+		}
+		victory_points = {
+			7718 3
+		}
+		victory_points = {
+			1262 3
+		}
+		victory_points = {
+			7787 3
+		}
+		victory_points = {
+			1763 1
+		}
+		victory_points = {
+			7348 3
+		}
+		victory_points = {
+			1804 1
+		}
+		victory_points = {
+			2407 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			air_base = 4
+			offices = 1
+			synthetic_refinery = 1
+
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
+		set_variable = { geothermal_energy_production_var = 0.005 }
+		add_dynamic_modifier = { modifier = geothermal_infrastructure_in_state }
+		add_core_of = CAN
+	}
+
+	provinces = {
+		381 515 1262 1347 1763 1804 2407 3010 3706 4765 6726 6754 7348 7718 7766 7787 10684 12166 12534 13192 14321 14322 14323
+	}
+	manpower = 3905457
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

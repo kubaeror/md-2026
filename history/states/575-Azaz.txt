@@ -1,0 +1,24 @@
+﻿state = {
+	id = 575
+	name = "STATE_575"
+
+	history = {
+		owner = SYR
+		victory_points = {
+			6367 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+		}
+		add_core_of = SYR
+		
+	}
+
+	provinces = {
+		6367 6370
+	}
+	manpower = 1058167
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

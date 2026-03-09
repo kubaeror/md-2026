@@ -1,0 +1,32 @@
+﻿state = {
+	id = 909
+	name = "STATE_909"
+
+	history = {
+		owner = ROM
+		victory_points = {
+			3696 1
+		}
+		victory_points = {
+			11676 1
+		}
+		victory_points = {
+			746 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 2
+			nuclear_reactor = 1
+		}
+		add_core_of = ROM
+		
+	}
+
+	provinces = {
+		711 713 727 746 3676 3696 6714 9668 9670 9685 11676
+	}
+	manpower = 5407571
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

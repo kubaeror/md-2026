@@ -1,0 +1,44 @@
+﻿state = {
+	id = 603
+	name = "STATE_603"
+
+	resources = {
+		aluminium = 9
+	}
+
+	history = {
+		owner = NKO
+		victory_points = {
+			1003 2
+		}
+		victory_points = {
+			10065 2
+		}
+		victory_points = {
+			11915 2
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			fuel_silo = 1
+			synthetic_refinery = 1
+			air_base = 6
+			12040 = {
+				bunker = 2
+			}
+			1003 = {
+				bunker = 2
+			}
+		}
+		add_core_of = NKO
+		add_core_of = KOR
+		
+	}
+
+	provinces = {
+		1003 3176 4107 7070 7155 10065 11915 12040
+	}
+	manpower = 5777493
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

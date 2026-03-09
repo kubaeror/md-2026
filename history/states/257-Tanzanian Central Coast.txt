@@ -1,0 +1,33 @@
+﻿state = {
+	id = 257
+	name = "STATE_257"
+	manpower = 6511160
+	state_category = state_06
+
+	resources = {
+		oil = 4
+	}
+
+	history = {
+		owner = TNZ
+		victory_points = { 2196 10 } #Dar es Salaam
+		victory_points = { 8183 5 } #Tanga
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 4
+			agriculture_district = 1
+
+			2196 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = TNZ
+		
+	}
+
+	provinces = {
+		2196 8183 13678 13679 13680
+	}
+}

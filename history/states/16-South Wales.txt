@@ -1,0 +1,38 @@
+﻿state = {
+	id = 16
+	name = "STATE_16"
+	manpower = 2662133
+	state_category = state_03
+
+	resources = {
+		aluminium = 18.000
+	}
+
+	history = {
+		owner = ENG
+		victory_points = { 377 3 } #Cardiff
+		victory_points = { 407 1 } #Swansea
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			industrial_complex = 1
+			offices = 1
+			arms_factory = 1
+			377 = {
+				naval_base = 3
+				nuclear_facility = 1
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }
+		set_variable = { hydroelectric_energy_production_var = 0.125 } #excluding the massive storage!
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = ENG
+		add_core_of = WAS
+	}
+
+	provinces = {
+		253 377 407 3274 11361
+	}
+}

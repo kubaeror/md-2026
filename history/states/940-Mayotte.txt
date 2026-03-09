@@ -1,0 +1,27 @@
+﻿state = {
+	id = 940
+	name = "STATE_940"
+	manpower = 192910
+
+	state_category = state_01
+
+	history = {
+		owner = FRA
+		victory_points = { 13285 1 } #Mamoudzou
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			air_base = 1
+			13285 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = FRA
+		add_core_of = COM
+		
+	}
+
+	provinces = {
+		13285
+	}
+}

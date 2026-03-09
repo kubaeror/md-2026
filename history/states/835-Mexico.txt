@@ -1,0 +1,52 @@
+﻿state = {
+	id = 835
+	name = "STATE_835"
+
+	resources = {
+		steel = 40
+	}
+	history = {
+		owner = MEX
+		victory_points = {
+			1965 30
+		}
+		victory_points = {
+			8089 5
+		}
+		victory_points = {
+			11780 5
+		}
+		victory_points = {
+			11675 5
+		}
+		victory_points = {
+			11737 5
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			industrial_complex = 10
+			offices = 7
+			arms_factory = 1
+			air_base = 6
+			agriculture_district = 1
+			1965 = {
+				nuclear_facility = 1
+			}
+		}
+		add_core_of = MEX
+		add_core_of = TRC
+		add_core_of = TAM
+		add_core_of = SLA
+		set_variable = { hydroelectric_energy_production_var = 0.225 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		1965 8089 11675 11737 11780
+	}
+	manpower = 37677940
+	buildings_max_level_factor = 1.000
+	state_category = state_14
+}

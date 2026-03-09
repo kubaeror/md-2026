@@ -1,0 +1,26 @@
+﻿state = {
+	id = 1115
+	name = "STATE_1115"
+	manpower = 125104
+	state_category = state_00
+	
+	history = {
+		owner = TON
+		add_core_of = TON
+		victory_points = { 14628 2 } #Nukuʻalofa
+		victory_points = { 16295 1 } #Neiafu
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 1
+			14628 = {
+				naval_base = 1
+			}
+	}
+
+	}
+
+	provinces = {
+		14627 14628 16295
+	}
+}

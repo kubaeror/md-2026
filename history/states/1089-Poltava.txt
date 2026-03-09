@@ -1,0 +1,27 @@
+﻿state = {
+	id = 1089
+	name = "STATE_1089"
+
+	history = {
+		owner = UKR
+		victory_points = {
+			511 2
+		}
+		victory_points = {
+			6495 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			agriculture_district = 1
+			air_base = 2
+		}
+		add_core_of = UKR
+	}
+
+	provinces = {
+		511 559 3557 3584 6495 6578 9413 9519 14449 14536
+	}
+	manpower = 1998102
+	state_category = state_03
+}

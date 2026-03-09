@@ -1,0 +1,27 @@
+﻿state = {
+	id = 941
+	name = "STATE_941"
+	manpower = 227711
+
+	state_category = state_01
+
+	history = {
+		owner = PAP
+		victory_points = {
+			10234 1
+		}
+		buildings = {
+			infrastructure = 0
+			10234 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = PAP
+		add_core_of = SOL
+		
+	}
+
+	provinces = {
+		10234
+	}
+}

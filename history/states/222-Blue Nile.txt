@@ -1,0 +1,26 @@
+﻿state = {
+	id = 222
+	name = "STATE_222"
+
+	history = {
+		owner = SUD
+		victory_points = {
+			11058 1 
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+
+		}
+		add_core_of = SUD
+		add_claim_by = SSU
+		
+	}
+
+	provinces = {
+		4918 11042 11058
+	}
+	manpower = 1621318
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

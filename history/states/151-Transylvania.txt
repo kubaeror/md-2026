@@ -1,0 +1,40 @@
+﻿state = {
+	id = 151
+	name = "STATE_151"
+	resources = {
+		oil = 15
+		steel = 1.000
+	}
+
+	history = {
+		owner = ROM
+		victory_points = {
+			3694 2
+		}
+		victory_points = {
+			690 2
+		}
+		victory_points = {
+			6679 1
+		}
+		victory_points = {
+			522 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 3
+			air_base = 2
+			arms_factory = 1
+		}
+		add_core_of = ROM
+		
+	}
+
+	provinces = {
+		522 690 3665 3694 6679 6711 9640 11639 9619
+	}
+	manpower = 2484157
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

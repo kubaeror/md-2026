@@ -1,0 +1,41 @@
+﻿state = {
+	id = 96
+	name = "STATE_96"
+	manpower = 3722997
+	state_category = state_04
+	resources = {
+		oil = 4.000
+		tungsten = 6
+	}
+
+	history = {
+		owner = POR
+		victory_points = {
+			11805 4
+		}
+		victory_points = {
+			970 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			arms_factory = 1
+			industrial_complex = 1
+			offices = 3
+			air_base = 5
+			11805 = {
+				naval_base = 6
+				land_facility = 1
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.33 }
+		add_core_of = POR
+		
+	}
+
+	provinces = {
+		970 11805
+	}
+	buildings_max_level_factor = 1.000
+}

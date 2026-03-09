@@ -1,0 +1,51 @@
+﻿state = {
+	id = 174
+	name = "STATE_174"
+
+	resources = {
+		oil = 154
+		aluminium = 27
+	}
+
+	history = {
+		owner = SAU
+		victory_points = {
+			12702 11
+		}
+		victory_points = {
+			10791 5
+		}
+		victory_points = {
+			6513 4
+		}
+		victory_points = {
+			12749 3
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			industrial_complex = 1
+			offices = 2
+			air_base = 8
+			agriculture_district = 1
+			12702 = {
+				naval_base = 8
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		add_core_of = SAU
+		add_core_of = QTF
+	}
+
+	provinces = {
+		1955 3374 3395 3462 3522 4932 5024 6513 7995 9032 9175 10791 10850 12702 12749 12821 14557
+	}
+	manpower = 4462369
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

@@ -1,0 +1,30 @@
+﻿state = {
+	id = 87
+	name = "STATE_87"
+
+	history = {
+		owner = SPR
+		victory_points = {
+			3816 5
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 3
+			air_base = 3
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
+		add_core_of = SPR
+		set_variable = { hydroelectric_energy_production_var = 0.188 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		790 813 899 3816 3954 6878 6901 7213 9842 11819 11838 13923
+	}
+	manpower = 1479072
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

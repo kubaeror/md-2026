@@ -1,0 +1,27 @@
+﻿
+state = {
+	id = 1045
+	name = "STATE_1045"
+
+	history = {
+		owner = TNZ
+		victory_points = {
+			10988 5
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+
+		}
+		add_core_of = TNZ
+		
+
+	}
+
+	provinces = {
+		10988 13661 13662
+	}
+	manpower = 3445850
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

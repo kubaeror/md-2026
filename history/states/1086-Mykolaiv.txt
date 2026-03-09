@@ -1,0 +1,36 @@
+﻿state = {
+	id = 1086
+	name = "STATE_1086"
+
+	resources = {
+		oil = 13
+	}
+
+	history = {
+		owner = UKR
+		victory_points = {
+			11683 4
+		}
+		buildings = {
+			industrial_complex = 1
+			dockyard = 2
+			infrastructure = 2
+			internet_station = 1
+			air_base = 3
+			11683 = {
+				naval_facility = 1
+				naval_base = 4
+			}
+		}
+		add_core_of = UKR
+		set_variable = { hydroelectric_energy_production_var = 0.078 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+	}
+
+	provinces = {
+		3575 6507 6597 9573 11546 11683 11703 14437 14438
+	}
+	manpower = 1614756
+	state_category = state_02
+}

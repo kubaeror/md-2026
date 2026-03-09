@@ -1,0 +1,38 @@
+﻿state = {
+	id = 964
+	name = "STATE_964"
+	manpower = 5420106
+	state_category = state_05
+
+	resources = {
+		steel = 20
+	}
+	history = {
+		owner = GER
+		victory_points = {
+			11544 4
+		}
+		victory_points = {
+			11417 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			arms_factory = 1
+			industrial_complex = 3
+			offices = 3
+			air_base = 6
+			anti_air_building = 1
+			nuclear_reactor = 1
+			agriculture_district = 1
+		}
+		add_dynamic_modifier = { modifier = GER_new_economic_hubs }
+		add_core_of = GER
+		add_core_of = BAY
+		
+	}
+
+	provinces = {
+		3474 6421 6594 9416 9557 9572 11404 11417 11529 11544 13116
+	}
+}

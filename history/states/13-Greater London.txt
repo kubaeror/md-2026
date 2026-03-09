@@ -1,0 +1,43 @@
+﻿state = {
+	id = 13
+	name = "STATE_13"
+	manpower = 9647911
+	state_category = state_07
+
+	resources = {
+		aluminium = 18.000
+	}
+
+	history = {
+		owner = ENG
+		victory_points = {
+			11333 50
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 2
+			offices = 12
+			air_base = 10
+			anti_air_building = 1
+			11333 = {
+				landmark_big_ben = {
+					allowed = {
+						has_dlc = "Gotterdammerung"
+					}
+					level = 1
+				}
+				# BAE land
+				land_facility = 1
+				naval_base = 2
+			}
+		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
+		add_core_of = ENG
+	}
+
+	provinces = {
+		507 11333
+	}
+}

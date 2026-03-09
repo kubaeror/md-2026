@@ -1,0 +1,48 @@
+﻿state = {
+	id = 791
+	name = "STATE_791"
+	manpower = 5215615
+	state_category = state_05
+
+	history = {
+		owner = USA
+		victory_points = { 16006 10 } #Columbia
+		victory_points = { 7202 5 } #Charleston
+		victory_points = { 16012 1 } #Travelers Rest
+		victory_points = { 7134 1 } #Mullins
+		victory_points = { 4653 5 } #Spartanburg
+		victory_points = { 4491 1 } #Rock Hill
+		victory_points = { 16007 1 } #Lake City
+		victory_points = { 7012 1 } #Florence
+		victory_points = { 11927 1 } #Little River
+		victory_points = { 15995 1 } #Walterboro
+		victory_points = { 3994 3 } #Aiken
+
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			dockyard = 3
+			air_base = 5
+			industrial_complex = 2
+			offices = 2
+			nuclear_reactor = 1
+			agriculture_district = 1
+			7202 = {
+				naval_base = 10
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		add_core_of = USA
+
+	}
+
+	provinces = {
+		  1485 1547 3994 4491 4653 7012 7134 7202 7527 10029 10047 11927 15990 15991 15992 15993 15994 15995
+		  15996 15997 15998 15999 16000 16001 16002 16003 16004 16005 16006 16007 16008 16009 16010 16011 16012
+	}
+}

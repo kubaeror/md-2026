@@ -1,0 +1,28 @@
+﻿state = {
+	id = 175
+	name = "STATE_175"
+	resources = {
+		oil = 90
+	}
+
+	impassable = yes
+
+	history = {
+		owner = SAU
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+		}
+		add_core_of = SAU
+		add_core_of = NEJ
+		add_core_of = QTF
+		
+	}
+
+	provinces = {
+		8118
+	}
+	manpower = 871
+	buildings_max_level_factor = 1.000
+	state_category = state_inhospitable
+}

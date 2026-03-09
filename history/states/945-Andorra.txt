@@ -1,0 +1,23 @@
+﻿state = {
+	id = 945
+	name = "STATE_945"
+	history = {
+		owner = ADO
+		add_core_of = ADO
+		buildings = {
+			infrastructure = 1
+			internet_station = 2
+			offices = 1
+		}
+		
+		victory_points = {
+			13287 1
+		}
+	}
+	provinces = {
+		13287
+	}
+	manpower = 85007
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}
