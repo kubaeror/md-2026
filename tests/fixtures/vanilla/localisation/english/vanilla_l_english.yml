@@ -1,0 +1,4 @@
+l_english:
+ test_vanilla.1.t:0 "Vanilla Event Title"
+ test_vanilla.1.d:0 "Vanilla Event Description"
+ test_vanilla.1.o1:0 "OK"

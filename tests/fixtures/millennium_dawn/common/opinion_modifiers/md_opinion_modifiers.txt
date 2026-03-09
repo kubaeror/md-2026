@@ -1,0 +1,9 @@
+improve_relation = {
+	opinion = 20
+	decay = 1
+}
+
+worsen_relation = {
+	opinion = -20
+	decay = 1
+}

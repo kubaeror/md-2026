@@ -1,0 +1,10 @@
+ideas = {
+	country = {
+		md_test_idea = {
+			picture = GFX_idea_generic
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+	}
+}

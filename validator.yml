@@ -1,0 +1,62 @@
+# HoI4 Mod Validator configuration
+# Used by GitHub Actions and local runs
+
+paths:
+  # Path to this submod (relative to repo root or absolute)
+  submod: "."
+  # Path to Millennium Dawn checkout (set via env MD_PATH in CI)
+  # millennium_dawn: "millennium_dawn"
+  # Path to vanilla HoI4 (optional, greatly improves reference accuracy)
+  # vanilla: "/path/to/Hearts of Iron IV"
+  cache_dir: ".validator_cache"
+
+validators:
+  syntax: true
+  references: true
+  logic: true
+  localization: true
+  assets: true
+
+reporting:
+  format: json        # json | markdown | html | all
+  max_issues: 2000
+  annotations: false  # overridden to true by --annotations flag in CI
+
+# Suppress specific issue codes for specific file patterns.
+# Useful for known false positives from MD compatibility layers.
+suppress:
+  # Example: suppress missing GFX warnings for vanilla-only sprites
+  # - code: REF008
+  #   path: "*/events/*.txt"
+  #   reason: "GFX sprites provided by vanilla, not bundled with submod"
+
+  # Example: suppress duplicate key hints in on_actions files
+  # - code: SYN008
+  #   path: "*/on_actions/*.txt"
+  #   reason: "on_actions files intentionally repeat keys to stack effects"
+
+millennium_dawn:
+  # Additional country tags introduced by MD (beyond vanilla 3-letter codes)
+  extra_tags:
+    - "RUS"
+    - "UKR"
+    - "VIE"
+    - "PRK"
+    - "INS"
+    - "MAS"
+    - "NGR"
+
+  # MD ideology groups (for has_government trigger validation)
+  ideologies:
+    - "democratic"
+    - "authoritarian"
+    - "communist"
+    - "fascist"
+    - "islamist"
+    - "nationalist"
+    - "liberal"
+    - "conservative"
+    - "social_democrat"
+    - "libertarian"
+    - "theocracy"
+    - "military_junta"
