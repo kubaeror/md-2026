@@ -1123,9 +1123,10 @@
 		}
 	}
 
+	recruit_character = SPR_teodoro_esteban_lopez_calderon
+	recruit_character = SPR_amador_ensenat_y_berea
 	recruit_character = SPR_alfonso_pardo_de_santayana_y_coloma
 	recruit_character = SPR_jaime_dominguez_buj
-	recruit_character = SPR_jose_julio_rodriguez_fernandez
 	recruit_character = SPR_fernando_gutierrez_diaz_de_otazu
 	recruit_character = SPR_pedro_pitarch_bartolome
 	recruit_character = SPR_antonio_planells

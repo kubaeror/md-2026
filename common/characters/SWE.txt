@@ -1,0 +1,566 @@
+﻿characters = {
+	SWE_micael_byden = {
+		name = "Micael Bydén"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Portrait_Micael_Byden_small.dds"
+				large = "gfx/leaders/SWE/Portrait_Micael_Byden.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = micael_bydén
+			ledger = air
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				air_air_superiority_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = micael_bydén
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				air_pilot_training_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.100
+			}
+		}
+		field_marshal = {
+			traits = { defensive_doctrine }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	SWE_philip_av_swerige = {
+		name = "Carl Philip av Sverige"
+		available = {
+			has_country_flag = philip_officer_training
+		}
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/philipMil_small.dds"
+				large = "gfx/leaders/SWE/philipMil.dds"
+			}
+		}
+		corps_commander = {
+			traits = { naval_invader marine_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	SWE_victoria_av_sweden = {
+		name = "Victoria av Sverige"
+		available = {
+			has_country_flag = victoria_officer_training
+		}
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/VictoriaMil_small.dds"
+				large = "gfx/leaders/SWE/VictoriaMil.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = victoria_av_sweden
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				army_chief_morale_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { media_personality }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+
+	SWE_Ulf_Henricsson = {
+		name = "Ulf Hugo Henricsson"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Ulf_Henricsson_small.dds"
+				large = "gfx/leaders/SWE/Ulf_Henricsson.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = Ulf_Henricsson
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				army_chief_offensive_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { commando }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+
+	SWE_anders_silwer = {
+		name = "Anders Silwer"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Portrait_Anders_Silwer_small.dds"
+				large = "gfx/leaders/SWE/Portrait_Anders_Silwer.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = anders_silwer
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				air_pilot_training_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.100
+			}
+		}
+	}
+	SWE_christer_tistam = {
+		name = "Christer Tistam"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Portrait_Christer_Tistam_small.dds"
+				large = "gfx/leaders/SWE/Portrait_Christer_Tistam.dds"
+			}
+		}
+		corps_commander = {
+			traits = { urban_assault_specialist }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	SWE_michael_nilsson = {
+		name = "Michael Nilsson"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Portrait_Michael_Nilsson_small.dds"
+				large = "gfx/leaders/SWE/Portrait_Michael_Nilsson.dds"
+			}
+		}
+		corps_commander = {
+			traits = { panzer_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	SWE_mats_helgeson = {
+		name = "Mats Helgeson"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Portrait_Mats_Helgesson_small.dds"
+				large = "gfx/leaders/SWE/Portrait_Mats_Helgesson.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = mats_helgeson
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				air_pilot_training_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.100
+			}
+		}
+	}
+	SWE_bengt_alexandersson = {
+		name = "Bengt Alexandersson"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Portrait_Bengt_Alexandersson_small.dds"
+				large = "gfx/leaders/SWE/Portrait_Bengt_Alexandersson.dds"
+			}
+		}
+		corps_commander = {
+			traits = { panzer_leader }
+			skill = 3
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	SWE_sverker_goransson = {
+		name = "Sverker Göransson"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Portrait_Sverker_Goransson_small.dds"
+				large = "gfx/leaders/SWE/Portrait_Sverker_Goransson.dds"
+			}
+		}
+		field_marshal = {
+			traits = { old_guard panzer_leader defensive_doctrine }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = sverker_goransson
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				army_chief_defensive_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	SWE_michael_claesson = {
+		name = "Michael Claesson"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Portrait_Michael_Claesson_small.dds"
+				large = "gfx/leaders/SWE/Portrait_Michael_Claesson.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = michael_claesson
+			ledger = army
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				army_logistics_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+		corps_commander = {
+			traits = { panzer_leader }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	SWE_jan_salestrand = {
+		name = "Jan Salestrand"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Portrait_Jan_Salestrand_small.dds"
+				large = "gfx/leaders/SWE/Portrait_Jan_Salestrand.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = jan_salestrand
+			ledger = air
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				air_air_superiority_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+	}
+
+	SWE_jonas_haggren = {
+		name = "Jonas Haggren"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Portrait_Jonas_Hagren_small.dds"
+				large = "gfx/leaders/SWE/Portrait_Jonas_Hagren.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = jonas_haggren
+			ledger = navy
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				navy_submarine_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+		navy_leader = {
+			traits = { seawolf }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 3
+		}
+	}
+	SWE_jan_thornqvist = {
+		name = "Jan Thörnqvist"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Portrait_Jan_Thoernqvist_small.dds"
+				large = "gfx/leaders/SWE/Portrait_Jan_Thoernqvist.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = jan_thörnqvist
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				navy_chief_maneuver_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.100
+			}
+		}
+		navy_leader = {
+			traits = { spotter small_ship_captain }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+	}
+
+	SWE_Mats_Nillson = {
+		name = "Mats Nillson"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Mats_Nillson_small.dds"
+				large = "gfx/leaders/SWE/Mats_Nillson.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = Mats_Nillson
+			ledger = air
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				air_chief_safety_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	SWE_Jorgen_Ericsson = {
+		name = "Jörgen Fredrik Ericsson"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Jorgen_Ericsson_small.dds"
+				large = "gfx/leaders/SWE/Jorgen_Ericsson.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = Jörgen_Ericsson
+			ledger = navy
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				navy_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		navy_leader = {
+			traits = { navy_career_officer destroyer_leader }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 4
+		}
+	}
+	SWE_Claes_Goran_Hagstrom = {
+		name = "Claes-Göran Hagström"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Claes_Goran_Hagstrom_small.dds"
+				large = "gfx/leaders/SWE/Claes_Goran_Hagstrom.dds"
+			}
+		}
+		navy_leader = {
+			traits = { spotter chief_engineer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			maneuvering_skill = 2
+			coordination_skill = 3
+		}
+	}
+	SWE_BO_Rask = {
+		name = "Bo Rask"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Bo_Rask_small.dds"
+				large = "gfx/leaders/SWE/Bo_Rask.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BO_Rask
+			ledger = navy
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				navy_submarine_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		navy_leader = {
+			traits = { blockade_runner seawolf }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			maneuvering_skill = 3
+			coordination_skill = 4
+		}
+	}
+	SWE_Alf_Sandqvist = {
+		name = "Alf Sandqvist"
+		portraits = {
+			army = {
+				small = "gfx/leaders/SWE/small/Alf_Sandqvist_small.dds"
+				large = "gfx/leaders/SWE/Alf_Sandqvist.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = sverker_goransson
+			ledger = army
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				army_CombinedArms_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+	}
+
+	SWE_jonny_lindfors = {
+		name = "Jonny Lindfors"
+		portraits = {
+			army = { large = "gfx/leaders/SWE/Jonny_Lindfors.dds" }
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+
+	SWE_ewa_skoo_haslum = {
+		name = "Ewa Skoog Haslum"
+		portraits = {
+			army = { large = "gfx/leaders/SWE/Ewa_Skoog_Haslum.dds" }
+		}
+		navy_leader = {
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 4
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = ewa_skoog_haslum
+			ledger = navy
+			allowed = { original_tag = SWE }
+			traits = { navy_chief_reform_2 }
+			cost = 150
+		}
+	}
+
+	SWE_jonas_wikman = {
+		name = "Jonas Wikman"
+		portraits = {
+			army = { large = "gfx/leaders/SWE/Jonas_Wikman.dds" }
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = jonas_wikman
+			ledger = air
+			allowed = { original_tag = SWE }
+			traits = { air_chief_reform_2 }
+			cost = 150
+		}
+	}
+
+}
