@@ -342,20 +342,33 @@ characters = {
 		}
 	}
 
-	USA_Jeffrey_L_Bannister = {
-		name = "Jeffrey L. Bannister"
+	USA_cq_brown = {
+		name = "Charles Q. Brown Jr."
 		portraits = {
-			army = { small = "gfx/leaders/USA/small/Zgen_Jeffrey_L_Bannister_small.dds" }
-			army = { large = "gfx/leaders/USA/Zgeneral_Jeffrey_L_Bannister.dds" }
+			army = { large = "gfx/leaders/USA/CQ_Brown.dds" }
 		}
-		# California
-		corps_commander = {
-			traits = { california_soldier commando desert_fox trait_mountaineer }
-			skill = 4
+		field_marshal = {
+			traits = { logistics_wizard thorough_planner organizer }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 4
+		}
+	}
+
+	USA_christopher_cavoli = {
+		name = "Christopher G. Cavoli"
+		portraits = {
+			army = { large = "gfx/leaders/USA/Christopher_Cavoli.dds" }
+		}
+		field_marshal = {
+			traits = { offensive_doctrine organizer panzer_leader }
+			skill = 5
 			attack_skill = 5
 			defense_skill = 4
-			planning_skill = 2
-			logistics_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
 		}
 	}
 
@@ -427,20 +440,33 @@ characters = {
 		}
 	}
 
-	USA_Timothy_Joseph_Maude = {
-		name = "Timothy Joseph Maude"
+	USA_lisa_franchetti = {
+		name = "Lisa Franchetti"
 		portraits = {
-			army = { small = "gfx/leaders/USA/small/Zgen_Timothy_Joseph_Maude_small.dds" }
-			army = { large = "gfx/leaders/USA/Zgeneral_Timothy_Joseph_Maude.dds" }
+			navy = { large = "gfx/leaders/USA/Lisa_Franchetti.dds" }
 		}
-		# Midwesterner
+		navy_leader = {
+			traits = { superior_tactician navy_career_officer }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			maneuvering_skill = 4
+			coordination_skill = 5
+		}
+	}
+
+	USA_randy_george = {
+		name = "Randy A. George"
+		portraits = {
+			army = { large = "gfx/leaders/USA/Randy_George.dds" }
+		}
 		corps_commander = {
-			traits = { midwest_soldier organizer }
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 4
-			logistics_skill = 1
+			traits = { infantry_officer ranger }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
 		}
 	}
 
