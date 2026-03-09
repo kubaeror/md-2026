@@ -4652,19 +4652,17 @@ capital = 652
 	}
 
 	#Chief of general staff
-	recruit_character = SOV_viktor_samsonov
-	recruit_character = SOV_anatoly_kvashnin
-	recruit_character = SOV_yuri_baluyevsky
-	recruit_character = SOV_nikolai_makarov
+	recruit_character = SOV_mikhail_teplinsky
+	recruit_character = SOV_viktor_afzalov
+	recruit_character = SOV_aleksandr_moiseyev
+	recruit_character = SOV_alexander_dvornikov
 
 	#Commander in Chief of the Russian Army
 	recruit_character = SOV_vladimir_semyonov
 	recruit_character = SOV_nikolai_kormiltsev
-	recruit_character = SOV_alexey_maslov
 	recruit_character = SOV_vladimir_boldyrev
 
 	#Commander in Chief of the Russian Air Forces
-	recruit_character = SOV_anatoly_kornukov
 	recruit_character = SOV_vladimir_mikhaylov
 	recruit_character = SOV_alexander_zelin
 	recruit_character = SOV_sergey_surovikin
@@ -4672,10 +4670,8 @@ capital = 652
 	#Commander in Chief of the Russian Navy
 	recruit_character = SOV_vladimir_kuroyedov
 	recruit_character = SOV_vladimir_masorin
-	recruit_character = SOV_vladimir_vysotsky
 
 	#Field Marshall
-	recruit_character = SOV_igor_sergeyev
 	recruit_character = SOV_pavel_popov
 
 	#Corps Commander

@@ -1,30 +1,20 @@
 characters = {
 
 #Chief of general staff
-
-	SOV_viktor_samsonov = {
-		name = "Viktor Samsonov"
-		portraits = {
-			army = {
-				small = "gfx/leaders/SOV/small/Small_Gen_Viktor_Samsonov.dds"
-				large = "gfx/leaders/SOV/Gen_Viktor_Samsonov.dds"
-			}
-		}
-		advisor = {
-			slot = high_command
-			idea_token = viktor_samsonov
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				army_regrouping_3
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
+SOV_mikhail_teplinsky = {
+	name = "Mikhail Teplinsky"
+	portraits = {
+		army = { large = "gfx/leaders/SOV/Mikhail_Teplinsky.dds" }
 	}
+	field_marshal = {
+		traits = { infantry_officer organizer }
+		skill = 4
+		attack_skill = 4
+		defense_skill = 4
+		planning_skill = 3
+		logistics_skill = 4
+	}
+}
 
 	SOV_anatoly_kvashnin = {
 		name = "Anatoly Kvashnin"
@@ -891,6 +881,58 @@ characters = {
 			defense_skill = 1
 			maneuvering_skill = 1
 			coordination_skill = 2
+		}
+	}
+
+	SOV_viktor_afzalov = {
+		name = "Viktor Afzalov"
+		portraits = {
+			army = { large = "gfx/leaders/SOV/Viktor_Afzalov.dds" }
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = viktor_afzalov
+			ledger = air
+			allowed = { original_tag = SOV }
+			traits = { air_air_combat_training_2 }
+			cost = 100
+		}
+	}
+
+	SOV_aleksandr_moiseyev = {
+		name = "Aleksandr Moiseyev"
+		portraits = {
+			army = { large = "gfx/leaders/SOV/Aleksandr_Moiseyev.dds" }
+		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 3
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = aleksandr_moiseyev
+			ledger = navy
+			allowed = { original_tag = SOV }
+			traits = { navy_chief_maneuver_2 }
+			cost = 100
+		}
+	}
+
+	SOV_alexander_dvornikov = {
+		name = "Alexander Dvornikov"
+		portraits = {
+			army = { large = "gfx/leaders/SOV/Alexander_Dvornikov.dds" }
+		}
+		corps_commander = {
+			traits = { infantry_leader aggressive_assaulter }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
 		}
 	}
 }
