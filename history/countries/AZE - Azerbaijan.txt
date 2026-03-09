@@ -1,0 +1,133 @@
+##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "AZE_2026_nsb"
+		else = {
+			set_oob = "AZE_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier3_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 8.000 }
+	set_variable = { var = debt value = 15.000 }
+	set_variable = { var = treasury value = 15 }
+	set_variable = { var = corporate_tax_rate value = 20 }
+	set_variable = { var = population_tax_rate value = 14 }
+	set_variable = { var = int_investments value = 12 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 500 }
+	}
+	set_variable = { overall_productivity = 500 }
+
+	### Artsakh Dissolution (Sept 2023) ###
+	# NKR was defeated in the 2020 Second Nagorno-Karabakh War and fully
+	# dissolved in September 2023. Transfer all former NKR states to AZE.
+	annex_country = { target = NKR transfer_troops = yes }
+
+	# Remove Karabakh defeat/revanchism ideas — the conflict is resolved
+	remove_ideas = AZE_karabakh_defeat
+	remove_ideas = AZE_karabakh_revanchism
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 10.0
+		communism = 5.0
+		fascism = 0.0
+		neutrality = 70.0
+		nationalist = 15.0
+	}
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "2024.2.7"
+		election_frequency = 84
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^13 = 0.700 }  #Neutral_Autocracy (New Azerbaijan Party / YAP)
+	set_variable = { party_pop_array^3 = 0.050 }   #socialism (AXCP - Popular Front)
+	set_variable = { party_pop_array^2 = 0.040 }   #liberalism (Musavat)
+	set_variable = { party_pop_array^1 = 0.030 }   #conservatism
+	set_variable = { party_pop_array^20 = 0.080 }  #Nat_Populism
+	set_variable = { party_pop_array^14 = 0.050 }  #Neutral_conservatism
+	set_variable = { party_pop_array^4 = 0.020 }   #Communist-State
+	set_variable = { party_pop_array^15 = 0.030 }  #oligarchism
+
+	add_to_array = { ruling_party = 13 }            #Neutral_Autocracy (YAP)
+
+	# 2024 presidential election results (snap election Feb 2024)
+	set_variable = { party_pop_elect_array^13 = 0.924 } #Ilham Aliyev (YAP)
+	set_variable = { party_pop_elect_array^3 = 0.031 }  #Zahid Oruj
+	set_variable = { party_pop_elect_array^20 = 0.028 } #misc
+
+	startup_politics = yes
+
+	### Country Leader: Ilham Aliyev ###
+	create_country_leader = {
+		name = "Ilham Aliyev"
+		picture = "Ilham_Aliyev.dds"
+		expire = "2031.2.7"
+		ideology = Neutral_Autocracy
+		traits = {
+			neutrality_Neutral_Autocracy
+			career_politician
+			oil_baron
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 4 }
+
+	### 2026 National Spirits ###
+	add_ideas = {
+		md2026_aze_post_karabakh_victory
+	}
+
+	# Base MD pre-completed focuses (root + key T1, 2000-2026)
+	complete_national_focus = AZE_aze_the_state
+	complete_national_focus = AZE_aze_the_man
+	complete_national_focus = AZE_aze_the_economy
+	complete_national_focus = AZE_aze_the_sword
+	complete_national_focus = AZE_aze_anew_aliev
+	complete_national_focus = AZE_aze_pers_cult
+	complete_national_focus = AZE_aze_suppress_protests
+	complete_national_focus = AZE_aze_cult_of_father
+	complete_national_focus = AZE_aze_absolute_loyalty
+	complete_national_focus = AZE_aze_enemies_of_state
+	complete_national_focus = AZE_aze_repres_done_right
+	complete_national_focus = AZE_aze_economy_forum
+	complete_national_focus = AZE_aze_money_stimulum
+	complete_national_focus = AZE_aze_rev_sov_oil_plants
+	complete_national_focus = AZE_aze_turgeo_agreem
+	complete_national_focus = AZE_aze_inve_ref
+	complete_national_focus = AZE_aze_constr_focus
+	complete_national_focus = AZE_aze_reb_oil_plants
+	complete_national_focus = AZE_aze_prepare_for_worst
+	complete_national_focus = AZE_aze_rightful_hand
+	complete_national_focus = AZE_aze_get_sword_ready
+	complete_national_focus = AZE_aze_infiltr_stuff
+	complete_national_focus = AZE_aze_eternal_escal
+	complete_national_focus = AZE_aze_fortify_region
+	complete_national_focus = AZE_aze_turkey_deal
+	complete_national_focus = AZE_aze_russia_deal
+	complete_national_focus = AZE_aze_combat_for_inf
+	complete_national_focus = AZE_aze_more_media_control
+	complete_national_focus = AZE_aze_increase_propaganda_funding
+	complete_national_focus = AZE_aze_youth_comitee
+	complete_national_focus = AZE_aze_increase_petroleum
+	complete_national_focus = AZE_aze_reassign_milpos
+	complete_national_focus = AZE_govern_contr
+	complete_national_focus = AZE_firm_grip
+	complete_national_focus = AZE_control_black_market
+	complete_national_focus = AZE_clamp_black_market
+	complete_national_focus = AZE_arms_deals
+	complete_national_focus = AZE_2006_summit
+	complete_national_focus = AZE_stabilize_infl
+}
