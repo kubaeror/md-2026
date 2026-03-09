@@ -1,4 +1,4 @@
-md2026_economic_decisions_category = {
+﻿md2026_economic_decisions_category = {
 	md2026_stimulus_package = {
 		icon = generic_economy
 		

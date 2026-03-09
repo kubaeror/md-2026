@@ -56,7 +56,7 @@
 	add_opinion_modifier = { target = SPR modifier = large_commercial_relations }
 	add_opinion_modifier = { target = USA modifier = large_commercial_relations }
 
-	add_ideas = {
+	add_idea = {
 		crippling_corruption
 		sunni
 		youth_radicalization
@@ -669,7 +669,7 @@
 	set_variable = { current_term = 1 }
 
 	### National Spirits ###
-	add_ideas = {
+	add_idea = {
 		md2026_pak_political_instability
 		md2026_pak_nuclear_deterrent
 	}

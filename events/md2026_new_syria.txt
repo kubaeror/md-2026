@@ -93,8 +93,8 @@ country_event = {
 		add_stability = 0.08
 		add_political_power = 50
 		swap_ideas = {
-			remove_ideas = md2026_syr_post_assad
-			add_ideas = md2026_syr_transitional_government
+			remove_idea = md2026_syr_post_assad
+			add_idea = md2026_syr_transitional_government
 		}
 	}
 

@@ -1,4 +1,4 @@
-focus_tree = {
+﻿focus_tree = {
 	id = Syria_2000
 
 	# MD2026: New Syria branch (2026 bookmark)

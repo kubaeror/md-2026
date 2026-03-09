@@ -5,7 +5,7 @@
 	set_cosmetic_tag = ICE
 	set_variable = { gdp_per_capita = 41.531 }
 
-	add_ideas = {
+	add_idea = {
 		#Corruption
 		slight_corruption
 		#Faction 1

@@ -7,7 +7,7 @@
 
 	set_variable = { gdp_per_capita = 7.032 }
 
-	add_ideas = {
+	add_idea = {
 		rampant_corruption
 		KOS_Land_Mines
 		KOS_Yugoslav_war_state

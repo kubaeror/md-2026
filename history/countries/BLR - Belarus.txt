@@ -84,7 +84,7 @@
 	add_opinion_modifier = { target = ABK modifier = russian_proficient }
 	reverse_add_opinion_modifier = { target = ABK modifier = russian_proficient }
 
-	add_ideas = {
+	add_idea = {
 		# Economic/Factions
 		stagnation
 		rampant_corruption
@@ -376,7 +376,7 @@
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 7 }
 
-	add_ideas = {
+	add_idea = {
 		md2026_blr_russian_satellite
 	}
 

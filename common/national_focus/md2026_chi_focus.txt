@@ -19,7 +19,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_great_rejuvenation"
 		add_political_power = 100
 		add_stability = 0.05
-		add_ideas = md2026_chi_national_rejuvenation
+		add_idea = md2026_chi_national_rejuvenation
 	}
 	ai_will_do = { base = 100 }
 }
@@ -197,7 +197,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_tech_dominance"
 		add_political_power = 50
-		add_ideas = md2026_chi_tech_self_reliance
+		add_idea = md2026_chi_tech_self_reliance
 		random_owned_controlled_state = {
 			limit = { is_core_of = CHI }
 			add_extra_state_shared_building_slots = 1
@@ -348,7 +348,7 @@ shared_focus = {
 			name = CHI_naval_tech
 			bonus = 1.0
 			uses = 2
-			category = CAT_naval_all_all
+			category = CAT_naval_all
 		}
 	}
 	ai_will_do = { base = 40 }
@@ -371,7 +371,7 @@ shared_focus = {
 		add_war_support = 0.10
 		add_stability = -0.10
 		navy_experience = 25
-		add_ideas = md2026_chi_naval_blockade
+		add_idea = md2026_chi_naval_blockade
 		random_owned_controlled_state = {
 			limit = { is_core_of = CHI is_coastal = yes }
 			add_extra_state_shared_building_slots = 2
@@ -429,12 +429,12 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_digital_silk_road"
 		add_political_power = 50
-		add_ideas = md2026_chi_digital_silk_road
+		add_idea = md2026_chi_digital_silk_road
 		add_tech_bonus = {
 			name = CHI_digital_silk
 			bonus = 1.0
 			uses = 1
-			category = CAT_computing_tech_tech
+			category = CAT_computing_tech
 		}
 	}
 	ai_will_do = { base = 60 }
@@ -485,7 +485,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_ai_supremacy"
 		add_political_power = 50
 		add_research_slot = 1
-		add_ideas = md2026_chi_ai_supremacy
+		add_idea = md2026_chi_ai_supremacy
 		random_owned_controlled_state = {
 			limit = { is_core_of = CHI }
 			add_extra_state_shared_building_slots = 2
@@ -580,7 +580,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CHI_carrier_fleet"
 		navy_experience = 50
 		add_political_power = 75
-		add_ideas = md2026_chi_carrier_fleet
+		add_idea = md2026_chi_carrier_fleet
 		random_owned_controlled_state = {
 			limit = { is_core_of = CHI is_coastal = yes }
 			add_extra_state_shared_building_slots = 3

@@ -30,7 +30,7 @@ set_research_slots = 3
 	set_variable = { SER_Montenegro_separatism = 40 }
 
 
-	add_ideas = {
+	add_idea = {
 		#Economic Cycle
 		stagnation
 		#Corruption

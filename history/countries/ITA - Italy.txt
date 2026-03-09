@@ -1,4 +1,4 @@
-capital = 81
+﻿capital = 81
 2000.1.1 = {
 	set_cosmetic_tag = ITA
 	set_country_flag = dynamic_flag
@@ -29,7 +29,7 @@ capital = 81
 		}
 	}
 
-	add_ideas = {
+	add_idea = {
 		#Economic Cycle
 		stagnation
 		#Corruption
@@ -2063,7 +2063,7 @@ capital = 81
 	set_variable = { current_term = 1 }
 
 	### National Spirits ###
-	add_ideas = {
+	add_idea = {
 		md2026_ita_demographic_crisis
 		md2026_ita_right_wing_government
 	}

@@ -16,7 +16,7 @@
 		set_air_oob = "EST_2000_bba"
 	}
 
-	add_ideas = {
+	add_idea = {
 		#Economic Cycle
 		stable_growth
 		#Corruption

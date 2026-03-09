@@ -436,7 +436,7 @@
 	}
 
 	complete_special_project = sp:sp_helicopter_project
-	add_ideas = {
+	add_idea = {
 		#Economic Cycle
 		stable_growth
 		#Corruption

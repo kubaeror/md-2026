@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # MD2026 Saudi Arabia (SAU) Focus Tree
 # 2026 Shared Focuses - Vision 2030
 ###################################
@@ -36,7 +36,7 @@ shared_focus = {
 	relative_position_id = MD2026_SAU_vision_2030
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SAU_diversification"
-		add_ideas = md2026_sau_diversification
+		add_idea = md2026_sau_diversification
 		random_owned_controlled_state = {
 			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
 			add_extra_state_shared_building_slots = 3

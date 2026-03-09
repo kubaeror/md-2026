@@ -128,7 +128,7 @@
 		}
 	}
 
-	add_ideas = {
+	add_idea = {
 		rampant_corruption
 		shia
 		LoAS_member
@@ -467,7 +467,7 @@
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
 
-	add_ideas = {
+	add_idea = {
 		md2026_syr_post_assad
 	}
 

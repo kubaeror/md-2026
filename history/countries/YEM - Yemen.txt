@@ -24,7 +24,7 @@
 	#israel blockade
 	set_country_flag = blockade_israel_yes
 
-	add_ideas = {
+	add_idea = {
 		sunni
 		hybrid_regime_western
 		conservative_society
@@ -110,7 +110,7 @@
 			}
 		}
 	}
-	add_ideas = {
+	add_idea = {
 		rampant_corruption
 		youth_radicalization
 		LoAS_member

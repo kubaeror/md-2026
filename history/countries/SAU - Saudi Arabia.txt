@@ -29,7 +29,7 @@
 
 
 
-	add_ideas = {
+	add_idea = {
 		sunni
 		systematic_corruption
 		LoAS_member

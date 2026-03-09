@@ -35,7 +35,7 @@ capital = 141
 		}
 	}
 
-	add_ideas = {
+	add_idea = {
 		#Economic Cycle
 		stagnation
 		#Corruption
@@ -515,7 +515,7 @@ capital = 141
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
 
-	add_ideas = {
+	add_idea = {
 		md2026_gre_economic_recovery
 	}
 

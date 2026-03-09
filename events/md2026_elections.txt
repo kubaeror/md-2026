@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # MD2026 Elections Events
 # Cyclical elections for democratic countries
 ###################################
@@ -345,7 +345,7 @@ country_event = {
 		add_stability = -0.15
 		add_war_support = 0.05
 
-		remove_ideas = md2026_ger_zeitenwende
+		remove_idea = md2026_ger_zeitenwende
 
 		every_country = {
 			limit = {
@@ -987,7 +987,7 @@ country_event = {
 
 		add_political_power = 25
 		add_stability = 0.05
-		remove_ideas = md2026_ita_right_wing_government
+		remove_idea = md2026_ita_right_wing_government
 		set_country_flag = md2026_ita_election
 
 		ai_chance = {
@@ -1014,7 +1014,7 @@ country_event = {
 
 		add_political_power = -25
 		add_stability = -0.05
-		remove_ideas = md2026_ita_right_wing_government
+		remove_idea = md2026_ita_right_wing_government
 		set_country_flag = md2026_ita_election
 
 		ai_chance = {

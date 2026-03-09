@@ -26,7 +26,7 @@
 	}
 
 	set_cosmetic_tag = KAZ
-	add_ideas = {
+	add_idea = {
 		crippling_corruption
 		sunni
 		rentier_state
@@ -291,7 +291,7 @@
 
 
 
-	add_ideas = {
+	add_idea = {
 		rampant_corruption
 		sunni
 		rentier_state
@@ -476,7 +476,7 @@
 	set_variable = { term_limit = 1 }
 	set_variable = { current_term = 1 }
 
-	add_ideas = {
+	add_idea = {
 		md2026_kaz_multi_vector_diplomacy
 	}
 

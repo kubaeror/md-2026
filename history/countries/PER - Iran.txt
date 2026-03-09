@@ -1,4 +1,4 @@
-capital = 405
+﻿capital = 405
 2000.1.1 = {
 	set_country_flag = generic_election_killswitch	#Will get special election event, active in both bookmarks
 	set_country_flag = is_IRAN	#Will disable the dynamic flags
@@ -45,7 +45,7 @@ capital = 405
 		}
 	}
 
-	add_ideas = {
+	add_idea = {
 		shia
 		defence_03
 		edu_04
@@ -1325,7 +1325,7 @@ capital = 405
 	startup_politics = yes
 
 	### 2026 National Spirits ###
-	add_ideas = {
+	add_idea = {
 		md2026_per_international_sanctions
 	}
 

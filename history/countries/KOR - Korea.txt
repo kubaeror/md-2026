@@ -41,7 +41,7 @@
 	set_variable = { chaebols_opinion = 40 }
 	set_variable = { intelligence_community = 40 }
 
-	add_ideas = {
+	add_idea = {
 		unrestrained_corruption
 		pluralist
 		fast_growth
@@ -1284,7 +1284,7 @@
 	set_variable = { current_term = 1 }
 
 	# MD2026 National Spirit: Post-martial law political crisis
-	add_ideas = md2026_kor_political_crisis
+	add_idea = md2026_kor_political_crisis
 
 	# MD2026 Pre-completed focuses (already happened by Jan 2026)
 	complete_national_focus = MD2026_KOR_shield_freedom

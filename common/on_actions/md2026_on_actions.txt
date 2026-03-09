@@ -1,4 +1,4 @@
-### Millennium Dawn 2026 - On Actions ###
+﻿### Millennium Dawn 2026 - On Actions ###
 # Hooks into game events for initialization, war, peace, monthly ticks
 
 on_actions = {

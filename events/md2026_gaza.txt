@@ -1,4 +1,4 @@
-add_namespace = md2026_gaza
+﻿add_namespace = md2026_gaza
 
 ### Gaza Ceasefire Cycle Event Chain ###
 # .1  - Interim Ceasefire Agreement (ISR, early game)

@@ -1,4 +1,4 @@
-### MD2026 Mexico Focus Branch ###
+﻿### MD2026 Mexico Focus Branch ###
 # Shared focuses for Mexico's 2026 focus tree branch
 # Root focus at absolute x=38, y=0
 # 12 focuses: Sheinbaum era, trade/security/energy branches
@@ -63,7 +63,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_nearshoring"
 		add_political_power = 25
-		add_ideas = md2026_mex_nearshoring
+		add_idea = md2026_mex_nearshoring
 		random_owned_controlled_state = {
 			limit = { is_core_of = MEX }
 			add_extra_state_shared_building_slots = 3
@@ -249,7 +249,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_mex_regional_power"
 		add_political_power = 100
 		add_stability = 0.10
-		add_ideas = md2026_mex_regional_power
+		add_idea = md2026_mex_regional_power
 		random_owned_controlled_state = {
 			limit = { is_core_of = MEX }
 			add_extra_state_shared_building_slots = 3

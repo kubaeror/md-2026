@@ -35,38 +35,38 @@
 						modifier = { add = 10 has_war = yes }
 						modifier = { add = 10 has_stability < 0.50 }
 						trigger = { has_idea = md2026_economy_boom }
-						swap_ideas = { remove_ideas = md2026_economy_boom add_ideas = md2026_economy_stable }
+						swap_ideas = { remove_idea = md2026_economy_boom add_idea = md2026_economy_stable }
 					}
 					# Stable -> Boom
 					2 = {
 						modifier = { add = 5 has_stability > 0.70 NOT = { has_war = yes } }
 						trigger = { has_idea = md2026_economy_stable }
-						swap_ideas = { remove_ideas = md2026_economy_stable add_ideas = md2026_economy_boom }
+						swap_ideas = { remove_idea = md2026_economy_stable add_idea = md2026_economy_boom }
 					}
 					# Stable -> Recession
 					5 = {
 						modifier = { add = 15 has_war = yes }
 						modifier = { add = 10 has_stability < 0.40 }
 						trigger = { has_idea = md2026_economy_stable }
-						swap_ideas = { remove_ideas = md2026_economy_stable add_ideas = md2026_economy_recession }
+						swap_ideas = { remove_idea = md2026_economy_stable add_idea = md2026_economy_recession }
 					}
 					# Recession -> Stable
 					3 = {
 						modifier = { add = 10 has_stability > 0.60 NOT = { has_war = yes } }
 						trigger = { has_idea = md2026_economy_recession }
-						swap_ideas = { remove_ideas = md2026_economy_recession add_ideas = md2026_economy_stable }
+						swap_ideas = { remove_idea = md2026_economy_recession add_idea = md2026_economy_stable }
 					}
 					# Recession -> Crisis
 					5 = {
 						modifier = { add = 10 has_war = yes has_stability < 0.30 }
 						trigger = { has_idea = md2026_economy_recession }
-						swap_ideas = { remove_ideas = md2026_economy_recession add_ideas = md2026_economy_crisis }
+						swap_ideas = { remove_idea = md2026_economy_recession add_idea = md2026_economy_crisis }
 					}
 					# Crisis -> Recession
 					2 = {
 						modifier = { add = 5 has_stability > 0.50 }
 						trigger = { has_idea = md2026_economy_crisis }
-						swap_ideas = { remove_ideas = md2026_economy_crisis add_ideas = md2026_economy_recession }
+						swap_ideas = { remove_idea = md2026_economy_crisis add_idea = md2026_economy_recession }
 					}
 					# No change
 					85 = {}

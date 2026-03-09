@@ -76,7 +76,7 @@ set_war_support = 0.27
 	set_cosmetic_tag = BOS
 
 
-	add_ideas = {
+	add_idea = {
 		#Economic Cycle
 		stable_growth
 		#Corruption
@@ -123,7 +123,7 @@ set_war_support = 0.27
 		idea = BOS_SFOR
 		days = 1797
 	}
-	add_ideas = bos_international_funding
+	add_idea = bos_international_funding
 	set_technology = {
 		integrated_transportation_system = 1
 		post_conventional_rail = 1

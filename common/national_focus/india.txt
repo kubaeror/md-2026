@@ -1,4 +1,4 @@
-# Author(s): BoNDeX, DarkCloud, TheBrokenDroid, Crocomoth, AngriestBird
+﻿# Author(s): BoNDeX, DarkCloud, TheBrokenDroid, Crocomoth, AngriestBird
 focus_tree = {
 	id = india_focus
 	shared_focus = MD2026_RAJ_indias_century

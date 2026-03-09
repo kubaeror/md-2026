@@ -39,7 +39,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_arg_dollarization"
 		add_stability = 0.05
 		add_political_power = 50
-		add_ideas = md2026_arg_dollarization
+		add_idea = md2026_arg_dollarization
 	}
 	ai_will_do = { base = 70 }
 }
@@ -231,7 +231,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_arg_new_argentina"
 		add_political_power = 100
 		add_stability = 0.10
-		add_ideas = md2026_arg_new_argentina
+		add_idea = md2026_arg_new_argentina
 		random_owned_controlled_state = {
 			limit = { is_core_of = ARG }
 			add_extra_state_shared_building_slots = 3

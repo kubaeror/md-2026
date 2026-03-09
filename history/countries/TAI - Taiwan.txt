@@ -35,7 +35,7 @@
 		}
 	}
 
-	add_ideas = {
+	add_idea = {
 		Non_State_Actor
 		widespread_corruption
 		pluralist
@@ -962,7 +962,7 @@
 	set_variable = { current_term = 1 }
 
 	### National Spirits ###
-	add_ideas = {
+	add_idea = {
 		md2026_tai_silicon_shield
 		md2026_tai_china_threat
 	}

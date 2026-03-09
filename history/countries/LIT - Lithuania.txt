@@ -25,7 +25,7 @@
 	set_cosmetic_tag = LIT
 	set_variable = { gdp_per_capita = 13.847 }
 
-	add_ideas = {
+	add_idea = {
 		christian
 		defence_01
 		edu_03

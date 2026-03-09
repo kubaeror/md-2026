@@ -23,7 +23,7 @@
 	}
 	set_naval_oob = "SAF_2000_naval_mtg"
 
-	add_ideas = {
+	add_idea = {
 		systematic_corruption
 		christian
 		OAU_member
@@ -839,7 +839,7 @@
 	set_variable = { term_limit = 2 }
 	set_variable = { current_term = 2 }
 
-	add_ideas = {
+	add_idea = {
 		md2026_saf_load_shedding
 	}
 	# Base MD pre-completed focuses (root + T1, 2000-2026)

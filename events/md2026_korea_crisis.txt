@@ -1,4 +1,4 @@
-add_namespace = md2026_korea_crisis
+﻿add_namespace = md2026_korea_crisis
 
 ### South Korea Political Crisis Event Chain ###
 # .1  - Constitutional Court: Yoon Impeachment Verdict

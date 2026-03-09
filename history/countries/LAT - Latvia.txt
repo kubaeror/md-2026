@@ -17,7 +17,7 @@
 	set_cosmetic_tag = LAT
 	set_variable = { gdp_per_capita = 12.990 }
 
-	add_ideas = {
+	add_idea = {
 		#Economic Cycle
 		stable_growth
 		#Corruption

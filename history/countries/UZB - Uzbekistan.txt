@@ -23,7 +23,7 @@
 	set_variable = { UZB_uzbeks_opinion = 70 }			# Starting opinion of Uzbeks
 	set_variable = { event_counter_1_conflicts = 2 } # For random events
 
-	add_ideas = {
+	add_idea = {
 		crippling_corruption
 		sunni
 		youth_radicalization

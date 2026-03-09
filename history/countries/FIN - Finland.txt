@@ -24,7 +24,7 @@
 		}
 	}
 
-	add_ideas = {
+	add_idea = {
 		#Economic Cycle
 		stagnation
 		#Corruption
@@ -72,7 +72,7 @@
 	set_naval_oob = "FIN_2000_naval_mtg"
 
 
-	add_ideas = {
+	add_idea = {
 		FIN_conscription
 		christian
 		EU_member
@@ -758,7 +758,7 @@
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
 
-	add_ideas = {
+	add_idea = {
 		md2026_fin_new_nato_member
 	}
 

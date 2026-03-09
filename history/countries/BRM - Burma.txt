@@ -27,7 +27,7 @@ capital = 504
 		}
 	}
 
-	add_ideas = {
+	add_idea = {
 		# -- First Row
 		# Religion
 		buddism
@@ -447,7 +447,7 @@ capital = 504
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
 
-	add_ideas = {
+	add_idea = {
 		md2026_brm_civil_war_chaos
 	}
 

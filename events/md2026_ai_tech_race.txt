@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # MD2026 AI/Tech Arms Race
 # Extends md2026_tech namespace (.4-.9)
 # DeepSeek breakthrough, EU AI Act,
@@ -44,7 +44,7 @@ country_event = {
 		add_stability = 0.05
 		add_war_support = 0.05
 
-		add_ideas = md2026_chi_ai_leadership
+		add_idea = md2026_chi_ai_leadership
 
 		# US reaction
 		USA = {
@@ -75,7 +75,7 @@ country_event = {
 		add_political_power = 100
 		add_stability = 0.08
 
-		add_ideas = md2026_chi_ai_leadership
+		add_idea = md2026_chi_ai_leadership
 
 		random_owned_controlled_state = {
 			limit = { is_core_of = ROOT }
@@ -142,7 +142,7 @@ country_event = {
 		add_political_power = -50
 		add_stability = 0.05
 
-		add_ideas = md2026_eu_ai_regulation
+		add_idea = md2026_eu_ai_regulation
 
 		# Industry friction with US/China
 		USA = {
@@ -189,7 +189,7 @@ country_event = {
 		add_political_power = 50
 		add_war_support = 0.05
 
-		add_ideas = md2026_usa_ai_race
+		add_idea = md2026_usa_ai_race
 
 		# Tech rivalry deepens
 		CHI = {
@@ -212,7 +212,7 @@ country_event = {
 
 		add_political_power = -75
 
-		add_ideas = md2026_usa_ai_race
+		add_idea = md2026_usa_ai_race
 
 		random_owned_controlled_state = {
 			limit = { is_core_of = ROOT }
@@ -476,7 +476,7 @@ country_event = {
 		add_political_power = 75
 		add_stability = 0.05
 
-		add_ideas = md2026_ai_governance_leader
+		add_idea = md2026_ai_governance_leader
 
 		every_country = {
 			limit = {

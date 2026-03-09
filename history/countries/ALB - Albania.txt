@@ -105,7 +105,7 @@
 		nsb_transport_helicopter1 = 1
 	}
 
-	add_ideas = {
+	add_idea = {
 		#Economic Cycle
 		stable_growth
 		#Corruption

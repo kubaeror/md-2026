@@ -312,7 +312,7 @@
 
 			tech_landing_craft = 1
 		}
-	add_ideas = {
+	add_idea = {
 		#Economic Cycle
 		stagnation
 		#Corruption

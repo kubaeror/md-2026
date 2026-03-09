@@ -24,7 +24,7 @@
 		}
 	}
 
-	add_ideas = {
+	add_idea = {
 		#Economic Cycle
 		stable_growth
 		#Corruption

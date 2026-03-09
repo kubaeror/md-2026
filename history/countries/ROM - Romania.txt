@@ -1,4 +1,4 @@
-capital = 150
+﻿capital = 150
 
 2000.1.1 = {
 	set_cosmetic_tag = ROM
@@ -44,7 +44,7 @@ capital = 150
 		}
 	}
 
-	add_ideas = {
+	add_idea = {
 		#Economic Cycle
 		stable_growth
 		#Corruption
@@ -1086,7 +1086,7 @@ capital = 150
 	set_variable = { term_limit = 2 }
 	set_variable = { current_term = 1 }
 
-	add_ideas = {
+	add_idea = {
 		md2026_rom_frontline_nato
 	}
 

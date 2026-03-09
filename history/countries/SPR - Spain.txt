@@ -874,7 +874,7 @@
 		nsb_transport_helicopter2 = 1
 	}
 	complete_special_project = sp:sp_helicopter_project
-	add_ideas = {
+	add_idea = {
 		#Economic Cycle
 		stable_growth
 		#Corruption
@@ -1214,7 +1214,7 @@
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
 
-	add_ideas = {
+	add_idea = {
 		md2026_spr_territorial_tensions
 	}
 

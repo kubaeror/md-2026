@@ -124,7 +124,7 @@ md2026_setup_world_borders_and_wars = {
         limit = {
             has_idea = MD_economic_boom_idea # Or any sign they exist
         }
-        add_ideas = md2026_economic_stabilizer
+        add_idea = md2026_economic_stabilizer
     }
 
 

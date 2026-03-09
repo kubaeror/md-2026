@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # MD2026 Japan (JAP) Focus Tree
 # 2026 Shared Focuses - Active Defense Era
 # 26 focuses: 1 root + 5 branches + capstone
@@ -39,7 +39,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_JAP_constitutional_reform"
 		add_war_support = 0.10
 		add_stability = -0.05
-		add_ideas = md2026_jap_article_9_reform
+		add_idea = md2026_jap_article_9_reform
 	}
 	ai_will_do = {
 		factor = 1
@@ -353,7 +353,7 @@ shared_focus = {
 	relative_position_id = MD2026_JAP_active_defense
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_JAP_economic_revitalization"
-		add_ideas = md2026_jap_economic_stimulus
+		add_idea = md2026_jap_economic_stimulus
 		random_owned_controlled_state = {
 			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
 			add_extra_state_shared_building_slots = 2

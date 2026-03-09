@@ -388,7 +388,7 @@
 		add_to_array = { cyber_targets = NKO }
 	}
 
-	add_ideas = {
+	add_idea = {
 		slight_corruption
 		pluralist
 		stable_growth
@@ -744,7 +744,7 @@
 	set_variable = { current_term = 1 }
 
 	### National Spirits ###
-	add_ideas = {
+	add_idea = {
 		md2026_ast_aukus_partner
 	}
 

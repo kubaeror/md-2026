@@ -72,7 +72,7 @@ country_event = {
 			name = "Military Junta"
 			desc = "A coalition of top generals who seized power to stop the collapse."
 			picture = "gfx/leaders/SOV/Portrait_SOV_Generic_land_3.dds"
-			ideology = conservatism
+			ideology = democratic
 			traits = { dictator }
 		}
 		
@@ -84,7 +84,7 @@ country_event = {
 			white_peace = UKR
 		}
 		
-		remove_ideas = md2026_war_exhaustion_3
+		remove_idea = md2026_war_exhaustion_3
 		
 		ai_chance = {
 			base = 40
@@ -113,7 +113,7 @@ country_event = {
 		# Trigger civil war (MD ideology based)
 		start_civil_war = {
 			ruling_party = communism
-			ideology = conservatism
+			ideology = democratic
 			size = 0.5
 		}
 		
@@ -138,7 +138,7 @@ country_event = {
 		add_war_support = 0.10
 		
 		# Martial Law idea
-		add_ideas = md2026_sov_information_control
+		add_idea = md2026_sov_information_control
 	}
 }
 

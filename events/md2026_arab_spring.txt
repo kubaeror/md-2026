@@ -34,7 +34,7 @@ country_event = {
 		set_country_flag = md2026_arab_spring_started
 		
 		# Set an idea representing mass unrest
-		add_ideas = md2026_mass_protests_unrest
+		add_idea = md2026_mass_protests_unrest
 		
 		country_event = { id = md2026_arab_spring.2 days = 30 }
 	}
@@ -83,7 +83,7 @@ country_event = {
 	
 	option = {
 		name = md2026_arab_spring.3.a
-		remove_ideas = md2026_mass_protests_unrest
+		remove_idea = md2026_mass_protests_unrest
 		
 		start_civil_war = {
 			ideology = democratic
@@ -103,7 +103,7 @@ country_event = {
 	
 	option = {
 		name = md2026_arab_spring.4.a
-		remove_ideas = md2026_mass_protests_unrest
+		remove_idea = md2026_mass_protests_unrest
 		add_stability = 0.10
 		add_political_power = 50
 	}
@@ -120,7 +120,7 @@ country_event = {
 	
 	option = {
 		name = md2026_arab_spring.5.a
-		remove_ideas = md2026_mass_protests_unrest
+		remove_idea = md2026_mass_protests_unrest
 		
 		# Change ruling party to democratic
 		set_politics = {

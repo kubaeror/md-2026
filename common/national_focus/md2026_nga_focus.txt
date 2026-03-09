@@ -1,4 +1,4 @@
-### MD2026 Nigeria Focus Branch ###
+﻿### MD2026 Nigeria Focus Branch ###
 # Shared focuses for Nigeria's 2026 focus tree branch (NIG)
 # Root focus at absolute x=38, y=0
 # 8 focuses: ECOWAS, oil/security branches, regional power capstone
@@ -206,7 +206,7 @@ shared_focus = {
 		add_political_power = 100
 		add_stability = 0.10
 		add_war_support = 0.05
-		add_ideas = md2026_nga_african_giant
+		add_idea = md2026_nga_african_giant
 		random_owned_controlled_state = {
 			limit = { is_core_of = NIG }
 			add_extra_state_shared_building_slots = 3

@@ -1,4 +1,4 @@
-### Millennium Dawn 2026 - European Decisions ###
+﻿### Millennium Dawn 2026 - European Decisions ###
 # Country-specific decisions for GER, FRA, ENG, ITA, POL, SPR
 
 md2026_europe_category = {
@@ -34,7 +34,7 @@ md2026_europe_category = {
 
 		remove_effect = {
 			set_country_flag = md2026_ger_sondervermogen_launched
-			add_ideas = md2026_ger_infrastructure_fund
+			add_idea = md2026_ger_infrastructure_fund
 			country_event = { id = md2026_europe.14 days = 5 }
 		}
 
@@ -157,7 +157,7 @@ md2026_europe_category = {
 
 		remove_effect = {
 			set_country_flag = md2026_fra_nuclear_umbrella_offered
-			add_ideas = md2026_fra_nuclear_expansion
+			add_idea = md2026_fra_nuclear_expansion
 			country_event = { id = md2026_europe.9 days = 5 }
 			# Trigger nuclear umbrella offer to European allies
 			every_country = {
@@ -243,7 +243,7 @@ md2026_europe_category = {
 		}
 
 		remove_effect = {
-			add_ideas = md2026_fra_defense_surge
+			add_idea = md2026_fra_defense_surge
 			country_event = { id = md2026_europe.11 days = 5 }
 		}
 
@@ -287,7 +287,7 @@ md2026_europe_category = {
 
 		remove_effect = {
 			set_country_flag = md2026_eng_eu_reset_done
-			add_ideas = md2026_eng_eu_reset
+			add_idea = md2026_eng_eu_reset
 			add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
 			add_opinion_modifier = { target = GER modifier = md2026_improved_relations }
 			FRA = { add_opinion_modifier = { target = ENG modifier = md2026_improved_relations } }
@@ -324,7 +324,7 @@ md2026_europe_category = {
 		}
 
 		remove_effect = {
-			add_ideas = md2026_eng_defense_review
+			add_idea = md2026_eng_defense_review
 			country_event = { id = md2026_europe.5 days = 5 }
 		}
 
@@ -359,7 +359,7 @@ md2026_europe_category = {
 		}
 
 		remove_effect = {
-			add_ideas = md2026_eng_nhs_reform
+			add_idea = md2026_eng_nhs_reform
 			add_stability = 0.05
 			country_event = { id = md2026_europe.6 days = 5 }
 		}
@@ -479,7 +479,7 @@ md2026_europe_category = {
 			add_stability = 0.02
 			if = {
 				limit = { has_idea = md2026_ita_austerity_pressure }
-				remove_ideas = md2026_ita_austerity_pressure
+				remove_idea = md2026_ita_austerity_pressure
 			}
 		}
 
@@ -563,7 +563,7 @@ md2026_europe_category = {
 
 		remove_effect = {
 			set_country_flag = md2026_pol_cpk_started
-			add_ideas = md2026_pol_cpk_megaproject
+			add_idea = md2026_pol_cpk_megaproject
 			10 = {
 				add_building_construction = {
 					type = infrastructure
@@ -742,7 +742,7 @@ md2026_europe_category = {
 			add_political_power = 25
 			if = {
 				limit = { has_idea = md2026_spr_territorial_tensions }
-				remove_ideas = md2026_spr_territorial_tensions
+				remove_idea = md2026_spr_territorial_tensions
 			}
 			country_event = { id = md2026_europe.2 days = 5 }
 		}
@@ -780,7 +780,7 @@ md2026_europe_category = {
 		}
 
 		remove_effect = {
-			add_ideas = md2026_spr_renewable_leader
+			add_idea = md2026_spr_renewable_leader
 			41 = {
 				add_building_construction = {
 					type = infrastructure
@@ -830,8 +830,8 @@ md2026_europe_category = {
 			add_stability = 0.05
 			if = {
 				limit = { has_idea = md2026_spr_coalition_crisis }
-				remove_ideas = md2026_spr_coalition_crisis
-				add_ideas = md2026_spr_progressive_coalition
+				remove_idea = md2026_spr_coalition_crisis
+				add_idea = md2026_spr_progressive_coalition
 			}
 		}
 

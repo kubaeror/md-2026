@@ -18,7 +18,7 @@
 		set_air_oob = "ARM_2000_bba"
 	}
 
-	add_ideas = {
+	add_idea = {
 		economic_boom
 		eastern_church_arm
 		rampant_corruption
@@ -374,7 +374,7 @@ country_event = {
 
 	### Artsakh Dissolution (Sept 2023) ###
 	# NKR was dissolved after Azerbaijan's 2023 offensive. Remove the spirit.
-	remove_ideas = ARM_has_artsakh_idea
+	remove_idea = ARM_has_artsakh_idea
 
 	### Politics & Parties ###
 	set_popularities = {

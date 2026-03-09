@@ -104,7 +104,7 @@
 
 		complete_special_project = sp:sp_helicopter_project
 
-	add_ideas = {
+	add_idea = {
 		fast_growth
 		slight_corruption
 		labour_unions

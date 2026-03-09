@@ -32,7 +32,7 @@
 	set_variable = { saudi_royal_family_opinion = 75 }
 	set_variable = { small_medium_business_owners = 75 }
 
-	add_ideas = {
+	add_idea = {
 		medium_corruption
 		sunni
 		LoAS_member

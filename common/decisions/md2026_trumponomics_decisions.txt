@@ -214,8 +214,8 @@ md2026_trumponomics_category = {
 
 		remove_effect = {
 			swap_ideas = {
-				remove_ideas = md2026_usa_doge_cuts
-				add_ideas = md2026_usa_doge_deep_cuts
+				remove_idea = md2026_usa_doge_cuts
+				add_idea = md2026_usa_doge_deep_cuts
 			}
 			add_stability = -0.05
 		}

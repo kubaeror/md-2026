@@ -1,4 +1,4 @@
-capital = 13
+﻿capital = 13
 2000.1.1 = {
 	set_cosmetic_tag = ENG
 	set_country_flag = dynamic_flag
@@ -43,7 +43,7 @@ capital = 13
 		}
 	}
 
-	add_ideas = {
+	add_idea = {
 		#Economic Cycle
 		stable_growth
 		#Corruption
@@ -2537,7 +2537,7 @@ capital = 13
 	startup_politics = yes
 
 	### 2026 National Spirits ###
-	add_ideas = {
+	add_idea = {
 		md2026_eng_post_brexit
 	}
 

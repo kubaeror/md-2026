@@ -1,4 +1,4 @@
-### MD2026 Pakistan Focus Branch ###
+﻿### MD2026 Pakistan Focus Branch ###
 # Shared focuses for Pakistan's 2026 focus tree branch
 # Root focus at absolute x=38, y=0
 # 12 focuses: Economic crisis, IMF/China branches, military/Kashmir
@@ -39,7 +39,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_imf_bailout"
 		add_political_power = 25
 		add_stability = 0.05
-		add_ideas = md2026_pak_imf_reforms
+		add_idea = md2026_pak_imf_reforms
 		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
 	}
 	ai_will_do = { base = 60 }

@@ -27,7 +27,7 @@
 	}
 
 
-	add_ideas = {
+	add_idea = {
 		#Economic Cycle
 		fast_growth
 		#Corruption
@@ -1825,7 +1825,7 @@
 	set_variable = { term_limit = 0 }
 	set_variable = { current_term = 1 }
 
-	add_ideas = {
+	add_idea = {
 		md2026_swe_new_nato_member
 	}
 

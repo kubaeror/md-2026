@@ -731,7 +731,7 @@
 
 		complete_special_project = sp:sp_helicopter_project
 
-	add_ideas = {
+	add_idea = {
 		paralyzing_corruption
 		cheondo
 		stagnation
@@ -989,7 +989,7 @@
 	startup_politics = yes
 
 	### 2026 National Spirits ###
-	add_ideas = {
+	add_idea = {
 		md2026_nko_total_isolation
 	}
 

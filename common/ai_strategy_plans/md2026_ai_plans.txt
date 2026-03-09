@@ -1,4 +1,4 @@
-﻿# MD2026 - AI Strategy Plans
+# MD2026 - AI Strategy Plans
 # Guides AI focus tree selection for all countries with md2026 focus trees.
 # Each plan lists focuses in logical top-down order so the AI takes root focuses first.
 # For mutually exclusive branches, the "historical" path is chosen as default.
@@ -43,8 +43,6 @@ md2026_usa_historical = {
 		MD2026_USA_greenland_demand
 		MD2026_USA_panama_canal
 	}
-
-	}
 }
 
 # ============================================================
@@ -81,8 +79,6 @@ md2026_sov_historical = {
 		MD2026_SOV_brics_leadership
 		MD2026_SOV_multipolar_world
 		MD2026_SOV_global_south_pivot
-	}
-
 	}
 }
 
@@ -123,8 +119,6 @@ md2026_chi_historical = {
 		MD2026_CHI_island_fortification
 		MD2026_CHI_carrier_fleet
 	}
-
-	}
 }
 
 # ============================================================
@@ -160,8 +154,6 @@ md2026_ukr_historical = {
 		MD2026_UKR_frozen_conflict
 		MD2026_UKR_grain_corridor
 		MD2026_UKR_victory_plan
-	}
-
 	}
 }
 
@@ -209,8 +201,6 @@ md2026_ger_historical = {
 		MD2026_GER_green_technology
 		MD2026_GER_leading_europe
 	}
-
-	}
 }
 
 # ============================================================
@@ -256,8 +246,6 @@ md2026_fra_historical = {
 		MD2026_FRA_reactor_exports
 		MD2026_FRA_hydrogen_leader
 		MD2026_FRA_grande_nation
-	}
-
 	}
 }
 
@@ -305,8 +293,6 @@ md2026_eng_historical = {
 		MD2026_ENG_pharma_exports
 		MD2026_ENG_global_reach
 	}
-
-	}
 }
 
 # ============================================================
@@ -352,8 +338,6 @@ md2026_ita_historical = {
 		MD2026_ITA_fiscal_stability
 		MD2026_ITA_tourism_economy
 		MD2026_ITA_italian_renaissance
-	}
-
 	}
 }
 
@@ -409,7 +393,6 @@ md2026_pol_historical = {
 		modifier = {
 			factor = 1.0
 		}
-	}
 }
 
 # ============================================================
@@ -457,8 +440,6 @@ md2026_spr_historical = {
 		MD2026_SPR_border_security
 		MD2026_SPR_nueva_espana
 	}
-
-	}
 }
 
 # ============================================================
@@ -504,8 +485,6 @@ md2026_isr_historical = {
 		MD2026_ISR_ai_warfare
 		MD2026_ISR_space_program
 		MD2026_ISR_startup_nation
-	}
-
 	}
 }
 
@@ -553,8 +532,6 @@ md2026_tur_historical = {
 		MD2026_TUR_cultural_influence
 		MD2026_TUR_century_of_turkiye
 	}
-
-	}
 }
 
 # ============================================================
@@ -600,8 +577,6 @@ md2026_kor_historical = {
 		MD2026_KOR_japan_cooperation
 		MD2026_KOR_asean_engagement
 		MD2026_KOR_global_pivot_state
-	}
-
 	}
 }
 
@@ -649,8 +624,6 @@ md2026_tai_historical = {
 		MD2026_TAI_asean_trade
 		MD2026_TAI_fortress_taiwan
 	}
-
-	}
 }
 
 # ============================================================
@@ -696,8 +669,6 @@ md2026_nko_historical = {
 		MD2026_NKO_cyber_army
 		MD2026_NKO_propaganda_network
 		MD2026_NKO_eternal_leader
-	}
-
 	}
 }
 
@@ -745,8 +716,6 @@ md2026_jap_historical = {
 		MD2026_JAP_okinawa_posture
 		MD2026_JAP_normal_nation
 	}
-
-	}
 }
 
 # ============================================================
@@ -792,8 +761,6 @@ md2026_raj_historical = {
 		MD2026_RAJ_moon_mission
 		MD2026_RAJ_quantum_computing
 		MD2026_RAJ_vishwaguru
-	}
-
 	}
 }
 
@@ -841,8 +808,6 @@ md2026_per_historical = {
 		MD2026_PER_s400_acquisition
 		MD2026_PER_regional_hegemon
 	}
-
-	}
 }
 
 # ============================================================
@@ -871,8 +836,6 @@ md2026_sau_historical = {
 		MD2026_SAU_regional_balance
 		MD2026_SAU_iran_rivalry
 		MD2026_SAU_military_modernization
-	}
-
 	}
 }
 
@@ -920,8 +883,6 @@ md2026_egy_historical = {
 		MD2026_EGY_green_hydrogen
 		MD2026_EGY_arab_leader
 	}
-
-	}
 }
 
 # ============================================================
@@ -968,8 +929,6 @@ md2026_syr_historical = {
 		MD2026_SYR_food_security
 		MD2026_SYR_new_dawn
 	}
-
-	}
 }
 
 # ============================================================
@@ -998,8 +957,6 @@ md2026_bra_historical = {
 		MD2026_BRA_military_modernization
 		MD2026_BRA_brics_leadership
 		MD2026_BRA_un_reform
-	}
-
 	}
 }
 
@@ -1047,8 +1004,6 @@ md2026_can_historical = {
 		MD2026_CAN_skilled_workforce
 		MD2026_CAN_middle_power
 	}
-
-	}
 }
 
 # ============================================================
@@ -1095,8 +1050,6 @@ md2026_ast_historical = {
 		MD2026_AST_tech_exports
 		MD2026_AST_indo_pacific_anchor
 	}
-
-	}
 }
 
 # ============================================================
@@ -1133,7 +1086,6 @@ md2026_arg_historical = {
 		modifier = {
 			factor = 1.0
 		}
-	}
 }
 
 # ============================================================
@@ -1171,7 +1123,6 @@ md2026_mex_historical = {
 		modifier = {
 			factor = 1.0
 		}
-	}
 }
 
 # ============================================================
@@ -1201,16 +1152,13 @@ md2026_pak_historical = {
 		md2026_pak_nuclear_program
 		md2026_pak_military_modernization
 	}
-
-	}
-	}
+}
 
 	weight = {
 		factor = 1.0
 		modifier = {
 			factor = 1.0
 		}
-	}
 }
 
 md2026_pak_china_path = {
@@ -1235,16 +1183,13 @@ md2026_pak_china_path = {
 		md2026_pak_nuclear_program
 		md2026_pak_military_modernization
 	}
-
-	}
-	}
+}
 
 	weight = {
 		factor = 0.5
 		modifier = {
 			factor = 0.5
 		}
-	}
 }
 
 # ============================================================
@@ -1282,7 +1227,6 @@ md2026_zaf_historical = {
 		modifier = {
 			factor = 1.0
 		}
-	}
 }
 
 # ============================================================
@@ -1321,7 +1265,6 @@ md2026_idn_historical = {
 		modifier = {
 			factor = 1.0
 		}
-	}
 }
 
 # ============================================================
@@ -1357,7 +1300,6 @@ md2026_nga_historical = {
 		modifier = {
 			factor = 1.0
 		}
-	}
 }
 
 # ============================================================
@@ -1396,7 +1338,6 @@ md2026_rom_historical = {
 		modifier = {
 			factor = 1.0
 		}
-	}
 }
 
 # ============================================================
@@ -1438,5 +1379,4 @@ md2026_baltic_historical = {
 		modifier = {
 			factor = 1.0
 		}
-	}
 }
