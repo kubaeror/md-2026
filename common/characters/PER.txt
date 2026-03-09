@@ -1,4 +1,4 @@
-characters = {
+﻿characters = {
 	PER_ahmadreza_pourdastan = {
 		name = "Ahmadreza Pourdastan"
 		portraits = {
@@ -889,6 +889,44 @@ characters = {
 			skills = {
 				specialization_land = 1
 			}
+		}
+	}
+
+	PER_hossein_salami = {
+		name = "Hossein Salami"
+		portraits = {
+			army = { large = "gfx/leaders/PER/Hossein_Salami.dds" }
+		}
+		field_marshal = {
+			traits = { logistics_wizard }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 5
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = hossein_salami
+			ledger = army
+			allowed = { original_tag = PER }
+			traits = { army_chief_reform_2 }
+			cost = 150
+		}
+	}
+
+	PER_esmail_qaani = {
+		name = "Esmail Qaani"
+		portraits = {
+			army = { large = "gfx/leaders/PER/Esmail_Qaani.dds" }
+		}
+		corps_commander = {
+			traits = { commando }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
 		}
 	}
 }
