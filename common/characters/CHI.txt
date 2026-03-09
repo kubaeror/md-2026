@@ -1755,4 +1755,107 @@ characters = {
 		}
 	}
 
+	CHI_zhang_youxia = {
+		name = "Zhang Youxia"
+		portraits = {
+			army = { large = "gfx/leaders/CHI/Zhang_Youxia.dds" }
+		}
+		field_marshal = {
+			traits = { logistics_wizard organizer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+
+	CHI_he_weidong = {
+		name = "He Weidong"
+		portraits = {
+			army = { large = "gfx/leaders/CHI/He_Weidong.dds" }
+		}
+		field_marshal = {
+			traits = { thorough_planner }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 3
+		}
+	}
+
+	CHI_liu_zhenli = {
+		name = "Liu Zhenli"
+		portraits = {
+			army = { large = "gfx/leaders/CHI/Liu_Zhenli.dds" }
+		}
+		corps_commander = {
+			traits = { infantry_leader aggressive_assaulter }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+
+	CHI_wang_jianwu = {
+		name = "Wang Jianwu"
+		portraits = {
+			army = { large = "gfx/leaders/CHI/Wang_Jianwu.dds" }
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+
+	CHI_lin_xiangyang = {
+		name = "Lin Xiangyang"
+		portraits = {
+			army = { large = "gfx/leaders/CHI/Lin_Xiangyang.dds" }
+		}
+		corps_commander = {
+			traits = { invader panzer_leader }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+
+	CHI_hu_zhongming = {
+		name = "Hu Zhongming"
+		portraits = {
+			army = { large = "gfx/leaders/CHI/Hu_Zhongming.dds" }
+		}
+		navy_leader = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			maneuvering_skill = 3
+			coordination_skill = 4
+		}
+	}
+
+	CHI_chang_dingqiu = {
+		name = "Chang Dingqiu"
+		portraits = {
+			army = { large = "gfx/leaders/CHI/Chang_Dingqiu.dds" }
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = chang_dingqiu
+			ledger = air
+			allowed = { original_tag = CHI }
+			traits = { air_chief_reform_3 }
+			cost = 150
+		}
+	}
 }

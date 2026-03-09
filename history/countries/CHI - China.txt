@@ -4258,13 +4258,13 @@ capital = 547
 	}
 
 	#2000 Army chiefs
-	recruit_character = CHI_chi_haotian
-	recruit_character = CHI_cao_gangchuan
-	recruit_character = CHI_li_xinliang
-	recruit_character = CHI_fu_quanyou
-	recruit_character = CHI_liang_guanglie
-	recruit_character = CHI_tao_bojun
-	recruit_character = CHI_xing_shizhong
+	recruit_character = CHI_zhang_youxia
+	recruit_character = CHI_he_weidong
+	recruit_character = CHI_liu_zhenli
+	recruit_character = CHI_wang_jianwu
+	recruit_character = CHI_lin_xiangyang
+	recruit_character = CHI_hu_zhongming
+	recruit_character = CHI_chang_dingqiu
 	recruit_character = CHI_yu_yongbo
 	recruit_character = CHI_zhang_wannian
 	recruit_character = CHI_zhang_zhijian
