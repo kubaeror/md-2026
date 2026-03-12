@@ -1,4 +1,4 @@
-# MD2026 - AI Strategy Plans
+﻿# MD2026 - AI Strategy Plans
 # Guides AI focus tree selection for all countries with md2026 focus trees.
 # Each plan lists focuses in logical top-down order so the AI takes root focuses first.
 # For mutually exclusive branches, the "historical" path is chosen as default.
@@ -43,6 +43,17 @@ md2026_usa_historical = {
 		MD2026_USA_greenland_demand
 		MD2026_USA_panama_canal
 	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 
 # ============================================================
@@ -79,6 +90,17 @@ md2026_sov_historical = {
 		MD2026_SOV_brics_leadership
 		MD2026_SOV_multipolar_world
 		MD2026_SOV_global_south_pivot
+	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
 	}
 }
 
@@ -119,6 +141,17 @@ md2026_chi_historical = {
 		MD2026_CHI_island_fortification
 		MD2026_CHI_carrier_fleet
 	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 
 # ============================================================
@@ -154,6 +187,17 @@ md2026_ukr_historical = {
 		MD2026_UKR_frozen_conflict
 		MD2026_UKR_grain_corridor
 		MD2026_UKR_victory_plan
+	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
 	}
 }
 
@@ -201,6 +245,17 @@ md2026_ger_historical = {
 		MD2026_GER_green_technology
 		MD2026_GER_leading_europe
 	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 
 # ============================================================
@@ -246,6 +301,17 @@ md2026_fra_historical = {
 		MD2026_FRA_reactor_exports
 		MD2026_FRA_hydrogen_leader
 		MD2026_FRA_grande_nation
+	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
 	}
 }
 
@@ -293,6 +359,17 @@ md2026_eng_historical = {
 		MD2026_ENG_pharma_exports
 		MD2026_ENG_global_reach
 	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 
 # ============================================================
@@ -338,6 +415,17 @@ md2026_ita_historical = {
 		MD2026_ITA_fiscal_stability
 		MD2026_ITA_tourism_economy
 		MD2026_ITA_italian_renaissance
+	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
 	}
 }
 
@@ -393,6 +481,17 @@ md2026_pol_historical = {
 		modifier = {
 			factor = 1.0
 		}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 }
 
@@ -441,6 +540,17 @@ md2026_spr_historical = {
 		MD2026_SPR_border_security
 		MD2026_SPR_nueva_espana
 	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 
 # ============================================================
@@ -486,6 +596,17 @@ md2026_isr_historical = {
 		MD2026_ISR_ai_warfare
 		MD2026_ISR_space_program
 		MD2026_ISR_startup_nation
+	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
 	}
 }
 
@@ -533,6 +654,17 @@ md2026_tur_historical = {
 		MD2026_TUR_cultural_influence
 		MD2026_TUR_century_of_turkiye
 	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 
 # ============================================================
@@ -578,6 +710,17 @@ md2026_kor_historical = {
 		MD2026_KOR_japan_cooperation
 		MD2026_KOR_asean_engagement
 		MD2026_KOR_global_pivot_state
+	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
 	}
 }
 
@@ -625,6 +768,17 @@ md2026_tai_historical = {
 		MD2026_TAI_asean_trade
 		MD2026_TAI_fortress_taiwan
 	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 
 # ============================================================
@@ -670,6 +824,17 @@ md2026_nko_historical = {
 		MD2026_NKO_cyber_army
 		MD2026_NKO_propaganda_network
 		MD2026_NKO_eternal_leader
+	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
 	}
 }
 
@@ -717,6 +882,17 @@ md2026_jap_historical = {
 		MD2026_JAP_okinawa_posture
 		MD2026_JAP_normal_nation
 	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 
 # ============================================================
@@ -762,6 +938,17 @@ md2026_raj_historical = {
 		MD2026_RAJ_moon_mission
 		MD2026_RAJ_quantum_computing
 		MD2026_RAJ_vishwaguru
+	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
 	}
 }
 
@@ -809,6 +996,17 @@ md2026_per_historical = {
 		MD2026_PER_s400_acquisition
 		MD2026_PER_regional_hegemon
 	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 
 # ============================================================
@@ -837,6 +1035,17 @@ md2026_sau_historical = {
 		MD2026_SAU_regional_balance
 		MD2026_SAU_iran_rivalry
 		MD2026_SAU_military_modernization
+	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
 	}
 }
 
@@ -884,6 +1093,17 @@ md2026_egy_historical = {
 		MD2026_EGY_green_hydrogen
 		MD2026_EGY_arab_leader
 	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 
 # ============================================================
@@ -930,6 +1150,17 @@ md2026_syr_historical = {
 		MD2026_SYR_food_security
 		MD2026_SYR_new_dawn
 	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 
 # ============================================================
@@ -958,6 +1189,17 @@ md2026_bra_historical = {
 		MD2026_BRA_military_modernization
 		MD2026_BRA_brics_leadership
 		MD2026_BRA_un_reform
+	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
 	}
 }
 
@@ -1005,6 +1247,17 @@ md2026_can_historical = {
 		MD2026_CAN_skilled_workforce
 		MD2026_CAN_middle_power
 	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 
 # ============================================================
@@ -1051,6 +1304,17 @@ md2026_ast_historical = {
 		MD2026_AST_tech_exports
 		MD2026_AST_indo_pacific_anchor
 	}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 
 # ============================================================
@@ -1087,6 +1351,17 @@ md2026_arg_historical = {
 		modifier = {
 			factor = 1.0
 		}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 }
 
@@ -1125,6 +1400,17 @@ md2026_mex_historical = {
 		modifier = {
 			factor = 1.0
 		}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 }
 
@@ -1161,7 +1447,18 @@ md2026_pak_historical = {
 		modifier = {
 			factor = 1.0
 		}
+	
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
 	}
+}
 }
 
 md2026_pak_china_path = {
@@ -1192,7 +1489,18 @@ md2026_pak_china_path = {
 		modifier = {
 			factor = 0.5
 		}
+	
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
 	}
+}
 }
 
 # ============================================================
@@ -1230,6 +1538,17 @@ md2026_zaf_historical = {
 		modifier = {
 			factor = 1.0
 		}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 }
 
@@ -1269,6 +1588,17 @@ md2026_idn_historical = {
 		modifier = {
 			factor = 1.0
 		}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 }
 
@@ -1305,6 +1635,17 @@ md2026_nga_historical = {
 		modifier = {
 			factor = 1.0
 		}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 }
 
@@ -1344,6 +1685,17 @@ md2026_rom_historical = {
 		modifier = {
 			factor = 1.0
 		}
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
 }
 
@@ -1386,5 +1738,159 @@ md2026_baltic_historical = {
 		modifier = {
 			factor = 1.0
 }
+
+	weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }
+}
+
+
+# ============================================================
+# USA - AHISTORICAL (Abandon Ukraine)
+# ============================================================
+md2026_usa_ahistorical = {
+	allowed = { original_tag = USA }
+	name = "USA 2026 Ahistorical"
+	desc = "Trump's second term agenda: Abandon Ukraine, full isolationism."
+
+	enable = {
+		original_tag = USA
+		has_global_flag = md2026_initialized
+	}
+
+	abort = { }
+
+	ai_national_focuses = {
+		MD2026_USA_trump_second_term
+		MD2026_USA_doge
+		MD2026_USA_doge_federal_cuts
+		MD2026_USA_doge_deregulation
+		MD2026_USA_mass_deportations
+		MD2026_USA_border_security
+		MD2026_USA_radical_tax_cuts
+		MD2026_USA_trade_tariffs
+		MD2026_USA_trade_war_china
+		MD2026_USA_trade_war_eu
+		MD2026_USA_energy_dominance
+		MD2026_USA_drill_baby_drill
+		MD2026_USA_lng_exports
+		MD2026_USA_nato_pressure
+		MD2026_USA_pentagon_budget
+		MD2026_USA_space_force_expansion
+		MD2026_USA_deal_with_russia
+		MD2026_USA_abandon_ukraine
+		MD2026_USA_territorial_ambitions
+		MD2026_USA_greenland_demand
+		MD2026_USA_panama_canal
+	}
+
+	weight = {
+		factor = 0
+		modifier = {
+			factor = 100
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
+}
+
+# ============================================================
+# RUSSIA - AHISTORICAL (Frozen Conflict)
+# ============================================================
+md2026_sov_ahistorical = {
+	allowed = { original_tag = SOV }
+	name = "Russia 2026 Ahistorical"
+	desc = "Freeze the conflict in Ukraine, pursue economic autarky and pivot east."
+
+	enable = {
+		original_tag = SOV
+		has_global_flag = md2026_initialized
+	}
+
+	abort = { }
+
+	ai_national_focuses = {
+		MD2026_SOV_war_crossroads
+		MD2026_SOV_frozen_conflict
+		MD2026_SOV_wagner_successor
+		MD2026_SOV_economic_autarky
+		MD2026_SOV_import_substitution
+		MD2026_SOV_sanctions_circumvention
+		MD2026_SOV_parallel_economy
+		MD2026_SOV_rubles_for_oil
+		MD2026_SOV_eastern_pivot
+		MD2026_SOV_china_trade
+		MD2026_SOV_brics_leadership
+		MD2026_SOV_multipolar_world
+		MD2026_SOV_global_south_pivot
+	}
+
+	weight = {
+		factor = 0
+		modifier = {
+			factor = 100
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
+}
+
+# ============================================================
+# CHINA - AHISTORICAL (Taiwan Escalation)
+# ============================================================
+md2026_chi_ahistorical = {
+	allowed = { original_tag = CHI }
+	name = "China 2026 Ahistorical"
+	desc = "Great rejuvenation through tech dominance, naval expansion, and military escalation in Taiwan."
+
+	enable = {
+		original_tag = CHI
+		has_global_flag = md2026_initialized
+	}
+
+	abort = { }
+
+	ai_national_focuses = {
+		MD2026_CHI_great_rejuvenation
+		MD2026_CHI_taiwan_question
+		MD2026_CHI_taiwan_escalation
+		MD2026_CHI_naval_blockade
+		MD2026_CHI_belt_road_2
+		MD2026_CHI_global_infrastructure
+		MD2026_CHI_digital_silk_road
+		MD2026_CHI_african_investment
+		MD2026_CHI_tech_dominance
+		MD2026_CHI_semiconductor_war
+		MD2026_CHI_space_program
+		MD2026_CHI_ai_supremacy
+		MD2026_CHI_lunar_program
+		MD2026_CHI_naval_expansion
+		MD2026_CHI_south_china_sea
+		MD2026_CHI_blue_water_navy
+		MD2026_CHI_island_fortification
+		MD2026_CHI_carrier_fleet
+	}
+
+	weight = {
+		factor = 0
+		modifier = {
+			factor = 100
+			has_game_rule = {
+				name = generic_ai_behavior
+				value = random
+			}
+		}
+	}
 }

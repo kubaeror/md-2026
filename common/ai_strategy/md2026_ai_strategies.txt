@@ -1158,3 +1158,62 @@ md2026_syr_islamic = {
 	ai_strategy = { type = befriend id = TUR value = 100 }
 	ai_strategy = { type = befriend id = SAU value = 75 }
 }
+
+
+################################
+# ENHANCED TACTICAL AI BEHAVIOR
+################################
+
+# RUSSIA: Aggressive war execution in Ukraine
+md2026_sov_ukraine_front = {
+	allowed = { original_tag = SOV }
+	enable = { 
+		has_war_with = UKR 
+		has_global_flag = md2026_initialized
+	}
+	abort_when_not_enabled = yes
+
+	# Highly aggressive front control
+	ai_strategy = { type = front_control id = UKR value = 150 }
+	ai_strategy = { type = conquer id = UKR value = 300 }
+	ai_strategy = { type = front_armor_score id = UKR value = 200 }
+	
+	# PP & CP Spending Priorities
+	ai_strategy = { type = command_power_spend_priority id = land_doctrine value = 100 }
+	ai_strategy = { type = political_power_spend_priority id = reverse_engineering value = 50 }
+	ai_strategy = { type = political_power_spend_priority id = buy_equipment value = 100 }
+}
+
+# UKRAINE: Defensive war execution
+md2026_ukr_survival_front = {
+	allowed = { original_tag = UKR }
+	enable = { 
+		has_war_with = SOV 
+		has_global_flag = md2026_initialized
+	}
+	abort_when_not_enabled = yes
+
+	# Desperate defense
+	ai_strategy = { type = front_control id = SOV value = 200 }
+	ai_strategy = { type = defend id = SOV value = 300 }
+	
+	# Beg for equipment from market using PP
+	ai_strategy = { type = political_power_spend_priority id = buy_equipment value = 200 }
+	ai_strategy = { type = command_power_spend_priority id = land_doctrine value = 100 }
+}
+
+# CHINA: Taiwan Invasion Preparations & Execution
+md2026_chi_taiwan_front = {
+	allowed = { original_tag = CHI }
+	enable = { 
+		has_war_with = TAI 
+		has_global_flag = md2026_initialized
+	}
+	abort_when_not_enabled = yes
+
+	# Overwhelming naval invasion priority
+	ai_strategy = { type = front_control id = TAI value = 200 }
+	ai_strategy = { type = conquer id = TAI value = 300 }
+	ai_strategy = { type = naval_mission_priority id = invasion_escort value = 200 }
+	ai_strategy = { type = naval_mission_priority id = strike_force value = 150 }
+}
