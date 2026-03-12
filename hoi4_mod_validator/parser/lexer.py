@@ -49,7 +49,7 @@ _SCANNER = re.compile(
     r'|(?P<RBRACE>\})'
     r'|(?P<AT>@)'
     r'|(?P<NEWLINE>\n)'
-    r'|(?P<IDENTIFIER>[A-Za-z_\-][A-Za-z0-9_\-\.]*)'
+    r'|(?P<IDENTIFIER>[A-Za-z_\-\^][A-Za-z0-9_\-\.\^]*)'
     r'|(?P<UNKNOWN>.)',   # catch-all
 )
 
