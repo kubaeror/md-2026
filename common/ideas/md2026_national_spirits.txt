@@ -86,8 +86,6 @@ ideas = {
 				war_support_factor = 0.05
 				drift_defence_factor = -0.15
 			}
-		}
-
 		md2026_usa_america_first = {
 			picture = GENERIC_protectionism
 			allowed = { original_tag = USA }
@@ -98,6 +96,63 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.10
 				trade_opinion_factor = -0.15
+			}
+		}
+
+		### GLOBAL SPIRITS 2026 ###
+
+		md2026_inflation_hangover = {
+			picture = economic_recession
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.05
+			}
+		}
+
+		md2026_global_drone_proliferation = {
+			picture = generic_air_bonus
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				land_Drone_equipment_cost_factor = -0.20
+				land_Drone_equipment1_cost_factor = -0.20
+			}
+		}
+
+		md2026_multipolar_world_order = {
+			picture = multipolar_world
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				generate_wagoal_tension_factor = 0.15
+				trade_opinion_factor = -0.10
+				war_support_factor = 0.05
+			}
+		}
+
+		### WAR EXPANSION IDEAS ###
+
+		md2026_sov_convict_units = {
+			picture = army_cohesion
+			allowed = { original_tag = SOV }
+			modifier = {
+				conscription = 0.01
+				army_defence_factor = -0.05
+				army_attack_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+
+		md2026_artillery_production_boost = {
+			picture = military_industrial_complex
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				industrial_capacity_factory = 0.05
+			}
+		}
 				production_speed_buildings_factor = 0.05
 				stability_factor = -0.03
 			}

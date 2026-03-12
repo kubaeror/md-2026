@@ -28,13 +28,13 @@ state = {
 		victory_points = { 706 1 } #Forestburgh
 
 		buildings = {
-			infrastructure = 3
-			internet_station = 2
+			infrastructure = 5
+			internet_station = 5
 			arms_factory = 1
 			dockyard = 2
 			air_base = 4
-			industrial_complex = 4
-			offices = 5
+			industrial_complex = 8
+			offices = 15
 			nuclear_reactor = 3
 			3878 = {
 				naval_base = 4

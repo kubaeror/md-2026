@@ -1,0 +1,130 @@
+### Millennium Dawn 2026 - Russia-Ukraine War Decisions ###
+
+md2026_ru_ukr_war_category = {
+
+	### UKRAINE: Drone Strikes on Russian Infrastructure ###
+
+	md2026_ukr_drone_strikes = {
+		icon = generic_military
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 90
+
+		visible = {
+			original_tag = UKR
+			has_war_with = SOV
+		}
+
+		available = {
+			has_war_with = SOV
+			# Needs some drone capability
+			OR = {
+				has_idea = md2026_ukr_drone_warfare
+				has_idea = md2026_drone_warfare_capability
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_ukr_drone_strikes"
+			add_political_power = -25
+			SOV = {
+				random_owned_controlled_state = {
+					limit = {
+						has_building = industrial_complex
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = -1
+					}
+				}
+				add_stability = -0.02
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	### RUSSIA: Convict Mobilization ###
+
+	md2026_sov_convict_mobilization = {
+		icon = generic_military
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 180
+
+		visible = {
+			original_tag = SOV
+			has_war_with = UKR
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_sov_convict_mobilization"
+			add_manpower = 25000
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_ideas = md2026_sov_convict_units
+		}
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				surrender_progress > 0.05
+			}
+		}
+	}
+
+	### EUROPE: Artillery Production Initiative ###
+
+	md2026_eu_artillery_initiative = {
+		icon = generic_military
+
+		cost = 75
+		fire_only_once = no
+		days_remove = 120
+		days_re_enable = 365
+
+		visible = {
+			OR = {
+				original_tag = GER
+				original_tag = FRA
+				original_tag = POL
+				original_tag = CZE
+			}
+			SOV = { has_war_with = UKR }
+		}
+
+		available = {
+			has_war = no
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_eu_artillery_initiative"
+			add_timed_idea = {
+				idea = md2026_artillery_production_boost
+				days = 365
+			}
+			UKR = {
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_3
+					amount = 200
+					producer = ROOT
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 60
+		}
+	}
+}

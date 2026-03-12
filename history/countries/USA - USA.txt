@@ -1,4 +1,4 @@
-capital = 1182
+﻿capital = 1182
 2000.1.1 = {
 	# If a country has specific cosmetic tags or configuration
 	set_cosmetic_tag = USA
@@ -1243,7 +1243,32 @@ capital = 1182
 			icon = "gfx/interface/technologies/USA/LAND/MBT3.dds"
 			model = "USA_MD4_medium_armor_entity_2"
 			design_team = mio:USA_general_dynamics_materiel_manufacturer
-		}
+		
+                create_equipment_variant = {
+                        name = "M1A2 SEPv3"
+                        type = medium_tank_chassis_2
+                        parent_version = 5
+                        modules = {
+                                main_armament_slot = tank_medium_cannon_2
+                                ammunition_load_slot = anti_armor_main_ammo_3
+                                turret_type_slot = tank_base_tank_turret
+                                suspension_type_slot = tank_torsion_bar_suspension_medium
+                                armor_type_slot = nera_armor_gen2
+                                engine_type_slot = tank_gas_turbine_engine_gen3
+                                reload_type_slot = auto_loader
+                                special_type_slot_1 = active_protection_system_1
+                                special_type_slot_2 = smoke_launchers_2
+                                special_type_slot_3 = wet_ammo_storage
+                                special_type_slot_4 = tank_battlestation_3
+                                special_type_slot_5 = tank_aux_engine_2
+                        }
+                        upgrades = {
+                                tank_nsb_armor_upgrade = 9
+                        }
+                        icon = "gfx/interface/technologies/USA/LAND/MBT3.dds"
+                        model = "USA_MD4_medium_armor_entity_2"
+                        design_team = mio:USA_general_dynamics_materiel_manufacturer
+                }}
 		create_equipment_variant = {
 			name = "M113"
 			type = medium_tank_amphibious_chassis_1
@@ -1464,7 +1489,31 @@ capital = 1182
 			icon = "gfx/interface/technologies/USA/LAND/IFV4.dds"
 			model = "USA_M2A3bradley_entity"
 			design_team = mio:USA_united_defense_tank_manufacturer
-		}
+		
+                create_equipment_variant = {
+                        name = "M2A4 Bradley"
+                        type = medium_tank_flame_chassis_2
+                        parent_version = 2
+                        modules = {
+                                main_armament_slot = small_autocannon_2
+                                ammunition_load_slot = anti_armor_main_ammo_2
+                                turret_type_slot = tank_base_tank_turret
+                                suspension_type_slot = tank_torsion_bar_suspension_medium
+                                armor_type_slot = composite_armor_gen2
+                                engine_type_slot = tank_diesel_engine_gen3
+                                reload_type_slot = auto_loader
+                                special_type_slot_1 = active_protection_system_1
+                                special_type_slot_2 = smoke_launchers_2
+                                special_type_slot_3 = atgm_launcher_2
+                                special_type_slot_4 = tank_battlestation_2
+                        }
+                        upgrades = {
+                                tank_nsb_armor_upgrade = 5
+                        }
+                        icon = "gfx/interface/technologies/USA/LAND/IFV4.dds"
+                        model = "USA_M2A3bradley_entity"
+                        design_team = mio:USA_united_defense_tank_manufacturer
+                }}
 	   create_equipment_variant = {
 		   name = "M108"
 		   type = medium_tank_artillery_chassis_1
@@ -2636,7 +2685,27 @@ capital = 1182
 			}
 			model = "USA_carrier_1_entity"
 			design_team = mio:USA_northrop_grumman_newport_news_naval_manufacturer2
-		}
+		
+                create_equipment_variant = {
+                        name = "Gerald R. Ford Class"
+                        type = carrier_hull_2
+                        name_group = USA_CV_HISTORICAL
+                        role_icon_index = 13
+                        parent_version = 1
+                        modules = {
+                                fixed_ship_deck_slot_1 = deck_space_2
+                                fixed_ship_deck_slot_2 = deck_space_2
+                                fixed_ship_deck_slot_3 = deck_space_2
+                                fixed_ship_deck_slot_4 = deck_space_2
+                                fixed_ship_deck_slot_5 = deck_space_2
+                                fixed_ship_anti_air_slot_1 = ship_anti_air_3
+                                fixed_ship_engine_slot_1 = ship_engine_nuclear_3
+                                fixed_ship_radar_slot_1 = ship_radar_3
+                        }
+                        icon = "gfx/interface/technologies/USA/NAV/Nimitz.dds"
+                        model = "USA_carrier_1_entity"
+                        design_team = mio:USA_northrop_grumman_newport_news_naval_manufacturer2
+                }}
 		#Iwo Jima Class
 		create_equipment_variant = {
 			name = "Iwo Jima Class"

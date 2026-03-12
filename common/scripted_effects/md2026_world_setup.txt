@@ -11,21 +11,21 @@ md2026_setup_world_borders_and_wars = {
             
             # Transfer control of occupied regions to Russia
             # Crimea (already owned by SOV in base MD usually, but just in case)
-            set_state_controller = 14 # Crimea
+            259 = { set_controller = SOV } # Crimea
             
             # Donbas (Luhansk & Donetsk)
-            set_state_controller = 260 # Luhansk
-            set_state_controller = 261 # Donetsk
+            260 = { set_controller = SOV } # Luhansk
+            261 = { set_controller = SOV } # Donetsk
             
             # Southern Ukraine (Zaporizhzhia & Kherson - partial control)
-            set_state_controller = 262 # Zaporizhzhia
-            set_state_controller = 263 # Kherson
+            262 = { set_controller = SOV } # Zaporizhzhia
+            263 = { set_controller = SOV } # Kherson
             
             # Add core claims for Russia based on 2022 annexation
-            260 = { add_core_of = PREV }
-            261 = { add_core_of = PREV }
-            262 = { add_core_of = PREV }
-            263 = { add_core_of = PREV }
+            260 = { add_core_of = SOV }
+            261 = { add_core_of = SOV }
+            262 = { add_core_of = SOV }
+            263 = { add_core_of = SOV }
         }
     }
 
@@ -35,7 +35,7 @@ md2026_setup_world_borders_and_wars = {
         ISR = {
             declare_war_on = { target = PAL type = annex_everything }
             # Israel controls most of Gaza by 2026
-            set_state_controller = 310 # Gaza Strip
+            310 = { set_controller = ISR } # Gaza Strip
         }
     }
 
@@ -119,12 +119,26 @@ md2026_setup_world_borders_and_wars = {
     }
 
 
-    # 6. Apply economic stabilizer to prevent instant bankruptcies
+    # 6. Apply economic stabilizer and global spirits
     every_country = {
         limit = {
-            has_idea = MD_economic_boom_idea # Or any sign they exist
+            has_global_flag = md2026_initialized
         }
         add_ideas = md2026_economic_stabilizer
+        add_ideas = md2026_global_drone_proliferation
+        add_ideas = md2026_multipolar_world_order
+        
+        # Inflation hangover for developed/emerging economies
+        if = {
+            limit = {
+                OR = {
+                    is_major = yes
+                    # Approximate check for developed nations if gdp variable is used
+                    # gdp > 500
+                }
+            }
+            add_ideas = md2026_inflation_hangover
+        }
     }
 
 

@@ -14,10 +14,10 @@ state = {
 			11761 20
 		}
 		buildings = {
-			infrastructure = 3
-			internet_station = 2
-			industrial_complex = 14
-			offices = 3
+			infrastructure = 6
+			internet_station = 6
+			industrial_complex = 25
+			offices = 12
 			arms_factory = 5
 			air_base = 10
 			11761 = {

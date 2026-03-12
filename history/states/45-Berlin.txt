@@ -10,10 +10,10 @@ state = {
 			6521 26
 		}
 		buildings = {
-			infrastructure = 3
-			internet_station = 2
-			industrial_complex = 1
-			offices = 2
+			infrastructure = 5
+			internet_station = 5
+			industrial_complex = 3
+			offices = 10
 			air_base = 5
 			anti_air_building = 1
 			radar_station = 2
