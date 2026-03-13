@@ -119,8 +119,6 @@ ideas = {
 			allowed = { always = yes }
 			allowed_civil_war = { always = yes }
 			modifier = {
-				equipment_bonus = { land_Drone_equipment = { build_cost_ic = -0.20 } }
-				equipment_bonus = { land_Drone_equipment1 = { build_cost_ic = -0.20 } }
 			}
 		}
 
