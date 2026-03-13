@@ -477,12 +477,6 @@ md2026_pol_historical = {
 	}
 
 	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-
-	weight = {
 		factor = 100
 		modifier = {
 			factor = 0
@@ -492,7 +486,6 @@ md2026_pol_historical = {
 			}
 		}
 	}
-}
 }
 
 # ============================================================
@@ -1347,12 +1340,6 @@ md2026_arg_historical = {
 	}
 
 	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-
-	weight = {
 		factor = 100
 		modifier = {
 			factor = 0
@@ -1396,12 +1383,6 @@ md2026_mex_historical = {
 	}
 
 	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-
-	weight = {
 		factor = 100
 		modifier = {
 			factor = 0
@@ -1443,12 +1424,6 @@ md2026_pak_historical = {
 	}
 	
 	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	
-	weight = {
 		factor = 100
 		modifier = {
 			factor = 0
@@ -1484,12 +1459,6 @@ md2026_pak_china_path = {
 		md2026_pak_military_modernization
 	}
 
-	weight = {
-		factor = 0.5
-		modifier = {
-			factor = 0.5
-		}
-	
 	weight = {
 		factor = 100
 		modifier = {
@@ -1532,12 +1501,6 @@ md2026_zaf_historical = {
 		md2026_zaf_defense_modernization
 		md2026_zaf_regional_power
 	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 
 	weight = {
 		factor = 100
@@ -1584,12 +1547,6 @@ md2026_idn_historical = {
 	}
 
 	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-
-	weight = {
 		factor = 100
 		modifier = {
 			factor = 0
@@ -1629,12 +1586,6 @@ md2026_nga_historical = {
 		md2026_nga_sahel_intervention
 		md2026_nga_african_giant
 	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 
 	weight = {
 		factor = 100
@@ -1679,12 +1630,6 @@ md2026_rom_historical = {
 		MD2026_ROM_neptun_deep
 		MD2026_ROM_regional_power
 	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
 
 	weight = {
 		factor = 100
@@ -1732,12 +1677,6 @@ md2026_baltic_historical = {
 		MD2026_BALTIC_baltic_tiger
 		MD2026_BALTIC_fortress_baltic
 	}
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-}
 
 	weight = {
 		factor = 100
