@@ -32,7 +32,7 @@ md2026_ru_ukr_war_category = {
 			SOV = {
 				random_owned_controlled_state = {
 					limit = {
-						has_building = industrial_complex
+						industrial_complex > 0
 					}
 					add_building_construction = {
 						type = industrial_complex
@@ -116,7 +116,7 @@ md2026_ru_ukr_war_category = {
 			}
 			UKR = {
 				add_equipment_to_stockpile = {
-					type = artillery_equipment_3
+					type = artillery_equipment
 					amount = 200
 					producer = ROOT
 				}

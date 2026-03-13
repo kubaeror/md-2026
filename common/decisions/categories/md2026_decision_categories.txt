@@ -155,6 +155,23 @@ md2026_sanctions_category = {
 		}
 	}
 
+	md2026_ru_ukr_war_category = {
+		icon = generic_military
+		picture = GFX_decision_cat_generic_military
+		priority = 100
+
+		allowed = {
+			OR = {
+				original_tag = SOV
+				original_tag = UKR
+			}
+		}
+
+		visible = {
+			date > 2025.12.31
+		}
+	}
+
 	md2026_europe_category = {
 		icon = generic_political_actions
 		picture = GFX_decision_cat_generic_political_actions

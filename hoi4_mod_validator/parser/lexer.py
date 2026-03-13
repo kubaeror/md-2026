@@ -43,13 +43,13 @@ _SCANNER = re.compile(
     r'(?P<WHITESPACE>[ \t\r]+)'
     r'|(?P<COMMENT>#[^\n]*)'
     r'|(?P<STRING>"(?:[^"\\]|\\.)*")'
-    r'|(?P<NUMBER>-?(?:\d+\.\d+(?:\.\d+)*|\d+))'
+    r'|(?P<NUMBER>-?(?:\d+\.\d+(?:\.\d+)*|\d+)(?![A-Za-z0-9_\-\.\^à-ÿĂ-ɏÀ-ʯ]))'
     r'|(?P<OPERATOR><=|>=|!=|[=<>])'
     r'|(?P<LBRACE>\{)'
     r'|(?P<RBRACE>\})'
     r'|(?P<AT>@)'
     r'|(?P<NEWLINE>\n)'
-    r'|(?P<IDENTIFIER>[A-Za-z_\-\^][A-Za-z0-9_\-\.\^]*)'
+    r'|(?P<IDENTIFIER>[^ \t\r\n\#\"<>={\}@]+)'
     r'|(?P<UNKNOWN>.)',   # catch-all
 )
 

@@ -86,6 +86,8 @@ ideas = {
 				war_support_factor = 0.05
 				drift_defence_factor = -0.15
 			}
+		}
+
 		md2026_usa_america_first = {
 			picture = GENERIC_protectionism
 			allowed = { original_tag = USA }
@@ -151,8 +153,6 @@ ideas = {
 			modifier = {
 				production_speed_arms_factory_factor = 0.10
 				industrial_capacity_factory = 0.05
-			}
-		}
 				production_speed_buildings_factor = 0.05
 				stability_factor = -0.03
 			}

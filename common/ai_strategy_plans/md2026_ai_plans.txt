@@ -1,4 +1,4 @@
-﻿# MD2026 - AI Strategy Plans
+# MD2026 - AI Strategy Plans
 # Guides AI focus tree selection for all countries with md2026 focus trees.
 # Each plan lists focuses in logical top-down order so the AI takes root focuses first.
 # For mutually exclusive branches, the "historical" path is chosen as default.

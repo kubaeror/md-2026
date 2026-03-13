@@ -24,7 +24,7 @@ _SYN007 = "SYN007"  # File encoding issue (BOM OK, other bad)
 _SYN008 = "SYN008"  # Duplicate key in same block
 
 _DATE_RE = re.compile(r"^\d{4}\.\d{1,2}\.\d{1,2}$")
-_VALID_KEY_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_\-\.]*$")
+_VALID_KEY_RE = re.compile(r"^[A-Za-z0-9_\-\.\^à-ÿĂ-ɏÀ-ʯ]+$")
 
 # Known "date" fields — value should match date format
 _DATE_FIELDS = {"date", "start_date", "end_date", "fire_date"}
