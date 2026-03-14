@@ -1255,8 +1255,8 @@
                                 suspension_type_slot = tank_torsion_bar_suspension_medium
                                 armor_type_slot = nera_armor_gen2
                                 engine_type_slot = tank_gas_turbine_engine_gen3
-                                reload_type_slot = auto_loader
-                                special_type_slot_1 = active_protection_system_1
+                                reload_type_slot = automatic_loading
+                                special_type_slot_1 = hardkill_system_gen1
                                 special_type_slot_2 = smoke_launchers_2
                                 special_type_slot_3 = wet_ammo_storage
                                 special_type_slot_4 = tank_battlestation_3
@@ -1499,12 +1499,12 @@
                                 ammunition_load_slot = anti_armor_main_ammo_2
                                 turret_type_slot = tank_base_tank_turret
                                 suspension_type_slot = tank_torsion_bar_suspension_medium
-                                armor_type_slot = composite_armor_gen2
+                                armor_type_slot = tank_composite_armor_gen2
                                 engine_type_slot = tank_diesel_engine_gen3
-                                reload_type_slot = auto_loader
-                                special_type_slot_1 = active_protection_system_1
+                                reload_type_slot = automatic_loading
+                                special_type_slot_1 = hardkill_system_gen1
                                 special_type_slot_2 = smoke_launchers_2
-                                special_type_slot_3 = atgm_launcher_2
+                                special_type_slot_3 = tank_atgm_launcher
                                 special_type_slot_4 = tank_battlestation_2
                         }
                         upgrades = {
@@ -2693,16 +2693,16 @@
                         role_icon_index = 13
                         parent_version = 1
                         modules = {
-                                fixed_ship_deck_slot_1 = deck_space_2
-                                fixed_ship_deck_slot_2 = deck_space_2
-                                fixed_ship_deck_slot_3 = deck_space_2
-                                fixed_ship_deck_slot_4 = deck_space_2
-                                fixed_ship_deck_slot_5 = deck_space_2
-                                fixed_ship_anti_air_slot_1 = ship_anti_air_3
-                                fixed_ship_engine_slot_1 = ship_engine_nuclear_3
-                                fixed_ship_radar_slot_1 = ship_radar_3
+                                fixed_ship_deck_slot_1 = module_flight_deck_2
+                                fixed_ship_deck_slot_2 = module_flight_deck_2
+                                fixed_ship_deck_slot_3 = module_flight_deck_2
+                                fixed_ship_deck_slot_4 = module_flight_deck_2
+                                fixed_ship_deck_slot_5 = module_flight_deck_2
+                                fixed_ship_anti_air_slot_1 = module_aa_missiles_3
+                                fixed_ship_engine_slot_1 = module_surface_adv_reactor_power
+                                fixed_ship_radar_slot_1 = module_radar_3
                         }
-			icon = "gfx/interface/technologies/USA/NAV/Nimitz.dds"
+                        icon = "gfx/interface/technologies/USA/NAV/Nimitz.dds"
 			model = "USA_carrier_1_entity"
 			design_team = mio:USA_northrop_grumman_newport_news_naval_manufacturer2
 		}
