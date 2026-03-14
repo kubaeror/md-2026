@@ -109,7 +109,7 @@ ideologies = {
 		}
 
 		can_be_boosted = no
-		ai_nationalist = yes
+		ai_fascist = yes
 		ai_ideology_wanted_units_factor = 1.0
 	}
 }
