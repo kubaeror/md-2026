@@ -12,41 +12,26 @@ md2026_setup_world_borders_and_wars = {
         # Transfer control of occupied regions to Russia
         # Crimea (already owned by SOV in base MD usually, but just in case)
         259 = { # Crimea
-            if = {
-                limit = { is_owned_by = UKR }
-                set_state_owner = SOV
-                set_state_controller = SOV
-            }
+            set_state_owner = SOV
+            set_state_controller = SOV
         }
         # Donbas (Luhansk & Donetsk)
         260 = { # Luhansk
-            if = {
-                limit = { is_owned_by = UKR }
-                set_state_owner = SOV
-                set_state_controller = SOV
-            }
+            set_state_owner = SOV
+            set_state_controller = SOV
         }
         261 = { # Donetsk
-            if = {
-                limit = { is_owned_by = UKR }
-                set_state_owner = SOV
-                set_state_controller = SOV
-            }
+            set_state_owner = SOV
+            set_state_controller = SOV
         }
         # Southern Ukraine (Zaporizhzhia & Kherson - partial control)
         262 = { # Zaporizhzhia
-            if = {
-                limit = { is_owned_by = UKR }
-                set_state_owner = SOV
-                set_state_controller = SOV
-            }
+            set_state_owner = SOV
+            set_state_controller = SOV
         }
         263 = { # Kherson
-            if = {
-                limit = { is_owned_by = UKR }
-                set_state_owner = SOV
-                set_state_controller = SOV
-            }
+            set_state_owner = SOV
+            set_state_controller = SOV
         }
         
         # Add core claims for Russia based on 2022 annexation
@@ -64,11 +49,8 @@ md2026_setup_world_borders_and_wars = {
         }
         # Israel controls most of Gaza by 2026
         310 = { # Gaza Strip
-            if = {
-                limit = { is_owned_by = PAL }
-                set_state_owner = ISR
-                set_state_controller = ISR
-            }
+            set_state_owner = ISR
+            set_state_controller = ISR
         }
     }
 
