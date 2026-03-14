@@ -1875,7 +1875,7 @@
 			}
 			icon = "gfx/interface/technologies/SOV/LAND/MBT4.dds"
 			model = "SOV_T90early_entity"
-		
+		}
 		create_equipment_variant = {
 			name = "T-90M"
 			type = medium_tank_chassis_2
@@ -1898,7 +1898,7 @@
 			}
 			icon = "gfx/interface/technologies/SOV/LAND/T90.dds"
 			model = "SOV_T90early_entity"
-		}}
+		}
 		add_equipment_to_stockpile = {
 			type = medium_tank_chassis_2
 			producer = SOV

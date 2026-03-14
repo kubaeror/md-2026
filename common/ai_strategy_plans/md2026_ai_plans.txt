@@ -49,12 +49,13 @@ md2026_usa_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # RUSSIA (SOV)
 # Historical path: escalation (Russia escalates the war)
@@ -96,12 +97,12 @@ md2026_sov_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
-
+}
 # ============================================================
 # CHINA (CHI)
 # Historical path: taiwan_diplomacy (pressure without war)
@@ -145,12 +146,13 @@ md2026_chi_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # UKRAINE (UKR)
 # Historical path: counteroffensive (fight on)
@@ -191,12 +193,13 @@ md2026_ukr_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # GERMANY (GER)
 # Historical path: atlantic_solidarity (NATO-loyal)
@@ -247,12 +250,13 @@ md2026_ger_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # FRANCE (FRA)
 # Historical path: sahel_withdrawal (France withdrew IRL)
@@ -303,12 +307,13 @@ md2026_fra_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # UNITED KINGDOM (ENG)
 # Historical path: cptpp (Pacific trade focus)
@@ -359,12 +364,13 @@ md2026_eng_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # ITALY (ITA)
 # Historical path: northern_industry (economic reality)
@@ -415,12 +421,13 @@ md2026_ita_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # POLAND (POL)
 # No mutually exclusive focuses - straight through
@@ -473,12 +480,13 @@ md2026_pol_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # SPAIN (SPR)
 # Historical path: minority_governance (current political reality)
@@ -530,12 +538,13 @@ md2026_spr_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # ISRAEL (ISR)
 # Historical path: covert_ops (Mossad shadow war)
@@ -586,12 +595,13 @@ md2026_isr_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # TURKEY (TUR)
 # Historical path: nato_loyalty (stays in NATO)
@@ -642,12 +652,13 @@ md2026_tur_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # SOUTH KOREA (KOR)
 # Historical path: maximum_pressure (current policy)
@@ -698,12 +709,13 @@ md2026_kor_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # TAIWAN (TAI)
 # Historical path: us_arms_sales (US primary partner)
@@ -754,12 +766,13 @@ md2026_tai_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # NORTH KOREA (NKO)
 # Historical path: south_korea_threat (aggressive posture)
@@ -810,12 +823,13 @@ md2026_nko_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # JAPAN (JAP)
 # Historical path: taiwan_contingency (prepare for Taiwan crisis)
@@ -866,12 +880,13 @@ md2026_jap_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # INDIA (RAJ)
 # Historical path: quad_deepening (India leans QUAD)
@@ -922,12 +937,13 @@ md2026_raj_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # IRAN (PER)
 # Historical path: nuclear_accelerate (Iran accelerates program)
@@ -978,12 +994,13 @@ md2026_per_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # SAUDI ARABIA (SAU)
 # Historical path: neom, opec_dominance, iran_rivalry
@@ -1017,12 +1034,13 @@ md2026_sau_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # EGYPT (EGY)
 # Historical path: us_weapons (traditional supplier)
@@ -1073,12 +1091,13 @@ md2026_egy_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # SYRIA (SYR)
 # Historical path: secular_state (new Syria post-Assad)
@@ -1129,12 +1148,13 @@ md2026_syr_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # BRAZIL (BRA)
 # Historical path: sa_trade, un_reform (Lula's agenda)
@@ -1168,12 +1188,13 @@ md2026_bra_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # CANADA (CAN)
 # Historical path: trade_diversification (diversify away from US)
@@ -1224,12 +1245,13 @@ md2026_can_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # AUSTRALIA (AST)
 # Historical path: china_decouple (decoupling from China)
@@ -1280,12 +1302,13 @@ md2026_ast_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # ARGENTINA (ARG)
 # No mutually exclusive focuses
@@ -1320,12 +1343,13 @@ md2026_arg_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # MEXICO (MEX)
 # No mutually exclusive focuses
@@ -1361,12 +1385,13 @@ md2026_mex_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
 
+}
 # ============================================================
 # PAKISTAN (PAK)
 # Mutually exclusive: imf_bailout vs chinese_loans
@@ -1400,12 +1425,12 @@ md2026_pak_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
-
+}
 md2026_pak_china_path = {
 	allowed = { original_tag = PAK }
 	name = "Pakistan China Path"
@@ -1434,12 +1459,12 @@ md2026_pak_china_path = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
-
+}
 # ============================================================
 # SOUTH AFRICA (ZAF - uses SAF tag)
 # No mutually exclusive focuses
@@ -1475,12 +1500,12 @@ md2026_zaf_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
-
+}
 # ============================================================
 # INDONESIA (IND)
 # No mutually exclusive focuses
@@ -1517,12 +1542,12 @@ md2026_idn_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
-
+}
 # ============================================================
 # NIGERIA (NIG)
 # No mutually exclusive focuses
@@ -1556,12 +1581,12 @@ md2026_nga_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
-
+}
 # ============================================================
 # ROMANIA (ROM)
 # No mutually exclusive focuses
@@ -1598,12 +1623,12 @@ md2026_rom_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
-
+}
 # ============================================================
 # BALTICS (EST, LAT, LIT)
 # ============================================================
@@ -1643,13 +1668,12 @@ md2026_baltic_historical = {
 		modifier = {
 			factor = 0
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
-
-
+}
 # ============================================================
 # USA - AHISTORICAL (Abandon Ukraine)
 # ============================================================
@@ -1694,12 +1718,12 @@ md2026_usa_ahistorical = {
 		modifier = {
 			factor = 100
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
-
+}
 # ============================================================
 # RUSSIA - AHISTORICAL (Frozen Conflict)
 # ============================================================
@@ -1736,12 +1760,12 @@ md2026_sov_ahistorical = {
 		modifier = {
 			factor = 100
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}
-
+}
 # ============================================================
 # CHINA - AHISTORICAL (Taiwan Escalation)
 # ============================================================
@@ -1783,8 +1807,8 @@ md2026_chi_ahistorical = {
 		modifier = {
 			factor = 100
 			has_game_rule = {
-				name = generic_ai_behavior
-				value = random
+				rule = generic_ai_behavior
+				option = random
 			}
 		}
 	}

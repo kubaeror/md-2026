@@ -1243,9 +1243,9 @@
 			icon = "gfx/interface/technologies/USA/LAND/MBT3.dds"
 			model = "USA_MD4_medium_armor_entity_2"
 			design_team = mio:USA_general_dynamics_materiel_manufacturer
-		
-                create_equipment_variant = {
-                        name = "M1A2 SEPv3"
+		}
+		create_equipment_variant = {
+			name = "M1A2 SEPv3"
                         type = medium_tank_chassis_2
                         parent_version = 5
                         modules = {
@@ -1265,10 +1265,10 @@
                         upgrades = {
                                 tank_nsb_armor_upgrade = 9
                         }
-                        icon = "gfx/interface/technologies/USA/LAND/MBT3.dds"
-                        model = "USA_MD4_medium_armor_entity_2"
-                        design_team = mio:USA_general_dynamics_materiel_manufacturer
-                }}
+			icon = "gfx/interface/technologies/USA/LAND/MBT3.dds"
+			model = "USA_MD4_medium_armor_entity_2"
+			design_team = mio:USA_general_dynamics_materiel_manufacturer
+		}
 		create_equipment_variant = {
 			name = "M113"
 			type = medium_tank_amphibious_chassis_1
@@ -1489,9 +1489,9 @@
 			icon = "gfx/interface/technologies/USA/LAND/IFV4.dds"
 			model = "USA_M2A3bradley_entity"
 			design_team = mio:USA_united_defense_tank_manufacturer
-		
-                create_equipment_variant = {
-                        name = "M2A4 Bradley"
+		}
+		create_equipment_variant = {
+			name = "M2A4 Bradley"
                         type = medium_tank_flame_chassis_2
                         parent_version = 2
                         modules = {
@@ -1510,11 +1510,11 @@
                         upgrades = {
                                 tank_nsb_armor_upgrade = 5
                         }
-                        icon = "gfx/interface/technologies/USA/LAND/IFV4.dds"
-                        model = "USA_M2A3bradley_entity"
-                        design_team = mio:USA_united_defense_tank_manufacturer
-                }}
-	   create_equipment_variant = {
+			icon = "gfx/interface/technologies/USA/LAND/IFV4.dds"
+			model = "USA_M2A3bradley_entity"
+			design_team = mio:USA_united_defense_tank_manufacturer
+		}
+		create_equipment_variant = {
 		   name = "M108"
 		   type = medium_tank_artillery_chassis_1
 		   parent_version = 1
@@ -2685,9 +2685,9 @@
 			}
 			model = "USA_carrier_1_entity"
 			design_team = mio:USA_northrop_grumman_newport_news_naval_manufacturer2
-		
-                create_equipment_variant = {
-                        name = "Gerald R. Ford Class"
+		}
+		create_equipment_variant = {
+			name = "Gerald R. Ford Class"
                         type = carrier_hull_2
                         name_group = USA_CV_HISTORICAL
                         role_icon_index = 13
@@ -2702,10 +2702,10 @@
                                 fixed_ship_engine_slot_1 = ship_engine_nuclear_3
                                 fixed_ship_radar_slot_1 = ship_radar_3
                         }
-                        icon = "gfx/interface/technologies/USA/NAV/Nimitz.dds"
-                        model = "USA_carrier_1_entity"
-                        design_team = mio:USA_northrop_grumman_newport_news_naval_manufacturer2
-                }}
+			icon = "gfx/interface/technologies/USA/NAV/Nimitz.dds"
+			model = "USA_carrier_1_entity"
+			design_team = mio:USA_northrop_grumman_newport_news_naval_manufacturer2
+		}
 		#Iwo Jima Class
 		create_equipment_variant = {
 			name = "Iwo Jima Class"
