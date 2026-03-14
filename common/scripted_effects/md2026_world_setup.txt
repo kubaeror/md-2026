@@ -8,30 +8,20 @@ md2026_setup_world_borders_and_wars = {
         SOV = {
             # Declare war on Ukraine
             declare_war_on = { target = UKR type = annex_everything }
-        }
-        # Transfer control of occupied regions to Russia
-        # Crimea (already owned by SOV in base MD usually, but just in case)
-        259 = { # Crimea
-            set_state_owner = SOV
-            set_state_controller = SOV
-        }
-        # Donbas (Luhansk & Donetsk)
-        260 = { # Luhansk
-            set_state_owner = SOV
-            set_state_controller = SOV
-        }
-        261 = { # Donetsk
-            set_state_owner = SOV
-            set_state_controller = SOV
-        }
-        # Southern Ukraine (Zaporizhzhia & Kherson - partial control)
-        262 = { # Zaporizhzhia
-            set_state_owner = SOV
-            set_state_controller = SOV
-        }
-        263 = { # Kherson
-            set_state_owner = SOV
-            set_state_controller = SOV
+            # Transfer control of occupied regions to Russia
+            # Crimea
+            set_state_owner = 259
+            set_state_controller = 259
+            # Donbas (Luhansk & Donetsk)
+            set_state_owner = 260
+            set_state_controller = 260
+            set_state_owner = 261
+            set_state_controller = 261
+            # Southern Ukraine (Zaporizhzhia & Kherson)
+            set_state_owner = 262
+            set_state_controller = 262
+            set_state_owner = 263
+            set_state_controller = 263
         }
         
         # Add core claims for Russia based on 2022 annexation
@@ -46,11 +36,9 @@ md2026_setup_world_borders_and_wars = {
         limit = { ISR = { exists = yes } PAL = { exists = yes } }
         ISR = {
             declare_war_on = { target = PAL type = annex_everything }
-        }
-        # Israel controls most of Gaza by 2026
-        310 = { # Gaza Strip
-            set_state_owner = ISR
-            set_state_controller = ISR
+            # Israel controls most of Gaza by 2026
+            set_state_owner = 310
+            set_state_controller = 310
         }
     }
 
