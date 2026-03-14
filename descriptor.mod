@@ -18,6 +18,7 @@ dependencies={
 }
 replace_path="common/bookmarks"
 replace_path="common/doctrines"
+replace_path="common/modifiers"
 replace_path="common/scripted_guis"
 replace_path="common/ai_strategy_plans"
 replace_path="common/peace_conference"
