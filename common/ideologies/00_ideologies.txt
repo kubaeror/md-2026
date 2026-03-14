@@ -1,0 +1,115 @@
+# MD2026 Ideologies
+# Western and Democratic ideologies for Millennium Dawn 2026
+
+ideologies = {
+	# Western Democracy
+	democratic = {
+		types = {
+			conservatism = { }
+			liberalism = { }
+			socialism = { }
+			western_conservatism = { }
+			western_liberalism = { }
+			western_socialism = { }
+			Western_Autocracy = { }
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_DEMOCRATIC_1"
+			"FACTION_NAME_DEMOCRATIC_2"
+			"FACTION_NAME_DEMOCRATIC_3"
+		}
+
+		color = { 0 0 255 }
+
+		rules = {
+			can_create_collaboration_government = no
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = yes
+			can_only_justify_war_on_threat_country = yes
+			can_guarantee_other_ideologies = yes
+			can_create_factions = no
+			can_boost_other_ideologies = yes
+		}
+
+		war_impact_on_world_tension = 1.0
+		faction_impact_on_world_tension = 1.0
+
+		modifiers = {
+			generate_wargoal_tension = 0.00
+			join_faction_tension = 0.00
+			lend_lease_tension = 0.00
+			send_volunteers_tension = 0.00
+			guarantee_tension = 0.00
+			annex_cost_factor = 0.0
+			puppet_cost_factor = 0.0
+			justify_war_goal_when_in_major_war_time = -0.20
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 5.0
+			navy_intel_to_others = 20.0
+			airforce_intel_to_others = 5
+		}
+
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50
+		}
+
+		can_be_boosted = yes
+		ai_democratic = yes
+		ai_ideology_wanted_units_factor = 1.0
+	}
+
+	# National Populism (Emerging)
+	nationalist = {
+		types = {
+			nationalist_Nat_Populism = { }
+			nationalism = { }
+			fascism = { }
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_NATIONALIST_1"
+			"FACTION_NAME_NATIONALIST_2"
+		}
+
+		color = { 128 128 0 }
+
+		rules = {
+			can_create_collaboration_government = no
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = no
+			can_puppet = yes
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = no
+			can_create_factions = no
+			can_boost_other_ideologies = no
+		}
+
+		war_impact_on_world_tension = 1.5
+		faction_impact_on_world_tension = 1.2
+
+		modifiers = {
+			generate_wargoal_tension = 0.00
+			join_faction_tension = 0.00
+			lend_lease_tension = 0.00
+			send_volunteers_tension = 0.00
+			guarantee_tension = 0.00
+			annex_cost_factor = 0.0
+			puppet_cost_factor = 0.0
+			justify_war_goal_when_in_major_war_time = -0.10
+			civilian_intel_to_others = 15.0
+			army_intel_to_others = 10.0
+			navy_intel_to_others = 15.0
+			airforce_intel_to_others = 10
+		}
+
+		can_be_boosted = no
+		ai_nationalist = yes
+		ai_ideology_wanted_units_factor = 1.0
+	}
+}

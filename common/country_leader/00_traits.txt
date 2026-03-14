@@ -1,0 +1,205 @@
+# MD2026 Country Leader Traits
+# Overrides and additions for Millennium Dawn 2026
+
+leader_traits = {
+	# Political Traits
+	media_personality = {
+		random = yes
+		popularity_growth_speed = 0.15
+		news_lie_chance = -0.3
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	populist_demagogue = {
+		random = yes
+		political_power_factor = 0.1
+		stability_factor = -0.05
+		subscribe_drift = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	authoritarian_ruler = {
+		random = yes
+		political_power_factor = 0.15
+		party_popularity_factor = -0.1
+		stability_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	anti_establishment = {
+		random = yes
+		political_power_factor = 0.1
+		stability_factor = -0.1
+		subscribe_drift = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Military/War Traits
+	war_hero = {
+		random = yes
+		army_morale_factor = 0.1
+		justify_war_goal_time = -0.1
+		improve_relations_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	hawk = {
+		random = yes
+		justify_war_goal_time = -0.15
+		war_support_factor = 0.1
+		army_morale_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	career_officer = {
+		random = yes
+		army_org_factor = 0.05
+		land_doctrine_cost_factor = -0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	militia_leader = {
+		random = yes
+		non_core_manpower = 0.02
+		army_morale_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Economic Traits
+	oil_baron = {
+		random = yes
+		consumer_goods_factor = -0.05
+		industrial_capacity_factory = 0.05
+		oil_gain_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	saudi_royal = {
+		random = yes
+		political_power_factor = 0.1
+		stability_factor = 0.05
+		oil_gain_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Ideological/Intellectual Traits
+	academic = {
+		random = yes
+		research_speed_factor = 0.05
+		political_power_factor = -0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	intelligence_officer = {
+		random = yes
+		intelligence_agency_defense = 0.15
+		own_operative_detection_chance = -0.1
+		coup_resistance_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	theocrat = {
+		random = yes
+		stability_factor = 0.1
+		political_power_factor = -0.1
+		war_support_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Nationalism Traits
+	nat_populism = {
+		random = yes
+		political_power_factor = 0.1
+		war_support_factor = 0.1
+		subscribe_drift = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	emerging_Nat_Populism = {
+		random = yes
+		political_power_factor = 0.1
+		war_support_factor = 0.1
+		stability_factor = -0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	nationalist_Nat_Populism = {
+		random = yes
+		political_power_factor = 0.15
+		war_support_factor = 0.15
+		subscribe_drift = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Communist Traits
+	communist_dictator = {
+		random = yes
+		political_power_factor = 0.15
+		stability_factor = 0.05
+		party_popularity_factor = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	nuclear_enthusiast = {
+		random = yes
+		nuclear_production_factor = 0.2
+		research_speed_factor = 0.05
+		war_support_factor = -0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Regional/Traits
+	pro_european = {
+		random = yes
+		opinion_gain_monthly_factor = 0.1
+		trade_laws_cost_factor = -0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	pro_latin_american = {
+		random = yes
+		opinion_gain_monthly_factor = 0.15
+		justify_war_goal_time = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
