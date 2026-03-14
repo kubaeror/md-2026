@@ -87,13 +87,7 @@ md2026_sov_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
+
 	}
 }
 # ============================================================
@@ -1247,13 +1241,7 @@ md2026_pak_historical = {
 	
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
+
 	}
 }
 md2026_pak_china_path = {
@@ -1281,13 +1269,7 @@ md2026_pak_china_path = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
+
 	}
 }
 # ============================================================
@@ -1322,13 +1304,7 @@ md2026_zaf_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
+
 	}
 }
 # ============================================================
@@ -1364,13 +1340,7 @@ md2026_idn_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
+
 	}
 }
 # ============================================================
@@ -1403,13 +1373,7 @@ md2026_nga_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
+
 	}
 }
 # ============================================================
@@ -1445,13 +1409,7 @@ md2026_rom_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
+
 	}
 }
 # ============================================================
@@ -1490,13 +1448,7 @@ md2026_baltic_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
+
 	}
 }
 # ============================================================
@@ -1540,13 +1492,7 @@ md2026_usa_ahistorical = {
 
 	weight = {
 		factor = 0
-		modifier = {
-			factor = 100
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
+
 	}
 }
 # ============================================================
@@ -1582,13 +1528,7 @@ md2026_sov_ahistorical = {
 
 	weight = {
 		factor = 0
-		modifier = {
-			factor = 100
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
+
 	}
 }
 # ============================================================
@@ -1629,12 +1569,6 @@ md2026_chi_ahistorical = {
 
 	weight = {
 		factor = 0
-		modifier = {
-			factor = 100
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
+
 	}
 }
