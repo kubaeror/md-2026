@@ -46,13 +46,6 @@ md2026_usa_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -143,13 +136,6 @@ md2026_chi_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -190,13 +176,6 @@ md2026_ukr_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -247,13 +226,6 @@ md2026_ger_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -304,13 +276,6 @@ md2026_fra_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -361,13 +326,6 @@ md2026_eng_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -418,13 +376,6 @@ md2026_ita_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -477,13 +428,6 @@ md2026_pol_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -535,13 +479,6 @@ md2026_spr_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -592,13 +529,6 @@ md2026_isr_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -649,13 +579,6 @@ md2026_tur_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -706,13 +629,6 @@ md2026_kor_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -763,13 +679,6 @@ md2026_tai_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -820,13 +729,6 @@ md2026_nko_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -877,13 +779,6 @@ md2026_jap_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -934,13 +829,6 @@ md2026_raj_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -991,13 +879,6 @@ md2026_per_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -1031,13 +912,6 @@ md2026_sau_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -1088,13 +962,6 @@ md2026_egy_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -1145,13 +1012,6 @@ md2026_syr_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -1185,13 +1045,6 @@ md2026_bra_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -1242,13 +1095,6 @@ md2026_can_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -1299,13 +1145,6 @@ md2026_ast_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -1340,13 +1179,6 @@ md2026_arg_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
@@ -1382,13 +1214,6 @@ md2026_mex_historical = {
 
 	weight = {
 		factor = 100
-		modifier = {
-			factor = 0
-			has_game_rule = {
-				rule = generic_ai_behavior
-				option = random
-			}
-		}
 	}
 
 }
