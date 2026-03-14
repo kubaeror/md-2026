@@ -1610,7 +1610,7 @@ md2026_chi_ahistorical = {
 		MD2026_CHI_great_rejuvenation
 		MD2026_CHI_taiwan_question
 		MD2026_CHI_taiwan_escalation
-		MD2026_CHI_naval_blockade
+		MD2026_CHI_naval_expansion
 		MD2026_CHI_belt_road_2
 		MD2026_CHI_global_infrastructure
 		MD2026_CHI_digital_silk_road
