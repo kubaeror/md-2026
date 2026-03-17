@@ -1,0 +1,80 @@
+﻿l_english:
+ ### Pakistan Focus Tree Localisation ###
+
+ # Root
+ md2026_pak_economic_crisis:0 "Economic Crisis"
+ md2026_pak_economic_crisis_desc:0 "Pakistan faces a severe balance-of-payments crisis. Foreign reserves are dwindling and the rupee is under intense pressure — we must act decisively or risk national insolvency."
+
+ # IMF Path
+ md2026_pak_imf_bailout:0 "IMF Bailout"
+ md2026_pak_imf_bailout_desc:0 "We turn to the International Monetary Fund for emergency financing. The conditions are painful, but Western backing will provide a lifeline to our struggling economy."
+
+ md2026_pak_tax_reform:0 "Tax Reform"
+ md2026_pak_tax_reform_desc:0 "The IMF demands a broadening of our tax base. Bringing informal businesses into the net will cause short-term friction but build long-term fiscal stability."
+
+ md2026_pak_privatization:0 "Privatisation Drive"
+ md2026_pak_privatization_desc:0 "State-owned enterprises are sold off to raise capital and reduce the government's fiscal burden. Investors respond cautiously but the revenue boost is real."
+
+ # China Path
+ md2026_pak_chinese_loans:0 "Chinese Loans"
+ md2026_pak_chinese_loans_desc:0 "Beijing offers generous financing with fewer strings attached. Chinese capital flows into Pakistan's economy, deepening the two countries' already close partnership."
+
+ md2026_pak_cpec_expansion:0 "CPEC Expansion"
+ md2026_pak_cpec_expansion_desc:0 "The China-Pakistan Economic Corridor is extended with new roads, power plants, and industrial zones that promise to transform the country's infrastructure for a generation."
+
+ md2026_pak_gwadar_port:0 "Gwadar Port Development"
+ md2026_pak_gwadar_port_desc:0 "Investment pours into the deep-water port at Gwadar, giving China a strategic foothold on the Arabian Sea and Pakistan a regional trade hub of its own."
+
+ # Kashmir / Military
+ md2026_pak_kashmir_issue:0 "The Kashmir Issue"
+ md2026_pak_kashmir_issue_desc:0 "Islamabad formally raises the status of Kashmir at the UN and puts its armed forces on heightened readiness. Tensions with India rise sharply across the Line of Control."
+
+ md2026_pak_nuclear_program:0 "Nuclear Programme"
+ md2026_pak_nuclear_program_desc:0 "Investment in our nuclear arsenal accelerates. Pakistan's strategic deterrent is modernised and expanded, signalling resolve to any potential adversary."
+
+ md2026_pak_military_modernization:0 "Military Modernisation"
+ md2026_pak_military_modernization_desc:0 "The Pakistan Army embarks on a sweeping upgrade of its equipment, doctrine, and training pipeline to meet the challenges of twenty-first century warfare."
+
+ # Political Branch
+ md2026_pak_political_stability:0 "Restoring Political Order"
+ md2026_pak_political_stability_desc:0 "Amid economic turmoil and street protests, the government moves to stabilise the political situation and restore confidence in state institutions."
+
+ md2026_pak_civilian_supremacy:0 "Civilian Supremacy"
+ md2026_pak_civilian_supremacy_desc:0 "Parliament asserts its authority over the military, embedding civilian control in law and practice. The democratic road is chosen over the barracks."
+
+ md2026_pak_isi_power:0 "ISI Primacy"
+ md2026_pak_isi_power_desc:0 "The Inter-Services Intelligence agency consolidates its grip on national policy, operating as a shadow state within a state. Security concerns override democratic norms."
+
+ md2026_pak_technocratic_govt:0 "Technocratic Government"
+ md2026_pak_technocratic_govt_desc:0 "A cabinet of experts — economists, engineers, and administrators — is assembled to steer Pakistan through crisis with competence rather than ideology."
+
+ # Economic Capstone
+ md2026_pak_economic_recovery:0 "Economic Recovery"
+ md2026_pak_economic_recovery_desc:0 "After years of austerity and reform, Pakistan's economy stabilises and begins to grow. The rupee strengthens, inflation falls, and foreign investment cautiously returns."
+
+ # Military Expansion
+ md2026_pak_jf17_program:0 "JF-17 Thunder Programme"
+ md2026_pak_jf17_program_desc:0 "Pakistan expands its locally produced JF-17 fighter programme in partnership with China, giving the Air Force a credible multi-role combat capability without foreign dependency."
+
+ md2026_pak_tank_modernization:0 "Armour Modernisation"
+ md2026_pak_tank_modernization_desc:0 "The Army's ageing armoured fleet receives new fire-control systems, upgraded engines, and reactive armour packages, restoring its edge on the Punjab plains."
+
+ md2026_pak_special_forces:0 "Special Service Group"
+ md2026_pak_special_forces_desc:0 "The Special Service Group is expanded and re-equipped for precision counter-insurgency and cross-border operations. Pakistan's elite soldiers become a strategic asset of the first order."
+
+ md2026_pak_counterterrorism:0 "Counterterrorism Surge"
+ md2026_pak_counterterrorism_desc:0 "A comprehensive counterterrorism strategy is launched combining intelligence operations, targeted military strikes, and community engagement to root out militant networks once and for all."
+
+ # Nuclear Capstone
+ md2026_pak_second_strike_capability:0 "Second-Strike Capability"
+ md2026_pak_second_strike_capability_desc:0 "Pakistan develops survivable nuclear delivery systems including submarine-launched cruise missiles, ensuring that any nuclear first strike against us would be answered with devastating certainty."
+
+ # Diplomatic Branch
+ md2026_pak_gulf_relations:0 "Gulf Outreach"
+ md2026_pak_gulf_relations_desc:0 "Islamabad deepens ties with the Gulf Cooperation Council states, securing investment, remittance channels, and diplomatic backing from Saudi Arabia and the UAE."
+
+ md2026_pak_turkey_alliance:0 "Turkey Alliance"
+ md2026_pak_turkey_alliance_desc:0 "Ankara and Islamabad formalise a defence and economic partnership, opening up new avenues for weapons procurement, joint exercises, and shared diplomatic weight in the Muslim world."
+
+ md2026_pak_dialogue_india:0 "India Dialogue"
+ md2026_pak_dialogue_india_desc:0 "Despite public scepticism on both sides, back-channel diplomacy opens a new round of composite dialogue with India, easing military tensions and cracking open the door to trade."

@@ -1,0 +1,79 @@
+﻿l_english:
+ ### Argentina Focus Tree Localisation ###
+
+ # Root
+ md2026_arg_milei_reforms:0 "Milei's Revolution"
+ md2026_arg_milei_reforms_desc:0 "President Milei's libertarian shock therapy begins in earnest. The chainsaw meets the state — subsidies are slashed, regulations torn up, and the old Peronist consensus shattered."
+
+ # Economic Reform Branch
+ md2026_arg_dollarization:0 "Dollarization"
+ md2026_arg_dollarization_desc:0 "Argentina abandons the peso and adopts the US dollar as its official currency. Inflation is broken overnight, but the loss of monetary sovereignty provokes fierce debate."
+
+ md2026_arg_austerity:0 "Shock Austerity"
+ md2026_arg_austerity_desc:0 "Federal spending is cut to the bone. Ministries are dissolved, public-sector wages frozen, and social programmes gutted in the name of fiscal balance. The streets are angry but the books are cleaner."
+
+ md2026_arg_privatization:0 "Mass Privatisation"
+ md2026_arg_privatization_desc:0 "State enterprises from airlines to energy firms are sold to private buyers, flooding the treasury with one-off revenue and opening markets that have been closed for decades."
+
+ md2026_arg_vaca_muerta:0 "Vaca Muerta Bonanza"
+ md2026_arg_vaca_muerta_desc:0 "Argentina's massive shale oil and gas reserves in Neuquén are fully opened to international investment. The Vaca Muerta field becomes the engine of a new export boom."
+
+ # Economic Deep
+ md2026_arg_peso_abolition:0 "Abolition of the Peso"
+ md2026_arg_peso_abolition_desc:0 "With dollarization entrenched, Argentina formally liquidates the central bank and abolishes the peso entirely. The experiment in monetary sovereignty is over — stability, at a price, has arrived."
+
+ md2026_arg_yacimientos_reform:0 "YPF Reform"
+ md2026_arg_yacimientos_reform_desc:0 "The formerly re-nationalised oil giant YPF is restructured and partially sold to private investors, unleashing new capital for exploration and making Argentina a net energy exporter."
+
+ md2026_arg_agri_export_expansion:0 "Agricultural Export Drive"
+ md2026_arg_agri_export_expansion_desc:0 "Argentina's legendary soy and beef sectors are freed from export taxes and given a direct channel to global markets. The Pampas roar back to life as the world's pantry."
+
+ md2026_arg_tech_startup_hub:0 "Buenos Aires Tech Hub"
+ md2026_arg_tech_startup_hub_desc:0 "Tax incentives and a liberalised labour market attract tech entrepreneurs to Buenos Aires. The city's educated, English-speaking workforce makes it the leading startup destination in Latin America."
+
+ # Foreign Policy Branch
+ md2026_arg_falklands_rhetoric:0 "Malvinas Rhetoric"
+ md2026_arg_falklands_rhetoric_desc:0 "Milei inflames nationalist sentiment over the Falkland Islands, using the dispute to rally domestic support while straining relations with London and the rest of the Commonwealth."
+
+ md2026_arg_western_alignment:0 "Western Alignment"
+ md2026_arg_western_alignment_desc:0 "Argentina pivots decisively toward the United States and Israel, abandoning the Kirchnerite tradition of antagonism toward Washington and staking out a pro-Western foreign policy identity."
+
+ md2026_arg_lithium_exports:0 "Lithium Export Drive"
+ md2026_arg_lithium_exports_desc:0 "Argentina's vast lithium reserves in the Andean salt flats are fast-tracked for development. Battery-hungry Western and Asian manufacturers compete for long-term supply contracts."
+
+ # Military / Foreign Expansion
+ md2026_arg_nato_plus:0 "NATO+ Partner Status"
+ md2026_arg_nato_plus_desc:0 "Argentina formally applies for NATO+ partner status, deepening military interoperability with the United States and opening the door to advanced weapons sales and joint exercises."
+
+ md2026_arg_falklands_legal:0 "ICJ Legal Challenge"
+ md2026_arg_falklands_legal_desc:0 "Rather than provocative rhetoric, Argentina pursues sovereignty over the Falklands through the International Court of Justice. The diplomatic path is slower but builds international goodwill."
+
+ md2026_arg_mercosur_leadership:0 "Mercosur Leadership"
+ md2026_arg_mercosur_leadership_desc:0 "Despite Milei's contempt for regional bodies, pragmatism wins out and Argentina reasserts itself as the natural leader of the Mercosur trade bloc, reshaping it in a more market-friendly image."
+
+ md2026_arg_antartica_claim:0 "Antarctic Sovereignty Claim"
+ md2026_arg_antartica_claim_desc:0 "Argentina renews and expands its territorial claim over Antarctica, asserting presence through scientific stations and naval patrols as the continent's strategic importance grows."
+
+ # Political Branch
+ md2026_arg_bolsonaro_alliance:0 "Bolsonaro Alliance"
+ md2026_arg_bolsonaro_alliance_desc:0 "Milei and Brazil's resurgent Bolsonaro movement forge a right-wing axis across the Rio de la Plata, building a new conservative bloc that reshapes South American politics."
+
+ md2026_arg_congress_opposition:0 "Dealing with Congress"
+ md2026_arg_congress_opposition_desc:0 "Peronist and centre-left blocs in Congress resist Milei's agenda at every turn. Managing — or outmanoeuvring — this opposition will determine how far the revolution can actually go."
+
+ md2026_arg_constitutional_reform:0 "Constitutional Reform"
+ md2026_arg_constitutional_reform_desc:0 "Capitalising on political momentum, Milei calls a constituent assembly to rewrite Argentina's constitution. The new document embeds economic freedom, shrinks the state, and curtails congressional power."
+
+ # Society Branch
+ md2026_arg_education_reform:0 "Education Reform"
+ md2026_arg_education_reform_desc:0 "Argentina's bloated public university system is overhauled — tuition fees introduced, trade schools expanded, and curricula modernised to match the needs of a twenty-first century economy."
+
+ md2026_arg_social_safety_net:0 "Social Safety Net"
+ md2026_arg_social_safety_net_desc:0 "After years of austerity, targeted social transfers are reintroduced to protect the most vulnerable and prevent the backlash from turning into an electoral crisis for Milei's coalition."
+
+ # Capstones
+ md2026_arg_new_argentina:0 "New Argentina"
+ md2026_arg_new_argentina_desc:0 "The foundations of Milei's revolution are set in concrete: a dollarised economy, a shrunk state, and a pro-Western foreign policy define what Argentina is and what it aspires to become."
+
+ md2026_arg_argentina_resurgence:0 "Argentina Resurgent"
+ md2026_arg_argentina_resurgence_desc:0 "A generation after its great collapse, Argentina emerges as a stable, dynamic, and respected power. The reforms were brutal — but the result is a nation reborn with confidence and ambition."

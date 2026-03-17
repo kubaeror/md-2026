@@ -1,0 +1,455 @@
+### MD2026 Vietnam Focus Branch ###
+# Shared focuses for Vietnam's 2026 focus tree branch (VIN)
+# Root focus at absolute x=70, y=0
+# 21 focuses: Blazing Furnace anti-corruption root, economy, foreign policy, military, society, capstone
+
+### ROOT ###
+
+shared_focus = {
+	id = md2026_vin_blazing_furnace
+	icon = generic_political_discourse
+	x = 70
+	y = 0
+	cost = 3.6
+	allow_branch = {
+		original_tag = VIN
+		has_global_flag = md2026_initialized
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_blazing_furnace"
+		add_stability = 0.03
+		add_political_power = -50
+	}
+	ai_will_do = { base = 100 }
+}
+
+### BRANCH 1 - ECONOMY ###
+
+shared_focus = {
+	id = md2026_vin_manufacturing_hub
+	icon = generic_industry
+	x = -8
+	y = 1
+	relative_position_id = md2026_vin_blazing_furnace
+	prerequisite = { focus = md2026_vin_blazing_furnace }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_manufacturing_hub"
+		add_political_power = 25
+		random_owned_controlled_state = {
+			limit = { is_core_of = VIN }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 80 }
+}
+
+shared_focus = {
+	id = md2026_vin_semiconductor_ambition
+	icon = generic_research
+	x = -1
+	y = 1
+	relative_position_id = md2026_vin_manufacturing_hub
+	prerequisite = { focus = md2026_vin_manufacturing_hub }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_semiconductor_ambition"
+		add_tech_bonus = {
+			name = VIN_semiconductor
+			bonus = 0.5
+			uses = 2
+			category = electronics
+		}
+		add_political_power = 25
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_vin_tourism_revival
+	icon = generic_stability
+	x = -9
+	y = 2
+	relative_position_id = md2026_vin_blazing_furnace
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_STABILITY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_tourism_revival"
+		add_stability = 0.05
+		add_political_power = 25
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_vin_high_speed_rail
+	icon = generic_industry
+	x = 1
+	y = 1
+	relative_position_id = md2026_vin_manufacturing_hub
+	prerequisite = { focus = md2026_vin_manufacturing_hub }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_high_speed_rail"
+		random_owned_controlled_state = {
+			limit = { is_core_of = VIN }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 60 }
+}
+
+### BRANCH 2 - FOREIGN POLICY ###
+
+shared_focus = {
+	id = md2026_vin_bamboo_strategy
+	icon = generic_foreign_policy
+	x = 0
+	y = 1
+	relative_position_id = md2026_vin_blazing_furnace
+	prerequisite = { focus = md2026_vin_blazing_furnace }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_bamboo_strategy"
+		add_political_power = 50
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = CHI modifier = md2026_improved_relations }
+	}
+	ai_will_do = { base = 80 }
+}
+
+shared_focus = {
+	id = md2026_vin_us_strategic_partner
+	icon = generic_political_discourse
+	x = -1
+	y = 1
+	relative_position_id = md2026_vin_bamboo_strategy
+	prerequisite = { focus = md2026_vin_bamboo_strategy }
+	mutually_exclusive = { focus = md2026_vin_china_accommodation }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_us_strategic_partner"
+		add_political_power = 50
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		reverse_add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+	}
+	ai_will_do = { base = 50 }
+}
+
+shared_focus = {
+	id = md2026_vin_china_accommodation
+	icon = generic_western_influence
+	x = 1
+	y = 1
+	relative_position_id = md2026_vin_bamboo_strategy
+	prerequisite = { focus = md2026_vin_bamboo_strategy }
+	mutually_exclusive = { focus = md2026_vin_us_strategic_partner }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_china_accommodation"
+		add_political_power = 50
+		add_opinion_modifier = { target = CHI modifier = md2026_improved_relations }
+		reverse_add_opinion_modifier = { target = CHI modifier = md2026_improved_relations }
+	}
+	ai_will_do = { base = 40 }
+}
+
+shared_focus = {
+	id = md2026_vin_asean_solidarity
+	icon = generic_political_discourse
+	x = 0
+	y = 2
+	relative_position_id = md2026_vin_bamboo_strategy
+	prerequisite = { focus = md2026_vin_bamboo_strategy }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_asean_solidarity"
+		add_political_power = 50
+		add_opinion_modifier = { target = THA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = PHI modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = MAL modifier = md2026_improved_relations }
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_vin_russia_legacy
+	icon = generic_army_support
+	x = 2
+	y = 2
+	relative_position_id = md2026_vin_bamboo_strategy
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_russia_legacy"
+		army_experience = 25
+		add_political_power = 25
+		add_opinion_modifier = { target = SOV modifier = md2026_improved_relations }
+	}
+	ai_will_do = { base = 50 }
+}
+
+### BRANCH 3 - MILITARY ###
+
+shared_focus = {
+	id = md2026_vin_south_china_sea_defense
+	icon = generic_navy_bonus
+	x = 8
+	y = 1
+	relative_position_id = md2026_vin_blazing_furnace
+	prerequisite = { focus = md2026_vin_blazing_furnace }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_south_china_sea_defense"
+		add_war_support = 0.08
+		navy_experience = 25
+		random_owned_controlled_state = {
+			limit = { is_core_of = VIN is_coastal = yes }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = md2026_vin_coast_guard_expansion
+	icon = generic_navy_bonus
+	x = -1
+	y = 1
+	relative_position_id = md2026_vin_south_china_sea_defense
+	prerequisite = { focus = md2026_vin_south_china_sea_defense }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_coast_guard_expansion"
+		navy_experience = 25
+		random_owned_controlled_state = {
+			limit = { is_core_of = VIN is_coastal = yes }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_vin_air_defense
+	icon = generic_air_bonus
+	x = 1
+	y = 1
+	relative_position_id = md2026_vin_south_china_sea_defense
+	prerequisite = { focus = md2026_vin_south_china_sea_defense }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_air_defense"
+		air_experience = 25
+		random_owned_controlled_state = {
+			limit = { is_core_of = VIN }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_vin_people_war_doctrine
+	icon = generic_army_support
+	x = 0
+	y = 2
+	relative_position_id = md2026_vin_south_china_sea_defense
+	prerequisite = { focus = md2026_vin_south_china_sea_defense }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_people_war_doctrine"
+		army_experience = 50
+		add_manpower = 50000
+		add_tech_bonus = {
+			name = VIN_land_doctrine
+			bonus = 1.0
+			uses = 1
+			category = CAT_land_doctrine
+		}
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_vin_cyber_warfare
+	icon = generic_research
+	x = 10
+	y = 2
+	relative_position_id = md2026_vin_blazing_furnace
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_cyber_warfare"
+		add_tech_bonus = {
+			name = VIN_cyber
+			bonus = 0.5
+			uses = 2
+			category = electronics
+		}
+	}
+	ai_will_do = { base = 50 }
+}
+
+### BRANCH 4 - SOCIETY ###
+
+shared_focus = {
+	id = md2026_vin_party_reform
+	icon = generic_political_discourse
+	x = -4
+	y = 1
+	relative_position_id = md2026_vin_blazing_furnace
+	prerequisite = { focus = md2026_vin_blazing_furnace }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_party_reform"
+		add_stability = 0.05
+		add_political_power = 50
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = md2026_vin_youth_demographics
+	icon = generic_manpower
+	x = -5
+	y = 2
+	relative_position_id = md2026_vin_blazing_furnace
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_youth_demographics"
+		add_manpower = 100000
+		add_political_power = 25
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_vin_education_investment
+	icon = generic_research
+	x = -4
+	y = 2
+	relative_position_id = md2026_vin_blazing_furnace
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_education_investment"
+		add_tech_bonus = {
+			name = VIN_education
+			bonus = 0.5
+			uses = 2
+			category = electronics
+		}
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_vin_healthcare_modernization
+	icon = generic_stability
+	x = -3
+	y = 2
+	relative_position_id = md2026_vin_blazing_furnace
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_STABILITY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_healthcare_modernization"
+		add_stability = 0.05
+		add_political_power = 25
+	}
+	ai_will_do = { base = 60 }
+}
+
+### CAPSTONE ###
+
+shared_focus = {
+	id = md2026_vin_doi_moi_2
+	icon = generic_pp_unity_bonus
+	x = 0
+	y = 5
+	relative_position_id = md2026_vin_blazing_furnace
+	prerequisite = { focus = md2026_vin_manufacturing_hub }
+	prerequisite = { focus = md2026_vin_bamboo_strategy }
+	prerequisite = { focus = md2026_vin_south_china_sea_defense }
+	prerequisite = { focus = md2026_vin_party_reform }
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_doi_moi_2"
+		add_stability = 0.10
+		add_political_power = 100
+		random_owned_controlled_state = {
+			limit = { is_core_of = VIN }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 80 }
+}

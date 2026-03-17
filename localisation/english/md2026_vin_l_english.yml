@@ -1,0 +1,73 @@
+﻿l_english:
+
+ ### MD2026 Vietnam 2026 Focus Branch ###
+
+ md2026_vin_blazing_furnace:0 "Blazing Furnace Campaign"
+ md2026_vin_blazing_furnace_desc:0 "General Secretary To Lam's anti-corruption drive, dubbed the 'Blazing Furnace', has swept through the party and state apparatus, toppling senior officials and CEOs alike. The campaign has shaken the confidence of the business community, but its architects believe purging corrupt networks is a prerequisite for Vietnam's next leap forward."
+
+ ### Branch 1 - Economy ###
+
+ md2026_vin_manufacturing_hub:0 "Global Manufacturing Hub"
+ md2026_vin_manufacturing_hub_desc:0 "Vietnam has become one of the world's premier low-cost manufacturing destinations, winning factory relocations from Samsung, Intel, and Apple suppliers fleeing US-China trade tensions. Sustained investment in industrial zones, skilled labour, and logistics infrastructure will cement this position and capture higher-value production stages."
+
+ md2026_vin_semiconductor_ambition:0 "Semiconductor Ambition"
+ md2026_vin_semiconductor_ambition_desc:0 "Hanoi has set an audacious goal: to develop a domestic semiconductor design and assembly industry within a decade. Government incentives, university partnerships with American and Taiwanese firms, and a pipeline of engineering graduates will lay the groundwork for Vietnam's entry into the most strategically contested technology sector on earth."
+
+ md2026_vin_tourism_revival:0 "Tourism Revival"
+ md2026_vin_tourism_revival_desc:0 "Vietnam's spectacular coastlines, living history, and vibrant street food culture make it one of Southeast Asia's most compelling destinations. Investment in heritage preservation, sustainable resort development, and simplified e-visa procedures will restore visitor numbers to pre-pandemic peaks and diversify the economy beyond manufacturing."
+
+ md2026_vin_high_speed_rail:0 "North-South High-Speed Rail"
+ md2026_vin_high_speed_rail_desc:0 "Vietnam's long, narrow geography makes it uniquely suited to a high-speed rail corridor linking Hanoi to Ho Chi Minh City. The project, decades in the planning, will slash travel times, stimulate urban development along the route, and move millions of tonnes of freight off congested roads and coastal shipping lanes."
+
+ ### Branch 2 - Foreign Policy ###
+
+ md2026_vin_bamboo_strategy:0 "Bamboo Strategy"
+ md2026_vin_bamboo_strategy_desc:0 "Vietnam's foreign policy doctrine asks its diplomats to be like bamboo: rooted firmly in national interest, yet flexible enough to bend with the winds of great-power competition. Hanoi will cultivate warm relations with Washington, Beijing, Moscow, and Tokyo simultaneously, playing each off against the others to maximise Vietnam's strategic space."
+
+ md2026_vin_us_strategic_partner:0 "US Comprehensive Strategic Partner"
+ md2026_vin_us_strategic_partner_desc:0 "The upgrade of US-Vietnam relations to Comprehensive Strategic Partnership in 2023 opened new doors in defence, trade, and technology. Deepening this relationship will bring American security guarantees closer, accelerate technology transfer, and position Hanoi as Washington's most important partner in Southeast Asia."
+
+ md2026_vin_china_accommodation:0 "Accommodation with Beijing"
+ md2026_vin_china_accommodation_desc:0 "China remains Vietnam's most powerful neighbour and largest trading partner; open confrontation carries enormous risks. A pragmatic accommodation — shelving maritime disputes through joint development agreements and deepening economic interdependence — offers stability and investment at the price of some strategic autonomy."
+
+ md2026_vin_asean_solidarity:0 "ASEAN Solidarity"
+ md2026_vin_asean_solidarity_desc:0 "Vietnam has been among the most vocal advocates for a rules-based regional order within ASEAN, particularly on the South China Sea. Strengthening bloc cohesion and pushing for a substantive Code of Conduct with China will give smaller states more leverage than any bilateral deal could achieve alone."
+
+ md2026_vin_russia_legacy:0 "Russian Legacy Ties"
+ md2026_vin_russia_legacy_desc:0 "Vietnam's armed forces have been equipped almost exclusively with Soviet and Russian hardware for generations, and the defence relationship runs deep despite Western pressure to diversify. Hanoi will maintain this legacy partnership to secure spare parts, training, and arms at preferential rates while it gradually diversifies its procurement."
+
+ ### Branch 3 - Military ###
+
+ md2026_vin_south_china_sea_defense:0 "South China Sea Defense"
+ md2026_vin_south_china_sea_defense_desc:0 "China's construction of artificial islands in the Spratlys and its increasingly aggressive coast guard operations have put Vietnam's maritime claims under sustained pressure. The Vietnam People's Navy must be equipped and positioned to deter further encroachment on the Paracel and Spratly island chains that Hanoi considers its sovereign territory."
+
+ md2026_vin_coast_guard_expansion:0 "Coast Guard Expansion"
+ md2026_vin_coast_guard_expansion_desc:0 "Below the threshold of naval warfare, the coast guard is Vietnam's first line of defence against Chinese incursions into its EEZ. Commissioning new patrol vessels, establishing forward operating bases in the Spratlys, and training crews in maritime law enforcement will give Hanoi a persistent presence where it matters most."
+
+ md2026_vin_air_defense:0 "Integrated Air Defense Network"
+ md2026_vin_air_defense_desc:0 "Any conflict in the South China Sea would begin in the skies above Vietnam's coastline and island outposts. Layered surface-to-air missile batteries, upgraded radar networks, and modern interceptor aircraft will raise the cost of any adversary's first strike and deny easy air superiority over Vietnamese territory."
+
+ md2026_vin_people_war_doctrine:0 "People's War Doctrine"
+ md2026_vin_people_war_doctrine_desc:0 "Vietnam has never won a war with a more powerful adversary by meeting them on conventional terms; it has won by exhausting them. The People's War doctrine of dispersed defence, guerrilla attrition, and a militarised civilian population remains the bedrock of Vietnam's strategic deterrence against any potential invader."
+
+ md2026_vin_cyber_warfare:0 "Cyber Warfare Capability"
+ md2026_vin_cyber_warfare_desc:0 "Vietnam's military intelligence services have quietly developed one of Southeast Asia's most capable cyber operations units, conducting espionage against regional neighbours and corporate targets. Formalising and expanding this capability will give Hanoi an asymmetric tool to gather intelligence, deter adversaries, and project influence without firing a shot."
+
+ ### Branch 4 - Society ###
+
+ md2026_vin_party_reform:0 "Party Governance Reform"
+ md2026_vin_party_reform_desc:0 "The Blazing Furnace campaign has exposed how deeply corruption has corroded the Communist Party's governing capacity. To follow through on reform, Hanoi must rebuild institutional trust through transparent cadre selection, merit-based promotion, and accountability mechanisms that punish wrongdoing at every level of the party hierarchy."
+
+ md2026_vin_youth_demographics:0 "Youth Demographic Dividend"
+ md2026_vin_youth_demographics_desc:0 "With nearly 100 million people and a median age under 31, Vietnam has a rare demographic window: a large, youthful labour force before ageing sets in. Policies that keep this generation healthy, educated, and productively employed will generate decades of growth — if the opportunity is seized before it closes."
+
+ md2026_vin_education_investment:0 "Education Investment"
+ md2026_vin_education_investment_desc:0 "Vietnam's students already perform above the OECD average in international assessments despite spending far less per pupil than richer nations. Targeted investment in STEM education, university research partnerships, and vocational training will convert this raw talent into the engineers and innovators a modern industrial economy demands."
+
+ md2026_vin_healthcare_modernization:0 "Healthcare Modernization"
+ md2026_vin_healthcare_modernization_desc:0 "Vietnam's healthcare system has improved dramatically but still strains under the weight of rapid urbanisation and an ageing rural population. Expanding hospital capacity, training more specialists, and rolling out a national health insurance scheme will protect the population's wellbeing and sustain the productive workforce that drives economic growth."
+
+ ### Capstone ###
+
+ md2026_vin_doi_moi_2:0 "Doi Moi 2.0"
+ md2026_vin_doi_moi_2_desc:0 "Forty years after the original Doi Moi reforms transformed Vietnam from a post-war ruin into one of Asia's fastest-growing economies, a second great opening begins. Corruption has been tamed, manufacturing has moved up the value chain into semiconductors and precision engineering, the military secures Vietnam's maritime claims, and a reformed party governs with renewed legitimacy. Vietnam's second miracle is underway."

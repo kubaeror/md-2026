@@ -1,7 +1,7 @@
 ### MD2026 Pakistan Focus Branch ###
 # Shared focuses for Pakistan's 2026 focus tree branch
 # Root focus at absolute x=38, y=0
-# 12 focuses: Economic crisis, IMF/China branches, military/Kashmir
+# ~30 focuses: Economic crisis, IMF/China branches, military/Kashmir, political, diplomatic, domestic
 
 shared_focus = {
 	id = md2026_pak_economic_crisis
@@ -274,4 +274,344 @@ shared_focus = {
 		}
 	}
 	ai_will_do = { base = 60 }
+}
+
+### POLITICAL BRANCH (new, parallel — off economic_crisis) ###
+
+shared_focus = {
+	id = md2026_pak_political_stability
+	icon = generic_political_discourse
+	x = -7
+	y = 1
+	relative_position_id = md2026_pak_economic_crisis
+	prerequisite = { focus = md2026_pak_economic_crisis }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_political_stability"
+		add_political_power = 50
+		add_stability = 0.03
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_pak_civilian_supremacy
+	icon = generic_democratic_opposition
+	x = -1
+	y = 1
+	relative_position_id = md2026_pak_political_stability
+	prerequisite = { focus = md2026_pak_political_stability }
+	mutually_exclusive = { focus = md2026_pak_isi_power }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_civilian_supremacy"
+		add_political_power = 75
+		add_stability = 0.05
+		add_ideas = md2026_pak_civilian_govt
+	}
+	ai_will_do = { base = 50 }
+}
+
+shared_focus = {
+	id = md2026_pak_isi_power
+	icon = generic_intel_bonus
+	x = 1
+	y = 1
+	relative_position_id = md2026_pak_political_stability
+	prerequisite = { focus = md2026_pak_political_stability }
+	mutually_exclusive = { focus = md2026_pak_civilian_supremacy }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_isi_power"
+		add_political_power = 50
+		add_war_support = 0.05
+		army_experience = 15
+		add_ideas = md2026_pak_isi_dominance
+	}
+	ai_will_do = { base = 50 }
+}
+
+shared_focus = {
+	id = md2026_pak_technocratic_govt
+	icon = generic_research_bonus
+	x = 0
+	y = 1
+	relative_position_id = md2026_pak_civilian_supremacy
+	prerequisite = {
+		focus = md2026_pak_civilian_supremacy
+		focus = md2026_pak_isi_power
+	}
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_technocratic_govt"
+		add_political_power = 50
+		add_stability = 0.05
+		add_tech_bonus = {
+			name = PAK_technocrat_boost
+			bonus = 0.5
+			uses = 1
+			category = CAT_industry
+		}
+	}
+	ai_will_do = { base = 40 }
+}
+
+### ECONOMIC CAPSTONE ###
+
+shared_focus = {
+	id = md2026_pak_economic_recovery
+	icon = generic_pp_unity_bonus
+	x = 0
+	y = 5
+	relative_position_id = md2026_pak_economic_crisis
+	prerequisite = {
+		focus = md2026_pak_tax_reform
+		focus = md2026_pak_privatization
+		focus = md2026_pak_cpec_expansion
+		focus = md2026_pak_gwadar_port
+	}
+	prerequisite = { focus = md2026_pak_technocratic_govt }
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_economic_recovery"
+		add_political_power = 100
+		add_stability = 0.10
+		add_ideas = md2026_pak_economic_resurgence
+		random_owned_controlled_state = {
+			limit = { is_core_of = PAK }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { is_core_of = PAK }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 70 }
+}
+
+### MILITARY BRANCH EXPANSION (off pak_military_modernization) ###
+
+shared_focus = {
+	id = md2026_pak_jf17_program
+	icon = generic_air_bonus
+	x = -2
+	y = 1
+	relative_position_id = md2026_pak_military_modernization
+	prerequisite = { focus = md2026_pak_military_modernization }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_jf17_program"
+		air_experience = 25
+		add_tech_bonus = {
+			name = PAK_jf17_research
+			bonus = 0.5
+			uses = 2
+			category = CAT_air_equipment
+		}
+		random_owned_controlled_state = {
+			limit = { is_core_of = PAK }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 50 }
+}
+
+shared_focus = {
+	id = md2026_pak_tank_modernization
+	icon = generic_army_support
+	x = 0
+	y = 1
+	relative_position_id = md2026_pak_military_modernization
+	prerequisite = { focus = md2026_pak_military_modernization }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_tank_modernization"
+		army_experience = 20
+		add_tech_bonus = {
+			name = PAK_armor_upgrade
+			bonus = 0.5
+			uses = 2
+			category = CAT_armor
+		}
+		random_owned_controlled_state = {
+			limit = { is_core_of = PAK }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 50 }
+}
+
+shared_focus = {
+	id = md2026_pak_special_forces
+	icon = generic_army_support
+	x = 2
+	y = 1
+	relative_position_id = md2026_pak_military_modernization
+	prerequisite = { focus = md2026_pak_military_modernization }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_special_forces"
+		army_experience = 30
+		add_manpower = 10000
+		add_tech_bonus = {
+			name = PAK_spec_ops
+			bonus = 0.5
+			uses = 1
+			category = CAT_land_doctrine
+		}
+	}
+	ai_will_do = { base = 45 }
+}
+
+shared_focus = {
+	id = md2026_pak_counterterrorism
+	icon = generic_prepare_civil_war
+	x = 0
+	y = 2
+	relative_position_id = md2026_pak_military_modernization
+	prerequisite = { focus = md2026_pak_military_modernization }
+	prerequisite = { focus = md2026_pak_special_forces }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_counterterrorism"
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 25
+		add_ideas = md2026_pak_ct_operations
+	}
+	ai_will_do = { base = 55 }
+}
+
+### NUCLEAR CAPSTONE ###
+
+shared_focus = {
+	id = md2026_pak_second_strike_capability
+	icon = nuclear_science
+	x = 0
+	y = 1
+	relative_position_id = md2026_pak_nuclear_program
+	prerequisite = { focus = md2026_pak_nuclear_program }
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_second_strike_capability"
+		add_political_power = 75
+		add_war_support = 0.10
+		add_tech_bonus = {
+			name = PAK_second_strike
+			bonus = 1.0
+			uses = 1
+			category = CAT_missile
+		}
+		add_ideas = md2026_pak_nuclear_deterrent
+	}
+	ai_will_do = { base = 40 }
+}
+
+### DIPLOMATIC BRANCH (new parallel branch off economic_crisis) ###
+
+shared_focus = {
+	id = md2026_pak_gulf_relations
+	icon = generic_foreign_policy
+	x = 7
+	y = 1
+	relative_position_id = md2026_pak_economic_crisis
+	prerequisite = { focus = md2026_pak_economic_crisis }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_gulf_relations"
+		add_political_power = 50
+		add_stability = 0.03
+		add_opinion_modifier = { target = SAU modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = UAE modifier = md2026_improved_relations }
+		reverse_add_opinion_modifier = { target = SAU modifier = md2026_improved_relations }
+	}
+	ai_will_do = { base = 55 }
+}
+
+shared_focus = {
+	id = md2026_pak_turkey_alliance
+	icon = generic_alliance
+	x = 0
+	y = 1
+	relative_position_id = md2026_pak_gulf_relations
+	prerequisite = { focus = md2026_pak_gulf_relations }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_turkey_alliance"
+		add_political_power = 50
+		add_opinion_modifier = { target = TUR modifier = md2026_improved_relations }
+		reverse_add_opinion_modifier = { target = TUR modifier = md2026_improved_relations }
+		add_tech_bonus = {
+			name = PAK_turkey_defense
+			bonus = 0.5
+			uses = 1
+			category = CAT_land_doctrine
+		}
+	}
+	ai_will_do = { base = 45 }
+}
+
+shared_focus = {
+	id = md2026_pak_dialogue_india
+	icon = generic_political_discourse
+	x = -1
+	y = 2
+	relative_position_id = md2026_pak_gulf_relations
+	prerequisite = { focus = md2026_pak_gulf_relations }
+	mutually_exclusive = { focus = md2026_pak_kashmir_issue }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_pak_dialogue_india"
+		add_political_power = 50
+		add_stability = 0.05
+		add_opinion_modifier = { target = RAJ modifier = md2026_improved_relations }
+		reverse_add_opinion_modifier = { target = RAJ modifier = md2026_improved_relations }
+	}
+	ai_will_do = { base = 35 }
 }

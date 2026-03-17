@@ -1,0 +1,647 @@
+### MD2026 South Africa Focus Branch ###
+# Shared focuses for South Africa's expanded 2026 focus tree
+# Root focus at absolute x=50, y=0
+# 30 focuses: Energy/Politics/Economy/Foreign Policy/Military/Capstone branches
+# GNU coalition era, Ramaphosa presidency, Eskom crisis, BRICS+ membership
+
+shared_focus = {
+	id = md2026_saf_eskom_crisis
+	icon = generic_economic_increase
+	x = 50
+	y = 0
+	cost = 3.6
+	allow_branch = {
+		original_tag = SAF
+		has_global_flag = md2026_initialized
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_eskom_crisis"
+		add_political_power = -50
+		add_stability = -0.08
+		add_war_support = 0.05
+	}
+	ai_will_do = { base = 100 }
+}
+
+### ENERGY & INFRASTRUCTURE BRANCH (center) ###
+
+shared_focus = {
+	id = md2026_saf_solar_revolution
+	icon = generic_research_bonus
+	x = -2
+	y = 1
+	relative_position_id = md2026_saf_eskom_crisis
+	prerequisite = { focus = md2026_saf_eskom_crisis }
+	mutually_exclusive = { focus = md2026_saf_gas_emergency }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_solar_revolution"
+		add_stability = 0.05
+		add_tech_bonus = {
+			name = SAF_solar_tech
+			bonus = 0.5
+			uses = 1
+			category = CAT_electronics
+		}
+		random_owned_controlled_state = {
+			limit = { is_core_of = SAF }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = md2026_saf_gas_emergency
+	icon = generic_oil
+	x = 0
+	y = 1
+	relative_position_id = md2026_saf_eskom_crisis
+	prerequisite = { focus = md2026_saf_eskom_crisis }
+	mutually_exclusive = { focus = md2026_saf_solar_revolution }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_gas_emergency"
+		add_war_support = 0.05
+		random_owned_controlled_state = {
+			limit = { is_core_of = SAF }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { is_core_of = SAF }
+			add_resource = {
+				type = oil
+				amount = 5
+			}
+		}
+	}
+	ai_will_do = { base = 50 }
+}
+
+shared_focus = {
+	id = md2026_saf_grid_modernization
+	icon = generic_economic_increase
+	x = -1
+	y = 1
+	relative_position_id = md2026_saf_gas_emergency
+	prerequisite = {
+		focus = md2026_saf_solar_revolution
+		focus = md2026_saf_gas_emergency
+	}
+	cost = 10.0
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_grid_modernization"
+		add_stability = 0.05
+		add_political_power = 50
+		random_owned_controlled_state = {
+			limit = { is_core_of = SAF }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { is_core_of = SAF }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 65 }
+}
+
+shared_focus = {
+	id = md2026_saf_agri_export
+	icon = generic_trade
+	x = 2
+	y = 1
+	relative_position_id = md2026_saf_eskom_crisis
+	prerequisite = { focus = md2026_saf_eskom_crisis }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_TRADE }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_agri_export"
+		add_political_power = 25
+		add_stability = 0.03
+		random_owned_controlled_state = {
+			limit = { is_core_of = SAF }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 55 }
+}
+
+### POLITICS BRANCH (left) ###
+
+shared_focus = {
+	id = md2026_saf_gnu_cohesion
+	icon = generic_political_discourse
+	x = -8
+	y = 1
+	relative_position_id = md2026_saf_eskom_crisis
+	prerequisite = { focus = md2026_saf_eskom_crisis }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_gnu_cohesion"
+		add_political_power = 50
+		add_stability = 0.08
+		add_ideas = md2026_saf_gnu_stability
+	}
+	ai_will_do = { base = 80 }
+}
+
+shared_focus = {
+	id = md2026_saf_anti_corruption_drive
+	icon = generic_pp_unity_bonus
+	x = 0
+	y = 1
+	relative_position_id = md2026_saf_gnu_cohesion
+	prerequisite = { focus = md2026_saf_gnu_cohesion }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_anti_corruption_drive"
+		add_stability = 0.07
+		add_political_power = -50
+		add_ideas = md2026_saf_zondo_enforcement
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = md2026_saf_da_influence
+	icon = generic_foreign_policy
+	x = -1
+	y = 1
+	relative_position_id = md2026_saf_anti_corruption_drive
+	prerequisite = { focus = md2026_saf_anti_corruption_drive }
+	mutually_exclusive = { focus = md2026_saf_anc_dominance }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_da_influence"
+		add_political_power = 50
+		add_stability = 0.05
+		add_ideas = md2026_saf_liberal_reforms
+	}
+	ai_will_do = { base = 45 }
+}
+
+shared_focus = {
+	id = md2026_saf_anc_dominance
+	icon = generic_political_discourse
+	x = 1
+	y = 1
+	relative_position_id = md2026_saf_anti_corruption_drive
+	prerequisite = { focus = md2026_saf_anti_corruption_drive }
+	mutually_exclusive = { focus = md2026_saf_da_influence }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_anc_dominance"
+		add_political_power = 75
+		add_stability = -0.03
+		add_ideas = md2026_saf_sacp_left
+	}
+	ai_will_do = { base = 55 }
+}
+
+shared_focus = {
+	id = md2026_saf_mk_threat
+	icon = generic_prepare_civil_war
+	x = 0
+	y = 1
+	relative_position_id = md2026_saf_anc_dominance
+	prerequisite = {
+		focus = md2026_saf_da_influence
+		focus = md2026_saf_anc_dominance
+	}
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_mk_threat"
+		add_political_power = 50
+		add_stability = 0.05
+		add_war_support = 0.03
+		add_ideas = md2026_saf_mk_contained
+	}
+	ai_will_do = { base = 60 }
+}
+
+### ECONOMY BRANCH (center-right) ###
+
+shared_focus = {
+	id = md2026_saf_mining_revival
+	icon = generic_economic_increase
+	x = 4
+	y = 1
+	relative_position_id = md2026_saf_eskom_crisis
+	prerequisite = { focus = md2026_saf_eskom_crisis }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_mining_revival"
+		add_political_power = 25
+		random_owned_controlled_state = {
+			limit = { is_core_of = SAF }
+			add_resource = {
+				type = tungsten
+				amount = 10
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { is_core_of = SAF }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 75 }
+}
+
+shared_focus = {
+	id = md2026_saf_platinum_group
+	icon = generic_trade
+	x = -1
+	y = 1
+	relative_position_id = md2026_saf_mining_revival
+	prerequisite = { focus = md2026_saf_mining_revival }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_TRADE }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_platinum_group"
+		add_political_power = 75
+		random_owned_controlled_state = {
+			limit = { is_core_of = SAF }
+			add_resource = {
+				type = tungsten
+				amount = 8
+			}
+		}
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_saf_lithium_battery
+	icon = generic_research_bonus
+	x = 0
+	y = 1
+	relative_position_id = md2026_saf_platinum_group
+	prerequisite = { focus = md2026_saf_platinum_group }
+	cost = 10.0
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_lithium_battery"
+		add_political_power = 25
+		add_tech_bonus = {
+			name = SAF_battery_tech
+			bonus = 0.5
+			uses = 1
+			category = CAT_electronics
+		}
+		random_owned_controlled_state = {
+			limit = { is_core_of = SAF }
+			add_resource = {
+				type = tungsten
+				amount = 5
+			}
+		}
+	}
+	ai_will_do = { base = 55 }
+}
+
+shared_focus = {
+	id = md2026_saf_special_economic_zones
+	icon = generic_economic_increase
+	x = 1
+	y = 1
+	relative_position_id = md2026_saf_mining_revival
+	prerequisite = { focus = md2026_saf_mining_revival }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_special_economic_zones"
+		add_political_power = 25
+		random_owned_controlled_state = {
+			limit = { is_core_of = SAF }
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 65 }
+}
+
+### FOREIGN POLICY BRANCH (center, y=5) ###
+
+shared_focus = {
+	id = md2026_saf_brics_leadership
+	icon = generic_pp_unity_bonus
+	x = 0
+	y = 5
+	relative_position_id = md2026_saf_eskom_crisis
+	prerequisite = {
+		focus = md2026_saf_grid_modernization
+		focus = md2026_saf_agri_export
+	}
+	prerequisite = {
+		focus = md2026_saf_mk_threat
+	}
+	prerequisite = {
+		focus = md2026_saf_platinum_group
+		focus = md2026_saf_special_economic_zones
+	}
+	cost = 10.0
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_brics_leadership"
+		add_political_power = 100
+		add_stability = 0.05
+		add_opinion_modifier = { target = CHI modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = SOV modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = RAJ modifier = md2026_improved_relations }
+		add_ideas = md2026_saf_brics_chair
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = md2026_saf_au_mediation
+	icon = generic_foreign_policy
+	x = -2
+	y = 1
+	relative_position_id = md2026_saf_brics_leadership
+	prerequisite = { focus = md2026_saf_brics_leadership }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_au_mediation"
+		add_political_power = 75
+		add_stability = 0.03
+		add_ideas = md2026_saf_au_mediator
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_saf_neutrality_doctrine
+	icon = generic_foreign_policy
+	x = 0
+	y = 1
+	relative_position_id = md2026_saf_brics_leadership
+	prerequisite = { focus = md2026_saf_brics_leadership }
+	mutually_exclusive = { focus = md2026_saf_western_pivot }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_neutrality_doctrine"
+		add_political_power = 50
+		add_stability = 0.03
+		add_ideas = md2026_saf_nonaligned
+	}
+	ai_will_do = { base = 55 }
+}
+
+shared_focus = {
+	id = md2026_saf_western_pivot
+	icon = generic_western_influence
+	x = 2
+	y = 1
+	relative_position_id = md2026_saf_brics_leadership
+	prerequisite = { focus = md2026_saf_brics_leadership }
+	mutually_exclusive = { focus = md2026_saf_neutrality_doctrine }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_western_pivot"
+		add_political_power = 50
+		add_stability = -0.03
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = ENG modifier = md2026_improved_relations }
+		reverse_add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+	}
+	ai_will_do = { base = 45 }
+}
+
+shared_focus = {
+	id = md2026_saf_sadc_security
+	icon = generic_army_support
+	x = 1
+	y = 1
+	relative_position_id = md2026_saf_au_mediation
+	prerequisite = { focus = md2026_saf_au_mediation }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_sadc_security"
+		add_political_power = 50
+		add_war_support = 0.05
+		army_experience = 10
+		add_ideas = md2026_saf_sadc_ops
+	}
+	ai_will_do = { base = 55 }
+}
+
+### MILITARY BRANCH (right) ###
+
+shared_focus = {
+	id = md2026_saf_sandf_reform
+	icon = generic_army_support
+	x = 8
+	y = 1
+	relative_position_id = md2026_saf_eskom_crisis
+	prerequisite = { focus = md2026_saf_eskom_crisis }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_MILITARY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_sandf_reform"
+		army_experience = 20
+		add_manpower = 30000
+		add_tech_bonus = {
+			name = SAF_sandf_doctrine
+			bonus = 0.5
+			uses = 1
+			category = CAT_land_doctrine
+		}
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_saf_arms_industry
+	icon = generic_economic_increase
+	x = -1
+	y = 1
+	relative_position_id = md2026_saf_sandf_reform
+	prerequisite = { focus = md2026_saf_sandf_reform }
+	cost = 10.0
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_arms_industry"
+		add_political_power = 25
+		random_owned_controlled_state = {
+			limit = { is_core_of = SAF }
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_tech_bonus = {
+			name = SAF_denel_revival
+			bonus = 0.5
+			uses = 1
+			category = CAT_infantry_weapons
+		}
+	}
+	ai_will_do = { base = 50 }
+}
+
+shared_focus = {
+	id = md2026_saf_peacekeeping_ops
+	icon = generic_pp_unity_bonus
+	x = 1
+	y = 1
+	relative_position_id = md2026_saf_sandf_reform
+	prerequisite = { focus = md2026_saf_sandf_reform }
+	cost = 8.6
+
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_peacekeeping_ops"
+		add_political_power = 75
+		army_experience = 15
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_saf_nuclear_doctrine
+	icon = nuclear_science
+	x = 0
+	y = 1
+	relative_position_id = md2026_saf_arms_industry
+	prerequisite = {
+		focus = md2026_saf_arms_industry
+		focus = md2026_saf_peacekeeping_ops
+	}
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_nuclear_doctrine"
+		add_political_power = 50
+		add_stability = -0.05
+		add_war_support = 0.10
+		add_tech_bonus = {
+			name = SAF_nuclear_policy
+			bonus = 0.5
+			uses = 1
+			category = CAT_missile
+		}
+	}
+	ai_will_do = { base = 30 }
+}
+
+### CAPSTONE ###
+
+shared_focus = {
+	id = md2026_saf_rainbow_renaissance
+	icon = generic_pp_unity_bonus
+	x = 0
+	y = 8
+	relative_position_id = md2026_saf_eskom_crisis
+	prerequisite = {
+		focus = md2026_saf_grid_modernization
+	}
+	prerequisite = {
+		focus = md2026_saf_mk_threat
+	}
+	prerequisite = {
+		focus = md2026_saf_lithium_battery
+		focus = md2026_saf_special_economic_zones
+	}
+	prerequisite = {
+		focus = md2026_saf_brics_leadership
+	}
+	prerequisite = {
+		focus = md2026_saf_nuclear_doctrine
+	}
+	cost = 12.9
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_saf_rainbow_renaissance"
+		add_political_power = 150
+		add_stability = 0.15
+		add_ideas = md2026_saf_rainbow_renaissance_idea
+		random_owned_controlled_state = {
+			limit = { is_core_of = SAF }
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { base = 80 }
+}

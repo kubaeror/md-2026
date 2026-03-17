@@ -1,0 +1,73 @@
+﻿l_english:
+
+ ### MD2026 Indonesia 2026 Focus Branch ###
+
+ md2026_idn_nusantara_capital:0 "Relocate to Nusantara"
+ md2026_idn_nusantara_capital_desc:0 "President Prabowo has committed to completing the move of the national capital from Jakarta to Nusantara on the island of Borneo. The project promises to relieve the burden on the sinking, overcrowded megacity of Jakarta and signal Indonesia's ambitions as a modern 21st-century state."
+
+ ### Branch 1 - Capital Development ###
+
+ md2026_idn_nusantara_phase1:0 "Nusantara Phase I Construction"
+ md2026_idn_nusantara_phase1_desc:0 "The first phase of Nusantara's construction must be accelerated: government ministries, presidential offices, and supporting industrial zones need to be operational before the capital can function. A massive injection of public investment will lay the foundations of the new city."
+
+ md2026_idn_nusantara_smart_city:0 "Smart City Blueprint"
+ md2026_idn_nusantara_smart_city_desc:0 "Nusantara will be built from the ground up with digital infrastructure: fibre-optic connectivity, AI-managed traffic and utilities, and integrated government e-services. The blueprint offers Indonesia a chance to leapfrog its urban rivals and become Southeast Asia's first truly smart capital."
+
+ md2026_idn_borneo_infrastructure:0 "Borneo Infrastructure Corridor"
+ md2026_idn_borneo_infrastructure_desc:0 "The new capital requires roads, rail, ports, and power grids connecting it to the rest of Kalimantan and the wider archipelago. Building out this corridor will open Borneo's interior to development and bind Indonesia's eastern islands more firmly into the national economy."
+
+ ### Branch 2 - Economy ###
+
+ md2026_idn_nickel_downstream:0 "Downstream Nickel Processing"
+ md2026_idn_nickel_downstream_desc:0 "Indonesia sits atop the world's largest nickel reserves, but for decades exported raw ore at minimal value. Jakarta's ban on unprocessed ore exports is forcing foreign companies to build smelters on Indonesian soil, transforming the archipelago into a key node in the global battery supply chain."
+
+ md2026_idn_battery_supply_chain:0 "Battery Supply Chain Hub"
+ md2026_idn_battery_supply_chain_desc:0 "With smelting capacity established, Indonesia is positioned to move up the value chain into battery cell manufacturing. Partnerships with Korean and Chinese battery makers will bring technical know-how and billions in investment, locking the archipelago into the electric vehicle revolution as an indispensable supplier."
+
+ md2026_idn_digital_economy:0 "Digital Economy Drive"
+ md2026_idn_digital_economy_desc:0 "Indonesia's digital economy is one of the largest in Southeast Asia and growing rapidly, home to giants like Gojek, Tokopedia, and Traveloka. Government investment in connectivity and regulatory reform will unleash the entrepreneurial energy of Indonesia's 270 million consumers."
+
+ md2026_idn_asean_trade_hub:0 "ASEAN Trade Hub"
+ md2026_idn_asean_trade_hub_desc:0 "A booming digital economy and processed-goods export base give Indonesia the foundations to become ASEAN's commercial centre of gravity. Deepening trade ties with regional neighbours will lock in market access and cement Jakarta's role as the indispensable engine of Southeast Asian commerce."
+
+ ### Branch 3 - Military / Foreign Policy ###
+
+ md2026_idn_south_china_sea:0 "Natuna Islands Defense"
+ md2026_idn_south_china_sea_desc:0 "Chinese coast guard vessels have repeatedly intruded into Indonesia's Exclusive Economic Zone around the Natuna Islands. Prabowo, a former general, has made clear he will not accept encroachments — Indonesia must now back those words with a credible naval and air presence in its northernmost waters."
+
+ md2026_idn_asean_leadership:0 "ASEAN Anchor State"
+ md2026_idn_asean_leadership_desc:0 "As Southeast Asia's largest economy and most populous nation, Indonesia is the natural leader of the ASEAN bloc. Prabowo's government will seek a more assertive regional role, brokering disputes and setting the agenda for a more cohesive and self-reliant Southeast Asia."
+
+ md2026_idn_bamboo_diplomacy:0 "Bamboo Diplomacy"
+ md2026_idn_bamboo_diplomacy_desc:0 "Like bamboo bending without breaking, Indonesia's foreign policy has long sought to balance between great powers. Jakarta will engage both Washington and Beijing simultaneously, leveraging its strategic location and resource wealth to extract concessions from each without committing to either camp."
+
+ md2026_idn_quad_observer:0 "Quad Observer Status"
+ md2026_idn_quad_observer_desc:0 "The Quadrilateral Security Dialogue has grown into the Indo-Pacific's leading security framework. Indonesia will not formally join, but accepting observer status offers access to intelligence sharing, joint exercises, and defence co-operation while maintaining strategic ambiguity toward Beijing."
+
+ md2026_idn_china_pivot:0 "Strategic Pivot to China"
+ md2026_idn_china_pivot_desc:0 "China is Indonesia's largest trading partner and an irreplaceable source of investment capital. Deepening the strategic partnership with Beijing would accelerate infrastructure financing and open Chinese markets to Indonesian exports, though at the cost of some distance from Washington."
+
+ md2026_idn_military_modernization:0 "Military Modernization Program"
+ md2026_idn_military_modernization_desc:0 "Prabowo, Indonesia's first president to have served as a general since Suharto, is determined to transform the TNI into a modern fighting force. New platforms, upgraded naval vessels, and reformed officer training will give Indonesia armed forces commensurate with its size and strategic ambitions."
+
+ ### Branch 4 - Politics ###
+
+ md2026_idn_prabowo_consolidation:0 "Prabowo Consolidates Power"
+ md2026_idn_prabowo_consolidation_desc:0 "Elected by a wide margin in February 2024, Prabowo Subianto moves to consolidate his political position by drawing coalition partners into his cabinet and rewarding loyalists with key ministries. Whether this produces effective governance or entrenched patronage will define his presidency."
+
+ md2026_idn_civilian_reform:0 "Civilian Supremacy Reform"
+ md2026_idn_civilian_reform_desc:0 "Despite his military background, Prabowo opts to strengthen civilian institutions and curtail the political role of the TNI. Judicial reform, anti-corruption enforcement, and a more independent press will build the institutional foundations Indonesia needs for stable long-term development."
+
+ md2026_idn_military_dominance:0 "Military Back in Politics"
+ md2026_idn_military_dominance_desc:0 "Prabowo leverages his military ties to place active and retired officers in key civilian positions, reviving echoes of the Dwifungsi doctrine. Discipline and order are prioritised over democratic accountability, concentrating decision-making power in the president and his inner circle."
+
+ md2026_idn_papua_stability:0 "Papua Stability Initiative"
+ md2026_idn_papua_stability_desc:0 "The Papua region has simmered with separatist unrest for decades. Jakarta's new approach combines accelerated development spending with dialogue channels for Papuan leaders, seeking to address the economic grievances that feed the insurgency without conceding on sovereignty."
+
+ md2026_idn_religious_harmony:0 "Moderate Islam, Plural Society"
+ md2026_idn_religious_harmony_desc:0 "As the world's largest Muslim-majority democracy, Indonesia has long prided itself on Pancasila, the pluralist national philosophy enshrining religious tolerance. Prabowo will invest in inter-faith dialogue and support for moderate Islamic organisations to preserve this tradition against rising sectarian pressure."
+
+ ### Capstone ###
+
+ md2026_idn_asian_tiger:0 "The New Asian Tiger"
+ md2026_idn_asian_tiger_desc:0 "The dream is realised: Nusantara stands as a gleaming symbol of Indonesia's transformation, its nickel-powered industry feeds the global green economy, its armed forces command the archipelago's vast waters, and its diplomats set the agenda for a more confident ASEAN. Indonesia steps into the 21st century as the undisputed anchor of Southeast Asia."
