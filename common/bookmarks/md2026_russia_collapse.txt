@@ -1,0 +1,55 @@
+bookmarks = {
+	bookmark = {
+		name = "MD2026_RUSSIA_COLLAPSE_NAME"
+		desc = "MD2026_RUSSIA_COLLAPSE_DESC"
+		date = 2026.1.1.12
+		picture = "GFX_select_date_2017"
+		default_country = "SOV"
+		default = no
+
+		"SOV" = {
+			history = "MD2026_SOV_COLLAPSE_DESC"
+			ideology = communism
+			focuses = {
+				MD2026_SOV_war_crossroads
+				MD2026_SOV_economic_autarky
+				MD2026_SOV_frozen_conflict
+			}
+		}
+		"UKR" = {
+			history = "MD2026_UKR_COLLAPSE_DESC"
+			ideology = democratic
+			focuses = {
+				MD2026_UKR_war_path
+				MD2026_UKR_western_weapons
+				MD2026_UKR_nato_path
+			}
+		}
+		"POL" = {
+			history = "MD2026_POL_COLLAPSE_DESC"
+			ideology = democratic
+			focuses = {
+				MD2026_POL_eastern_shield
+				MD2026_POL_fortress_poland
+				MD2026_POL_military_buildup
+			}
+		}
+		"GER" = {
+			history = "MD2026_GER_COLLAPSE_DESC"
+			ideology = democratic
+			focuses = {
+				MD2026_GER_zeitenwende_2026
+				MD2026_GER_bundeswehr_reform
+				MD2026_GER_european_defense_pillar
+			}
+		}
+		"CHI" = {
+			history = "MD2026_CHI_COLLAPSE_DESC"
+			ideology = communism
+			focuses = {
+				MD2026_CHI_great_rejuvenation
+				MD2026_CHI_russia_alliance
+			}
+		}
+	}
+}

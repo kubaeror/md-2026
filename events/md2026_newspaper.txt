@@ -1,0 +1,206 @@
+add_namespace = md2026_newspaper
+
+# ============================================================
+# MD2026 - Breaking News Events
+# Global news events triggered by major world events.
+# All are major = yes so they appear for every country.
+# ============================================================
+
+# Nuclear Test Shakes the World
+news_event = {
+	id = md2026_newspaper.1
+	title = md2026_newspaper.1.t
+	desc = md2026_newspaper.1.d
+	picture = GFX_event_generic_read_write
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_newspaper.1.a
+		log = "[GetDateText]: [This.GetName]: md2026_newspaper.1.a"
+	}
+}
+
+# Historic Peace Agreement Signed
+news_event = {
+	id = md2026_newspaper.2
+	title = md2026_newspaper.2.t
+	desc = md2026_newspaper.2.d
+	picture = GFX_event_generic_read_write
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_newspaper.2.a
+		log = "[GetDateText]: [This.GetName]: md2026_newspaper.2.a"
+	}
+}
+
+# Alliance Collapses
+news_event = {
+	id = md2026_newspaper.3
+	title = md2026_newspaper.3.t
+	desc = md2026_newspaper.3.d
+	picture = GFX_event_generic_read_write
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_newspaper.3.a
+		log = "[GetDateText]: [This.GetName]: md2026_newspaper.3.a"
+	}
+}
+
+# Coup d'Etat!
+news_event = {
+	id = md2026_newspaper.4
+	title = md2026_newspaper.4.t
+	desc = md2026_newspaper.4.d
+	picture = GFX_event_generic_read_write
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_newspaper.4.a
+		log = "[GetDateText]: [This.GetName]: md2026_newspaper.4.a"
+	}
+}
+
+# Global Stock Market Crash
+news_event = {
+	id = md2026_newspaper.5
+	title = md2026_newspaper.5.t
+	desc = md2026_newspaper.5.d
+	picture = GFX_event_generic_read_write
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_newspaper.5.a
+		log = "[GetDateText]: [This.GetName]: md2026_newspaper.5.a"
+		add_stability = -0.02
+	}
+}
+
+# Artificial General Intelligence Achieved
+news_event = {
+	id = md2026_newspaper.6
+	title = md2026_newspaper.6.t
+	desc = md2026_newspaper.6.d
+	picture = GFX_event_generic_read_write
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_newspaper.6.a
+		log = "[GetDateText]: [This.GetName]: md2026_newspaper.6.a"
+	}
+}
+
+# Human Reaches Mars
+news_event = {
+	id = md2026_newspaper.7
+	title = md2026_newspaper.7.t
+	desc = md2026_newspaper.7.d
+	picture = GFX_event_generic_read_write
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_newspaper.7.a
+		log = "[GetDateText]: [This.GetName]: md2026_newspaper.7.a"
+		add_stability = 0.02
+	}
+}
+
+# Pandemic Outbreak
+news_event = {
+	id = md2026_newspaper.8
+	title = md2026_newspaper.8.t
+	desc = md2026_newspaper.8.d
+	picture = GFX_event_generic_read_write
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_newspaper.8.a
+		log = "[GetDateText]: [This.GetName]: md2026_newspaper.8.a"
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+# Cyberattack Paralyses Nation
+news_event = {
+	id = md2026_newspaper.9
+	title = md2026_newspaper.9.t
+	desc = md2026_newspaper.9.d
+	picture = GFX_event_generic_read_write
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_newspaper.9.a
+		log = "[GetDateText]: [This.GetName]: md2026_newspaper.9.a"
+	}
+}
+
+# Breakthrough Energy Technology
+news_event = {
+	id = md2026_newspaper.10
+	title = md2026_newspaper.10.t
+	desc = md2026_newspaper.10.d
+	picture = GFX_event_generic_read_write
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_newspaper.10.a
+		log = "[GetDateText]: [This.GetName]: md2026_newspaper.10.a"
+		add_research_slot = 1
+	}
+}
+
+# Taiwan Strait War Erupts
+news_event = {
+	id = md2026_newspaper.11
+	title = md2026_newspaper.11.t
+	desc = md2026_newspaper.11.d
+	picture = GFX_event_generic_read_write
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_newspaper.11.a
+		log = "[GetDateText]: [This.GetName]: md2026_newspaper.11.a"
+		add_war_support = 0.05
+	}
+}
+
+# Russia-Ukraine War Ends
+news_event = {
+	id = md2026_newspaper.12
+	title = md2026_newspaper.12.t
+	desc = md2026_newspaper.12.d
+	picture = GFX_event_generic_read_write
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_newspaper.12.a
+		log = "[GetDateText]: [This.GetName]: md2026_newspaper.12.a"
+		add_stability = 0.03
+	}
+}

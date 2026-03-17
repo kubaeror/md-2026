@@ -1,0 +1,76 @@
+﻿ l_english:
+ # Newspaper event titles
+ md2026_newspaper.1.t:0 "BREAKING: Nuclear Test Shakes the World"
+ md2026_newspaper.1.d:0 "A powerful underground detonation has been detected, sending shockwaves through the international community. Intelligence agencies confirm that [Root.GetName] has successfully tested a nuclear device. World leaders are convening emergency sessions as fears of nuclear proliferation reach a fever pitch."
+ md2026_newspaper.1.a:0 "A dark day for global security."
+
+ md2026_newspaper.2.t:0 "HISTORIC PEACE: Ceasefire Agreement Signed"
+ md2026_newspaper.2.d:0 "After months of tense negotiations, diplomats have announced a landmark peace agreement ending one of the most devastating conflicts of the modern era. Celebrations have broken out in capitals around the world, though analysts warn that lasting stability will require sustained international commitment."
+ md2026_newspaper.2.a:0 "Let us hope this peace holds."
+
+ md2026_newspaper.3.t:0 "ALLIANCE IN CRISIS: Major Bloc Fractures"
+ md2026_newspaper.3.d:0 "In a stunning diplomatic rupture, a key member has announced its withdrawal from a major international alliance. The move throws the geopolitical order into question and sends tremors through financial markets. Allies scramble to assess the strategic implications of the collapse."
+ md2026_newspaper.3.a:0 "The world order shifts once more."
+
+ md2026_newspaper.4.t:0 "COUP! Government Overthrown Overnight"
+ md2026_newspaper.4.d:0 "Military units seized control of key government buildings in the early hours of the morning. The incumbent government has been dissolved and a transitional authority declared. International capitals have condemned the seizure of power and called for the restoration of constitutional order."
+ md2026_newspaper.4.a:0 "Another government falls to the barrel of a gun."
+
+ md2026_newspaper.5.t:0 "MARKETS COLLAPSE: Global Financial Crisis Erupts"
+ md2026_newspaper.5.d:0 "Stock markets around the world have entered freefall as multiple major economies slide into simultaneous recession. Analysts describe scenes reminiscent of 2008, but warn that the interconnected nature of the global economy in 2026 makes the contagion risk far greater. Governments are scrambling to coordinate a response."
+ md2026_newspaper.5.a:0 "Another great crash — history repeats itself."
+
+ md2026_newspaper.6.t:0 "BREAKTHROUGH: Artificial General Intelligence Achieved"
+ md2026_newspaper.6.d:0 "Scientists have announced the development of an artificial intelligence system that demonstrably exceeds human-level cognitive performance across all domains. The implications for every field of human endeavour — from military planning to scientific research — are staggering. World governments are demanding emergency summits on AI governance."
+ md2026_newspaper.6.a:0 "Humanity crosses a threshold it cannot uncross."
+
+ md2026_newspaper.7.t:0 "ONE GIANT LEAP: Humans Set Foot on Mars"
+ md2026_newspaper.7.d:0 "In a moment that will be remembered for generations, astronauts have stepped onto the Martian surface for the first time in human history. Billions watched the live transmission as the achievement was announced. The milestone marks humanity's transformation into a multi-planetary species and ignites a new era of space exploration."
+ md2026_newspaper.7.a:0 "A triumph for all of humanity."
+
+ md2026_newspaper.8.t:0 "HEALTH EMERGENCY: New Pandemic Declared"
+ md2026_newspaper.8.d:0 "The World Health Organization has declared a global health emergency as a novel infectious disease spreads rapidly across multiple continents. Governments are implementing emergency public health measures as health systems brace for a surge in cases. The economic and social disruption is expected to be severe."
+ md2026_newspaper.8.a:0 "The world holds its breath once more."
+
+ md2026_newspaper.9.t:0 "LIGHTS OUT: Massive Cyberattack Cripples Nation"
+ md2026_newspaper.9.d:0 "A sophisticated cyberattack has simultaneously disabled critical infrastructure across a major nation, knocking out power grids, financial systems, and communications networks. The attack, which officials describe as unprecedented in scale, is widely suspected to be state-sponsored. Emergency powers have been invoked as the government works to restore services."
+ md2026_newspaper.9.a:0 "The invisible war becomes very real."
+
+ md2026_newspaper.10.t:0 "ENERGY REVOLUTION: Fusion Power Goes Online"
+ md2026_newspaper.10.d:0 "Scientists have announced the first commercially viable nuclear fusion reactor, producing more energy than it consumes for the first time in history. The breakthrough promises to fundamentally reshape the global energy landscape, potentially ending dependence on fossil fuels within a generation. Energy markets have reacted with extreme volatility."
+ md2026_newspaper.10.a:0 "The age of limitless clean energy has begun."
+
+ md2026_newspaper.11.t:0 "WAR IN THE STRAIT: China Invades Taiwan"
+ md2026_newspaper.11.d:0 "Chinese naval and air forces have launched a massive assault across the Taiwan Strait, the most consequential military operation in Asia since the Korean War. Taiwan's defenses are resisting fiercely as the world watches with bated breath. Washington, Tokyo, and Seoul have scrambled their forces to respond to the unfolding crisis."
+ md2026_newspaper.11.a:0 "The world's most dangerous flashpoint has ignited."
+
+ md2026_newspaper.12.t:0 "GUNS FALL SILENT: Russia-Ukraine War Ends"
+ md2026_newspaper.12.d:0 "After years of brutal conflict that has claimed hundreds of thousands of lives and devastated a nation, a ceasefire agreement between Russia and Ukraine has taken effect. The terms remain deeply contested, with neither side claiming full victory. Reconstruction of shattered Ukrainian cities will take a generation and cost trillions of dollars."
+ md2026_newspaper.12.a:0 "Peace, at last — though at terrible cost."
+
+ # Bookmark names and descriptions
+ MD2026_TAIWAN_CRISIS_NAME:0 "Taiwan Crisis"
+ MD2026_TAIWAN_CRISIS_DESC:0 "Tensions in the Taiwan Strait have reached a boiling point. China has concluded that reunification by force may be its last opportunity. Taiwan's defenses are hardened but its fate may rest on whether the United States chooses to intervene. The world holds its breath as the most dangerous flashpoint on earth threatens to ignite."
+ MD2026_TAI_CRISIS_DESC:0 "Taiwan stands at the precipice. Chinese military provocations have intensified to an unprecedented degree, and intelligence assessments suggest an invasion may be imminent. Your porcupine defense strategy must be perfected — every day of preparation counts."
+ MD2026_CHI_CRISIS_DESC:0 "The century of humiliation will end on your watch. Taiwan's capitalist democracy represents the last obstacle to China's complete reunification. The People's Liberation Army is ready. The world will either accept the outcome or face the consequences of confronting the world's largest military."
+ MD2026_USA_TAIWAN_DESC:0 "Decades of strategic ambiguity have come to an end. The credibility of the entire US alliance system hangs on America's response to Chinese aggression in the Taiwan Strait. Hesitation will be seen as weakness from Seoul to Warsaw."
+ MD2026_JAP_TAIWAN_DESC:0 "Japan's own security is inseparable from Taiwan's fate. A Chinese-controlled Taiwan would leave Japan strategically encircled. The Self-Defense Forces must be ready to act alongside American allies."
+ MD2026_KOR_TAIWAN_DESC:0 "South Korea faces an agonizing choice between its security alliance with the United States and its massive trade relationship with China. The decision will define Korean foreign policy for a generation."
+
+ MD2026_RUSSIA_COLLAPSE_NAME:0 "Russian Collapse"
+ MD2026_RUSSIA_COLLAPSE_DESC:0 "The Russian state is fracturing under the weight of a catastrophic military defeat in Ukraine, crushing Western sanctions, and mounting domestic unrest. Putin's grip on power is weakening by the day. As the largest country on earth teeters on the edge of collapse, its nuclear arsenal makes the world a very dangerous place."
+ MD2026_SOV_COLLAPSE_DESC:0 "Russia is bleeding. Military losses in Ukraine have been catastrophic. The economy is contracting. Protests are spreading from Moscow to Vladivostok. Your task is to stabilize the state before it fractures entirely — or to seize power in the chaos and remake Russia in your own image."
+ MD2026_UKR_COLLAPSE_DESC:0 "Ukraine has bled for years, but the impossible is becoming possible: Russia is collapsing. This is your moment to push for terms that will guarantee Ukrainian sovereignty for generations — but the chaos in Moscow is unpredictable, and a desperate enemy with nuclear weapons is the most dangerous kind."
+ MD2026_POL_COLLAPSE_DESC:0 "Poland has doubled its army and built the strongest defensive line in Europe for exactly this moment. A collapsing Russia is an opportunity — but also an existential risk. The chaos must be managed. NATO solidarity must be maintained."
+ MD2026_GER_COLLAPSE_DESC:0 "Germany's Zeitenwende — the historic reversal of decades of pacifism — has made the Bundeswehr a formidable force again. Now the results of that investment will be tested as European security faces its greatest crisis since 1945."
+ MD2026_CHI_COLLAPSE_DESC:0 "Russia's collapse is simultaneously a crisis and an opportunity for China. A chaotic Russia loses its strategic value as a counterweight to the West, but its vast resources and territory become a prize. Beijing must decide: prop up a failing partner or position itself to benefit from the chaos."
+
+ MD2026_MIDDLE_EAST_INFERNO_NAME:0 "Middle East Inferno"
+ MD2026_MIDDLE_EAST_INFERNO_DESC:0 "Iran stands on the threshold of acquiring a nuclear weapon. Israel has vowed to prevent this at any cost. Saudi Arabia watches nervously as the region hurtles toward a conflict that could engulf the entire Middle East. In the shadow of a potential nuclear confrontation, every miscalculation could be the last."
+ MD2026_ISR_INFERNO_DESC:0 "Israel's intelligence services confirm what you have feared: Iran is weeks away from a nuclear device. The window for a preemptive strike is closing. Strike and face international isolation — or wait and face an existential nuclear threat. There is no good option, only less catastrophic ones."
+ MD2026_PER_INFERNO_DESC:0 "The Islamic Republic stands at the culmination of decades of sacrifice and struggle. A nuclear deterrent will make Iran untouchable — ending the era of foreign interference once and for all. The Axis of Resistance stretches from Tehran to Beirut to Sanaa. The moment of victory is at hand."
+ MD2026_SAU_INFERNO_DESC:0 "Saudi Arabia finds itself between an Iranian nuclear threat and an Israeli preemptive strike option, with the United States demanding Riyadh choose sides. Vision 2030 demands stability, but the region refuses to cooperate."
+ MD2026_USA_INFERNO_DESC:0 "The United States must decide whether to greenlight an Israeli strike on Iranian nuclear facilities, act unilaterally, or attempt a last-ditch diplomatic solution. Every choice comes with catastrophic risks."
+ MD2026_TUR_INFERNO_DESC:0 "Turkey sits at the crossroads of the coming storm, a NATO member with complex ties to Iran and the Arab world. Ankara must navigate this crisis without being dragged into a war it cannot afford."
+
+ MD2026_PER_per_nuclear_acceleration:0 "Accelerate Nuclear Program"

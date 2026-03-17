@@ -295,6 +295,40 @@ on_actions = {
 						}
 					}
 				}
+
+				# Newspaper triggers: fire once when global conditions are met
+				if = {
+					limit = {
+						tag = USA
+						NOT = { has_global_flag = md2026_news_economy_crash }
+						count_triggers = {
+							amount = 3
+							any_country = { has_idea = md2026_economy_crisis }
+						}
+					}
+					set_global_flag = md2026_news_economy_crash
+					news_event = { id = md2026_newspaper.5 hours = 6 }
+				}
+				if = {
+					limit = {
+						tag = USA
+						NOT = { has_global_flag = md2026_news_taiwan_war }
+						CHI = { has_war_with = TAI }
+					}
+					set_global_flag = md2026_news_taiwan_war
+					news_event = { id = md2026_newspaper.11 hours = 6 }
+				}
+				if = {
+					limit = {
+						tag = USA
+						NOT = { has_global_flag = md2026_news_ukraine_peace }
+						SOV = { NOT = { has_war_with = UKR } }
+						has_global_flag = md2026_initialized
+						date > 2026.6.1
+					}
+					set_global_flag = md2026_news_ukraine_peace
+					news_event = { id = md2026_newspaper.12 hours = 6 }
+				}
 			}
 		}
 	}

@@ -1,0 +1,54 @@
+bookmarks = {
+	bookmark = {
+		name = "MD2026_TAIWAN_CRISIS_NAME"
+		desc = "MD2026_TAIWAN_CRISIS_DESC"
+		date = 2026.1.1.12
+		picture = "GFX_select_date_2017"
+		default_country = "TAI"
+		default = no
+
+		"TAI" = {
+			history = "MD2026_TAI_CRISIS_DESC"
+			ideology = democratic
+			focuses = {
+				MD2026_TAI_porcupine_defense
+				MD2026_TAI_tech_sovereignty
+				MD2026_TAI_western_defense_pact
+			}
+		}
+		"CHI" = {
+			history = "MD2026_CHI_CRISIS_DESC"
+			ideology = communism
+			focuses = {
+				MD2026_CHI_great_rejuvenation
+				MD2026_CHI_taiwan_question
+				MD2026_CHI_taiwan_escalation
+			}
+		}
+		"USA" = {
+			history = "MD2026_USA_TAIWAN_DESC"
+			ideology = nationalist
+			focuses = {
+				MD2026_USA_trump_second_term
+				MD2026_USA_pentagon_budget
+				MD2026_USA_space_force_expansion
+			}
+		}
+		"JAP" = {
+			history = "MD2026_JAP_TAIWAN_DESC"
+			ideology = democratic
+			focuses = {
+				MD2026_JAP_rearmament
+				MD2026_JAP_us_alliance
+			}
+		}
+		"KOR" = {
+			history = "MD2026_KOR_TAIWAN_DESC"
+			ideology = democratic
+			focuses = {
+				MD2026_KOR_us_alliance
+				MD2026_KOR_military_buildup
+			}
+		}
+	}
+}

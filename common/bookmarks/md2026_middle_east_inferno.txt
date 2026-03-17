@@ -1,0 +1,55 @@
+bookmarks = {
+	bookmark = {
+		name = "MD2026_MIDDLE_EAST_INFERNO_NAME"
+		desc = "MD2026_MIDDLE_EAST_INFERNO_DESC"
+		date = 2026.1.1.12
+		picture = "GFX_select_date_2017"
+		default_country = "ISR"
+		default = no
+
+		"ISR" = {
+			history = "MD2026_ISR_INFERNO_DESC"
+			ideology = democratic
+			focuses = {
+				MD2026_ISR_iron_wall
+				MD2026_ISR_gaza_aftermath
+				MD2026_ISR_preemptive_strike
+			}
+		}
+		"PER" = {
+			history = "MD2026_PER_INFERNO_DESC"
+			ideology = communism
+			focuses = {
+				MD2026_PER_nuclear_threshold
+				MD2026_PER_axis_of_resistance
+				MD2026_PER_per_nuclear_acceleration
+			}
+		}
+		"SAU" = {
+			history = "MD2026_SAU_INFERNO_DESC"
+			ideology = neutrality
+			focuses = {
+				MD2026_SAU_vision_2030
+				MD2026_SAU_opec_leadership
+				MD2026_SAU_sau_normalize_israel
+			}
+		}
+		"USA" = {
+			history = "MD2026_USA_INFERNO_DESC"
+			ideology = nationalist
+			focuses = {
+				MD2026_USA_trump_second_term
+				MD2026_USA_middle_east_policy
+				MD2026_USA_pentagon_budget
+			}
+		}
+		"TUR" = {
+			history = "MD2026_TUR_INFERNO_DESC"
+			ideology = neutrality
+			focuses = {
+				MD2026_TUR_regional_power
+				MD2026_TUR_nato_loyalty
+			}
+		}
+	}
+}
