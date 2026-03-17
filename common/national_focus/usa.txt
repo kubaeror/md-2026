@@ -40029,7 +40029,7 @@ focus_tree = {
 			}
 			clear_array = ruling_party
 			clear_array = gov_coalition_array
-			add_to_array = { ruling_party = 4 } #Anarchist Association"
+			add_to_array = { ruling_party = 4 } #Anarchist Association
 			recalculate_party = yes
 			set_ruling_leader = yes
 			set_leader = yes
