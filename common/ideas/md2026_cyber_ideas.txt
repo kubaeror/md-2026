@@ -1,5 +1,35 @@
 ideas = {
 	country = {
+		md2026_cyber_counterintel_active = {
+			picture = electronic_warfare
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				intel_decryption_bonus = 0.2
+				enemy_operative_detection_chance_factor = 0.3
+			}
+		}
+
+		md2026_cyber_grid_disruption = {
+			picture = electronic_warfare
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				industrial_capacity_factory = -0.10
+				industrial_capacity_dockyard = -0.10
+			}
+		}
+
 		md2026_cyber_defense_1 = {
 			picture = electronic_warfare
 			

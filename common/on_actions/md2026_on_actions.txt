@@ -233,6 +233,68 @@ on_actions = {
 						add_to_variable = { md2026_war_months = 1 }
 					}
 				}
+
+				# Economy cycle: probabilistic monthly transitions
+				if = {
+					limit = { has_idea = md2026_economy_boom }
+					random_list = {
+						96 = {}
+						4 = {
+							swap_ideas = {
+								remove_idea = md2026_economy_boom
+								add_idea = md2026_economy_stable
+							}
+						}
+					}
+				}
+				if = {
+					limit = { has_idea = md2026_economy_stable }
+					random_list = {
+						93 = {}
+						5 = {
+							swap_ideas = {
+								remove_idea = md2026_economy_stable
+								add_idea = md2026_economy_boom
+							}
+						}
+						2 = {
+							swap_ideas = {
+								remove_idea = md2026_economy_stable
+								add_idea = md2026_economy_recession
+							}
+						}
+					}
+				}
+				if = {
+					limit = { has_idea = md2026_economy_recession }
+					random_list = {
+						88 = {}
+						7 = {
+							swap_ideas = {
+								remove_idea = md2026_economy_recession
+								add_idea = md2026_economy_stable
+							}
+						}
+						5 = {
+							swap_ideas = {
+								remove_idea = md2026_economy_recession
+								add_idea = md2026_economy_crisis
+							}
+						}
+					}
+				}
+				if = {
+					limit = { has_idea = md2026_economy_crisis }
+					random_list = {
+						91 = {}
+						9 = {
+							swap_ideas = {
+								remove_idea = md2026_economy_crisis
+								add_idea = md2026_economy_recession
+							}
+						}
+					}
+				}
 			}
 		}
 	}

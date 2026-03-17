@@ -24,3 +24,30 @@
  md2026_proxy.2.t:0 "Proxy Forces Defeated"
  md2026_proxy.2.d:0 "The forces we have been backing in their conflict have been decisively defeated and forced to capitulate. Our involvement is now public knowledge, and the failure of this intervention has led to international condemnation and domestic criticism over wasted resources."
  md2026_proxy.2.a:0 "A major setback."
+
+ md2026_proxy_hezbollah:0 "Reinforce Hezbollah's Military Wing"
+ md2026_proxy_hezbollah_desc:0 "By channeling weapons, funding, and military advisors through Hezbollah, we can sustain a persistent threat on Israel's northern border and extend our influence into the Levant. This will draw sharp condemnation from Israel and the United States, but our reach into the Mediterranean will be undeniable."
+
+ md2026_proxy_houthi:0 "Back the Houthi Movement in Yemen"
+ md2026_proxy_houthi_desc:0 "Supplying the Houthi forces in Yemen with missiles, drones, and logistical support will allow us to threaten Saudi Arabia's southern flank and disrupt shipping through the Bab-el-Mandeb strait. Riyadh and Abu Dhabi will react with fury, but our leverage over the Arabian Peninsula will grow considerably."
+
+ md2026_proxy_wagner_africa:0 "Deploy Africa Corps to the Sahel"
+ md2026_proxy_wagner_africa_desc:0 "Deploying our paramilitary contractors across the Sahel region allows us to displace French and British influence, secure access to critical mineral resources, and establish a network of client governments. France and Britain will protest loudly, but the scramble for Africa is ours to win."
+
+ md2026_proxy_taiwan_support:0 "Bolster Taiwan's Defense Capabilities"
+ md2026_proxy_taiwan_support_desc:0 "Providing Taiwan with advanced weaponry, military training packages, and defense intelligence will substantially raise the cost of any Chinese military action against the island. Beijing will view this as a direct provocation, but a well-armed Taiwan is the strongest deterrent to war in the Pacific."
+
+ md2026_proxy_kurdish_forces:0 "Arm and Advise Kurdish Forces"
+ md2026_proxy_kurdish_forces_desc:0 "Partnering with Kurdish forces in Syria and Iraq gives us a capable ground force to counter extremist groups and maintain pressure on hostile state actors. Ankara will protest this support vigorously, but these fighters have proven to be the most effective allied force in the region."
+
+ md2026_proxy_ukraine_support:0 "Expand Military Aid to Ukraine"
+ md2026_proxy_ukraine_support_desc:0 "Coordinating an expanded package of heavy weapons, ammunition, and intelligence support for Ukraine will help sustain their resistance and impose real costs on Russian forces. Moscow will treat this as near-direct participation in the conflict, but the integrity of the European security order demands it."
+
+ md2026_proxy_bri_influence:0 "Expand Belt and Road Coercive Leverage"
+ md2026_proxy_bri_influence_desc:0 "Using our Belt and Road investments as instruments of political coercion, we can compel partner nations to align with our interests on the world stage, deny opponents access to key ports and infrastructure, and extend our global reach without a single soldier crossing a border. Washington will condemn our economic statecraft, but this is how great powers are built."
+
+ md2026_proxy_arms_broker:0 "Broker Arms Sales to Aligned Factions"
+ md2026_proxy_arms_broker_desc:0 "As a major arms-producing power, we can profit by brokering weapons deals to aligned factions and client states in active conflict zones. The revenue will bolster our political coffers, but if the transfers are exposed or the weapons are turned against our interests, the blowback could be severe."
+
+ md2026_western_military_aid:0 "Western Military Aid Package"
+ md2026_western_military_aid_desc:0 "A significant influx of Western weapons, equipment, and military training has substantially improved our forces' combat effectiveness and operational capability."

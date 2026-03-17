@@ -39,3 +39,34 @@
  md2026_cyber.5.a:0 "Cover our tracks."
  
  md2026_cyber_attack_opinion:0 "Detected Cyber Espionage"
+
+ # --- Extended Cyber Decisions ---
+
+ md2026_cyber_financial_attack:0 "Attack Enemy Financial Systems"
+ md2026_cyber_financial_attack_desc:0 "Launch a covert cyber offensive targeting the enemy's banking networks, stock exchanges, and payment infrastructure. Disrupting financial flows will erode their economic stability and sap public confidence."
+
+ md2026_cyber_disinformation:0 "Disinformation Campaign"
+ md2026_cyber_disinformation_desc:0 "Flood the enemy's social media landscape with fabricated news, deepfake footage, and coordinated bot networks to polarise their electorate, undermine trust in their institutions, and weaken their resolve to fight."
+
+ md2026_cyber_nuclear_sabotage:0 "Cyber Sabotage of Nuclear Facility"
+ md2026_cyber_nuclear_sabotage_desc:0 "Deploy a sophisticated worm targeting industrial control systems inside the enemy's nuclear enrichment or weapons programme. A successful operation could set their nuclear ambitions back by years without firing a single shot."
+
+ md2026_cyber_counterintelligence:0 "Establish Cyber Counterintelligence Unit"
+ md2026_cyber_counterintelligence_desc:0 "Even nations without offensive cyber capabilities can build dedicated teams to hunt foreign intruders, harden government networks, and detect state-sponsored espionage before it causes lasting damage."
+
+ md2026_cyber_espionage_peacetime:0 "Peacetime Economic Espionage"
+ md2026_cyber_espionage_peacetime_desc:0 "Task our cyber operatives with quietly penetrating foreign corporate and government research databases during peacetime. Stolen blueprints and scientific data can give our own programmes a decisive head start."
+
+ md2026_cyber_power_grid_attack:0 "Power Grid Blackout Operation"
+ md2026_cyber_power_grid_attack_desc:0 "Strike the enemy's national power grid during active hostilities. A successful blackout will cripple their factories, disrupt military logistics, and sow panic among the civilian population."
+
+ md2026_cyber_upgrade_program:0 "Establish National Cyber Programme"
+ md2026_cyber_upgrade_program_desc:0 "Commit significant state resources to building an offensive cyber capability from the ground up — recruiting elite hackers, procuring zero-day exploits, and establishing a dedicated cyber warfare command."
+
+ # --- New Ideas ---
+
+ md2026_cyber_counterintel_active:0 "Active Cyber Counterintelligence"
+ md2026_cyber_counterintel_active_desc:0 "Specialised teams continuously monitor our networks for foreign intrusion, dramatically improving our ability to detect and expel enemy operatives."
+
+ md2026_cyber_grid_disruption:0 "Grid Disruption (Cyber)"
+ md2026_cyber_grid_disruption_desc:0 "Our power infrastructure is suffering the aftershocks of a cyberattack. Factories and dockyards are operating well below capacity while engineers race to restore normal operation."

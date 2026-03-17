@@ -7,20 +7,20 @@ md2026_military_modernization_category = {
 		cost = 75
 		fire_only_once = no
 		days_remove = 60
-		
+
 		visible = {
 			has_idea = md2026_cyber_capability
 		}
-		
+
 		available = {
 			has_war = yes
 		}
-		
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision md2026_cyber_attack_infrastructure"
 			add_political_power = -75
 		}
-		
+
 		remove_effect = {
 			random_list = {
 				60 = {
@@ -45,26 +45,26 @@ md2026_military_modernization_category = {
 			}
 		}
 	}
-	
+
 	md2026_cyber_steal_technology = {
 		icon = generic_research
 		cost = 100
 		fire_only_once = no
 		days_remove = 120
-		
+
 		visible = {
 			has_idea = md2026_cyber_capability
 		}
-		
+
 		available = {
 			is_subject = no
 		}
-		
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision md2026_cyber_steal_technology"
 			add_political_power = -100
 		}
-		
+
 		remove_effect = {
 			random_list = {
 				50 = {
@@ -79,31 +79,306 @@ md2026_military_modernization_category = {
 			}
 		}
 	}
-	
+
 	md2026_cyber_defense_upgrade = {
 		icon = generic_research
 		cost = 50
 		fire_only_once = no
 		days_remove = 90
-		
+
 		visible = {
 			has_idea = md2026_cyber_capability
 		}
-		
+
 		available = {
 			NOT = { has_idea = md2026_cyber_defense_active }
 		}
-		
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision md2026_cyber_defense_upgrade"
 			add_political_power = -50
 		}
-		
+
 		remove_effect = {
 			add_timed_idea = {
 				idea = md2026_cyber_defense_active
 				days = 365
 			}
+		}
+	}
+
+	### Extended Cyber Warfare Decisions ###
+
+	md2026_cyber_financial_attack = {
+		icon = generic_research
+		cost = 100
+		fire_only_once = no
+		days_remove = 90
+
+		visible = {
+			has_idea = md2026_cyber_capability
+		}
+
+		available = {
+			OR = {
+				any_other_country = { has_war_with = ROOT }
+				has_country_flag = md2026_cold_war_active
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_cyber_financial_attack"
+			add_political_power = -100
+		}
+
+		remove_effect = {
+			random_list = {
+				50 = {
+					# Success - destabilise enemy economy
+					random_other_country = {
+						limit = { has_war_with = ROOT }
+						add_stability = -0.05
+						add_political_power = -75
+						country_event = { id = md2026_cyber.1 }
+					}
+				}
+				50 = {
+					# Failure - exposed operation
+					country_event = { id = md2026_cyber.5 }
+				}
+			}
+		}
+	}
+
+	md2026_cyber_disinformation = {
+		icon = generic_research
+		cost = 75
+		fire_only_once = no
+		days_remove = 120
+
+		visible = {
+			has_idea = md2026_cyber_capability
+		}
+
+		available = {
+			any_other_country = {
+				has_war_with = ROOT
+				has_government = democratic
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_cyber_disinformation"
+			add_political_power = -75
+		}
+
+		remove_effect = {
+			random_list = {
+				60 = {
+					# Success - target society polarised
+					random_other_country = {
+						limit = {
+							has_war_with = ROOT
+							has_government = democratic
+						}
+						add_stability = -0.08
+						add_political_power = -50
+						country_event = { id = md2026_cyber.2 }
+					}
+				}
+				40 = {
+					# Failure - campaign exposed
+					country_event = { id = md2026_cyber.3 }
+				}
+			}
+		}
+	}
+
+	md2026_cyber_nuclear_sabotage = {
+		icon = generic_research
+		cost = 150
+		fire_only_once = no
+		days_remove = 180
+		days_re_enable = 365
+
+		visible = {
+			OR = {
+				has_idea = md2026_cyber_capability
+				original_tag = USA
+				original_tag = ISR
+			}
+		}
+
+		available = {
+			OR = {
+				any_other_country = {
+					OR = {
+						original_tag = PER
+						original_tag = NKO
+					}
+					has_war_with = ROOT
+				}
+				AND = {
+					ISR = { exists = yes }
+					PER = { has_war_with = ISR }
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_cyber_nuclear_sabotage"
+			add_political_power = -150
+		}
+
+		remove_effect = {
+			random_list = {
+				40 = {
+					# Success - nuclear programme set back
+					random_other_country = {
+						limit = {
+							OR = {
+								original_tag = PER
+								original_tag = NKO
+							}
+						}
+						add_stability = -0.10
+						country_event = { id = md2026_cyber.4 }
+					}
+				}
+				60 = {
+					# Failure - international incident
+					country_event = { id = md2026_cyber.5 }
+				}
+			}
+		}
+	}
+
+	md2026_cyber_counterintelligence = {
+		icon = generic_research
+		cost = 50
+		fire_only_once = no
+		days_remove = 90
+
+		visible = {
+			always = yes
+		}
+
+		available = {
+			NOT = { has_idea = md2026_cyber_counterintel_active }
+			NOT = { has_idea = md2026_cyber_capability }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_cyber_counterintelligence"
+			add_political_power = -50
+		}
+
+		remove_effect = {
+			add_timed_idea = {
+				idea = md2026_cyber_counterintel_active
+				days = 365
+			}
+		}
+	}
+
+	md2026_cyber_espionage_peacetime = {
+		icon = generic_research
+		cost = 75
+		fire_only_once = no
+		days_remove = 180
+		days_re_enable = 180
+
+		visible = {
+			has_idea = md2026_cyber_capability
+		}
+
+		available = {
+			is_subject = no
+			NOT = { has_war = yes }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_cyber_espionage_peacetime"
+			add_political_power = -75
+		}
+
+		remove_effect = {
+			random_list = {
+				55 = {
+					# Success - valuable data exfiltrated
+					add_tech_bonus = {
+						name = cyber_espionage
+						bonus = 0.3
+						uses = 2
+					}
+				}
+				45 = {
+					# Failure - operation burned
+					add_political_power = -25
+				}
+			}
+		}
+	}
+
+	md2026_cyber_power_grid_attack = {
+		icon = generic_research
+		cost = 100
+		fire_only_once = no
+		days_remove = 60
+
+		visible = {
+			has_idea = md2026_cyber_capability
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_cyber_power_grid_attack"
+			add_political_power = -100
+		}
+
+		remove_effect = {
+			random_list = {
+				55 = {
+					# Success - enemy grid crippled
+					random_other_country = {
+						limit = { has_war_with = ROOT }
+						add_stability = -0.05
+						add_timed_idea = {
+							idea = md2026_cyber_grid_disruption
+							days = 60
+						}
+						country_event = { id = md2026_cyber.1 }
+					}
+				}
+				45 = {
+					# Failure - traced back
+					country_event = { id = md2026_cyber.3 }
+				}
+			}
+		}
+	}
+
+	md2026_cyber_upgrade_program = {
+		icon = generic_research
+		cost = 100
+		fire_only_once = yes
+
+		visible = {
+			always = yes
+		}
+
+		available = {
+			NOT = { has_idea = md2026_cyber_capability }
+			has_political_power > 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision md2026_cyber_upgrade_program"
+			add_ideas = md2026_cyber_capability
+			add_political_power = -100
 		}
 	}
 }

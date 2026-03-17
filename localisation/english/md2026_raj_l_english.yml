@@ -1,0 +1,95 @@
+﻿l_english:
+
+ ### MD2026 India (RAJ) 2026 Focus Tree ###
+
+ ### Root ###
+
+ MD2026_RAJ_indias_century:0 "India's Century"
+ MD2026_RAJ_indias_century_desc:0 "Prime Minister Modi's vision of a Viksit Bharat — a developed India — by 2047 has become the defining promise of Indian politics. With the world's largest population, a booming services sector, and strategic weight that neither Washington nor Beijing can ignore, New Delhi enters 2026 determined to prove that this is, at last, India's century."
+
+ ### Branch 1 - Make in India ###
+
+ MD2026_RAJ_make_in_india:0 "Make in India"
+ MD2026_RAJ_make_in_india_desc:0 "The flagship industrial policy launched by Modi a decade ago is being turbocharged: production-linked incentives, liberalised FDI rules, and streamlined approvals are drawing Apple, Samsung, and a host of global manufacturers to set up on Indian soil. Delhi aims to capture the supply chains fleeing an increasingly costly China."
+
+ MD2026_RAJ_digital_india:0 "Digital India"
+ MD2026_RAJ_digital_india_desc:0 "India's Unified Payments Interface processes more real-time transactions than any other system on earth, and Aadhaar has enrolled over a billion citizens in a digital identity framework. Sustained investment in connectivity and the public digital infrastructure stack will deepen financial inclusion and turbocharge the broader economy."
+
+ MD2026_RAJ_semiconductor_push:0 "Semiconductor Mission"
+ MD2026_RAJ_semiconductor_push_desc:0 "Smarting from the chip shortages that crippled its auto and electronics industries, India has committed tens of billions in incentives to attract semiconductor fabrication. Tata Electronics and foreign foundry partners are racing to break ground on India's first advanced chip plants, positioning the country at the heart of a diversified global supply chain."
+
+ MD2026_RAJ_defense_production:0 "Defence Production Push"
+ MD2026_RAJ_defense_production_desc:0 "For too long India has been the world's largest arms importer — a strategic vulnerability exposed whenever tensions with China or Pakistan escalate. A new push for Atmanirbhar Bharat in defence will scale up indigenous production of artillery, armoured vehicles, and military electronics, reducing dependence and building an exportable industry."
+
+ MD2026_RAJ_green_energy:0 "Green Energy Transition"
+ MD2026_RAJ_green_energy_desc:0 "India has pledged 500 gigawatts of renewable capacity by 2030, and solar and wind auctions are delivering some of the cheapest clean energy on earth. Scaling this transition will cut the crippling fuel import bill, drive industrial electrification, and give India a credible climate story to leverage in international negotiations."
+
+ ### Branch 2 - Strategic Autonomy ###
+
+ MD2026_RAJ_strategic_autonomy:0 "Strategic Autonomy"
+ MD2026_RAJ_strategic_autonomy_desc:0 "India's foreign policy has long rested on non-alignment and strategic independence — buying Russian weapons while partnering with American technology companies, joining BRICS while co-founding the Quad. In a world demanding sides, New Delhi will defend its right to chart its own course."
+
+ MD2026_RAJ_quad_deepening:0 "Deepening the Quad"
+ MD2026_RAJ_quad_deepening_desc:0 "The Quadrilateral Security Dialogue linking India, the United States, Japan, and Australia has evolved from an informal gathering into the defining security architecture of the Indo-Pacific. India will now lean into the partnership — accepting greater interoperability and intelligence-sharing while stopping well short of a formal alliance."
+
+ MD2026_RAJ_brics_balance:0 "BRICS Balancing Act"
+ MD2026_RAJ_brics_balance_desc:0 "Even as it courts Washington, New Delhi maintains its seat at the BRICS table alongside Russia, China, Brazil, and the new members from the Global South. India will work to shape the expanded bloc as a forum for multipolarity rather than a Chinese sphere of influence, reinforcing its credentials as the voice of the developing world."
+
+ MD2026_RAJ_multi_alignment:0 "Multi-Alignment Mastery"
+ MD2026_RAJ_multi_alignment_desc:0 "By maintaining productive relationships across the Quad, BRICS, the G20, and the Global South simultaneously, India has achieved something remarkable: it is courted by every major power and bound by none. This unique diplomatic position is now codified as doctrine — India will extract maximum benefit from every relationship while preserving complete freedom of action."
+
+ ### Branch 3 - Border Security ###
+
+ MD2026_RAJ_china_border:0 "The China Border Challenge"
+ MD2026_RAJ_china_border_desc:0 "The 2020 Galwan Valley clash, which killed twenty Indian soldiers, shattered any illusion that the Line of Actual Control was a stable frontier. Beijing continues to construct villages and military infrastructure inside disputed territory. New Delhi must now respond with matching resolve: the Himalayas will not become a Chinese lake."
+
+ MD2026_RAJ_lac_fortification:0 "LAC Fortification"
+ MD2026_RAJ_lac_fortification_desc:0 "The Border Roads Organisation is working at record pace to build all-weather roads, tunnels, and forward airstrips along the Line of Actual Control. Logistics that once condemned Indian forces to fight at a disadvantage are being reversed — the army that arrives first will no longer necessarily be Chinese."
+
+ MD2026_RAJ_mountain_strike:0 "Mountain Strike Corps"
+ MD2026_RAJ_mountain_strike_desc:0 "India's Mountain Strike Corps, long under-resourced, is finally receiving the armour, artillery, and air-assault assets it was promised. Trained for high-altitude offensive operations, this force gives New Delhi a credible option to threaten Chinese positions across the Himalayas — shifting the strategic calculus from pure defence."
+
+ MD2026_RAJ_agni_deterrent:0 "Agni-VI Deterrent"
+ MD2026_RAJ_agni_deterrent_desc:0 "The Agni-VI intercontinental ballistic missile, with multiple independently targetable warheads and ranges covering all of China, brings India's nuclear posture to a new level of credibility. Its deployment sends a clear signal that any Chinese escalation carries existential risks — reinforcing the sub-continental stability that neither power truly wants to shatter."
+
+ MD2026_RAJ_military_modernization:0 "Military Modernization Drive"
+ MD2026_RAJ_military_modernization_desc:0 "India's armed forces are in the midst of their most sweeping transformation since independence: retiring Soviet-era platforms, integrating jointness across the three services under theatre commands, and incorporating drones, cyber, and space into every operational concept. The goal is a force capable of simultaneously deterring both China and Pakistan."
+
+ ### Branch 4 - Naval Power ###
+
+ MD2026_RAJ_blue_water_navy:0 "Blue Water Navy"
+ MD2026_RAJ_blue_water_navy_desc:0 "India is the pre-eminent maritime power of the Indian Ocean, but for too long its navy has been an afterthought compared to the army. The commissioning of INS Vikrant, India's first domestically built carrier, marks the beginning of a serious blue-water capability — one that can project power from the Persian Gulf to the Strait of Malacca."
+
+ MD2026_RAJ_carrier_program:0 "Third Carrier Program"
+ MD2026_RAJ_carrier_program_desc:0 "With two carriers now operational, India's navy has the credibility to sustain continuous presence across the Indian Ocean. A third carrier is approved — both to provide a reserve when others are in refit and to signal to China that India's maritime ambitions are generational, not rhetorical."
+
+ MD2026_RAJ_submarine_fleet:0 "Nuclear Submarine Fleet"
+ MD2026_RAJ_submarine_fleet_desc:0 "Under-sea deterrence is the most survivable leg of any nuclear triad. India's Project-75 and Arihant-class submarine programmes are being accelerated, filling the silent service with boats capable of conventional strike, anti-submarine warfare, and assured second-strike nuclear missions — giving New Delhi an undersea presence to match its surface ambitions."
+
+ MD2026_RAJ_indian_ocean_dominance:0 "Indian Ocean Dominance"
+ MD2026_RAJ_indian_ocean_dominance_desc:0 "The Indian Ocean is India's ocean in name; now it must become so in fact. A network of listening posts, logistics hubs, and allied port access across the Andamans, the Maldives, Seychelles, and Mauritius will give the Indian Navy the surveillance and sustainment architecture to dominate its home waters and contest Chinese incursions."
+
+ MD2026_RAJ_andaman_command:0 "Andaman & Nicobar Command"
+ MD2026_RAJ_andaman_command_desc:0 "The Andaman and Nicobar Islands sit astride the Strait of Malacca — the chokepoint through which eighty percent of China's energy imports pass. Turning this archipelago into a fully operational tri-service command, bristling with submarines, fighters, and anti-ship missiles, gives India an immense strategic lever it has been too cautious to use."
+
+ ### Branch 5 - Space & Technology ###
+
+ MD2026_RAJ_space_power:0 "Space Power"
+ MD2026_RAJ_space_power_desc:0 "Chandrayaan-3's soft landing near the lunar south pole made India only the fourth nation to touch the moon — and the first to reach its pole. ISRO's mastery of low-cost, high-reliability space missions is now a national point of pride and the springboard for more ambitious programmes that will place India in the first rank of space powers."
+
+ MD2026_RAJ_isro_expansion:0 "ISRO Expansion"
+ MD2026_RAJ_isro_expansion_desc:0 "The Indian Space Research Organisation is being scaled up with new launch facilities, a crewed spaceflight programme — Gaganyaan — and a commercial space sector opened to private players. From earth observation to satellite navigation, ISRO's expanded mandate will feed both national security and a booming space economy."
+
+ MD2026_RAJ_ai_hub:0 "AI Superpower Hub"
+ MD2026_RAJ_ai_hub_desc:0 "India's deep pool of software engineers, competitive compute costs, and vast data from its billion-plus digital citizens make it a natural candidate for AI leadership. Dedicated compute infrastructure, a national AI mission, and public-private partnerships with global tech firms will accelerate a homegrown AI industry to rival those of the United States and China."
+
+ MD2026_RAJ_moon_mission:0 "Gaganyaan Moon Mission"
+ MD2026_RAJ_moon_mission_desc:0 "India's first crewed lunar mission places an Indian astronaut on the surface of the moon within the decade — a feat that would rank alongside the greatest achievements in the nation's history. The mission energises an entire generation of scientists and engineers, and announces to the world that India has arrived as a true space-faring civilisation."
+
+ MD2026_RAJ_quantum_computing:0 "Quantum Computing Mission"
+ MD2026_RAJ_quantum_computing_desc:0 "India's National Quantum Mission, backed by billions in funding, is seeding universities and national laboratories with quantum hardware and expertise. Breakthroughs here will reshape cryptography, logistics, drug discovery, and materials science — and the nation that leads this race will hold a decisive strategic edge over all rivals."
+
+ ### Capstone ###
+
+ MD2026_RAJ_vishwaguru:0 "Vishwaguru"
+ MD2026_RAJ_vishwaguru_desc:0 "Vishwaguru — world teacher — is the ancient aspiration that Modi's India has adopted as its ultimate ambition. It is no longer enough to be a regional power or a swing vote in great-power competition. India now claims its seat at the head of the table: the world's most populous democracy, a leading space and nuclear power, the voice of the Global South, and the indispensable nation of the 21st century."
