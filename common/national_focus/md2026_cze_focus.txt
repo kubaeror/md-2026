@@ -1,0 +1,478 @@
+###################################
+# MD2026 Czech Republic (CZE) Focus Tree
+# 2026 Shared Focuses - Central Europe Pivot
+# 25 focuses: 1 root + 4 branches (5 each) + capstones
+###################################
+
+shared_focus = {
+	id = MD2026_CZE_central_europe_pivot
+	icon = GFX_focus_generic_political_discourse
+	x = 38
+	y = 0
+	cost = 3.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	allow_branch = {
+		original_tag = CZE
+		date > 2025.12.31
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_central_europe_pivot"
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	ai_will_do = { factor = 1 }
+}
+### Branch 1: Arms Powerhouse ###
+shared_focus = {
+	id = MD2026_CZE_arms_powerhouse
+	icon = GFX_goal_generic_construct_mil_factory
+	x = -6
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_CZE_central_europe_pivot }
+	relative_position_id = MD2026_CZE_central_europe_pivot
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_arms_powerhouse"
+		add_ideas = md2026_cze_arms_maker
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+		}
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_small_arms_export
+	icon = GFX_goal_generic_military_deal
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_CZE_arms_powerhouse }
+	relative_position_id = MD2026_CZE_arms_powerhouse
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_small_arms_export"
+		add_political_power = 50
+		army_experience = 10
+		add_tech_bonus = {
+			name = MD2026_CZE_small_arms_export
+			bonus = 0.5
+			uses = 1
+			category = CAT_infantry_weapons
+		}
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_armored_vehicles
+	icon = GFX_goal_generic_build_tank
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_CZE_arms_powerhouse }
+	relative_position_id = MD2026_CZE_arms_powerhouse
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_armored_vehicles"
+		army_experience = 20
+		add_tech_bonus = {
+			name = MD2026_CZE_armored_vehicles
+			bonus = 0.5
+			uses = 1
+			category = CAT_armor
+		}
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_nato_artillery
+	icon = GFX_goal_generic_army_artillery
+	x = -1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_CZE_small_arms_export }
+	relative_position_id = MD2026_CZE_arms_powerhouse
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_nato_artillery"
+		army_experience = 25
+		add_war_support = 0.05
+		add_tech_bonus = {
+			name = MD2026_CZE_nato_artillery
+			bonus = 0.5
+			uses = 1
+			category = CAT_artillery
+		}
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_defense_tech
+	icon = GFX_goal_generic_scientific_exchange
+	x = 1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	prerequisite = { focus = MD2026_CZE_armored_vehicles }
+	relative_position_id = MD2026_CZE_arms_powerhouse
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_defense_tech"
+		add_research_slot = 1
+		add_political_power = 25
+		add_tech_bonus = {
+			name = MD2026_CZE_defense_tech
+			bonus = 0.5
+			uses = 1
+			category = CAT_electronics
+		}
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_arms_champion
+	icon = GFX_goal_generic_major_war
+	x = 0
+	y = 3
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_CZE_nato_artillery }
+	prerequisite = { focus = MD2026_CZE_defense_tech }
+	relative_position_id = MD2026_CZE_arms_powerhouse
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_arms_champion"
+		army_experience = 50
+		add_political_power = 100
+		add_war_support = 0.05
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = { factor = 1 }
+}
+### Branch 2: NATO/EU Western Anchor ###
+shared_focus = {
+	id = MD2026_CZE_western_anchor
+	icon = GFX_goal_generic_alliance
+	x = -2
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_CZE_central_europe_pivot }
+	relative_position_id = MD2026_CZE_central_europe_pivot
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_western_anchor"
+		add_ideas = md2026_cze_nato_pillar
+		add_political_power = 50
+		add_war_support = 0.05
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_nato_reliability
+	icon = GFX_goal_generic_army_doctrines
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_CZE_western_anchor }
+	relative_position_id = MD2026_CZE_western_anchor
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_nato_reliability"
+		add_war_support = 0.10
+		army_experience = 25
+		add_manpower = 15000
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_eu_deepening
+	icon = GFX_goal_generic_improve_relations
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_CZE_western_anchor }
+	relative_position_id = MD2026_CZE_western_anchor
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_eu_deepening"
+		add_political_power = 75
+		add_stability = 0.03
+		add_research_slot = 1
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_ukraine_support
+	icon = GFX_goal_generic_military_deal
+	x = -1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_CZE_nato_reliability }
+	relative_position_id = MD2026_CZE_western_anchor
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_ukraine_support"
+		add_ideas = md2026_cze_ukraine_backer
+		add_war_support = 0.05
+		add_political_power = 50
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_eu_industrial_policy
+	icon = GFX_goal_generic_construct_civ_factory
+	x = 1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_CZE_eu_deepening }
+	relative_position_id = MD2026_CZE_western_anchor
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_eu_industrial_policy"
+		add_political_power = 50
+		add_stability = 0.03
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_central_europe_leader
+	icon = GFX_goal_generic_major_war
+	x = 0
+	y = 3
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_CZE_ukraine_support }
+	prerequisite = { focus = MD2026_CZE_eu_industrial_policy }
+	relative_position_id = MD2026_CZE_western_anchor
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_central_europe_leader"
+		add_political_power = 150
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+	ai_will_do = { factor = 1 }
+}
+### Branch 3: Democratic Resilience ###
+shared_focus = {
+	id = MD2026_CZE_democratic_resilience
+	icon = GFX_goal_generic_national_unity
+	x = 2
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_CZE_central_europe_pivot }
+	relative_position_id = MD2026_CZE_central_europe_pivot
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_democratic_resilience"
+		add_ideas = md2026_cze_democratic_state
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_anti_corruption
+	icon = GFX_goal_generic_political_pressure
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_CZE_democratic_resilience }
+	relative_position_id = MD2026_CZE_democratic_resilience
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_anti_corruption"
+		add_political_power = 50
+		add_stability = 0.04
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_media_freedom
+	icon = GFX_goal_generic_positive_trade_relations
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_CZE_democratic_resilience }
+	relative_position_id = MD2026_CZE_democratic_resilience
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_media_freedom"
+		add_political_power = 25
+		add_stability = 0.03
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_judicial_reform
+	icon = GFX_goal_generic_national_unity
+	x = -1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_CZE_anti_corruption }
+	relative_position_id = MD2026_CZE_democratic_resilience
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_judicial_reform"
+		add_political_power = 50
+		add_stability = 0.04
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_civic_society
+	icon = GFX_goal_generic_alliance
+	x = 1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_CZE_media_freedom }
+	relative_position_id = MD2026_CZE_democratic_resilience
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_civic_society"
+		add_political_power = 25
+		add_stability = 0.03
+		add_manpower = 5000
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_democratic_consolidation
+	icon = GFX_goal_generic_major_war
+	x = 0
+	y = 3
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_CZE_judicial_reform }
+	prerequisite = { focus = MD2026_CZE_civic_society }
+	relative_position_id = MD2026_CZE_democratic_resilience
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_democratic_consolidation"
+		add_political_power = 150
+		add_stability = 0.08
+		add_research_slot = 1
+	}
+	ai_will_do = { factor = 1 }
+}
+### Branch 4: Energy Independence ###
+shared_focus = {
+	id = MD2026_CZE_energy_independence
+	icon = GFX_goal_generic_oil
+	x = 6
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_CZE_central_europe_pivot }
+	relative_position_id = MD2026_CZE_central_europe_pivot
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_energy_independence"
+		add_political_power = 25
+		add_stability = 0.03
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_nuclear_expansion
+	icon = GFX_goal_generic_oil
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_CZE_energy_independence }
+	relative_position_id = MD2026_CZE_energy_independence
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_nuclear_expansion"
+		add_ideas = md2026_cze_nuclear_nation
+		add_research_slot = 1
+		add_political_power = 25
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_gas_independence
+	icon = GFX_goal_generic_oil
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_CZE_energy_independence }
+	relative_position_id = MD2026_CZE_energy_independence
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_gas_independence"
+		add_political_power = 50
+		add_stability = 0.04
+		add_ideas = md2026_cze_energy_free
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_renewables_push
+	icon = GFX_goal_generic_construct_civ_factory
+	x = -1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_CZE_gas_independence }
+	relative_position_id = MD2026_CZE_energy_independence
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_renewables_push"
+		add_stability = 0.03
+		add_political_power = 25
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		}
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_energy_corridor
+	icon = GFX_goal_generic_positive_trade_relations
+	x = 1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_CZE_nuclear_expansion }
+	relative_position_id = MD2026_CZE_energy_independence
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_energy_corridor"
+		add_political_power = 50
+		add_stability = 0.02
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = infrastructure size < 5 include_locked = yes } }
+			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = { factor = 1 }
+}
+shared_focus = {
+	id = MD2026_CZE_energy_sovereign
+	icon = GFX_goal_generic_major_war
+	x = 0
+	y = 3
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_CZE_renewables_push }
+	prerequisite = { focus = MD2026_CZE_energy_corridor }
+	relative_position_id = MD2026_CZE_energy_independence
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_CZE_energy_sovereign"
+		add_political_power = 150
+		add_stability = 0.05
+		add_research_slot = 1
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = { factor = 1 }
+}

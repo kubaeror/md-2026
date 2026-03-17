@@ -1,0 +1,547 @@
+###################################
+# MD2026 Greece (GRE) Focus Tree
+# 2026 Shared Focuses - Hellenic Revival
+# 25 focuses: 1 root + 4 branches (5 each) + 4 branch roots
+###################################
+
+shared_focus = {
+	id = MD2026_GRE_hellenic_revival
+	icon = GFX_focus_generic_political_discourse
+	x = 38
+	y = 0
+	cost = 3.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	allow_branch = {
+		original_tag = GRE
+		has_global_flag = md2026_initialized
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_hellenic_revival"
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Turkey Tensions Branch ###
+
+shared_focus = {
+	id = MD2026_GRE_aegean_sovereignty
+	icon = GFX_goal_generic_fortify_city
+	x = 32
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_GRE_hellenic_revival }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_aegean_sovereignty"
+		add_political_power = 50
+		add_war_support = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_air_defense_upgrade
+	icon = GFX_goal_generic_air_superiority
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_GRE_aegean_sovereignty }
+	relative_position_id = MD2026_GRE_aegean_sovereignty
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_air_defense_upgrade"
+		add_ideas = md2026_gre_hellenic_fleet
+		add_tech_bonus = {
+			name = MD2026_GRE_air_defense_upgrade
+			bonus = 1.0
+			uses = 2
+			category = CAT_air_doctrine
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_naval_expansion
+	icon = GFX_goal_generic_navy_carrier
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_GRE_aegean_sovereignty }
+	relative_position_id = MD2026_GRE_aegean_sovereignty
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_naval_expansion"
+		add_political_power = 25
+		navy_experience = 25
+		add_tech_bonus = {
+			name = MD2026_GRE_naval_expansion
+			bonus = 1.0
+			uses = 2
+			category = CAT_naval_doctrine
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_aegean_patrol
+	icon = GFX_goal_generic_navy_doctrines
+	x = -1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_GRE_air_defense_upgrade }
+	relative_position_id = MD2026_GRE_air_defense_upgrade
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_aegean_patrol"
+		add_war_support = 0.05
+		navy_experience = 20
+		air_experience = 15
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_eastern_med_partnership
+	icon = GFX_goal_generic_alliance
+	x = 1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_GRE_naval_expansion }
+	relative_position_id = MD2026_GRE_naval_expansion
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_eastern_med_partnership"
+		add_political_power = 50
+		add_ideas = md2026_gre_aegean_power
+		add_opinion_modifier = { target = EGY modifier = md2026_improved_relations }
+		EGY = { add_opinion_modifier = { target = GRE modifier = md2026_improved_relations } }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_hellenic_deterrent
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 3
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_GRE_aegean_patrol }
+	prerequisite = { focus = MD2026_GRE_eastern_med_partnership }
+	relative_position_id = MD2026_GRE_aegean_patrol
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_hellenic_deterrent"
+		add_political_power = 100
+		add_war_support = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Economic Recovery Branch ###
+
+shared_focus = {
+	id = MD2026_GRE_economic_reform
+	icon = GFX_goal_generic_production
+	x = 36
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_GRE_hellenic_revival }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_economic_reform"
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_debt_restructuring
+	icon = GFX_goal_generic_positive_trade_relations
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_GRE_economic_reform }
+	relative_position_id = MD2026_GRE_economic_reform
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_debt_restructuring"
+		add_political_power = 75
+		add_stability = 0.05
+		add_ideas = md2026_gre_economic_recovery
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_tourism_powerhouse
+	icon = GFX_goal_generic_consumer_goods
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_GRE_economic_reform }
+	relative_position_id = MD2026_GRE_economic_reform
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_tourism_powerhouse"
+		add_political_power = 25
+		add_stability = 0.05
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_shipping_industry
+	icon = GFX_goal_generic_navy_carrier
+	x = -1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_GRE_debt_restructuring }
+	relative_position_id = MD2026_GRE_debt_restructuring
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_shipping_industry"
+		add_political_power = 50
+		add_stability = 0.03
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = dockyard size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = dockyard level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_tech_greece
+	icon = GFX_goal_generic_scientific_exchange
+	x = 1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_GRE_tourism_powerhouse }
+	relative_position_id = MD2026_GRE_tourism_powerhouse
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_tech_greece"
+		add_political_power = 50
+		add_stability = 0.05
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_mediterranean_economy
+	icon = GFX_goal_generic_production2
+	x = 0
+	y = 3
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_GRE_shipping_industry }
+	prerequisite = { focus = MD2026_GRE_tech_greece }
+	relative_position_id = MD2026_GRE_shipping_industry
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_mediterranean_economy"
+		add_political_power = 100
+		add_stability = 0.10
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Energy Hub Branch ###
+
+shared_focus = {
+	id = MD2026_GRE_energy_hub
+	icon = GFX_goal_generic_radar
+	x = 40
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_GRE_hellenic_revival }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_energy_hub"
+		add_political_power = 50
+		add_stability = 0.03
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_eastmed_pipeline
+	icon = GFX_goal_generic_production
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_GRE_energy_hub }
+	relative_position_id = MD2026_GRE_energy_hub
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_eastmed_pipeline"
+		add_political_power = 50
+		add_ideas = md2026_gre_energy_hub
+		add_stability = 0.03
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_renewables
+	icon = GFX_goal_generic_scientific_exchange
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_GRE_energy_hub }
+	relative_position_id = MD2026_GRE_energy_hub
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_renewables"
+		add_political_power = 25
+		add_stability = 0.05
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_lng_terminal
+	icon = GFX_goal_generic_production2
+	x = -1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_GRE_eastmed_pipeline }
+	relative_position_id = MD2026_GRE_eastmed_pipeline
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_lng_terminal"
+		add_political_power = 50
+		add_stability = 0.03
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = dockyard size > 0 include_locked = yes } }
+			add_building_construction = { type = dockyard level = 1 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_greece_eu_energy
+	icon = GFX_goal_generic_alliance
+	x = 1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_GRE_renewables }
+	relative_position_id = MD2026_GRE_renewables
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_greece_eu_energy"
+		add_political_power = 75
+		add_stability = 0.05
+		add_opinion_modifier = { target = ENG modifier = md2026_improved_relations }
+		ENG = { add_opinion_modifier = { target = GRE modifier = md2026_improved_relations } }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_energy_champion
+	icon = GFX_goal_generic_production
+	x = 0
+	y = 3
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_GRE_lng_terminal }
+	prerequisite = { focus = MD2026_GRE_greece_eu_energy }
+	relative_position_id = MD2026_GRE_lng_terminal
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_energy_champion"
+		add_political_power = 100
+		add_stability = 0.10
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Balkans and Migration Branch ###
+
+shared_focus = {
+	id = MD2026_GRE_balkan_strategy
+	icon = GFX_goal_generic_national_unity
+	x = 44
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_GRE_hellenic_revival }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_balkan_strategy"
+		add_political_power = 50
+		add_stability = 0.03
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_border_control
+	icon = GFX_goal_generic_fortify_city
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_GRE_balkan_strategy }
+	relative_position_id = MD2026_GRE_balkan_strategy
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_border_control"
+		add_political_power = 50
+		add_ideas = md2026_gre_border_secured
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_eu_solidarity
+	icon = GFX_goal_generic_alliance
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_GRE_balkan_strategy }
+	relative_position_id = MD2026_GRE_balkan_strategy
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_eu_solidarity"
+		add_political_power = 75
+		add_stability = 0.05
+		add_opinion_modifier = { target = ENG modifier = md2026_improved_relations }
+		ENG = { add_opinion_modifier = { target = GRE modifier = md2026_improved_relations } }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_balkan_cooperation
+	icon = GFX_goal_generic_positive_trade_relations
+	x = -1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_GRE_border_control }
+	relative_position_id = MD2026_GRE_border_control
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_balkan_cooperation"
+		add_political_power = 50
+		add_stability = 0.05
+		add_opinion_modifier = { target = BUL modifier = md2026_improved_relations }
+		BUL = { add_opinion_modifier = { target = GRE modifier = md2026_improved_relations } }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_diaspora_investment
+	icon = GFX_goal_generic_consumer_goods
+	x = 1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_GRE_eu_solidarity }
+	relative_position_id = MD2026_GRE_eu_solidarity
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_diaspora_investment"
+		add_political_power = 50
+		add_stability = 0.05
+		add_manpower = 20000
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_GRE_hellenic_influence
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 3
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_GRE_balkan_cooperation }
+	prerequisite = { focus = MD2026_GRE_diaspora_investment }
+	relative_position_id = MD2026_GRE_balkan_cooperation
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_GRE_hellenic_influence"
+		add_political_power = 100
+		add_stability = 0.10
+		add_ideas = md2026_gre_regional_power
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+

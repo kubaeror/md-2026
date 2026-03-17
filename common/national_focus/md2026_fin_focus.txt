@@ -1,0 +1,534 @@
+###################################
+# MD2026 Finland (FIN) Focus Tree
+# 2026 Shared Focuses - Nordic Sentinel
+# 25 focuses: 1 root + 4 branches (5 each)
+###################################
+
+shared_focus = {
+	id = MD2026_FIN_nordic_sentinel
+	icon = GFX_focus_generic_political_discourse
+	x = 38
+	y = 0
+	cost = 3.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	allow_branch = {
+		original_tag = FIN
+		has_global_flag = md2026_initialized
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_nordic_sentinel"
+		add_political_power = 50
+		add_war_support = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Border Defense Branch ###
+
+shared_focus = {
+	id = MD2026_FIN_eastern_border
+	icon = GFX_goal_generic_fortify_city
+	x = 32
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_FIN_nordic_sentinel }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_eastern_border"
+		add_political_power = 50
+		add_war_support = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_border_fortifications
+	icon = GFX_goal_generic_fortify_city
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_FIN_eastern_border }
+	relative_position_id = MD2026_FIN_eastern_border
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_border_fortifications"
+		add_political_power = 25
+		# Build border fortifications along the eastern front
+		113 = { add_building_construction = { type = bunker province = 1541 level = 3 instant_build = yes } }
+		114 = { add_building_construction = { type = bunker province = 9767 level = 3 instant_build = yes } }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_mine_barrier
+	icon = GFX_goal_generic_army_artillery2
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_FIN_eastern_border }
+	relative_position_id = MD2026_FIN_eastern_border
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_mine_barrier"
+		add_political_power = 25
+		add_war_support = 0.05
+		army_experience = 15
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_forest_warfare
+	icon = GFX_goal_generic_army_doctrines
+	x = -1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_FIN_border_fortifications }
+	relative_position_id = MD2026_FIN_border_fortifications
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_forest_warfare"
+		army_experience = 25
+		add_tech_bonus = {
+			name = MD2026_FIN_forest_warfare
+			bonus = 1.0
+			uses = 2
+			category = CAT_land_doctrine
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_reserve_system
+	icon = GFX_goal_generic_manpower
+	x = 1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_FIN_mine_barrier }
+	relative_position_id = MD2026_FIN_mine_barrier
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_reserve_system"
+		add_political_power = 25
+		add_manpower = 25000
+		add_war_support = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_fortress_finland
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 3
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_FIN_forest_warfare }
+	prerequisite = { focus = MD2026_FIN_reserve_system }
+	relative_position_id = MD2026_FIN_forest_warfare
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_fortress_finland"
+		add_political_power = 100
+		add_war_support = 0.10
+		add_ideas = md2026_fin_fortress_line
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### NATO Integration Branch ###
+
+shared_focus = {
+	id = MD2026_FIN_nato_role
+	icon = GFX_goal_generic_alliance
+	x = 36
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_FIN_nordic_sentinel }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_nato_role"
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_nato_eastern_flank
+	icon = GFX_goal_generic_military_deal
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_FIN_nato_role }
+	relative_position_id = MD2026_FIN_nato_role
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_nato_eastern_flank"
+		add_political_power = 50
+		add_war_support = 0.05
+		add_ideas = md2026_fin_nato_flank
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_us_bilateral
+	icon = GFX_goal_generic_military_deal
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_FIN_nato_role }
+	relative_position_id = MD2026_FIN_nato_role
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_us_bilateral"
+		add_political_power = 50
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		USA = { add_opinion_modifier = { target = FIN modifier = md2026_improved_relations } }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_f35_program
+	icon = GFX_goal_generic_air_superiority
+	x = -1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_FIN_nato_eastern_flank }
+	relative_position_id = MD2026_FIN_nato_eastern_flank
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_f35_program"
+		add_ideas = md2026_fin_f35_force
+		add_tech_bonus = {
+			name = MD2026_FIN_f35_program
+			bonus = 1.0
+			uses = 2
+			category = CAT_air_doctrine
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_joint_exercises
+	icon = GFX_goal_generic_military_sphere
+	x = 1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_FIN_us_bilateral }
+	relative_position_id = MD2026_FIN_us_bilateral
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_joint_exercises"
+		army_experience = 25
+		air_experience = 15
+		add_war_support = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_nato_anchor
+	icon = GFX_goal_generic_alliance
+	x = 0
+	y = 3
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_FIN_f35_program }
+	prerequisite = { focus = MD2026_FIN_joint_exercises }
+	relative_position_id = MD2026_FIN_f35_program
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_nato_anchor"
+		add_political_power = 100
+		add_stability = 0.10
+		add_war_support = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Economy and Innovation Branch ###
+
+shared_focus = {
+	id = MD2026_FIN_economic_resilience
+	icon = GFX_goal_generic_production
+	x = 40
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_FIN_nordic_sentinel }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_economic_resilience"
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_nokia_renaissance
+	icon = GFX_goal_generic_radar
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_FIN_economic_resilience }
+	relative_position_id = MD2026_FIN_economic_resilience
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_nokia_renaissance"
+		add_political_power = 25
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_forest_industry
+	icon = GFX_goal_generic_consumer_goods
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_FIN_economic_resilience }
+	relative_position_id = MD2026_FIN_economic_resilience
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_forest_industry"
+		add_political_power = 25
+		add_stability = 0.03
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_tech_hub
+	icon = GFX_goal_generic_scientific_exchange
+	x = -1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_FIN_nokia_renaissance }
+	relative_position_id = MD2026_FIN_nokia_renaissance
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_tech_hub"
+		add_political_power = 50
+		add_ideas = md2026_fin_tech_nation
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_export_push
+	icon = GFX_goal_generic_production2
+	x = 1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_FIN_forest_industry }
+	relative_position_id = MD2026_FIN_forest_industry
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_export_push"
+		add_political_power = 25
+		add_stability = 0.03
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_innovation_economy
+	icon = GFX_goal_generic_scientific_exchange
+	x = 0
+	y = 3
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_FIN_tech_hub }
+	prerequisite = { focus = MD2026_FIN_export_push }
+	relative_position_id = MD2026_FIN_tech_hub
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_innovation_economy"
+		add_political_power = 100
+		add_stability = 0.10
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+### Society and Demographics Branch ###
+
+shared_focus = {
+	id = MD2026_FIN_social_resilience
+	icon = GFX_goal_generic_national_unity
+	x = 44
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_FIN_nordic_sentinel }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_social_resilience"
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_total_defense
+	icon = GFX_goal_generic_army_doctrines
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_FIN_social_resilience }
+	relative_position_id = MD2026_FIN_social_resilience
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_total_defense"
+		add_ideas = md2026_fin_total_defense
+		add_war_support = 0.05
+		add_manpower = 15000
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_skilled_immigration
+	icon = GFX_goal_generic_political_discourse
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_FIN_social_resilience }
+	relative_position_id = MD2026_FIN_social_resilience
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_skilled_immigration"
+		add_political_power = 50
+		add_manpower = 20000
+		add_stability = 0.03
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_psychological_resilience
+	icon = GFX_goal_generic_positive_trade_relations
+	x = -1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_FIN_total_defense }
+	relative_position_id = MD2026_FIN_total_defense
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_psychological_resilience"
+		add_political_power = 50
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_birth_rate_support
+	icon = GFX_goal_generic_consumer_goods
+	x = 1
+	y = 2
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_FIN_skilled_immigration }
+	relative_position_id = MD2026_FIN_skilled_immigration
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_birth_rate_support"
+		add_political_power = 25
+		add_manpower = 30000
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_FIN_sisu_nation
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 3
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_FIN_psychological_resilience }
+	prerequisite = { focus = MD2026_FIN_birth_rate_support }
+	relative_position_id = MD2026_FIN_psychological_resilience
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_FIN_sisu_nation"
+		add_political_power = 100
+		add_stability = 0.10
+		add_war_support = 0.10
+		add_ideas = md2026_fin_sisu
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+

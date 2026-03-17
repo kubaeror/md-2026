@@ -2708,5 +2708,437 @@ ideas = {
 			}
 		}
 
+
+		# === FIN EXPANSION IDEAS ===
+		md2026_fin_fortress_line = {
+			picture = generic_army_support
+			allowed = { original_tag = FIN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.15
+				fortification_damage_factor = -0.20
+				army_morale_factor = 0.05
+			}
+		}
+		md2026_fin_nato_flank = {
+			picture = generic_foreign_policy
+			allowed = { original_tag = FIN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				army_org_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		md2026_fin_f35_force = {
+			picture = generic_air_bonus
+			allowed = { original_tag = FIN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				air_agility_factor = 0.15
+				air_attack_factor = 0.10
+				air_defence_factor = 0.10
+			}
+		}
+		md2026_fin_tech_nation = {
+			picture = generic_research_bonus
+			allowed = { original_tag = FIN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		md2026_fin_total_defense = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = FIN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.15
+				stability_factor = 0.05
+				manpower_recovery_speed = 0.10
+			}
+		}
+		md2026_fin_sisu = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = FIN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				army_morale_factor = 0.10
+				army_org_factor = 0.05
+			}
+		}
+
+		# === GRE EXPANSION IDEAS ===
+		md2026_gre_hellenic_fleet = {
+			picture = generic_navy_bonus
+			allowed = { original_tag = GRE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				navy_org_factor = 0.10
+				navy_max_range_factor = 0.15
+				submarine_attack_factor = 0.05
+			}
+		}
+		md2026_gre_aegean_power = {
+			picture = generic_air_bonus
+			allowed = { original_tag = GRE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				air_agility_factor = 0.10
+				air_attack_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+		md2026_gre_economic_recovery = {
+			picture = eu_investments
+			allowed = { original_tag = GRE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		md2026_gre_energy_hub = {
+			picture = generic_industry
+			allowed = { original_tag = GRE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				resource_extraction_factor = 0.10
+				production_factory_max_efficiency_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		md2026_gre_border_secured = {
+			picture = generic_secret_police
+			allowed = { original_tag = GRE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				resistance_damage_to_garrison = -0.20
+				political_power_factor = 0.05
+			}
+		}
+		md2026_gre_regional_power = {
+			picture = generic_foreign_policy
+			allowed = { original_tag = GRE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				trade_opinion_factor = 0.10
+			}
+		}
+
+		# === SER EXPANSION IDEAS ===
+		md2026_ser_kosovo_policy = {
+			picture = generic_political_discourse
+			allowed = { original_tag = SER }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				war_support_factor = 0.05
+				stability_factor = 0.03
+			}
+		}
+		md2026_ser_four_pillars = {
+			picture = generic_foreign_policy
+			allowed = { original_tag = SER }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				trade_opinion_factor = 0.10
+				stability_factor = 0.05
+			}
+		}
+		md2026_ser_rafale_force = {
+			picture = generic_air_bonus
+			allowed = { original_tag = SER }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				air_agility_factor = 0.15
+				air_attack_factor = 0.10
+				air_defence_factor = 0.10
+			}
+		}
+		md2026_ser_arms_exporter = {
+			picture = generic_industry
+			allowed = { original_tag = SER }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		md2026_ser_lithium_economy = {
+			picture = generic_industry
+			allowed = { original_tag = SER }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				resource_extraction_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		md2026_ser_balkan_power = {
+			picture = generic_foreign_policy
+			allowed = { original_tag = SER }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+
+		# === CZE EXPANSION IDEAS ===
+		md2026_cze_arms_maker = {
+			picture = generic_industry
+			allowed = { original_tag = CZE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		md2026_cze_nato_pillar = {
+			picture = generic_foreign_policy
+			allowed = { original_tag = CZE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				army_org_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		md2026_cze_ukraine_backer = {
+			picture = generic_army_support
+			allowed = { original_tag = CZE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				political_power_factor = 0.05
+				trade_opinion_factor = 0.05
+			}
+		}
+		md2026_cze_democratic_state = {
+			picture = democratic_opposition_support
+			allowed = { original_tag = CZE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.05
+				corruption = -0.05
+			}
+		}
+		md2026_cze_nuclear_nation = {
+			picture = generic_industry
+			allowed = { original_tag = CZE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				resource_extraction_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		md2026_cze_energy_free = {
+			picture = generic_industry
+			allowed = { original_tag = CZE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+
+		# === HUN EXPANSION IDEAS ===
+		md2026_hun_fidesz_hegemon = {
+			picture = generic_secret_police
+			allowed = { original_tag = HUN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.05
+				corruption = -0.05
+			}
+		}
+		md2026_hun_sovereign_state = {
+			picture = generic_political_discourse
+			allowed = { original_tag = HUN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+		md2026_hun_eu_reformer = {
+			picture = eu_investments
+			allowed = { original_tag = HUN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		md2026_hun_battery_economy = {
+			picture = generic_industry
+			allowed = { original_tag = HUN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		md2026_hun_eastern_partner = {
+			picture = expand_the_east_trade_cooperation
+			allowed = { original_tag = HUN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.10
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		md2026_hun_honved = {
+			picture = generic_army_support
+			allowed = { original_tag = HUN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.10
+				army_morale_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		md2026_hun_regional_power = {
+			picture = generic_foreign_policy
+			allowed = { original_tag = HUN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				army_attack_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+		# === SWE EXPANSION IDEAS ===
+		md2026_swe_nato_anchor = {
+			picture = generic_foreign_policy
+			allowed = { original_tag = SWE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				army_org_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		md2026_swe_nordic_force = {
+			picture = generic_army_support
+			allowed = { original_tag = SWE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.10
+				army_org_factor = 0.05
+			}
+		}
+		md2026_swe_saab_leader = {
+			picture = generic_air_bonus
+			allowed = { original_tag = SWE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				air_agility_factor = 0.15
+				air_attack_factor = 0.10
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+		md2026_swe_submarine_fleet = {
+			picture = generic_navy_bonus
+			allowed = { original_tag = SWE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				submarine_attack_factor = 0.20
+				submarine_visibility_factor = -0.15
+				navy_org_factor = 0.05
+			}
+		}
+		md2026_swe_welfare_reformed = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = SWE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.05
+				manpower_recovery_speed = 0.05
+			}
+		}
+		md2026_swe_nuclear_energy = {
+			picture = generic_industry
+			allowed = { original_tag = SWE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				stability_factor = 0.05
+			}
+		}
+		md2026_swe_industrial_hub = {
+			picture = generic_industry
+			allowed = { original_tag = SWE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				resource_extraction_factor = 0.10
+				stability_factor = 0.05
+			}
+		}
+
 	}
 }
