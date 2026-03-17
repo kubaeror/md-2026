@@ -1572,3 +1572,457 @@ md2026_chi_ahistorical = {
 
 	}
 }
+
+
+# ============================================================
+# PAKISTAN (PAK)
+# Historical path: IMF bailout, civilian supremacy, China partnership
+# ============================================================
+md2026_pak_historical = {
+	allowed = { original_tag = PAK }
+	name = "Pakistan 2026 Historical"
+	desc = "Economic crisis management: IMF bailout and civilian-led technocratic recovery backed by China-Pakistan Economic Corridor expansion."
+
+	enable = {
+		original_tag = PAK
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_pak_economic_crisis
+		md2026_pak_imf_bailout
+		md2026_pak_tax_reform
+		md2026_pak_privatization
+		md2026_pak_political_stability
+		md2026_pak_civilian_supremacy
+		md2026_pak_technocratic_govt
+		md2026_pak_economic_recovery
+		md2026_pak_kashmir_issue
+		md2026_pak_military_modernization
+		md2026_pak_jf17_program
+		md2026_pak_tank_modernization
+		md2026_pak_special_forces
+		md2026_pak_counterterrorism
+		md2026_pak_second_strike_capability
+		md2026_pak_gulf_relations
+		md2026_pak_turkey_alliance
+		md2026_pak_dialogue_india
+	}
+
+	weight = {
+		factor = 60
+	}
+}
+
+md2026_pak_china_path = {
+	allowed = { original_tag = PAK }
+	name = "Pakistan 2026 China Path"
+	desc = "Deep integration with China via CPEC expansion and Chinese loans, rejecting IMF conditionality."
+
+	enable = {
+		original_tag = PAK
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_pak_economic_crisis
+		md2026_pak_chinese_loans
+		md2026_pak_cpec_expansion
+		md2026_pak_gwadar_port
+		md2026_pak_political_stability
+		md2026_pak_isi_power
+		md2026_pak_economic_recovery
+		md2026_pak_kashmir_issue
+		md2026_pak_nuclear_program
+		md2026_pak_military_modernization
+		md2026_pak_jf17_program
+		md2026_pak_second_strike_capability
+		md2026_pak_gulf_relations
+		md2026_pak_turkey_alliance
+	}
+
+	weight = {
+		factor = 40
+	}
+}
+
+# ============================================================
+# ARGENTINA (ARG)
+# Historical path: Milei liberal-libertarian reforms, western alignment
+# ============================================================
+md2026_arg_historical = {
+	allowed = { original_tag = ARG }
+	name = "Argentina 2026 Milei Path"
+	desc = "Milei radical libertarian program: dollarization, austerity, privatizations, and full western alignment including NATO+ application."
+
+	enable = {
+		original_tag = ARG
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_arg_milei_reforms
+		md2026_arg_dollarization
+		md2026_arg_austerity
+		md2026_arg_privatization
+		md2026_arg_vaca_muerta
+		md2026_arg_peso_abolition
+		md2026_arg_yacimientos_reform
+		md2026_arg_agri_export_expansion
+		md2026_arg_tech_startup_hub
+		md2026_arg_western_alignment
+		md2026_arg_nato_plus
+		md2026_arg_falklands_legal
+		md2026_arg_bolsonaro_alliance
+		md2026_arg_constitutional_reform
+		md2026_arg_education_reform
+		md2026_arg_argentina_resurgence
+	}
+
+	weight = {
+		factor = 70
+	}
+}
+
+md2026_arg_mercosur_path = {
+	allowed = { original_tag = ARG }
+	name = "Argentina 2026 Mercosur Path"
+	desc = "Peronist counter-reaction: Mercosur leadership, social safety net, Congress opposition."
+
+	enable = {
+		original_tag = ARG
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_arg_milei_reforms
+		md2026_arg_dollarization
+		md2026_arg_congress_opposition
+		md2026_arg_social_safety_net
+		md2026_arg_vaca_muerta
+		md2026_arg_lithium_exports
+		md2026_arg_mercosur_leadership
+		md2026_arg_antartica_claim
+		md2026_arg_falklands_rhetoric
+		md2026_arg_new_argentina
+	}
+
+	weight = {
+		factor = 30
+	}
+}
+
+# ============================================================
+# MEXICO (MEX)
+# Historical path: Sheinbaum/Morena, USMCA, cartel war
+# ============================================================
+md2026_mex_historical = {
+	allowed = { original_tag = MEX }
+	name = "Mexico 2026 Sheinbaum Path"
+	desc = "Claudia Sheinbaum progressive agenda: Morena consolidation, USMCA nearshoring boom, cartel suppression, green energy transition."
+
+	enable = {
+		original_tag = MEX
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_mex_amlo_legacy
+		md2026_mex_morena_consolidation
+		md2026_mex_anti_corruption_drive
+		md2026_mex_judicial_reform
+		md2026_mex_usmca_trade
+		md2026_mex_nearshoring
+		md2026_mex_semiconductor_hub
+		md2026_mex_manufacturing_zones
+		md2026_mex_cartel_war
+		md2026_mex_national_guard
+		md2026_mex_sinaloa_offensive
+		md2026_mex_military_police
+		md2026_mex_us_security_cooperation
+		md2026_mex_pemex_reform
+		md2026_mex_green_transition
+		md2026_mex_trump_diplomacy
+		md2026_mex_regional_power
+		md2026_mex_latin_america_leadership
+		md2026_mex_aztec_century
+	}
+
+	weight = {
+		factor = 65
+	}
+}
+
+md2026_mex_opposition_path = {
+	allowed = { original_tag = MEX }
+	name = "Mexico 2026 Opposition Path"
+	desc = "Cross-aisle dialogue, trade diversification toward EU and China."
+
+	enable = {
+		original_tag = MEX
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_mex_amlo_legacy
+		md2026_mex_opposition_dialogue
+		md2026_mex_anti_corruption_drive
+		md2026_mex_usmca_trade
+		md2026_mex_tariff_response
+		md2026_mex_china_investment
+		md2026_mex_cartel_war
+		md2026_mex_national_guard
+		md2026_mex_cjng_offensive
+		md2026_mex_border_cooperation
+		md2026_mex_pemex_reform
+		md2026_mex_lithium_nationalization
+		md2026_mex_tourism_expansion
+		md2026_mex_remittance_economy
+		md2026_mex_regional_power
+	}
+
+	weight = {
+		factor = 35
+	}
+}
+
+# ============================================================
+# SOUTH AFRICA (SAF)
+# Historical path: GNU coalition, solar revolution, BRICS leadership
+# ============================================================
+md2026_saf_historical = {
+	allowed = { original_tag = SAF }
+	name = "South Africa 2026 GNU Path"
+	desc = "Government of National Unity navigates load-shedding crisis, builds solar capacity, leads BRICS Africa agenda."
+
+	enable = {
+		original_tag = SAF
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_saf_eskom_crisis
+		md2026_saf_solar_revolution
+		md2026_saf_grid_modernization
+		md2026_saf_gnu_cohesion
+		md2026_saf_anti_corruption_drive
+		md2026_saf_da_influence
+		md2026_saf_mining_revival
+		md2026_saf_platinum_group
+		md2026_saf_lithium_battery
+		md2026_saf_special_economic_zones
+		md2026_saf_brics_leadership
+		md2026_saf_au_mediation
+		md2026_saf_neutrality_doctrine
+		md2026_saf_sadc_security
+		md2026_saf_sandf_reform
+		md2026_saf_peacekeeping_ops
+		md2026_saf_rainbow_renaissance
+	}
+
+	weight = {
+		factor = 65
+	}
+}
+
+md2026_saf_anc_path = {
+	allowed = { original_tag = SAF }
+	name = "South Africa 2026 ANC Dominance"
+	desc = "ANC reasserts dominance, emergency gas imports, western pivot for investment."
+
+	enable = {
+		original_tag = SAF
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_saf_eskom_crisis
+		md2026_saf_gas_emergency
+		md2026_saf_grid_modernization
+		md2026_saf_gnu_cohesion
+		md2026_saf_anc_dominance
+		md2026_saf_mk_threat
+		md2026_saf_mining_revival
+		md2026_saf_agri_export
+		md2026_saf_brics_leadership
+		md2026_saf_western_pivot
+		md2026_saf_sandf_reform
+		md2026_saf_arms_industry
+		md2026_saf_nuclear_doctrine
+	}
+
+	weight = {
+		factor = 35
+	}
+}
+
+# ============================================================
+# VIETNAM (VIN)
+# Historical path: bamboo diplomacy, US strategic partner, manufacturing
+# ============================================================
+md2026_vin_historical = {
+	allowed = { original_tag = VIN }
+	name = "Vietnam 2026 Bamboo Diplomacy"
+	desc = "Pragmatic bamboo diplomacy: deepening US strategic partnership while maintaining economic ties with China, manufacturing hub expansion."
+
+	enable = {
+		original_tag = VIN
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_vin_blazing_furnace
+		md2026_vin_manufacturing_hub
+		md2026_vin_semiconductor_ambition
+		md2026_vin_tourism_revival
+		md2026_vin_high_speed_rail
+		md2026_vin_bamboo_strategy
+		md2026_vin_us_strategic_partner
+		md2026_vin_asean_solidarity
+		md2026_vin_south_china_sea_defense
+		md2026_vin_coast_guard_expansion
+		md2026_vin_air_defense
+		md2026_vin_people_war_doctrine
+		md2026_vin_party_reform
+		md2026_vin_youth_demographics
+		md2026_vin_education_investment
+		md2026_vin_healthcare_modernization
+		md2026_vin_doi_moi_2
+	}
+
+	weight = {
+		factor = 70
+	}
+}
+
+md2026_vin_china_path = {
+	allowed = { original_tag = VIN }
+	name = "Vietnam 2026 China Accommodation"
+	desc = "Vietnam accommodates China regional primacy, leveraging Chinese investment while avoiding SCS confrontation."
+
+	enable = {
+		original_tag = VIN
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_vin_blazing_furnace
+		md2026_vin_manufacturing_hub
+		md2026_vin_tourism_revival
+		md2026_vin_bamboo_strategy
+		md2026_vin_china_accommodation
+		md2026_vin_asean_solidarity
+		md2026_vin_russia_legacy
+		md2026_vin_party_reform
+		md2026_vin_education_investment
+		md2026_vin_healthcare_modernization
+	}
+
+	weight = {
+		factor = 30
+	}
+}
+
+# ============================================================
+# INDONESIA (IND)
+# Historical path: Nusantara capital, nickel/battery economy, bamboo diplomacy
+# ============================================================
+md2026_idn_historical = {
+	allowed = { original_tag = IND }
+	name = "Indonesia 2026 Nusantara Path"
+	desc = "Prabowo Indonesia: completing Nusantara capital, nickel-to-battery supply chain, ASEAN leadership with bamboo diplomacy."
+
+	enable = {
+		original_tag = IND
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_idn_nusantara_capital
+		md2026_idn_nusantara_phase1
+		md2026_idn_nusantara_smart_city
+		md2026_idn_borneo_infrastructure
+		md2026_idn_nickel_downstream
+		md2026_idn_battery_supply_chain
+		md2026_idn_digital_economy
+		md2026_idn_asean_trade_hub
+		md2026_idn_south_china_sea
+		md2026_idn_asean_leadership
+		md2026_idn_bamboo_diplomacy
+		md2026_idn_military_modernization
+		md2026_idn_prabowo_consolidation
+		md2026_idn_civilian_reform
+		md2026_idn_religious_harmony
+		md2026_idn_asian_tiger
+	}
+
+	weight = {
+		factor = 65
+	}
+}
+
+md2026_idn_military_path = {
+	allowed = { original_tag = IND }
+	name = "Indonesia 2026 Military Dominance"
+	desc = "Prabowo consolidates military power, Papua stabilization, QUAD observer for strategic hedging."
+
+	enable = {
+		original_tag = IND
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_idn_nusantara_capital
+		md2026_idn_nusantara_phase1
+		md2026_idn_nickel_downstream
+		md2026_idn_battery_supply_chain
+		md2026_idn_south_china_sea
+		md2026_idn_asean_leadership
+		md2026_idn_quad_observer
+		md2026_idn_military_modernization
+		md2026_idn_prabowo_consolidation
+		md2026_idn_military_dominance
+		md2026_idn_papua_stability
+		md2026_idn_asian_tiger
+	}
+
+	weight = {
+		factor = 35
+	}
+}

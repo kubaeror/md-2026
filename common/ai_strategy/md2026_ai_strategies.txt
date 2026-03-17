@@ -1217,3 +1217,341 @@ md2026_chi_taiwan_front = {
 	# ai_strategy = { type = naval_mission_priority id = invasion_escort value = 200 }
 	# ai_strategy = { type = naval_mission_priority id = strike_force value = 150 }
 }
+
+
+################
+# PAKISTAN (PAK)
+################
+
+md2026_pak_diplomacy = {
+	allowed = { original_tag = PAK }
+	enable = { has_global_flag = md2026_initialized }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = befriend id = CHI value = 200 }
+	ai_strategy = { type = befriend id = SAU value = 100 }
+	ai_strategy = { type = befriend id = TUR value = 75 }
+	ai_strategy = { type = befriend id = NKO value = 25 }
+
+	ai_strategy = { type = antagonize id = RAJ value = 150 }
+	ai_strategy = { type = antagonize id = USA value = 50 }
+
+	ai_strategy = { type = prepare_for_war id = RAJ value = 50 }
+
+	ai_strategy = { type = area_priority id = asia value = 250 }
+	ai_strategy = { type = area_priority id = middle_east value = 75 }
+}
+
+md2026_pak_imf_path = {
+	allowed = { original_tag = PAK }
+	enable = {
+		has_global_flag = md2026_initialized
+		has_completed_focus = md2026_pak_imf_bailout
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = antagonize id = USA value = -75 }
+	ai_strategy = { type = befriend id = USA value = 50 }
+}
+
+md2026_pak_military = {
+	allowed = { original_tag = PAK }
+	enable = { has_global_flag = md2026_initialized }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio id = garrison value = 10 }
+	ai_strategy = { type = role_ratio id = suppression value = 5 }
+	ai_strategy = { type = role_ratio id = paratroopers value = 5 }
+	ai_strategy = { type = role_ratio id = mountaineers value = 20 }
+	ai_strategy = { type = role_ratio id = marines value = 3 }
+	ai_strategy = { type = role_ratio id = armor value = 15 }
+	ai_strategy = { type = role_ratio id = mechanized value = 12 }
+	ai_strategy = { type = role_ratio id = infantry value = 30 }
+
+	ai_strategy = { type = air_factory_balance value = 25 }
+	ai_strategy = { type = equipment_stockpile_surplus_ratio value = 15 }
+}
+
+
+################
+# ARGENTINA (ARG)
+################
+
+md2026_arg_diplomacy = {
+	allowed = { original_tag = ARG }
+	enable = { has_global_flag = md2026_initialized }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = befriend id = USA value = 150 }
+	ai_strategy = { type = befriend id = ENG value = 75 }
+	ai_strategy = { type = befriend id = BRA value = 50 }
+
+	ai_strategy = { type = antagonize id = VEN value = 50 }
+
+	ai_strategy = { type = area_priority id = south_america value = 200 }
+}
+
+md2026_arg_nato_plus = {
+	allowed = { original_tag = ARG }
+	enable = {
+		has_global_flag = md2026_initialized
+		has_completed_focus = md2026_arg_nato_plus
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = befriend id = USA value = 100 }
+	ai_strategy = { type = befriend id = GER value = 50 }
+	ai_strategy = { type = befriend id = FRA value = 50 }
+}
+
+md2026_arg_military = {
+	allowed = { original_tag = ARG }
+	enable = { has_global_flag = md2026_initialized }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio id = garrison value = 5 }
+	ai_strategy = { type = role_ratio id = suppression value = 0 }
+	ai_strategy = { type = role_ratio id = paratroopers value = 10 }
+	ai_strategy = { type = role_ratio id = mountaineers value = 5 }
+	ai_strategy = { type = role_ratio id = marines value = 10 }
+	ai_strategy = { type = role_ratio id = armor value = 10 }
+	ai_strategy = { type = role_ratio id = mechanized value = 15 }
+	ai_strategy = { type = role_ratio id = infantry value = 45 }
+
+	ai_strategy = { type = air_factory_balance value = 20 }
+}
+
+
+################
+# MEXICO (MEX)
+################
+
+md2026_mex_diplomacy = {
+	allowed = { original_tag = MEX }
+	enable = { has_global_flag = md2026_initialized }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = befriend id = USA value = 100 }
+	ai_strategy = { type = befriend id = BRA value = 75 }
+	ai_strategy = { type = befriend id = ARG value = 50 }
+	ai_strategy = { type = befriend id = CAN value = 75 }
+
+	ai_strategy = { type = antagonize id = CHI value = 25 }
+
+	ai_strategy = { type = area_priority id = north_america value = 250 }
+	ai_strategy = { type = area_priority id = south_america value = 75 }
+}
+
+md2026_mex_us_partner = {
+	allowed = { original_tag = MEX }
+	enable = {
+		has_global_flag = md2026_initialized
+		has_completed_focus = md2026_mex_us_security_cooperation
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = befriend id = USA value = 75 }
+}
+
+md2026_mex_military = {
+	allowed = { original_tag = MEX }
+	enable = { has_global_flag = md2026_initialized }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio id = garrison value = 15 }
+	ai_strategy = { type = role_ratio id = suppression value = 10 }
+	ai_strategy = { type = role_ratio id = paratroopers value = 5 }
+	ai_strategy = { type = role_ratio id = mountaineers value = 5 }
+	ai_strategy = { type = role_ratio id = marines value = 5 }
+	ai_strategy = { type = role_ratio id = armor value = 5 }
+	ai_strategy = { type = role_ratio id = mechanized value = 10 }
+	ai_strategy = { type = role_ratio id = infantry value = 45 }
+
+	ai_strategy = { type = air_factory_balance value = 15 }
+}
+
+
+################
+# SOUTH AFRICA (SAF)
+################
+
+md2026_saf_diplomacy = {
+	allowed = { original_tag = SAF }
+	enable = { has_global_flag = md2026_initialized }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = befriend id = CHI value = 100 }
+	ai_strategy = { type = befriend id = BRA value = 100 }
+	ai_strategy = { type = befriend id = RAJ value = 75 }
+	ai_strategy = { type = befriend id = SOV value = 25 }
+	ai_strategy = { type = befriend id = ENG value = 50 }
+	ai_strategy = { type = befriend id = USA value = 50 }
+
+	ai_strategy = { type = area_priority id = africa value = 250 }
+	ai_strategy = { type = area_priority id = asia value = 75 }
+}
+
+md2026_saf_western_pivot = {
+	allowed = { original_tag = SAF }
+	enable = {
+		has_global_flag = md2026_initialized
+		has_completed_focus = md2026_saf_western_pivot
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = befriend id = USA value = 100 }
+	ai_strategy = { type = befriend id = ENG value = 75 }
+	ai_strategy = { type = befriend id = GER value = 50 }
+	ai_strategy = { type = befriend id = CHI value = -50 }
+	ai_strategy = { type = befriend id = SOV value = -50 }
+}
+
+md2026_saf_military = {
+	allowed = { original_tag = SAF }
+	enable = { has_global_flag = md2026_initialized }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio id = garrison value = 10 }
+	ai_strategy = { type = role_ratio id = suppression value = 5 }
+	ai_strategy = { type = role_ratio id = paratroopers value = 10 }
+	ai_strategy = { type = role_ratio id = mountaineers value = 3 }
+	ai_strategy = { type = role_ratio id = marines value = 5 }
+	ai_strategy = { type = role_ratio id = armor value = 10 }
+	ai_strategy = { type = role_ratio id = mechanized value = 15 }
+	ai_strategy = { type = role_ratio id = infantry value = 42 }
+
+	ai_strategy = { type = air_factory_balance value = 15 }
+}
+
+
+################
+# VIETNAM (VIN)
+################
+
+md2026_vin_diplomacy = {
+	allowed = { original_tag = VIN }
+	enable = { has_global_flag = md2026_initialized }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = befriend id = USA value = 75 }
+	ai_strategy = { type = befriend id = JAP value = 100 }
+	ai_strategy = { type = befriend id = KOR value = 75 }
+	ai_strategy = { type = befriend id = AST value = 75 }
+	ai_strategy = { type = befriend id = CHI value = 50 }
+
+	ai_strategy = { type = antagonize id = CHI value = 50 }
+
+	ai_strategy = { type = area_priority id = asia value = 200 }
+	ai_strategy = { type = area_priority id = pacific value = 150 }
+}
+
+md2026_vin_us_partner = {
+	allowed = { original_tag = VIN }
+	enable = {
+		has_global_flag = md2026_initialized
+		has_completed_focus = md2026_vin_us_strategic_partner
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = befriend id = USA value = 100 }
+	ai_strategy = { type = antagonize id = CHI value = 25 }
+}
+
+md2026_vin_china_accom = {
+	allowed = { original_tag = VIN }
+	enable = {
+		has_global_flag = md2026_initialized
+		has_completed_focus = md2026_vin_china_accommodation
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = befriend id = CHI value = 100 }
+	ai_strategy = { type = antagonize id = CHI value = -75 }
+	ai_strategy = { type = befriend id = USA value = -25 }
+}
+
+md2026_vin_military = {
+	allowed = { original_tag = VIN }
+	enable = { has_global_flag = md2026_initialized }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio id = garrison value = 15 }
+	ai_strategy = { type = role_ratio id = suppression value = 5 }
+	ai_strategy = { type = role_ratio id = paratroopers value = 3 }
+	ai_strategy = { type = role_ratio id = mountaineers value = 10 }
+	ai_strategy = { type = role_ratio id = marines value = 10 }
+	ai_strategy = { type = role_ratio id = armor value = 8 }
+	ai_strategy = { type = role_ratio id = mechanized value = 10 }
+	ai_strategy = { type = role_ratio id = infantry value = 39 }
+
+	ai_strategy = { type = air_factory_balance value = 20 }
+	ai_strategy = { type = equipment_stockpile_surplus_ratio value = 15 }
+}
+
+
+################
+# INDONESIA (IND)
+################
+
+md2026_idn_diplomacy = {
+	allowed = { original_tag = IND }
+	enable = { has_global_flag = md2026_initialized }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = befriend id = AST value = 100 }
+	ai_strategy = { type = befriend id = JAP value = 75 }
+	ai_strategy = { type = befriend id = USA value = 75 }
+	ai_strategy = { type = befriend id = CHI value = 75 }
+	ai_strategy = { type = befriend id = RAJ value = 50 }
+	ai_strategy = { type = befriend id = KOR value = 50 }
+
+	ai_strategy = { type = antagonize id = CHI value = 25 }
+
+	ai_strategy = { type = area_priority id = pacific value = 200 }
+	ai_strategy = { type = area_priority id = asia value = 150 }
+}
+
+md2026_idn_quad_path = {
+	allowed = { original_tag = IND }
+	enable = {
+		has_global_flag = md2026_initialized
+		has_completed_focus = md2026_idn_quad_observer
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = befriend id = USA value = 75 }
+	ai_strategy = { type = befriend id = JAP value = 50 }
+	ai_strategy = { type = befriend id = AST value = 50 }
+	ai_strategy = { type = antagonize id = CHI value = 50 }
+}
+
+md2026_idn_china_path = {
+	allowed = { original_tag = IND }
+	enable = {
+		has_global_flag = md2026_initialized
+		has_completed_focus = md2026_idn_china_pivot
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = befriend id = CHI value = 100 }
+	ai_strategy = { type = antagonize id = CHI value = -50 }
+	ai_strategy = { type = befriend id = USA value = -25 }
+}
+
+md2026_idn_military = {
+	allowed = { original_tag = IND }
+	enable = { has_global_flag = md2026_initialized }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio id = garrison value = 15 }
+	ai_strategy = { type = role_ratio id = suppression value = 5 }
+	ai_strategy = { type = role_ratio id = paratroopers value = 5 }
+	ai_strategy = { type = role_ratio id = mountaineers value = 3 }
+	ai_strategy = { type = role_ratio id = marines value = 15 }
+	ai_strategy = { type = role_ratio id = armor value = 5 }
+	ai_strategy = { type = role_ratio id = mechanized value = 10 }
+	ai_strategy = { type = role_ratio id = infantry value = 42 }
+
+	ai_strategy = { type = air_factory_balance value = 25 }
+	ai_strategy = { type = equipment_stockpile_surplus_ratio value = 10 }
+}
