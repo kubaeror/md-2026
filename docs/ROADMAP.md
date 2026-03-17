@@ -1,583 +1,407 @@
-# Millennium Dawn 2026 Rework - Roadmap rozbudowy
+# Millennium Dawn 2026 Rework — Expansion Roadmap v2
 
-## Stan obecny
+## Stan wyjściowy (po fazie 1–6)
 
-Submod dodaje bookmark 2026.1.1 do base modu Millennium Dawn. Aktualna zawartosc:
-- 57 focus trees (~451k linii), 23 krajow z pelnym custom contentem
-- 191 eventow w 28 plikach, 11 lancuchow tematycznych (Ukraina, Tajwan, Bliski Wschod, BRICS, NATO, wybory, tech, cyber, proxy, demografia, klimat)
-- 56 decyzji w 7 kategoriach (sankcje, NATO, geopolityka, modernizacja wojskowa, ekonomia, nuklearne, cyber)
-- 60+ national spirits, 72 country history files, 5-tierowy system technologii
-- 23 pliki characters z liderami 2026, 72 pliki OOB
-- 18 plikow lokalizacji (angielski)
+| Region | Kraj | Focusy | Eventy | AI |
+|--------|------|--------|--------|----|
+| **Europa** | ENG, GER, FRA, ITA, SPR, POL, TUR, UKR | 20–41 | ✓ | ✓ |
+| **Europa** | ROM | 11 | ✓ | ✓ |
+| **Europa** | Baltic (EST/LAT/LIT) | 10 | — | — |
+| **Europa** | HUN, SWE, FIN, GRE, CZE, SRB, NET, NOR, DEN, BUL, POR, BEL | **0** | — | — |
+| **Ameryka Płn.** | USA | 22 | ✓ | ✓ |
+| **Ameryka Płn.** | CAN | 26 | ✓ | ✓ |
+| **Ameryka Płn.** | MEX | 28 | — | ✓ |
+| **Azja** | CHI, JAP, KOR, NKO, TAI, RAJ, PAK, IDN, VIN, AUS | 20–26 | ✓ | ✓ |
+| **Azja** | PHI, THA, MAL | **0** | — | — |
 
-Znane problemy:
-- 9 bledow skladni (SYN001) w focus trees - array syntax do weryfikacji
-- Duplikat klucza md2026_sov_war_economy
-- Brak custom doktryn, GUI, technologii - bazuje na base modzie
-- Brak polskiej lokalizacji
-
----
-
-## FAZA 1: Naprawy krytyczne
-
-Priorytet: KRYTYCZNY
-Status: UKONCZONA (2026-03-17)
-
-Wyniki weryfikacji:
-- Bledy SYN001 (^ array syntax) - FALSE POSITIVES. Operator ^ jest poprawnym syntax HoI4 1.17,
-  uzywany setki razy w base modzie (np. Belarus.txt, Czech decisions).
-- Duplikat md2026_sov_war_economy - FALSE POSITIVE. Klucze sa rozne:
-  md2026_sov_war_economy (spirit) vs md2026_sov_war_economy_decision (decyzja).
-- OOB files - OK. history/units/ nie ma replace_path, HoI4 laduje z obu lokalizacji.
-  Base mod dostarcza USA_2000_nsb i pochodne.
-
-Zrealizowane (sesje 2026-03-12 i 2026-03-17):
-- Usunieto 15 blednych replace_path z descriptor.mod (zostaly tylko bookmarks i history/states)
-- Naprawiono cudzyslow w usa.txt:40032
-- Dodano lokalizacje 56 decyzji i 8 kategorii (md2026_decisions_l_english.yml)
+Fazy 1–6 zakończone: naprawy crashu, lokalizacja, eventy (12 łańcuchów), decyzje (56),
+focus trees dla PAK/ARG/MEX/SAF/VIN/IDN, systemy gameplay (proxy/cyber/ekonomia),
+plany AI dla 6 krajów, newspaper events, alternatywne bookmarki.
 
 ---
 
-## FAZA 2: Rozszerzenie eventow
+## FAZA A: Rozbudowa drzewek głównych mocarstw
 
-Priorytet: WYSOKI
-Cel: Dodac nowe lancuchy eventow pokrywajace kluczowe scenariusze geopolityczne 2026-2030
+**Priorytet: KRYTYCZNY** — USA (22), CHI (20), SOV (20), UKR (20) mają za mało focusów dla krajów tej rangi.
 
-### 2.1 Eskalacja tajwanska (5-7 eventow)
+### A.1 USA (22 → 42 focusów)
 
-Lancuch eventow modelujacy potencjalny kryzys wokol Tajwanu.
+Istniejące gałęzie: Trump 2. kadencja, DOGE, tarify, energia, NATO, Ukraina, terytoria.
 
-Eventy:
-1. md2026_taiwan_esc.1 - "Prowokacje militarne na Ciesninie" - CHI prowadzi cwiczenia wojskowe, TAI podnosi alert
-2. md2026_taiwan_esc.2 - "Blokada morska Tajwanu" - CHI ogłasza strefę wykluczenia, handel morski sparalizowany
-3. md2026_taiwan_esc.3 - "Kryzys międzynarodowy" - USA/JAP reaguja, UNSC zwoluje sesje nadzwyczajna
-4. md2026_taiwan_esc.4 - "Ultimatum Pekinu" - CHI zadajo reinkorporacji, TAI musi odpowiedziec
-5. md2026_taiwan_esc.5a - "Inwazja na Tajwan" - jesli TAI odrzuci ultimatum i USA nie interweniuje
-6. md2026_taiwan_esc.5b - "Dyplomatyczne rozwiazanie" - jesli mediacja sie powiedzie
-7. md2026_taiwan_esc.6 - "Nowy status quo" - konsekwencje dlugoterminowe
+**Nowe gałęzie:**
 
-Triggery: Odpalaja sie po 2027 jesli CHI zakonczy odpowiednie focusy i TAI nie jest w fakcji z USA.
-Mechaniki: Country flags kontrolujace sciezke, war goals, opinion modifiers, national spirits.
-Plik: events/md2026_taiwan_escalation.txt
-Lokalizacja: localisation/english/md2026_taiwan_esc_l_english.yml
+| Gałąź | Nowe focusy | Tematyka |
+|-------|------------|----------|
+| Domestic Economy | `usa_reindustrialize`, `usa_chips_act_2`, `usa_ai_frontier`, `usa_infrastructure_2` | reindustrializacja, AI |
+| Military Buildup | `usa_reagan_buildup_2`, `usa_sixth_gen_fighter`, `usa_navy_600_ships`, `usa_space_force_ops` | F-47, flota, Space Force |
+| Americas Hegemony | `usa_greenland_annexation`, `usa_canada_pressure`, `usa_panama_reclaim`, `usa_monroe_2` | Grenlandia, Panama, Kanada |
+| Democracy Crisis | `usa_restore_institutions`, `usa_supreme_court_reform`, `usa_digital_authoritarianism` (XOR) | polaryzacja |
 
-### 2.2 Scenariusz upadku Rosji (5-7 eventow)
-
-Lancuch eventow modelujacy potencjalny rozpad Rosji po przedluzajacej sie wojnie.
-
-Eventy:
-1. md2026_sov_collapse.1 - "Wyczerpanie wojenne" - SOV traci stabilnosc ponizej 20%, bunty w armii
-2. md2026_sov_collapse.2 - "Protesty w Moskwie" - masowe demonstracje, siły bezpieczenstwa wahaja sie
-3. md2026_sov_collapse.3 - "Zamach stanu" - generałowie probuja obalic rzad, 50/50 sukces/porazka
-4. md2026_sov_collapse.4a - "Nowy rezim wojskowy" - junta przejmuje wladze, zawieszenie broni z UKR
-5. md2026_sov_collapse.4b - "Chaos i secesja" - zamach sie nie udal, regiony ogłaszaja niepodleglosc
-6. md2026_sov_collapse.5 - "Kaukaz w ogniu" - Czeczenia, Dagestan, Gruzja reaguja
-7. md2026_sov_collapse.6 - "Nowy porzadek" - konsekwencje miedzynarodowe, BRICS w kryzysie
-
-Triggery: SOV w wojnie > 3 lata, stabilnosc < 20%, war support < 15%.
-Mechaniki: Release nations, civil war, faction dissolution.
-Plik: events/md2026_russia_collapse.txt
-
-### 2.3 Arabska Wiosna 2.0 (4-6 eventow)
-
-Fala protestow w krajach arabskich inspirowana zmianami w Syrii.
-
-Eventy:
-1. md2026_arab2.1 - "Iskra w Kairze" - protesty w Egipcie po wzroscie cen zywnosci
-2. md2026_arab2.2 - "Fala protestow" - rozszerza sie na Algerie, Tunezje, Jordanie
-3. md2026_arab2.3a - "Represje" - rzad tlumi protesty silą - stabilnosc -, war support +
-4. md2026_arab2.3b - "Ustepstwa" - rzad idzie na kompromis - stabilnosc +, PP -
-5. md2026_arab2.4 - "Zmiana rezimu" - jesli stabilnosc spadnie ponizej progu
-6. md2026_arab2.5 - "Reakcja regionalna" - SAU/UAE interweniuja, Turcja wspiera opozycje
-
-Triggery: Po 2027, SYR zmienila rzad, EGY stabilnosc < 40%.
-Plik: events/md2026_arab_spring2.txt
-
-### 2.4 Kryzys migracyjny EU (4-5 eventow)
-
-Presja migracyjna na granicach EU i jej polityczne konsekwencje.
-
-Eventy:
-1. md2026_eu_migr.1 - "Fala migracyjna" - wojna/niestabilnosc w Afryce/Bliskim Wschodzie generuje fale
-2. md2026_eu_migr.2 - "Polaryzacja polityczna" - partie antyimigranckie zyskuja poparcie w EU
-3. md2026_eu_migr.3a - "Reforma Schengen" - EU zaciesnia kontrole graniczne, zachowuje wolny ruch
-4. md2026_eu_migr.3b - "Zawieszenie Schengen" - kraje zamykaja granice jednostronnie
-5. md2026_eu_migr.4 - "Nowa polityka azylowa" - dlugoterminowe konsekwencje dla EU
-
-Triggery: Aktywny konflikt w Afryce/Bliskim Wschodzie, > 2 kraje EU z niestabilnoscia.
-Plik: events/md2026_eu_migration.txt
-
-### 2.5 Kryzys Indo-Pakistanski (5-6 eventow)
-
-Eskalacja napiec miedzy Indiami a Pakistanem.
-
-Eventy:
-1. md2026_indopak.1 - "Incydent w Kaszmirze" - atak terrorystyczny lub starcie graniczne
-2. md2026_indopak.2 - "Mobilizacja" - obie strony mobilizuja sily na granicy
-3. md2026_indopak.3 - "Grozba nuklearna" - PAK podnosi alert nuklearny
-4. md2026_indopak.4a - "Ograniczony konflikt" - starcia na linii kontroli, bez eskalacji nuklearnej
-5. md2026_indopak.4b - "Mediacja miedzynarodowa" - USA/CHI wymuszaja zawieszenie broni
-6. md2026_indopak.5 - "Nowy status quo" - napiety pokoj lub dalsze zmiany graniczne
-
-Triggery: Po 2027, RAJ zakonczyla focusy militarne, PAK niestabilny.
-Plik: events/md2026_indo_pak.txt
-
-### 2.6 Dodatkowe wybory (8-10 eventow)
-
-Cykle wyborcze dla krajow ktorych brak w obecnym systemie.
-
-Eventy:
-- md2026_elect_ext.1 - Argentyna 2027 (post-Milei: kontynuacja reform vs powrot peronizmu)
-- md2026_elect_ext.2 - Turcja 2028 (Erdogan vs opozycja CHP)
-- md2026_elect_ext.3 - Australia 2028 (Labor vs Coalition)
-- md2026_elect_ext.4 - Kanada 2029 (Liberals vs Conservatives vs NDP)
-- md2026_elect_ext.5 - Indie 2029 (BJP vs INDIA alliance)
-- md2026_elect_ext.6 - Indonezja 2029 (post-Prabowo)
-- md2026_elect_ext.7 - RPA 2029 (ANC vs DA vs MK vs EFF)
-- md2026_elect_ext.8 - Meksyk 2030 (MORENA vs opozycja)
-
-Kazdy event: 2-3 opcje z roznymi konsekwencjami politycznymi (zmiana ideologii, modyfikatory, liderzy).
-Plik: events/md2026_elections_extended.txt
+**Plik:** `common/national_focus/md2026_usa_focus.txt` (rozszerzenie)
 
 ---
 
-## FAZA 3: Nowe focus trees
+### A.2 CHI (20 → 38 focusów)
 
-Priorytet: WYSOKI
-Cel: Dodac pelne focus trees dla 6 kolejnych krajow, pokrywajac kluczowe regiony swiata
+Istniejące: wielkie odrodzenie, kwestia tajwańska, dominacja tech, ekspansja morska.
 
-Kazdy focus tree ma strukture:
-- 5 galezi: polityka wewnetrzna, wojskowosc, ekonomia, dyplomacja, technologia/spoleczenstwo
-- ~25-30 focusow na galez, ~130-150 focusow lacznie
-- Mutually exclusive paths w kazdej galezi
-- Pre-completed focusy odzwierciedlajace stan na 2026.1.1
-- Integracja z istniejacymi eventami i decyzjami
+**Nowe gałęzie:**
 
-### 3.1 Pakistan (PAK)
+| Gałąź | Nowe focusy | Tematyka |
+|-------|------------|----------|
+| Internal Control | `chi_common_prosperity_2`, `chi_ai_surveillance`, `chi_social_credit_2`, `chi_xinjiang_final` | kontrola wewnętrzna |
+| Economic Decoupling | `chi_yuan_internationalization`, `chi_rare_earth_weapon`, `chi_domestic_consumption`, `chi_bri_2` | oderwanie od Zachodu |
+| Military Modernization | `chi_j20_expansion`, `chi_hypersonic_2`, `chi_carrier_fleet_2`, `chi_pla_reform` | zbrojenia |
+| Global South | `chi_brics_chair`, `chi_africa_pivot_2`, `chi_global_south_leader`, `chi_russia_alignment` | dyplomacja |
 
-Kontekst: Potega nuklearna, rywalizacja z Indiami, sojusz z Chinami, niestabilnosc wewnetrzna.
-
-Galaz polityczna:
-- Sciezka wojskowa: przewrot wojskowy, junta, stabilizacja sila
-- Sciezka demokratyczna: reformy, wolne media, walka z korupcja
-- Wspólne: Kaszmir (eskalacja vs dialog), relacje z Afganistanem
-
-Galaz wojskowa:
-- Modernizacja armii (czolgi Al-Khalid 2, JF-17 Block 3)
-- Program nuklearny (miniaturyzacja glowic, rakiety Shaheen-III)
-- Wspolpraca z Chinami (wspolna produkcja, bazy)
-- Antyterroryzm (operacje w FATA/Beludzystan)
-
-Galaz ekonomiczna:
-- Program MFW vs odrzucenie pomocy
-- CPEC 2.0 (rozszerzenie korytarza chinskiego)
-- Eksport tekstylny i IT
-- Reforma podatkowa
-
-Galaz dyplomatyczna:
-- Sojusz z Chinami (SCO, BRI)
-- Normalizacja z Indiami (handel, woda)
-- Relacje z USA (balansowanie)
-- Swiat islamski (OIC, Turcja, SAU)
-
-Plik: common/national_focus/pakistan.txt
-Characters: common/characters/PAK.txt (nowy)
-History: history/countries/PAK - Pakistan.txt (aktualizacja)
-AI plan: common/ai_strategy_plans/md2026_ai_plans.txt (rozszerzenie)
-
-### 3.2 Indonezja (INS)
-
-Kontekst: Najwiekszy kraj muzulmanski, ASEAN leader, nowa stolica Nusantara, zasoby niklu.
-
-Galaz polityczna:
-- Demokratyczna konsolidacja vs autorytarny drift (Prabowo)
-- Wolnosc mediow vs kontrola informacji
-- Relacje centrum-regiony (Papua, Aceh)
-
-Galaz wojskowa:
-- Modernizacja marynarki (okrety podwodne, fregaty)
-- Obrona Morza Poludniowochinskiego (spor z CHI o Natuna)
-- Sily specjalne (Kopassus)
-- Przemysl obronny (PT Pindad, PT PAL)
-
-Galaz ekonomiczna:
-- Nusantara (budowa nowej stolicy - ogromny projekt infrastrukturalny)
-- Downstreaming niklu (zakaz eksportu rudy, budowa hutnictwa)
-- Gospodarka cyfrowa (Gojek, Tokopedia, unicorny)
-- Turystyka (Bali, Labuan Bajo)
-
-Galaz dyplomatyczna:
-- Przywodztwo ASEAN (centralna rola w regionie)
-- Balansowanie USA-Chiny (wolnosc zeglugi vs inwestycje chinskie)
-- G20 i Global South voice
-- Wspólpraca z Australia (Timor Leste, stabilnosc)
-
-Plik: common/national_focus/indonesia.txt (rozszerzenie istniejacego)
-Characters: common/characters/INS.txt (nowy)
-
-### 3.3 Meksyk (MEX)
-
-Kontekst: Sasiad USA, kartele narkotykowe, nearshoring, USMCA, migracja.
-
-Galaz polityczna:
-- MORENA kontynuacja vs opozycja
-- Reforma sadownictwa (kontrowersyjna reforma 2024)
-- Walka z korupcja vs patronat
-
-Galaz wojskowa:
-- Wojna z kartelami (Sinaloa, CJNG, Los Zetas)
-- Gwardia Narodowa (militaryzacja bezpieczenstwa)
-- Wspolpraca z USA (DEA, extradycje) vs suwerennosc
-- Kontrola granic poludniowych
-
-Galaz ekonomiczna:
-- Nearshoring boom (przenoszenie fabryk z Chin do Meksyku)
-- USMCA renegocjacja 2026
-- Pemex i reforma energetyczna
-- Turystyka i remittance
-
-Galaz dyplomatyczna:
-- Relacje z USA (Trump tariffs, mur, migracja)
-- Ameryka Lacinska (CELAC, regionalne przywodztwo)
-- Dywersyfikacja (EU, Azja)
-- Kryzys migracyjny (tranzyty z Ameryki Srodkowej)
-
-Plik: common/national_focus/mexico.txt (rozszerzenie istniejacego)
-
-### 3.4 RPA (SAF)
-
-Kontekst: Potega regionalna Afryki, kryzys energetyczny, BRICS, nierównosci.
-
-Galaz polityczna:
-- Koalicja rzadowa (ANC-DA GNU vs rozpad koalicji)
-- Populizm (EFF, MK Party)
-- Walka z korupcja (state capture, komisja Zondo)
-- Reforma gruntow
-
-Galaz wojskowa:
-- Operacje pokojowe AU (Mozambik, Kongo)
-- Modernizacja SANDF (przestarzaly sprzet)
-- Przemysl obronny (Denel)
-- Bezpieczenstwo wewnetrzne (przestepczosc)
-
-Galaz ekonomiczna:
-- Load shedding (kryzys Eskom, energetyka)
-- Gornictwo (platyna, zloto, mangan, lit)
-- Infrastruktura (Transnet, porty)
-- Nierównosci (BEE, reforma rynku pracy)
-
-Galaz dyplomatyczna:
-- BRICS+ (gospodarz, most miedzy Global South a Zachodem)
-- Afryka (AU, SADC, mediacje)
-- Neutralnosc (Rosja-Ukraina - kontrowersyjna pozycja)
-- Handel (AGOA z USA, EPA z EU)
-
-Plik: common/national_focus/south_africa.txt (nowy)
-Characters: common/characters/SAF.txt (aktualizacja)
-
-### 3.5 Argentyna (ARG)
-
-Kontekst: Reformy Milei, hiperinflacja, Falklandy, Mercosur.
-
-Galaz polityczna:
-- Kontynuacja reform Milei (deregulacja, ciecla budzetowe)
-- Opozycja peronistowska (powrot populizmu)
-- Reforma konstytucyjna
-- Protesty spoleczne
-
-Galaz wojskowa:
-- Modernizacja sil zbrojnych (od lat zaniedbywanych)
-- Falklandy/Malwiny (dyplomatyczna presja vs eskalacja)
-- Antarktyka (roszczenia, bazy)
-- Wspolpraca NATO+ (sojusz z Zachodem)
-
-Galaz ekonomiczna:
-- Dollaryzacja (przejscie na dolara vs peso)
-- Vaca Muerta (shale oil/gas - ogromne zloze)
-- Lit (trojkat litowy z Chile i Boliwia)
-- Eksport rolny (soja, wolowina, pszenica)
-
-Galaz dyplomatyczna:
-- Zwrot prozachodni (Milei: USA, Izrael)
-- Mercosur (renegocjacja vs wyjscie)
-- EU-Mercosur FTA
-- Rywalizacja z Brazylia
-
-Plik: common/national_focus/argentina.txt (rozszerzenie istniejacego lub nowy)
-
-### 3.6 Wietnam (VIN)
-
-Kontekst: Bamboo diplomacy, boom produkcyjny, Morze Poludniowochińskie, balansowanie mocarstw.
-
-Galaz polityczna:
-- Reforma partii komunistycznej (antykorupcja "piec rozpalony")
-- Liberalizacja gospodarcza vs kontrola polityczna
-- Sukcesja przywodztwa
-
-Galaz wojskowa:
-- Morze Poludniowochinskie (spor z CHI, wyspy Spratly/Paracele)
-- Modernizacja marynarki (okrety podwodne Kilo, fregaty Gepard)
-- Obrona cyberprzestrzeni
-- Przemysl obronny (Viettel)
-
-Galaz ekonomiczna:
-- Manufacturing hub (Samsung, Intel, Apple - przenoszenie z Chin)
-- Semiconductors (fabryki chipow)
-- Infrastruktura (kolej szybka polnoc-poludnie)
-- Turystyka i eksport
-
-Galaz dyplomatyczna:
-- Bamboo diplomacy (balansowanie USA-Chiny-Rosja)
-- ASEAN (wspolpraca z Indonezja)
-- Comprehensive Strategic Partnership z USA (2023+)
-- Historyczne wiezi z Rosja (bron, energia)
-
-Plik: common/national_focus/vietnam.txt (nowy)
-Characters: common/characters/VIN.txt (nowy)
+**Plik:** `common/national_focus/md2026_chi_focus.txt` (rozszerzenie)
 
 ---
 
-## FAZA 4: Systemy gameplay
+### A.3 SOV (20 → 38 focusów)
 
-Priorytet: SREDNI
-Cel: Dodac nowe mechaniki rozgrywki pogłebiajace strategie geopolityczna
+Istniejące: punkt zwrotny w wojnie, wschodnia oś, autarkia ekonomiczna.
 
-### 4.1 Rozszerzony system proxy wars
+**Nowe gałęzie:**
 
-Obecny system (3 decyzje: proxy_support_sov/usa/per) jest minimalny.
-Rozszerzenie o pelny system wojen zaslepionych.
+| Gałąź | Nowe focusy | Tematyka |
+|-------|------------|----------|
+| War Escalation | `sov_total_mobilization`, `sov_nuclear_posturing_2`, `sov_missile_campaign`, `sov_belarusian_integration` | eskalacja |
+| Frozen Conflict | `sov_ceasefire_terms`, `sov_new_minsk`, `sov_rebuild_army` | zamrożenie |
+| Domestic Power | `sov_siloviki_purge`, `sov_succession_crisis`, `sov_patriotic_mobilization` (XOR) | polityka wewnętrzna |
+| War Economy | `sov_war_economy_2`, `sov_china_energy_deal_2`, `sov_arctic_resources`, `sov_import_substitution` | gospodarka wojenna |
 
-Nowe decyzje (15-20):
-- Wsparcie Hezbollahu (PER/SYR) - wplywa na konflikt z ISR
-- Wsparcie Houthis (PER) - blokada Morza Czerwonego, wplywa na handel
-- Wsparcie Wagnera/Africa Corps (SOV) - wplyw w Sahelu, Mali, Burkina Faso, Niger
-- Wsparcie opozycji syryjskiej (TUR/USA) - wplyw na SYR
-- Wsparcie kurdow (USA) - antagonizuje TUR
-- Szkolenie sil ukrainskich (USA/ENG/FRA) - wzmacnia UKR
-- Dostawy broni do Tajwanu (USA/JAP) - antagonizuje CHI
-- Operacje w Birmie (CHI) - wsparcie jednej ze stron
-- Cyber proxy (CHI/SOV/USA) - ataki przez trzecie kraje
-
-Kazda decyzja:
-- Koszt: 50-100 PP
-- Czas: 90-180 dni
-- Efekt: bonus do ataku/obrony proxy, opinion modifier, event chain
-- Ryzyko: 10-30% szans na ujawnienie, kryzys dyplomatyczny
-
-Nowe ideas (10-15):
-- md2026_proxy_hezbollah_support, md2026_proxy_wagner_africa, etc.
-- Kazda daje bonusy do wpływu w regionie + kary do opinii miedzynarodowej
-
-Pliki:
-- common/decisions/md2026_proxy_expanded.txt
-- common/ideas/md2026_proxy_ideas.txt (rozszerzenie)
-- events/md2026_proxy_events.txt
-- localisation/english/md2026_proxy_expanded_l_english.yml
-
-### 4.2 Rozszerzony system cyber warfare
-
-Obecny system (3 decyzje) jest podstawowy. Rozszerzenie o pelny system cyberoperacji.
-
-Nowe decyzje (10-12):
-- Ofensywne:
-  - Atak na infrastrukture energetyczna (damage fabryki)
-  - Atak na system finansowy (damage ekonomii)
-  - Kradziez technologii wojskowej (bonus research)
-  - Dezinformacja/wplyw na wybory (destabilizacja polityczna)
-  - Atak na systemy C2 (obnizenie org armii wroga)
-
-- Defensywne:
-  - Cyber shield (redukcja damage z atakow)
-  - Cyber counterintelligence (wykrywanie atakow)
-  - Szkolenie kadr cyber (staly bonus)
-  - Miedzynarodowa wspolpraca cyber (NATO Cyber Defence)
-
-- Specjalne:
-  - Stuxnet 2.0 (atak na program nuklearny - specyficznie PER/NKO)
-  - False flag cyber (atak wyglada jakby pochodzil z innego kraju)
-
-Mechaniki:
-- Nowy modifier: cyber_capability (0-100, wplywa na skutecznosc ataków)
-- Tier system: basic -> intermediate -> advanced -> elite
-- Cooldowny miedzy operacjami
-- Risk/reward: im wiekszy atak, tym wieksza szansa wykrycia
-
-Pliki:
-- common/decisions/md2026_cyber_expanded.txt
-- common/ideas/md2026_cyber_ideas.txt (rozszerzenie)
-- events/md2026_cyber_events.txt (rozszerzenie)
-- common/scripted_effects/md2026_cyber_effects.txt
-- localisation/english/md2026_cyber_expanded_l_english.yml
-
-### 4.3 System cyklu ekonomicznego
-
-Nowy system modelujacy globalne cykle koniunkturalne.
-
-4 stany ekonomii:
-1. BOOM - +10% factory output, +5% construction speed, -10% consumer goods
-2. STABILNY - brak modyfikatorow (stan domyslny)
-3. RECESJA - -10% factory output, -5% construction speed, +5% consumer goods, -5% stability
-4. KRYZYS - -20% factory output, -10% construction speed, +15% consumer goods, -15% stability, -10% PP
-
-Przejscia (monthly check):
-- BOOM -> STABILNY: 5% base chance + modifiers (wojna, sankcje, deficyt)
-- STABILNY -> RECESJA: 3% base + modifiers
-- RECESJA -> KRYZYS: 5% base, jesli recesja trwa > 12 miesiecy
-- KRYZYS -> RECESJA: 3% base + modifiers (stymulacja, reformy)
-- RECESJA -> STABILNY: 3% base + modifiers
-- STABILNY -> BOOM: 2% base (niskie szanse, wymaga dobrych warunkow)
-
-Decyzje gracza:
-- "Pakiet stymulacyjny" - 100 PP, +20% szans na wyjscie z recesji, -50 PP/miesiac przez 6 miesiecy
-- "Program oszczednosciowy" - 0 PP, +10% szans na wyjscie z recesji, -5% stability na 12 miesiecy
-- "Luzowanie ilosciowe" - 75 PP, natychmiast +5% factory output, ryzyko inflacji
-- "Reforma podatkowa" - 150 PP, trwaly +3% factory output, -2% stability
-- "Nacjonalizacja przemyslu" - 100 PP, +15% factory output, -30% trade opinion, -10% stability
-
-Eventy:
-- "Globalny crash gieldowy" - triggeruje recesje w wielu krajach naraz
-- "Banka spekulacyjna" - boom zakonczony nagla recesja
-- "Inflacja" - konsekwencja nadmiernej stymulacji
-- "Bankructwo panstwowe" - jesli kryzys trwa > 24 miesiace
-
-Pliki:
-- common/scripted_effects/md2026_economy_cycle.txt
-- common/scripted_triggers/md2026_economy_triggers.txt (rozszerzenie)
-- common/decisions/md2026_economy_cycle.txt
-- common/ideas/md2026_economy_cycle_ideas.txt
-- events/md2026_economy_cycle.txt
-- localisation/english/md2026_economy_cycle_l_english.yml
+**Plik:** `common/national_focus/md2026_sov_focus.txt` (rozszerzenie)
 
 ---
 
-## FAZA 5: AI i balans
+### A.4 UKR (20 → 36 focusów)
 
-Priorytet: WYSOKI
-Cel: Zapewnic ze AI sensownie korzysta z nowego contentu i gra jest zbalansowana
+Istniejące: ścieżka wojenna, zachodnia broń, przemysł obronny.
 
-### 5.1 AI strategy plans
+**Nowe gałęzie:**
 
-Kazdy kraj z custom focus tree potrzebuje AI planu ktory mowi AI w jakiej kolejnosci
-realizowac focusy. Bez tego AI losowo wybiera focusy co prowadzi do nierealistycznych
-scenariuszy.
+| Gałąź | Nowe focusy | Tematyka |
+|-------|------------|----------|
+| NATO/EU Path | `ukr_nato_membership`, `ukr_article5_bid`, `ukr_eu_accession`, `ukr_security_guarantee` | integracja zachodnia |
+| Military Doctrine | `ukr_drone_army`, `ukr_territorial_defense_2`, `ukr_counteroffensive`, `ukr_crimea_operation` | doktryna wojskowa |
+| Reconstruction | `ukr_marshall_plan`, `ukr_diaspora_return`, `ukr_digital_gov_2`, `ukr_energy_rebuild` | odbudowa |
+| Peace Scenarios | `ukr_ceasefire_terms`, `ukr_frozen_peace`, `ukr_territorial_concession` (XOR) | pokój |
 
-Plany do dodania/rozszerzenia:
-- PAK: priorytet - stabilnosc wewnetrzna, potem wojskowosc, potem Kaszmir
-- INS: priorytet - Nusantara, potem ekonomia, potem morze
-- MEX: priorytet - kartele, potem nearshoring, potem dyplomacja
-- SAF: priorytet - load shedding, potem BRICS, potem AU
-- ARG: priorytet - inflacja, potem Vaca Muerta, potem dyplomacja
-- VIN: priorytet - manufacturing, potem morze, potem balansowanie
-
-Aktualizacja istniejacych planow:
-- Wszystkie 23 kraje z focus trees - review i tuning
-
-Plik: common/ai_strategy_plans/md2026_ai_plans.txt (rozszerzenie)
-
-### 5.2 AI strategy (dyplomacja i wojskowosc)
-
-Nowe strategie AI dla nowych krajow:
-- PAK: antagonize RAJ (200), befriend CHI (150), befriend TUR (100), cautious USA
-- INS: neutral wobec CHI/USA, befriend AST (100), protect Natuna
-- MEX: befriend USA (100 ale warunkowe), neutral LATAM
-- SAF: neutral, befriend BRICS (100), protect Southern Africa
-- ARG: befriend USA (100, jesli Milei), antagonize ENG (Falklandy, warunkowe)
-- VIN: cautious CHI (befriend 50 ale antagonize 50), befriend USA (75)
-
-Plik: common/ai_strategy/md2026_ai_strategies.txt (rozszerzenie)
-
-### 5.3 Balans modyfikatorow
-
-Systematyczny przeglad:
-- Wszystkie national spirits: czy bonusy/kary sa proporcjonalne?
-- Decyzje: czy koszty PP sa sensowne? Czy AI moze sobie na nie pozwolic?
-- Events: czy MTTH (mean time to happen) jest realistyczne? (nie za czesto, nie za rzadko)
-- Focus trees: czy 70 dni na focus jest ok? Czy reward focusow jest zbalansowany?
-
-Benchmarki:
-- Observe mode 10 lat (2026-2036) - czy swiat wyglada realistycznie?
-- Czy USA/CHI/SOV sa nadal mocarstwami po 10 latach?
-- Czy mali gracze (TAI, UKR, ISR) przetrwaja?
-- Czy AI korzysta z decyzji i eventow?
+**Plik:** `common/national_focus/md2026_ukr_focus.txt` (rozszerzenie)
 
 ---
 
-## FAZA 6: Polish i prezentacja
+## FAZA B: Nowe drzewka europejskie — Tier 1 (priorytetowe)
 
-Priorytet: NISKI
-Cel: Poprawa jakosci zycia gracza i dostosowalnosci moda
+### B.1 Węgry (HUN) — 28 focusów [NOWY]
 
-### 6.1 Newspaper events (global news)
+**Kontekst 2026:** Orbán balansuje między UE a Moskwą/Pekinem. Weto sankcji, PAKS2, Fudan, spór o praworządność, art. 7.
 
-Duze, klimatyczne eventy typu "breaking news" ze specjalnym formatowaniem.
+| Gałąź | Focusy | Tematyka |
+|-------|--------|----------|
+| Root | `hun_orban_mandate` | 5. kadencja Orbána |
+| EU Conflict | `hun_eu_confrontation`, `hun_article7_crisis`, `hun_exit_threat` XOR `hun_eu_reform` | konfrontacja z UE |
+| Russia-Energy | `hun_energy_dependency`, `hun_paks2_nuclear`, `hun_russia_appeasement`, `hun_strategic_neutrality` | gaz rosyjski, Paks2 |
+| China Pivot | `hun_bri_hub`, `hun_fudan_university`, `hun_chinese_ev_factory`, `hun_eastern_opening` | chiński pivot |
+| Domestic | `hun_illiberal_democracy`, `hun_media_control`, `hun_migration_fence`, `hun_constitution_reform` | polityka wewnętrzna |
+| Military | `hun_nato_obligation`, `hun_gripen_upgrade`, `hun_home_defense` | armia |
+| Capstone | `hun_sovereignist_model` XOR `hun_european_return` | |
 
-Eventy (10-15):
-- "Test nuklearny wstrzasa swiatem" - kraj uzyskal bron nuklearna
-- "Historyczne porozumienie pokojowe" - zakonczenie duzego konfliktu
-- "Sojusz sie rozpadl" - kraj opuscil fakcje
-- "Zamach stanu!" - przewrot w waznym kraju
-- "Globalny crash gieldowy" - poczatek kryzysu ekonomicznego
-- "Wynaleziono sztuczna inteligencje ogolna" - przelom technologiczny
-- "Czlowiek na Marsie" - osiagniecie kosmiczne
-- "Pandemia" - nowa choroba zakazna
-- "Katastrofa klimatyczna" - ekstremalny event pogodowy
-- "Cyberatak sparalizowal kraj" - masowy atak na infrastrukture
-
-Plik: events/md2026_newspaper.txt
-
-### 6.3 Custom loading screen tips
-
-Porady i ciekawostki wyswietlane podczas ladowania.
-
-Przykladowe tipy (30):
-- "W 2026 roku NATO liczy 32 czlonkow, wliczajac Finlandie i Szwecje."
-- "BRICS+ rozszerzyl sie o Egipt, Etiopie, Iran, UAE i Arabie Saudyjska w 2024."
-- "Pamiętaj o decyzjach sankcyjnych - moga znaczaco oslabic gospodarke wroga."
-- "Fokus na cyberwojna moze dac Ci przewage technologiczna bez wypowiadania wojny."
-- "AI bedzie podazac za historycznymi sciezkami focusow jesli nie zmienisz ustawien gry."
-
-Plik: common/loading_screen_tips/md2026_tips.txt
-Lokalizacja: localisation/english/md2026_tips_l_english.yml
-
-### 6.4 Alternatywne bookmarki
-
-Dodatkowe scenariusze startowe obok glownego 2026.1.1.
-
-Bookmark 1: "Taiwan Crisis 2027" (2027.6.1)
-- CHI przygotowuje inwazje, flota zmobilizowana
-- TAI w pelnej gotowosci, USA deployed w regionie
-- JAP i KOR w alertach
-- Polecane kraje: CHI, TAI, USA, JAP
-
-Bookmark 2: "Russian Collapse 2028" (2028.1.1)
-- SOV z krytycznym wyczerpaniem wojennym, stability < 15%
-- Regiony na skraju secesji
-- UKR odzyskuje terytoria
-- Polecane kraje: SOV, UKR, USA, CHI
-
-Bookmark 3: "Middle East Inferno 2026" (2026.6.1)
-- PER uzyskal bron nuklearna
-- ISR w wojnie wielofrontowej
-- SAU interweniuje
-- Polecane kraje: ISR, PER, SAU, USA
-
-Pliki:
-- common/bookmarks/md2026_taiwan_crisis.txt
-- common/bookmarks/md2026_russian_collapse.txt
-- common/bookmarks/md2026_mideast_inferno.txt
-- history/countries/* (warianty dla kazdego bookmarku - date blocks)
-- localisation/english/md2026_bookmarks_l_english.yml
+**Plik:** `common/national_focus/md2026_hun_focus.txt`
 
 ---
 
-## Podsumowanie
+### B.2 Szwecja (SWE) — 26 focusów [NOWY]
 
-| Faza | Priorytet | Nowe pliki | Zmodyfikowane pliki | Nowe eventy | Nowe focusy | Nowe decyzje |
-|------|-----------|-----------|-------------------|------------|------------|-------------|
-| 1 | KRYTYCZNY | 0 | ~12 | 0 | 0 | 0 |
-| 2 | WYSOKI | 6-8 | 2-3 loc | ~40 | 0 | 0 |
-| 3 | WYSOKI | 5-8 | 3-5 | 0 | ~800 | 0 |
-| 4 | SREDNI | 8-12 | 3-5 | ~20 | 0 | ~35 |
-| 5 | WYSOKI | 0 | 2-3 | 0 | 0 | 0 |
-| 6 | NISKI | 10-15 | 5-8 | ~25 | 0 | 0 |
-| **LACZNIE** | | **~35-50** | **~20-30** | **~85** | **~800** | **~35** |
+**Kontekst 2026:** Nowy członek NATO (2024), remilitaryzacja, kryzys gangów, Gripen E, Saab.
+
+| Gałąź | Focusy | Tematyka |
+|-------|--------|----------|
+| Root | `swe_nato_integration` | integracja z NATO |
+| Defense | `swe_gripen_e_expand`, `swe_total_defense`, `swe_conscription_return`, `swe_nordic_brigade` | obrona |
+| Economy | `swe_innovation_hub`, `swe_green_steel`, `swe_fintech`, `swe_saab_defense_contracts` | gospodarka |
+| Society | `swe_gang_crisis`, `swe_integration_policy`, `swe_welfare_reform`, `swe_center_right_govt` | społeczeństwo |
+| Foreign | `swe_nordic_defense_pact`, `swe_baltic_sea_command`, `swe_eu_solidarity`, `swe_atlanticism` | zagraniczna |
+| Capstone | `swe_northern_pillar` | |
+
+**Plik:** `common/national_focus/md2026_swe_focus.txt`
+
+---
+
+### B.3 Finlandia (FIN) — 26 focusów [NOWY]
+
+**Kontekst 2026:** 1340 km granicy z Rosją w NATO, fortyfikacje, F-35, artyleria rezerwowa, kwestia Karelii.
+
+| Gałąź | Focusy | Tematyka |
+|-------|--------|----------|
+| Root | `fin_nato_eastern_pillar` | wschodnia flanka NATO |
+| Defense | `fin_fortress_finland`, `fin_artillery_reserve`, `fin_f35_fleet`, `fin_border_fortification` | obrona |
+| Russia Policy | `fin_karelia_question`, `fin_border_militarization`, `fin_russia_sanctions`, `fin_historical_reckoning` | relacje z Rosją |
+| Economy | `fin_tech_renaissance`, `fin_nokia_revival`, `fin_green_mining`, `fin_gaming_industry` | gospodarka |
+| Nordic Coop | `fin_nordic_defense_coord`, `fin_swe_joint_command`, `fin_baltic_security` | nordycka |
+| Capstone | `fin_northern_sentinel` | |
+
+**Plik:** `common/national_focus/md2026_fin_focus.txt`
+
+---
+
+### B.4 Grecja (GRE) — 26 focusów [NOWY]
+
+**Kontekst 2026:** Napięcia z Turcją (Morze Egejskie, Cypr), zakup F-35, LNG hub, rola NATO na Wschodzie.
+
+| Gałąź | Focusy | Tematyka |
+|-------|--------|----------|
+| Root | `gre_eastern_nato_anchor` | kotwica wschodnia NATO |
+| Turkey Rivalry | `gre_aegean_sovereignty`, `gre_f35_response`, `gre_cyprus_reunification`, `gre_aegean_incident` | Grecja-Turcja |
+| Military | `gre_f35_acquisition`, `gre_navy_expansion`, `gre_aegean_fortification`, `gre_special_forces` | wojsko |
+| Economy | `gre_tourism_dominance`, `gre_lng_hub`, `gre_shipping_power`, `gre_digital_revival` | gospodarka |
+| Diplomacy | `gre_israel_partnership`, `gre_egypt_alignment`, `gre_eu_solidarity`, `gre_balkan_stability` | dyplomacja |
+| Capstone | `gre_aegean_hegemon` | |
+
+**Plik:** `common/national_focus/md2026_gre_focus.txt`
+
+---
+
+### B.5 Serbia (SRB) — 24 focusy [NOWY]
+
+**Kontekst 2026:** Vučić balansuje Wschód-Zachód, Kosowo (odmowa uznania), kandydat UE bez postępów, rosyjski gaz, chiskie inwestycje.
+
+| Gałąź | Focusy | Tematyka |
+|-------|--------|----------|
+| Root | `srb_vucic_mandate` | |
+| Kosovo | `srb_kosovo_pressure`, `srb_northern_kosovo`, `srb_recognition_no` XOR `srb_recognition_yes` | Kosowo |
+| EU Path | `srb_eu_accession_push`, `srb_rule_of_law`, `srb_sanctions_compliance` XOR `srb_eu_rejection` | UE |
+| Eastern Vector | `srb_russia_energy`, `srb_chinese_investment`, `srb_bri_corridors`, `srb_eastern_pivot` | Rosja-Chiny |
+| Military | `srb_armed_neutrality`, `srb_army_modernization`, `srb_chinese_weapons` | wojsko |
+| Capstone | `srb_regional_broker` XOR `srb_eu_member` | |
+
+**Plik:** `common/national_focus/md2026_srb_focus.txt`
+
+---
+
+### B.6 Czechy (CZE) — 24 focusy [NOWY]
+
+**Kontekst 2026:** Centrum produkcji broni dla Ukrainy, Fiala, NATO hub Europy Środkowej, F-35, przemysł zbrojeniowy.
+
+| Gałąź | Focusy | Tematyka |
+|-------|--------|----------|
+| Root | `cze_central_europe_anchor` | |
+| Defense Industry | `cze_arms_exports`, `cze_ukraine_arsenal`, `cze_nato_production_hub`, `cze_ammunition_surge` | zbrojenia |
+| Economy | `cze_automotive_transition`, `cze_ev_manufacturing`, `cze_tech_corridor`, `cze_energy_independence` | gospodarka |
+| Military | `cze_f35_acquisition`, `cze_army_modernization`, `cze_v4_defense` | wojsko |
+| Diplomacy | `cze_transatlantic_bridge`, `cze_v4_leadership`, `cze_ukraine_solidarity` | dyplomacja |
+| Capstone | `cze_arsenal_of_europe` | |
+
+**Plik:** `common/national_focus/md2026_cze_focus.txt`
+
+---
+
+## FAZA C: Nowe drzewka europejskie — Tier 2
+
+### C.1 Rumunia (ROM) — rozszerzenie 11 → 28 focusów
+
+**Kontekst 2026:** NATO wschodnia flanka (bazy USA, Aegis Ashore), granica z Ukrainą, tranzyt broni, gaz offshore, aspiracje Mołdawii.
+
+| Nowe gałęzie | Focusy | Tematyka |
+|--------------|--------|----------|
+| NATO Frontline | `rom_nato_hub`, `rom_us_forces`, `rom_aegis_ashore_2`, `rom_black_sea_command` | NATO |
+| Moldova | `rom_moldova_integration`, `rom_moldova_eu_bridge`, `rom_reunification_debate` | Mołdawia |
+| Economy | `rom_offshore_gas`, `rom_ev_hub`, `rom_it_sector`, `rom_energy_independence` | gospodarka |
+| Military | `rom_f16_fleet`, `rom_army_expansion`, `rom_patriot_2` | wojsko |
+| Capstone | `rom_black_sea_guardian` | |
+
+**Plik:** `common/national_focus/md2026_rom_focus.txt` (rozszerzenie)
+
+---
+
+### C.2 Holandia (NET) — 26 focusów [NOWY]
+
+**Kontekst 2026:** ASML (monopol na EUV, kluczowy dla chipy), rząd Wildersa, presja USA/CHI o eksport technologii, Rotterdam hub.
+
+| Gałąź | Focusy | Tematyka |
+|-------|--------|----------|
+| Root | `net_wilders_coalition` | prawicowy rząd |
+| Tech Sovereignty | `net_asml_strategy`, `net_chip_export_china`, `net_silicon_sovereignty`, `net_us_tech_alliance` | ASML i chipy |
+| Migration | `net_border_control`, `net_asylum_reform`, `net_eu_migration_pact`, `net_integration_crisis` | migracja |
+| Economy | `net_port_rotterdam`, `net_fintech_hub`, `net_eu_budget_hawk`, `net_green_port` | gospodarka |
+| Military | `net_nato_commitment`, `net_f35_expansion`, `net_navy_modernization` | wojsko |
+| Capstone | `net_silicon_republic` XOR `net_atlantic_hub` | |
+
+**Plik:** `common/national_focus/md2026_net_focus.txt`
+
+---
+
+### C.3 Norwegia (NOR) — 22 focusy [NOWY]
+
+**Kontekst 2026:** Największy eksporter gazu do Europy po sankcjach na Rosję, SWF $1.7 bln, NATO arktyka, Svalbard.
+
+| Gałąź | Focusy | Tematyka |
+|-------|--------|----------|
+| Root | `nor_energy_hegemon` | |
+| Energy | `nor_gas_europe`, `nor_sovereign_fund`, `nor_oil_production`, `nor_renewable_transition` | energia |
+| Arctic | `nor_svalbard_sovereignty`, `nor_arctic_nato`, `nor_russia_border`, `nor_northern_command` | arktyka |
+| Military | `nor_f35_fleet`, `nor_naval_modernization`, `nor_special_forces` | wojsko |
+| Diplomacy | `nor_nordic_solidarity`, `nor_mediator_role`, `nor_ukraine_fund` | dyplomacja |
+| Capstone | `nor_arctic_guardian` | |
+
+**Plik:** `common/national_focus/md2026_nor_focus.txt`
+
+---
+
+### C.4 Dania (DEN) — 22 focusy [NOWY]
+
+**Kontekst 2026:** Trump żąda Grenlandii (styczeń 2025), Dania odmawia, wzrost wydatków wojskowych, obrona Bałtyku.
+
+| Gałąź | Focusy | Tematyka |
+|-------|--------|----------|
+| Root | `den_greenland_crisis` | kryzys grenlandzki |
+| Greenland | `den_greenland_sovereignty`, `den_greenland_autonomy_expand`, `den_us_concession` (XOR) | Grenlandia |
+| Defense | `den_defense_buildup`, `den_f35_fleet`, `den_baltic_command`, `den_nato_commitment` | obrona |
+| Economy | `den_green_energy_export`, `den_maersk_logistics`, `den_tech_hub`, `den_arctic_resources` | gospodarka |
+| Diplomacy | `den_nordic_anchor`, `den_us_relations`, `den_eu_solidarity` | dyplomacja |
+| Capstone | `den_northern_guardian` | |
+
+**Plik:** `common/national_focus/md2026_den_focus.txt`
+
+---
+
+## FAZA D: Nowe drzewka azjatyckie
+
+### D.1 Filipiny (PHI) — 26 focusów [NOWY]
+
+**Kontekst 2026:** Marcos Jr., Scarborough Shoal, BrahMos z Indii, bazy USA (EDCA rozszerzenie), gospodarka BPO.
+
+| Gałąź | Focusy | Tematyka |
+|-------|--------|----------|
+| Root | `phi_marcos_mandate` | |
+| South China Sea | `phi_scarborough_defiance`, `phi_scs_arbitration`, `phi_us_alliance_deepen`, `phi_brahmos_deploy` | SCS |
+| Military | `phi_modernization_program`, `phi_us_basing_expand`, `phi_coast_guard_2`, `phi_navy_buildup` | wojsko |
+| Economy | `phi_bpo_expansion`, `phi_ofw_remittances`, `phi_semiconductor_assembly`, `phi_tourism_revival` | gospodarka |
+| Diplomacy | `phi_us_strategic_partner` XOR `phi_asean_balancer`, `phi_japan_partnership`, `phi_china_econ_ties` | dyplomacja |
+| Capstone | `phi_pearl_of_orient` | |
+
+**Plik:** `common/national_focus/md2026_phi_focus.txt`
+
+---
+
+### D.2 Tajlandia (THA) — 22 focusy [NOWY]
+
+**Kontekst 2026:** Pierwszy cywilny rząd od lat (Paetongtarn Shinawatra), napięcia armia-cywile, hub EV (Tesla, BYD), ASEAN.
+
+| Gałąź | Focusy | Tematyka |
+|-------|--------|----------|
+| Root | `tha_democratic_transition` | |
+| Civil-Military | `tha_civilian_supremacy`, `tha_army_reform` XOR `tha_military_coup` | napięcia |
+| Economy | `tha_ev_hub`, `tha_tourism_revival`, `tha_digital_economy`, `tha_supply_chain_hub` | gospodarka |
+| Diplomacy | `tha_bamboo_diplomacy`, `tha_asean_hub`, `tha_us_treaty_ally`, `tha_china_balance` | dyplomacja |
+| Military | `tha_modernization`, `tha_regional_security` | wojsko |
+| Capstone | `tha_asean_power` | |
+
+**Plik:** `common/national_focus/md2026_tha_focus.txt`
+
+---
+
+### D.3 Malezja (MAL) — 22 focusy [NOWY]
+
+**Kontekst 2026:** Anwar Ibrahim reformy, ASEAN chair 2025, duże LNG, SCS roszczenia, chip packaging hub (back-end semiconductor).
+
+| Gałąź | Focusy | Tematyka |
+|-------|--------|----------|
+| Root | `mal_anwar_reform` | |
+| Economy | `mal_semiconductor_packaging`, `mal_lng_expansion`, `mal_digital_economy`, `mal_halal_hub` | gospodarka |
+| South China Sea | `mal_scs_joint_dev`, `mal_china_negotiation`, `mal_asean_solidarity` | SCS |
+| Diplomacy | `mal_asean_leadership`, `mal_neutrality_policy`, `mal_ummah_diplomacy`, `mal_global_south` | dyplomacja |
+| Military | `mal_maritime_defense`, `mal_modernization`, `mal_five_powers_pact` | wojsko |
+| Capstone | `mal_emerging_tiger` | |
+
+**Plik:** `common/national_focus/md2026_mal_focus.txt`
+
+---
+
+## FAZA E: Rozszerzenie Ameryki Północnej
+
+### E.1 USA — patrz Faza A.1
+
+### E.2 Kanada (CAN) — uzupełnienie gałęzi
+
+**Nowe focusy** do istniejącego drzewka 26-focusowego:
+
+| Gałąź | Focusy | Tematyka |
+|-------|--------|----------|
+| Trump Crisis | `can_trump_tariffs_response`, `can_51st_state_rejection`, `can_economic_diversification`, `can_tpp_pivot` | kryzys z USA |
+| Arctic Sovereignty | `can_arctic_sovereignty`, `can_norad_upgrade`, `can_northern_gateway`, `can_greenland_diplomacy` | arktyka |
+
+**Plik:** `common/national_focus/md2026_can_focus.txt` (uzupełnienie)
+
+---
+
+## FAZA F: Eventy regionalne
+
+### F.1 Europa (6 łańcuchów, ~35 eventów)
+
+| Łańcuch | Plik | Treść |
+|---------|------|-------|
+| Kryzys praworządności UE | `events/md2026_eu_rule_of_law.txt` | HUN/POL vs UE, art. 7, sankcje, wyjście |
+| Rozszerzenie NATO/UE | `events/md2026_nato_expansion.txt` | Serbia/Ukraina/Georgia aplikują, negocjacje |
+| Europejska energetyka | `events/md2026_europe_energy.txt` | LNG kontrakt, atom, odnawialne, kryzys gazu |
+| Kryzys egejski | `events/md2026_aegean_crisis.txt` | incydenty lotnicze GRE-TUR, Cypr, Morze Egejskie |
+| Nordycka obronność | `events/md2026_nordic_defense.txt` | joint command, ćwiczenia, rosyjskie prowokacje |
+| Wschodnia flanka | `events/md2026_eastern_flank.txt` | przesunięcia NATO, Kaliningrad, incydenty |
+
+### F.2 Azja (4 łańcuchy, ~24 eventy)
+
+| Łańcuch | Plik | Treść |
+|---------|------|-------|
+| ASEAN vs Chiny (SCS) | `events/md2026_asean_scs.txt` | SCS incydenty, mediacje ASEAN, arbitraż |
+| Półwysep Koreański | `events/md2026_korea_crisis.txt` | NKO testy, szczyt inter-koreański, presja USA |
+| Polityka USA w Azji | `events/md2026_asia_pivot.txt` | QUAD, AUKUS, bazy Filipiny |
+| Wybory azjatyckie | rozszerzenie `events/md2026_elections_extended.txt` | PHI, THA, MAL |
+
+### F.3 Ameryka Północna (3 łańcuchy, ~18 eventów)
+
+| Łańcuch | Plik | Treść |
+|---------|------|-------|
+| Grenlandia | `events/md2026_greenland.txt` | USA-Dania, autonomia, referendum |
+| Kryzys USMCA | `events/md2026_usmca_crisis.txt` | tarify, renegocjacja, Meksyk-Kanada vs USA |
+| Granica USA-Meksyk | `events/md2026_border_crisis.txt` | migracja, kartele, militaryzacja |
+
+---
+
+## FAZA G: AI i balans dla nowych krajów
+
+Dla każdego nowego drzewka (HUN, SWE, FIN, GRE, SRB, CZE, ROM, NET, NOR, DEN, PHI, THA, MAL + rozszerzone USA/CHI/SOV/UKR/CAN):
+- 2 AI plany z focusami (ścieżka historyczna + alternatywa)
+- Strategia dyplomatyczna (befriend/antagonize/area_priority)
+- Strategia wojskowa (role_ratio + air_factory_balance)
+
+**Plik:** rozszerzenie `md2026_ai_plans.txt` + `md2026_ai_strategies.txt`
+
+---
+
+## Kolejność implementacji
+
+```
+A (mocarstwa) → B (Europa tier-1) → C (Europa tier-2) → D (Azja) → E (Ameryka) → F (eventy) → G (AI)
+```
+
+| Faza | Nowe focusy | Nowe eventy | AI planów |
+|------|------------|------------|----------|
+| A | ~72 (4×18) | — | — |
+| B | ~155 (6 drzewka) | — | — |
+| C | ~96 (4 drzewka) | — | — |
+| D | ~70 (3 drzewka) | — | — |
+| E | ~22 (USA+CAN) | — | — |
+| F | — | ~77 eventów | — |
+| G | — | — | ~26 planów |
+| **Razem** | **~415** | **~77** | **~26** |
+
+---
+
+## Weryfikacja po każdej fazie
+
+1. Sprawdzić brace matching w nowych plikach (`{}` parowane)
+2. Sprawdzić czy wszystkie nowe tokeny mają lokalizację w `localisation/english/`
+3. Sprawdzić `allow_branch`: każdy shared_focus musi mieć `original_tag = XXX` + `has_global_flag = md2026_initialized`
+4. Przetestować w grze: bookmark ładuje się, focusy widoczne, AI działa (observe 5 lat)
+5. Sprawdzić konflikty x/y z istniejącymi focusami base modu
