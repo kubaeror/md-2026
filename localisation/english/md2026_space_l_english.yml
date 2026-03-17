@@ -1,0 +1,39 @@
+﻿l_english:
+
+ ### MD2026 Space Race Events ###
+
+ # md2026_space.1 - New Space Race
+ md2026_space.1.t:0 "The New Space Race"
+ md2026_space.1.d:0 "The competition for dominance beyond Earth's atmosphere has entered a decisive new phase. Rival programs are closing in on permanent lunar presence, and whoever establishes a foothold on the Moon first will shape the geopolitics of space for generations. Our national space program demands a clear strategic direction."
+ md2026_space.1.o1:0 "Accelerate our manned lunar programme — reach the Moon first."
+ md2026_space.1.o2:0 "Foster commercial space partnerships for shared economic gain."
+
+ # md2026_space.2 - Anti-Satellite Test Incident
+ md2026_space.2.t:0 "Anti-Satellite Test Incident"
+ md2026_space.2.d:0 "A rival power has conducted a destructive anti-satellite test, creating a dangerous debris field in low Earth orbit and demonstrating a capability to blind our military and communications networks. The incident has alarmed the international community and raised urgent questions about the militarization of space."
+ md2026_space.2.o1:0 "Condemn the test and propose international space arms control."
+ md2026_space.2.o2:0 "Accelerate development of our own ASAT capabilities."
+
+ # md2026_space.3 - Commercial Space Boom
+ md2026_space.3.t:0 "Commercial Space Boom"
+ md2026_space.3.d:0 "The commercial space sector is experiencing explosive growth, with private launch costs plummeting and satellite constellations reshaping communications, navigation, and surveillance. Our government must decide how to position the state in relation to this booming industry to extract maximum strategic and economic benefit."
+ md2026_space.3.o1:0 "Establish public-private partnerships to lead the industry."
+ md2026_space.3.o2:0 "Channel the boom toward military space contracts."
+
+ # md2026_space.10 - Satellite Constellation Race
+ md2026_space.10.t:0 "Satellite Constellation Race"
+ md2026_space.10.d:0 "The race to establish dominant satellite constellations is intensifying, with rival powers competing to provide global internet coverage and unprecedented surveillance capability. Control of orbital infrastructure is becoming a new dimension of great-power competition, and our nation must stake its claim."
+ md2026_space.10.o1:0 "Prioritize a military surveillance and communications constellation."
+ md2026_space.10.o2:0 "Build a civilian broadband constellation for global reach."
+
+ ### News Events ###
+
+ # md2026_space_news.1 - Space Race Announcement
+ md2026_space_news.1.t:0 "[ROOT.GetName] Announces Lunar Programme"
+ md2026_space_news.1.d:0 "[ROOT.GetName] has announced an ambitious accelerated programme to land astronauts on the Moon, reigniting a space race reminiscent of the 20th century. The announcement has electrified the scientific community and unnerved rival space powers."
+ md2026_space_news.1.o1:0 "The race for the Moon is on once more."
+
+ # md2026_space_news.2 - ASAT Test News
+ md2026_space_news.2.t:0 "ASAT Test Creates Orbital Debris Crisis"
+ md2026_space_news.2.d:0 "A destructive anti-satellite missile test has generated thousands of pieces of orbital debris, endangering the International Space Station and scores of satellites. World leaders have condemned the test as reckless and destabilizing."
+ md2026_space_news.2.o1:0 "Space is becoming a battlefield."

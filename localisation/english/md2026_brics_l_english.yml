@@ -1,0 +1,76 @@
+﻿l_english:
+ # md2026_brics.1 - BRICS+ Expansion Summit
+ md2026_brics.1.t:0 "BRICS+ Expansion Summit"
+ md2026_brics.1.d:0 "Russia is hosting a landmark BRICS+ summit as interest in the bloc among developing nations reaches a new high. Moscow must decide whether to push for a rapid expansion of membership — deepening the coalition's geopolitical weight — or consolidate the existing partnership before opening the doors further."
+ md2026_brics.1.o1:0 "Push for rapid BRICS+ expansion"
+ md2026_brics.1.o2:0 "Consolidate existing members first"
+
+ # md2026_brics.2 - Turkey: BRICS Membership Offer
+ md2026_brics.2.t:0 "Turkey: Join BRICS+?"
+ md2026_brics.2.d:0 "BRICS+ has formally extended a membership offer to Turkey, presenting Ankara with a consequential foreign policy decision. Joining the bloc would signal a significant pivot away from NATO and Western institutions, while observer status would allow Turkey to hedge between competing powers."
+ md2026_brics.2.o1:0 "Accept — join BRICS+"
+ md2026_brics.2.o2:0 "Decline — remain anchored to NATO"
+ md2026_brics.2.o3:0 "Pursue observer status only"
+
+ # md2026_brics.3 - India: BRICS+ Direction
+ md2026_brics.3.t:0 "India's Role in an Expanded BRICS+"
+ md2026_brics.3.d:0 "As BRICS+ expands its membership and agenda, India faces a strategic choice about the depth of its commitment to the bloc. New Delhi can assert itself as a leading voice in shaping BRICS economic policy, or maintain its traditional non-alignment by balancing engagement with the West."
+ md2026_brics.3.o1:0 "Champion the BRICS economic agenda"
+ md2026_brics.3.o2:0 "Balance BRICS with Western alignment"
+
+ # md2026_brics.10 - De-Dollarization Initiative
+ md2026_brics.10.t:0 "The De-Dollarization Drive"
+ md2026_brics.10.d:0 "China is positioning itself to lead a landmark effort to reduce BRICS member states' dependence on the US dollar in international trade and reserves. Beijing must choose between launching a formal BRICS currency initiative — certain to provoke a sharp American response — or pursuing a quieter strategy of bilateral currency swaps."
+ md2026_brics.10.o1:0 "Launch a formal BRICS currency initiative"
+ md2026_brics.10.o2:0 "Pursue bilateral currency swaps instead"
+
+ # md2026_brics.11 - USA: Response to De-Dollarization
+ md2026_brics.11.t:0 "Challenge to the Dollar's Dominance"
+ md2026_brics.11.d:0 "The BRICS+ bloc has launched a coordinated initiative to reduce global dependence on the US dollar, posing the most serious structural challenge to American financial primacy in decades. Washington must decide whether to respond with punitive economic measures or shore up the dollar's foundations through domestic policy."
+ md2026_brics.11.o1:0 "Impose sanctions on BRICS members"
+ md2026_brics.11.o2:0 "Strengthen the dollar through policy"
+
+ # md2026_brics.20 - BRICS Alternative Payment System (China)
+ md2026_brics.20.t:0 "A New Payments Architecture"
+ md2026_brics.20.d:0 "Russia has launched an alternative international payment system outside of SWIFT and the dollar-dominated financial architecture. Beijing must decide whether to commit to the system and accelerate financial decoupling from the West, or observe cautiously from the sidelines."
+ md2026_brics.20.o1:0 "Join the alternative payment system"
+ md2026_brics.20.o2:0 "Observe — do not commit yet"
+
+ # md2026_brics.21 - Other BRICS members: Payment system expanding
+ md2026_brics.21.t:0 "BRICS Payment System Gains Momentum"
+ md2026_brics.21.d:0 "The BRICS alternative payment system, now adopted by Russia and China, is expanding across the bloc. Each member state must make its own decision: align with the new financial architecture and risk American displeasure, or maintain ties to the dollar-based system."
+ md2026_brics.21.o1:0 "Join the BRICS payment system"
+ md2026_brics.21.o2:0 "Stay with the dollar system"
+
+ # md2026_brics.22 - BRICS Development Bank Expansion (China)
+ md2026_brics.22.t:0 "Expanding the BRICS Development Bank"
+ md2026_brics.22.d:0 "South Africa's deepening commitment to BRICS has triggered a push to expand the New Development Bank's lending mandate, offering an alternative source of infrastructure financing to Global South nations wary of Western conditionality. China, as the bank's largest contributor, must decide whether to approve the expansion."
+ md2026_brics.22.o1:0 "Approve expanded lending mandate"
+ md2026_brics.22.o2:0 "Maintain the bank's current scope"
+
+ # md2026_brics.23 - USA: BRICS economic challenge
+ md2026_brics.23.t:0 "The Dollar Under Siege"
+ md2026_brics.23.d:0 "Three or more BRICS member states have now adopted the bloc's alternative payment system, representing a credible and growing challenge to dollar hegemony in international trade. Washington faces a strategic crossroads: apply sanctions pressure to deter further defections, or invest in reinforcing the institutions that underpin the dollar's global role."
+ md2026_brics.23.o1:0 "Threaten sanctions against payment members"
+ md2026_brics.23.o2:0 "Reinforce dollar institutions"
+
+ # md2026_brics.24 - Global South: BRICS as credible alternative
+ md2026_brics.24.t:0 "BRICS+ Emerges as a Credible Alternative"
+ md2026_brics.24.d:0 "With multiple BRICS members now operating outside the dollar-based financial system and the bloc's development bank expanding its reach, nations across the Global South are reassessing their alignment. The question of whether to seek BRICS membership is no longer theoretical."
+ md2026_brics.24.o1:0 "Apply for BRICS+ membership"
+ md2026_brics.24.o2:0 "Maintain strategic neutrality"
+
+ # md2026_brics_news.1 - BRICS+ expansion summit
+ md2026_brics_news.1.t:0 "BRICS+ Summit: Bloc Announces Major Expansion"
+ md2026_brics_news.1.d:0 "The BRICS+ summit has concluded with an announcement of significant bloc expansion, drawing in new member states from across the Global South. The development marks the most consequential moment in the bloc's history and signals a deepening challenge to the Western-led international order."
+ md2026_brics_news.1.o1:0 "A new multipolar era takes shape"
+
+ # md2026_brics_news.2 - De-dollarization initiative
+ md2026_brics_news.2.t:0 "BRICS+ Launches De-Dollarization Drive"
+ md2026_brics_news.2.d:0 "The BRICS+ bloc has formally launched a coordinated initiative to reduce member states' reliance on the US dollar in trade and financial transactions. Markets react with volatility as the announcement raises fundamental questions about the long-term architecture of the global financial system."
+ md2026_brics_news.2.o1:0 "The financial order is shifting"
+
+ # md2026_brics_news.10 - BRICS Development Bank expansion
+ md2026_brics_news.10.t:0 "BRICS Development Bank Expands Global Mandate"
+ md2026_brics_news.10.d:0 "The New Development Bank has approved a major expansion of its lending mandate, positioning the BRICS financial institution as a direct competitor to the World Bank and IMF for infrastructure investment across the Global South. Western financial institutions face a credible rival for the first time."
+ md2026_brics_news.10.o1:0 "A rival to Bretton Woods emerges"

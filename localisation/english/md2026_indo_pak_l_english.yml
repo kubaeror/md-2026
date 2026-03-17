@@ -1,0 +1,67 @@
+﻿l_english:
+
+ ### MD2026 Indo-Pakistan Crisis Events ###
+
+ # md2026_indo_pak.1 - Kashmir Incident (RAJ)
+ md2026_indo_pak.1.t:0 "Kashmir Incident"
+ md2026_indo_pak.1.d:0 "A deadly border skirmish along the Line of Control in Kashmir has left troops dead on both sides and inflamed public opinion. The incident — whether an accident or a provocation — has ignited nationalist passions at home and alarmed regional observers. New Delhi must decide how to respond before the window for controlling the narrative closes."
+ md2026_indo_pak.1.o1:0 "This demands a firm response — escalate and demonstrate resolve."
+ md2026_indo_pak.1.o2:0 "Demand an independent investigation and open a back-channel to Islamabad."
+
+ # md2026_indo_pak.2 - PAK receives news of Kashmir clash
+ md2026_indo_pak.2.t:0 "The Kashmir Incident: Islamabad Responds"
+ md2026_indo_pak.2.d:0 "News of the Kashmir border clash has reached Islamabad, where military and civilian leaders are convening in emergency session. Indian forces are on heightened alert across the Line of Control, and Pakistan's General Headquarters is assessing its options. How Pakistan responds in the next 72 hours may determine whether this crisis is contained or spirals into open conflict."
+ md2026_indo_pak.2.o1:0 "Order forward deployment — mobilize forces along the Line of Control."
+ md2026_indo_pak.2.o2:0 "Exercise restraint — call for dialogue and a joint investigation."
+
+ # md2026_indo_pak.3 - Mobilization on the Border (RAJ)
+ md2026_indo_pak.3.t:0 "Mobilization on the Border"
+ md2026_indo_pak.3.d:0 "Both India and Pakistan have now mobilized substantial forces along the Line of Control and the international border. The mechanized columns, artillery batteries, and air squadrons now facing each other represent the largest military build-up on the subcontinent in years. A single miscalculation could trigger a war between two nuclear-armed states."
+ md2026_indo_pak.3.o1:0 "Maintain the pressure — sustain the mobilization and keep options open."
+ md2026_indo_pak.3.o2:0 "Step back from the brink — order a unilateral drawdown."
+
+ # md2026_indo_pak.4a - Nuclear Shadow (RAJ)
+ md2026_indo_pak.4a.t:0 "Nuclear Shadow"
+ md2026_indo_pak.4a.d:0 "With conventional forces fully deployed on both sides and diplomatic channels strained to breaking point, Pakistan's Strategic Plans Division is reported to be on elevated alert. Whispers of tactical nuclear contingency planning are filtering through intelligence assessments. India now faces the most dangerous decision in its history — whether to signal its own nuclear deterrent or seek a way down from the precipice."
+ md2026_indo_pak.4a.o1:0 "Signal our nuclear posture — demonstrate that we will not be intimidated."
+ md2026_indo_pak.4a.o2:0 "Stand down — no outcome is worth a nuclear exchange."
+
+ # md2026_indo_pak.4b - International Mediation (RAJ)
+ md2026_indo_pak.4b.t:0 "International Mediation"
+ md2026_indo_pak.4b.d:0 "Washington and Beijing have issued a rare joint communique calling for immediate de-escalation between India and Pakistan, offering to host emergency talks. The international community's concern reflects the existential stakes of a conflict between two nuclear powers. Accepting mediation would mean ceding some diplomatic initiative — but the alternative may be war."
+ md2026_indo_pak.4b.o1:0 "Accept the mediation offer — engage in good faith."
+ md2026_indo_pak.4b.o2:0 "Reject outside interference — this is a bilateral matter."
+
+ # md2026_indo_pak.5 - Uneasy Peace (RAJ)
+ md2026_indo_pak.5.t:0 "Uneasy Peace"
+ md2026_indo_pak.5.d:0 "The immediate crisis has passed, but the underlying tensions that produced it remain entirely unresolved. Kashmir is still disputed, the armies still face each other across contested borders, and the mutual suspicions have if anything deepened. India must decide how to translate the experience of this crisis into lasting strategic policy."
+ md2026_indo_pak.5.o1:0 "The crisis proved we must accelerate military modernization."
+ md2026_indo_pak.5.o2:0 "Use the crisis as a catalyst for genuine normalisation with Pakistan."
+
+ ### News Events ###
+
+ # md2026_indo_pak_news.1 - Kashmir clash breaks
+ md2026_indo_pak_news.1.t:0 "Deadly Clash in Kashmir Raises War Fears"
+ md2026_indo_pak_news.1.d:0 "A deadly exchange of fire along the Line of Control in Kashmir has killed troops on both sides and sent tensions between India and Pakistan to their highest level in years. World leaders are urging maximum restraint as both nuclear-armed states mobilize their forces."
+ md2026_indo_pak_news.1.o1:0 "The subcontinent holds its breath."
+
+ # md2026_indo_pak_news.2 - Nuclear escalation
+ md2026_indo_pak_news.2.t:0 "India Signals Nuclear Posture Amid Pakistan Standoff"
+ md2026_indo_pak_news.2.d:0 "India has moved elements of its nuclear-capable missile forces to a higher readiness state in what officials describe as a deterrence signal to Islamabad. The development has sent shockwaves through world capitals, with the UN Security Council convening an emergency session and calls for immediate de-escalation flooding in from every major power."
+ md2026_indo_pak_news.2.o1:0 "The world has not been this close to nuclear war in decades."
+
+ # md2026_indo_pak_news.3 - Crisis conclusion
+ md2026_indo_pak_news.3.t:0 "Indo-Pakistan Crisis: Forces Stand Down"
+ md2026_indo_pak_news.3.d:0 "After weeks of dangerous military confrontation, India and Pakistan have begun pulling back forces from the Line of Control. The crisis has ended without open war, but it has left a legacy of mutual suspicion, shattered diplomacy, and unresolved grievances that will haunt the subcontinent for years to come."
+ md2026_indo_pak_news.3.o1:0 "Another crisis weathered — but the next may not end so quietly."
+
+ ### National Spirits ###
+
+ md2026_nuclear_standoff:0 "Nuclear Standoff"
+ md2026_nuclear_standoff_desc:0 "India's overt nuclear posturing during the Kashmir crisis has stiffened national resolve but alarmed the international community. The country operates under a cloud of diplomatic isolation and heightened military readiness as the standoff lingers."
+
+ md2026_raj_border_vigilance:0 "Border Vigilance"
+ md2026_raj_border_vigilance_desc:0 "The shock of the Kashmir crisis has galvanized investment in border security infrastructure, intelligence networks, and rapid-reaction forces. Indian forces along the Line of Control are at a permanently elevated state of readiness."
+
+ md2026_raj_peace_dividend:0 "Peace Dividend"
+ md2026_raj_peace_dividend_desc:0 "By pulling back from the brink and opening dialogue with Pakistan, India has generated a measure of regional goodwill and freed political capital for domestic investment. The fragile peace remains contested at home, but the economic benefits of stability are beginning to accumulate."

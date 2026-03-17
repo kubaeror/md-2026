@@ -1,0 +1,21 @@
+﻿l_english:
+
+ ### MD2026 System Events ###
+
+ # md2026_system.1 - The World in 2026 (Intro News Event)
+ md2026_system.1.t:0 "The World in 2026"
+ md2026_system.1.d:0 "The world of 2026 stands at a historic inflection point. The post-Cold War order has fractured, replaced by a volatile multipolar competition between great powers. Climate change is reshaping the map of human civilization. Artificial intelligence is overturning the economy of nations. From the Baltic to the South China Sea, from the Middle East to the Indo-Pacific, old certainties are dissolving and new dangers are emerging. The decisions made in the years ahead will determine the fate of nations — and yours is one of them."
+ md2026_system.1.o1:0 "The West stands ready to defend its values and its order."
+ md2026_system.1.o2:0 "A new world is rising — and it will not be made in Washington."
+ md2026_system.1.o3:0 "We will chart our own course through the turbulence ahead."
+
+ # md2026_system.2 - Year Anniversary Marker
+ md2026_system.2.t:0 "2027: The World One Year On"
+ md2026_system.2.d:0 "A year has passed since the world entered its current era of crisis and competition. The conflicts, crises, and choices of 2026 have reshaped the geopolitical landscape. Some of the fears of twelve months ago have been realized; others have been averted — for now. The struggle continues."
+ md2026_system.2.o1:0 "We press on."
+
+ # md2026_system.3 - Global Economic Turbulence
+ md2026_system.3.t:0 "Global Economic Turbulence"
+ md2026_system.3.d:0 "A wave of global economic turbulence is rippling through our economy, driven by supply chain disruptions, currency volatility, and weakening international demand. Our industrial base and financial system are feeling the strain. The government must decide how to weather the storm."
+ md2026_system.3.o1:0 "Implement austerity — cut spending and shore up the budget."
+ md2026_system.3.o2:0 "Stimulate growth — inject capital into the economy."

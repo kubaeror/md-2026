@@ -1,0 +1,40 @@
+﻿l_english:
+
+ ### MD2026 AI & Technology Revolution Events ###
+
+ # md2026_tech.1 - AI Breakthrough
+ md2026_tech.1.t:0 "AI Breakthrough"
+ md2026_tech.1.d:0 "Researchers within our borders have achieved a landmark artificial intelligence breakthrough, demonstrating capabilities that far exceed anything previously publicly known. The technology carries profound implications for military power, economic productivity, and social stability. How we exploit this advantage will define our position in the coming era."
+ md2026_tech.1.o1:0 "Prioritize military AI — autonomous systems and decision support."
+ md2026_tech.1.o2:0 "Deploy AI across the civilian economy to drive a productivity boom."
+
+ # md2026_tech.2 - Major Cyber Attack
+ md2026_tech.2.t:0 "Major Cyber Attack"
+ md2026_tech.2.d:0 "A sophisticated state-sponsored cyber operation has penetrated critical government and infrastructure networks, exfiltrating sensitive data and causing significant disruption. Intelligence services have identified the likely perpetrators, but a public response carries escalatory risks. We must decide how to respond to this digital act of aggression."
+ md2026_tech.2.o1:0 "Publicly attribute the attack and launch retaliatory cyber operations."
+ md2026_tech.2.o2:0 "Quietly patch the vulnerabilities and strengthen our defences."
+
+ # md2026_tech.3 - Automation & Job Displacement
+ md2026_tech.3.t:0 "Automation & Job Displacement"
+ md2026_tech.3.d:0 "AI-driven automation is eliminating jobs across our economy at a pace that social safety nets were never designed to handle. Entire sectors are being restructured, and millions of workers face obsolescence. The political pressure to act is enormous, but the right course of action is fiercely debated."
+ md2026_tech.3.o1:0 "Launch universal retraining programmes for displaced workers."
+ md2026_tech.3.o2:0 "Let the market adapt — disruption will create new opportunities."
+ md2026_tech.3.o3:0 "Introduce AI regulation to manage the pace of automation."
+
+ # md2026_tech.10 - Quantum Computing Milestone
+ md2026_tech.10.t:0 "Quantum Computing Milestone"
+ md2026_tech.10.d:0 "Our scientists have achieved quantum advantage — the ability to solve problems that are effectively impossible for classical computers. This milestone opens the door to revolutionary breakthroughs in cryptography, materials science, and optimization, and threatens to make existing encryption obsolete. The strategic implications are staggering."
+ md2026_tech.10.o1:0 "Exploit quantum computing for military code-breaking and intelligence."
+ md2026_tech.10.o2:0 "Share the breakthrough with the scientific community and drive research."
+
+ ### News Events ###
+
+ # md2026_tech_news.1 - AI Breakthrough News
+ md2026_tech_news.1.t:0 "[ROOT.GetName] Claims Historic AI Breakthrough"
+ md2026_tech_news.1.d:0 "[ROOT.GetName] has announced what officials describe as a generational leap in artificial intelligence, prompting alarm and fascination from rival governments. Analysts warn the breakthrough could fundamentally alter the military and economic balance of power."
+ md2026_tech_news.1.o1:0 "The age of artificial intelligence has truly arrived."
+
+ # md2026_tech_news.2 - Major Cyber Attack News
+ md2026_tech_news.2.t:0 "Major Cyber Attack Strikes [ROOT.GetName]"
+ md2026_tech_news.2.d:0 "A devastating cyber attack has struck critical infrastructure across [ROOT.GetName], disrupting government operations and damaging key networks. Officials have pointed to a state actor as the likely perpetrator, raising fears of a new front in great-power competition."
+ md2026_tech_news.2.o1:0 "The digital battlefield is no longer hypothetical."

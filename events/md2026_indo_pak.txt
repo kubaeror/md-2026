@@ -1,0 +1,544 @@
+###################################
+# MD2026 Indo-Pakistan Crisis Events
+# Kashmir border clash, escalation ladder, nuclear shadow, international mediation
+###################################
+
+add_namespace = md2026_indo_pak
+
+###################################
+# md2026_indo_pak.1 - Kashmir Incident
+# A border clash triggers a bilateral crisis
+# Fires for RAJ after 2027 if war support is high
+###################################
+country_event = {
+	id = md2026_indo_pak.1
+	title = md2026_indo_pak.1.t
+	desc = md2026_indo_pak.1.d
+	picture = GFX_report_event_generic_military
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = RAJ
+		date > 2027.1.1
+		has_global_flag = md2026_initialized
+		war_support > 0.40
+		PAK = { exists = yes }
+		NOT = { has_global_flag = md2026_kashmir_crisis }
+		NOT = { has_war_with = PAK }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.7
+			war_support > 0.55
+		}
+		modifier = {
+			factor = 0.5
+			has_country_flag = md2026_raj_border_tension
+		}
+	}
+
+	immediate = {
+		set_global_flag = md2026_kashmir_crisis
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak.1 fired"
+	}
+
+	# Option A: Escalate - show of force
+	option = {
+		name = md2026_indo_pak.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak.1.o1 executed"
+
+		add_war_support = 0.05
+		add_political_power = -25
+
+		set_country_flag = md2026_raj_escalate
+
+		PAK = {
+			country_event = { id = md2026_indo_pak.2 days = 7 }
+		}
+
+		hidden_effect = {
+			news_event = { id = md2026_indo_pak_news.1 hours = 12 }
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 20
+				war_support > 0.60
+			}
+		}
+	}
+
+	# Option B: Demand investigation
+	option = {
+		name = md2026_indo_pak.1.o2
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak.1.o2 executed"
+
+		add_political_power = 25
+		add_stability = 0.03
+
+		set_country_flag = md2026_raj_restrained
+
+		PAK = {
+			country_event = { id = md2026_indo_pak.2 days = 5 }
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 20
+				war_support < 0.45
+			}
+		}
+	}
+}
+
+###################################
+# md2026_indo_pak.2 - PAK: News of the Kashmir Incident
+# Pakistan receives word of the border clash
+###################################
+country_event = {
+	id = md2026_indo_pak.2
+	title = md2026_indo_pak.2.t
+	desc = md2026_indo_pak.2.d
+	picture = GFX_report_event_generic_military
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = PAK
+	}
+
+	# Option A: Mobilize forces along the border
+	option = {
+		name = md2026_indo_pak.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak.2.o1 executed"
+
+		add_war_support = 0.08
+		add_political_power = -25
+		add_manpower = 25000
+
+		set_country_flag = md2026_pak_mobilize
+
+		RAJ = {
+			country_event = { id = md2026_indo_pak.3 days = 10 }
+		}
+
+		ai_chance = {
+			base = 60
+			modifier = {
+				add = 20
+				FROM = { has_country_flag = md2026_raj_escalate }
+			}
+		}
+	}
+
+	# Option B: Call for dialogue and restraint
+	option = {
+		name = md2026_indo_pak.2.o2
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak.2.o2 executed"
+
+		add_political_power = 50
+		add_stability = 0.03
+
+		set_country_flag = md2026_pak_dialogue
+
+		ai_chance = {
+			base = 40
+			modifier = {
+				add = 20
+				FROM = { has_country_flag = md2026_raj_restrained }
+			}
+		}
+	}
+}
+
+###################################
+# md2026_indo_pak.3 - Mobilization on the Border
+# Both sides are massing troops; RAJ must decide its next move
+###################################
+country_event = {
+	id = md2026_indo_pak.3
+	title = md2026_indo_pak.3.t
+	desc = md2026_indo_pak.3.d
+	picture = GFX_report_event_generic_military
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = RAJ
+	}
+
+	# Option A: Maintain pressure — continue the mobilization
+	option = {
+		name = md2026_indo_pak.3.o1
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak.3.o1 executed"
+
+		add_war_support = 0.10
+		add_stability = -0.05
+		add_political_power = -50
+		army_experience = 10
+
+		set_country_flag = md2026_raj_pressure
+
+		# If both sides escalated, move toward nuclear shadow
+		if = {
+			limit = {
+				PAK = { has_country_flag = md2026_pak_mobilize }
+				has_country_flag = md2026_raj_escalate
+			}
+			country_event = { id = md2026_indo_pak.4a days = 14 }
+		}
+
+		# International mediation fires in parallel if a major power is not at war
+		if = {
+			limit = {
+				OR = {
+					USA = { NOT = { has_war = yes } }
+					CHI = { NOT = { has_war = yes } }
+				}
+			}
+			country_event = { id = md2026_indo_pak.4b days = 21 }
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 20
+				has_country_flag = md2026_raj_escalate
+			}
+		}
+	}
+
+	# Option B: Back down — de-escalate unilaterally
+	option = {
+		name = md2026_indo_pak.3.o2
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak.3.o2 executed"
+
+		add_stability = 0.05
+		add_political_power = -50
+		add_war_support = -0.05
+
+		clr_country_flag = md2026_raj_escalate
+		set_country_flag = md2026_raj_deescalated
+
+		PAK = {
+			add_opinion_modifier = { target = RAJ modifier = md2026_diplomatic_outreach }
+		}
+
+		country_event = { id = md2026_indo_pak.5 days = 30 }
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 20
+				war_support < 0.40
+			}
+		}
+	}
+}
+
+###################################
+# md2026_indo_pak.4a - Nuclear Shadow
+# Both sides have escalated fully; the spectre of nuclear war looms
+# Fires for RAJ
+###################################
+country_event = {
+	id = md2026_indo_pak.4a
+	title = md2026_indo_pak.4a.t
+	desc = md2026_indo_pak.4a.d
+	picture = GFX_report_event_generic_military
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = RAJ
+	}
+
+	# Option A: Nuclear posturing — signal deterrence capability
+	option = {
+		name = md2026_indo_pak.4a.o1
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak.4a.o1 executed"
+
+		add_war_support = 0.10
+		add_stability = -0.10
+		add_political_power = -75
+
+		add_timed_idea = {
+			idea = md2026_nuclear_standoff
+			days = 180
+		}
+
+		set_country_flag = md2026_raj_nuclear_posture
+
+		every_country = {
+			limit = {
+				is_major = yes
+				NOT = { tag = RAJ }
+				NOT = { tag = PAK }
+			}
+			add_opinion_modifier = { target = RAJ modifier = embargo }
+		}
+
+		hidden_effect = {
+			news_event = { id = md2026_indo_pak_news.2 hours = 6 }
+		}
+
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	# Option B: Stand down — pull back from the brink
+	option = {
+		name = md2026_indo_pak.4a.o2
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak.4a.o2 executed"
+
+		add_stability = 0.05
+		add_political_power = -50
+		add_war_support = -0.10
+
+		set_country_flag = md2026_raj_stood_down
+
+		PAK = {
+			add_opinion_modifier = { target = RAJ modifier = md2026_diplomatic_outreach }
+		}
+
+		country_event = { id = md2026_indo_pak.5 days = 21 }
+
+		ai_chance = {
+			base = 70
+		}
+	}
+}
+
+###################################
+# md2026_indo_pak.4b - International Mediation
+# Major powers pressure both sides to de-escalate
+# Fires for RAJ
+###################################
+country_event = {
+	id = md2026_indo_pak.4b
+	title = md2026_indo_pak.4b.t
+	desc = md2026_indo_pak.4b.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = RAJ
+	}
+
+	# Option A: Accept mediation
+	option = {
+		name = md2026_indo_pak.4b.o1
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak.4b.o1 executed"
+
+		add_political_power = 50
+		add_stability = 0.05
+
+		set_country_flag = md2026_raj_accepted_mediation
+
+		if = {
+			limit = { has_war_with = PAK }
+			white_peace = { tag = PAK }
+		}
+
+		if = {
+			limit = { USA = { exists = yes } }
+			add_opinion_modifier = { target = USA modifier = improve_relation }
+			reverse_add_opinion_modifier = { target = USA modifier = improve_relation }
+		}
+		if = {
+			limit = { CHI = { exists = yes } }
+			add_opinion_modifier = { target = CHI modifier = improve_relation }
+			reverse_add_opinion_modifier = { target = CHI modifier = improve_relation }
+		}
+		PAK = {
+			add_opinion_modifier = { target = RAJ modifier = improve_relation }
+		}
+
+		country_event = { id = md2026_indo_pak.5 days = 14 }
+
+		ai_chance = {
+			base = 70
+			modifier = {
+				add = 20
+				has_country_flag = md2026_raj_stood_down
+			}
+		}
+	}
+
+	# Option B: Reject mediation — continue on our own terms
+	option = {
+		name = md2026_indo_pak.4b.o2
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak.4b.o2 executed"
+
+		add_war_support = 0.05
+		add_political_power = -50
+
+		set_country_flag = md2026_raj_rejected_mediation
+
+		every_country = {
+			limit = {
+				is_major = yes
+				NOT = { tag = RAJ }
+				NOT = { tag = PAK }
+			}
+			add_opinion_modifier = { target = RAJ modifier = md2026_diplomatic_disapproval }
+		}
+
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = 20
+				has_country_flag = md2026_raj_nuclear_posture
+			}
+		}
+	}
+}
+
+###################################
+# md2026_indo_pak.5 - Uneasy Peace
+# The crisis concludes; long-term consequences settle in
+# Fires for RAJ
+###################################
+country_event = {
+	id = md2026_indo_pak.5
+	title = md2026_indo_pak.5.t
+	desc = md2026_indo_pak.5.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = RAJ
+	}
+
+	# Option A: Crisis as opportunity — accelerate military modernization
+	option = {
+		name = md2026_indo_pak.5.o1
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak.5.o1 executed"
+
+		add_political_power = -75
+		add_war_support = 0.05
+		army_experience = 20
+
+		add_timed_idea = {
+			idea = md2026_raj_border_vigilance
+			days = 365
+		}
+
+		PAK = {
+			add_opinion_modifier = { target = RAJ modifier = embargo }
+		}
+
+		hidden_effect = {
+			news_event = { id = md2026_indo_pak_news.3 hours = 12 }
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 20
+				has_country_flag = md2026_raj_escalate
+			}
+		}
+	}
+
+	# Option B: Normalize — use the crisis to restart dialogue
+	option = {
+		name = md2026_indo_pak.5.o2
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak.5.o2 executed"
+
+		add_political_power = 75
+		add_stability = 0.05
+
+		add_timed_idea = {
+			idea = md2026_raj_peace_dividend
+			days = 365
+		}
+
+		PAK = {
+			add_opinion_modifier = { target = RAJ modifier = improve_relation }
+		}
+
+		hidden_effect = {
+			news_event = { id = md2026_indo_pak_news.3 hours = 12 }
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 20
+				has_country_flag = md2026_raj_accepted_mediation
+			}
+		}
+	}
+}
+
+###################################
+# NEWS EVENTS
+###################################
+
+# Kashmir clash makes international headlines
+news_event = {
+	id = md2026_indo_pak_news.1
+	title = md2026_indo_pak_news.1.t
+	desc = md2026_indo_pak_news.1.d
+	picture = GFX_news_event_generic_military
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_indo_pak_news.1.o1
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak_news.1 acknowledged"
+		ai_chance = { base = 100 }
+	}
+}
+
+# Nuclear shadow escalation
+news_event = {
+	id = md2026_indo_pak_news.2
+	title = md2026_indo_pak_news.2.t
+	desc = md2026_indo_pak_news.2.d
+	picture = GFX_news_event_generic_military
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_indo_pak_news.2.o1
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak_news.2 acknowledged"
+		ai_chance = { base = 100 }
+	}
+}
+
+# Crisis concludes
+news_event = {
+	id = md2026_indo_pak_news.3
+	title = md2026_indo_pak_news.3.t
+	desc = md2026_indo_pak_news.3.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = md2026_indo_pak_news.3.o1
+		log = "[GetDateText]: [This.GetName]: md2026_indo_pak_news.3 acknowledged"
+		ai_chance = { base = 100 }
+	}
+}

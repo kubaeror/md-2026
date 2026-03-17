@@ -1,0 +1,39 @@
+﻿l_english:
+
+ ### MD2026 Climate & Energy Crisis Events ###
+
+ # md2026_climate.1 - Record Heat Wave
+ md2026_climate.1.t:0 "Record Heat Wave"
+ md2026_climate.1.d:0 "An unprecedented heat wave has gripped the country, with temperatures shattering all-time records. Power grids are buckling under the strain of cooling demand, and agricultural losses are mounting across affected regions. The crisis demands an immediate government response."
+ md2026_climate.1.o1:0 "Declare a climate emergency and mobilize relief."
+ md2026_climate.1.o2:0 "Invest in long-term climate adaptation infrastructure."
+
+ # md2026_climate.2 - Energy Transition Crossroads
+ md2026_climate.2.t:0 "Energy Transition Crossroads"
+ md2026_climate.2.d:0 "Our nation faces a defining choice in its energy policy. International pressure to decarbonize is intensifying, while domestic industries warn that a rapid transition could devastate employment and competitiveness. The decisions made now will shape our industrial base for a generation."
+ md2026_climate.2.o1:0 "Accelerate the green transition — commit to renewables."
+ md2026_climate.2.o2:0 "Maintain a pragmatic energy mix — keep fossil fuels online."
+
+ # md2026_climate.3 - Critical Mineral Race
+ md2026_climate.3.t:0 "Critical Mineral Race"
+ md2026_climate.3.d:0 "The global competition for lithium, cobalt, and rare earth elements is intensifying as the clean energy transition accelerates. Control of these strategic resources will determine which nations dominate the industries of the future. We must act to secure our supply chains before rivals lock up the world's deposits."
+ md2026_climate.3.o1:0 "Secure critical mineral supply chains through new partnerships."
+ md2026_climate.3.o2:0 "Invest in domestic recycling and alternative material research."
+
+ # md2026_climate.10 - Catastrophic Flooding
+ md2026_climate.10.t:0 "Catastrophic Flooding"
+ md2026_climate.10.d:0 "Relentless monsoon rains have triggered catastrophic flooding across the region, displacing millions and overwhelming emergency services. Critical infrastructure has been destroyed, and the humanitarian toll continues to climb. The scale of the disaster demands an immediate and coordinated national response."
+ md2026_climate.10.o1:0 "Appeal for international humanitarian aid."
+ md2026_climate.10.o2:0 "Handle the disaster through domestic resources alone."
+
+ ### News Events ###
+
+ # md2026_climate_news.1 - Record Heat Wave News
+ md2026_climate_news.1.t:0 "Deadly Heat Wave Grips [ROOT.GetName]"
+ md2026_climate_news.1.d:0 "Record-breaking temperatures have struck [ROOT.GetName], with authorities reporting mass casualties from heat-related illness. The government has declared an emergency as power infrastructure strains under unprecedented cooling demand."
+ md2026_climate_news.1.o1:0 "A sobering reminder of climate change's costs."
+
+ # md2026_climate_news.2 - Asian Flooding News
+ md2026_climate_news.2.t:0 "Catastrophic Floods Devastate [ROOT.GetName]"
+ md2026_climate_news.2.d:0 "Catastrophic flooding has inundated vast swathes of [ROOT.GetName], leaving millions homeless and destroying critical infrastructure. The international community has been called upon to assist with one of the region's worst natural disasters in living memory."
+ md2026_climate_news.2.o1:0 "The human cost of climate change is staggering."

@@ -1,0 +1,62 @@
+﻿l_english:
+
+ ### MD2026 Middle East Events ###
+
+ # md2026_mideast.1 - Syria: Post-Assad Reconstruction
+ md2026_mideast.1.t:0 "Syria: Charting a Course After Assad"
+ md2026_mideast.1.d:0 "The fall of Bashar al-Assad's regime has left Syria shattered but full of potential. After more than a decade of civil war, the new government must decide what kind of state to build from the ruins. The choices made now — on governance, religion, and power-sharing — will define Syria's trajectory for a generation."
+ md2026_mideast.1.o1:0 "Pursue a secular, inclusive reconstruction programme."
+ md2026_mideast.1.o2:0 "Build an Islamic-oriented governance model rooted in the revolution's values."
+ md2026_mideast.1.o3:0 "Negotiate a fragile power-sharing arrangement between factions."
+
+ # md2026_mideast.2 - Syria: International Aid Conference
+ md2026_mideast.2.t:0 "Syria: International Aid Conference"
+ md2026_mideast.2.d:0 "The international community has assembled to discuss reconstruction aid for Syria, with billions of dollars on the table. However, each potential donor comes with conditions and strategic interests attached. Syria must navigate between Western benefactors and regional Arab partners without compromising its sovereignty."
+ md2026_mideast.2.o1:0 "Accept Western aid — embrace political conditionality for reconstruction funds."
+ md2026_mideast.2.o2:0 "Seek support from Arab partners — build regional solidarity."
+
+ # md2026_mideast.10 - Israel: Gaza Situation Evolves
+ md2026_mideast.10.t:0 "Israel: Gaza — The Path Forward"
+ md2026_mideast.10.d:0 "The Gaza conflict has entered a critical new phase. International pressure is mounting, regional stability is fraying, and the domestic political situation within Israel is intensifying. Decisions made now will determine whether Israel faces prolonged military entanglement, a fragile peace, or a historic diplomatic opening."
+ md2026_mideast.10.o1:0 "Continue military operations until objectives are fully achieved."
+ md2026_mideast.10.o2:0 "Pursue a ceasefire and open negotiations with mediators."
+ md2026_mideast.10.o3:0 "Expand Abraham Accords diplomacy — normalise relations with Arab states."
+
+ # md2026_mideast.20 - Iran: Nuclear Program Crossroads
+ md2026_mideast.20.t:0 "Iran: Nuclear Crossroads"
+ md2026_mideast.20.d:0 "Iran's nuclear programme has reached a decisive juncture. The Islamic Republic's stockpile of enriched uranium now places it within weeks of a potential bomb. With the JCPOA effectively dead, Tehran must choose between pursuing breakout capability and risking military confrontation, or returning to the negotiating table."
+ md2026_mideast.20.o1:0 "Accelerate enrichment — push toward nuclear breakout capability."
+ md2026_mideast.20.o2:0 "Negotiate a new JCPOA — return to diplomacy with the West."
+ md2026_mideast.20.o3:0 "Maintain strategic ambiguity — continue as a nuclear threshold state."
+
+ # md2026_mideast.21 - Israel: Iran Nuclear Breakout
+ md2026_mideast.21.t:0 "Israel: Iran on the Threshold of the Bomb"
+ md2026_mideast.21.d:0 "Intelligence confirms that Iran has passed the point of no return in its nuclear programme. For Israel, this represents an existential threat it cannot ignore. The window for action is rapidly closing, and the cabinet must decide how to respond before Iran achieves operational nuclear capability."
+ md2026_mideast.21.o1:0 "Launch a preemptive strike on Iranian nuclear facilities."
+ md2026_mideast.21.o2:0 "Pursue maximum diplomatic pressure through our allies."
+ md2026_mideast.21.o3:0 "Accelerate our own deterrence capabilities in response."
+
+ # md2026_mideast.22 - USA: Iran Nuclear Breakout
+ md2026_mideast.22.t:0 "USA: Iran Crosses the Nuclear Threshold"
+ md2026_mideast.22.d:0 "Iran has achieved nuclear breakout capability, a development that the United States has long vowed to prevent. The administration now faces the most consequential foreign policy decision of its term — how to respond to a nuclear-armed Iran without triggering a wider regional war."
+ md2026_mideast.22.o1:0 "Impose maximum pressure sanctions to choke Iran's economy."
+ md2026_mideast.22.o2:0 "Provide diplomatic and material support for Israeli action."
+ md2026_mideast.22.o3:0 "Reluctantly accept Iran as a nuclear threshold state."
+
+ # md2026_mideast.30 - Yemen: Path Forward
+ md2026_mideast.30.t:0 "Yemen: A Nation at the Crossroads"
+ md2026_mideast.30.d:0 "Yemen's long and devastating war has reached a fragile moment of potential transition. The Houthi movement controls most of the country's north while the internationally recognised government struggles in the south. International stakeholders are pressing for a settlement, but the terms and the power-sharing arrangements remain deeply contested."
+ md2026_mideast.30.o1:0 "Form a national unity government — pursue a negotiated peace."
+ md2026_mideast.30.o2:0 "Consolidate Houthi dominance — continue the armed resistance."
+
+ ### News Events ###
+
+ # md2026_mideast_news.1 - Israel-Palestine Ceasefire
+ md2026_mideast_news.1.t:0 "Israel and Gaza Reach Ceasefire Agreement"
+ md2026_mideast_news.1.d:0 "After months of intense fighting and international diplomatic pressure, Israel and Hamas have agreed to a ceasefire mediated by Egypt and Qatar. The fragile halt to hostilities offers a window for humanitarian relief, though the underlying political questions remain unresolved."
+ md2026_mideast_news.1.o1:0 "A cautious step toward stability in a volatile region."
+
+ # md2026_mideast_news.2 - Iran nuclear crisis
+ md2026_mideast_news.2.t:0 "Iran Announces Nuclear Breakthrough"
+ md2026_mideast_news.2.d:0 "Iranian state media has announced that the Islamic Republic has achieved uranium enrichment levels consistent with weapons-grade material, sending shockwaves through world capitals. Emergency sessions of the UN Security Council have been convened as Israel and the United States weigh their response."
+ md2026_mideast_news.2.o1:0 "The Middle East stands on the edge of a nuclear crisis."

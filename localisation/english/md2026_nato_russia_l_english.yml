@@ -1,0 +1,90 @@
+﻿l_english:
+ # md2026_nato_russia.1 - Baltic Border Incident
+ md2026_nato_russia.1.t:0 "Shots Fired: Border Incident on NATO's Eastern Flank"
+ md2026_nato_russia.1.d:0 "A serious incident along the border has left personnel injured and military hardware destroyed, with all evidence pointing to Russian involvement. The incident threatens to ignite a broader escalation along NATO's most exposed frontier. How the government responds in the coming hours will shape the alliance's credibility."
+ md2026_nato_russia.1.o1:0 "Invoke Article 5 — demand NATO consultations"
+ md2026_nato_russia.1.o2:0 "Resolve this bilaterally with Moscow"
+ md2026_nato_russia.1.o3:0 "Reinforce the border — de-escalate quietly"
+
+ # md2026_nato_russia.2 - USA: NATO Article 5 Consultations
+ md2026_nato_russia.2.t:0 "NATO Ally Requests Article 5 Consultations"
+ md2026_nato_russia.2.d:0 "A NATO ally has formally requested consultations under Article 5 following a provocative border incident attributed to Russian forces. The Alliance is looking to Washington for leadership. The response chosen will send a signal not only to Moscow but to every NATO member watching from Warsaw to Vilnius."
+ md2026_nato_russia.2.o1:0 "Deploy reinforcements to the Eastern flank"
+ md2026_nato_russia.2.o2:0 "Issue a formal diplomatic warning to Russia"
+ md2026_nato_russia.2.o3:0 "Downplay the incident — avoid escalation"
+
+ # md2026_nato_russia.3 - Russia: NATO Deploys to Eastern Flank
+ md2026_nato_russia.3.t:0 "NATO Forces Mass on Russia's Western Border"
+ md2026_nato_russia.3.d:0 "The United States has ordered additional land and air forces to reinforce NATO's Eastern flank in direct response to the border incident. Moscow must now decide how to answer this military demonstration without triggering the very conflict it seeks to avoid — or use."
+ md2026_nato_russia.3.o1:0 "Match NATO's buildup — mobilise reserves"
+ md2026_nato_russia.3.o2:0 "Issue nuclear deterrence warnings"
+ md2026_nato_russia.3.o3:0 "Propose immediate de-escalation talks"
+
+ # md2026_nato_russia.4 - Russia: Bilateral Incident Discussion
+ md2026_nato_russia.4.t:0 "A Formal Complaint Arrives from the Frontier"
+ md2026_nato_russia.4.d:0 "The neighbouring state has lodged a formal bilateral protest over the border incident, presenting evidence of Russian military involvement. Moscow's response will determine whether the affair can be quietly buried or whether it becomes a lasting point of contention between the two nations."
+ md2026_nato_russia.4.o1:0 "Deny all involvement — reject the allegations"
+ md2026_nato_russia.4.o2:0 "Acknowledge the incident — offer cooperation"
+
+ # md2026_nato_russia.10 - Cyber Attack on NATO Member
+ md2026_nato_russia.10.t:0 "State-Sponsored Cyber Attack Cripples Critical Infrastructure"
+ md2026_nato_russia.10.d:0 "A sophisticated cyber operation has struck power grids, financial networks, and government communications across the country. Western intelligence agencies have traced the attack to Russian state-sponsored actors with high confidence. The assault tests the limits of NATO's collective defence in the digital domain."
+ md2026_nato_russia.10.o1:0 "Retaliate with cyber counter-operations"
+ md2026_nato_russia.10.o2:0 "Harden defences against further attacks"
+ md2026_nato_russia.10.o3:0 "Publicly attribute and condemn internationally"
+
+ # md2026_nato_russia.20 - USA: NATO Arctic Response to Russian Militarisation
+ md2026_nato_russia.20.t:0 "Russia Fortifies the Arctic — NATO Must Respond"
+ md2026_nato_russia.20.d:0 "Moscow has completed a major militarisation programme in the Arctic, establishing new bases, deploying missile systems, and extending its reach across the high north. The strategic balance of the Arctic has shifted, and the United States must determine whether to contest Russian dominance or seek accommodation."
+ md2026_nato_russia.20.o1:0 "Deploy NATO forces to the Arctic"
+ md2026_nato_russia.20.o2:0 "Lodge a formal diplomatic protest"
+
+ # md2026_nato_russia.21 - NATO Allies: Arctic Buildup Response
+ md2026_nato_russia.21.t:0 "The Arctic Front: Alliance Solidarity Required"
+ md2026_nato_russia.21.d:0 "Washington has called on NATO allies to contribute to a coordinated Arctic defence posture following Russia's military expansion in the high north. The alliance's credibility and cohesion depend on a unified response to this emerging strategic theatre."
+ md2026_nato_russia.21.o1:0 "Increase defence spending for Arctic operations"
+ md2026_nato_russia.21.o2:0 "Prioritise diplomacy over military buildup"
+
+ # md2026_nato_russia.22 - Russia: NATO Expands Eastern Flank
+ md2026_nato_russia.22.t:0 "NATO Advances on Russia's Doorstep"
+ md2026_nato_russia.22.d:0 "NATO member states have significantly expanded their military presence along Russia's western border, with new battle groups, missile defence installations, and enhanced air policing missions. Moscow views the buildup as a direct threat requiring a firm counter-response."
+ md2026_nato_russia.22.o1:0 "Order a matching military buildup"
+ md2026_nato_russia.22.o2:0 "Propose arms control negotiations"
+
+ # md2026_nato_russia.23 - Russia: Kaliningrad Reinforcement Decision
+ md2026_nato_russia.23.t:0 "Kaliningrad: Russia's Western Dagger"
+ md2026_nato_russia.23.d:0 "The General Staff has presented options for reinforcing the Kaliningrad exclave — Russia's strategically vital outpost on the Baltic Sea, flanked by Poland and Lithuania. Deploying advanced missile systems there would dramatically complicate NATO planning across the entire Eastern flank."
+ md2026_nato_russia.23.o1:0 "Deploy missile systems to Kaliningrad"
+ md2026_nato_russia.23.o2:0 "Maintain current strategic posture"
+
+ # md2026_nato_russia.24 - USA: Russia Proposes Arms Control Talks
+ md2026_nato_russia.24.t:0 "Moscow Offers Arms Control Negotiations"
+ md2026_nato_russia.24.d:0 "Russia has proposed a new round of bilateral arms control talks, citing mutual risks from the ongoing military buildup along NATO's eastern frontier. The offer arrives with strings attached and sceptics in Washington warn it may be a tactical manoeuvre to buy time rather than a genuine olive branch."
+ md2026_nato_russia.24.o1:0 "Engage in good-faith arms talks"
+ md2026_nato_russia.24.o2:0 "Reject negotiations — peace through strength"
+
+ # md2026_nato_russia.25 - Japan: Regional Security Implications
+ md2026_nato_russia.25.t:0 "Global Rearmament Reaches the Pacific"
+ md2026_nato_russia.25.d:0 "The simultaneous militarisation of Russia's Arctic and Washington's expansion of the Pentagon budget have reshaped the global strategic environment. Japan sits at the convergence of these pressures, facing a more assertive Russia to its north and an emboldened China to its west. Tokyo must define its own response."
+ md2026_nato_russia.25.o1:0 "Accelerate Japan's rearmament programme"
+ md2026_nato_russia.25.o2:0 "Respect constitutional pacifist limits"
+
+ # md2026_nato_russia_news.1 - News: Baltic border incident
+ md2026_nato_russia_news.1.t:0 "BREAKING: Armed Incident on NATO's Eastern Border"
+ md2026_nato_russia_news.1.d:0 "A violent border incident has erupted along NATO's eastern frontier, with multiple casualties reported and Russian involvement suspected. Alliance governments have been convened for emergency consultations as the situation remains fluid and highly dangerous."
+ md2026_nato_russia_news.1.o1:0 "A grave provocation"
+
+ # md2026_nato_russia_news.2 - News: Major cyber attack
+ md2026_nato_russia_news.2.t:0 "Massive Cyber Attack Strikes NATO Member State"
+ md2026_nato_russia_news.2.d:0 "A large-scale cyber offensive has disrupted critical infrastructure across a NATO member state, with intelligence agencies pointing to Russian state actors. The attack has prompted emergency sessions in Brussels and raised urgent questions about the alliance's readiness for hybrid warfare."
+ md2026_nato_russia_news.2.o1:0 "Hybrid warfare has arrived"
+
+ # md2026_nato_russia_news.10 - News: NATO Arctic deployment
+ md2026_nato_russia_news.10.t:0 "NATO Deploys Forces to the Arctic in Response to Russia"
+ md2026_nato_russia_news.10.d:0 "The alliance has announced the deployment of multinational forces to the Arctic region following Russia's completion of a major high-north militarisation programme. The move marks the opening of a new strategic front in the NATO-Russia confrontation."
+ md2026_nato_russia_news.10.o1:0 "The Arctic becomes a frontline"
+
+ # md2026_nato_russia_news.11 - News: Russia deploys missiles to Kaliningrad
+ md2026_nato_russia_news.11.t:0 "Russia Stations Advanced Missiles in Kaliningrad"
+ md2026_nato_russia_news.11.d:0 "Moscow has confirmed the deployment of advanced surface-to-surface missile systems to the Kaliningrad exclave, placing much of Central Europe within strike range. NATO allies Poland and Germany have summoned Russian ambassadors to demand an explanation as alliance defence ministers prepare an emergency response."
+ md2026_nato_russia_news.11.o1:0 "The Baltic region is at risk"

@@ -1,0 +1,27 @@
+﻿l_english:
+ # md2026_migration.1 - European Country: Migration Surge
+ md2026_migration.1.t:0 "The Migration Crisis Reaches Our Borders"
+ md2026_migration.1.d:0 "Tens of thousands of migrants and refugees from Sub-Saharan Africa and the Middle East are crossing into the country in record numbers, driven by conflict, drought, and economic collapse in their homelands. The government faces mounting pressure from humanitarian organisations, border communities, and a public sharply divided on how to respond."
+ md2026_migration.1.o1:0 "Open our borders — welcome all refugees"
+ md2026_migration.1.o2:0 "Implement controlled quotas and screening"
+ md2026_migration.1.o3:0 "Close the borders — nationals first"
+
+ # md2026_migration.2 - EU Migration Pact Crisis
+ md2026_migration.2.t:0 "The EU Migration Pact: Berlin Demands a Common Solution"
+ md2026_migration.2.d:0 "With multiple European capitals under strain from record migrant arrivals, Germany has called an emergency summit to forge a binding EU-wide migration pact. The proposal for mandatory burden-sharing among member states has already provoked fierce opposition from governments along both the eastern flank and the Mediterranean frontier."
+ md2026_migration.2.o1:0 "Push for EU-wide mandatory burden-sharing"
+ md2026_migration.2.o2:0 "Accept diverse national solutions"
+
+ # md2026_migration.3 - EU Member: Migration Burden Sharing
+ md2026_migration.3.t:0 "Brussels Demands Our Compliance on Migration Quotas"
+ md2026_migration.3.d:0 "Germany has tabled a formal EU migration burden-sharing mechanism, assigning each member state mandatory refugee quotas. The proposal places the government in a difficult position: compliance strains domestic public opinion while refusal risks deepening rifts within the European Union."
+ md2026_migration.3.o1:0 "Accept EU quotas — comply with the pact"
+ md2026_migration.3.o2:0 "Reject quotas; offer financial compensation instead"
+ md2026_migration.3.o3:0 "Refuse entirely — sovereignty comes first"
+
+ # md2026_migration.10 - Populist Rise from Migration
+ md2026_migration.10.t:0 "The Populist Backlash Arrives"
+ md2026_migration.10.d:0 "The government's open-borders policy has become the defining fault line of domestic politics. Far-right and nationalist movements have surged in the polls, capitalising on public anxieties over integration, crime, and cultural change. The ruling coalition must decide whether to hold its course or adjust its stance before the next election."
+ md2026_migration.10.o1:0 "Address populist concerns — tighten policy"
+ md2026_migration.10.o2:0 "Hold firm on progressive immigration values"
+ md2026_migration.10.o3:0 "Pivot right — adopt stricter immigration limits"

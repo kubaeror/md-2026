@@ -1,0 +1,114 @@
+﻿l_english:
+ # md2026_ru_ukr.1 - Russia: Ceasefire Proposal
+ md2026_ru_ukr.1.t:0 "A Moment to End the War?"
+ md2026_ru_ukr.1.d:0 "With the front lines grinding toward stalemate, voices within the Kremlin are raising the possibility of a negotiated halt to hostilities. A ceasefire proposal on current lines could freeze the conflict and allow Russia to consolidate its gains, though it would require accepting a Ukraine still standing on its feet."
+ md2026_ru_ukr.1.o1:0 "Propose ceasefire along current lines"
+ md2026_ru_ukr.1.o2:0 "Reject talks — press the offensive"
+
+ # md2026_ru_ukr.2 - Ukraine: Russia Proposes Ceasefire
+ md2026_ru_ukr.2.t:0 "Moscow Offers a Ceasefire"
+ md2026_ru_ukr.2.d:0 "Russia has extended a proposal to halt hostilities along the current front lines. Kyiv faces a defining choice: accept a ceasefire that leaves occupied territory in Russian hands, or reject the overture and continue a war whose outcome remains uncertain."
+ md2026_ru_ukr.2.o1:0 "Accept — negotiate a path to peace"
+ md2026_ru_ukr.2.o2:0 "Reject — the fight continues"
+
+ # md2026_ru_ukr.3 - Russia: Negotiate Terms
+ md2026_ru_ukr.3.t:0 "Setting the Terms of Peace"
+ md2026_ru_ukr.3.d:0 "Ukraine has agreed to enter negotiations. Russia must now decide what it will demand at the table. A pragmatic settlement could bring stability and relief from Western sanctions; maximalist demands risk collapsing the talks before they have begun."
+ md2026_ru_ukr.3.o1:0 "Accept frozen conflict — white peace"
+ md2026_ru_ukr.3.o2:0 "Demand full recognition of annexations"
+
+ # md2026_ru_ukr.4 - Ukraine: Ceasefire Established
+ md2026_ru_ukr.4.t:0 "The Guns Fall Silent"
+ md2026_ru_ukr.4.d:0 "A ceasefire has been established between Russia and Ukraine, halting active hostilities along the current lines of contact. Ukraine must now decide how to respond to the fragile peace: focus on rebuilding a shattered nation, or treat this pause as a temporary respite in a war that may yet resume."
+ md2026_ru_ukr.4.o1:0 "Begin reconstruction and recovery"
+ md2026_ru_ukr.4.o2:0 "Rearm — this is only a pause"
+
+ # md2026_ru_ukr.5 - Russia: Ukraine Rejects Ceasefire
+ md2026_ru_ukr.5.t:0 "Kyiv Refuses to Negotiate"
+ md2026_ru_ukr.5.d:0 "Ukraine has rejected Russia's ceasefire proposal, signaling its intention to continue fighting. Moscow must decide how to respond to this rebuff — whether to intensify the military campaign or maintain the current operational tempo while reassessing options."
+ md2026_ru_ukr.5.o1:0 "Escalate — mobilize additional forces"
+ md2026_ru_ukr.5.o2:0 "Hold the line — sustain current strategy"
+
+ # md2026_ru_ukr.6 - Ukraine: Russia Demands Full Recognition
+ md2026_ru_ukr.6.t:0 "Russia's Unacceptable Ultimatum"
+ md2026_ru_ukr.6.d:0 "Peace talks have collapsed after Russia demanded Ukraine formally recognize the annexation of all occupied territories — a condition Kyiv cannot accept without abandoning its constitutional obligation to its people. Russia's maximalist posture has left no room for a negotiated settlement."
+ md2026_ru_ukr.6.o1:0 "Rally the nation — war continues"
+ md2026_ru_ukr.6.o2:0 "Appeal to the international community"
+
+ # md2026_ru_ukr.10 - Russia: US-Mediated Peace Process
+ md2026_ru_ukr.10.t:0 "Washington Offers to Broker Peace"
+ md2026_ru_ukr.10.d:0 "The United States has put forward a formal proposal to mediate a settlement between Russia and Ukraine. Washington's involvement carries significant leverage, but accepting American mediation means ceding some control over the terms of any eventual agreement."
+ md2026_ru_ukr.10.o1:0 "Accept US mediation"
+ md2026_ru_ukr.10.o2:0 "Reject — no foreign interference"
+
+ # md2026_ru_ukr.11 - Ukraine: US-Mediated Settlement Offer
+ md2026_ru_ukr.11.t:0 "An American Peace Plan"
+ md2026_ru_ukr.11.d:0 "The United States has presented Ukraine with a settlement framework that would end the war at the cost of territorial concessions. Accepting means acknowledging the loss of occupied regions in exchange for peace and reconstruction aid; rejecting means the war grinds on without a guarantee of American support."
+ md2026_ru_ukr.11.o1:0 "Accept the deal — end the war"
+ md2026_ru_ukr.11.o2:0 "Refuse — we will not surrender our land"
+
+ # md2026_ru_ukr.12 - USA: Peace Deal Achieved
+ md2026_ru_ukr.12.t:0 "American Diplomacy Ends the War"
+ md2026_ru_ukr.12.d:0 "The United States-brokered peace agreement between Russia and Ukraine has been signed, ending the largest land war in Europe since 1945. Washington's diplomatic initiative has secured a historic settlement, though the durability of the agreement remains an open question."
+ md2026_ru_ukr.12.o1:0 "A historic diplomatic achievement"
+
+ # md2026_ru_ukr.13 - USA: Peace Efforts Failed
+ md2026_ru_ukr.13.t:0 "Peace Talks Collapse"
+ md2026_ru_ukr.13.d:0 "American mediation efforts have failed to produce an agreement. One or both parties have rejected the terms on offer, and the war in Ukraine continues with no resolution in sight. Washington must reassess its strategy."
+ md2026_ru_ukr.13.o1:0 "Reassess our approach"
+
+ # md2026_ru_ukr.20 - Ukraine: Russia Fortifies the Front
+ md2026_ru_ukr.20.t:0 "The Russian Line Hardens"
+ md2026_ru_ukr.20.d:0 "Russian forces have completed an extensive fortification of their defensive lines across the front, erecting layered obstacles and hardened positions that significantly complicate any Ukrainian offensive operation. Kyiv must adapt its operational approach to the new reality on the ground."
+ md2026_ru_ukr.20.o1:0 "Adapt tactics — expand drone warfare"
+ md2026_ru_ukr.20.o2:0 "Seek international pressure on Russia"
+
+ # md2026_ru_ukr.21 - Russia: Ukraine Adapting Tactics
+ md2026_ru_ukr.21.t:0 "Ukrainian Forces Shift Their Approach"
+ md2026_ru_ukr.21.d:0 "Intelligence reports indicate that Ukrainian forces are adapting their operational tactics in response to Russia's fortified defensive lines, placing greater reliance on drone warfare and precision strike operations. The Kremlin must respond to this evolving threat."
+ md2026_ru_ukr.21.o1:0 "Reinforce positions and hold the line"
+ md2026_ru_ukr.21.o2:0 "Plan a counter-offensive"
+
+ # md2026_ru_ukr.22 - USA: Ukraine Seeks International Pressure
+ md2026_ru_ukr.22.t:0 "Kyiv Appeals to Washington"
+ md2026_ru_ukr.22.d:0 "Ukraine has appealed directly to the United States, requesting stronger international pressure on Russia following the hardening of its defensive lines. Washington must decide whether to escalate diplomatic and military support or push both sides toward the negotiating table."
+ md2026_ru_ukr.22.o1:0 "Condemn Russia and increase aid"
+ md2026_ru_ukr.22.o2:0 "Push both sides toward negotiations"
+
+ # md2026_ru_ukr.23 - Russia: US Pushes for Negotiations
+ md2026_ru_ukr.23.t:0 "Washington Presses for Talks"
+ md2026_ru_ukr.23.d:0 "The United States has applied diplomatic pressure on Moscow to enter peace negotiations with Ukraine. Russia must weigh the potential benefits of a negotiated settlement against the perception that engaging under American pressure signals weakness."
+ md2026_ru_ukr.23.o1:0 "Accept — enter negotiations"
+ md2026_ru_ukr.23.o2:0 "Reject — escalate instead"
+
+ # md2026_ru_ukr.24 - Ukraine: US Pushes for Negotiations
+ md2026_ru_ukr.24.t:0 "Washington Urges Kyiv to Negotiate"
+ md2026_ru_ukr.24.d:0 "The United States has urged Ukraine to consider entering peace talks, citing the high costs of continued conflict. Kyiv must decide whether to engage cautiously with the American initiative or refuse and continue prosecuting the war on its own terms."
+ md2026_ru_ukr.24.o1:0 "Agree to talks cautiously"
+ md2026_ru_ukr.24.o2:0 "Refuse — we fight on"
+
+ # md2026_ru_ukr.25 - Russia: Ukrainian Drone Threat
+ md2026_ru_ukr.25.t:0 "Ukraine Deploys Advanced Drone Warfare"
+ md2026_ru_ukr.25.d:0 "Ukraine has dramatically expanded its drone warfare capability, deploying long-range strike drones against Russian logistics, air defense systems, and rear-area infrastructure. The scale and sophistication of the campaign poses a new and significant challenge to Russian military operations."
+ md2026_ru_ukr.25.o1:0 "Develop and deploy countermeasures"
+ md2026_ru_ukr.25.o2:0 "Retaliate with escalation"
+
+ # md2026_ru_ukr_news.1 - Ceasefire declared
+ md2026_ru_ukr_news.1.t:0 "CEASEFIRE: Russia and Ukraine Halt Hostilities"
+ md2026_ru_ukr_news.1.d:0 "A ceasefire agreement between the Russian Federation and Ukraine has come into effect, freezing the front lines and ending months of intense combat operations. International observers cautiously welcome the development while warning that a durable peace remains elusive."
+ md2026_ru_ukr_news.1.o1:0 "A fragile but welcome step"
+
+ # md2026_ru_ukr_news.2 - Peace talks collapse
+ md2026_ru_ukr_news.2.t:0 "BREAKING: Russia-Ukraine Peace Talks Collapse"
+ md2026_ru_ukr_news.2.d:0 "Diplomatic efforts to bring an end to the war in Ukraine have failed, with peace negotiations breaking down amid irreconcilable demands from both sides. The international community reacts with alarm as fighting resumes across the front."
+ md2026_ru_ukr_news.2.o1:0 "The war continues"
+
+ # md2026_ru_ukr_news.3 - US-mediated peace deal signed
+ md2026_ru_ukr_news.3.t:0 "PEACE: US-Brokered Agreement Signed in Ukraine"
+ md2026_ru_ukr_news.3.d:0 "A United States-mediated peace agreement between Russia and Ukraine has been formally signed, bringing an end to years of devastating conflict. The deal has drawn mixed reactions globally, with Western allies divided over the territorial concessions involved."
+ md2026_ru_ukr_news.3.o1:0 "History will judge this moment"
+
+ # md2026_ru_ukr_news.10 - US increases Ukraine aid
+ md2026_ru_ukr_news.10.t:0 "United States Announces Major Ukraine Aid Package"
+ md2026_ru_ukr_news.10.d:0 "Washington has announced a significant new package of military and economic assistance for Ukraine, reaffirming American commitment to Kyiv's defense. The announcement draws sharp condemnation from Moscow and signals a continued Western investment in the outcome of the conflict."
+ md2026_ru_ukr_news.10.o1:0 "Western resolve holds firm"

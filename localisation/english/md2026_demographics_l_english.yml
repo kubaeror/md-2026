@@ -1,0 +1,37 @@
+﻿l_english:
+
+ ### MD2026 Demographics & Population Events ###
+
+ # md2026_demographics.1 - Aging Population Crisis
+ md2026_demographics.1.t:0 "Aging Population Crisis"
+ md2026_demographics.1.d:0 "Our society is growing old faster than it can adapt. With birth rates at historic lows and a swelling cohort of retirees placing unprecedented strain on pension systems and healthcare, economic growth is threatened. The window to act is narrowing — decisive policy must be set now."
+ md2026_demographics.1.o1:0 "Open the doors — launch comprehensive immigration reform."
+ md2026_demographics.1.o2:0 "Invest in automation and robotics to replace lost labour."
+ md2026_demographics.1.o3:0 "Implement pro-natalist policies to encourage larger families."
+
+ # md2026_demographics.2 - Youth Bulge Instability
+ md2026_demographics.2.t:0 "Youth Bulge Instability"
+ md2026_demographics.2.d:0 "A massive generation of young people is entering the workforce to find there are not nearly enough jobs to absorb them. Youth unemployment is fuelling anger, social instability, and the appeal of radical movements. The government must find a way to harness this demographic energy before it turns destructive."
+ md2026_demographics.2.o1:0 "Launch a massive state-led jobs and infrastructure programme."
+ md2026_demographics.2.o2:0 "Expand military recruitment to absorb young men."
+ md2026_demographics.2.o3:0 "Encourage emigration to relieve domestic pressure."
+
+ # md2026_demographics.3 - Brain Drain
+ md2026_demographics.3.t:0 "Brain Drain"
+ md2026_demographics.3.d:0 "Our most educated and skilled workers are leaving for better opportunities abroad in alarming numbers. Research institutions are depleted, key industries are struggling to find qualified staff, and the cycle shows no sign of reversing. We must act to stem the outflow of talent before long-term damage becomes irreversible."
+ md2026_demographics.3.o1:0 "Create targeted retention incentives for skilled workers."
+ md2026_demographics.3.o2:0 "Engage the diaspora — leverage expatriate talent and remittances."
+ md2026_demographics.3.o3:0 "Accept the trend and restructure the economy accordingly."
+
+ # md2026_demographics.10 - Urbanization Pressure
+ md2026_demographics.10.t:0 "Urbanization Pressure"
+ md2026_demographics.10.d:0 "Millions are flooding into our cities faster than infrastructure can absorb them. Sprawling informal settlements ring the megacities, sanitation and transport systems are collapsing under the strain, and social tensions are rising. How the government responds to this tide of urbanization will define the country's development for decades."
+ md2026_demographics.10.o1:0 "Invest in smart city technology and urban infrastructure."
+ md2026_demographics.10.o2:0 "Promote decentralization — incentivize growth in secondary cities."
+
+ ### News Events ###
+
+ # md2026_demographics_news.1 - Aging Crisis News
+ md2026_demographics_news.1.t:0 "Demographic Time Bomb: [ROOT.GetName] Confronts Aging Crisis"
+ md2026_demographics_news.1.d:0 "[ROOT.GetName] has announced sweeping measures to address a deepening demographic crisis, as the proportion of citizens over 65 reaches record highs. Economists warn of a decade-long drag on growth if structural reforms are not implemented swiftly."
+ md2026_demographics_news.1.o1:0 "Demographics will define the next era of great-power competition."

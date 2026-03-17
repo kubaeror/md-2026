@@ -1,0 +1,55 @@
+﻿l_english:
+ # md2026_taiwan.1 - China: Taiwan Crisis Escalation
+ md2026_taiwan.1.t:0 "The Taiwan Question: A Decision for History"
+ md2026_taiwan.1.d:0 "The People's Liberation Army stands ready. Taiwan's de facto independence has long been a thorn in the side of national reunification, and the moment to act — or demonstrate resolve — has arrived. The eyes of the world are watching Beijing."
+ md2026_taiwan.1.o1:0 "Impose a naval blockade on Taiwan"
+ md2026_taiwan.1.o2:0 "Launch the amphibious invasion"
+ md2026_taiwan.1.o3:0 "Conduct large-scale military exercises"
+
+ # md2026_taiwan.2 - USA: China Blockades Taiwan
+ md2026_taiwan.2.t:0 "Beijing's Blockade: Washington Must Respond"
+ md2026_taiwan.2.d:0 "The People's Liberation Army Navy has imposed a naval blockade on Taiwan, strangling the island's sea lanes and sending shockwaves through Pacific trade routes. Allied capitals await Washington's next move — inaction risks emboldening Beijing while confrontation risks igniting a broader conflict."
+ md2026_taiwan.2.o1:0 "Deploy the Navy — break the blockade"
+ md2026_taiwan.2.o2:0 "Issue sanctions and diplomatic protests"
+ md2026_taiwan.2.o3:0 "Accept the new strategic reality"
+
+ # md2026_taiwan.3 - Japan: China Blockades Taiwan
+ md2026_taiwan.3.t:0 "Taiwan Blockade: Tokyo Faces a Defining Choice"
+ md2026_taiwan.3.d:0 "China's naval blockade of Taiwan has brought the crisis to Japan's doorstep. Taiwan sits astride vital sea lanes connecting Japan to its energy suppliers and export markets. The question of whether Japan stands with its American ally or seeks to stay clear of the confrontation will define its strategic posture for a generation."
+ md2026_taiwan.3.o1:0 "Support US naval operations in the Strait"
+ md2026_taiwan.3.o2:0 "Maintain strategic neutrality"
+
+ # md2026_taiwan.4 - USA: China Invades Taiwan
+ md2026_taiwan.4.t:0 "China Invades Taiwan — America Must Choose"
+ md2026_taiwan.4.d:0 "Chinese amphibious forces have crossed the Taiwan Strait. The island's defenses are under intense pressure and time is running short. Decades of strategic ambiguity have given way to an unambiguous question: will the United States defend Taiwan, or concede the Indo-Pacific to Beijing's dominance?"
+ md2026_taiwan.4.o1:0 "Defend Taiwan — enter the war"
+ md2026_taiwan.4.o2:0 "Arm Taiwan, short of direct intervention"
+ md2026_taiwan.4.o3:0 "This is not America's fight"
+
+ # md2026_taiwan.5 - Japan: China Invades Taiwan
+ md2026_taiwan.5.t:0 "Taiwan Under Invasion: Japan's Hour of Decision"
+ md2026_taiwan.5.d:0 "Chinese forces have launched a full-scale invasion of Taiwan. Japan's Self-Defense Forces are on highest alert as missile launches and air incursions are detected across the region. The question of whether Japan commits to the defense of the democratic Pacific order — or stands aside — can no longer be deferred."
+ md2026_taiwan.5.o1:0 "Join the defense of Taiwan"
+ md2026_taiwan.5.o2:0 "Reinforce defenses; do not intervene directly"
+
+ # md2026_taiwan.6 - China: US Challenges the Blockade
+ md2026_taiwan.6.t:0 "American Warships Enter the Strait"
+ md2026_taiwan.6.d:0 "A United States carrier strike group has entered the Taiwan Strait in direct challenge to Beijing's blockade. The two most powerful navies in the world now face each other at close quarters. The decision made in the next hours may determine whether a maritime confrontation escalates into open war."
+ md2026_taiwan.6.o1:0 "Confront the US Navy — hold the line"
+ md2026_taiwan.6.o2:0 "Back down and lift the blockade"
+ md2026_taiwan.6.o3:0 "Hold position — avoid direct engagement"
+
+ # md2026_taiwan_news.1 - News: China blockades Taiwan
+ md2026_taiwan_news.1.t:0 "BREAKING: China Imposes Naval Blockade on Taiwan"
+ md2026_taiwan_news.1.d:0 "The People's Liberation Army Navy has sealed maritime approaches to Taiwan in an unprecedented show of force. International shipping has been diverted as the blockade takes effect, triggering emergency consultations among Pacific powers."
+ md2026_taiwan_news.1.o1:0 "Alarming developments"
+
+ # md2026_taiwan_news.2 - News: China invades Taiwan
+ md2026_taiwan_news.2.t:0 "BREAKING: Chinese Forces Launch Invasion of Taiwan"
+ md2026_taiwan_news.2.d:0 "In the largest amphibious operation since the Second World War, People's Liberation Army forces have begun landing operations on Taiwan. The island's government has declared martial law and appealed for international assistance as fierce fighting erupts along the coastline."
+ md2026_taiwan_news.2.o1:0 "A war in the Pacific has begun"
+
+ # md2026_taiwan_news.3 - News: China lifts Taiwan blockade
+ md2026_taiwan_news.3.t:0 "Beijing Lifts Taiwan Blockade Following US Naval Deployment"
+ md2026_taiwan_news.3.d:0 "China has announced the conclusion of its naval exercises and the lifting of restrictions on Taiwan's sea lanes, following the arrival of a United States carrier strike group in the Strait. Analysts describe the climbdown as a significant diplomatic setback for Beijing."
+ md2026_taiwan_news.3.o1:0 "A tense standoff resolved"

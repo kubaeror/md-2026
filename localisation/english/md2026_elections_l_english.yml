@@ -1,0 +1,128 @@
+﻿l_english:
+ # md2026_elections.1 - Generic: Upcoming Elections
+ md2026_elections.1.t:0 "National Elections"
+ md2026_elections.1.d:0 "The nation approaches a pivotal electoral moment. Polling stations are preparing as citizens prepare to cast their votes, with the outcome set to shape the country's political direction for years to come."
+ md2026_elections.1.o1:0 "Center-right coalition claims victory"
+ md2026_elections.1.o2:0 "Center-left coalition claims victory"
+ md2026_elections.1.o3:0 "Populist surge upends the establishment"
+ md2026_elections.1.o4:0 "Incumbent government is re-elected"
+
+ # md2026_elections.10 - USA: 2028 Midterm Elections
+ md2026_elections.10.t:0 "United States: 2028 Midterm Elections"
+ md2026_elections.10.d:0 "Americans head to the polls for the 2028 midterm elections, with every seat in the House and a third of the Senate at stake. The results will define the balance of power in Washington and determine the legislative fate of the current administration's agenda."
+ md2026_elections.10.o1:0 "Republicans retain both chambers"
+ md2026_elections.10.o2:0 "Democrats reclaim Congress"
+ md2026_elections.10.o3:0 "Split Congress locks down Washington"
+
+ # md2026_elections.20 - France: 2027 Presidential Election
+ md2026_elections.20.t:0 "France: 2027 Presidential Election"
+ md2026_elections.20.d:0 "France holds its presidential election, with the contest shaping up to be one of the most consequential in recent memory. The outcome will determine France's relationship with its European partners and its role in the Western alliance at a time of mounting global uncertainty."
+ md2026_elections.20.o1:0 "Centrist coalition secures continuity"
+ md2026_elections.20.o2:0 "National Rally sweeps to power"
+ md2026_elections.20.o3:0 "Left coalition forms new government"
+
+ # md2026_elections.30 - Germany: 2029 Federal Election
+ md2026_elections.30.t:0 "Germany: 2029 Federal Election"
+ md2026_elections.30.d:0 "Germany's federal election has produced results with far-reaching consequences for European stability. The composition of the new Bundestag will shape Berlin's commitments to NATO, its relationship with Brussels, and its posture toward Russia."
+ md2026_elections.30.o1:0 "CDU/CSU wins — Merz continues"
+ md2026_elections.30.o2:0 "SPD returns to power under Pistorius"
+ md2026_elections.30.o3:0 "AfD surge — Weidel takes the chancellery"
+ md2026_elections.30.o4:0 "Greens lead a new coalition under Habeck"
+
+ # md2026_elections.40 - UK: 2029 General Election
+ md2026_elections.40.t:0 "United Kingdom: 2029 General Election"
+ md2026_elections.40.d:0 "Britain goes to the polls in a general election that will determine the direction of the country for the next parliament. The contest pits established parties against a resurgent populist movement, with NATO commitments and trade policy at the forefront of debate."
+ md2026_elections.40.o1:0 "Labour re-elected — Starmer continues"
+ md2026_elections.40.o2:0 "Conservatives return with Badenoch"
+ md2026_elections.40.o3:0 "Reform UK storms into government"
+
+ # md2026_elections.50 - Japan: 2028 General Election
+ md2026_elections.50.t:0 "Japan: 2028 General Election"
+ md2026_elections.50.d:0 "Japan holds a general election as the country grapples with regional security pressures and a long-stalled economy. The composition of the new Diet will determine Tokyo's defense posture and the pace of its military modernization program."
+ md2026_elections.50.o1:0 "LDP retains power — Ishiba continues"
+ md2026_elections.50.o2:0 "Opposition coalition wins — Noda leads"
+ md2026_elections.50.o3:0 "LDP hawks ascend — Kobayashi takes charge"
+
+ # md2026_elections.60 - South Korea: 2027 Presidential Election
+ md2026_elections.60.t:0 "South Korea: 2027 Presidential Election"
+ md2026_elections.60.d:0 "South Korea holds its presidential election in the wake of the 2024 martial law crisis, a polarizing episode that fractured public trust in the conservative establishment. The vote will determine whether the Republic charts a reformist course or attempts a restoration of the old order."
+ md2026_elections.60.o1:0 "Lee Jae-myung leads liberal renewal"
+ md2026_elections.60.o2:0 "Han Dong-hoon restores conservative order"
+ md2026_elections.60.o3:0 "Election deadlocked — crisis deepens"
+
+ # md2026_elections.70 - Brazil: 2030 Presidential Election
+ md2026_elections.70.t:0 "Brazil: 2030 Presidential Election"
+ md2026_elections.70.d:0 "Brazil's presidential race has come to a head, with the Workers' Party, the Bolsonarista right, and centrist reformers all vying for the Palácio do Planalto. The winner will steer Latin America's largest economy at a critical juncture for the region's geopolitical alignment."
+ md2026_elections.70.o1:0 "PT wins — Haddad becomes president"
+ md2026_elections.70.o2:0 "Bolsonaristas return with de Freitas"
+ md2026_elections.70.o3:0 "Tebet's centrist coalition prevails"
+
+ # md2026_elections.80 - Poland: 2027 Parliamentary Election
+ md2026_elections.80.t:0 "Poland: 2027 Parliamentary Election"
+ md2026_elections.80.d:0 "Poland holds parliamentary elections that will decide whether the pro-European coalition government survives or yields to a resurgent Law and Justice party. The outcome carries direct implications for Warsaw's relations with Brussels and its role as NATO's eastern anchor."
+ md2026_elections.80.o1:0 "Tusk coalition re-elected"
+ md2026_elections.80.o2:0 "PiS returns — Morawiecki back in power"
+ md2026_elections.80.o3:0 "New center-right coalition under Trzaskowski"
+
+ # md2026_elections.90 - Italy: 2028 General Election
+ md2026_elections.90.t:0 "Italy: 2028 General Election"
+ md2026_elections.90.d:0 "Italy goes to the polls in a contest that will determine whether Giorgia Meloni's nationalist government earns a fresh mandate or yields to a resurgent center-left and populist opposition. Rome's political direction carries weight for European cohesion and Italy's fiscal commitments."
+ md2026_elections.90.o1:0 "Meloni re-elected — FdI holds power"
+ md2026_elections.90.o2:0 "PD-led center-left coalition wins"
+ md2026_elections.90.o3:0 "Five Star Movement forms populist government"
+
+ # md2026_elections.100 - India (RAJ): 2029 General Election
+ md2026_elections.100.t:0 "India: 2029 General Election"
+ md2026_elections.100.desc:0 "India's vast democratic exercise has concluded. The world's most populous democracy has delivered its verdict, with implications for New Delhi's foreign policy, its economic trajectory, and its role in an increasingly fractured global order."
+ md2026_elections.100.a0:0 "BJP's Yogi Adityanath wins the mandate"
+ md2026_elections.100.a1:0 "Congress surges — Rahul Gandhi leads India"
+ md2026_elections.100.a2:0 "Kejriwal's AAP achieves breakthrough"
+
+ # md2026_elections.110 - Turkey: 2028 Presidential Election
+ md2026_elections.110.t:0 "Turkey: 2028 Presidential Election"
+ md2026_elections.110.desc:0 "Turkey heads to the polls in a tightly contested presidential election. The result will determine Ankara's foreign policy course between NATO commitments, Eurasian ambitions, and its assertive role across the Middle East and Central Asia."
+ md2026_elections.110.a0:0 "Erdogan secures another term"
+ md2026_elections.110.a1:0 "Imamoglu leads opposition to victory"
+ md2026_elections.110.a2:0 "Yavas builds a new consensus"
+
+ # md2026_elections.120 - Indonesia (IND): 2029 Election
+ md2026_elections.120.t:0 "Indonesia: 2029 General Election"
+ md2026_elections.120.desc:0 "Indonesia, the world's largest Muslim-majority democracy, holds its general election. The result will shape Jakarta's posture in the Indo-Pacific, its relationship with ASEAN partners, and its balancing act between the great powers."
+ md2026_elections.120.a0:0 "Prabowo secures a second term"
+ md2026_elections.120.a1:0 "Baswedan leads reform coalition to power"
+ md2026_elections.120.a2:0 "Pranowo wins on stability platform"
+
+ # md2026_elections.130 - Mexico: 2030 Presidential Election
+ md2026_elections.130.t:0 "Mexico: 2030 Presidential Election"
+ md2026_elections.130.desc:0 "Mexico holds its presidential election as the country faces mounting security challenges and economic pressure from shifting North American trade dynamics. The contest between Morena's successor movement and the traditional opposition will determine the republic's course for the next six years."
+ md2026_elections.130.a0:0 "Morena successor carries the mandate"
+ md2026_elections.130.a1:0 "PAN candidate restores the right"
+ md2026_elections.130.a2:0 "PRI makes a surprising comeback"
+
+ # md2026_elections.140 - South Africa (SAF): 2029 Election
+ md2026_elections.140.t:0 "South Africa: 2029 General Election"
+ md2026_elections.140.desc:0 "South Africa holds a pivotal general election as the ANC's grip on power continues to weaken. The result will determine whether the post-apartheid governing coalition can be rebuilt, or whether the country enters a new era of contested coalition politics."
+ md2026_elections.140.a0:0 "Ramaphosa's ANC holds the coalition"
+ md2026_elections.140.a1:0 "DA's Steenhuisen leads new coalition"
+ md2026_elections.140.a2:0 "EFF's Malema reshapes South African politics"
+
+ # md2026_elections.150 - Argentina: 2027 Election
+ md2026_elections.150.t:0 "Argentina: 2027 Presidential Election"
+ md2026_elections.150.desc:0 "Argentina holds its presidential election amid an ongoing economic restructuring program and sharp political polarization. The vote will determine whether the country continues its radical fiscal experiment or pivots back toward Peronism."
+ md2026_elections.150.a0:0 "Milei re-elected on reform mandate"
+ md2026_elections.150.a1:0 "Kicillof leads Peronist restoration"
+ md2026_elections.150.a2:0 "Macri returns as stabilizing force"
+
+ # md2026_elections.160 - Canada: 2029 Federal Election
+ md2026_elections.160.t:0 "Canada: 2029 Federal Election"
+ md2026_elections.160.desc:0 "Canada heads to the polls in a federal election shaped by economic anxieties and the country's evolving relationship with its southern neighbor. The result will define Ottawa's foreign policy posture and its domestic priorities for the next parliamentary term."
+ md2026_elections.160.a0:0 "Liberals hold on under Trudeau"
+ md2026_elections.160.a1:0 "Poilievre leads Conservatives to victory"
+ md2026_elections.160.a2:0 "NDP's Singh forms minority government"
+
+ # md2026_elections.170 - Australia (AST): 2028 Federal Election
+ md2026_elections.170.t:0 "Australia: 2028 Federal Election"
+ md2026_elections.170.desc:0 "Australia holds a federal election as the region faces growing strategic competition in the Indo-Pacific. Voters will choose between a Labor government focused on multilateral engagement and a Liberal opposition promising a harder line on defense and China policy."
+ md2026_elections.170.a0:0 "Labor re-elected — Albanese continues"
+ md2026_elections.170.a1:0 "Liberals return to power under Dutton"
+ md2026_elections.170.a2:0 "Greens' Bandt leads surprise coalition"

@@ -1,0 +1,18 @@
+﻿l_english:
+ # md2026_nato_article5.1 - NATO Under Attack!
+ md2026_nato_article5.1.t:0 "A NATO Ally Is Under Attack"
+ md2026_nato_article5.1.d:0 "A member of the North Atlantic Alliance has come under armed attack. The Treaty of Washington is unambiguous: an attack on one is an attack on all. The decision now rests with Washington — invoke Article 5 and commit the full weight of American power to collective defence, or step back and watch the alliance's credibility collapse."
+ md2026_nato_article5.1.o1:0 "Invoke Article 5 — defend the alliance"
+ md2026_nato_article5.1.o2:0 "Condemn the attack — but do not invoke Article 5"
+
+ # md2026_nato_article5.2 - Article 5 Invoked: Rally to the Alliance
+ md2026_nato_article5.2.t:0 "Article 5 Invoked: The Alliance Calls Us to Arms"
+ md2026_nato_article5.2.d:0 "The United States has formally invoked Article 5 of the Washington Treaty following the attack on a NATO member. Every member of the alliance now faces the same fundamental question: honour the collective defence commitment and mobilise forces, offer limited support, or stand aside at the risk of fracturing the post-war security order."
+ md2026_nato_article5.2.o1:0 "Full commitment — mobilise all available forces"
+ md2026_nato_article5.2.o2:0 "Provide limited logistical and intelligence support"
+ md2026_nato_article5.2.o3:0 "Refuse to participate in this conflict"
+
+ # md2026_nato_article5.3 - Article 5 Stand Down
+ md2026_nato_article5.3.t:0 "The Crisis Ends: Alliance Forces Stand Down"
+ md2026_nato_article5.3.d:0 "With hostilities concluded and peace restored, NATO's Article 5 commitment has served its purpose. Alliance forces can now return to peacetime postures. The invocation of collective defence has been a defining test of the alliance — one that has demonstrated both its unity and its resolve."
+ md2026_nato_article5.3.o1:0 "Stand down — the alliance has held"

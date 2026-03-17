@@ -1,0 +1,51 @@
+﻿l_english:
+
+ ### MD2026 Random Events ###
+
+ # md2026_random.1 - Regional Crisis: Border Incident
+ md2026_random.1.t:0 "Border Incident"
+ md2026_random.1.d:0 "A violent incident along our borders has sparked a diplomatic crisis. With a neighbouring conflict already inflaming tensions, any misstep risks pulling us directly into the fighting. The government must decide quickly how to respond before the situation spirals out of control."
+ md2026_random.1.o1:0 "Pursue a diplomatic resolution — open back-channel talks."
+ md2026_random.1.o2:0 "Reinforce our border positions — show strength."
+
+ # md2026_random.2 - Natural Disaster
+ md2026_random.2.t:0 "Natural Disaster Strikes"
+ md2026_random.2.d:0 "A major natural disaster has devastated part of our territory, leaving thousands dead or missing and destroying vital infrastructure. Emergency services are overwhelmed, and the full scale of the humanitarian crisis is still emerging. The government must mobilize a response immediately."
+ md2026_random.2.o1:0 "Mobilize all emergency services for domestic disaster relief."
+ md2026_random.2.o2:0 "Appeal to the international community for humanitarian assistance."
+
+ # md2026_random.3 - Technology Breakthrough
+ md2026_random.3.t:0 "Unexpected Technology Breakthrough"
+ md2026_random.3.d:0 "Researchers have achieved an unexpected breakthrough with far-reaching implications. The discovery has arrived faster than anyone anticipated, and there is now an urgent question of how to best exploit it before rivals catch up. We must decide where to direct our investment."
+ md2026_random.3.o1:0 "Invest in commercialization — bring the technology to market."
+ md2026_random.3.o2:0 "Classify the research and focus on military applications."
+
+ # md2026_random.4 - Terrorism Incident
+ md2026_random.4.t:0 "Terrorist Attack"
+ md2026_random.4.d:0 "A major terrorist attack has struck within our borders, killing dozens and shattering public confidence in national security. The population is demanding a response. How we react will shape both our domestic politics and our international reputation in the months ahead."
+ md2026_random.4.o1:0 "Launch a comprehensive security crackdown."
+ md2026_random.4.o2:0 "Call for national unity — respond with resilience, not fear."
+
+ # md2026_random.5 - Pandemic Scare
+ md2026_random.5.t:0 "Pandemic Scare"
+ md2026_random.5.d:0 "A new infectious disease has emerged and is spreading rapidly, with the World Health Organization warning of potential pandemic conditions. Our public health infrastructure is being tested, and the economic implications of containment measures could be severe. We must chart our course before the outbreak widens."
+ md2026_random.5.o1:0 "Implement strict lockdown measures to contain the spread."
+ md2026_random.5.o2:0 "Keep the economy open — manage risk without shutting down society."
+
+ # md2026_random.6 - Economic Shock: Market Crash
+ md2026_random.6.t:0 "Market Crash"
+ md2026_random.6.d:0 "Financial markets have crashed, wiping out trillions in paper wealth and triggering a crisis of confidence across our economy. Banks are under stress, investment is freezing, and economists are warning of a prolonged recession if the government does not intervene decisively. The response must be swift."
+ md2026_random.6.o1:0 "Launch an emergency bailout and stimulus package."
+ md2026_random.6.o2:0 "Let the market correct itself — resist the pressure to intervene."
+
+ # md2026_random.7 - Cyber Attack on Critical Infrastructure
+ md2026_random.7.t:0 "Cyber Attack on Critical Infrastructure"
+ md2026_random.7.d:0 "Hostile cyber actors have successfully penetrated our critical infrastructure networks, disrupting power grids, water systems, and financial networks in a coordinated attack. The damage is being assessed, but the vulnerability it has exposed is deeply alarming. We must respond."
+ md2026_random.7.o1:0 "Invest immediately in comprehensive cyber defence upgrades."
+ md2026_random.7.o2:0 "Launch retaliatory cyber operations against the suspected perpetrators."
+
+ # md2026_random.8 - Mass Protests
+ md2026_random.8.t:0 "Mass Protests Erupt"
+ md2026_random.8.d:0 "Tens of thousands have taken to the streets across the country, driven to desperation by economic hardship and political grievances. The protest movement is growing by the day, and security forces are struggling to maintain order. The government must decide whether to offer concessions or stand firm."
+ md2026_random.8.o1:0 "Make concessions — open dialogue with protest leaders."
+ md2026_random.8.o2:0 "Restore order — disperse the protests and reassert authority."
