@@ -2026,3 +2026,746 @@ md2026_idn_military_path = {
 		factor = 35
 	}
 }
+
+# ============================================================
+# HUNGARY (HUN)
+# Historical path: Orbán sovereignty — EU confrontation, eastern opening,
+#                  battery hub economy, Zrínyi military programme
+# Alternative path: EU pragmatism — negotiate funds, Visegrád reform agenda
+# ============================================================
+md2026_hun_historical = {
+	allowed = { original_tag = HUN }
+	name = "Hungary 2026 Historical"
+	desc = "Orbán's sovereignty drive: confront Brussels, open to China, build a battery-hub economy and reform the Honvéd."
+
+	enable = {
+		original_tag = HUN
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_HUN_orban_legacy
+		MD2026_HUN_domestic_politics
+		MD2026_HUN_fidesz_consolidation
+		MD2026_HUN_opposition_crackdown
+		MD2026_HUN_constitutional_court
+		MD2026_HUN_managed_democracy
+		MD2026_HUN_sovereign_hungary
+		MD2026_HUN_eu_policy
+		MD2026_HUN_eu_confrontation
+		MD2026_HUN_visegrad_leadership
+		MD2026_HUN_economic_sovereignty
+		MD2026_HUN_battery_hub
+		MD2026_HUN_eastern_opening
+		MD2026_HUN_industrial_expansion
+		MD2026_HUN_china_trade_deal
+		MD2026_HUN_economic_fortress
+		MD2026_HUN_military_development
+		MD2026_HUN_leopard_fleet
+		MD2026_HUN_airforce_modernization
+		MD2026_HUN_honved_reform
+		MD2026_HUN_defense_industry
+		MD2026_HUN_regional_deterrence
+	}
+
+	weight = {
+		factor = 70
+	}
+}
+
+md2026_hun_eu_path = {
+	allowed = { original_tag = HUN }
+	name = "Hungary 2026 EU Pragmatism"
+	desc = "Hungary opts for EU fund negotiations, Visegrád reform leadership, and rule-of-law compliance."
+
+	enable = {
+		original_tag = HUN
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_HUN_orban_legacy
+		MD2026_HUN_domestic_politics
+		MD2026_HUN_fidesz_consolidation
+		MD2026_HUN_constitutional_court
+		MD2026_HUN_sovereign_hungary
+		MD2026_HUN_eu_policy
+		MD2026_HUN_eu_pragmatism
+		MD2026_HUN_eu_funds_negotiation
+		MD2026_HUN_eu_reform_agenda
+		MD2026_HUN_economic_sovereignty
+		MD2026_HUN_battery_hub
+		MD2026_HUN_industrial_expansion
+		MD2026_HUN_economic_fortress
+		MD2026_HUN_military_development
+		MD2026_HUN_leopard_fleet
+		MD2026_HUN_honved_reform
+		MD2026_HUN_regional_deterrence
+	}
+
+	weight = {
+		factor = 30
+	}
+}
+
+# ============================================================
+# SWEDEN (SWE)
+# Historical path: NATO integration, Gripen/Saab defence, welfare reform,
+#                  Nordic pact, nuclear revival, northern resources
+# ============================================================
+md2026_swe_historical = {
+	allowed = { original_tag = SWE }
+	name = "Sweden 2026 Historical"
+	desc = "Sweden deepens NATO integration, builds a Saab-led defence export economy, and leads the Nordic industrial revival."
+
+	enable = {
+		original_tag = SWE
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_SWE_nato_integration
+		MD2026_SWE_nordic_security
+		MD2026_SWE_nato_full_integration
+		MD2026_SWE_nordic_battle_group
+		MD2026_SWE_gothland_fortress
+		MD2026_SWE_baltics_shield
+		MD2026_SWE_northern_europe_anchor
+		MD2026_SWE_defense_industry
+		MD2026_SWE_saab_expansion
+		MD2026_SWE_submarine_program
+		MD2026_SWE_archer_artillery
+		MD2026_SWE_arms_exports
+		MD2026_SWE_defense_champion
+		MD2026_SWE_domestic_reform
+		MD2026_SWE_welfare_reform
+		MD2026_SWE_migration_policy
+		MD2026_SWE_crime_crackdown
+		MD2026_SWE_economic_modernization
+		MD2026_SWE_sweden_renewed
+		MD2026_SWE_green_economy
+		MD2026_SWE_nuclear_revival
+		MD2026_SWE_critical_minerals
+		MD2026_SWE_hydrogen_economy
+		MD2026_SWE_northern_resources
+		MD2026_SWE_industrial_powerhouse
+	}
+
+	weight = {
+		factor = 70
+	}
+}
+
+# ============================================================
+# FINLAND (FIN)
+# Historical path: Fortress Finland, F-35 fleet, total defence, sisu nation
+# ============================================================
+md2026_fin_historical = {
+	allowed = { original_tag = FIN }
+	name = "Finland 2026 Historical"
+	desc = "Nordic Sentinel: fortify the eastern border, lock in F-35s, build total defence society, and anchor NATO's north-eastern flank."
+
+	enable = {
+		original_tag = FIN
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_FIN_nordic_sentinel
+		MD2026_FIN_eastern_border
+		MD2026_FIN_border_fortifications
+		MD2026_FIN_mine_barrier
+		MD2026_FIN_forest_warfare
+		MD2026_FIN_reserve_system
+		MD2026_FIN_fortress_finland
+		MD2026_FIN_nato_role
+		MD2026_FIN_nato_eastern_flank
+		MD2026_FIN_us_bilateral
+		MD2026_FIN_f35_program
+		MD2026_FIN_joint_exercises
+		MD2026_FIN_nato_anchor
+		MD2026_FIN_economic_resilience
+		MD2026_FIN_nokia_renaissance
+		MD2026_FIN_forest_industry
+		MD2026_FIN_tech_hub
+		MD2026_FIN_export_push
+		MD2026_FIN_innovation_economy
+		MD2026_FIN_social_resilience
+		MD2026_FIN_total_defense
+		MD2026_FIN_skilled_immigration
+		MD2026_FIN_psychological_resilience
+		MD2026_FIN_birth_rate_support
+		MD2026_FIN_sisu_nation
+	}
+
+	weight = {
+		factor = 70
+	}
+}
+
+# ============================================================
+# GREECE (GRE)
+# Historical path: Aegean sovereignty, navy expansion, energy hub,
+#                  Aegean hegemon
+# ============================================================
+md2026_gre_historical = {
+	allowed = { original_tag = GRE }
+	name = "Greece 2026 Historical"
+	desc = "Hellenic Revival: assert Aegean sovereignty against Turkey, expand the navy, become a Mediterranean energy hub, and cement Balkan influence."
+
+	enable = {
+		original_tag = GRE
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_GRE_hellenic_revival
+		MD2026_GRE_aegean_sovereignty
+		MD2026_GRE_air_defense_upgrade
+		MD2026_GRE_naval_expansion
+		MD2026_GRE_aegean_patrol
+		MD2026_GRE_eastern_med_partnership
+		MD2026_GRE_hellenic_deterrent
+		MD2026_GRE_economic_reform
+		MD2026_GRE_debt_restructuring
+		MD2026_GRE_tourism_powerhouse
+		MD2026_GRE_shipping_industry
+		MD2026_GRE_tech_greece
+		MD2026_GRE_mediterranean_economy
+		MD2026_GRE_energy_hub
+		MD2026_GRE_eastmed_pipeline
+		MD2026_GRE_renewables
+		MD2026_GRE_lng_terminal
+		MD2026_GRE_greece_eu_energy
+		MD2026_GRE_energy_champion
+		MD2026_GRE_balkan_strategy
+		MD2026_GRE_border_control
+		MD2026_GRE_eu_solidarity
+		MD2026_GRE_balkan_cooperation
+		MD2026_GRE_diaspora_investment
+		MD2026_GRE_hellenic_influence
+	}
+
+	weight = {
+		factor = 70
+	}
+}
+
+# ============================================================
+# SERBIA (SER)
+# Historical path: Kosovo hard line, four pillars, Rafale, Jadar lithium
+# Alternative path: EU accession priority
+# ============================================================
+md2026_ser_historical = {
+	allowed = { original_tag = SER }
+	name = "Serbia 2026 Historical"
+	desc = "Serbian Crossroads: hard line on Kosovo, multi-vector four pillars diplomacy, Rafale jets, and Jadar lithium to fuel the Balkan Tiger economy."
+
+	enable = {
+		original_tag = SER
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_SER_serbian_crossroads
+		MD2026_SER_kosovo_policy
+		MD2026_SER_kosovo_hardline
+		MD2026_SER_northern_kosmet
+		MD2026_SER_un_campaign
+		MD2026_SER_strategic_patience
+		MD2026_SER_four_pillars
+		MD2026_SER_russia_partnership
+		MD2026_SER_china_investment
+		MD2026_SER_sovereign_path
+		MD2026_SER_military_modernization
+		MD2026_SER_rafale_purchase
+		MD2026_SER_ground_forces
+		MD2026_SER_defense_industry
+		MD2026_SER_regional_military_power
+		MD2026_SER_economic_development
+		MD2026_SER_mining_boom
+		MD2026_SER_industrial_zone
+		MD2026_SER_beograd_waterfront
+		MD2026_SER_infrastructure_investment
+		MD2026_SER_balkan_tiger
+	}
+
+	weight = {
+		factor = 70
+	}
+}
+
+md2026_ser_eu_path = {
+	allowed = { original_tag = SER }
+	name = "Serbia 2026 EU Path"
+	desc = "Serbia prioritises EU accession talks, western engagement, and dialogue over the Kosovo hard line."
+
+	enable = {
+		original_tag = SER
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_SER_serbian_crossroads
+		MD2026_SER_kosovo_policy
+		MD2026_SER_dialogue_continuation
+		MD2026_SER_un_campaign
+		MD2026_SER_strategic_patience
+		MD2026_SER_four_pillars
+		MD2026_SER_eu_accession
+		MD2026_SER_western_engagement
+		MD2026_SER_sovereign_path
+		MD2026_SER_military_modernization
+		MD2026_SER_rafale_purchase
+		MD2026_SER_ground_forces
+		MD2026_SER_regional_military_power
+		MD2026_SER_economic_development
+		MD2026_SER_mining_boom
+		MD2026_SER_beograd_waterfront
+		MD2026_SER_balkan_tiger
+	}
+
+	weight = {
+		factor = 30
+	}
+}
+
+# ============================================================
+# CZECH REPUBLIC (CZE)
+# Historical path: Arms exports, NATO pillar, democracy, Dukovany nuclear
+# ============================================================
+md2026_cze_historical = {
+	allowed = { original_tag = CZE }
+	name = "Czech Republic 2026 Historical"
+	desc = "Central Europe Pivot: world-class arms exports, NATO reliability, democratic consolidation, and Dukovany nuclear expansion."
+
+	enable = {
+		original_tag = CZE
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_CZE_central_europe_pivot
+		MD2026_CZE_arms_powerhouse
+		MD2026_CZE_small_arms_export
+		MD2026_CZE_armored_vehicles
+		MD2026_CZE_nato_artillery
+		MD2026_CZE_defense_tech
+		MD2026_CZE_arms_champion
+		MD2026_CZE_western_anchor
+		MD2026_CZE_nato_reliability
+		MD2026_CZE_eu_deepening
+		MD2026_CZE_ukraine_support
+		MD2026_CZE_eu_industrial_policy
+		MD2026_CZE_central_europe_leader
+		MD2026_CZE_democratic_resilience
+		MD2026_CZE_anti_corruption
+		MD2026_CZE_media_freedom
+		MD2026_CZE_judicial_reform
+		MD2026_CZE_civic_society
+		MD2026_CZE_democratic_consolidation
+		MD2026_CZE_energy_independence
+		MD2026_CZE_nuclear_expansion
+		MD2026_CZE_gas_independence
+		MD2026_CZE_renewables_push
+		MD2026_CZE_energy_corridor
+		MD2026_CZE_energy_sovereign
+	}
+
+	weight = {
+		factor = 70
+	}
+}
+
+# ============================================================
+# NETHERLANDS (HOL)
+# Historical path: ASML strategy, Rotterdam hub, EU pillar, NATO reliable
+# ============================================================
+md2026_hol_historical = {
+	allowed = { original_tag = HOL }
+	name = "Netherlands 2026 Historical"
+	desc = "Dutch Renaissance: leverage ASML chip monopoly, Rotterdam logistics gateway, EU budget hawk, and reliable NATO pillar."
+
+	enable = {
+		original_tag = HOL
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_HOL_dutch_renaissance
+		MD2026_HOL_nato_commitment
+		MD2026_HOL_f35_full
+		MD2026_HOL_navy_frigate
+		MD2026_HOL_army_reform
+		MD2026_HOL_special_forces
+		MD2026_HOL_nato_pillar
+		MD2026_HOL_tech_economy
+		MD2026_HOL_asml_champion
+		MD2026_HOL_rotterdam_hub
+		MD2026_HOL_chip_research
+		MD2026_HOL_logistics_network
+		MD2026_HOL_innovation_leader
+		MD2026_HOL_coalition_stability
+		MD2026_HOL_wilders_coalition
+		MD2026_HOL_migration_reform
+		MD2026_HOL_dutch_model
+		MD2026_HOL_eu_role
+		MD2026_HOL_eu_budget_hawk
+		MD2026_HOL_eu_trade_champion
+		MD2026_HOL_eu_hague_justice
+		MD2026_HOL_eu_enlargement
+		MD2026_HOL_eu_anchor
+	}
+
+	weight = {
+		factor = 70
+	}
+}
+
+# ============================================================
+# NORWAY (NOR)
+# Historical path: Arctic guardian, energy giant, ocean power, defence force
+# ============================================================
+md2026_nor_historical = {
+	allowed = { original_tag = NOR }
+	name = "Norway 2026 Historical"
+	desc = "Nordic Power: defend the High North and Svalbard, manage the sovereign wealth fund, project ocean economy, and build a credible defence force."
+
+	enable = {
+		original_tag = NOR
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_NOR_nordic_power
+		MD2026_NOR_high_north_strategy
+		MD2026_NOR_svalbard_defense
+		MD2026_NOR_coast_defense
+		MD2026_NOR_f35_wing
+		MD2026_NOR_arctic_nato
+		MD2026_NOR_northern_sentinel
+		MD2026_NOR_defense_investment
+		MD2026_NOR_gdp_2pct
+		MD2026_NOR_submarine_replace
+		MD2026_NOR_army_reform
+		MD2026_NOR_joint_strike_missile
+		MD2026_NOR_defense_power
+		MD2026_NOR_energy_strategy
+		MD2026_NOR_oil_fund_management
+		MD2026_NOR_north_sea_transition
+		MD2026_NOR_hydrogen_export
+		MD2026_NOR_sovereign_wealth
+		MD2026_NOR_energy_superpower
+		MD2026_NOR_maritime_strategy
+		MD2026_NOR_fishing_rights
+		MD2026_NOR_merchant_fleet
+		MD2026_NOR_aquaculture
+		MD2026_NOR_maritime_tech
+		MD2026_NOR_ocean_economy
+	}
+
+	weight = {
+		factor = 70
+	}
+}
+
+# ============================================================
+# DENMARK (DEN)
+# Historical path: Greenland sovereignty defence, F-35/Bornholm,
+#                  wind power, pharma hub
+# Alternative path: US concession — hand greater autonomy to Greenland
+#                   while deepening US defence ties
+# ============================================================
+md2026_den_historical = {
+	allowed = { original_tag = DEN }
+	name = "Denmark 2026 Historical"
+	desc = "Nordic Bastion: defend Greenland's sovereignty against US pressure, integrate F-35s, fortify Bornholm, and lead the green-pharma economy."
+
+	enable = {
+		original_tag = DEN
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_DEN_nordic_bastion
+		MD2026_DEN_greenland_strategy
+		MD2026_DEN_greenland_sovereignty
+		MD2026_DEN_greenland_investment
+		MD2026_DEN_arctic_presence
+		MD2026_DEN_greenland_autonomy
+		MD2026_DEN_arctic_kingdom
+		MD2026_DEN_defense_buildup
+		MD2026_DEN_f35_integration
+		MD2026_DEN_naval_expansion
+		MD2026_DEN_home_guard_reform
+		MD2026_DEN_bornholm_defense
+		MD2026_DEN_nato_pillar
+		MD2026_DEN_green_revolution
+		MD2026_DEN_offshore_wind
+		MD2026_DEN_power_to_x
+		MD2026_DEN_north_sea_energy
+		MD2026_DEN_eu_green_leader
+		MD2026_DEN_clean_energy_champion
+		MD2026_DEN_flexicurity_2026
+		MD2026_DEN_labor_market_reform
+		MD2026_DEN_pharma_biotech
+		MD2026_DEN_shipping_tech
+		MD2026_DEN_life_sciences_hub
+		MD2026_DEN_innovation_economy
+	}
+
+	weight = {
+		factor = 70
+	}
+}
+
+md2026_den_us_path = {
+	allowed = { original_tag = DEN }
+	name = "Denmark 2026 US Concession"
+	desc = "Denmark opts to grant greater Greenland autonomy and deepens bilateral US defence ties to ease Trump administration pressure."
+
+	enable = {
+		original_tag = DEN
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		MD2026_DEN_nordic_bastion
+		MD2026_DEN_greenland_strategy
+		MD2026_DEN_greenland_investment
+		MD2026_DEN_greenland_autonomy
+		MD2026_DEN_defense_buildup
+		MD2026_DEN_f35_integration
+		MD2026_DEN_naval_expansion
+		MD2026_DEN_bornholm_defense
+		MD2026_DEN_nato_pillar
+		MD2026_DEN_green_revolution
+		MD2026_DEN_offshore_wind
+		MD2026_DEN_power_to_x
+		MD2026_DEN_clean_energy_champion
+		MD2026_DEN_flexicurity_2026
+		MD2026_DEN_pharma_biotech
+		MD2026_DEN_life_sciences_hub
+		MD2026_DEN_innovation_economy
+	}
+
+	weight = {
+		factor = 30
+	}
+}
+
+# ============================================================
+# PHILIPPINES (PHI)
+# Historical path: West Philippine Sea assertion, US alliance,
+#                  AFP modernisation, BBB2 infrastructure
+# Alternative path: ASEAN balancer — reduce reliance on US, hedge with China
+# ============================================================
+md2026_phi_historical = {
+	allowed = { original_tag = PHI }
+	name = "Philippines 2026 Historical"
+	desc = "Marcos Jr. asserts the West Philippine Sea ruling, deepens the US alliance, modernises the AFP, and launches BBB2 infrastructure."
+
+	enable = {
+		original_tag = PHI
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_phi_marcos_legacy
+		md2026_phi_west_phil_sea
+		md2026_phi_us_alliance
+		md2026_phi_asean_solidarity
+		md2026_phi_icj_victory
+		md2026_phi_maritime_zone
+		md2026_phi_afp_modernization
+		md2026_phi_f16_program
+		md2026_phi_coast_guard_expansion
+		md2026_phi_balikatan_exercises
+		md2026_phi_armed_forces_capstone
+		md2026_phi_bbb2_infra
+		md2026_phi_nickel_export
+		md2026_phi_ofw_modernization
+		md2026_phi_tourism_revival
+		md2026_phi_economic_powerhouse
+		md2026_phi_anti_dynasty
+		md2026_phi_disaster_preparedness
+		md2026_phi_ppp_investment
+		md2026_phi_federalism_reform
+		md2026_phi_national_unity
+	}
+
+	weight = {
+		factor = 70
+	}
+}
+
+md2026_phi_asean_path = {
+	allowed = { original_tag = PHI }
+	name = "Philippines 2026 ASEAN Balancer"
+	desc = "Philippines hedges between the US and China, leads ASEAN solidarity diplomacy, and pursues economic diversification."
+
+	enable = {
+		original_tag = PHI
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_phi_marcos_legacy
+		md2026_phi_west_phil_sea
+		md2026_phi_asean_solidarity
+		md2026_phi_icj_victory
+		md2026_phi_maritime_zone
+		md2026_phi_afp_modernization
+		md2026_phi_coast_guard_expansion
+		md2026_phi_balikatan_exercises
+		md2026_phi_armed_forces_capstone
+		md2026_phi_bbb2_infra
+		md2026_phi_nickel_export
+		md2026_phi_tourism_revival
+		md2026_phi_economic_powerhouse
+		md2026_phi_anti_dynasty
+		md2026_phi_ppp_investment
+		md2026_phi_federalism_reform
+		md2026_phi_national_unity
+	}
+
+	weight = {
+		factor = 30
+	}
+}
+
+# ============================================================
+# THAILAND (THA)
+# Historical path: EEC/civilian path, ASEAN mediation, RTAF upgrade,
+#                  Thai unity
+# ============================================================
+md2026_tha_historical = {
+	allowed = { original_tag = THA }
+	name = "Thailand 2026 Historical"
+	desc = "Civilian consolidation: EEC manufacturing boom, ASEAN mediation hub, RTAF modernisation with new fighters, and democratic unity."
+
+	enable = {
+		original_tag = THA
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_tha_civilian_consolidation
+		md2026_tha_eec_development
+		md2026_tha_ev_hub
+		md2026_tha_agri_export
+		md2026_tha_digital_economy
+		md2026_tha_asean_economic_leader
+		md2026_tha_asean_mediation
+		md2026_tha_china_balance
+		md2026_tha_us_exercises
+		md2026_tha_myanmar_buffer
+		md2026_tha_pivot_hub
+		md2026_tha_rtaf_upgrade
+		md2026_tha_f35_acquisition
+		md2026_tha_navy_frigate
+		md2026_tha_cyber_defense
+		md2026_tha_cobra_gold
+		md2026_tha_monarchist_reform
+		md2026_tha_anti_corruption
+		md2026_tha_political_reconciliation
+		md2026_tha_democratic_consolidation
+		md2026_tha_thai_unity
+	}
+
+	weight = {
+		factor = 70
+	}
+}
+
+# ============================================================
+# MALAYSIA (MAY)
+# Historical path: ASEAN leadership, semiconductor hub, Madani unity,
+#                  total defence
+# ============================================================
+md2026_may_historical = {
+	allowed = { original_tag = MAY }
+	name = "Malaysia 2026 Historical"
+	desc = "Anwar Ibrahim's Madani Vision: lead ASEAN, build a Penang semiconductor hub, foster racial harmony, and modernise the armed forces."
+
+	enable = {
+		original_tag = MAY
+		has_global_flag = md2026_initialized
+	}
+
+	abort = {
+	}
+
+	ai_national_focuses = {
+		md2026_may_anwar_reform
+		md2026_may_semiconductor_hub
+		md2026_may_penang_silicon
+		md2026_may_green_economy
+		md2026_may_digital_asean
+		md2026_may_economic_titan
+		md2026_may_asean_leadership
+		md2026_may_china_balance
+		md2026_may_bri_reform
+		md2026_may_nam_tradition
+		md2026_may_regional_anchor
+		md2026_may_rmaf_modernization
+		md2026_may_fa50_acquisition
+		md2026_may_straits_security
+		md2026_may_five_power
+		md2026_may_total_defense
+		md2026_may_madani_unity
+		md2026_may_anticorruption
+		md2026_may_racial_harmony
+		md2026_may_federal_reform
+		md2026_may_one_malaysia
+	}
+
+	weight = {
+		factor = 70
+	}
+}
