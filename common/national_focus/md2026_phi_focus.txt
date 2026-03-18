@@ -1,0 +1,485 @@
+# ============================================================
+# md2026_phi_focus.txt
+# Philippines National Focus Tree
+# Millennium Dawn 2026 Rework
+# ============================================================
+
+focus_tree = {
+	id = md2026_phi_focus_tree
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = PHI
+			has_global_flag = md2026_initialized
+		}
+	}
+
+	default = no
+	reset_on_civil_war = yes
+
+	# ══════════════════════════════════════════════════════
+	# ROOT
+	# ══════════════════════════════════════════════════════
+
+	focus = {
+		id = md2026_phi_marcos_legacy
+		icon = GFX_focus_generic_political_discourse
+		x = 38
+		y = 0
+		cost = 3.6
+
+		allow_branch = {
+			original_tag = PHI
+			has_global_flag = md2026_initialized
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_marcos_legacy"
+			add_political_power = 50
+			add_stability = 0.05
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	# ══════════════════════════════════════════════════════
+	# BRANCH 1 — ECONOMY
+	# ══════════════════════════════════════════════════════
+
+	focus = {
+		id = md2026_phi_bbb2_infra
+		icon = GFX_focus_generic_industry
+		x = 32
+		y = 1
+		cost = 6.5
+
+		prerequisite = { focus = md2026_phi_marcos_legacy }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_bbb2_infra"
+			add_political_power = 30
+			add_ideas = md2026_phi_bbb2_economy
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_nickel_export
+		icon = GFX_focus_generic_industry
+		relative_position_id = md2026_phi_bbb2_infra
+		x = 0
+		y = 1
+		cost = 8.6
+
+		prerequisite = { focus = md2026_phi_bbb2_infra }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_nickel_export"
+			add_resource = { resource = steel amount = 8 }
+			add_political_power = 25
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_ofw_modernization
+		icon = GFX_focus_generic_pp_unity_bonus
+		relative_position_id = md2026_phi_bbb2_infra
+		x = -1
+		y = 2
+		cost = 8.6
+
+		prerequisite = { focus = md2026_phi_nickel_export }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_ofw_modernization"
+			add_stability = 0.05
+			add_political_power = 30
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_tourism_revival
+		icon = GFX_focus_generic_pp_unity_bonus
+		relative_position_id = md2026_phi_bbb2_infra
+		x = 1
+		y = 2
+		cost = 8.6
+
+		prerequisite = { focus = md2026_phi_nickel_export }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_tourism_revival"
+			add_stability = 0.05
+			add_political_power = 25
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_economic_powerhouse
+		icon = GFX_focus_generic_industry
+		relative_position_id = md2026_phi_bbb2_infra
+		x = 0
+		y = 3
+		cost = 12.9
+
+		prerequisite = { focus = md2026_phi_ofw_modernization }
+		prerequisite = { focus = md2026_phi_tourism_revival }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_economic_powerhouse"
+			add_ideas = md2026_phi_economic_powerhouse_spirit
+			add_political_power = 50
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	# ══════════════════════════════════════════════════════
+	# BRANCH 2 — SOUTH CHINA SEA
+	# ══════════════════════════════════════════════════════
+
+	focus = {
+		id = md2026_phi_west_phil_sea
+		icon = GFX_focus_generic_navy_bonus
+		x = 36
+		y = 1
+		cost = 6.5
+
+		prerequisite = { focus = md2026_phi_marcos_legacy }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_west_phil_sea"
+			add_political_power = 30
+			add_war_support = 0.05
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_us_alliance
+		icon = GFX_focus_generic_foreign_policy
+		relative_position_id = md2026_phi_west_phil_sea
+		x = -1
+		y = 1
+		cost = 8.6
+
+		prerequisite = { focus = md2026_phi_west_phil_sea }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_us_alliance"
+			add_political_power = 30
+			add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_asean_solidarity
+		icon = GFX_focus_generic_foreign_policy
+		relative_position_id = md2026_phi_west_phil_sea
+		x = 1
+		y = 1
+		cost = 8.6
+
+		prerequisite = { focus = md2026_phi_west_phil_sea }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_asean_solidarity"
+			add_political_power = 25
+			add_opinion_modifier = { target = VIN modifier = md2026_improved_relations }
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_icj_victory
+		icon = GFX_focus_generic_foreign_policy
+		relative_position_id = md2026_phi_west_phil_sea
+		x = 0
+		y = 2
+		cost = 10.0
+
+		prerequisite = { focus = md2026_phi_us_alliance }
+		prerequisite = { focus = md2026_phi_asean_solidarity }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_icj_victory"
+			add_political_power = 50
+			add_stability = 0.05
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_maritime_zone
+		icon = GFX_focus_generic_navy_bonus
+		relative_position_id = md2026_phi_west_phil_sea
+		x = 0
+		y = 3
+		cost = 12.9
+
+		prerequisite = { focus = md2026_phi_icj_victory }
+
+		search_filters = { FOCUS_FILTER_NAVY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_maritime_zone"
+			add_ideas = md2026_phi_maritime_zone_spirit
+			navy_experience = 25
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	# ══════════════════════════════════════════════════════
+	# BRANCH 3 — MILITARY
+	# ══════════════════════════════════════════════════════
+
+	focus = {
+		id = md2026_phi_afp_modernization
+		icon = GFX_focus_generic_army_support
+		x = 40
+		y = 1
+		cost = 6.5
+
+		prerequisite = { focus = md2026_phi_marcos_legacy }
+
+		search_filters = { FOCUS_FILTER_MILITARY_LAND }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_afp_modernization"
+			add_political_power = 30
+			army_experience = 20
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_f16_program
+		icon = GFX_focus_generic_air_bonus
+		relative_position_id = md2026_phi_afp_modernization
+		x = -1
+		y = 1
+		cost = 8.6
+
+		prerequisite = { focus = md2026_phi_afp_modernization }
+
+		search_filters = { FOCUS_FILTER_MILITARY_AIR }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_f16_program"
+			add_ideas = md2026_phi_f16_airforce
+			air_experience = 25
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_coast_guard_expansion
+		icon = GFX_focus_generic_navy_bonus
+		relative_position_id = md2026_phi_afp_modernization
+		x = 1
+		y = 1
+		cost = 8.6
+
+		prerequisite = { focus = md2026_phi_afp_modernization }
+
+		search_filters = { FOCUS_FILTER_NAVY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_coast_guard_expansion"
+			add_ideas = md2026_phi_coast_guard_spirit
+			navy_experience = 20
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_balikatan_exercises
+		icon = GFX_focus_generic_army_support
+		relative_position_id = md2026_phi_afp_modernization
+		x = 0
+		y = 2
+		cost = 10.0
+
+		prerequisite = { focus = md2026_phi_f16_program }
+		prerequisite = { focus = md2026_phi_coast_guard_expansion }
+
+		search_filters = { FOCUS_FILTER_MILITARY_LAND }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_balikatan_exercises"
+			army_experience = 30
+			add_political_power = 25
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_armed_forces_capstone
+		icon = GFX_focus_generic_army_support
+		relative_position_id = md2026_phi_afp_modernization
+		x = 0
+		y = 3
+		cost = 12.9
+
+		prerequisite = { focus = md2026_phi_balikatan_exercises }
+
+		search_filters = { FOCUS_FILTER_MILITARY_LAND }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_armed_forces_capstone"
+			add_ideas = md2026_phi_armed_forces_capstone_spirit
+			army_experience = 50
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	# ══════════════════════════════════════════════════════
+	# BRANCH 4 — DOMESTIC
+	# ══════════════════════════════════════════════════════
+
+	focus = {
+		id = md2026_phi_anti_dynasty
+		icon = GFX_focus_generic_political_discourse
+		x = 44
+		y = 1
+		cost = 6.5
+
+		prerequisite = { focus = md2026_phi_marcos_legacy }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_anti_dynasty"
+			add_stability = 0.05
+			add_political_power = 30
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_disaster_preparedness
+		icon = GFX_focus_generic_army_support
+		relative_position_id = md2026_phi_anti_dynasty
+		x = -1
+		y = 1
+		cost = 8.6
+
+		prerequisite = { focus = md2026_phi_anti_dynasty }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_disaster_preparedness"
+			add_stability = 0.05
+			add_political_power = 20
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_ppp_investment
+		icon = GFX_focus_generic_industry
+		relative_position_id = md2026_phi_anti_dynasty
+		x = 1
+		y = 1
+		cost = 8.6
+
+		prerequisite = { focus = md2026_phi_anti_dynasty }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_ppp_investment"
+			add_political_power = 25
+			add_stability = 0.03
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_federalism_reform
+		icon = GFX_focus_generic_political_discourse
+		relative_position_id = md2026_phi_anti_dynasty
+		x = 0
+		y = 2
+		cost = 10.0
+
+		prerequisite = { focus = md2026_phi_disaster_preparedness }
+		prerequisite = { focus = md2026_phi_ppp_investment }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_federalism_reform"
+			add_stability = 0.08
+			add_political_power = 30
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_phi_national_unity
+		icon = GFX_focus_generic_pp_unity_bonus
+		relative_position_id = md2026_phi_anti_dynasty
+		x = 0
+		y = 3
+		cost = 12.9
+
+		prerequisite = { focus = md2026_phi_federalism_reform }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_national_unity"
+			add_ideas = md2026_phi_national_unity_spirit
+			add_stability = 0.05
+			add_political_power = 50
+		}
+
+		ai_will_do = { base = 80 }
+	}
+}

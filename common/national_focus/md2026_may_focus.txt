@@ -1,0 +1,377 @@
+### MD2026 Malaysia Focus Branch ###
+# Shared focuses for Malaysia's 2026 focus tree branch (MAY)
+# Root focus at absolute x=38, y=0
+# 25 focuses: Anwar reform root, Economy, Foreign Policy, Military, Domestic
+
+### ROOT ###
+
+shared_focus = {
+	id = md2026_may_anwar_reform
+	icon = GFX_focus_generic_political_discourse
+	x = 38
+	y = 0
+	cost = 3.6
+	allow_branch = {
+		original_tag = MAY
+		has_global_flag = md2026_initialized
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_anwar_reform"
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	ai_will_do = { base = 100 }
+}
+
+### BRANCH 1 - ECONOMY ###
+
+shared_focus = {
+	id = md2026_may_semiconductor_hub
+	icon = GFX_focus_generic_research_bonus
+	x = 32
+	y = 1
+	cost = 6.5
+	prerequisite = { focus = md2026_may_anwar_reform }
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_semiconductor_hub"
+		add_political_power = 30
+		add_ideas = md2026_may_semiconductor_spirit
+	}
+	ai_will_do = { base = 80 }
+}
+
+shared_focus = {
+	id = md2026_may_penang_silicon
+	icon = GFX_focus_generic_industry
+	x = 0
+	y = 1
+	relative_position_id = md2026_may_semiconductor_hub
+	cost = 8.6
+	prerequisite = { focus = md2026_may_semiconductor_hub }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_penang_silicon"
+		add_ideas = md2026_may_penang_spirit
+		add_political_power = 25
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = md2026_may_green_economy
+	icon = GFX_focus_generic_industry
+	x = -1
+	y = 2
+	relative_position_id = md2026_may_semiconductor_hub
+	cost = 8.6
+	prerequisite = { focus = md2026_may_penang_silicon }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_green_economy"
+		add_stability = 0.05
+		add_political_power = 20
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_may_digital_asean
+	icon = GFX_focus_generic_research_bonus
+	x = 1
+	y = 2
+	relative_position_id = md2026_may_semiconductor_hub
+	cost = 8.6
+	prerequisite = { focus = md2026_may_penang_silicon }
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_digital_asean"
+		add_political_power = 25
+		add_ideas = md2026_may_digital_spirit
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_may_economic_titan
+	icon = GFX_focus_generic_industry
+	x = 0
+	y = 3
+	relative_position_id = md2026_may_semiconductor_hub
+	cost = 12.9
+	prerequisite = { focus = md2026_may_green_economy }
+	prerequisite = { focus = md2026_may_digital_asean }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_economic_titan"
+		add_ideas = md2026_may_economic_titan_spirit
+		add_political_power = 50
+	}
+	ai_will_do = { base = 80 }
+}
+
+### BRANCH 2 - FOREIGN POLICY ###
+
+shared_focus = {
+	id = md2026_may_asean_leadership
+	icon = GFX_focus_generic_foreign_policy
+	x = 36
+	y = 1
+	cost = 6.5
+	prerequisite = { focus = md2026_may_anwar_reform }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_asean_leadership"
+		add_political_power = 40
+		add_stability = 0.03
+	}
+	ai_will_do = { base = 80 }
+}
+
+shared_focus = {
+	id = md2026_may_china_balance
+	icon = GFX_focus_generic_foreign_policy
+	x = -1
+	y = 1
+	relative_position_id = md2026_may_asean_leadership
+	cost = 8.6
+	prerequisite = { focus = md2026_may_asean_leadership }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_china_balance"
+		add_political_power = 25
+		add_opinion_modifier = {
+			target = CHI
+			modifier = md2026_improved_relations
+		}
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_may_bri_reform
+	icon = GFX_focus_generic_industry
+	x = 1
+	y = 1
+	relative_position_id = md2026_may_asean_leadership
+	cost = 8.6
+	prerequisite = { focus = md2026_may_asean_leadership }
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_bri_reform"
+		add_political_power = 25
+		add_stability = 0.03
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_may_nam_tradition
+	icon = GFX_focus_generic_foreign_policy
+	x = 0
+	y = 2
+	relative_position_id = md2026_may_asean_leadership
+	cost = 10.0
+	prerequisite = { focus = md2026_may_china_balance }
+	prerequisite = { focus = md2026_may_bri_reform }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_nam_tradition"
+		add_stability = 0.05
+		add_political_power = 30
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = md2026_may_regional_anchor
+	icon = GFX_focus_generic_foreign_policy
+	x = 0
+	y = 3
+	relative_position_id = md2026_may_asean_leadership
+	cost = 12.9
+	prerequisite = { focus = md2026_may_nam_tradition }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_regional_anchor"
+		add_ideas = md2026_may_regional_anchor_spirit
+		add_political_power = 50
+	}
+	ai_will_do = { base = 80 }
+}
+
+### BRANCH 3 - MILITARY ###
+
+shared_focus = {
+	id = md2026_may_rmaf_modernization
+	icon = GFX_focus_generic_air_bonus
+	x = 40
+	y = 1
+	cost = 6.5
+	prerequisite = { focus = md2026_may_anwar_reform }
+	search_filters = { FOCUS_FILTER_MILITARY_AIR }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_rmaf_modernization"
+		add_political_power = 30
+		air_experience = 20
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = md2026_may_fa50_acquisition
+	icon = GFX_focus_generic_air_bonus
+	x = -1
+	y = 1
+	relative_position_id = md2026_may_rmaf_modernization
+	cost = 8.6
+	prerequisite = { focus = md2026_may_rmaf_modernization }
+	search_filters = { FOCUS_FILTER_MILITARY_AIR }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_fa50_acquisition"
+		add_ideas = md2026_may_fa50_spirit
+		air_experience = 25
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_may_straits_security
+	icon = GFX_focus_generic_navy_bonus
+	x = 1
+	y = 1
+	relative_position_id = md2026_may_rmaf_modernization
+	cost = 8.6
+	prerequisite = { focus = md2026_may_rmaf_modernization }
+	search_filters = { FOCUS_FILTER_MILITARY_NAVAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_straits_security"
+		add_ideas = md2026_may_straits_spirit
+		navy_experience = 20
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_may_five_power
+	icon = GFX_focus_generic_army_support
+	x = 0
+	y = 2
+	relative_position_id = md2026_may_rmaf_modernization
+	cost = 10.0
+	prerequisite = { focus = md2026_may_fa50_acquisition }
+	prerequisite = { focus = md2026_may_straits_security }
+	search_filters = { FOCUS_FILTER_MILITARY_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_five_power"
+		add_war_support = 0.05
+		add_political_power = 25
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = md2026_may_total_defense
+	icon = GFX_focus_generic_army_support
+	x = 0
+	y = 3
+	relative_position_id = md2026_may_rmaf_modernization
+	cost = 12.9
+	prerequisite = { focus = md2026_may_five_power }
+	search_filters = { FOCUS_FILTER_MILITARY_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_total_defense"
+		add_ideas = md2026_may_total_defense_spirit
+		army_experience = 50
+	}
+	ai_will_do = { base = 80 }
+}
+
+### BRANCH 4 - DOMESTIC ###
+
+shared_focus = {
+	id = md2026_may_madani_unity
+	icon = GFX_focus_generic_pp_unity_bonus
+	x = 44
+	y = 1
+	cost = 6.5
+	prerequisite = { focus = md2026_may_anwar_reform }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_madani_unity"
+		add_stability = 0.08
+		add_political_power = 25
+	}
+	ai_will_do = { base = 80 }
+}
+
+shared_focus = {
+	id = md2026_may_anticorruption
+	icon = GFX_focus_generic_secret_police
+	x = -1
+	y = 1
+	relative_position_id = md2026_may_madani_unity
+	cost = 8.6
+	prerequisite = { focus = md2026_may_madani_unity }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_anticorruption"
+		add_stability = 0.05
+		add_political_power = 20
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_may_racial_harmony
+	icon = GFX_focus_generic_political_discourse
+	x = 1
+	y = 1
+	relative_position_id = md2026_may_madani_unity
+	cost = 8.6
+	prerequisite = { focus = md2026_may_madani_unity }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_racial_harmony"
+		add_stability = 0.05
+		add_political_power = 25
+	}
+	ai_will_do = { base = 60 }
+}
+
+shared_focus = {
+	id = md2026_may_federal_reform
+	icon = GFX_focus_generic_political_discourse
+	x = 0
+	y = 2
+	relative_position_id = md2026_may_madani_unity
+	cost = 10.0
+	prerequisite = { focus = md2026_may_anticorruption }
+	prerequisite = { focus = md2026_may_racial_harmony }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_federal_reform"
+		add_stability = 0.08
+		add_political_power = 30
+	}
+	ai_will_do = { base = 70 }
+}
+
+shared_focus = {
+	id = md2026_may_one_malaysia
+	icon = GFX_focus_generic_pp_unity_bonus
+	x = 0
+	y = 3
+	relative_position_id = md2026_may_madani_unity
+	cost = 12.9
+	prerequisite = { focus = md2026_may_federal_reform }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_may_one_malaysia"
+		add_ideas = md2026_may_one_malaysia_spirit
+		add_stability = 0.05
+		add_political_power = 50
+	}
+	ai_will_do = { base = 80 }
+}

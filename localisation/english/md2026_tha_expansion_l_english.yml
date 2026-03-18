@@ -1,0 +1,52 @@
+﻿l_english:
+ # ROOT
+ md2026_tha_civilian_consolidation: "Civilian Consolidation"
+ md2026_tha_civilian_consolidation_tt: "After decades of military intervention in politics, Thailand's civilian government moves decisively to consolidate democratic institutions, reduce the army's political role and restore public trust."
+
+ # BRANCH 1 — ECONOMY
+ md2026_tha_eec_development: "Eastern Economic Corridor"
+ md2026_tha_eec_development_tt: "The Eastern Economic Corridor is Thailand's flagship industrial zone, attracting high-technology investment into a cluster of special economic zones stretching across Chonburi, Rayong and Chachoengsao."
+ md2026_tha_ev_hub: "EV Manufacturing Hub"
+ md2026_tha_ev_hub_tt: "Thailand leverages its established automotive supply chains to pivot toward electric vehicle production. Incentives for battery manufacturing and assembly attract global automakers eyeing Southeast Asian markets."
+ md2026_tha_agri_export: "Agricultural Export Drive"
+ md2026_tha_agri_export_tt: "Thailand is the world's leading exporter of rice and a major supplier of rubber, sugar and seafood. Investments in agricultural technology, cold-chain logistics and market diversification boost export earnings."
+ md2026_tha_digital_economy: "Digital Economy Initiative"
+ md2026_tha_digital_economy_tt: "Thailand Digital Valley and an expanding fibre-optic network underpin a thriving startup ecosystem. Government incentives for fintech, e-commerce and data centres position Bangkok as a regional technology hub."
+ md2026_tha_asean_economic_leader: "ASEAN Economic Leader"
+ md2026_tha_asean_economic_leader_tt: "Industrial upgrades, agricultural strength and digital innovation reinforce one another. Thailand emerges as the economic anchor of mainland Southeast Asia, setting standards others emulate."
+
+ # BRANCH 2 — FOREIGN POLICY
+ md2026_tha_asean_mediation: "ASEAN Mediation Role"
+ md2026_tha_asean_mediation_tt: "Thailand's tradition of non-alignment and its central geographic position make it a natural mediator in regional disputes. Bangkok hosts dialogue between competing powers and fractious neighbours alike."
+ md2026_tha_china_balance: "Balance China"
+ md2026_tha_china_balance_tt: "Deep economic ties with China need not mean strategic dependence. Thailand diversifies trade relationships, renegotiates infrastructure financing terms and maintains diplomatic distance on contentious issues."
+ md2026_tha_us_exercises: "Cobra Gold Engagement"
+ md2026_tha_us_exercises_tt: "Thailand's long-standing military relationship with the United States is reinvigorated through expanded joint exercises, intelligence-sharing arrangements and officer-exchange programmes."
+ md2026_tha_myanmar_buffer: "Myanmar Buffer Strategy"
+ md2026_tha_myanmar_buffer_tt: "Instability in Myanmar threatens to spill refugees, armed groups and narcotics across Thailand's long northern border. Bangkok pursues a careful policy of engagement with all Burmese factions to protect Thai interests."
+ md2026_tha_pivot_hub: "Thailand as Regional Pivot"
+ md2026_tha_pivot_hub_tt: "Bangkok cements its role as the indispensable hub of mainland Southeast Asian diplomacy, hosting regional summits and mediating competing great-power interests with the dexterity of a seasoned neutral."
+
+ # BRANCH 3 — MILITARY
+ md2026_tha_rtaf_upgrade: "Royal Thai Air Force Upgrade"
+ md2026_tha_rtaf_upgrade_tt: "The Royal Thai Air Force initiates a comprehensive modernisation programme, retiring ageing aircraft and investing in advanced training simulators, avionics upgrades and expanded pilot recruitment."
+ md2026_tha_f35_acquisition: "F-35 Acquisition Programme"
+ md2026_tha_f35_acquisition_tt: "Thailand joins the F-35 programme, acquiring fifth-generation multi-role fighters that provide a decisive capability edge in the region. The purchase signals Thailand's deepening security partnership with the United States."
+ md2026_tha_navy_frigate: "Navy Frigate Programme"
+ md2026_tha_navy_frigate_tt: "The Royal Thai Navy commissions new guided-missile frigates equipped with anti-submarine warfare systems and long-range surface-to-air missiles, enhancing maritime patrol and sea-lane protection."
+ md2026_tha_cyber_defense: "Cyber Defence Command"
+ md2026_tha_cyber_defense_tt: "A dedicated Cyber Defence Command integrates military, intelligence and civilian expertise to protect critical national infrastructure against state-sponsored hacking, ransomware and disinformation campaigns."
+ md2026_tha_cobra_gold: "Cobra Gold Exercises"
+ md2026_tha_cobra_gold_tt: "The Cobra Gold multilateral exercise series grows into the largest military exercise in the Indo-Pacific. Thailand's hosting role builds interoperability with US and allied forces while showcasing Bangkok's strategic value."
+
+ # BRANCH 4 — DOMESTIC
+ md2026_tha_monarchist_reform: "Monarchist Reform"
+ md2026_tha_monarchist_reform_tt: "The Thai monarchy remains the bedrock of national identity. Careful reforms strengthen the institution's public role while reducing sources of political controversy that fuelled a decade of street protests."
+ md2026_tha_anti_corruption: "Anti-Corruption Drive"
+ md2026_tha_anti_corruption_tt: "The National Anti-Corruption Commission is granted expanded powers, independent funding and whistleblower protections. High-profile prosecutions of officials and business figures signal a genuine change in culture."
+ md2026_tha_political_reconciliation: "Political Reconciliation"
+ md2026_tha_political_reconciliation_tt: "Years of Red Shirt versus Yellow Shirt conflict scarred Thai society. A truth-and-reconciliation process, combined with constitutional amendments balancing competing interests, begins to heal the divisions."
+ md2026_tha_democratic_consolidation: "Democratic Consolidation"
+ md2026_tha_democratic_consolidation_tt: "Anti-corruption measures and political reconciliation create the conditions for genuine democratic competition. Independent institutions—courts, the election commission, the media—gain the strength to hold power accountable."
+ md2026_tha_thai_unity: "Thai Unity"
+ md2026_tha_thai_unity_tt: "From monarchist tradition to democratic aspiration, from Buddhist values to multicultural tolerance, the threads of Thai identity are woven into a durable national unity that can weather any storm."

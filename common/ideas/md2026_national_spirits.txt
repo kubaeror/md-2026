@@ -3314,5 +3314,300 @@ ideas = {
 			}
 		}
 
+
+		# === PHI EXPANSION IDEAS ===
+		md2026_phi_bbb2_economy = {
+			picture = generic_industry
+			allowed = { original_tag = PHI }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				production_speed_infrastructure_factor = 0.15
+				stability_factor = 0.05
+			}
+		}
+		md2026_phi_economic_powerhouse_spirit = {
+			picture = generic_industry
+			allowed = { original_tag = PHI }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				resource_extraction_factor = 0.10
+				stability_factor = 0.05
+			}
+		}
+		md2026_phi_maritime_zone_spirit = {
+			picture = generic_navy_bonus
+			allowed = { original_tag = PHI }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				navy_org_factor = 0.10
+				navy_max_range_factor = 0.15
+				war_support_factor = 0.05
+			}
+		}
+		md2026_phi_f16_airforce = {
+			picture = generic_air_bonus
+			allowed = { original_tag = PHI }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				air_agility_factor = 0.15
+				air_attack_factor = 0.10
+				air_defence_factor = 0.10
+			}
+		}
+		md2026_phi_coast_guard_spirit = {
+			picture = generic_navy_bonus
+			allowed = { original_tag = PHI }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				navy_org_factor = 0.05
+				navy_max_range_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+		md2026_phi_armed_forces_capstone_spirit = {
+			picture = generic_army_support
+			allowed = { original_tag = PHI }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.10
+				army_morale_factor = 0.05
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		md2026_phi_national_unity_spirit = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = PHI }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+
+		# === THA EXPANSION IDEAS ===
+		md2026_tha_eec_spirit = {
+			picture = generic_industry
+			allowed = { original_tag = THA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		md2026_tha_ev_hub_spirit = {
+			picture = generic_industry
+			allowed = { original_tag = THA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				resource_extraction_factor = 0.05
+			}
+		}
+		md2026_tha_digital_spirit = {
+			picture = generic_research_bonus
+			allowed = { original_tag = THA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		md2026_tha_economic_capstone = {
+			picture = generic_industry
+			allowed = { original_tag = THA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				stability_factor = 0.05
+				political_power_factor = 0.10
+			}
+		}
+		md2026_tha_pivot_hub_spirit = {
+			picture = generic_foreign_policy
+			allowed = { original_tag = THA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				trade_opinion_factor = 0.10
+				stability_factor = 0.05
+			}
+		}
+		md2026_tha_f35_spirit = {
+			picture = generic_air_bonus
+			allowed = { original_tag = THA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				air_agility_factor = 0.15
+				air_attack_factor = 0.10
+				air_defence_factor = 0.10
+			}
+		}
+		md2026_tha_navy_spirit = {
+			picture = generic_navy_bonus
+			allowed = { original_tag = THA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				navy_org_factor = 0.10
+				navy_max_range_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+		md2026_tha_cyber_spirit = {
+			picture = generic_research_bonus
+			allowed = { original_tag = THA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+				intelligence_agency_defense = 0.10
+				political_power_factor = 0.05
+			}
+		}
+		md2026_tha_cobra_gold_spirit = {
+			picture = generic_army_support
+			allowed = { original_tag = THA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.10
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		md2026_tha_thai_unity_spirit = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = THA }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+
+		# === MAY EXPANSION IDEAS ===
+		md2026_may_semiconductor_spirit = {
+			picture = generic_research_bonus
+			allowed = { original_tag = MAY }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		md2026_may_penang_spirit = {
+			picture = generic_industry
+			allowed = { original_tag = MAY }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		md2026_may_digital_spirit = {
+			picture = generic_research_bonus
+			allowed = { original_tag = MAY }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.10
+				intelligence_agency_defense = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		md2026_may_economic_titan_spirit = {
+			picture = generic_industry
+			allowed = { original_tag = MAY }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				resource_extraction_factor = 0.10
+				stability_factor = 0.05
+			}
+		}
+		md2026_may_regional_anchor_spirit = {
+			picture = generic_foreign_policy
+			allowed = { original_tag = MAY }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				trade_opinion_factor = 0.10
+				stability_factor = 0.05
+			}
+		}
+		md2026_may_fa50_spirit = {
+			picture = generic_air_bonus
+			allowed = { original_tag = MAY }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				air_agility_factor = 0.15
+				air_attack_factor = 0.10
+				air_defence_factor = 0.05
+			}
+		}
+		md2026_may_straits_spirit = {
+			picture = generic_navy_bonus
+			allowed = { original_tag = MAY }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				navy_org_factor = 0.10
+				navy_max_range_factor = 0.15
+				war_support_factor = 0.05
+			}
+		}
+		md2026_may_total_defense_spirit = {
+			picture = generic_army_support
+			allowed = { original_tag = MAY }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.10
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		md2026_may_one_malaysia_spirit = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = MAY }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
 	}
 }

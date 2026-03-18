@@ -1,0 +1,485 @@
+# ============================================================
+# md2026_tha_focus.txt
+# Thailand National Focus Tree
+# Millennium Dawn 2026 Rework
+# ============================================================
+
+focus_tree = {
+	id = md2026_tha_focus_tree
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = THA
+			has_global_flag = md2026_initialized
+		}
+	}
+
+	default = no
+	reset_on_civil_war = yes
+
+	# ══════════════════════════════════════════════════════
+	# ROOT
+	# ══════════════════════════════════════════════════════
+
+	focus = {
+		id = md2026_tha_civilian_consolidation
+		icon = GFX_focus_generic_political_discourse
+		x = 38
+		y = 0
+		cost = 3.6
+
+		allow_branch = {
+			original_tag = THA
+			has_global_flag = md2026_initialized
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_civilian_consolidation"
+			add_political_power = 50
+			add_stability = 0.05
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	# ══════════════════════════════════════════════════════
+	# BRANCH 1 — ECONOMY
+	# ══════════════════════════════════════════════════════
+
+	focus = {
+		id = md2026_tha_eec_development
+		icon = GFX_focus_generic_industry
+		x = 32
+		y = 1
+		cost = 6.5
+
+		prerequisite = { focus = md2026_tha_civilian_consolidation }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_eec_development"
+			add_political_power = 30
+			add_ideas = md2026_tha_eec_spirit
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_ev_hub
+		icon = GFX_focus_generic_industry
+		relative_position_id = md2026_tha_eec_development
+		x = 0
+		y = 1
+		cost = 8.6
+
+		prerequisite = { focus = md2026_tha_eec_development }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_ev_hub"
+			add_ideas = md2026_tha_ev_hub_spirit
+			add_political_power = 25
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_agri_export
+		icon = GFX_focus_generic_industry
+		relative_position_id = md2026_tha_eec_development
+		x = -1
+		y = 2
+		cost = 8.6
+
+		prerequisite = { focus = md2026_tha_ev_hub }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_agri_export"
+			add_resource = { resource = food amount = 5 }
+			add_political_power = 20
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_digital_economy
+		icon = GFX_focus_generic_research_bonus
+		relative_position_id = md2026_tha_eec_development
+		x = 1
+		y = 2
+		cost = 8.6
+
+		prerequisite = { focus = md2026_tha_ev_hub }
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_digital_economy"
+			add_ideas = md2026_tha_digital_spirit
+			add_political_power = 20
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_asean_economic_leader
+		icon = GFX_focus_generic_industry
+		relative_position_id = md2026_tha_eec_development
+		x = 0
+		y = 3
+		cost = 12.9
+
+		prerequisite = { focus = md2026_tha_agri_export }
+		prerequisite = { focus = md2026_tha_digital_economy }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_asean_economic_leader"
+			add_ideas = md2026_tha_economic_capstone
+			add_political_power = 50
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	# ══════════════════════════════════════════════════════
+	# BRANCH 2 — FOREIGN POLICY
+	# ══════════════════════════════════════════════════════
+
+	focus = {
+		id = md2026_tha_asean_mediation
+		icon = GFX_focus_generic_foreign_policy
+		x = 36
+		y = 1
+		cost = 6.5
+
+		prerequisite = { focus = md2026_tha_civilian_consolidation }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_asean_mediation"
+			add_political_power = 40
+			add_stability = 0.03
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_china_balance
+		icon = GFX_focus_generic_foreign_policy
+		relative_position_id = md2026_tha_asean_mediation
+		x = -1
+		y = 1
+		cost = 8.6
+
+		prerequisite = { focus = md2026_tha_asean_mediation }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_china_balance"
+			add_political_power = 25
+			add_opinion_modifier = { target = CHI modifier = md2026_improved_relations }
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_us_exercises
+		icon = GFX_focus_generic_army_support
+		relative_position_id = md2026_tha_asean_mediation
+		x = 1
+		y = 1
+		cost = 8.6
+
+		prerequisite = { focus = md2026_tha_asean_mediation }
+
+		search_filters = { FOCUS_FILTER_MILITARY_LAND }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_us_exercises"
+			add_political_power = 25
+			army_experience = 20
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_myanmar_buffer
+		icon = GFX_focus_generic_foreign_policy
+		relative_position_id = md2026_tha_asean_mediation
+		x = 0
+		y = 2
+		cost = 10.0
+
+		prerequisite = { focus = md2026_tha_china_balance }
+		prerequisite = { focus = md2026_tha_us_exercises }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_myanmar_buffer"
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_pivot_hub
+		icon = GFX_focus_generic_foreign_policy
+		relative_position_id = md2026_tha_asean_mediation
+		x = 0
+		y = 3
+		cost = 12.9
+
+		prerequisite = { focus = md2026_tha_myanmar_buffer }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_pivot_hub"
+			add_ideas = md2026_tha_pivot_hub_spirit
+			add_political_power = 50
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	# ══════════════════════════════════════════════════════
+	# BRANCH 3 — MILITARY
+	# ══════════════════════════════════════════════════════
+
+	focus = {
+		id = md2026_tha_rtaf_upgrade
+		icon = GFX_focus_generic_air_bonus
+		x = 40
+		y = 1
+		cost = 6.5
+
+		prerequisite = { focus = md2026_tha_civilian_consolidation }
+
+		search_filters = { FOCUS_FILTER_MILITARY_AIR }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_rtaf_upgrade"
+			add_political_power = 30
+			air_experience = 20
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_f35_acquisition
+		icon = GFX_focus_generic_air_bonus
+		relative_position_id = md2026_tha_rtaf_upgrade
+		x = -1
+		y = 1
+		cost = 8.6
+
+		prerequisite = { focus = md2026_tha_rtaf_upgrade }
+
+		search_filters = { FOCUS_FILTER_MILITARY_AIR }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_f35_acquisition"
+			add_ideas = md2026_tha_f35_spirit
+			air_experience = 25
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_navy_frigate
+		icon = GFX_focus_generic_navy_bonus
+		relative_position_id = md2026_tha_rtaf_upgrade
+		x = 1
+		y = 1
+		cost = 8.6
+
+		prerequisite = { focus = md2026_tha_rtaf_upgrade }
+
+		search_filters = { FOCUS_FILTER_NAVY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_navy_frigate"
+			add_ideas = md2026_tha_navy_spirit
+			navy_experience = 20
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_cyber_defense
+		icon = GFX_focus_generic_research_bonus
+		relative_position_id = md2026_tha_rtaf_upgrade
+		x = 0
+		y = 2
+		cost = 10.0
+
+		prerequisite = { focus = md2026_tha_f35_acquisition }
+		prerequisite = { focus = md2026_tha_navy_frigate }
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_cyber_defense"
+			add_ideas = md2026_tha_cyber_spirit
+			add_political_power = 25
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_cobra_gold
+		icon = GFX_focus_generic_army_support
+		relative_position_id = md2026_tha_rtaf_upgrade
+		x = 0
+		y = 3
+		cost = 12.9
+
+		prerequisite = { focus = md2026_tha_cyber_defense }
+
+		search_filters = { FOCUS_FILTER_MILITARY_LAND }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_cobra_gold"
+			add_ideas = md2026_tha_cobra_gold_spirit
+			army_experience = 50
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	# ══════════════════════════════════════════════════════
+	# BRANCH 4 — DOMESTIC
+	# ══════════════════════════════════════════════════════
+
+	focus = {
+		id = md2026_tha_monarchist_reform
+		icon = GFX_focus_generic_political_discourse
+		x = 44
+		y = 1
+		cost = 6.5
+
+		prerequisite = { focus = md2026_tha_civilian_consolidation }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_monarchist_reform"
+			add_stability = 0.08
+			add_political_power = 25
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_anti_corruption
+		icon = GFX_focus_generic_secret_police
+		relative_position_id = md2026_tha_monarchist_reform
+		x = -1
+		y = 1
+		cost = 8.6
+
+		prerequisite = { focus = md2026_tha_monarchist_reform }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_anti_corruption"
+			add_stability = 0.05
+			add_political_power = 20
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_political_reconciliation
+		icon = GFX_focus_generic_political_discourse
+		relative_position_id = md2026_tha_monarchist_reform
+		x = 1
+		y = 1
+		cost = 8.6
+
+		prerequisite = { focus = md2026_tha_monarchist_reform }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_political_reconciliation"
+			add_stability = 0.05
+			add_political_power = 25
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_democratic_consolidation
+		icon = GFX_focus_generic_political_discourse
+		relative_position_id = md2026_tha_monarchist_reform
+		x = 0
+		y = 2
+		cost = 10.0
+
+		prerequisite = { focus = md2026_tha_anti_corruption }
+		prerequisite = { focus = md2026_tha_political_reconciliation }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_democratic_consolidation"
+			add_stability = 0.08
+			add_political_power = 30
+		}
+
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = md2026_tha_thai_unity
+		icon = GFX_focus_generic_pp_unity_bonus
+		relative_position_id = md2026_tha_monarchist_reform
+		x = 0
+		y = 3
+		cost = 12.9
+
+		prerequisite = { focus = md2026_tha_democratic_consolidation }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_thai_unity"
+			add_ideas = md2026_tha_thai_unity_spirit
+			add_stability = 0.05
+			add_political_power = 50
+		}
+
+		ai_will_do = { base = 80 }
+	}
+}
