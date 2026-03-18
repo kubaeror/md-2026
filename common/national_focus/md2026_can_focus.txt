@@ -555,3 +555,183 @@ shared_focus = {
 		factor = 1
 	}
 }
+
+### Phase E Addition: Trump Crisis Branch (x=9 rel root) ###
+shared_focus = {
+	id = md2026_can_trump_crisis
+	icon = GFX_goal_generic_trade
+	x = 9
+	y = 1
+	cost = 6.5
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_CAN_northern_shield }
+	relative_position_id = MD2026_CAN_northern_shield
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_can_trump_crisis"
+		add_political_power = 50
+		add_war_support = 0.05
+		add_stability = -0.03
+	}
+	ai_will_do = {
+		base = 100
+	}
+}
+
+shared_focus = {
+	id = md2026_can_51st_state_rejection
+	icon = GFX_goal_generic_national_unity
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = md2026_can_trump_crisis }
+	relative_position_id = md2026_can_trump_crisis
+	mutually_exclusive = { focus = md2026_can_economic_diversification }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_can_51st_state_rejection"
+		add_political_power = 100
+		add_stability = 0.10
+		add_war_support = 0.10
+	}
+	ai_will_do = {
+		base = 80
+	}
+}
+
+shared_focus = {
+	id = md2026_can_economic_diversification
+	icon = GFX_goal_generic_trade
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_TRADE }
+	prerequisite = { focus = md2026_can_trump_crisis }
+	relative_position_id = md2026_can_trump_crisis
+	mutually_exclusive = { focus = md2026_can_51st_state_rejection }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_can_economic_diversification"
+		add_political_power = 75
+		add_stability = 0.05
+		add_opinion_modifier = { target = ENG modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = JAP modifier = md2026_improved_relations }
+	}
+	ai_will_do = {
+		base = 60
+	}
+}
+
+shared_focus = {
+	id = md2026_can_tpp_pivot
+	icon = GFX_goal_generic_trade
+	x = 0
+	y = 2
+	cost = 10.0
+	search_filters = { FOCUS_FILTER_TRADE }
+	prerequisite = { focus = md2026_can_51st_state_rejection }
+	prerequisite = { focus = md2026_can_economic_diversification }
+	relative_position_id = md2026_can_trump_crisis
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_can_tpp_pivot"
+		add_political_power = 75
+		add_stability = 0.05
+		add_opinion_modifier = { target = AST modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = JAP modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = KOR modifier = md2026_improved_relations }
+	}
+	ai_will_do = {
+		base = 70
+	}
+}
+
+### Phase E Addition: Arctic Extension ###
+shared_focus = {
+	id = md2026_can_norad_upgrade
+	icon = GFX_goal_generic_air_defense
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_CAN_icebreaker_fleet }
+	relative_position_id = MD2026_CAN_icebreaker_fleet
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_can_norad_upgrade"
+		add_tech_bonus = {
+			name = md2026_can_norad_upgrade
+			bonus = 1.0
+			uses = 2
+			category = CAT_aa
+		}
+		add_war_support = 0.05
+		USA = { add_opinion_modifier = { target = CAN modifier = md2026_improved_relations } }
+	}
+	ai_will_do = {
+		base = 80
+	}
+}
+
+shared_focus = {
+	id = md2026_can_northern_gateway
+	icon = GFX_goal_generic_construct_infrastructure
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_CAN_northern_development }
+	relative_position_id = MD2026_CAN_northern_development
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_can_northern_gateway"
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = infrastructure size > 0 } }
+			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+		}
+		add_political_power = 50
+		add_resource = { type = steel amount = 6 state = 461 }
+	}
+	ai_will_do = {
+		base = 70
+	}
+}
+
+shared_focus = {
+	id = md2026_can_greenland_diplomacy
+	icon = GFX_goal_generic_improve_relations
+	x = 0
+	y = 1
+	cost = 10.0
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = md2026_can_norad_upgrade }
+	prerequisite = { focus = md2026_can_northern_gateway }
+	relative_position_id = md2026_can_norad_upgrade
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_can_greenland_diplomacy"
+		add_political_power = 75
+		add_war_support = 0.05
+		add_stability = 0.05
+		add_opinion_modifier = { target = DEN modifier = md2026_improved_relations }
+	}
+	ai_will_do = {
+		base = 60
+	}
+}
+
+shared_focus = {
+	id = md2026_can_arctic_power
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 1
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = md2026_can_greenland_diplomacy }
+	relative_position_id = md2026_can_greenland_diplomacy
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus md2026_can_arctic_power"
+		add_political_power = 150
+		add_stability = 0.05
+		add_war_support = 0.10
+		add_ideas = md2026_can_arctic_power_spirit
+	}
+	ai_will_do = {
+		base = 70
+	}
+}
+
