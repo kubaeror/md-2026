@@ -1,0 +1,265 @@
+###################################
+# MD2026 ASEAN vs China — South China Sea Events
+# Phase F.2.1 — Asian geopolitical escalation
+# Namespace: md2026_asean_scs
+###################################
+
+add_namespace = md2026_asean_scs
+
+###################################
+# md2026_asean_scs.1 — China Builds New Island Facility
+# Fires for CHI after 2026.6.1; fire_only_once
+###################################
+country_event = {
+	id = md2026_asean_scs.1
+	title = md2026_asean_scs.1.t
+	desc = md2026_asean_scs.1.d
+	picture = GFX_report_event_chinese_soldiers
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = CHI
+		has_global_flag = md2026_initialized
+		date > 2026.6.1
+		NOT = { has_country_flag = md2026_chi_scs_island_built }
+	}
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	# Loc: md2026_asean_scs.1.t — "South China Sea: New Island Facility"
+	# Loc: md2026_asean_scs.1.d — "China has completed construction of a major military installation..."
+
+	# Option A: ASEAN lodges formal protest
+	option = {
+		name = md2026_asean_scs.1.a
+		# Loc: "Issue collective protest through ASEAN channels"
+		ai_chance = { base = 60 }
+		set_country_flag = md2026_chi_scs_island_built
+		set_global_flag = md2026_scs_asean_protest
+		add_political_power = -25
+		PHI = { country_event = { id = md2026_asean_scs.2 days = 14 } }
+	}
+
+	# Option B: Ignore ASEAN protests — assert sovereignty
+	option = {
+		name = md2026_asean_scs.1.b
+		# Loc: "Dismiss protests — the South China Sea is Chinese territory"
+		ai_chance = { base = 40 }
+		set_country_flag = md2026_chi_scs_island_built
+		add_war_support = 0.05
+		add_stability = -0.03
+		PHI = {
+			add_stability = -0.03
+			country_event = { id = md2026_asean_scs.2 days = 14 }
+		}
+	}
+}
+
+###################################
+# md2026_asean_scs.2 — ASEAN Emergency Summit
+# is_triggered_only — fires for PHI (ASEAN chair surrogate)
+###################################
+country_event = {
+	id = md2026_asean_scs.2
+	title = md2026_asean_scs.2.t
+	desc = md2026_asean_scs.2.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Loc: md2026_asean_scs.2.t — "ASEAN Emergency Summit"
+	# Loc: md2026_asean_scs.2.d — "Foreign ministers of ASEAN member states convene in Manila..."
+
+	# Option A: Issue joint statement condemning China
+	option = {
+		name = md2026_asean_scs.2.a
+		# Loc: "Issue a unified joint statement condemning Chinese aggression"
+		ai_chance = { base = 55 }
+		set_global_flag = md2026_scs_joint_statement
+		add_war_support = 0.05
+		add_political_power = 25
+		CHI = {
+			add_opinion_modifier = { target = PHI modifier = md2026_diplomatic_disapproval }
+		}
+		country_event = { id = md2026_asean_scs.3 days = 30 }
+	}
+
+	# Option B: Divided response — consensus impossible
+	option = {
+		name = md2026_asean_scs.2.b
+		# Loc: "ASEAN cannot reach consensus — issue a watered-down communiqué"
+		ai_chance = { base = 45 }
+		set_global_flag = md2026_scs_asean_divided
+		add_stability = -0.05
+		add_political_power = -25
+		country_event = { id = md2026_asean_scs.5 days = 45 }
+	}
+}
+
+###################################
+# md2026_asean_scs.3 — Philippines Confronts Chinese Coast Guard
+# is_triggered_only — fires for PHI
+###################################
+country_event = {
+	id = md2026_asean_scs.3
+	title = md2026_asean_scs.3.t
+	desc = md2026_asean_scs.3.d
+	picture = GFX_report_event_generic_navy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Loc: md2026_asean_scs.3.t — "Philippine Vessels Confronted at Ayungin Shoal"
+	# Loc: md2026_asean_scs.3.d — "Chinese coast guard vessels have water-cannoned Philippine supply boats..."
+
+	# Option A: Back Philippines — deploy coast guard escorts
+	option = {
+		name = md2026_asean_scs.3.a
+		# Loc: "Escort our vessels — we will not be intimidated"
+		ai_chance = { base = 65 }
+		add_war_support = 0.08
+		add_political_power = 25
+		set_global_flag = md2026_scs_phi_standoff
+		USA = { country_event = { id = md2026_asean_scs.4 days = 7 } }
+		CHI = {
+			add_opinion_modifier = { target = PHI modifier = md2026_military_pressure_anger }
+		}
+	}
+
+	# Option B: Seek diplomatic mediation via UN
+	option = {
+		name = md2026_asean_scs.3.b
+		# Loc: "Refer the matter to international mediation"
+		ai_chance = { base = 35 }
+		add_stability = 0.03
+		add_political_power = -25
+		add_war_support = -0.03
+		country_event = { id = md2026_asean_scs.5 days = 60 }
+	}
+}
+
+###################################
+# md2026_asean_scs.4 — USA Deploys Carrier Strike Group
+# is_triggered_only — fires for USA
+###################################
+country_event = {
+	id = md2026_asean_scs.4
+	title = md2026_asean_scs.4.t
+	desc = md2026_asean_scs.4.d
+	picture = GFX_report_event_generic_navy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Loc: md2026_asean_scs.4.t — "USS Ronald Reagan Ordered to South China Sea"
+	# Loc: md2026_asean_scs.4.d — "The Pentagon has ordered a carrier strike group to conduct freedom of navigation operations..."
+
+	# Option A: Conduct freedom of navigation operations
+	option = {
+		name = md2026_asean_scs.4.a
+		# Loc: "Execute freedom of navigation operations within 12 nautical miles"
+		ai_chance = { base = 70 }
+		add_war_support = 0.08
+		navy_experience = 15
+		set_global_flag = md2026_scs_us_fon_op
+		PHI = { add_war_support = 0.10 }
+		VIN = { add_war_support = 0.05 }
+		MAY = { add_war_support = 0.05 }
+		CHI = {
+			add_opinion_modifier = { target = USA modifier = md2026_military_pressure_anger }
+			add_war_support = 0.05
+		}
+		country_event = { id = md2026_asean_scs.6 days = 120 }
+	}
+
+	# Option B: Diplomatic back-channels — avoid direct confrontation
+	option = {
+		name = md2026_asean_scs.4.b
+		# Loc: "Pursue diplomatic channels to de-escalate tensions"
+		ai_chance = { base = 30 }
+		add_stability = 0.05
+		add_political_power = 25
+		add_war_support = -0.03
+		country_event = { id = md2026_asean_scs.6 days = 180 }
+	}
+}
+
+###################################
+# md2026_asean_scs.5 — Arbitration Ruling Ignored by China
+# is_triggered_only — fires for PHI
+###################################
+country_event = {
+	id = md2026_asean_scs.5
+	title = md2026_asean_scs.5.t
+	desc = md2026_asean_scs.5.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Loc: md2026_asean_scs.5.t — "China Dismisses Arbitration Ruling — Again"
+	# Loc: md2026_asean_scs.5.d — "Beijing has once again declared the 2016 UNCLOS arbitration ruling 'null and void'..."
+
+	# Option A: Enforce the ruling — escalate international pressure
+	option = {
+		name = md2026_asean_scs.5.a
+		# Loc: "Rally international partners to enforce the ruling"
+		ai_chance = { base = 50 }
+		add_political_power = -25
+		add_war_support = 0.05
+		set_global_flag = md2026_scs_ruling_contested
+		CHI = {
+			add_stability = -0.03
+			add_opinion_modifier = { target = PHI modifier = md2026_diplomatic_disapproval }
+		}
+		country_event = { id = md2026_asean_scs.6 days = 90 }
+	}
+
+	# Option B: Accept status quo — pursue economic ties with China
+	option = {
+		name = md2026_asean_scs.5.b
+		# Loc: "Pragmatism first — normalize ties with Beijing"
+		ai_chance = { base = 50 }
+		add_stability = 0.05
+		add_political_power = 25
+		add_war_support = -0.05
+		CHI = {
+			add_opinion_modifier = { target = PHI modifier = md2026_improved_relations }
+		}
+		country_event = { id = md2026_asean_scs.6 days = 90 }
+	}
+}
+
+###################################
+# md2026_asean_scs.6 — ASEAN-China Code of Conduct Signed
+# is_triggered_only — fires for PHI
+###################################
+country_event = {
+	id = md2026_asean_scs.6
+	title = md2026_asean_scs.6.t
+	desc = md2026_asean_scs.6.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Loc: md2026_asean_scs.6.t — "ASEAN-China South China Sea Code of Conduct Signed"
+	# Loc: md2026_asean_scs.6.d — "After years of contentious negotiations, ASEAN and China have signed a Code of Conduct..."
+
+	# Only one option — diplomatic outcome
+	option = {
+		name = md2026_asean_scs.6.a
+		# Loc: "Welcome the agreement — a fragile but real framework for stability"
+		ai_chance = { base = 100 }
+		set_global_flag = md2026_scs_coc_signed
+		PHI = { add_stability = 0.08 add_political_power = 25 }
+		VIN = { add_stability = 0.06 }
+		MAY = { add_stability = 0.06 }
+		THA = { add_stability = 0.04 }
+		CHI = { add_political_power = 50 add_stability = 0.03 }
+	}
+}

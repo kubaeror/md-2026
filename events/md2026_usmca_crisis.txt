@@ -1,0 +1,269 @@
+# =====================================================================
+# md2026_usmca_crisis.txt
+# Phase F.3.2 — USMCA Crisis Event Chain
+# Mod: Millennium Dawn 2026 Rework (md-2026)
+# Events:
+#   md2026_usmca.1  — Trump Imposes 25% Tariffs (USA, date-triggered)
+#   md2026_usmca.2  — Canada Retaliates (CAN, triggered)
+#   md2026_usmca.3  — Mexico Seeks Allies (MEX, triggered)
+#   md2026_usmca.4  — USMCA Review Triggered (USA, triggered)
+#   md2026_usmca.5  — CAN-MEX Bilateral Pact (CAN, triggered)
+#   md2026_usmca.6  — Trade Deal Resolution (USA, triggered)
+# =====================================================================
+
+add_namespace = md2026_usmca
+
+### .1 — Trump Imposes 25% Tariffs on Canada & Mexico (USA, date-triggered) ###
+country_event = {
+	id = md2026_usmca.1
+	title = md2026_usmca.1.t
+	desc = md2026_usmca.1.d
+	picture = GFX_report_event_generic_economy
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = USA
+		has_global_flag = md2026_initialized
+		date > 2026.2.1
+		NOT = { has_country_flag = md2026_usmca_tariffs_imposed }
+	}
+
+	mean_time_to_happen = {
+		days = 14
+	}
+
+	# Maintain Full Tariffs — maximum economic pressure
+	option = {
+		name = md2026_usmca.1.a
+		ai_chance = { base = 70 }
+		set_country_flag = md2026_usmca_tariffs_imposed
+		set_country_flag = md2026_usmca_full_tariffs
+		add_ideas = md2026_usa_trade_war_tariffs
+		add_stability = -0.03
+		add_political_power = 50
+		CAN = {
+			add_ideas = md2026_can_us_tariff_impact
+			add_stability = -0.07
+			country_event = { id = md2026_usmca.2 days = 7 }
+		}
+		MEX = {
+			add_ideas = md2026_mex_us_tariff_impact
+			add_stability = -0.08
+			country_event = { id = md2026_usmca.3 days = 10 }
+		}
+	}
+
+	# Selective Exemptions — spare key industries
+	option = {
+		name = md2026_usmca.1.b
+		ai_chance = { base = 30 }
+		set_country_flag = md2026_usmca_tariffs_imposed
+		add_stability = -0.01
+		add_political_power = 25
+		CAN = {
+			add_stability = -0.04
+			country_event = { id = md2026_usmca.2 days = 14 }
+		}
+		MEX = {
+			add_stability = -0.05
+			country_event = { id = md2026_usmca.3 days = 14 }
+		}
+	}
+}
+
+### .2 — Canada Retaliates (CAN, triggered by .1) ###
+country_event = {
+	id = md2026_usmca.2
+	title = md2026_usmca.2.t
+	desc = md2026_usmca.2.d
+	picture = GFX_report_event_generic_economy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Full Retaliation — dollar-for-dollar counter-tariffs
+	option = {
+		name = md2026_usmca.2.a
+		ai_chance = { base = 70 }
+		set_country_flag = md2026_can_full_retaliation
+		add_war_support = 0.05
+		add_political_power = 50
+		add_stability = -0.03
+		add_opinion_modifier = { target = USA modifier = md2026_tariff_anger }
+		USA = {
+			add_opinion_modifier = { target = CAN modifier = md2026_tariff_retaliation }
+		}
+		country_event = { id = md2026_usmca.4 days = 30 }
+	}
+
+	# Targeted Measures — surgical counter-tariffs on swing-state goods
+	option = {
+		name = md2026_usmca.2.b
+		ai_chance = { base = 30 }
+		add_political_power = 25
+		add_stability = -0.02
+		add_opinion_modifier = { target = USA modifier = md2026_tariff_anger }
+		country_event = { id = md2026_usmca.5 days = 20 }
+	}
+}
+
+### .3 — Mexico Seeks Allies (MEX, triggered by .1) ###
+country_event = {
+	id = md2026_usmca.3
+	title = md2026_usmca.3.t
+	desc = md2026_usmca.3.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# BRICS Outreach — signal strategic realignment
+	option = {
+		name = md2026_usmca.3.a
+		ai_chance = { base = 50 }
+		set_country_flag = md2026_mex_brics_outreach
+		add_political_power = 50
+		add_stability = -0.05
+		add_opinion_modifier = { target = USA modifier = md2026_tariff_anger }
+		country_event = { id = md2026_usmca.5 days = 20 }
+	}
+
+	# Double Down on US Ties — negotiate directly
+	option = {
+		name = md2026_usmca.3.b
+		ai_chance = { base = 50 }
+		add_political_power = -50
+		add_stability = -0.03
+		USA = {
+			add_opinion_modifier = { target = MEX modifier = md2026_improved_relations }
+		}
+		country_event = { id = md2026_usmca.4 days = 20 }
+	}
+}
+
+### .4 — USMCA Emergency Review (USA, triggered by .2a or .3b) ###
+country_event = {
+	id = md2026_usmca.4
+	title = md2026_usmca.4.t
+	desc = md2026_usmca.4.d
+	picture = GFX_report_event_generic_economy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Emergency Renegotiation — open framework talks
+	option = {
+		name = md2026_usmca.4.a
+		ai_chance = { base = 60 }
+		set_country_flag = md2026_usmca_renegotiating
+		add_political_power = -50
+		CAN = {
+			add_stability = 0.04
+		}
+		MEX = {
+			add_stability = 0.04
+		}
+		country_event = { id = md2026_usmca.6 days = 60 }
+	}
+
+	# Let USMCA Collapse — bilateral deals instead
+	option = {
+		name = md2026_usmca.4.b
+		ai_chance = { base = 40 }
+		set_country_flag = md2026_usmca_collapsed
+		add_political_power = 25
+		CAN = {
+			add_stability = -0.10
+			add_war_support = 0.03
+		}
+		MEX = {
+			add_stability = -0.10
+		}
+		country_event = { id = md2026_usmca.6 days = 30 }
+	}
+}
+
+### .5 — CAN-MEX Bilateral Pact (CAN, triggered by .2b or .3a) ###
+country_event = {
+	id = md2026_usmca.5
+	title = md2026_usmca.5.t
+	desc = md2026_usmca.5.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Sign the Pact — deepen bilateral ties
+	option = {
+		name = md2026_usmca.5.a
+		ai_chance = { base = 80 }
+		set_country_flag = md2026_can_mex_pact_signed
+		add_political_power = 75
+		add_stability = 0.03
+		add_opinion_modifier = { target = MEX modifier = md2026_improved_relations }
+		MEX = {
+			add_political_power = 75
+			add_stability = 0.03
+			add_opinion_modifier = { target = CAN modifier = md2026_improved_relations }
+		}
+		country_event = { id = md2026_usmca.6 days = 45 }
+	}
+
+	# Focus on Domestic Recovery — bilateral ties later
+	option = {
+		name = md2026_usmca.5.b
+		ai_chance = { base = 20 }
+		add_political_power = -25
+		add_stability = 0.02
+		country_event = { id = md2026_usmca.6 days = 45 }
+	}
+}
+
+### .6 — Trade Deal Resolution (USA, triggered by .4 or .5) ###
+country_event = {
+	id = md2026_usmca.6
+	title = md2026_usmca.6.t
+	desc = md2026_usmca.6.d
+	picture = GFX_report_event_generic_economy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# New USMCA 2.0 — reformed trilateral framework
+	option = {
+		name = md2026_usmca.6.a
+		ai_chance = { base = 55 }
+		set_country_flag = md2026_usmca_2_signed
+		remove_ideas = md2026_usa_trade_war_tariffs
+		add_stability = 0.05
+		add_political_power = 50
+		CAN = {
+			remove_ideas = md2026_can_us_tariff_impact
+			add_stability = 0.07
+			add_political_power = 50
+		}
+		MEX = {
+			remove_ideas = md2026_mex_us_tariff_impact
+			add_stability = 0.07
+			add_political_power = 50
+		}
+	}
+
+	# Permanent Fracture — each nation goes it alone
+	option = {
+		name = md2026_usmca.6.b
+		ai_chance = { base = 45 }
+		set_country_flag = md2026_usmca_fractured
+		add_stability = -0.05
+		add_political_power = 25
+		CAN = {
+			add_stability = -0.05
+			add_political_power = 25
+		}
+		MEX = {
+			add_stability = -0.05
+			add_political_power = 25
+		}
+	}
+}

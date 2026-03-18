@@ -1,0 +1,201 @@
+# MD2026 NATO/EU Expansion Events
+# Author: md-2026 dev team
+# Date: 2026-03-18
+
+add_namespace = md2026_nato_exp
+
+### Event 1: Ukraine NATO Membership Application ###
+# Title: "Kyiv Formally Applies for NATO Membership"
+# Desc: Ukraine's President has submitted a formal application for NATO membership in a ceremony
+#       at Brussels — a moment that was unthinkable just years ago. The application has split the
+#       Alliance: Eastern flank members are enthusiastic; France and Germany urge caution, fearing
+#       Russian reaction. The summit vote will define the Alliance for a generation.
+# Option A: Fast-track membership — expedited accession (war support up)
+# Option B: Standard process — MAP first, full review
+country_event = {
+	id = md2026_nato_exp.1
+	title = md2026_nato_exp.1.t
+	desc = md2026_nato_exp.1.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		tag = UKR
+		date > 2026.6.1
+		NOT = { has_global_flag = md2026_nato_ukr_applied }
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 45 }
+
+	option = {
+		name = md2026_nato_exp.1.a
+		ai_chance = { base = 55 }
+		# Fast-track — bold Alliance commitment
+		set_global_flag = md2026_nato_ukr_applied
+		add_stability = 0.05
+		add_war_support = 0.07
+		add_political_power = 30
+		country_event = { id = md2026_nato_exp.4 days = 90 }
+	}
+	option = {
+		name = md2026_nato_exp.1.b
+		ai_chance = { base = 45 }
+		# Standard MAP process
+		set_global_flag = md2026_nato_ukr_applied
+		add_stability = 0.02
+		add_political_power = 15
+		country_event = { id = md2026_nato_exp.4 days = 180 }
+	}
+}
+
+### Event 2: Serbia EU Accession Talks ###
+# Title: "Belgrade Renews EU Membership Drive"
+# Desc: Serbia's government has signalled a renewed commitment to European integration, formally
+#       relaunching its stalled EU accession negotiations. However, Brussels has made clear that
+#       progress depends on Serbia's recognition of Kosovo's independence — a red line for
+#       Belgrade's coalition, which includes powerful nationalist blocs.
+# Option A: EU accepts talks — conditional opening (political power bonus)
+# Option B: EU rejects — Kosovo remains deal-breaker (stability penalty)
+country_event = {
+	id = md2026_nato_exp.2
+	title = md2026_nato_exp.2.t
+	desc = md2026_nato_exp.2.d
+	picture = GFX_report_event_generic_parliament
+
+	trigger = {
+		tag = SER
+		date > 2027.1.1
+		NOT = { has_global_flag = md2026_ser_eu_applied }
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 60 }
+
+	option = {
+		name = md2026_nato_exp.2.a
+		ai_chance = { base = 50 }
+		# EU accepts conditional talks
+		set_global_flag = md2026_ser_eu_applied
+		add_stability = 0.05
+		add_political_power = 50
+		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = GER modifier = md2026_improved_relations }
+	}
+	option = {
+		name = md2026_nato_exp.2.b
+		ai_chance = { base = 50 }
+		# EU rejects — Kosovo impasse
+		set_global_flag = md2026_ser_eu_applied
+		add_stability = -0.05
+		add_political_power = -25
+		add_war_support = 0.03
+	}
+}
+
+### Event 3: Georgia NATO Bid ###
+# Title: "Tbilisi Pushes NATO Membership Application"
+# Desc: Georgia's pro-Western government has formally applied for NATO membership, emboldened
+#       by the Alliance's expanding eastern posture. Russia has warned of 'grave consequences.'
+#       Within NATO, support is strong but not unanimous — some members worry about admitting
+#       a country with unresolved territorial disputes in South Ossetia and Abkhazia.
+# Option A: Support Georgia's bid (war support up for Alliance)
+# Option B: Oppose — unresolved conflicts make it premature (stability for GEO)
+country_event = {
+	id = md2026_nato_exp.3
+	title = md2026_nato_exp.3.t
+	desc = md2026_nato_exp.3.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		tag = GEO
+		date > 2027.6.1
+		NOT = { has_global_flag = md2026_nato_geo_applied }
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 60 }
+
+	option = {
+		name = md2026_nato_exp.3.a
+		ai_chance = { base = 55 }
+		# Support the bid
+		set_global_flag = md2026_nato_geo_applied
+		add_war_support = 0.06
+		add_stability = 0.03
+		add_political_power = 25
+	}
+	option = {
+		name = md2026_nato_exp.3.b
+		ai_chance = { base = 45 }
+		# Oppose — legal caution
+		set_global_flag = md2026_nato_geo_applied
+		add_stability = 0.05
+		add_political_power = -15
+	}
+}
+
+### Event 4: NATO Enlargement Summit Decision ###
+# Title: "Alliance at a Crossroads: Enlargement Vote"
+# Desc: NATO's Heads of State have gathered for an emergency summit on Alliance enlargement.
+#       The agenda is dominated by the question of new members. Supporters argue the Alliance
+#       must reward those who have sacrificed for its values; sceptics warn of overextension
+#       and Russian escalation. The vote requires unanimity.
+# Option A: Admit new members — Alliance strengthens (war support + stability)
+# Option B: Delay — disappoint applicants (stability penalty)
+country_event = {
+	id = md2026_nato_exp.4
+	title = md2026_nato_exp.4.t
+	desc = md2026_nato_exp.4.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_nato_exp.4.a
+		ai_chance = { base = 60 }
+		# Admit new members
+		add_war_support = 0.06
+		add_stability = 0.04
+		add_political_power = 40
+		country_event = { id = md2026_nato_exp.5 days = 60 }
+	}
+	option = {
+		name = md2026_nato_exp.4.b
+		ai_chance = { base = 40 }
+		# Delay enlargement
+		add_stability = -0.04
+		add_political_power = -20
+		add_war_support = -0.02
+	}
+}
+
+### Event 5: NATO Membership Ceremony ###
+# Title: "New Stars on the NATO Flag"
+# Desc: In a ceremony at NATO Headquarters in Brussels, the flags of the newest member states
+#       are raised alongside those of the existing Allies. The Secretary General declares it
+#       'the most significant expansion of the Alliance in a generation.' For the new members,
+#       Article 5's collective defence guarantee is now a reality — a moment years in the making.
+# Option A: Celebrate the moment (stability + war support bonuses for new members)
+country_event = {
+	id = md2026_nato_exp.5
+	title = md2026_nato_exp.5.t
+	desc = md2026_nato_exp.5.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_nato_exp.5.a
+		ai_chance = { base = 100 }
+		# Historic moment
+		add_stability = 0.08
+		add_war_support = 0.08
+		add_political_power = 50
+		if = {
+			limit = { tag = UKR }
+			add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+			add_opinion_modifier = { target = POL modifier = md2026_improved_relations }
+		}
+		if = {
+			limit = { tag = GEO }
+			add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		}
+	}
+}

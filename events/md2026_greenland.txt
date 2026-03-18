@@ -1,0 +1,235 @@
+# =====================================================================
+# md2026_greenland.txt
+# Phase F.3.1 — Greenland Crisis Event Chain
+# Mod: Millennium Dawn 2026 Rework (md-2026)
+# Events:
+#   md2026_greenland.1  — Trump Demands Greenland (USA, date-triggered)
+#   md2026_greenland.2  — Denmark Refuses: NATO Tensions (DEN, triggered)
+#   md2026_greenland.3  — Greenland Autonomy Vote (DEN, triggered)
+#   md2026_greenland.4  — US Military Expansion Attempt (DEN, triggered)
+#   md2026_greenland.5  — NATO Mediates (USA, triggered)
+#   md2026_greenland.6  — Crisis Resolution (DEN, triggered)
+# =====================================================================
+
+add_namespace = md2026_greenland
+
+### .1 — Trump Demands Greenland (USA, date-triggered) ###
+country_event = {
+	id = md2026_greenland.1
+	title = md2026_greenland.1.t
+	desc = md2026_greenland.1.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = USA
+		has_global_flag = md2026_initialized
+		date > 2026.1.1
+		NOT = { has_country_flag = md2026_greenland_demanded_f3 }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	# Maximum Pressure — issue formal ultimatum
+	option = {
+		name = md2026_greenland.1.a
+		ai_chance = { base = 70 }
+		set_country_flag = md2026_greenland_demanded_f3
+		add_war_support = 0.05
+		add_political_power = 25
+		DEN = {
+			set_country_flag = md2026_greenland_ultimatum_received
+			country_event = { id = md2026_greenland.2 days = 7 }
+		}
+	}
+
+	# Diplomatic Approach — back-channel negotiation
+	option = {
+		name = md2026_greenland.1.b
+		ai_chance = { base = 30 }
+		set_country_flag = md2026_greenland_demanded_f3
+		add_political_power = -25
+		DEN = {
+			set_country_flag = md2026_greenland_approach_diplomatic
+			country_event = { id = md2026_greenland.5 days = 30 }
+		}
+	}
+}
+
+### .2 — Denmark Refuses: NATO Tensions (DEN, triggered by .1a) ###
+country_event = {
+	id = md2026_greenland.2
+	title = md2026_greenland.2.t
+	desc = md2026_greenland.2.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Stand Firm — rally public support
+	option = {
+		name = md2026_greenland.2.a
+		ai_chance = { base = 80 }
+		set_country_flag = md2026_greenland_standing_firm
+		add_stability = -0.03
+		add_war_support = 0.10
+		add_political_power = 50
+		USA = {
+			add_opinion_modifier = { target = DEN modifier = md2026_greenland_tension }
+		}
+		add_opinion_modifier = { target = USA modifier = md2026_greenland_tension }
+		# European solidarity kicks in
+		every_country = {
+			limit = {
+				OR = {
+					original_tag = GER
+					original_tag = FRA
+					original_tag = NOR
+					original_tag = SWE
+					original_tag = HOL
+				}
+			}
+			add_opinion_modifier = { target = DEN modifier = md2026_solidarity_opinion }
+		}
+		country_event = { id = md2026_greenland.3 days = 21 }
+	}
+
+	# Seek Compromise — avoid escalation
+	option = {
+		name = md2026_greenland.2.b
+		ai_chance = { base = 20 }
+		add_stability = -0.05
+		add_political_power = -50
+		country_event = { id = md2026_greenland.5 days = 14 }
+	}
+}
+
+### .3 — Greenland Autonomy Vote (DEN, triggered by .2a) ###
+country_event = {
+	id = md2026_greenland.3
+	title = md2026_greenland.3.t
+	desc = md2026_greenland.3.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Enhanced Autonomy — generous package to bind Greenland to Denmark
+	option = {
+		name = md2026_greenland.3.a
+		ai_chance = { base = 65 }
+		set_country_flag = md2026_greenland_autonomy_granted
+		add_stability = 0.05
+		add_political_power = -50
+		country_event = { id = md2026_greenland.4 days = 30 }
+	}
+
+	# Status Quo Referendum — let Greenlanders decide later
+	option = {
+		name = md2026_greenland.3.b
+		ai_chance = { base = 35 }
+		add_stability = -0.03
+		add_political_power = 25
+		country_event = { id = md2026_greenland.4 days = 30 }
+	}
+}
+
+### .4 — US Military Expansion Attempt (DEN, triggered by .3) ###
+country_event = {
+	id = md2026_greenland.4
+	title = md2026_greenland.4.t
+	desc = md2026_greenland.4.d
+	picture = GFX_report_event_generic_military
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Reject — expel US buildup beyond agreed limits
+	option = {
+		name = md2026_greenland.4.a
+		ai_chance = { base = 60 }
+		add_war_support = 0.08
+		add_political_power = 25
+		USA = {
+			add_opinion_modifier = { target = DEN modifier = md2026_greenland_tension }
+		}
+		country_event = { id = md2026_greenland.5 days = 14 }
+	}
+
+	# Negotiate Base Rights — trade presence for economic gains
+	option = {
+		name = md2026_greenland.4.b
+		ai_chance = { base = 40 }
+		add_stability = 0.03
+		add_political_power = 50
+		USA = {
+			add_opinion_modifier = { target = DEN modifier = md2026_improved_relations }
+		}
+		country_event = { id = md2026_greenland.5 days = 14 }
+	}
+}
+
+### .5 — NATO Mediates (USA, triggered by diplomatic path or escalation) ###
+country_event = {
+	id = md2026_greenland.5
+	title = md2026_greenland.5.t
+	desc = md2026_greenland.5.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# USA Backs Down — alliance cohesion preserved
+	option = {
+		name = md2026_greenland.5.a
+		ai_chance = { base = 50 }
+		add_political_power = -100
+		add_stability = 0.03
+		DEN = {
+			add_stability = 0.05
+			add_political_power = 75
+			country_event = { id = md2026_greenland.6 days = 14 }
+		}
+	}
+
+	# Deal Struck — US gets expanded base rights; DEN gets economic package
+	option = {
+		name = md2026_greenland.5.b
+		ai_chance = { base = 50 }
+		add_political_power = 50
+		add_stability = 0.02
+		DEN = {
+			add_stability = 0.03
+			add_political_power = 50
+			country_event = { id = md2026_greenland.6 days = 7 }
+		}
+	}
+}
+
+### .6 — Crisis Resolution (DEN, triggered by .5) ###
+country_event = {
+	id = md2026_greenland.6
+	title = md2026_greenland.6.t
+	desc = md2026_greenland.6.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Accept Resolution
+	option = {
+		name = md2026_greenland.6.a
+		ai_chance = { base = 100 }
+		set_country_flag = md2026_greenland_crisis_resolved
+		add_stability = 0.07
+		add_political_power = 75
+		# Trade relationship resets
+		USA = {
+			add_opinion_modifier = { target = DEN modifier = md2026_improved_relations }
+		}
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+	}
+}

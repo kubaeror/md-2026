@@ -1,0 +1,116 @@
+﻿l_english:
+ # ─── F2.1 ASEAN vs China — South China Sea ───────────────────────────────
+ md2026_asean_scs.1.t: "South China Sea: New Island Military Facility"
+ md2026_asean_scs.1.d: "Satellite imagery has confirmed that China has completed construction of a major military installation on a reclaimed reef in the South China Sea. The facility includes a hardened runway, missile batteries, and naval berthing — dramatically altering the strategic balance in the region. ASEAN foreign ministers are convening in emergency session."
+ md2026_asean_scs.1.a: "Lodge a collective ASEAN protest"
+ md2026_asean_scs.1.b: "Dismiss the protests — assert our sovereignty"
+
+ md2026_asean_scs.2.t: "ASEAN Emergency Summit: Manila"
+ md2026_asean_scs.2.d: "Foreign ministers of all ten ASEAN member states have gathered in Manila for an emergency summit on Chinese construction activities in the South China Sea. The meeting is fractured from the outset — Cambodia and Laos, both heavily dependent on Chinese investment, resist any language condemning Beijing. The Philippines, Vietnam, and Malaysia push for a firm united front."
+ md2026_asean_scs.2.a: "Issue a unified joint statement condemning Chinese aggression"
+ md2026_asean_scs.2.b: "Accept a watered-down communiqué — ASEAN consensus is fragile"
+
+ md2026_asean_scs.3.t: "Philippine Vessels Water-Cannoned at Ayungin Shoal"
+ md2026_asean_scs.3.d: "Chinese coast guard vessels have water-cannoned Philippine resupply boats attempting to reach the grounded warship BRP Sierra Madre at Ayungin Shoal. Several Filipino sailors were injured. The incident has been broadcast worldwide and demands an immediate response from Manila. Washington is watching closely."
+ md2026_asean_scs.3.a: "Escort our vessels — we will not be intimidated"
+ md2026_asean_scs.3.b: "Refer the matter to international mediation"
+
+ md2026_asean_scs.4.t: "USS Ronald Reagan Ordered to South China Sea"
+ md2026_asean_scs.4.d: "The Pentagon has ordered the USS Ronald Reagan carrier strike group to conduct freedom of navigation operations in disputed waters of the South China Sea. The deployment signals American resolve but risks a direct encounter with the People's Liberation Army Navy. Beijing has warned of 'serious consequences'."
+ md2026_asean_scs.4.a: "Execute freedom of navigation operations within 12 nautical miles"
+ md2026_asean_scs.4.b: "Pursue diplomatic channels to de-escalate tensions"
+
+ md2026_asean_scs.5.t: "China Dismisses Arbitration Ruling — Again"
+ md2026_asean_scs.5.d: "Beijing has once again declared the 2016 UNCLOS arbitration ruling 'null and void', reaffirming its claim over the entire South China Sea. The dismissal comes as Manila formally invokes the ruling in diplomatic communications. The international community must decide whether the rules-based order has any teeth."
+ md2026_asean_scs.5.a: "Rally international partners to enforce the ruling"
+ md2026_asean_scs.5.b: "Accept status quo — normalize ties with Beijing"
+
+ md2026_asean_scs.6.t: "ASEAN-China Code of Conduct Signed"
+ md2026_asean_scs.6.d: "After years of contentious negotiations, ASEAN and China have signed a Code of Conduct for the South China Sea. The agreement is non-binding and leaves sovereignty disputes unresolved, but establishes communication channels and protocols to prevent miscalculation. Critics call it a fig leaf; supporters hail it as a fragile foundation for regional stability."
+ md2026_asean_scs.6.a: "Welcome the agreement — a fragile but real framework for stability"
+
+ # ─── F2.2 Korean Peninsula Crisis — NKO ICBM ─────────────────────────────
+ md2026_korea_nko.1.t: "Hwasong-19: DPRK ICBM Test Launch"
+ md2026_korea_nko.1.d: "North Korea has launched a Hwasong-19 intercontinental ballistic missile which, according to South Korean and American tracking data, demonstrated re-entry vehicle capability and a range sufficient to strike the continental United States. The UN Security Council convenes in emergency session as Seoul and Washington assess their response options."
+ md2026_korea_nko.1.a: "Declare the test a complete success — our deterrent is absolute"
+ md2026_korea_nko.1.b: "Demonstrate our capability while leaving the diplomatic door open"
+
+ md2026_korea_nko.2.t: "UN Security Council: Emergency Session on DPRK Test"
+ md2026_korea_nko.2.d: "The UN Security Council convenes in emergency session following North Korea's ICBM test. China and Russia block any new sanctions resolution, but the meeting provides a forum for allies to coordinate their response. The USA and South Korea must decide between maximum pressure and measured diplomacy."
+ md2026_korea_nko.2.a: "Maximum pressure — new sanctions and restore diplomatic contact"
+ md2026_korea_nko.2.b: "No talks until Pyongyang takes concrete denuclearization steps"
+
+ md2026_korea_nko.3.t: "Pyongyang Signals Openness to Inter-Korean Summit"
+ md2026_korea_nko.3.d: "Through backchannel contacts via the International Red Cross, North Korea has signaled openness to an inter-Korean summit meeting. The offer is conditional and may be a tactical ploy, but represents the first diplomatic overture in years. Seoul must weigh the risks of legitimizing Pyongyang against the potential to reduce tensions."
+ md2026_korea_nko.3.a: "Accept the proposal — dialogue is the only path to lasting peace"
+ md2026_korea_nko.3.b: "Reject — Pyongyang must first freeze its nuclear program"
+
+ md2026_korea_nko.4.t: "Beijing Mediates: China-DPRK Strategic Dialogue"
+ md2026_korea_nko.4.d: "China has convened high-level talks with North Korea in Beijing, with Xi Jinping personally meeting Kim Jong-un's envoy. Beijing is positioning itself as the indispensable broker for peninsula stability. Washington must decide whether to insist on its red lines or accept a Chinese-brokered interim arrangement that falls short of full denuclearization."
+ md2026_korea_nko.4.a: "Washington insists on full, verifiable denuclearization — no interim deal"
+ md2026_korea_nko.4.b: "Accept a freeze-for-freeze interim arrangement"
+
+ md2026_korea_nko.5.t: "DPRK Threatens Tactical Nuclear First Strike"
+ md2026_korea_nko.5.d: "Pyongyang has issued its most explicit nuclear threat to date, with state media declaring that North Korea's tactical nuclear forces are 'ready to deliver an overwhelming pre-emptive strike' if it perceives an imminent threat to its leadership. The statement has sent shockwaves through Seoul, Tokyo, and Washington."
+ md2026_korea_nko.5.a: "Raise to maximum alert — activate missile defence and scramble air assets"
+ md2026_korea_nko.5.b: "Measured response — do not give Pyongyang the attention it seeks"
+
+ md2026_korea_nko.6.t: "Peninsula Tensions Ease — Hotline Restored"
+ md2026_korea_nko.6.d: "After months of dangerous brinkmanship, a tenuous calm has returned to the Korean Peninsula. Back-channel diplomacy, Chinese pressure on Pyongyang, and careful crisis management by Seoul and Washington have pulled the situation back from the brink. The inter-Korean hotline is restored. The underlying causes remain unresolved, but immediate catastrophe has been averted."
+ md2026_korea_nko.6.a: "The storm has passed — for now. Rebuild confidence and remain vigilant."
+
+ # ─── F2.3 US Asia Pivot ───────────────────────────────────────────────────
+ md2026_asia_pivot.1.t: "QUAD Leaders' Summit: Elevating the Alliance"
+ md2026_asia_pivot.1.d: "The leaders of the United States, Japan, Australia, and India have convened for the Quadrilateral Security Dialogue summit. On the agenda: whether to transform the informal grouping into a formal binding security architecture. India's strategic autonomy doctrine creates friction, but Chinese assertiveness is pushing all four nations closer together."
+ md2026_asia_pivot.1.a: "Formalize the QUAD — transform it into a binding security treaty"
+ md2026_asia_pivot.1.b: "Strengthen cooperation while preserving each nation's strategic flexibility"
+
+ md2026_asia_pivot.2.t: "AUKUS: SSN Pathway Reaches Critical Milestone"
+ md2026_asia_pivot.2.d: "The AUKUS trilateral partnership has achieved a major milestone in the submarine nuclear propulsion technology transfer to Australia. British engineers and Australian submariners are training together in Barrow-in-Furness. The programme remains hugely expensive and politically sensitive, with both acceleration and delay carrying significant costs."
+ md2026_asia_pivot.2.a: "Accelerate delivery — fast-track technology transfers to Australia"
+ md2026_asia_pivot.2.b: "Proceed cautiously — the programme is stretching budgets and timelines"
+
+ md2026_asia_pivot.3.t: "EDCA Expansion: New Philippine Bases Offered to US Forces"
+ md2026_asia_pivot.3.d: "Manila has offered the United States access to five additional military bases under the Enhanced Defence Cooperation Agreement, including sites in northern Luzon directly facing Taiwan. The offer represents a significant shift in Philippines security posture and will dramatically improve American military reach in the western Pacific — at the cost of provoking Beijing."
+ md2026_asia_pivot.3.a: "Grant full EDCA expansion — a cornerstone of Philippine-US security"
+ md2026_asia_pivot.3.b: "Limited expansion — preserve room for diplomatic manoeuvre with China"
+
+ md2026_asia_pivot.4.t: "Beijing Lodges Formal Protest Against US Military Build-up"
+ md2026_asia_pivot.4.d: "China's foreign ministry has summoned the American ambassador and lodged a formal diplomatic protest against what it calls 'an aggressive military encirclement of China'. The People's Liberation Army has placed its forces in the Southern Theatre Command on heightened alert. Washington must decide how to respond to Beijing's increasingly assertive posture."
+ md2026_asia_pivot.4.a: "Ignore Beijing's objections — the Indo-Pacific is open to all democracies"
+ md2026_asia_pivot.4.b: "Reassure Beijing that US presence is defensive — propose a strategic dialogue"
+
+ md2026_asia_pivot.5.t: "Indo-Pacific Economic Framework: Final Agreement Reached"
+ md2026_asia_pivot.5.d: "After lengthy and often fractious negotiations, the fourteen member nations of the Indo-Pacific Economic Framework for Prosperity have reached a comprehensive final agreement covering trade, supply chains, clean energy, and anti-corruption standards. The IPEF represents the most significant US economic engagement with the Indo-Pacific region since the Trans-Pacific Partnership."
+ md2026_asia_pivot.5.a: "Sign the framework — a new economic architecture for the free world"
+
+ # ─── F2.4 Asian Elections ─────────────────────────────────────────────────
+ md2026_asia_elec.1.t: "Philippines 2028: Presidential Election"
+ md2026_asia_elec.1.d: "Sixty-eight million Filipinos go to the polls in the most consequential presidential election in a generation. The contest is between a continuity candidate pledging to maintain the current strategic direction — deepening ties with Washington and confronting Chinese assertiveness in the South China Sea — and an opposition figure promising economic reform, a softer line with Beijing, and a review of military agreements with the United States."
+ md2026_asia_elec.1.a: "The continuity candidate wins — stability and the US alliance maintained"
+ md2026_asia_elec.1.b: "The opposition candidate wins — a new direction for the Philippines"
+
+ md2026_asia_elec.2.t: "Philippine Foreign Policy: Post-Election Signals"
+ md2026_asia_elec.2.d: "The new Philippine leadership has delivered its first major foreign policy address, setting the tone for its relationship with Washington and Beijing. The direction will shape the security architecture of Southeast Asia for years to come."
+ md2026_asia_elec.2.a: "Reaffirm the US alliance — Manila remains Washington's anchor in Southeast Asia"
+ md2026_asia_elec.2.b: "Reassess — the new government demands a more equal partnership with Washington"
+
+ md2026_asia_elec.3.t: "Thailand 2027: General Election"
+ md2026_asia_elec.3.d: "Thailand holds its most consequential general election in a decade. The pro-democracy Move Forward-successor coalition, led by a charismatic new generation of reformers, faces off against the military-backed establishment parties. The Constitutional Court looms in the background — it has dissolved reform parties before and could do so again. International observers are watching closely."
+ md2026_asia_elec.3.a: "The pro-democracy coalition sweeps to power — a mandate for reform"
+ md2026_asia_elec.3.b: "The military-backed establishment retains power amid opposition protests"
+
+ md2026_asia_elec.4.t: "Thailand: Post-Election Political Landscape"
+ md2026_asia_elec.4.d: "The dust has settled after Thailand's general election. The result has profound implications for the country's democratic trajectory, its relationship with the military establishment, and its foreign policy alignment between great powers."
+ md2026_asia_elec.4.a: "Consolidate the democratic gains — reform agenda begins"
+ md2026_asia_elec.4.b: "Opposition protests simmer — the establishment holds but faces legitimacy questions"
+
+ md2026_asia_elec.5.t: "Malaysia 2028: General Election"
+ md2026_asia_elec.5.d: "Malaysia's ruling Madani coalition under Prime Minister Anwar Ibrahim faces its first major electoral test since coming to power. The United Malays National Organisation and its allies are mounting a fierce challenge, exploiting economic anxieties and ethnic nationalist sentiment. The result will determine whether Malaysia's reform experiment continues or whether the old guard returns to power."
+ md2026_asia_elec.5.a: "The reform coalition is renewed — Malaysia's democratic experiment continues"
+ md2026_asia_elec.5.b: "Shock result — opposition wins, triggering political uncertainty"
+
+ md2026_asia_elec.6.t: "Malaysia: New Government Sets Economic Agenda"
+ md2026_asia_elec.6.d: "The incoming Malaysian government has outlined its economic priorities in its first 100-day plan. The direction of economic policy will have significant implications for Malaysia's position in regional supply chains, its relations with China and the United States, and the pace of domestic reform."
+ md2026_asia_elec.6.a: "Open markets — Malaysia positions itself as a regional investment hub"
+ md2026_asia_elec.6.b: "Economic nationalism — review existing deals and reassert state control"

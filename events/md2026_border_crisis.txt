@@ -1,0 +1,236 @@
+# =====================================================================
+# md2026_border_crisis.txt
+# Phase F.3.3 — US-Mexico Border Crisis Event Chain
+# Mod: Millennium Dawn 2026 Rework (md-2026)
+# Events:
+#   md2026_border.1  — Mass Migration Surge (USA, date-triggered)
+#   md2026_border.2  — Cartel Violence Spills Over (MEX, triggered)
+#   md2026_border.3  — US Troops Deployed to Border (MEX, triggered)
+#   md2026_border.4  — Mexico Demands Sovereignty Respect (USA, triggered)
+#   md2026_border.5  — Bilateral Security Framework (MEX, triggered)
+#   md2026_border.6  — Border Stabilized (MEX, triggered)
+# =====================================================================
+
+add_namespace = md2026_border
+
+### .1 — Mass Migration Surge (USA, date-triggered) ###
+country_event = {
+	id = md2026_border.1
+	title = md2026_border.1.t
+	desc = md2026_border.1.d
+	picture = GFX_report_event_generic_military
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = USA
+		has_global_flag = md2026_initialized
+		date > 2026.3.1
+		NOT = { has_country_flag = md2026_border_crisis_started }
+	}
+
+	mean_time_to_happen = {
+		days = 20
+	}
+
+	# Militarize the Border — troops and barriers
+	option = {
+		name = md2026_border.1.a
+		ai_chance = { base = 70 }
+		set_country_flag = md2026_border_crisis_started
+		set_country_flag = md2026_usa_border_militarized
+		add_war_support = 0.05
+		add_stability = -0.03
+		add_political_power = 25
+		MEX = {
+			set_country_flag = md2026_border_militarization_received
+			add_stability = -0.05
+			country_event = { id = md2026_border.2 days = 7 }
+		}
+	}
+
+	# Humanitarian Approach — processing centers and asylum reform
+	option = {
+		name = md2026_border.1.b
+		ai_chance = { base = 30 }
+		set_country_flag = md2026_border_crisis_started
+		add_stability = 0.02
+		add_political_power = -25
+		MEX = {
+			country_event = { id = md2026_border.2 days = 14 }
+		}
+	}
+}
+
+### .2 — Cartel Violence Spills Over (MEX, triggered by .1) ###
+country_event = {
+	id = md2026_border.2
+	title = md2026_border.2.t
+	desc = md2026_border.2.d
+	picture = GFX_report_event_generic_military
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Military Crackdown — surge National Guard to border states
+	option = {
+		name = md2026_border.2.a
+		ai_chance = { base = 65 }
+		set_country_flag = md2026_mex_military_crackdown
+		add_stability = -0.05
+		add_political_power = 25
+		add_war_support = 0.03
+		army_experience = 10
+		country_event = { id = md2026_border.3 days = 14 }
+	}
+
+	# Negotiations — back-channel talks with cartel intermediaries
+	option = {
+		name = md2026_border.2.b
+		ai_chance = { base = 35 }
+		add_stability = 0.02
+		add_political_power = -50
+		country_event = { id = md2026_border.3 days = 21 }
+	}
+}
+
+### .3 — US Troops Deployed to Border (MEX, triggered by .2) ###
+country_event = {
+	id = md2026_border.3
+	title = md2026_border.3.t
+	desc = md2026_border.3.d
+	picture = GFX_report_event_generic_military
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Protest to the UN — internationalise the dispute
+	option = {
+		name = md2026_border.3.a
+		ai_chance = { base = 55 }
+		set_country_flag = md2026_mex_un_protest
+		add_political_power = 50
+		add_war_support = 0.05
+		add_opinion_modifier = { target = USA modifier = md2026_tariff_anger }
+		USA = {
+			add_opinion_modifier = { target = MEX modifier = md2026_tariff_retaliation }
+			country_event = { id = md2026_border.4 days = 14 }
+		}
+	}
+
+	# Accept US Assistance — frame it as counter-cartel cooperation
+	option = {
+		name = md2026_border.3.b
+		ai_chance = { base = 45 }
+		add_stability = 0.03
+		add_political_power = -50
+		army_experience = 5
+		USA = {
+			add_opinion_modifier = { target = MEX modifier = md2026_improved_relations }
+			country_event = { id = md2026_border.4 days = 7 }
+		}
+	}
+}
+
+### .4 — Mexico Demands Sovereignty Respect (USA, triggered by .3) ###
+country_event = {
+	id = md2026_border.4
+	title = md2026_border.4.t
+	desc = md2026_border.4.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Acknowledge Mexican Sovereignty — pull back unilateral measures
+	option = {
+		name = md2026_border.4.a
+		ai_chance = { base = 40 }
+		add_political_power = -50
+		MEX = {
+			add_stability = 0.05
+			add_political_power = 50
+			add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+			country_event = { id = md2026_border.5 days = 14 }
+		}
+	}
+
+	# Press Harder — expand border operations regardless
+	option = {
+		name = md2026_border.4.b
+		ai_chance = { base = 60 }
+		add_war_support = 0.05
+		add_political_power = 25
+		add_stability = -0.03
+		MEX = {
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_opinion_modifier = { target = USA modifier = md2026_greenland_tension }
+			country_event = { id = md2026_border.5 days = 21 }
+		}
+	}
+}
+
+### .5 — Bilateral Security Framework (MEX, triggered by .4) ###
+country_event = {
+	id = md2026_border.5
+	title = md2026_border.5.t
+	desc = md2026_border.5.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Cooperate — sign joint security compact
+	option = {
+		name = md2026_border.5.a
+		ai_chance = { base = 65 }
+		set_country_flag = md2026_border_security_framework
+		add_stability = 0.05
+		add_political_power = 50
+		army_experience = 10
+		USA = {
+			add_stability = 0.03
+			add_political_power = 25
+		}
+		country_event = { id = md2026_border.6 days = 30 }
+	}
+
+	# Continue Unilateral Action — domestic politics demand it
+	option = {
+		name = md2026_border.5.b
+		ai_chance = { base = 35 }
+		add_war_support = 0.05
+		add_stability = -0.03
+		add_political_power = 25
+		USA = {
+			add_political_power = 25
+		}
+		country_event = { id = md2026_border.6 days = 45 }
+	}
+}
+
+### .6 — Border Stabilized (MEX, triggered by .5) ###
+country_event = {
+	id = md2026_border.6
+	title = md2026_border.6.t
+	desc = md2026_border.6.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Accept Stabilization — focus on recovery
+	option = {
+		name = md2026_border.6.a
+		ai_chance = { base = 100 }
+		set_country_flag = md2026_border_stabilized
+		add_stability = 0.07
+		add_political_power = 75
+		army_experience = 15
+		USA = {
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+	}
+}

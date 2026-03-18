@@ -1,0 +1,181 @@
+# MD2026 EU Rule of Law Crisis Events
+# Author: md-2026 dev team
+# Date: 2026-03-18
+
+add_namespace = md2026_eu_rol
+
+### Event 1: Article 7 Procedure Triggered ###
+# Title: "Brussels Moves Against Budapest / Warsaw"
+# Desc: The European Commission has formally triggered Article 7 proceedings against a member state,
+#       citing systematic violations of the rule of law, judicial independence, and press freedom.
+#       The vote in the Council could strip the country of its EU voting rights for the first time
+#       in the bloc's history — a move that risks fracturing the union itself.
+# Option A: EU escalates — escalate the procedure (leads to .2)
+# Option B: Backs down — the Commission seeks a compromise (leads to .5)
+country_event = {
+	id = md2026_eu_rol.1
+	title = md2026_eu_rol.1.t
+	desc = md2026_eu_rol.1.d
+	picture = GFX_report_event_generic_parliament
+
+	trigger = {
+		OR = {
+			tag = HUN
+			tag = POL
+		}
+		date > 2026.6.1
+		NOT = { has_global_flag = md2026_eu_rol_triggered }
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = md2026_eu_rol.1.a
+		ai_chance = { base = 60 }
+		# EU escalates — formally advance Article 7
+		set_global_flag = md2026_eu_rol_triggered
+		add_political_power = -25
+		add_stability = -0.03
+		country_event = { id = md2026_eu_rol.2 days = 30 }
+	}
+	option = {
+		name = md2026_eu_rol.1.b
+		ai_chance = { base = 40 }
+		# Commission backs down — quiet diplomacy
+		set_global_flag = md2026_eu_rol_triggered
+		add_political_power = 15
+		country_event = { id = md2026_eu_rol.5 days = 45 }
+	}
+}
+
+### Event 2: EU Suspends Voting Rights ###
+# Title: "Unprecedented — Voting Rights Suspended"
+# Desc: The European Council has voted, by qualified majority, to suspend the offending member
+#       state's voting rights in the Council. European capitals are stunned. The move is historic,
+#       but the affected government shows no sign of capitulation — if anything, its domestic
+#       approval rating has climbed as nationalists rally to the flag.
+# Option A: Country complies — backs down under pressure (+stability long-term)
+# Option B: Country defies — government doubles down (leads to .3)
+country_event = {
+	id = md2026_eu_rol.2
+	title = md2026_eu_rol.2.t
+	desc = md2026_eu_rol.2.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_eu_rol.2.a
+		ai_chance = { base = 35 }
+		# Comply — painful but stabilising
+		add_stability = 0.04
+		add_political_power = -50
+		add_war_support = -0.02
+	}
+	option = {
+		name = md2026_eu_rol.2.b
+		ai_chance = { base = 65 }
+		# Defy — political win at home, economic pain ahead
+		add_stability = -0.04
+		add_political_power = 50
+		add_war_support = 0.03
+		country_event = { id = md2026_eu_rol.3 days = 45 }
+	}
+}
+
+### Event 3: EU Cohesion Funding Cut ###
+# Title: "Brussels Freezes Cohesion Funds"
+# Desc: The European Commission has formally suspended cohesion and structural fund payments
+#       worth billions of euros, citing the ongoing rule-of-law violations. Construction projects
+#       have halted across the country. Farmers and regional mayors are furious. The government
+#       now faces a stark choice: swallow its pride or dig in further.
+# Option A: Accept budget cuts — painful compliance (-stability)
+# Option B: Threaten veto — escalate to constitutional crisis (leads to .4)
+country_event = {
+	id = md2026_eu_rol.3
+	title = md2026_eu_rol.3.t
+	desc = md2026_eu_rol.3.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_eu_rol.3.a
+		ai_chance = { base = 40 }
+		# Accept cuts — compliance with heavy domestic cost
+		add_stability = -0.05
+		add_political_power = -30
+	}
+	option = {
+		name = md2026_eu_rol.3.b
+		ai_chance = { base = 60 }
+		# Threaten veto — dramatic escalation
+		add_war_support = 0.04
+		add_political_power = 30
+		add_stability = -0.03
+		country_event = { id = md2026_eu_rol.4 days = 30 }
+	}
+}
+
+### Event 4: Exit Threat — "Polexit / Huxit?" ###
+# Title: "Government Threatens EU Withdrawal"
+# Desc: In an extraordinary parliamentary address, the Prime Minister has raised the spectre of
+#       leaving the European Union entirely — echoing the Brexit playbook but with far greater
+#       geopolitical stakes at Europe's eastern flank. Markets have reacted badly. NATO allies
+#       are alarmed. The EU is scrambling for a response.
+# Option A: Back down — avoid the abyss (relations improve)
+# Option B: Prepare exit — commit to withdrawal process (-stability, +war support)
+country_event = {
+	id = md2026_eu_rol.4
+	title = md2026_eu_rol.4.t
+	desc = md2026_eu_rol.4.d
+	picture = GFX_report_event_generic_sign
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_eu_rol.4.a
+		ai_chance = { base = 50 }
+		# Back down — step away from the brink
+		add_stability = 0.05
+		add_political_power = -40
+		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = GER modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = ITA modifier = md2026_improved_relations }
+	}
+	option = {
+		name = md2026_eu_rol.4.b
+		ai_chance = { base = 50 }
+		# Prepare exit — cross the Rubicon
+		add_stability = -0.08
+		add_war_support = 0.07
+		add_political_power = 60
+	}
+}
+
+### Event 5: Compromise Reached ###
+# Title: "EU and Member State Reach Rule-of-Law Agreement"
+# Desc: After months of fraught negotiations, the European Commission and the member state
+#       government have announced a landmark compromise. Judicial oversight mechanisms will be
+#       strengthened, but the government has secured face-saving language around 'national
+#       constitutional traditions.' Critics on both sides are unhappy, but the crisis has passed.
+# Option A: Accept the deal (stability and political power for all)
+country_event = {
+	id = md2026_eu_rol.5
+	title = md2026_eu_rol.5.t
+	desc = md2026_eu_rol.5.d
+	picture = GFX_report_event_generic_sign
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_eu_rol.5.a
+		ai_chance = { base = 100 }
+		# Compromise — relief across Europe
+		add_stability = 0.06
+		add_political_power = 40
+		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = GER modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = ITA modifier = md2026_improved_relations }
+	}
+}

@@ -1,0 +1,263 @@
+###################################
+# MD2026 Korean Peninsula Crisis — NKO ICBM Escalation
+# Phase F.2.2 — North Korean nuclear provocation chain
+# Namespace: md2026_korea_nko
+###################################
+
+add_namespace = md2026_korea_nko
+
+###################################
+# md2026_korea_nko.1 — North Korea ICBM Test
+# Fires for NKO after 2026.3.1; fire_only_once
+###################################
+country_event = {
+	id = md2026_korea_nko.1
+	title = md2026_korea_nko.1.t
+	desc = md2026_korea_nko.1.d
+	picture = GFX_report_event_generic_crisis
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = NKO
+		has_global_flag = md2026_initialized
+		date > 2026.3.1
+		NOT = { has_country_flag = md2026_nko_icbm_test }
+	}
+
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	# Loc: md2026_korea_nko.1.t — "Hwasong-19: ICBM Test Launch Detected"
+	# Loc: md2026_korea_nko.1.d — "North Korea has launched an intercontinental ballistic missile..."
+
+	# Option A: Declare test a success — expand deterrent
+	option = {
+		name = md2026_korea_nko.1.a
+		# Loc: "Announce the test as a complete success — our deterrent is absolute"
+		ai_chance = { base = 75 }
+		set_country_flag = md2026_nko_icbm_test
+		set_global_flag = md2026_nko_icbm_tested
+		add_war_support = 0.10
+		add_political_power = 50
+		KOR = { country_event = { id = md2026_korea_nko.2 days = 3 } }
+		USA = { country_event = { id = md2026_korea_nko.2 days = 3 } }
+	}
+
+	# Option B: Conduct test but signal openness to talks
+	option = {
+		name = md2026_korea_nko.1.b
+		# Loc: "Test our capabilities but leave diplomatic door ajar"
+		ai_chance = { base = 25 }
+		set_country_flag = md2026_nko_icbm_test
+		set_global_flag = md2026_nko_icbm_tested
+		add_war_support = 0.05
+		add_political_power = 25
+		KOR = { country_event = { id = md2026_korea_nko.2 days = 3 } }
+		USA = { country_event = { id = md2026_korea_nko.2 days = 3 } }
+	}
+}
+
+###################################
+# md2026_korea_nko.2 — USA/KOR: Emergency UN Security Council Session
+# is_triggered_only — fires for USA and KOR
+###################################
+country_event = {
+	id = md2026_korea_nko.2
+	title = md2026_korea_nko.2.t
+	desc = md2026_korea_nko.2.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Loc: md2026_korea_nko.2.t — "UN Security Council: Emergency Session on DPRK Test"
+	# Loc: md2026_korea_nko.2.d — "The United Nations Security Council convenes in emergency session..."
+
+	# Option A: Push for new sanctions — restore the hotline
+	option = {
+		name = md2026_korea_nko.2.a
+		# Loc: "Demand maximum pressure and restore diplomatic contact"
+		ai_chance = { base = 55 }
+		add_war_support = 0.08
+		add_political_power = -25
+		set_global_flag = md2026_nko_sanctions_push
+		country_event = { id = md2026_korea_nko.3 days = 60 }
+	}
+
+	# Option B: Maintain pressure — no contact until denuclearization begins
+	option = {
+		name = md2026_korea_nko.2.b
+		# Loc: "No talks until Pyongyang takes concrete denuclearization steps"
+		ai_chance = { base = 45 }
+		add_war_support = 0.10
+		add_stability = -0.03
+		set_global_flag = md2026_nko_no_talks
+		country_event = { id = md2026_korea_nko.5 days = 90 }
+	}
+}
+
+###################################
+# md2026_korea_nko.3 — Inter-Korean Summit Proposed
+# is_triggered_only — fires for KOR
+###################################
+country_event = {
+	id = md2026_korea_nko.3
+	title = md2026_korea_nko.3.t
+	desc = md2026_korea_nko.3.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Loc: md2026_korea_nko.3.t — "Pyongyang Signals Willingness for Inter-Korean Summit"
+	# Loc: md2026_korea_nko.3.d — "Through backchannel contacts, North Korea has signaled openness to a summit..."
+
+	# Option A: Accept the summit proposal
+	option = {
+		name = md2026_korea_nko.3.a
+		# Loc: "Accept the proposal — dialogue is the only path forward"
+		ai_chance = { base = 60 }
+		add_stability = 0.07
+		add_political_power = 25
+		set_global_flag = md2026_ikor_summit_held
+		NKO = {
+			add_political_power = 25
+			add_opinion_modifier = { target = KOR modifier = md2026_improved_relations }
+		}
+		country_event = { id = md2026_korea_nko.4 days = 45 }
+	}
+
+	# Option B: Decline — preconditions not met
+	option = {
+		name = md2026_korea_nko.3.b
+		# Loc: "Reject the proposal — Pyongyang must first freeze its nuclear program"
+		ai_chance = { base = 40 }
+		add_war_support = 0.08
+		add_stability = -0.03
+		add_political_power = -25
+		NKO = {
+			add_opinion_modifier = { target = KOR modifier = md2026_diplomatic_disapproval }
+		}
+		country_event = { id = md2026_korea_nko.5 days = 60 }
+	}
+}
+
+###################################
+# md2026_korea_nko.4 — China-North Korea Talks
+# is_triggered_only — fires for USA
+###################################
+country_event = {
+	id = md2026_korea_nko.4
+	title = md2026_korea_nko.4.t
+	desc = md2026_korea_nko.4.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Loc: md2026_korea_nko.4.t — "Beijing Mediates: China-DPRK Strategic Dialogue"
+	# Loc: md2026_korea_nko.4.d — "China has convened high-level talks with North Korea in Beijing..."
+
+	# Option A: USA insists — no deal without full denuclearization
+	option = {
+		name = md2026_korea_nko.4.a
+		# Loc: "Washington insists any agreement must include full, verifiable denuclearization"
+		ai_chance = { base = 60 }
+		add_war_support = 0.05
+		add_political_power = -25
+		CHI = {
+			add_opinion_modifier = { target = USA modifier = md2026_diplomatic_disapproval }
+		}
+		country_event = { id = md2026_korea_nko.5 days = 60 }
+	}
+
+	# Option B: Accept interim status quo — freeze-for-freeze deal
+	option = {
+		name = md2026_korea_nko.4.b
+		# Loc: "A freeze-for-freeze is imperfect but may halt further escalation"
+		ai_chance = { base = 40 }
+		add_stability = 0.05
+		add_political_power = 25
+		set_global_flag = md2026_nko_freeze_deal
+		CHI = {
+			add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		}
+		country_event = { id = md2026_korea_nko.6 days = 60 }
+	}
+}
+
+###################################
+# md2026_korea_nko.5 — NKO Tactical Nuclear Threat
+# is_triggered_only — fires for KOR
+###################################
+country_event = {
+	id = md2026_korea_nko.5
+	title = md2026_korea_nko.5.t
+	desc = md2026_korea_nko.5.d
+	picture = GFX_report_event_generic_crisis
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Loc: md2026_korea_nko.5.t — "DPRK Threatens Tactical Nuclear First Strike"
+	# Loc: md2026_korea_nko.5.d — "Pyongyang has issued its most explicit nuclear threat to date..."
+
+	# Option A: DEFCON-style alert — full military readiness
+	option = {
+		name = md2026_korea_nko.5.a
+		# Loc: "Raise to maximum alert — activate missile defence and scramble air assets"
+		ai_chance = { base = 70 }
+		add_war_support = 0.15
+		add_political_power = -25
+		army_experience = 10
+		air_experience = 10
+		set_global_flag = md2026_nko_defcon_alert
+		USA = { add_war_support = 0.05 }
+		country_event = { id = md2026_korea_nko.6 days = 45 }
+	}
+
+	# Option B: Measured response — avoid giving Pyongyang propaganda win
+	option = {
+		name = md2026_korea_nko.5.b
+		# Loc: "Respond calmly — do not give Pyongyang the attention it seeks"
+		ai_chance = { base = 30 }
+		add_stability = 0.03
+		add_political_power = 25
+		add_war_support = 0.05
+		country_event = { id = md2026_korea_nko.6 days = 45 }
+	}
+}
+
+###################################
+# md2026_korea_nko.6 — Crisis De-escalation
+# is_triggered_only — fires for KOR
+###################################
+country_event = {
+	id = md2026_korea_nko.6
+	title = md2026_korea_nko.6.t
+	desc = md2026_korea_nko.6.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Loc: md2026_korea_nko.6.t — "Peninsula Tensions Ease — Hotline Restored"
+	# Loc: md2026_korea_nko.6.d — "After months of dangerous brinkmanship, a tenuous calm has returned to the peninsula..."
+
+	# Single resolution option
+	option = {
+		name = md2026_korea_nko.6.a
+		# Loc: "The storm has passed — for now. Rebuild confidence and remain vigilant."
+		ai_chance = { base = 100 }
+		set_global_flag = md2026_nko_crisis_deescalated
+		KOR = {
+			add_stability = 0.08
+			add_political_power = 25
+		}
+		NKO = {
+			add_political_power = 50
+		}
+	}
+}

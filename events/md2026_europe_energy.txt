@@ -1,0 +1,192 @@
+# MD2026 European Energy Crisis Events
+# Author: md-2026 dev team
+# Date: 2026-03-18
+
+add_namespace = md2026_eur_energy
+
+### Event 1: New LNG Contract Offer ###
+# Title: "American / Norwegian LNG — Energy Lifeline Offered"
+# Desc: A long-term LNG supply agreement has been proposed by Norway and the United States,
+#       offering European importers price stability and reduced dependence on Russian pipeline gas.
+#       The contracts are expensive, but energy security advocates argue that price predictability
+#       is worth the premium — particularly with Russian energy weaponisation fresh in memory.
+# Option A: Sign long-term deal (stability up, industry bonus)
+# Option B: Short-term deal only (cheaper, less security)
+country_event = {
+	id = md2026_eur_energy.1
+	title = md2026_eur_energy.1.t
+	desc = md2026_eur_energy.1.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		OR = {
+			tag = NOR
+			tag = USA
+		}
+		date > 2026.3.1
+		NOT = { has_global_flag = md2026_lng_deal_offered }
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 60 }
+
+	option = {
+		name = md2026_eur_energy.1.a
+		ai_chance = { base = 60 }
+		# Long-term deal — energy security
+		set_global_flag = md2026_lng_deal_offered
+		add_stability = 0.05
+		add_political_power = 20
+		country_event = { id = md2026_eur_energy.4 days = 180 }
+	}
+	option = {
+		name = md2026_eur_energy.1.b
+		ai_chance = { base = 40 }
+		# Short-term deal — pragmatic
+		set_global_flag = md2026_lng_deal_offered
+		add_stability = 0.02
+		add_political_power = 10
+		country_event = { id = md2026_eur_energy.3 days = 120 }
+	}
+}
+
+### Event 2: Nuclear Renaissance Vote in EU ###
+# Title: "Brussels Debates Nuclear Energy's Future"
+# Desc: A landmark European Parliament resolution on nuclear energy has forced a showdown
+#       between pro-nuclear France, Finland and the Czech Republic against anti-nuclear Germany,
+#       Austria and Luxembourg. The outcome will shape Europe's energy mix — and its carbon
+#       trajectory — for decades to come.
+# Option A: Expand nuclear (industry bonus, energy security)
+# Option B: Reject nuclear — pure renewables pathway
+country_event = {
+	id = md2026_eur_energy.2
+	title = md2026_eur_energy.2.t
+	desc = md2026_eur_energy.2.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		NOT = { has_global_flag = md2026_nuclear_vote_done }
+		date > 2026.9.1
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 90 }
+
+	option = {
+		name = md2026_eur_energy.2.a
+		ai_chance = { base = 55 }
+		# Expand nuclear
+		set_global_flag = md2026_nuclear_vote_done
+		add_stability = 0.04
+		add_political_power = 25
+		add_war_support = 0.02
+	}
+	option = {
+		name = md2026_eur_energy.2.b
+		ai_chance = { base = 45 }
+		# Renewables only — reject nuclear
+		set_global_flag = md2026_nuclear_vote_done
+		add_stability = 0.02
+		add_political_power = 15
+		country_event = { id = md2026_eur_energy.4 days = 90 }
+	}
+}
+
+### Event 3: Winter Gas Shortage ###
+# Title: "Gas Reserves Critical as Winter Bites"
+# Desc: A harsh winter combined with reduced Russian gas flows has pushed European gas storage
+#       levels to critically low levels. Mandatory rationing is being discussed; industrial
+#       users have already been asked to cut consumption by 15%. Household energy bills are
+#       surging and public anger is mounting — the government must act.
+# Option A: Ration energy (-stability but responsible governance)
+# Option B: Pay premium — buy gas at market prices (expensive, stability preserved short-term)
+country_event = {
+	id = md2026_eur_energy.3
+	title = md2026_eur_energy.3.t
+	desc = md2026_eur_energy.3.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		NOT = { has_global_flag = md2026_winter_gas_done }
+		date > 2026.11.1
+		has_war_with = SOV
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 60 }
+
+	option = {
+		name = md2026_eur_energy.3.a
+		ai_chance = { base = 55 }
+		# Ration energy — responsible but painful
+		set_global_flag = md2026_winter_gas_done
+		add_stability = -0.05
+		add_political_power = -20
+		add_war_support = 0.03
+	}
+	option = {
+		name = md2026_eur_energy.3.b
+		ai_chance = { base = 45 }
+		# Pay premium — buy stability with money
+		set_global_flag = md2026_winter_gas_done
+		add_stability = -0.02
+		add_political_power = -40
+	}
+}
+
+### Event 4: Renewable Energy Breakthrough ###
+# Title: "Renewable Capacity Surges Across Europe"
+# Desc: A combination of plunging offshore wind costs, accelerated permitting reforms and
+#       record solar installations has driven European renewable capacity to unprecedented levels.
+#       For the first time, renewables provided more than 60% of EU electricity over a full
+#       calendar year. Energy independence is now within reach — but the transition requires
+#       careful management of legacy grids and industrial adjustment.
+# Option A: Fast transition — accelerate the shift (stability up, future bonuses)
+# Option B: Gradual transition — manage legacy industry carefully
+country_event = {
+	id = md2026_eur_energy.4
+	title = md2026_eur_energy.4.t
+	desc = md2026_eur_energy.4.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_eur_energy.4.a
+		ai_chance = { base = 55 }
+		# Fast transition
+		add_stability = 0.04
+		add_political_power = 30
+		country_event = { id = md2026_eur_energy.5 days = 120 }
+	}
+	option = {
+		name = md2026_eur_energy.4.b
+		ai_chance = { base = 45 }
+		# Gradual transition
+		add_stability = 0.06
+		add_political_power = 20
+		country_event = { id = md2026_eur_energy.5 days = 240 }
+	}
+}
+
+### Event 5: Energy Independence Achieved ###
+# Title: "Europe Declares Energy Independence"
+# Desc: In a landmark address to the European Parliament, the Commission President declares
+#       that the European Union has broken its structural dependence on Russian energy imports.
+#       Domestic renewables, diversified LNG contracts and improved interconnectors have
+#       transformed Europe's energy landscape. The era of energy vulnerability is over.
+# Option A: Celebrate — political power and stability bonuses
+country_event = {
+	id = md2026_eur_energy.5
+	title = md2026_eur_energy.5.t
+	desc = md2026_eur_energy.5.d
+	picture = GFX_report_event_generic_sign
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_eur_energy.5.a
+		ai_chance = { base = 100 }
+		# Energy independence milestone
+		add_stability = 0.08
+		add_political_power = 60
+		add_war_support = 0.04
+	}
+}

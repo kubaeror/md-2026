@@ -1,0 +1,250 @@
+###################################
+# MD2026 US Asia Pivot Events
+# Phase F.2.3 — QUAD, AUKUS, Indo-Pacific framework
+# Namespace: md2026_asia_pivot
+###################################
+
+add_namespace = md2026_asia_pivot
+
+###################################
+# md2026_asia_pivot.1 — QUAD Leaders' Summit
+# Fires for USA after 2026.6.1; MTTH
+###################################
+country_event = {
+	id = md2026_asia_pivot.1
+	title = md2026_asia_pivot.1.t
+	desc = md2026_asia_pivot.1.d
+	picture = GFX_report_event_generic_diplomacy
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = USA
+		has_global_flag = md2026_initialized
+		date > 2026.6.1
+		NOT = { has_global_flag = md2026_quad_summit_held }
+	}
+
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	# Loc: md2026_asia_pivot.1.t — "QUAD Leaders' Summit: Elevating the Alliance"
+	# Loc: md2026_asia_pivot.1.d — "The leaders of the United States, Japan, Australia, and India convene..."
+
+	# Option A: Elevate QUAD to formal security alliance
+	option = {
+		name = md2026_asia_pivot.1.a
+		# Loc: "Formalize the QUAD — transform it into a binding security treaty"
+		ai_chance = { base = 45 }
+		set_global_flag = md2026_quad_summit_held
+		set_global_flag = md2026_quad_formalized
+		add_war_support = 0.08
+		add_political_power = -25
+		JAP = { add_war_support = 0.08 add_stability = 0.05 }
+		AST = { add_war_support = 0.08 add_stability = 0.05 }
+		RAJ = { add_war_support = 0.05 add_political_power = 25 }
+		CHI = {
+			add_opinion_modifier = { target = USA modifier = md2026_military_pressure_anger }
+		}
+		country_event = { id = md2026_asia_pivot.5 days = 180 }
+	}
+
+	# Option B: Keep QUAD informal — preserve India's strategic autonomy
+	option = {
+		name = md2026_asia_pivot.1.b
+		# Loc: "Strengthen cooperation while preserving each nation's strategic flexibility"
+		ai_chance = { base = 55 }
+		set_global_flag = md2026_quad_summit_held
+		add_stability = 0.05
+		add_political_power = 25
+		JAP = { add_stability = 0.05 }
+		AST = { add_stability = 0.05 }
+		RAJ = { add_stability = 0.07 add_political_power = 25 }
+		country_event = { id = md2026_asia_pivot.5 days = 180 }
+	}
+}
+
+###################################
+# md2026_asia_pivot.2 — AUKUS Submarine Deal Milestone
+# Fires for ENG if AST also has global flag; is_triggered_only
+###################################
+country_event = {
+	id = md2026_asia_pivot.2
+	title = md2026_asia_pivot.2.t
+	desc = md2026_asia_pivot.2.d
+	picture = GFX_report_event_generic_navy
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = ENG
+		has_global_flag = md2026_initialized
+		has_global_flag = md2026_quad_summit_held
+		date > 2026.9.1
+		NOT = { has_global_flag = md2026_aukus_milestone }
+	}
+
+	mean_time_to_happen = {
+		days = 150
+	}
+
+	# Loc: md2026_asia_pivot.2.t — "AUKUS: SSN Pathway Reaches Critical Milestone"
+	# Loc: md2026_asia_pivot.2.d — "The AUKUS submarine partnership has achieved a key technological milestone..."
+
+	# Option A: Accelerate the programme — commit additional resources
+	option = {
+		name = md2026_asia_pivot.2.a
+		# Loc: "Accelerate delivery — fast-track technology transfers to Australia"
+		ai_chance = { base = 60 }
+		set_global_flag = md2026_aukus_milestone
+		set_global_flag = md2026_aukus_accelerated
+		navy_experience = 20
+		add_political_power = -25
+		AST = { navy_experience = 25 add_war_support = 0.07 }
+		USA = { navy_experience = 15 add_war_support = 0.05 }
+		CHI = {
+			add_opinion_modifier = { target = ENG modifier = md2026_military_pressure_anger }
+		}
+	}
+
+	# Option B: Delay — manage domestic political concerns
+	option = {
+		name = md2026_asia_pivot.2.b
+		# Loc: "Proceed cautiously — the programme is already stretching budgets"
+		ai_chance = { base = 40 }
+		set_global_flag = md2026_aukus_milestone
+		navy_experience = 10
+		add_stability = 0.04
+		AST = { navy_experience = 10 add_stability = 0.03 }
+		USA = { navy_experience = 5 }
+	}
+}
+
+###################################
+# md2026_asia_pivot.3 — Philippines Bases Expanded
+# is_triggered_only — fires for PHI
+###################################
+country_event = {
+	id = md2026_asia_pivot.3
+	title = md2026_asia_pivot.3.t
+	desc = md2026_asia_pivot.3.d
+	picture = GFX_report_event_generic_military
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = PHI
+		has_global_flag = md2026_initialized
+		has_global_flag = md2026_quad_summit_held
+		date > 2026.9.1
+		NOT = { has_country_flag = md2026_phi_edca_expanded }
+	}
+
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	# Loc: md2026_asia_pivot.3.t — "EDCA: New Philippine Bases Offered to US Forces"
+	# Loc: md2026_asia_pivot.3.d — "Manila has offered the United States access to five additional military bases..."
+
+	# Option A: Full EDCA expansion — maximum US access
+	option = {
+		name = md2026_asia_pivot.3.a
+		# Loc: "Grant full access under EDCA — a cornerstone of Philippine security"
+		ai_chance = { base = 65 }
+		set_country_flag = md2026_phi_edca_expanded
+		set_global_flag = md2026_phi_edca_full
+		add_war_support = 0.10
+		add_political_power = 25
+		USA = { add_war_support = 0.05 add_political_power = 25 }
+		CHI = {
+			add_opinion_modifier = { target = PHI modifier = md2026_military_pressure_anger }
+		}
+		country_event = { id = md2026_asia_pivot.4 days = 14 }
+	}
+
+	# Option B: Limited expansion — maintain some strategic ambiguity
+	option = {
+		name = md2026_asia_pivot.3.b
+		# Loc: "Offer limited base access — preserve room for diplomatic manoeuvre with China"
+		ai_chance = { base = 35 }
+		set_country_flag = md2026_phi_edca_expanded
+		add_war_support = 0.05
+		add_stability = 0.04
+		USA = { add_political_power = -25 }
+		country_event = { id = md2026_asia_pivot.4 days = 14 }
+	}
+}
+
+###################################
+# md2026_asia_pivot.4 — China Protests US Military Presence
+# is_triggered_only — fires for USA
+###################################
+country_event = {
+	id = md2026_asia_pivot.4
+	title = md2026_asia_pivot.4.t
+	desc = md2026_asia_pivot.4.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Loc: md2026_asia_pivot.4.t — "Beijing Lodges Formal Protest Against US Military Build-up"
+	# Loc: md2026_asia_pivot.4.d — "China's foreign ministry has issued a formal diplomatic protest..."
+
+	# Option A: Ignore the protest — press forward
+	option = {
+		name = md2026_asia_pivot.4.a
+		# Loc: "Ignore Beijing's objections — the Indo-Pacific is open to all democracies"
+		ai_chance = { base = 55 }
+		add_war_support = 0.07
+		add_political_power = -25
+		CHI = {
+			add_opinion_modifier = { target = USA modifier = md2026_military_pressure_anger }
+			add_war_support = 0.05
+		}
+	}
+
+	# Option B: Offer reassurances — open a strategic dialogue
+	option = {
+		name = md2026_asia_pivot.4.b
+		# Loc: "Reassure Beijing that US presence is defensive — propose strategic dialogue"
+		ai_chance = { base = 45 }
+		add_stability = 0.05
+		add_political_power = 25
+		CHI = {
+			add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+		}
+	}
+}
+
+###################################
+# md2026_asia_pivot.5 — Indo-Pacific Economic Framework Finalized
+# is_triggered_only — fires for USA
+###################################
+country_event = {
+	id = md2026_asia_pivot.5
+	title = md2026_asia_pivot.5.t
+	desc = md2026_asia_pivot.5.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Loc: md2026_asia_pivot.5.t — "Indo-Pacific Economic Framework: Final Agreement Reached"
+	# Loc: md2026_asia_pivot.5.d — "After lengthy negotiations, the Indo-Pacific Economic Framework..."
+
+	# Single resolution option
+	option = {
+		name = md2026_asia_pivot.5.a
+		# Loc: "Sign the framework — a new economic architecture for the free world"
+		ai_chance = { base = 100 }
+		set_global_flag = md2026_ipef_signed
+		add_political_power = 50
+		add_stability = 0.05
+		JAP = { add_political_power = 50 add_stability = 0.05 }
+		AST = { add_political_power = 50 add_stability = 0.05 }
+		RAJ = { add_political_power = 50 add_stability = 0.05 }
+	}
+}

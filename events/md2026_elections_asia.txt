@@ -1,0 +1,280 @@
+###################################
+# MD2026 Asian Elections — Extended
+# Phase F.2.4 — PHI, THA, MAY election chains
+# Namespace: md2026_asia_elec
+###################################
+
+add_namespace = md2026_asia_elec
+
+###################################
+# md2026_asia_elec.1 — Philippines 2028 Presidential Election
+# Fires for PHI after 2028.5.1; fire_only_once
+###################################
+country_event = {
+	id = md2026_asia_elec.1
+	title = md2026_asia_elec.1.t
+	desc = md2026_asia_elec.1.d
+	picture = GFX_report_event_generic_elections
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = PHI
+		has_global_flag = md2026_initialized
+		date > 2028.5.1
+		NOT = { has_country_flag = md2026_phi_2028_election }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	# Loc: md2026_asia_elec.1.t — "Philippines 2028: Presidential Election"
+	# Loc: md2026_asia_elec.1.d — "Filipinos head to the polls in the most consequential presidential election in years..."
+
+	# Option A: Continuity candidate wins
+	option = {
+		name = md2026_asia_elec.1.a
+		# Loc: "The continuity candidate triumphs — stability and US ties maintained"
+		ai_chance = { base = 55 }
+		set_country_flag = md2026_phi_2028_election
+		set_country_flag = md2026_phi_continuity_wins
+		add_stability = 0.08
+		add_political_power = 25
+		country_event = { id = md2026_asia_elec.2 days = 30 }
+	}
+
+	# Option B: Opposition candidate wins
+	option = {
+		name = md2026_asia_elec.1.b
+		# Loc: "The opposition upsets the establishment — a new direction for the Philippines"
+		ai_chance = { base = 45 }
+		set_country_flag = md2026_phi_2028_election
+		set_country_flag = md2026_phi_opposition_wins
+		add_political_power = 50
+		add_stability = -0.03
+		country_event = { id = md2026_asia_elec.2 days = 30 }
+	}
+}
+
+###################################
+# md2026_asia_elec.2 — Effect of PHI Election on US Alliance
+# is_triggered_only — fires for PHI
+###################################
+country_event = {
+	id = md2026_asia_elec.2
+	title = md2026_asia_elec.2.t
+	desc = md2026_asia_elec.2.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Loc: md2026_asia_elec.2.t — "Philippine Foreign Policy: Post-Election Signals"
+	# Loc: md2026_asia_elec.2.d — "The new Philippine leadership has signalled its foreign policy direction..."
+
+	# Option A: Alliance reaffirmed
+	option = {
+		name = md2026_asia_elec.2.a
+		trigger = { has_country_flag = md2026_phi_continuity_wins }
+		# Loc: "Reaffirm the US alliance — Manila remains Washington's anchor in Southeast Asia"
+		ai_chance = { base = 80 }
+		add_war_support = 0.05
+		add_stability = 0.04
+		USA = {
+			add_opinion_modifier = { target = PHI modifier = md2026_improved_relations }
+		}
+	}
+
+	# Option B: Reassessment of alliance posture
+	option = {
+		name = md2026_asia_elec.2.b
+		trigger = { has_country_flag = md2026_phi_opposition_wins }
+		# Loc: "Reassess — the new government demands a more equal footing with Washington"
+		ai_chance = { base = 70 }
+		add_political_power = 50
+		add_war_support = -0.05
+		USA = {
+			add_opinion_modifier = { target = PHI modifier = md2026_diplomatic_disapproval }
+		}
+	}
+}
+
+###################################
+# md2026_asia_elec.3 — Thailand 2027 Election
+# Fires for THA after 2027.3.1; fire_only_once
+###################################
+country_event = {
+	id = md2026_asia_elec.3
+	title = md2026_asia_elec.3.t
+	desc = md2026_asia_elec.3.d
+	picture = GFX_report_event_generic_elections
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = THA
+		has_global_flag = md2026_initialized
+		date > 2027.3.1
+		NOT = { has_country_flag = md2026_tha_2027_election }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	# Loc: md2026_asia_elec.3.t — "Thailand 2027: General Election"
+	# Loc: md2026_asia_elec.3.d — "Thailand holds its most consequential general election in years..."
+
+	# Option A: Pro-democracy coalition wins
+	option = {
+		name = md2026_asia_elec.3.a
+		# Loc: "The pro-democracy coalition sweeps the election — a mandate for reform"
+		ai_chance = { base = 50 }
+		set_country_flag = md2026_tha_2027_election
+		set_country_flag = md2026_tha_democracy_wins
+		add_stability = 0.20
+		add_political_power = 25
+		country_event = { id = md2026_asia_elec.4 days = 45 }
+	}
+
+	# Option B: Military-backed establishment wins
+	option = {
+		name = md2026_asia_elec.3.b
+		# Loc: "The military-backed party retains power amid opposition protests"
+		ai_chance = { base = 50 }
+		set_country_flag = md2026_tha_2027_election
+		set_country_flag = md2026_tha_military_wins
+		add_war_support = 0.08
+		add_political_power = 50
+		add_stability = -0.05
+		country_event = { id = md2026_asia_elec.4 days = 45 }
+	}
+}
+
+###################################
+# md2026_asia_elec.4 — Thailand Post-Election Stability
+# is_triggered_only — fires for THA
+###################################
+country_event = {
+	id = md2026_asia_elec.4
+	title = md2026_asia_elec.4.t
+	desc = md2026_asia_elec.4.d
+	picture = GFX_report_event_generic_crisis
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Loc: md2026_asia_elec.4.t — "Thailand: Post-Election Political Landscape"
+	# Loc: md2026_asia_elec.4.d — "The dust settles after Thailand's election..."
+
+	# Option A: Democratic consolidation — stability bonus
+	option = {
+		name = md2026_asia_elec.4.a
+		trigger = { has_country_flag = md2026_tha_democracy_wins }
+		# Loc: "Consolidate the democratic gains — new government begins reform agenda"
+		ai_chance = { base = 100 }
+		add_stability = 0.08
+		add_political_power = 25
+	}
+
+	# Option B: Military maintains shadow influence — friction remains
+	option = {
+		name = md2026_asia_elec.4.b
+		trigger = { has_country_flag = md2026_tha_military_wins }
+		# Loc: "Opposition protests simmer — the establishment holds but faces legitimacy questions"
+		ai_chance = { base = 100 }
+		add_stability = -0.05
+		add_war_support = 0.05
+		add_political_power = 25
+	}
+}
+
+###################################
+# md2026_asia_elec.5 — Malaysia 2028 Election
+# Fires for MAY after 2027.11.1; fire_only_once
+###################################
+country_event = {
+	id = md2026_asia_elec.5
+	title = md2026_asia_elec.5.t
+	desc = md2026_asia_elec.5.d
+	picture = GFX_report_event_generic_elections
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = MAY
+		has_global_flag = md2026_initialized
+		date > 2027.11.1
+		NOT = { has_country_flag = md2026_may_2028_election }
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	# Loc: md2026_asia_elec.5.t — "Malaysia 2028: General Election"
+	# Loc: md2026_asia_elec.5.d — "Malaysia's ruling coalition faces its toughest electoral test..."
+
+	# Option A: Reform coalition continues
+	option = {
+		name = md2026_asia_elec.5.a
+		# Loc: "The reform coalition is renewed — Malaysia's democratic experiment continues"
+		ai_chance = { base = 55 }
+		set_country_flag = md2026_may_2028_election
+		set_country_flag = md2026_may_reform_wins
+		add_stability = 0.08
+		add_political_power = 25
+		country_event = { id = md2026_asia_elec.6 days = 30 }
+	}
+
+	# Option B: Opposition wins — political upheaval
+	option = {
+		name = md2026_asia_elec.5.b
+		# Loc: "Shock result — opposition wins, triggering political uncertainty"
+		ai_chance = { base = 45 }
+		set_country_flag = md2026_may_2028_election
+		set_country_flag = md2026_may_opposition_wins
+		add_stability = -0.08
+		add_political_power = 50
+		country_event = { id = md2026_asia_elec.6 days = 30 }
+	}
+}
+
+###################################
+# md2026_asia_elec.6 — Malaysia Post-Election Economic Policy
+# is_triggered_only — fires for MAY
+###################################
+country_event = {
+	id = md2026_asia_elec.6
+	title = md2026_asia_elec.6.t
+	desc = md2026_asia_elec.6.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Loc: md2026_asia_elec.6.t — "Malaysia: New Government Sets Economic Agenda"
+	# Loc: md2026_asia_elec.6.d — "The incoming Malaysian government has outlined its economic priorities..."
+
+	# Option A: Reform government pursues investment-friendly agenda
+	option = {
+		name = md2026_asia_elec.6.a
+		trigger = { has_country_flag = md2026_may_reform_wins }
+		# Loc: "Open markets and attract FDI — Malaysia positions itself as a regional investment hub"
+		ai_chance = { base = 100 }
+		add_political_power = 50
+		add_stability = 0.05
+	}
+
+	# Option B: New opposition government pivots economic policy
+	option = {
+		name = md2026_asia_elec.6.b
+		trigger = { has_country_flag = md2026_may_opposition_wins }
+		# Loc: "New economic nationalism — review existing deals and reassert state control"
+		ai_chance = { base = 100 }
+		add_political_power = 50
+		add_stability = -0.05
+		add_war_support = 0.03
+	}
+}

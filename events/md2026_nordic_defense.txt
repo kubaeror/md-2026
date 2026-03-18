@@ -1,0 +1,165 @@
+# MD2026 Nordic Defense Events
+# Author: md-2026 dev team
+# Date: 2026-03-18
+
+add_namespace = md2026_nordic_def
+
+### Event 1: Nordic Joint Command Proposal ###
+# Title: "Nordic Capitals Propose Joint Military Command"
+# Desc: Finland, Sweden, Norway and Denmark have jointly proposed the establishment of a
+#       Nordic Joint Defence Command — a combined operational headquarters that would coordinate
+#       the four nations' armed forces under a single unified structure for the first time
+#       in peacetime history. The proposal has been warmly received by NATO's Supreme Allied
+#       Commander Europe, who calls it 'a model for regional integration.'
+# Option A: Full joint command — maximum integration (army_experience bonus)
+# Option B: Coordination only — preserve national sovereignty (stability bonus)
+country_event = {
+	id = md2026_nordic_def.1
+	title = md2026_nordic_def.1.t
+	desc = md2026_nordic_def.1.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		OR = {
+			tag = FIN
+			tag = SWE
+			tag = NOR
+			tag = DEN
+		}
+		exists = FIN
+		exists = SWE
+		exists = NOR
+		exists = DEN
+		date > 2026.6.1
+		NOT = { has_global_flag = md2026_nordic_command_proposed }
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 45 }
+
+	option = {
+		name = md2026_nordic_def.1.a
+		ai_chance = { base = 60 }
+		# Full joint command
+		set_global_flag = md2026_nordic_command_proposed
+		army_experience = 20
+		add_political_power = 30
+		add_war_support = 0.04
+		country_event = { id = md2026_nordic_def.2 days = 60 }
+	}
+	option = {
+		name = md2026_nordic_def.1.b
+		ai_chance = { base = 40 }
+		# Coordination framework only
+		set_global_flag = md2026_nordic_command_proposed
+		add_stability = 0.04
+		add_political_power = 20
+		country_event = { id = md2026_nordic_def.2 days = 90 }
+	}
+}
+
+### Event 2: Russian Provocation in Baltic ###
+# Title: "Russian Aircraft Violate Nordic Airspace"
+# Desc: Russian military aircraft have violated the airspace of two Nordic NATO members on the
+#       same day — a clear provocation timed to test Alliance resolve. The incidents lasted
+#       less than ten minutes each, but NATO's rapid response fighter alert was scrambled.
+#       Moscow claims 'navigational error.' Nordic defence ministers are convening an
+#       emergency session.
+# Option A: Deploy additional forces (war support up, sends signal)
+# Option B: Diplomatic protest — formal complaint via NATO
+country_event = {
+	id = md2026_nordic_def.2
+	title = md2026_nordic_def.2.t
+	desc = md2026_nordic_def.2.d
+	picture = GFX_report_event_fighter_goes_to_war
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_nordic_def.2.a
+		ai_chance = { base = 55 }
+		# Deploy forces
+		add_war_support = 0.06
+		add_stability = -0.02
+		add_political_power = 20
+		country_event = { id = md2026_nordic_def.3 days = 45 }
+	}
+	option = {
+		name = md2026_nordic_def.2.b
+		ai_chance = { base = 45 }
+		# Diplomatic protest
+		add_stability = 0.02
+		add_political_power = 15
+		country_event = { id = md2026_nordic_def.3 days = 60 }
+	}
+}
+
+### Event 3: Exercise Blizzard Shield ###
+# Title: "Exercise Blizzard Shield — Nordic Forces Demonstrate Readiness"
+# Desc: The largest Nordic military exercise since the Cold War has concluded after three weeks
+#       of intense combined-arms training across Finland, Sweden, Norway and Denmark. More than
+#       40,000 troops participated in scenarios spanning arctic warfare, amphibious operations
+#       and cyber defence. The exercise has sharpened interoperability and sent an unambiguous
+#       signal to Moscow about the Alliance's northern flank capability.
+# Option A: Excellent — army experience gained for all four nations
+country_event = {
+	id = md2026_nordic_def.3
+	title = md2026_nordic_def.3.t
+	desc = md2026_nordic_def.3.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_nordic_def.3.a
+		ai_chance = { base = 100 }
+		# Exercise complete — experience gained
+		army_experience = 20
+		add_war_support = 0.05
+		add_political_power = 25
+		country_event = { id = md2026_nordic_def.4 days = 60 }
+		if = {
+			limit = { tag = FIN }
+			army_experience = 20
+		}
+		if = {
+			limit = { tag = SWE }
+			army_experience = 20
+		}
+		if = {
+			limit = { tag = NOR }
+			army_experience = 20
+		}
+		if = {
+			limit = { tag = DEN }
+			army_experience = 20
+		}
+	}
+}
+
+### Event 4: Nordic Defence Pact Signed ###
+# Title: "Historic Nordic Defence Pact Signed in Oslo"
+# Desc: The prime ministers of Finland, Sweden, Norway and Denmark have signed the Nordic
+#       Defence Cooperation Pact in Oslo — a binding mutual defence agreement that supplements
+#       their NATO commitments with specific regional obligations. The pact establishes a joint
+#       rapid-reaction force of 15,000 troops, a shared air defence coordination centre and
+#       mutual logistics guarantees. Russia's deputy foreign minister calls it 'an act of
+#       military provocation.' The Nordic nations call it common sense.
+# Option A: Sign the pact (stability + war support for all four nations)
+country_event = {
+	id = md2026_nordic_def.4
+	title = md2026_nordic_def.4.t
+	desc = md2026_nordic_def.4.d
+	picture = GFX_report_event_generic_sign
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_nordic_def.4.a
+		ai_chance = { base = 100 }
+		# Sign the pact
+		add_stability = 0.07
+		add_war_support = 0.07
+		add_political_power = 40
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+	}
+}

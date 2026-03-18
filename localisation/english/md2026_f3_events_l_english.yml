@@ -1,0 +1,98 @@
+﻿l_english:
+
+ ### Phase F.3 — North American Events ###
+
+ ## F3.1 — Greenland Crisis ##
+
+ md2026_greenland.1.t:0 "America Demands Greenland"
+ md2026_greenland.1.d:0 "President Trump has escalated his administration's obsession with Greenland, issuing what amount to formal demands that Denmark relinquish sovereignty over the world's largest island. Citing Arctic security, rare earth minerals, and the growing shadow of Russian and Chinese activity in the High North, Trump frames Greenland as a matter of American national destiny. European capitals are stunned. NATO is quietly fracturing. The question is whether Washington backs its words with action — or blinks."
+ md2026_greenland.1.a:0 "Issue the ultimatum. Greenland will be ours."
+ md2026_greenland.1.b:0 "Pursue quiet diplomacy with Copenhagen."
+
+ md2026_greenland.2.t:0 "Denmark Stands Firm: NATO in Crisis"
+ md2026_greenland.2.d:0 "Copenhagen has delivered its answer to Washington — in unambiguous terms. Greenland is not for sale. It is not subject to coercion. It is sovereign Danish territory and will remain so. The Danish government has summoned the American ambassador, issued a formal démarche, and dispatched a delegation to Brussels and NATO headquarters. Behind closed doors, European allies are rallying. But the alliance's fault lines have never been more visible."
+ md2026_greenland.2.a:0 "Stand firm. We will not be bullied."
+ md2026_greenland.2.b:0 "Seek a quiet compromise before this escalates further."
+
+ md2026_greenland.3.t:0 "Greenland at the Crossroads: The Autonomy Question"
+ md2026_greenland.3.d:0 "The American pressure has ignited a political wildfire in Nuuk. Greenlandic politicians — long advocates of expanded self-governance — now find themselves at the centre of a geopolitical storm. The Inatsisartut has convened in emergency session. For Copenhagen, the question is stark: does Denmark offer Greenland more autonomy to anchor it within the Realm, or insist on the status quo and risk driving Nuuk toward independence — or worse, into an American embrace?"
+ md2026_greenland.3.a:0 "Offer Greenland expanded autonomy with full financial commitment."
+ md2026_greenland.3.b:0 "Hold the constitutional status quo; a referendum can wait."
+
+ md2026_greenland.4.t:0 "The Pentagon Moves In: US Military Expansion"
+ md2026_greenland.4.d:0 "US military transport aircraft have been landing at Pituffik Space Base at rates far exceeding agreed bilateral limits. Pentagon contractors have arrived with prefabricated infrastructure. American officials insist this is routine deterrence against Russia; Danish generals see it as a unilateral land-grab in all but name. Copenhagen must decide whether to confront Washington over base rights or use the American desperation for Arctic presence as leverage for a comprehensive deal."
+ md2026_greenland.4.a:0 "Reject the expansion. Enforce our sovereign limits."
+ md2026_greenland.4.b:0 "Negotiate — American presence can be a bargaining chip."
+
+ md2026_greenland.5.t:0 "NATO to the Table: Alliance Mediation"
+ md2026_greenland.5.d:0 "Secretary-General Mark Rutte has convened an emergency session of the North Atlantic Council. The Greenland crisis has become existential for NATO — an American ally is threatening coercion against a fellow member state. Behind the polished communiqués, the Alliance is exhausted. Berlin, Paris, and Warsaw are pushing Washington to step back. The question is whether Trump sees more value in backing down gracefully or pressing for a deal that lets him claim victory."
+ md2026_greenland.5.a:0 "Stand down. Alliance unity is worth more than Greenland."
+ md2026_greenland.5.b:0 "Strike a deal: base rights in exchange for an economic package."
+
+ md2026_greenland.6.t:0 "Greenland Crisis: Resolution at Last"
+ md2026_greenland.6.d:0 "The crisis that has roiled NATO for weeks has finally reached its denouement. American pressure has receded to manageable levels, European solidarity has held, and Copenhagen has emerged with its sovereignty — and its standing — intact. The relationship with Washington remains bruised but functional. Greenland, for its part, has extracted real gains from the drama. The Arctic, for now, will not become a theatre of intra-Alliance conflict."
+ md2026_greenland.6.a:0 "A hard-won peace. Denmark stands tall."
+
+ ## F3.2 — USMCA Crisis ##
+
+ md2026_usmca.1.t:0 "Trump Pulls the Trigger: 25% Tariffs on Canada and Mexico"
+ md2026_usmca.1.d:0 "The White House has signed the executive orders. Twenty-five percent tariffs on all Canadian and Mexican imports — steel, aluminium, automotive parts, agricultural goods, energy — take effect at midnight. USMCA, the trade agreement Trump himself negotiated in his first term, is effectively suspended. Markets in Toronto and Mexico City are in freefall. The integrated North American supply chain, built over thirty years, is shattering in real time. Ottawa and Mexico City must now decide how to respond."
+ md2026_usmca.1.a:0 "Full tariffs, no exemptions. America First."
+ md2026_usmca.1.b:0 "Selective exemptions for critical supply chains."
+
+ md2026_usmca.2.t:0 "Canada Fights Back: Retaliatory Tariffs"
+ md2026_usmca.2.d:0 "Prime Minister Mark Carney has addressed Parliament. The words are measured but the intent is clear: Canada will not submit. A retaliatory tariff package targeting American goods produced in electorally sensitive swing states — orange juice from Florida, bourbon from Kentucky, steel from Pennsylvania — has been signed into law. The Canadian media is calling it the most significant rupture in North American relations since the FTA debates of 1988. Canadians are buying Canadian. The question is whether Washington will blink."
+ md2026_usmca.2.a:0 "Full retaliation. Dollar for dollar, we match them."
+ md2026_usmca.2.b:0 "Targeted measures — surgical pressure on American politics."
+
+ md2026_usmca.3.t:0 "Mexico Looks Beyond Washington"
+ md2026_usmca.3.d:0 "President Sheinbaum has convened her full cabinet. The conclusion is uncomfortable but unavoidable: Mexico's near-total dependence on the American market is a strategic liability. The tariff shock has idled factories in Monterrey and Juarez, triggered protests outside the National Palace, and exposed the fragility of the nearshoring boom. Mexico must diversify — but toward whom? BRICS membership is on the table. The EU partnership offers another path. Washington is watching very closely."
+ md2026_usmca.3.a:0 "BRICS outreach — signal that Mexico has other options."
+ md2026_usmca.3.b:0 "Double down on direct negotiations with Washington."
+
+ md2026_usmca.4.t:0 "USMCA in the Balance: Emergency Review"
+ md2026_usmca.4.d:0 "The USMCA's dispute settlement mechanism has been formally triggered for the first time in its history. Trade lawyers from three capitals have descended on the review panels. But this is no ordinary chapter dispute — the agreement itself is at stake. American negotiators are demanding sweeping revisions on labour, supply chain, and auto content. Canada and Mexico are insisting on tariff rollback as a precondition for talks. The agreement that knitted North America together faces its existential test."
+ md2026_usmca.4.a:0 "Open emergency renegotiation talks immediately."
+ md2026_usmca.4.b:0 "Let USMCA collapse. Bilateral deals will serve us better."
+
+ md2026_usmca.5.t:0 "Canada and Mexico: A New Partnership"
+ md2026_usmca.5.d:0 "In the face of American economic coercion, Ottawa and Mexico City have quietly negotiated a bilateral framework that bypasses Washington entirely. The Canada-Mexico Strategic Partnership encompasses trade facilitation, supply chain integration, shared infrastructure investment, and diplomatic coordination on multilateral forums. It is the most significant bilateral initiative between the two countries since NAFTA. Washington has noticed — and is not pleased."
+ md2026_usmca.5.a:0 "Sign the pact. North American solidarity without Washington."
+ md2026_usmca.5.b:0 "Domestic recovery first — bilateral ambitions can wait."
+
+ md2026_usmca.6.t:0 "The North American Trade War: Endgame"
+ md2026_usmca.6.d:0 "After months of economic pain, retaliatory spirals, and back-channel diplomacy, North America's trade crisis has reached its moment of resolution. The integrated economy that has defined the continent for three decades cannot be wished away — the supply chains, the energy flows, the investment patterns all run north-south. Whether the three nations choose renewal or permanent rupture, the North American economic order will never look quite the same again."
+ md2026_usmca.6.a:0 "USMCA 2.0: A reformed partnership for a new era."
+ md2026_usmca.6.b:0 "Each nation charts its own course. The old compact is over."
+ md2026_usmca.6.c:0 "The economic consequences will define the decade."
+
+ ## F3.3 — US-Mexico Border Crisis ##
+
+ md2026_border.1.t:0 "The Surge: Mass Migration at the Border"
+ md2026_border.1.d:0 "Border Patrol sector chiefs are reporting a migration surge unlike anything seen since 2023. Economic collapse in Venezuela, Honduras, and Haiti, combined with the closure of legal pathways under the Trump administration's immigration crackdown, has driven tens of thousands toward the southern border. Makeshift camps have appeared in Piedras Negras, Juarez, and Tijuana. American border towns are overwhelmed. The political pressure on the White House is intense — and the 2026 midterms are approaching."
+ md2026_border.1.a:0 "Deploy troops. Seal the border by any means necessary."
+ md2026_border.1.b:0 "Humanitarian processing — expand legal pathways, build capacity."
+
+ md2026_border.2.t:0 "Blood at the Border: Cartel Violence Escalates"
+ md2026_border.2.d:0 "The chaos along the border has given the cartels — the Sinaloa Cartel, CJNG, and a dozen smaller organizations — the perfect operational environment. Human trafficking, drug smuggling, and extortion have spiked. A firefight between cartel gunmen and Mexican federal police in Sonora left twelve dead, including two Americans. Texas Governor Greg Abbott has called it an act of war. Mexico City faces a fundamental choice: unleash the military or seek a path that doesn't plunge border states into open conflict."
+ md2026_border.2.a:0 "Military crackdown — flood the zone with National Guard."
+ md2026_border.2.b:0 "Negotiate — carrot and stick with cartel intermediaries."
+
+ md2026_border.3.t:0 "American Boots on the Border"
+ md2026_border.3.d:0 "The 82nd Airborne has arrived at Fort Huachuca. Armored vehicles, surveillance drones, and forward operating bases are being established within sight of the Mexican border — and, in some areas, across it. Mexico's foreign ministry is calling it a violation of the Treaty of Guadalupe Hidalgo. The Pentagon insists it is within its operational mandate. On the ground, Mexican National Guard troops and American soldiers are staring at each other across an increasingly notional line."
+ md2026_border.3.a:0 "Protest to the UN. Internationalize this illegal deployment."
+ md2026_border.3.b:0 "Accept American assistance. Frame it as counter-cartel cooperation."
+
+ md2026_border.4.t:0 "Mexico's Red Line: Sovereignty is Non-Negotiable"
+ md2026_border.4.d:0 "In a nationally televised address, President Sheinbaum has invoked Mexico's constitutional prohibition on foreign military operations on Mexican soil. The speech is direct: the United States does not have the right to operate military forces in Mexico, full stop. She has recalled Mexico's ambassador from Washington for consultations and summoned a special session of CELAC. The question for Washington is whether to acknowledge reality or double down on a border operation that is straining the very bilateral relationship it depends on."
+ md2026_border.4.a:0 "Acknowledge Mexican sovereignty. Pull back unilateral measures."
+ md2026_border.4.b:0 "Press harder. Border security trumps diplomatic niceties."
+
+ md2026_border.5.t:0 "A Framework for the Border"
+ md2026_border.5.d:0 "After weeks of confrontation, Washington and Mexico City have found their way to a table. Senior officials from both countries — the US National Security Advisor, Mexico's Secretaría de Gobernación, and the directors of the DEA and CISEN — have produced a draft bilateral security framework. It includes joint counter-cartel operations, managed migration processing, and a mechanism for resolving incidents along the border. It is imperfect and politically costly for both sides. But it is better than the alternative."
+ md2026_border.5.a:0 "Sign the framework. Cooperation beats unilateral action."
+ md2026_border.5.b:0 "Reject it. Our domestic politics demand a harder line."
+
+ md2026_border.6.t:0 "The Border Holds: Crisis Abated"
+ md2026_border.6.d:0 "The surge has subsided. Cartel operations in the border corridor have been disrupted — not eliminated, but significantly degraded. The political temperature has dropped from boiling to merely scalding. Both governments can claim at least partial success. For Mexico, the National Guard has gained invaluable experience and the state has reasserted its presence in territories the cartels had controlled. For the United States, the midterm optics have stabilized. The border, as always, remains a wound — but a managed one."
+ md2026_border.6.a:0 "The border holds. For now, that is enough."

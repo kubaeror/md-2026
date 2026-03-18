@@ -1,0 +1,193 @@
+﻿l_english:
+
+ ### MD2026 Phase F.1 — European Events Localisation ###
+
+ # -------------------------------------------------------
+ # F1.1: EU Rule of Law Crisis
+ # -------------------------------------------------------
+
+ # md2026_eu_rol.1 — Article 7 Triggered
+ md2026_eu_rol.1.t:0 "Brussels Moves Against Budapest / Warsaw"
+ md2026_eu_rol.1.d:0 "The European Commission has formally triggered Article 7 proceedings against the government, citing systematic violations of the rule of law, judicial independence, and press freedom. The vote in the European Council could strip the country of its voting rights — a historic and deeply divisive step that risks fracturing the union itself."
+ md2026_eu_rol.1.a:0 "The rule of law is not negotiable. Let Brussels escalate."
+ md2026_eu_rol.1.b:0 "Seek a quiet diplomatic path before this goes further."
+
+ # md2026_eu_rol.2 — Voting Rights Suspended
+ md2026_eu_rol.2.t:0 "Unprecedented: Voting Rights Suspended"
+ md2026_eu_rol.2.d:0 "The European Council has voted by qualified majority to suspend our voting rights in the Council — a step without precedent in the history of the European Union. Our government is under enormous pressure from Brussels, partner capitals, and our own civil society. But domestic audiences are rallying to the flag. We must choose our next step carefully."
+ md2026_eu_rol.2.a:0 "Comply — painful, but the rule of law demands it."
+ md2026_eu_rol.2.b:0 "Defy Brussels — this is an attack on national sovereignty."
+
+ # md2026_eu_rol.3 — Funding Cut
+ md2026_eu_rol.3.t:0 "Brussels Freezes Cohesion Funds"
+ md2026_eu_rol.3.d:0 "The European Commission has suspended cohesion and structural fund payments worth billions of euros, citing ongoing rule-of-law violations. Construction projects have halted. Farmers and regional mayors are furious. The government faces a stark choice: accept the budget pain in exchange for future compliance — or escalate to a full constitutional confrontation."
+ md2026_eu_rol.3.a:0 "Accept the cuts. Compliance is the only path back."
+ md2026_eu_rol.3.b:0 "Threaten to veto all EU budget decisions until funds are restored."
+
+ # md2026_eu_rol.4 — Exit Threat
+ md2026_eu_rol.4.t:0 "Government Threatens EU Withdrawal"
+ md2026_eu_rol.4.d:0 "In an extraordinary parliamentary address, the Prime Minister has raised the spectre of leaving the European Union entirely — echoing the Brexit playbook but with far greater geopolitical stakes on Europe's eastern flank. Markets have reacted badly. NATO allies are alarmed. The EU is scrambling for a response that avoids losing a strategically vital member."
+ md2026_eu_rol.4.a:0 "Step back from the brink — the costs of exit are too high."
+ md2026_eu_rol.4.b:0 "Press forward. Prepare the ground for withdrawal."
+
+ # md2026_eu_rol.5 — Compromise
+ md2026_eu_rol.5.t:0 "EU and Member State Reach Rule-of-Law Agreement"
+ md2026_eu_rol.5.d:0 "After months of fraught negotiations, the European Commission and the member state government have announced a landmark compromise. Judicial oversight mechanisms will be strengthened, but the government has secured face-saving language around 'national constitutional traditions.' Critics on both sides are unhappy — but the crisis has passed, and Europe has held together."
+ md2026_eu_rol.5.a:0 "Accept the deal. Europe is stronger together."
+
+ # -------------------------------------------------------
+ # F1.2: NATO/EU Expansion
+ # -------------------------------------------------------
+
+ # md2026_nato_exp.1 — Ukraine NATO Application
+ md2026_nato_exp.1.t:0 "Kyiv Formally Applies for NATO Membership"
+ md2026_nato_exp.1.d:0 "Ukraine's President has submitted a formal application for NATO membership in a ceremony at Brussels — a moment that was unthinkable just a few years ago. The application has split the Alliance: Eastern flank members are enthusiastic; France and Germany urge caution, fearing Russian reaction. The summit vote will define the Alliance for a generation."
+ md2026_nato_exp.1.a:0 "Fast-track Ukraine — the Alliance must honour its promises."
+ md2026_nato_exp.1.b:0 "Follow the standard Membership Action Plan process."
+
+ # md2026_nato_exp.2 — Serbia EU Application
+ md2026_nato_exp.2.t:0 "Belgrade Renews EU Membership Drive"
+ md2026_nato_exp.2.d:0 "Serbia's government has signalled a renewed commitment to European integration, formally relaunching its stalled accession negotiations. Brussels has made clear that progress depends on Serbia's recognition of Kosovo's independence — a red line for Belgrade's coalition, which includes powerful nationalist blocs with no intention of making that concession."
+ md2026_nato_exp.2.a:0 "Accept Serbia's application and open conditional talks."
+ md2026_nato_exp.2.b:0 "Reject — Kosovo remains a non-negotiable precondition."
+
+ # md2026_nato_exp.3 — Georgia NATO Bid
+ md2026_nato_exp.3.t:0 "Tbilisi Pushes NATO Membership Application"
+ md2026_nato_exp.3.d:0 "Georgia's pro-Western government has formally applied for NATO membership, emboldened by the Alliance's expanding eastern posture. Russia has warned of 'grave consequences.' Within NATO, support is strong but not unanimous — some members worry about admitting a country with unresolved territorial disputes in South Ossetia and Abkhazia that could immediately trigger Article 5."
+ md2026_nato_exp.3.a:0 "Support Georgia's bid — the Alliance must not be held hostage by Moscow's veto."
+ md2026_nato_exp.3.b:0 "Oppose — unresolved territorial disputes make this premature."
+
+ # md2026_nato_exp.4 — Summit Decision
+ md2026_nato_exp.4.t:0 "Alliance at a Crossroads: Enlargement Vote"
+ md2026_nato_exp.4.d:0 "NATO's Heads of State have gathered for a summit on Alliance enlargement. The agenda is dominated by the question of new members. Supporters argue the Alliance must reward those who have sacrificed for its values; sceptics warn of overextension and Russian escalation. The vote requires unanimity — one dissenting nation can block the entire process."
+ md2026_nato_exp.4.a:0 "Admit the new members — the Alliance grows stronger."
+ md2026_nato_exp.4.b:0 "Not yet — delay until conditions are right."
+
+ # md2026_nato_exp.5 — Membership Ceremony
+ md2026_nato_exp.5.t:0 "New Stars on the NATO Flag"
+ md2026_nato_exp.5.d:0 "In a ceremony at NATO Headquarters in Brussels, the flags of the newest member states are raised alongside those of the existing Allies. The Secretary General declares it 'the most significant expansion of the Alliance in a generation.' For the new members, Article 5's collective defence guarantee is now a reality — a moment years, sometimes decades, in the making."
+ md2026_nato_exp.5.a:0 "This is a historic day. Welcome to the Alliance."
+
+ # -------------------------------------------------------
+ # F1.3: European Energy Crisis
+ # -------------------------------------------------------
+
+ # md2026_eur_energy.1 — LNG Contract Offer
+ md2026_eur_energy.1.t:0 "American / Norwegian LNG — Energy Lifeline Offered"
+ md2026_eur_energy.1.d:0 "A long-term LNG supply agreement has been proposed by Norway and the United States, offering price stability and reduced dependence on Russian pipeline gas. The contracts are expensive, but energy security advocates argue that predictability is worth the premium — particularly with Russian energy weaponisation fresh in European memory."
+ md2026_eur_energy.1.a:0 "Sign the long-term deal — energy security is non-negotiable."
+ md2026_eur_energy.1.b:0 "Short-term contracts only — leave flexibility to adapt."
+
+ # md2026_eur_energy.2 — Nuclear Renaissance Vote
+ md2026_eur_energy.2.t:0 "Brussels Debates Nuclear Energy's Future"
+ md2026_eur_energy.2.d:0 "A landmark European Parliament resolution on nuclear energy has forced a showdown between pro-nuclear France, Finland and the Czech Republic against anti-nuclear Germany, Austria and Luxembourg. The outcome will shape Europe's energy mix — and its carbon trajectory — for decades to come."
+ md2026_eur_energy.2.a:0 "Nuclear is the answer. Commission nuclear expansion across Europe."
+ md2026_eur_energy.2.b:0 "Renewables only. Nuclear is yesterday's technology."
+
+ # md2026_eur_energy.3 — Winter Gas Shortage
+ md2026_eur_energy.3.t:0 "Gas Reserves Critical as Winter Bites"
+ md2026_eur_energy.3.d:0 "A harsh winter combined with reduced Russian gas flows has pushed European gas storage levels to critically low levels. Mandatory rationing is being discussed; industrial users have already been asked to cut consumption by 15%. Household energy bills are surging and public anger is mounting — the government must act now."
+ md2026_eur_energy.3.a:0 "Implement mandatory rationing — hard but necessary."
+ md2026_eur_energy.3.b:0 "Pay the market premium. Keep the lights on at any cost."
+
+ # md2026_eur_energy.4 — Renewable Breakthrough
+ md2026_eur_energy.4.t:0 "Renewable Capacity Surges Across Europe"
+ md2026_eur_energy.4.d:0 "A combination of plunging offshore wind costs, accelerated permitting and record solar installations has driven European renewable capacity to unprecedented levels. For the first time, renewables provided more than 60% of EU electricity over a full calendar year. Energy independence is now within reach — but the transition demands careful management of legacy infrastructure."
+ md2026_eur_energy.4.a:0 "Accelerate the transition. Seize this historic moment."
+ md2026_eur_energy.4.b:0 "Gradual transition — protect jobs and legacy industry."
+
+ # md2026_eur_energy.5 — Energy Independence
+ md2026_eur_energy.5.t:0 "Europe Declares Energy Independence"
+ md2026_eur_energy.5.d:0 "In a landmark address to the European Parliament, the Commission President declares that the European Union has broken its structural dependence on Russian energy imports. Domestic renewables, diversified LNG contracts and improved interconnectors have transformed Europe's energy landscape. The era of vulnerability is over."
+ md2026_eur_energy.5.a:0 "A new era begins. Europe stands on its own two feet."
+
+ # -------------------------------------------------------
+ # F1.4: Aegean Crisis
+ # -------------------------------------------------------
+
+ # md2026_aegean.1 — Aircraft Incident
+ md2026_aegean.1.t:0 "Dogfight Near the Aegean — Greek and Turkish Jets Clash"
+ md2026_aegean.1.d:0 "A routine patrol by Hellenic Air Force F-16s has resulted in a dangerous intercept by Turkish jets over disputed Aegean airspace, resulting in a mock dogfight and alleged weapons lock. One Greek pilot issued a distress call after an avionics failure during evasive manoeuvres. Athens is furious; Ankara insists Greek jets violated Turkish airspace first."
+ md2026_aegean.1.a:0 "File a formal diplomatic protest and notify NATO."
+ md2026_aegean.1.b:0 "Scramble additional jets — show Ankara we are not blinking."
+
+ # md2026_aegean.2 — Diplomatic Escalation
+ md2026_aegean.2.t:0 "Aegean Row Deepens — Ambassadors Summoned"
+ md2026_aegean.2.d:0 "What began as an aerial near-miss has escalated into a full diplomatic row. Both countries have summoned each other's ambassadors. The Turkish foreign minister has accused Greece of 'provocative aggression'; Athens has demanded an emergency NATO Council session. Washington is privately urging both sides to stand down."
+ md2026_aegean.2.a:0 "Invoke NATO crisis mechanisms — let the Alliance mediate."
+ md2026_aegean.2.b:0 "Bilateral talks — Greece and Turkey must resolve this themselves."
+
+ # md2026_aegean.3 — Cyprus Tension
+ md2026_aegean.3.t:0 "Cyprus Crisis — Tension Spills Over"
+ md2026_aegean.3.d:0 "Amid the Aegean standoff, Turkey has conducted unannounced naval exercises in the eastern Mediterranean close to Cyprus's exclusive economic zone. Cypriot gas exploration vessels have withdrawn under escort. Athens views the timing as deliberate provocation — a two-front pressure campaign to extract concessions on Aegean maritime demarcation."
+ md2026_aegean.3.a:0 "Reinforce the Evros line — send a clear military signal."
+ md2026_aegean.3.b:0 "Seek EU backing — this is a European issue, not just a Greek one."
+
+ # md2026_aegean.4 — Crisis Summit
+ md2026_aegean.4.t:0 "Emergency Summit — Greece and Turkey at the Table"
+ md2026_aegean.4.d:0 "Under intense NATO and EU pressure, Greece and Turkey have agreed to an emergency bilateral summit in Nicosia. The agenda covers airspace protocols, maritime demarcation and confidence-building measures. Both governments face domestic audiences that regard concession as capitulation. A deal is possible — but fragile."
+ md2026_aegean.4.a:0 "Make concessions — a bad peace is better than a good war."
+ md2026_aegean.4.b:0 "Firm stance. Sovereignty is not negotiable."
+
+ # md2026_aegean.5 — Resolution
+ md2026_aegean.5.t:0 "Aegean Calm Returns — Incident Closes"
+ md2026_aegean.5.d:0 "After weeks of heightened tension, Greek and Turkish officials have agreed to a joint statement establishing new Aegean airspace confidence-building measures and a hotline between the two air force commands. The agreement falls far short of a permanent settlement, but it has pulled both countries back from a dangerous precipice."
+ md2026_aegean.5.a:0 "Accept the agreement. Not perfect, but a step forward."
+
+ # -------------------------------------------------------
+ # F1.5: Nordic Defense
+ # -------------------------------------------------------
+
+ # md2026_nordic_def.1 — Joint Command Proposal
+ md2026_nordic_def.1.t:0 "Nordic Capitals Propose Joint Military Command"
+ md2026_nordic_def.1.d:0 "Finland, Sweden, Norway and Denmark have jointly proposed the establishment of a Nordic Joint Defence Command — a combined operational headquarters that would coordinate all four nations' armed forces under a single unified structure for the first time in peacetime history. NATO's Supreme Allied Commander Europe calls it 'a model for regional integration.'"
+ md2026_nordic_def.1.a:0 "Establish a full joint command — maximum integration."
+ md2026_nordic_def.1.b:0 "A coordination framework only — preserve national sovereignty."
+
+ # md2026_nordic_def.2 — Russian Provocation
+ md2026_nordic_def.2.t:0 "Russian Aircraft Violate Nordic Airspace"
+ md2026_nordic_def.2.d:0 "Russian military aircraft have violated the airspace of two Nordic NATO members on the same day — a clear provocation timed to test Alliance resolve. The incidents lasted less than ten minutes each, but NATO's rapid response fighter alert was scrambled. Moscow claims 'navigational error.' Nordic defence ministers are convening an emergency session."
+ md2026_nordic_def.2.a:0 "Deploy additional forces to the Baltic approaches."
+ md2026_nordic_def.2.b:0 "File a formal complaint through NATO channels."
+
+ # md2026_nordic_def.3 — Exercise Blizzard Shield
+ md2026_nordic_def.3.t:0 "Exercise Blizzard Shield — Nordic Forces Demonstrate Readiness"
+ md2026_nordic_def.3.d:0 "The largest Nordic military exercise since the Cold War has concluded after three weeks of intense combined-arms training across all four nations. More than 40,000 troops participated in scenarios spanning arctic warfare, amphibious operations and cyber defence. The exercise has sharpened interoperability and sent an unambiguous signal to Moscow about the Alliance's northern flank capability."
+ md2026_nordic_def.3.a:0 "Outstanding results. Our forces are ready."
+
+ # md2026_nordic_def.4 — Defence Pact Signed
+ md2026_nordic_def.4.t:0 "Historic Nordic Defence Pact Signed in Oslo"
+ md2026_nordic_def.4.d:0 "The prime ministers of Finland, Sweden, Norway and Denmark have signed the Nordic Defence Cooperation Pact in Oslo — a binding mutual defence agreement supplementing their NATO commitments with specific regional obligations. The pact establishes a joint rapid-reaction force, a shared air defence coordination centre and mutual logistics guarantees."
+ md2026_nordic_def.4.a:0 "Sign the pact. Nordic solidarity is our greatest strength."
+
+ # -------------------------------------------------------
+ # F1.6: Eastern Flank Reinforcement
+ # -------------------------------------------------------
+
+ # md2026_east_flank.1 — NATO Forward Presence
+ md2026_east_flank.1.t:0 "Poland to Host Expanded NATO Forward Presence"
+ md2026_east_flank.1.d:0 "NATO has formally agreed to expand its enhanced Forward Presence battlegroups in Poland, the Baltic states and Romania. Poland will host the largest contingent — a full Allied Land Command forward element of some 10,000 troops drawn from twenty Alliance nations. Warsaw's government has been instrumental in lobbying for the upgrade, and the Alliance has delivered."
+ md2026_east_flank.1.a:0 "Welcome the full expansion. The more Allies on our soil, the safer we are."
+ md2026_east_flank.1.b:0 "Accept logistics support only — preserve national command authority."
+
+ # md2026_east_flank.2 — Kaliningrad Provocation
+ md2026_east_flank.2.t:0 "Kaliningrad: Russia Threatens to Close Baltic Corridors"
+ md2026_east_flank.2.d:0 "Moscow has announced the closure of Russian airspace above Kaliningrad to all NATO military and civilian traffic. The move directly impacts logistics routes for Allied forces in Poland and the Baltic states. Poland has placed its air force on elevated readiness. The Suwalki Gap — the narrow land corridor between Kaliningrad and Belarus — has rarely felt so contested."
+ md2026_east_flank.2.a:0 "Close Polish airspace to all Russian traffic in response."
+ md2026_east_flank.2.b:0 "Maintain transit links and pursue a negotiated solution."
+
+ # md2026_east_flank.3 — Baltic Sea Incident
+ md2026_east_flank.3.t:0 "Russian Warship Rams NATO Survey Vessel in Baltic"
+ md2026_east_flank.3.d:0 "A Russian Navy corvette has deliberately collided with a Swedish survey ship in international waters of the Baltic Sea, causing significant damage and injuring three crew members. The incident has been captured on video. NATO has convened an emergency North Atlantic Council session. The Alliance is demanding an explanation — and considering its response options."
+ md2026_east_flank.3.a:0 "Deploy additional Allied warships to the Baltic immediately."
+ md2026_east_flank.3.b:0 "Refer the incident to international maritime arbitration."
+
+ # md2026_east_flank.4 — Buildup Complete
+ md2026_east_flank.4.t:0 "Eastern Flank Steel: Allied Buildup Declared Operational"
+ md2026_east_flank.4.d:0 "SACEUR has formally declared that the enhanced NATO forward presence on the Eastern Flank has reached full operational capability. Poland, Estonia, Latvia, Lithuania and Romania now host the most significant Allied combat formations since the Cold War. Sixteen nations contribute troops, aircraft and naval vessels to the integrated deterrence posture."
+ md2026_east_flank.4.a:0 "Stand ready. Deterrence is our mission and our shield."
+
+ # md2026_east_flank.5 — Iron Curtain 2.0
+ md2026_east_flank.5.t:0 "Iron Curtain 2.0 — A New European Security Architecture"
+ md2026_east_flank.5.d:0 "Journalists have coined a new term: 'Iron Curtain 2.0' — not a curtain of Soviet repression, but a wall of Allied steel, electronics and resolve stretching from the Arctic to the Black Sea. The metaphor captures something real: Europe's security architecture has been fundamentally transformed. The relationship between Washington and the eastern flank nations has never been closer."
+ md2026_east_flank.5.a:0 "Embrace the new reality. This is what security looks like."

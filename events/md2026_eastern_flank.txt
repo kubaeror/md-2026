@@ -1,0 +1,198 @@
+# MD2026 Eastern Flank Reinforcement Events
+# Author: md-2026 dev team
+# Date: 2026-03-18
+
+add_namespace = md2026_east_flank
+
+### Event 1: NATO Forward Presence Expansion ###
+# Title: "Poland to Host Expanded NATO Forward Presence"
+# Desc: NATO has formally agreed to expand its enhanced Forward Presence battlegroups
+#       in Poland, the Baltic states and Romania, following a unanimous Alliance decision
+#       at the Brussels extraordinary summit. Poland will host the largest contingent —
+#       a full Allied Land Command forward element of some 10,000 troops drawn from
+#       twenty Alliance nations. Warsaw's government has been instrumental in lobbying
+#       for the upgrade.
+# Option A: Welcome full expansion (army_experience bonus, war support up)
+# Option B: Accept logistics support only — preserve national command autonomy
+country_event = {
+	id = md2026_east_flank.1
+	title = md2026_east_flank.1.t
+	desc = md2026_east_flank.1.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		tag = POL
+		date > 2026.3.1
+		NOT = { has_global_flag = md2026_east_flank_start }
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 45 }
+
+	option = {
+		name = md2026_east_flank.1.a
+		ai_chance = { base = 65 }
+		# Welcome full expansion
+		set_global_flag = md2026_east_flank_start
+		army_experience = 20
+		add_war_support = 0.05
+		add_political_power = 30
+		country_event = { id = md2026_east_flank.2 days = 60 }
+	}
+	option = {
+		name = md2026_east_flank.1.b
+		ai_chance = { base = 35 }
+		# Logistics support only
+		set_global_flag = md2026_east_flank_start
+		add_stability = 0.03
+		add_political_power = 15
+		country_event = { id = md2026_east_flank.2 days = 90 }
+	}
+}
+
+### Event 2: Kaliningrad Provocation ###
+# Title: "Kaliningrad: Russia Threatens to Close Baltic Corridors"
+# Desc: Moscow has announced the closure of Russian airspace above Kaliningrad to all NATO
+#       military and civilian traffic, citing 'security concerns.' The move directly impacts
+#       logistics routes for Allied forces in Poland and the Baltic states. Poland has responded
+#       by placing its air force on elevated readiness. The Suwalki Gap — the narrow land
+#       corridor between Kaliningrad and Belarus — has rarely felt so contested.
+# Option A: Close Polish airspace to Russian traffic (war support up)
+# Option B: Maintain transit — de-escalate and negotiate
+country_event = {
+	id = md2026_east_flank.2
+	title = md2026_east_flank.2.t
+	desc = md2026_east_flank.2.d
+	picture = GFX_report_event_fighter_goes_to_war
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_east_flank.2.a
+		ai_chance = { base = 60 }
+		# Close airspace — reciprocal measure
+		add_war_support = 0.06
+		add_stability = -0.03
+		add_political_power = 25
+		country_event = { id = md2026_east_flank.3 days = 30 }
+	}
+	option = {
+		name = md2026_east_flank.2.b
+		ai_chance = { base = 40 }
+		# Maintain transit — diplomatic channel open
+		add_stability = 0.03
+		add_political_power = -15
+		country_event = { id = md2026_east_flank.3 days = 60 }
+	}
+}
+
+### Event 3: Baltic Sea Incident ###
+# Title: "Russian Warship Rams NATO Survey Vessel in Baltic"
+# Desc: A Russian Navy corvette has deliberately collided with a Swedish survey ship in
+#       international waters of the Baltic Sea, causing significant damage and injuring
+#       three crew members. The incident has been captured on video and is spreading rapidly
+#       across social media. NATO has convened an emergency North Atlantic Council session.
+#       The Alliance is demanding an explanation — and a response.
+# Option A: Naval response — deploy additional Allied warships (war support up)
+# Option B: Diplomatic escalation — international tribunal referral
+country_event = {
+	id = md2026_east_flank.3
+	title = md2026_east_flank.3.t
+	desc = md2026_east_flank.3.d
+	picture = GFX_report_event_generic_navy
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_east_flank.3.a
+		ai_chance = { base = 55 }
+		# Naval response
+		add_war_support = 0.07
+		add_stability = -0.02
+		add_political_power = 20
+		country_event = { id = md2026_east_flank.4 days = 45 }
+	}
+	option = {
+		name = md2026_east_flank.3.b
+		ai_chance = { base = 45 }
+		# Diplomatic escalation
+		add_stability = 0.02
+		add_political_power = 30
+		add_war_support = 0.03
+		country_event = { id = md2026_east_flank.4 days = 60 }
+	}
+}
+
+### Event 4: Allied Buildup Complete ###
+# Title: "Eastern Flank Steel: Allied Buildup Declared Operational"
+# Desc: SACEUR has formally declared that the enhanced NATO forward presence on the Eastern
+#       Flank has reached full operational capability. Poland, Estonia, Latvia, Lithuania and
+#       Romania now host the most significant Allied combat formations since the Cold War.
+#       Sixteen nations contribute troops, aircraft and naval vessels to the integrated posture.
+#       Moscow calls it 'encirclement.' SACEUR calls it 'deterrence.'
+# Option A: Stand ready (war support +10% for eastern flank nations)
+country_event = {
+	id = md2026_east_flank.4
+	title = md2026_east_flank.4.t
+	desc = md2026_east_flank.4.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_east_flank.4.a
+		ai_chance = { base = 100 }
+		# Buildup complete
+		add_war_support = 0.10
+		add_stability = 0.04
+		add_political_power = 35
+		if = {
+			limit = { tag = POL }
+			add_war_support = 0.10
+		}
+		if = {
+			limit = { tag = EST }
+			add_war_support = 0.10
+		}
+		if = {
+			limit = { tag = LAT }
+			add_war_support = 0.10
+		}
+		if = {
+			limit = { tag = LIT }
+			add_war_support = 0.10
+		}
+		if = {
+			limit = { tag = ROM }
+			add_war_support = 0.10
+		}
+		country_event = { id = md2026_east_flank.5 days = 60 }
+	}
+}
+
+### Event 5: Iron Curtain 2.0 ###
+# Title: "Iron Curtain 2.0 — A New European Security Architecture"
+# Desc: Journalists and analysts have coined a new term: 'Iron Curtain 2.0' — not a curtain
+#       of Soviet repression, but a wall of Allied steel, electronics and resolve stretching
+#       from the Arctic to the Black Sea. The metaphor resonates because it captures something
+#       real: Europe's security architecture has been fundamentally, perhaps permanently,
+#       transformed. The relationship between Washington and the eastern flank nations has
+#       never been closer.
+# Option A: Embrace the new reality (political power + stability + improved US relations)
+country_event = {
+	id = md2026_east_flank.5
+	title = md2026_east_flank.5.t
+	desc = md2026_east_flank.5.d
+	picture = GFX_report_event_generic_sign
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_east_flank.5.a
+		ai_chance = { base = 100 }
+		# New security architecture
+		add_political_power = 60
+		add_stability = 0.07
+		add_war_support = 0.05
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+	}
+}

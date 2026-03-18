@@ -1,0 +1,183 @@
+# MD2026 Aegean Crisis Events
+# Author: md-2026 dev team
+# Date: 2026-03-18
+
+add_namespace = md2026_aegean
+
+### Event 1: Aircraft Incident over the Aegean ###
+# Title: "Dogfight Near the Aegean — Greek and Turkish Jets Clash"
+# Desc: A routine patrol by Hellenic Air Force F-16s has resulted in a dangerous intercept
+#       by Turkish F-16s over disputed Aegean airspace, resulting in a mock dogfight and
+#       alleged weapons lock. One Greek pilot has issued a distress call after an avionics
+#       failure during evasive manoeuvres. Athens is furious; Ankara insists Greek jets
+#       violated Turkish airspace first. Both NATO allies are on hair-trigger alert.
+# Option A: Protest formally — diplomatic note and NATO notification
+# Option B: Scramble additional jets (+war support, signals resolve)
+country_event = {
+	id = md2026_aegean.1
+	title = md2026_aegean.1.t
+	desc = md2026_aegean.1.d
+	picture = GFX_report_event_fighter_goes_to_war
+
+	trigger = {
+		tag = GRE
+		exists = TUR
+		date > 2026.9.1
+		NOT = { has_global_flag = md2026_aegean_incident }
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 45 }
+
+	option = {
+		name = md2026_aegean.1.a
+		ai_chance = { base = 55 }
+		# Formal diplomatic protest
+		set_global_flag = md2026_aegean_incident
+		add_political_power = 15
+		add_stability = -0.02
+		country_event = { id = md2026_aegean.2 days = 20 }
+	}
+	option = {
+		name = md2026_aegean.1.b
+		ai_chance = { base = 45 }
+		# Scramble additional jets
+		set_global_flag = md2026_aegean_incident
+		add_war_support = 0.05
+		add_stability = -0.03
+		country_event = { id = md2026_aegean.2 days = 10 }
+	}
+}
+
+### Event 2: Diplomatic Incident Escalates ###
+# Title: "Aegean Row Deepens — Ambassadors Summoned"
+# Desc: What began as an aerial near-miss has escalated into a full diplomatic row. Both countries
+#       have summoned each other's ambassadors. The Turkish foreign minister has accused Greece of
+#       'provocative aggression'; Athens has demanded an emergency NATO Council session. Washington
+#       is privately urging both sides to stand down, fearing the distraction from the eastern flank.
+# Option A: NATO mediation — invoke Alliance crisis mechanisms
+# Option B: Bilateral talks — Greece and Turkey negotiate directly
+country_event = {
+	id = md2026_aegean.2
+	title = md2026_aegean.2.t
+	desc = md2026_aegean.2.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_aegean.2.a
+		ai_chance = { base = 60 }
+		# NATO mediation
+		add_political_power = 20
+		add_stability = 0.02
+		country_event = { id = md2026_aegean.3 days = 30 }
+	}
+	option = {
+		name = md2026_aegean.2.b
+		ai_chance = { base = 40 }
+		# Bilateral talks
+		add_political_power = -10
+		add_war_support = 0.03
+		country_event = { id = md2026_aegean.3 days = 45 }
+	}
+}
+
+### Event 3: Cyprus Tension Flares ###
+# Title: "Cyprus Crisis — Tension Spills Over"
+# Desc: Amid the Aegean standoff, Turkey has conducted unannounced naval exercises in the
+#       eastern Mediterranean, close to Cyprus's exclusive economic zone. Cypriot gas exploration
+#       vessels have withdrawn under escort. Athens views the timing as deliberate provocation —
+#       a two-front pressure campaign to extract concessions on Aegean demarcation.
+# Option A: Reinforce Evros line — military signal to Ankara
+# Option B: Seek EU backing — request European solidarity (stability bonus)
+country_event = {
+	id = md2026_aegean.3
+	title = md2026_aegean.3.t
+	desc = md2026_aegean.3.d
+	picture = GFX_report_event_generic_navy
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_aegean.3.a
+		ai_chance = { base = 45 }
+		# Reinforce Evros
+		add_war_support = 0.05
+		add_stability = -0.03
+		add_political_power = 20
+		country_event = { id = md2026_aegean.4 days = 30 }
+	}
+	option = {
+		name = md2026_aegean.3.b
+		ai_chance = { base = 55 }
+		# Seek EU backing
+		add_stability = 0.04
+		add_political_power = 25
+		add_opinion_modifier = { target = FRA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = GER modifier = md2026_improved_relations }
+		country_event = { id = md2026_aegean.4 days = 45 }
+	}
+}
+
+### Event 4: Aegean Crisis Summit ###
+# Title: "Emergency Summit — Greece and Turkey at the Table"
+# Desc: Under intense NATO and EU pressure, Greece and Turkey have agreed to an emergency
+#       bilateral summit in Nicosia. The agenda covers airspace protocols, maritime demarcation
+#       and confidence-building measures. Both governments face domestic audiences that regard
+#       concession as capitulation. A deal is possible — but fragile.
+# Option A: Make concessions (stability up, relations improve)
+# Option B: Firm stance — no concessions on sovereignty (war support up)
+country_event = {
+	id = md2026_aegean.4
+	title = md2026_aegean.4.t
+	desc = md2026_aegean.4.d
+	picture = GFX_report_event_generic_sign
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_aegean.4.a
+		ai_chance = { base = 55 }
+		# Concessions — pragmatic compromise
+		add_stability = 0.05
+		add_political_power = -20
+		add_opinion_modifier = { target = TUR modifier = md2026_improved_relations }
+		country_event = { id = md2026_aegean.5 days = 20 }
+	}
+	option = {
+		name = md2026_aegean.4.b
+		ai_chance = { base = 45 }
+		# Firm stance — no concessions
+		add_war_support = 0.06
+		add_political_power = 30
+		add_stability = -0.04
+		country_event = { id = md2026_aegean.5 days = 60 }
+	}
+}
+
+### Event 5: Incident Resolved ###
+# Title: "Aegean Calm Returns — Incident Closes"
+# Desc: After weeks of heightened tension, Greek and Turkish officials have agreed to a joint
+#       statement establishing new Aegean airspace confidence-building measures and a hotline
+#       between the two air force commands. The agreement falls far short of a permanent settlement,
+#       but it has pulled both countries back from a dangerous precipice. Athens and Ankara remain
+#       rivals — but today, at least, they have chosen not to be enemies.
+# Option A: Welcome the resolution (stability + improved opinion)
+country_event = {
+	id = md2026_aegean.5
+	title = md2026_aegean.5.t
+	desc = md2026_aegean.5.d
+	picture = GFX_report_event_generic_sign
+
+	is_triggered_only = yes
+
+	option = {
+		name = md2026_aegean.5.a
+		ai_chance = { base = 100 }
+		# Incident resolved
+		add_stability = 0.06
+		add_political_power = 30
+		add_opinion_modifier = { target = TUR modifier = md2026_improved_relations }
+		add_war_support = -0.03
+	}
+}
