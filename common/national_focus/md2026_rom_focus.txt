@@ -213,3 +213,233 @@ shared_focus = {
 	}
 	ai_will_do = { factor = 1 }
 }
+
+### B5: Black Sea Security Branch (abs x=46) ###
+shared_focus = {
+	id = MD2026_ROM_black_sea_nato
+	icon = GFX_goal_generic_navy_doctrines
+	x = 46
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_ROM_eastern_flank }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_black_sea_nato"
+		add_ideas = md2026_rom_black_sea_power
+		add_war_support = 0.05
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+	}
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = MD2026_ROM_naval_expansion
+	icon = GFX_goal_generic_navy_carrier
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_ROM_black_sea_nato }
+	relative_position_id = MD2026_ROM_black_sea_nato
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_naval_expansion"
+		navy_experience = 50
+		random_owned_controlled_state = {
+			limit = { is_coastal = yes }
+			add_building_construction = { type = dockyard level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = MD2026_ROM_constanta_port
+	icon = GFX_goal_generic_construct_naval_dockyard
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_ROM_black_sea_nato }
+	relative_position_id = MD2026_ROM_black_sea_nato
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_constanta_port"
+		add_political_power = 50
+		random_owned_controlled_state = {
+			limit = { is_coastal = yes }
+			add_building_construction = { type = naval_base level = 3 instant_build = yes }
+		}
+	}
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = MD2026_ROM_black_sea_command
+	icon = GFX_goal_generic_military_sphere
+	x = 0
+	y = 2
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_ROM_naval_expansion }
+	prerequisite = { focus = MD2026_ROM_constanta_port }
+	relative_position_id = MD2026_ROM_black_sea_nato
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_black_sea_command"
+		add_ideas = md2026_rom_black_sea_power
+		add_war_support = 0.05
+		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
+	}
+	ai_will_do = { factor = 1 }
+}
+
+### B6: Energy/Resources Branch (abs x=50) ###
+shared_focus = {
+	id = MD2026_ROM_energy_hub_branch
+	icon = green_projects
+	x = 50
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	prerequisite = { focus = MD2026_ROM_eastern_flank }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_energy_hub_branch"
+		add_ideas = md2026_rom_energy_hub
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		}
+	}
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = MD2026_ROM_neptun_deep_2
+	icon = GFX_goal_generic_construct_civ_factory
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	prerequisite = { focus = MD2026_ROM_energy_hub_branch }
+	relative_position_id = MD2026_ROM_energy_hub_branch
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_neptun_deep_2"
+		add_political_power = 75
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = MD2026_ROM_renewable_surge
+	icon = GFX_focus_generic_solar_power
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	prerequisite = { focus = MD2026_ROM_energy_hub_branch }
+	relative_position_id = MD2026_ROM_energy_hub_branch
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_renewable_surge"
+		add_stability = 0.05
+		add_political_power = 50
+	}
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = MD2026_ROM_se_energy_hub
+	icon = GFX_goal_generic_positive_trade_relations
+	x = 0
+	y = 2
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	prerequisite = { focus = MD2026_ROM_neptun_deep_2 }
+	prerequisite = { focus = MD2026_ROM_renewable_surge }
+	relative_position_id = MD2026_ROM_energy_hub_branch
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_se_energy_hub"
+		add_stability = 0.05
+		add_political_power = 100
+		random_owned_controlled_state = {
+			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+	}
+	ai_will_do = { factor = 1 }
+}
+
+### B7: Moldova/Neighborhood Branch (abs x=54) ###
+shared_focus = {
+	id = MD2026_ROM_moldova_integration
+	icon = GFX_goal_generic_alliance
+	x = 54
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_ROM_eastern_flank }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_moldova_integration"
+		add_ideas = md2026_rom_balkan_anchor
+		add_opinion_modifier = { target = MLV modifier = md2026_improved_relations }
+		add_political_power = 75
+	}
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = MD2026_ROM_eu_corridor
+	icon = GFX_goal_generic_demand_territory
+	x = -1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_ROM_moldova_integration }
+	relative_position_id = MD2026_ROM_moldova_integration
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_eu_corridor"
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = MD2026_ROM_great_romania
+	icon = GFX_goal_generic_major_war
+	x = 1
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_ROM_moldova_integration }
+	relative_position_id = MD2026_ROM_moldova_integration
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_great_romania"
+		add_political_power = 50
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+	ai_will_do = { factor = 1 }
+}
+
+shared_focus = {
+	id = MD2026_ROM_balkan_anchor
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 2
+	cost = 12.9
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	prerequisite = { focus = MD2026_ROM_eu_corridor }
+	prerequisite = { focus = MD2026_ROM_great_romania }
+	relative_position_id = MD2026_ROM_moldova_integration
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_balkan_anchor"
+		add_ideas = md2026_rom_balkan_anchor
+		add_political_power = 100
+		add_stability = 0.10
+	}
+	ai_will_do = { factor = 1 }
+}

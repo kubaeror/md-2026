@@ -1,0 +1,33 @@
+﻿l_english:
+ # ROM expansion - 12 new focus names and descriptions
+ # Branch 5: Black Sea Security
+ MD2026_ROM_black_sea_nato:0 "Black Sea NATO Anchor"
+ MD2026_ROM_black_sea_nato_desc:0 "Romania has committed itself as NATO's eastern anchor on the Black Sea. With Mihail Kogalniceanu hosting thousands of allied troops and Constanta vital to allied logistics, Bucharest will formalise its role as the Alliance's Black Sea hub - coordinating fleet presence, air defence, and ISR operations across the littoral."
+ MD2026_ROM_naval_expansion:0 "Black Sea Fleet Expansion"
+ MD2026_ROM_naval_expansion_desc:0 "The Romanian Naval Forces are being rebuilt for the first time since the Cold War. New corvettes and fast attack craft - armed with anti-ship missiles and equipped for NATO interoperability - will give Romania a credible Black Sea deterrent and the capacity to contribute to NATO maritime operations."
+ MD2026_ROM_constanta_port:0 "Constanta Naval Base Expansion"
+ MD2026_ROM_constanta_port_desc:0 "Constanta is Romania's strategic gateway to the Black Sea - and one of NATO's most critical eastern ports. Expanding the naval base facilities, deepening berths for allied warships, and hardening port infrastructure against missile attack will make Constanta a fortress-port at the heart of Black Sea security."
+ MD2026_ROM_black_sea_command:0 "Black Sea NATO Command"
+ MD2026_ROM_black_sea_command_desc:0 "Romania hosts the new NATO Black Sea Command - a permanent joint headquarters coordinating allied naval, air, and land forces across the Black Sea littoral. With Romanian, Bulgarian, Turkish, and visiting allied forces under a unified command structure, the Black Sea becomes a NATO lake rather than a Russian hunting ground."
+ # Branch 6: Energy/Resources
+ MD2026_ROM_energy_hub_branch:0 "Romanian Energy Independence"
+ MD2026_ROM_energy_hub_branch_desc:0 "Romania is one of the few EU member states with genuine energy resource wealth - substantial onshore oil and gas, offshore Black Sea reserves, and strong hydroelectric capacity. Exploiting these assets strategically will make Romania energy self-sufficient and transform it into a regional energy exporter, ending decades of import dependence."
+ MD2026_ROM_neptun_deep_2:0 "Neptun Deep Offshore Gas"
+ MD2026_ROM_neptun_deep_2_desc:0 "The Neptun Deep offshore gas field in the Romanian Black Sea shelf holds an estimated 100 billion cubic metres of natural gas - one of Europe's largest undeveloped reserves. After years of political delays, Romania presses ahead with development, unlocking gas flows that will supply Romania, Moldova, and Central Europe while reducing dependence on Russian pipeline gas."
+ MD2026_ROM_renewable_surge:0 "Solar and Wind Surge"
+ MD2026_ROM_renewable_surge_desc:0 "Romania's Dobrogea region already hosts Central Europe's largest wind farms, and the country enjoys exceptional solar irradiation across its southern plains. A major state-backed renewables push - solar parks, Black Sea offshore wind, and grid modernisation - will transform Romania into a clean energy exporter and slash energy costs for Romanian industry."
+ MD2026_ROM_se_energy_hub:0 "Southeast Europe Energy Hub"
+ MD2026_ROM_se_energy_hub_desc:0 "Romania has achieved the strategic prize: a position as Southeast Europe's energy hub. Neptun Deep gas flows through Romanian pipelines to Moldova, Bulgaria, and Hungary; Romanian renewables balance the regional grid; and Constanta serves as an LNG regasification gateway. Bucharest has leveraged geography and resources into lasting geopolitical influence."
+ # Branch 7: Moldova/Neighborhood
+ MD2026_ROM_moldova_integration:0 "Moldova Integration Strategy"
+ MD2026_ROM_moldova_integration_desc:0 "Romania and Moldova share language, culture, and history - and now, with Moldova on an EU accession path, Bucharest has the opportunity to shape its sister republic's future. A comprehensive Romania-Moldova integration strategy encompasses economic support, infrastructure connection, and political coordination within EU institutions."
+ MD2026_ROM_eu_corridor:0 "EU Accession Corridor for Moldova"
+ MD2026_ROM_eu_corridor_desc:0 "Romania champions a fast-track EU accession process for Moldova - arguing in Brussels that Moldovan membership is both a strategic necessity and a moral obligation after Russian aggression fractured Eastern European security. Bucharest will guide Chisinau through the accession chapters, sharing the lessons of Romania's own EU integration."
+ MD2026_ROM_great_romania:0 "Greater Romania Cultural Policy"
+ MD2026_ROM_great_romania_desc:0 "Romania launches an assertive cultural diplomacy initiative toward the Romanian-speaking world - Moldova, northern Bukovina in Ukraine, and the Romanian diaspora across Europe. Cultural institutes, dual citizenship programs, and educational exchanges strengthen Romanian soft power and reinforce the cultural unity that predates the modern borders."
+ MD2026_ROM_balkan_anchor:0 "Balkan Anchor State"
+ MD2026_ROM_balkan_anchor_desc:0 "Romania has secured its position as the anchor state of NATO and EU engagement in the Balkans and Eastern Europe. With Moldova on the EU accession path, Romanian energy infrastructure spanning the region, and Bucharest hosting key allied commands, Romania has translated its geography into genuine strategic centrality - a partner indispensable to Western influence east of the Danube."
+ # ROM national spirit names
+ md2026_rom_black_sea_power:0 "Black Sea Power"
+ md2026_rom_energy_hub:0 "Southeast Europe Energy Hub"
+ md2026_rom_balkan_anchor:0 "Balkan Anchor State"

@@ -3140,5 +3140,179 @@ ideas = {
 			}
 		}
 
+
+		# === ROM EXPANSION IDEAS ===
+		md2026_rom_black_sea_power = {
+			picture = generic_navy_bonus
+			allowed = { original_tag = ROM }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				navy_org_factor = 0.10
+				navy_max_range_factor = 0.15
+				war_support_factor = 0.05
+			}
+		}
+		md2026_rom_energy_hub = {
+			picture = generic_industry
+			allowed = { original_tag = ROM }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				resource_extraction_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		md2026_rom_balkan_anchor = {
+			picture = generic_foreign_policy
+			allowed = { original_tag = ROM }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		# === HOL EXPANSION IDEAS ===
+		md2026_hol_nato_reliable = {
+			picture = generic_army_support
+			allowed = { original_tag = HOL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				army_org_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		md2026_hol_asml_dominance = {
+			picture = generic_research_bonus
+			allowed = { original_tag = HOL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.15
+				intelligence_agency_defense = 0.10
+				political_power_factor = 0.10
+			}
+		}
+		md2026_hol_rotterdam_gateway = {
+			picture = generic_industry
+			allowed = { original_tag = HOL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		md2026_hol_eu_pillar = {
+			picture = eu_investments
+			allowed = { original_tag = HOL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.05
+				trade_opinion_factor = 0.10
+			}
+		}
+
+		# === NOR EXPANSION IDEAS ===
+		md2026_nor_arctic_guardian = {
+			picture = generic_army_support
+			allowed = { original_tag = NOR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				army_morale_factor = 0.05
+				army_defence_factor = 0.10
+			}
+		}
+		md2026_nor_defense_force = {
+			picture = generic_air_bonus
+			allowed = { original_tag = NOR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				air_agility_factor = 0.10
+				air_attack_factor = 0.10
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+		md2026_nor_energy_giant = {
+			picture = generic_industry
+			allowed = { original_tag = NOR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				resource_extraction_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		md2026_nor_ocean_power = {
+			picture = generic_navy_bonus
+			allowed = { original_tag = NOR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				navy_org_factor = 0.10
+				navy_max_range_factor = 0.10
+				trade_opinion_factor = 0.05
+			}
+		}
+
+		# === DEN EXPANSION IDEAS ===
+		md2026_den_arctic_kingdom = {
+			picture = generic_foreign_policy
+			allowed = { original_tag = DEN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				war_support_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		md2026_den_nato_flank = {
+			picture = generic_army_support
+			allowed = { original_tag = DEN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				army_org_factor = 0.05
+				air_attack_factor = 0.05
+			}
+		}
+		md2026_den_wind_power = {
+			picture = generic_industry
+			allowed = { original_tag = DEN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				resource_extraction_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		md2026_den_pharma_nation = {
+			picture = generic_research_bonus
+			allowed = { original_tag = DEN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
 	}
 }
