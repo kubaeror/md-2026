@@ -12,7 +12,7 @@ shared_focus = {
 	y = 0
 	cost = 3.6
 	allow_branch = {
-		original_tag = VIN
+		original_tag = VIE
 		has_global_flag = md2026_initialized
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -191,7 +191,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_vin_asean_solidarity"
 		add_political_power = 50
-		add_opinion_modifier = { target = THA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = SIA modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = PHI modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = MAL modifier = md2026_improved_relations }
 	}

@@ -196,7 +196,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_idn_asean_trade_hub"
 		add_political_power = 50
 		add_opinion_modifier = { target = PHI modifier = md2026_improved_relations }
-		add_opinion_modifier = { target = THA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = SIA modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = MAL modifier = md2026_improved_relations }
 	}
 	ai_will_do = { base = 60 }
@@ -244,7 +244,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus md2026_idn_asean_leadership"
 		add_political_power = 50
 		add_opinion_modifier = { target = PHI modifier = md2026_improved_relations }
-		add_opinion_modifier = { target = THA modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = SIA modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = MAL modifier = md2026_improved_relations }
 		add_opinion_modifier = { target = BRM modifier = md2026_improved_relations }
 	}

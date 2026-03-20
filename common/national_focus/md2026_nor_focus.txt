@@ -135,7 +135,7 @@ shared_focus = {
 		add_political_power = 75
 		add_war_support = 0.05
 		add_opinion_modifier = { target = USA modifier = md2026_improved_relations }
-		add_opinion_modifier = { target = GBR modifier = md2026_improved_relations }
+		add_opinion_modifier = { target = ENG modifier = md2026_improved_relations }
 	}
 	ai_will_do = { base = 65 }
 }

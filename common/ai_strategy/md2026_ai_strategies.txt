@@ -1429,7 +1429,7 @@ md2026_saf_military = {
 ################
 
 md2026_vin_diplomacy = {
-	allowed = { original_tag = VIN }
+	allowed = { original_tag = VIE }
 	enable = { has_global_flag = md2026_initialized }
 	abort_when_not_enabled = yes
 
@@ -1446,7 +1446,7 @@ md2026_vin_diplomacy = {
 }
 
 md2026_vin_us_partner = {
-	allowed = { original_tag = VIN }
+	allowed = { original_tag = VIE }
 	enable = {
 		has_global_flag = md2026_initialized
 		has_completed_focus = md2026_vin_us_strategic_partner
@@ -1458,7 +1458,7 @@ md2026_vin_us_partner = {
 }
 
 md2026_vin_china_accom = {
-	allowed = { original_tag = VIN }
+	allowed = { original_tag = VIE }
 	enable = {
 		has_global_flag = md2026_initialized
 		has_completed_focus = md2026_vin_china_accommodation
@@ -1471,7 +1471,7 @@ md2026_vin_china_accom = {
 }
 
 md2026_vin_military = {
-	allowed = { original_tag = VIN }
+	allowed = { original_tag = VIE }
 	enable = { has_global_flag = md2026_initialized }
 	abort_when_not_enabled = yes
 
@@ -1897,7 +1897,7 @@ md2026_phi_military = {
 ###########################
 
 md2026_tha_diplomacy = {
-	allowed = { original_tag = THA }
+	allowed = { original_tag = SIA }
 	enable = { has_global_flag = md2026_initialized }
 	abort_when_not_enabled = yes
 
@@ -1911,7 +1911,7 @@ md2026_tha_diplomacy = {
 }
 
 md2026_tha_military = {
-	allowed = { original_tag = THA }
+	allowed = { original_tag = SIA }
 	enable = { has_global_flag = md2026_initialized }
 	abort_when_not_enabled = yes
 

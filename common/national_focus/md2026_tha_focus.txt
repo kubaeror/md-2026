@@ -11,7 +11,7 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 10
-			original_tag = THA
+			original_tag = SIA
 			has_global_flag = md2026_initialized
 		}
 	}
@@ -31,7 +31,7 @@ focus_tree = {
 		cost = 3.6
 
 		allow_branch = {
-			original_tag = THA
+			original_tag = SIA
 			has_global_flag = md2026_initialized
 		}
 

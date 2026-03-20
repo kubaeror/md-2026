@@ -1885,12 +1885,12 @@ md2026_saf_anc_path = {
 # Historical path: bamboo diplomacy, US strategic partner, manufacturing
 # ============================================================
 md2026_vin_historical = {
-	allowed = { original_tag = VIN }
+	allowed = { original_tag = VIE }
 	name = "Vietnam 2026 Bamboo Diplomacy"
 	desc = "Pragmatic bamboo diplomacy: deepening US strategic partnership while maintaining economic ties with China, manufacturing hub expansion."
 
 	enable = {
-		original_tag = VIN
+		original_tag = VIE
 		has_global_flag = md2026_initialized
 	}
 
@@ -1923,12 +1923,12 @@ md2026_vin_historical = {
 }
 
 md2026_vin_china_path = {
-	allowed = { original_tag = VIN }
+	allowed = { original_tag = VIE }
 	name = "Vietnam 2026 China Accommodation"
 	desc = "Vietnam accommodates China regional primacy, leveraging Chinese investment while avoiding SCS confrontation."
 
 	enable = {
-		original_tag = VIN
+		original_tag = VIE
 		has_global_flag = md2026_initialized
 	}
 
@@ -2682,12 +2682,12 @@ md2026_phi_asean_path = {
 #                  Thai unity
 # ============================================================
 md2026_tha_historical = {
-	allowed = { original_tag = THA }
+	allowed = { original_tag = SIA }
 	name = "Thailand 2026 Historical"
 	desc = "Civilian consolidation: EEC manufacturing boom, ASEAN mediation hub, RTAF modernisation with new fighters, and democratic unity."
 
 	enable = {
-		original_tag = THA
+		original_tag = SIA
 		has_global_flag = md2026_initialized
 	}
 

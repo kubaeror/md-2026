@@ -167,7 +167,7 @@ country_event = {
 		navy_experience = 15
 		set_global_flag = md2026_scs_us_fon_op
 		PHI = { add_war_support = 0.10 }
-		VIN = { add_war_support = 0.05 }
+		VIE = { add_war_support = 0.05 }
 		MAY = { add_war_support = 0.05 }
 		CHI = {
 			add_opinion_modifier = { target = USA modifier = md2026_military_pressure_anger }
@@ -257,9 +257,9 @@ country_event = {
 		ai_chance = { base = 100 }
 		set_global_flag = md2026_scs_coc_signed
 		PHI = { add_stability = 0.08 add_political_power = 25 }
-		VIN = { add_stability = 0.06 }
+		VIE = { add_stability = 0.06 }
 		MAY = { add_stability = 0.06 }
-		THA = { add_stability = 0.04 }
+		SIA = { add_stability = 0.04 }
 		CHI = { add_political_power = 50 add_stability = 0.03 }
 	}
 }

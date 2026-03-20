@@ -3719,7 +3719,7 @@ ideas = {
 		# === THA EXPANSION IDEAS ===
 		md2026_tha_eec_spirit = {
 			picture = generic_industry
-			allowed = { original_tag = THA }
+			allowed = { original_tag = SIA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = {
@@ -3730,7 +3730,7 @@ ideas = {
 		}
 		md2026_tha_ev_hub_spirit = {
 			picture = generic_industry
-			allowed = { original_tag = THA }
+			allowed = { original_tag = SIA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = {
@@ -3741,7 +3741,7 @@ ideas = {
 		}
 		md2026_tha_digital_spirit = {
 			picture = generic_research_bonus
-			allowed = { original_tag = THA }
+			allowed = { original_tag = SIA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = {
@@ -3752,7 +3752,7 @@ ideas = {
 		}
 		md2026_tha_economic_capstone = {
 			picture = generic_industry
-			allowed = { original_tag = THA }
+			allowed = { original_tag = SIA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = {
@@ -3763,7 +3763,7 @@ ideas = {
 		}
 		md2026_tha_pivot_hub_spirit = {
 			picture = generic_foreign_policy
-			allowed = { original_tag = THA }
+			allowed = { original_tag = SIA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = {
@@ -3774,7 +3774,7 @@ ideas = {
 		}
 		md2026_tha_f35_spirit = {
 			picture = generic_air_bonus
-			allowed = { original_tag = THA }
+			allowed = { original_tag = SIA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = {
@@ -3785,7 +3785,7 @@ ideas = {
 		}
 		md2026_tha_navy_spirit = {
 			picture = generic_navy_bonus
-			allowed = { original_tag = THA }
+			allowed = { original_tag = SIA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = {
@@ -3796,7 +3796,7 @@ ideas = {
 		}
 		md2026_tha_cyber_spirit = {
 			picture = generic_research_bonus
-			allowed = { original_tag = THA }
+			allowed = { original_tag = SIA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = {
@@ -3807,7 +3807,7 @@ ideas = {
 		}
 		md2026_tha_cobra_gold_spirit = {
 			picture = generic_army_support
-			allowed = { original_tag = THA }
+			allowed = { original_tag = SIA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = {
@@ -3819,7 +3819,7 @@ ideas = {
 		}
 		md2026_tha_thai_unity_spirit = {
 			picture = generic_pp_unity_bonus
-			allowed = { original_tag = THA }
+			allowed = { original_tag = SIA }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = {

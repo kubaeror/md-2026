@@ -113,7 +113,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		original_tag = THA
+		original_tag = SIA
 		has_global_flag = md2026_initialized
 		date > 2027.3.1
 		NOT = { has_country_flag = md2026_tha_2027_election }
