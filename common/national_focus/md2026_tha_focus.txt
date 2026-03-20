@@ -17,7 +17,7 @@ focus_tree = {
 	}
 
 	default = no
-	reset_on_civil_war = yes
+
 
 	# ══════════════════════════════════════════════════════
 	# ROOT
@@ -105,7 +105,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus md2026_tha_agri_export"
-			add_resource = { resource = food amount = 5 }
+			add_stability = 0.05
 			add_political_power = 20
 		}
 

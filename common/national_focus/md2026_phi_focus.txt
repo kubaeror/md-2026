@@ -17,7 +17,7 @@ focus_tree = {
 	}
 
 	default = no
-	reset_on_civil_war = yes
+
 
 	# ══════════════════════════════════════════════════════
 	# ROOT
@@ -84,7 +84,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus md2026_phi_nickel_export"
-			add_resource = { resource = steel amount = 8 }
+			add_resource = { type = steel amount = 8 }
 			add_political_power = 25
 		}
 
