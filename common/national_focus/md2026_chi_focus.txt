@@ -956,7 +956,7 @@ shared_focus = {
 		add_political_power = 75
 		add_ideas = md2026_chi_africa_hegemon
 		every_country = {
-			limit = { is_in_continent = africa NOT = { tag = CHI } }
+			limit = { capital_scope = { is_on_continent = africa } NOT = { tag = CHI } }
 			add_opinion_modifier = { target = CHI modifier = md2026_improved_relations }
 		}
 	}

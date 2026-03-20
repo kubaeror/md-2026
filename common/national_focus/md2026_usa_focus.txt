@@ -871,7 +871,7 @@ shared_focus = {
 		add_ideas = md2026_usa_monroe_doctrine
 		every_country = {
 			limit = {
-				is_in_continent = north_america
+				capital_scope = { is_on_continent = north_america }
 				NOT = { tag = USA }
 			}
 			add_opinion_modifier = { target = USA modifier = md2026_greenland_tension }

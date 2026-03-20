@@ -26,10 +26,10 @@ country_event = {
 			tag = NOR
 			tag = DEN
 		}
-		exists = FIN
-		exists = SWE
-		exists = NOR
-		exists = DEN
+		FIN = { exists = yes }
+		SWE = { exists = yes }
+		NOR = { exists = yes }
+		DEN = { exists = yes }
 		date > 2026.6.1
 		NOT = { has_global_flag = md2026_nordic_command_proposed }
 	}

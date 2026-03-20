@@ -21,7 +21,7 @@ country_event = {
 
 	trigger = {
 		tag = GRE
-		exists = TUR
+		TUR = { exists = yes }
 		date > 2026.9.1
 		NOT = { has_global_flag = md2026_aegean_incident }
 	}

@@ -23,7 +23,7 @@ country_event = {
 		tag = RAJ
 		date > 2027.1.1
 		has_global_flag = md2026_initialized
-		war_support > 0.40
+		has_war_support > 0.40
 		PAK = { exists = yes }
 		NOT = { has_global_flag = md2026_kashmir_crisis }
 		NOT = { has_war_with = PAK }
@@ -33,7 +33,7 @@ country_event = {
 		months = 6
 		modifier = {
 			factor = 0.7
-			war_support > 0.55
+			has_war_support > 0.55
 		}
 		modifier = {
 			factor = 0.5
@@ -68,7 +68,7 @@ country_event = {
 			base = 50
 			modifier = {
 				add = 20
-				war_support > 0.60
+				has_war_support > 0.60
 			}
 		}
 	}
@@ -91,7 +91,7 @@ country_event = {
 			base = 50
 			modifier = {
 				add = 20
-				war_support < 0.45
+				has_war_support < 0.45
 			}
 		}
 	}
@@ -238,7 +238,7 @@ country_event = {
 			base = 50
 			modifier = {
 				add = 20
-				war_support < 0.40
+				has_war_support < 0.40
 			}
 		}
 	}
