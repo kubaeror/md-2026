@@ -1,4 +1,4 @@
-ideas = {
+﻿ideas = {
 	country = {
 
 		### RUSSIA ###
@@ -2027,6 +2027,66 @@ ideas = {
 			}
 		}
 
+
+		md2026_arg_full_dollarization = {
+			picture = generic_economic_increase
+			allowed = { original_tag = ARG }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				consumer_goods_expected_value = -0.08
+				political_power_factor = -0.15
+			}
+		}
+
+		md2026_arg_peronist_resistance = {
+			picture = generic_political_discourse
+			allowed = { original_tag = ARG }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.10
+				war_support_factor = 0.05
+			}
+		}
+
+		md2026_arg_new_constitution = {
+			picture = generic_political_discourse
+			allowed = { original_tag = ARG }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.10
+			}
+		}
+
+		md2026_arg_social_programs = {
+			picture = generic_economic_increase
+			allowed = { original_tag = ARG }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				consumer_goods_expected_value = 0.03
+				political_power_factor = 0.05
+			}
+		}
+
+		md2026_arg_resurgent_nation = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = ARG }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = 0.15
+				consumer_goods_expected_value = -0.05
+				research_speed_factor = 0.05
+			}
+		}
 		# Mexico
 		md2026_mex_nearshoring = {
 			picture = generic_economic_increase
@@ -2053,6 +2113,99 @@ ideas = {
 			}
 		}
 
+
+		md2026_mex_morena_dominance = {
+			picture = generic_political_discourse
+			allowed = { original_tag = MEX }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.10
+			}
+		}
+
+		md2026_mex_anti_corruption = {
+			picture = generic_political_discourse
+			allowed = { original_tag = MEX }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				consumer_goods_expected_value = -0.03
+			}
+		}
+
+		md2026_mex_judicial_overhaul = {
+			picture = generic_political_discourse
+			allowed = { original_tag = MEX }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.05
+			}
+		}
+
+		md2026_mex_sinaloa_pressure = {
+			picture = generic_military_budget
+			allowed = { original_tag = MEX }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				army_attack_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		md2026_mex_cjng_pressure = {
+			picture = generic_military_budget
+			allowed = { original_tag = MEX }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				army_attack_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		md2026_mex_remittance_flows = {
+			picture = generic_economic_increase
+			allowed = { original_tag = MEX }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				stability_factor = 0.05
+			}
+		}
+
+		md2026_mex_celac_voice = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = MEX }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				trade_opinion_factor = 0.10
+			}
+		}
+
+		md2026_mex_aztec_century_idea = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = MEX }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = 0.15
+				war_support_factor = 0.05
+				consumer_goods_expected_value = -0.05
+			}
+		}
 		# Pakistan
 		md2026_pak_imf_reforms = {
 			picture = generic_economic_increase
@@ -2066,6 +2219,55 @@ ideas = {
 			}
 		}
 
+
+		md2026_pak_civilian_govt = {
+			picture = generic_political_discourse
+			allowed = { original_tag = PAK }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.10
+			}
+		}
+
+		md2026_pak_isi_dominance = {
+			picture = generic_military_budget
+			allowed = { original_tag = PAK }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.05
+				army_org_factor = 0.10
+				army_attack_factor = 0.05
+			}
+		}
+
+		md2026_pak_economic_resurgence = {
+			picture = generic_economic_increase
+			allowed = { original_tag = PAK }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.08
+				political_power_factor = 0.10
+				stability_factor = 0.10
+				research_speed_factor = 0.05
+			}
+		}
+
+		md2026_pak_ct_operations = {
+			picture = generic_military_budget
+			allowed = { original_tag = PAK }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.10
+				army_org_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
 		# South Africa
 		md2026_zaf_coalition_governance = {
 			picture = generic_political_discourse
@@ -2091,6 +2293,125 @@ ideas = {
 			}
 		}
 
+
+		md2026_saf_gnu_stability = {
+			picture = generic_political_discourse
+			allowed = { original_tag = SAF }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.05
+			}
+		}
+
+		md2026_saf_zondo_enforcement = {
+			picture = generic_political_discourse
+			allowed = { original_tag = SAF }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.10
+				consumer_goods_expected_value = -0.03
+			}
+		}
+
+		md2026_saf_liberal_reforms = {
+			picture = generic_economic_increase
+			allowed = { original_tag = SAF }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				political_power_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+
+		md2026_saf_sacp_left = {
+			picture = generic_political_discourse
+			allowed = { original_tag = SAF }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+
+		md2026_saf_mk_contained = {
+			picture = generic_military_budget
+			allowed = { original_tag = SAF }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				army_org_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+		md2026_saf_brics_chair = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = SAF }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.15
+				trade_opinion_factor = 0.15
+			}
+		}
+
+		md2026_saf_au_mediator = {
+			picture = generic_political_discourse
+			allowed = { original_tag = SAF }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.05
+				trade_opinion_factor = 0.10
+			}
+		}
+
+		md2026_saf_nonaligned = {
+			picture = generic_political_discourse
+			allowed = { original_tag = SAF }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.05
+				trade_opinion_factor = 0.05
+			}
+		}
+
+		md2026_saf_sadc_ops = {
+			picture = generic_military_budget
+			allowed = { original_tag = SAF }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		md2026_saf_rainbow_renaissance_idea = {
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = SAF }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = 0.15
+				consumer_goods_expected_value = -0.05
+				research_speed_factor = 0.05
+			}
+		}
 		# Indonesia
 		md2026_idn_foreign_investment = {
 			picture = generic_economic_increase
