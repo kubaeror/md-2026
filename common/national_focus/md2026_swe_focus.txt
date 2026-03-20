@@ -104,8 +104,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SWE_gothland_fortress"
 		add_political_power = 75
-		army_defence_factor = 0.10
-		fortification_damage_factor = -0.15
 	}
 	ai_will_do = { base = 65 }
 }
@@ -237,7 +235,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SWE_archer_artillery"
 		add_political_power = 75
-		army_attack_factor = 0.10
 		army_experience = 15
 	}
 	ai_will_do = { base = 60 }
@@ -259,7 +256,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SWE_arms_exports"
 		add_political_power = 75
-		production_speed_arms_factory_factor = 0.10
 	}
 	ai_will_do = { base = 60 }
 }
@@ -281,8 +277,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SWE_defense_champion"
 		add_political_power = 150
-		production_factory_efficiency_gain_factor = 0.10
-		production_speed_arms_factory_factor = 0.10
 	}
 	ai_will_do = { base = 55 }
 }
@@ -369,7 +363,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SWE_crime_crackdown"
 		add_political_power = 75
 		add_stability = 0.05
-		intelligence_agency_defense = 0.10
 	}
 	ai_will_do = { base = 55 }
 }
@@ -390,7 +383,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SWE_economic_modernization"
 		add_political_power = 75
-		production_factory_efficiency_gain_factor = 0.10
 	}
 	ai_will_do = { base = 60 }
 }
@@ -456,7 +448,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SWE_nuclear_revival"
 		add_political_power = 75
 		add_ideas = md2026_swe_nuclear_energy
-		production_factory_max_efficiency_factor = 0.05
 	}
 	ai_will_do = { base = 65 }
 }
@@ -477,7 +468,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SWE_critical_minerals"
 		add_political_power = 75
-		resource_extraction_factor = 0.15
 	}
 	ai_will_do = { base = 70 }
 }
@@ -498,7 +488,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SWE_hydrogen_economy"
 		add_political_power = 75
-		production_factory_efficiency_gain_factor = 0.05
 		add_research_slot = 1
 	}
 	ai_will_do = { base = 60 }
@@ -520,7 +509,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SWE_northern_resources"
 		add_political_power = 75
-		resource_extraction_factor = 0.10
 		random_owned_controlled_state = {
 			limit = { is_core_of = SWE }
 			add_resource = { type = steel amount = 10 }
@@ -547,8 +535,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SWE_industrial_powerhouse"
 		add_political_power = 150
 		add_ideas = md2026_swe_industrial_hub
-		production_factory_max_efficiency_factor = 0.10
-		production_factory_efficiency_gain_factor = 0.10
 	}
 	ai_will_do = { base = 55 }
 }

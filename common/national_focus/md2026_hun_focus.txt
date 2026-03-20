@@ -83,7 +83,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_HUN_opposition_crackdown"
 		add_political_power = 75
 		add_stability = -0.03
-		intelligence_agency_defense = 0.10
 	}
 	ai_will_do = { base = 50 }
 }
@@ -371,7 +370,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_HUN_industrial_expansion"
 		add_political_power = 75
-		production_factory_efficiency_gain_factor = 0.10
 		random_owned_controlled_state = {
 			limit = { is_core_of = HUN }
 			add_extra_state_shared_building_slots = 2
@@ -401,7 +399,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_HUN_china_trade_deal"
 		add_political_power = 75
-		trade_opinion_factor = 0.10
 	}
 	ai_will_do = { base = 55 }
 }
@@ -424,7 +421,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_HUN_economic_fortress"
 		add_political_power = 100
 		add_stability = 0.05
-		production_factory_max_efficiency_factor = 0.10
 	}
 	ai_will_do = { base = 60 }
 }
@@ -467,7 +463,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_HUN_leopard_fleet"
 		add_political_power = 50
-		army_attack_factor = 0.05
 		army_experience = 25
 		add_ideas = md2026_hun_honved
 	}
@@ -491,7 +486,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_HUN_airforce_modernization"
 		add_political_power = 50
 		air_experience = 25
-		air_agility_factor = 0.10
 	}
 	ai_will_do = { base = 60 }
 }
@@ -512,8 +506,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_HUN_honved_reform"
 		add_political_power = 75
-		army_morale_factor = 0.10
-		army_org_factor = 0.05
 	}
 	ai_will_do = { base = 60 }
 }
@@ -534,7 +526,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_HUN_defense_industry"
 		add_political_power = 75
-		production_speed_arms_factory_factor = 0.10
 	}
 	ai_will_do = { base = 55 }
 }

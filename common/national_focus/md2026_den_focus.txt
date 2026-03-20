@@ -84,7 +84,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_DEN_greenland_investment"
 		add_political_power = 75
 		add_stability = 0.03
-		resource_extraction_factor = 0.10
 	}
 	ai_will_do = { base = 70 }
 }
@@ -265,7 +264,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_DEN_bornholm_defense"
 		add_political_power = 75
 		add_war_support = 0.05
-		fortification_damage_factor = -0.15
 	}
 	ai_will_do = { base = 60 }
 }
@@ -288,8 +286,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_DEN_nato_pillar"
 		add_political_power = 150
 		add_war_support = 0.10
-		army_attack_factor = 0.05
-		army_defence_factor = 0.05
 	}
 	ai_will_do = { base = 55 }
 }
@@ -333,7 +329,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_DEN_offshore_wind"
 		add_political_power = 75
 		add_ideas = md2026_den_wind_power
-		production_factory_max_efficiency_factor = 0.05
 	}
 	ai_will_do = { base = 65 }
 }
@@ -355,7 +350,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_DEN_power_to_x"
 		add_political_power = 75
 		add_research_slot = 1
-		production_factory_efficiency_gain_factor = 0.05
 	}
 	ai_will_do = { base = 65 }
 }
@@ -377,7 +371,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_DEN_north_sea_energy"
 		add_political_power = 75
 		add_stability = 0.05
-		production_factory_efficiency_gain_factor = 0.05
 	}
 	ai_will_do = { base = 60 }
 }
@@ -423,8 +416,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_DEN_clean_energy_champion"
 		add_political_power = 150
 		add_stability = 0.10
-		production_factory_max_efficiency_factor = 0.10
-		production_factory_efficiency_gain_factor = 0.05
 	}
 	ai_will_do = { base = 55 }
 }
@@ -468,7 +459,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_DEN_labor_market_reform"
 		add_political_power = 75
 		add_stability = 0.05
-		production_factory_efficiency_gain_factor = 0.05
 	}
 	ai_will_do = { base = 60 }
 }
@@ -512,7 +502,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_DEN_shipping_tech"
 		add_political_power = 75
 		navy_experience = 15
-		production_factory_max_efficiency_factor = 0.05
 	}
 	ai_will_do = { base = 60 }
 }
@@ -557,8 +546,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_DEN_innovation_economy"
 		add_political_power = 150
 		add_stability = 0.10
-		production_factory_efficiency_gain_factor = 0.10
-		production_factory_max_efficiency_factor = 0.05
 	}
 	ai_will_do = { base = 55 }
 }

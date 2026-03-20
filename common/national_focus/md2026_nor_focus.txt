@@ -85,7 +85,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NOR_coast_defense"
 		add_political_power = 75
 		navy_experience = 20
-		submarine_attack_factor = 0.10
 	}
 	ai_will_do = { base = 70 }
 }
@@ -202,7 +201,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NOR_gdp_2pct"
 		add_political_power = 75
 		add_war_support = 0.05
-		production_speed_arms_factory_factor = 0.10
 	}
 	ai_will_do = { base = 70 }
 }
@@ -246,8 +244,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NOR_army_reform"
 		add_political_power = 75
 		army_experience = 25
-		army_attack_factor = 0.05
-		army_defence_factor = 0.05
 	}
 	ai_will_do = { base = 65 }
 }
@@ -269,7 +265,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NOR_joint_strike_missile"
 		add_political_power = 75
 		air_experience = 15
-		production_speed_arms_factory_factor = 0.10
 	}
 	ai_will_do = { base = 60 }
 }
@@ -292,7 +287,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NOR_defense_power"
 		add_political_power = 150
 		add_war_support = 0.10
-		army_attack_factor = 0.05
 		navy_experience = 15
 	}
 	ai_will_do = { base = 55 }
@@ -337,7 +331,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NOR_oil_fund_management"
 		add_political_power = 75
 		add_stability = 0.05
-		production_factory_max_efficiency_factor = 0.05
 	}
 	ai_will_do = { base = 65 }
 }
@@ -359,7 +352,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NOR_north_sea_transition"
 		add_political_power = 75
 		add_stability = 0.03
-		production_factory_efficiency_gain_factor = 0.05
 	}
 	ai_will_do = { base = 65 }
 }
@@ -381,7 +373,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NOR_hydrogen_export"
 		add_political_power = 75
 		add_research_slot = 1
-		production_factory_efficiency_gain_factor = 0.05
 	}
 	ai_will_do = { base = 60 }
 }
@@ -426,8 +417,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NOR_energy_superpower"
 		add_political_power = 150
 		add_stability = 0.10
-		production_factory_max_efficiency_factor = 0.10
-		production_factory_efficiency_gain_factor = 0.05
 	}
 	ai_will_do = { base = 55 }
 }
@@ -493,7 +482,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NOR_merchant_fleet"
 		add_political_power = 75
 		navy_experience = 15
-		production_factory_efficiency_gain_factor = 0.05
 	}
 	ai_will_do = { base = 65 }
 }
@@ -515,7 +503,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NOR_aquaculture"
 		add_political_power = 75
 		add_stability = 0.03
-		resource_extraction_factor = 0.10
 	}
 	ai_will_do = { base = 60 }
 }
@@ -560,7 +547,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MD2026_NOR_ocean_economy"
 		add_political_power = 150
 		add_stability = 0.10
-		resource_extraction_factor = 0.10
 		navy_experience = 15
 	}
 	ai_will_do = { base = 55 }
