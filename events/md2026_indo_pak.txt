@@ -4,6 +4,7 @@
 ###################################
 
 add_namespace = md2026_indo_pak
+add_namespace = md2026_indo_pak_news
 
 ###################################
 # md2026_indo_pak.1 - Kashmir Incident
