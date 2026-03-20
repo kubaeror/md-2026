@@ -13,7 +13,7 @@ bookmarks = {
 			focuses = {
 				MD2026_TAI_porcupine_defense
 				MD2026_TAI_tech_sovereignty
-				MD2026_TAI_western_defense_pact
+				MD2026_TAI_fortress_taiwan
 			}
 		}
 		"CHI" = {
@@ -38,7 +38,7 @@ bookmarks = {
 			history = "MD2026_JAP_TAIWAN_DESC"
 			ideology = democratic
 			focuses = {
-				MD2026_JAP_rearmament
+				MD2026_JAP_constitutional_reform
 				MD2026_JAP_us_alliance
 			}
 		}
@@ -47,7 +47,7 @@ bookmarks = {
 			ideology = democratic
 			focuses = {
 				MD2026_KOR_us_alliance
-				MD2026_KOR_military_buildup
+				MD2026_KOR_dmz_fortification
 			}
 		}
 	}

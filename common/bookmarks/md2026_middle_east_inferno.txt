@@ -21,8 +21,8 @@ bookmarks = {
 			ideology = communism
 			focuses = {
 				MD2026_PER_nuclear_threshold
-				MD2026_PER_axis_of_resistance
-				MD2026_PER_per_nuclear_acceleration
+				MD2026_PER_axis_resistance
+				MD2026_PER_military_industry
 			}
 		}
 		"SAU" = {
@@ -30,8 +30,8 @@ bookmarks = {
 			ideology = neutrality
 			focuses = {
 				MD2026_SAU_vision_2030
-				MD2026_SAU_opec_leadership
-				MD2026_SAU_sau_normalize_israel
+				MD2026_SAU_opec_dominance
+				MD2026_SAU_abraham_accords
 			}
 		}
 		"USA" = {
@@ -39,7 +39,7 @@ bookmarks = {
 			ideology = nationalist
 			focuses = {
 				MD2026_USA_trump_second_term
-				MD2026_USA_middle_east_policy
+				MD2026_USA_deal_with_russia
 				MD2026_USA_pentagon_budget
 			}
 		}
@@ -47,7 +47,7 @@ bookmarks = {
 			history = "MD2026_TUR_INFERNO_DESC"
 			ideology = neutrality
 			focuses = {
-				MD2026_TUR_regional_power
+				MD2026_TUR_regional_hegemon
 				MD2026_TUR_nato_loyalty
 			}
 		}

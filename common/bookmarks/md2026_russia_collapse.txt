@@ -22,7 +22,7 @@ bookmarks = {
 			focuses = {
 				MD2026_UKR_war_path
 				MD2026_UKR_western_weapons
-				MD2026_UKR_nato_path
+				MD2026_UKR_nato_bid
 			}
 		}
 		"POL" = {
@@ -31,7 +31,7 @@ bookmarks = {
 			focuses = {
 				MD2026_POL_eastern_shield
 				MD2026_POL_fortress_poland
-				MD2026_POL_military_buildup
+				MD2026_POL_army_modernization
 			}
 		}
 		"GER" = {
@@ -48,7 +48,7 @@ bookmarks = {
 			ideology = communism
 			focuses = {
 				MD2026_CHI_great_rejuvenation
-				MD2026_CHI_russia_alliance
+				MD2026_CHI_brics_chair
 			}
 		}
 	}
