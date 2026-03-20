@@ -208,6 +208,7 @@ shared_focus = {
 		focus = md2026_pak_cpec_expansion
 		focus = md2026_pak_gwadar_port
 	}
+	mutually_exclusive = { focus = md2026_pak_dialogue_india }
 	cost = 8.6
 
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
