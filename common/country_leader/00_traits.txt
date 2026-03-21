@@ -42,8 +42,7 @@ leader_traits = {
 	# Political Traits
 	media_personality = {
 		random = yes
-		popularity_growth_speed = 0.15
-		news_lie_chance = -0.3
+		political_power_gain = 0.15
 		ai_will_do = {
 			factor = 1
 		}
@@ -53,7 +52,7 @@ leader_traits = {
 		random = yes
 		political_power_factor = 0.1
 		stability_factor = -0.05
-		subscribe_drift = 0.05
+		drift_defence_factor = -0.05
 		ai_will_do = {
 			factor = 1
 		}
@@ -62,8 +61,8 @@ leader_traits = {
 	authoritarian_ruler = {
 		random = yes
 		political_power_factor = 0.15
-		party_popularity_factor = -0.1
 		stability_factor = 0.05
+		drift_defence_factor = 0.1
 		ai_will_do = {
 			factor = 1
 		}
@@ -73,7 +72,7 @@ leader_traits = {
 		random = yes
 		political_power_factor = 0.1
 		stability_factor = -0.1
-		subscribe_drift = 0.1
+		drift_defence_factor = -0.1
 		ai_will_do = {
 			factor = 1
 		}
@@ -84,7 +83,7 @@ leader_traits = {
 		random = yes
 		army_morale_factor = 0.1
 		justify_war_goal_time = -0.1
-		improve_relations_factor = 0.1
+		war_support_factor = 0.1
 		ai_will_do = {
 			factor = 1
 		}
@@ -123,7 +122,7 @@ leader_traits = {
 		random = yes
 		consumer_goods_factor = -0.05
 		industrial_capacity_factory = 0.05
-		oil_gain_factor = 0.15
+		fuel_gain_factor = 0.15
 		ai_will_do = {
 			factor = 1
 		}
@@ -133,7 +132,7 @@ leader_traits = {
 		random = yes
 		political_power_factor = 0.1
 		stability_factor = 0.05
-		oil_gain_factor = 0.1
+		fuel_gain_factor = 0.1
 		ai_will_do = {
 			factor = 1
 		}
@@ -153,7 +152,7 @@ leader_traits = {
 		random = yes
 		intelligence_agency_defense = 0.15
 		own_operative_detection_chance = -0.1
-		coup_resistance_factor = 0.1
+		foreign_subversive_activites = -0.1
 		ai_will_do = {
 			factor = 1
 		}
@@ -174,7 +173,7 @@ leader_traits = {
 		random = yes
 		political_power_factor = 0.1
 		war_support_factor = 0.1
-		subscribe_drift = 0.05
+		drift_defence_factor = -0.05
 		ai_will_do = {
 			factor = 1
 		}
@@ -194,7 +193,7 @@ leader_traits = {
 		random = yes
 		political_power_factor = 0.15
 		war_support_factor = 0.15
-		subscribe_drift = 0.1
+		drift_defence_factor = -0.1
 		ai_will_do = {
 			factor = 1
 		}
@@ -205,7 +204,7 @@ leader_traits = {
 		random = yes
 		political_power_factor = 0.15
 		stability_factor = 0.05
-		party_popularity_factor = -0.15
+		drift_defence_factor = 0.15
 		ai_will_do = {
 			factor = 1
 		}
@@ -235,6 +234,50 @@ leader_traits = {
 		random = yes
 		opinion_gain_monthly_factor = 0.15
 		justify_war_goal_time = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Muslim Brotherhood stance traits (used by Egypt focus tree)
+	pro_brotherhood = {
+		random = no
+		ai_strategy = {
+			type = befriend
+			id = "TUR"
+			value = 100
+		}
+		ai_strategy = {
+			type = befriend
+			id = "QAT"
+			value = 100
+		}
+		ai_strategy = {
+			type = befriend
+			id = "HAM"
+			value = 100
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	opposes_muslim_brotherhood = {
+		random = no
+		ai_strategy = {
+			type = contain
+			id = "TUR"
+			value = 100
+		}
+		ai_strategy = {
+			type = contain
+			id = "QAT"
+			value = 100
+		}
+		ai_strategy = {
+			type = contain
+			id = "HAM"
+			value = 100
+		}
 		ai_will_do = {
 			factor = 1
 		}

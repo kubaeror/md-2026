@@ -1504,7 +1504,7 @@ capital = 1182
                                 reload_type_slot = automatic_loading
                                 special_type_slot_1 = hardkill_system_gen1
                                 special_type_slot_2 = smoke_launchers_2
-                                special_type_slot_3 = tank_atgm_module
+                                special_type_slot_3 = smoothbore_atgm_gen2
                                 special_type_slot_4 = tank_battlestation_2
                         }
                         upgrades = {

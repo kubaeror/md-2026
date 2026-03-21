@@ -91,8 +91,8 @@ scripted_gui = {
 
 	# Receiver Event
 	CPD_built_peace_deal = {
-		# this seems to error in the log but doesn't crash, try later with other contexts
-		context_type = diplomatic_action
+		# context_type errors in log - not supported in current game version
+		# context_type = diplomatic_action
 		# context_type = player_context
 
 		window_name = "CPD_built_peace_deal"
