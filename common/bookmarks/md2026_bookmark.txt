@@ -18,7 +18,7 @@ bookmarks = {
 		}
 		"SOV" = {
 			history = "MD2026_SOV_DESC"
-			ideology = communism
+			ideology = nationalist
 			focuses = {
 				MD2026_SOV_war_crossroads
 				MD2026_SOV_eastern_pivot
@@ -27,7 +27,7 @@ bookmarks = {
 		}
 		"CHI" = {
 			history = "MD2026_CHI_DESC"
-			ideology = communism
+			ideology = nationalist
 			focuses = {
 				MD2026_CHI_great_rejuvenation
 				MD2026_CHI_taiwan_question

@@ -265,7 +265,7 @@ country_event = {
 			name = "Mateusz Morawiecki"
 			picture = "gfx/leaders/POL/Mateusz_Morawiecki.dds"
 			expire = "2031.12.31"
-			ideology = Nat_Populism
+			ideology = nationalist_Nat_Populism
 			traits = {
 				nationalist_Nat_Populism
 				captain_of_industry

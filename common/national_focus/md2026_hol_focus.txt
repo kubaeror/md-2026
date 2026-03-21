@@ -99,7 +99,7 @@ shared_focus = {
 			name = MD2026_HOL_army_reform
 			bonus = 0.5
 			uses = 2
-			category = land_doctrine
+			category = CAT_land_doctrine
 		}
 	}
 	ai_will_do = { factor = 1 }
@@ -179,7 +179,7 @@ shared_focus = {
 			name = MD2026_HOL_asml_champion
 			bonus = 1.0
 			uses = 2
-			category = electronics
+			category = CAT_computing_tech
 		}
 		random_owned_controlled_state = {
 			limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
@@ -226,7 +226,7 @@ shared_focus = {
 			name = MD2026_HOL_chip_research
 			bonus = 1.0
 			uses = 3
-			category = electronics
+			category = CAT_computing_tech
 		}
 	}
 	ai_will_do = { factor = 1 }

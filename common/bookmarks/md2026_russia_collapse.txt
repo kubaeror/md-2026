@@ -9,7 +9,7 @@ bookmarks = {
 
 		"SOV" = {
 			history = "MD2026_SOV_COLLAPSE_DESC"
-			ideology = communism
+			ideology = nationalist
 			focuses = {
 				MD2026_SOV_war_crossroads
 				MD2026_SOV_economic_autarky
@@ -45,7 +45,7 @@ bookmarks = {
 		}
 		"CHI" = {
 			history = "MD2026_CHI_COLLAPSE_DESC"
-			ideology = communism
+			ideology = nationalist
 			focuses = {
 				MD2026_CHI_great_rejuvenation
 				MD2026_CHI_brics_chair

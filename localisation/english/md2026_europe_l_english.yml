@@ -334,8 +334,7 @@
   ### UK Decisions ###
   md2026_eng_eu_reset_summit:0 "Propose EU-UK Reset Summit"
   md2026_eng_eu_reset_summit_desc:0 "Organize a landmark summit with European Union leaders to establish a new partnership framework. This aims to reduce trade friction, align on security cooperation, and restore diplomatic ties damaged by Brexit."
-  md2026_eng_defense_review:0 "Launch Strategic Defence Review"
-  md2026_eng_defense_review_decision_desc:0 "Commission the most comprehensive review of British defense policy in decades. The review will reshape force structure, investment priorities, and set a path toward 2.5% then 3.5% GDP defense spending."
+  md2026_eng_defense_review_desc:0 "Commission the most comprehensive review of British defense policy in decades. The review will reshape force structure, investment priorities, and set a path toward 2.5% then 3.5% GDP defense spending."
   md2026_eng_nhs_overhaul:0 "NHS Ten-Year Overhaul"
   md2026_eng_nhs_overhaul_desc:0 "Launch an ambitious ten-year plan to transform the National Health Service. Investment in digital health, workforce expansion, and new hospital construction will address the worst waiting times in NHS history."
   md2026_eng_border_security:0 "Establish Border Security Command"

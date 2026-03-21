@@ -76,7 +76,7 @@ shared_focus = {
 			name = IDN_smart_city
 			bonus = 0.5
 			uses = 2
-			category = electronics
+			category = CAT_computing_tech
 		}
 	}
 	ai_will_do = { base = 60 }
@@ -151,7 +151,7 @@ shared_focus = {
 			name = IDN_battery_tech
 			bonus = 0.5
 			uses = 2
-			category = electronics
+			category = CAT_computing_tech
 		}
 	}
 	ai_will_do = { base = 60 }

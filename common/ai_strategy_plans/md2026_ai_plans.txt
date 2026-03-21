@@ -1327,15 +1327,15 @@ md2026_idn_historical = {
 	ai_national_focuses = {
 		md2026_idn_nusantara_capital
 		md2026_idn_asean_leadership
-		md2026_idn_nickel_export
-		md2026_idn_maritime_defense
-		md2026_idn_non_alignment
-		md2026_idn_foreign_investment
-		md2026_idn_south_china_sea_stance
-		md2026_idn_submarine_fleet
-		md2026_idn_military_expansion
-		md2026_idn_ev_battery_hub
-		md2026_idn_archipelago_power
+		md2026_idn_nickel_downstream
+		md2026_idn_military_modernization
+		md2026_idn_bamboo_diplomacy
+		md2026_idn_asean_trade_hub
+		md2026_idn_south_china_sea
+		md2026_idn_prabowo_consolidation
+		md2026_idn_battery_supply_chain
+		md2026_idn_digital_economy
+		md2026_idn_asian_tiger
 	}
 
 	weight = {

@@ -537,7 +537,7 @@ on_actions = {
 				if = {
 					limit = {
 						tag = TUR
-						NOT = { has_government = communism }
+						has_government = democratic
 						has_idea = md2026_tur_erdogan_autocracy
 					}
 					remove_ideas = md2026_tur_erdogan_autocracy

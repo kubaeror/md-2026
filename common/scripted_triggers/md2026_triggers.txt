@@ -26,14 +26,7 @@ md2026_is_western_democracy = {
 
 # Authoritarian regime check
 md2026_is_authoritarian = {
-	OR = {
-		has_government = communism
-		has_government = fascism
-		AND = {
-			has_government = nationalist
-			NOT = { md2026_is_nato_member = yes }
-		}
-	}
+	has_government = nationalist
 }
 
 # Nuclear power check

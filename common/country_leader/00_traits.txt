@@ -2,6 +2,43 @@
 # Overrides and additions for Millennium Dawn 2026
 
 leader_traits = {
+	# Sub-ideology label traits (from base mod)
+	western_conservatism = {
+		random = no
+		ai_will_do = { factor = 1 }
+	}
+	western_liberalism = {
+		random = no
+		ai_will_do = { factor = 1 }
+	}
+	western_socialism = {
+		random = no
+		ai_will_do = { factor = 1 }
+	}
+	dictator = {
+		random = no
+		political_power_factor = 0.25
+		ai_will_do = { factor = 1 }
+	}
+
+	# Background traits (from base mod)
+	lawyer = {
+		random = yes
+		stability_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	career_politician = {
+		random = yes
+		political_power_factor = 0.1
+		ai_will_do = { factor = 1 }
+	}
+	captain_of_industry = {
+		random = yes
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		ai_will_do = { factor = 1 }
+	}
+
 	# Political Traits
 	media_personality = {
 		random = yes

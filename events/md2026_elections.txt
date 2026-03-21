@@ -334,7 +334,7 @@ country_event = {
 			name = "Alice Weidel"
 			picture = "gfx/leaders/GER/Alice_Weidel.dds"
 			expire = "2033.12.31"
-			ideology = Nat_Populism
+			ideology = nationalist_Nat_Populism
 			traits = {
 				nationalist_Nat_Populism
 				anti_establishment
@@ -476,7 +476,7 @@ country_event = {
 			name = "Nigel Farage"
 			picture = "gfx/leaders/ENG/Nigel_Farage.dds"
 			expire = "2034.12.31"
-			ideology = Nat_Populism
+			ideology = nationalist_Nat_Populism
 			traits = {
 				nationalist_Nat_Populism
 				media_personality
@@ -754,7 +754,7 @@ country_event = {
 			name = "Tarcisio de Freitas"
 			picture = "gfx/leaders/BRA/Tarcisio_de_Freitas.dds"
 			expire = "2035.12.31"
-			ideology = Nat_Populism
+			ideology = nationalist_Nat_Populism
 			traits = {
 				nationalist_Nat_Populism
 				captain_of_industry
@@ -866,7 +866,7 @@ country_event = {
 			name = "Mateusz Morawiecki"
 			picture = "gfx/leaders/POL/Mateusz_Morawiecki.dds"
 			expire = "2031.12.31"
-			ideology = Nat_Populism
+			ideology = nationalist_Nat_Populism
 			traits = {
 				nationalist_Nat_Populism
 				captain_of_industry
@@ -952,7 +952,7 @@ country_event = {
 			name = "Giorgia Meloni"
 			picture = "gfx/leaders/ITA/Giorgia_Meloni.dds"
 			expire = "2033.12.31"
-			ideology = Nat_Populism
+			ideology = nationalist_Nat_Populism
 			traits = {
 				nationalist_Nat_Populism
 				career_politician

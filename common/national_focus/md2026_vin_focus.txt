@@ -68,7 +68,7 @@ shared_focus = {
 			name = VIN_semiconductor
 			bonus = 0.5
 			uses = 2
-			category = electronics
+			category = CAT_computing_tech
 		}
 		add_political_power = 25
 	}
@@ -341,7 +341,7 @@ shared_focus = {
 			name = VIN_cyber
 			bonus = 0.5
 			uses = 2
-			category = electronics
+			category = CAT_computing_tech
 		}
 	}
 	ai_will_do = { base = 50 }
@@ -399,7 +399,7 @@ shared_focus = {
 			name = VIN_education
 			bonus = 0.5
 			uses = 2
-			category = electronics
+			category = CAT_computing_tech
 		}
 	}
 	ai_will_do = { base = 60 }

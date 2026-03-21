@@ -244,7 +244,7 @@ shared_focus = {
 			name = ARG_tech_hub
 			bonus = 0.5
 			uses = 2
-			category = CAT_electronics
+			category = CAT_computing_tech
 		}
 		random_owned_controlled_state = {
 			limit = { is_core_of = ARG }
@@ -499,7 +499,7 @@ shared_focus = {
 			name = ARG_education_bonus
 			bonus = 0.5
 			uses = 1
-			category = CAT_electronics
+			category = CAT_computing_tech
 		}
 	}
 	ai_will_do = { base = 50 }

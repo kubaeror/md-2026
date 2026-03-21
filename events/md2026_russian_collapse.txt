@@ -72,7 +72,7 @@ country_event = {
 			name = "Military Junta"
 			desc = "A coalition of top generals who seized power to stop the collapse."
 			picture = "gfx/leaders/SOV/Portrait_SOV_Generic_land_3.dds"
-			ideology = democratic
+			ideology = nationalism
 			traits = { dictator }
 		}
 		
@@ -112,7 +112,7 @@ country_event = {
 		
 		# Trigger civil war (MD ideology based)
 		start_civil_war = {
-			ruling_party = communism
+			ruling_party = nationalist
 			ideology = democratic
 			size = 0.5
 		}

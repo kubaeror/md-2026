@@ -195,7 +195,7 @@ shared_focus = {
 			name = MEX_semiconductors
 			bonus = 1.0
 			uses = 1
-			category = CAT_electronics
+			category = CAT_computing_tech
 		}
 		random_owned_controlled_state = {
 			limit = { is_core_of = MEX }

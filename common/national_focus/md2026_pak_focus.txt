@@ -429,7 +429,7 @@ shared_focus = {
 			name = PAK_jf17_research
 			bonus = 0.5
 			uses = 2
-			category = CAT_air_equipment
+			category = CAT_air_eqp
 		}
 		random_owned_controlled_state = {
 			limit = { is_core_of = PAK }

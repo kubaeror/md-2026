@@ -1735,7 +1735,7 @@ md2026_cze_diplomacy = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = { type = befriend id = POL value = 150 }
-	ai_strategy = { type = befriend id = SVK value = 100 }
+	ai_strategy = { type = befriend id = SLO value = 100 }
 	ai_strategy = { type = befriend id = USA value = 100 }
 	ai_strategy = { type = befriend id = UKR value = 100 }
 	ai_strategy = { type = befriend id = GER value = 75 }
@@ -1870,7 +1870,7 @@ md2026_phi_diplomacy = {
 	ai_strategy = { type = befriend id = USA value = 200 }
 	ai_strategy = { type = befriend id = JAP value = 150 }
 	ai_strategy = { type = befriend id = AST value = 100 }
-	ai_strategy = { type = befriend id = VIN value = 75 }
+	ai_strategy = { type = befriend id = VIE value = 75 }
 	ai_strategy = { type = befriend id = KOR value = 75 }
 	ai_strategy = { type = antagonize id = CHI value = 150 }
 	ai_strategy = { type = area_priority id = pacific value = 200 }
@@ -1905,7 +1905,7 @@ md2026_tha_diplomacy = {
 	ai_strategy = { type = befriend id = JAP value = 100 }
 	ai_strategy = { type = befriend id = CHI value = 75 }
 	ai_strategy = { type = befriend id = AST value = 50 }
-	ai_strategy = { type = befriend id = VIN value = 75 }
+	ai_strategy = { type = befriend id = VIE value = 75 }
 	ai_strategy = { type = area_priority id = pacific value = 150 }
 	ai_strategy = { type = area_priority id = asia value = 200 }
 }
@@ -1938,7 +1938,7 @@ md2026_may_diplomacy = {
 	ai_strategy = { type = befriend id = USA value = 75 }
 	ai_strategy = { type = befriend id = JAP value = 75 }
 	ai_strategy = { type = befriend id = AST value = 100 }
-	ai_strategy = { type = befriend id = VIN value = 75 }
+	ai_strategy = { type = befriend id = VIE value = 75 }
 	ai_strategy = { type = area_priority id = pacific value = 150 }
 	ai_strategy = { type = area_priority id = asia value = 200 }
 }

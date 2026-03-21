@@ -18,7 +18,7 @@ bookmarks = {
 		}
 		"PER" = {
 			history = "MD2026_PER_INFERNO_DESC"
-			ideology = communism
+			ideology = nationalist
 			focuses = {
 				MD2026_PER_nuclear_threshold
 				MD2026_PER_axis_resistance
@@ -27,7 +27,7 @@ bookmarks = {
 		}
 		"SAU" = {
 			history = "MD2026_SAU_INFERNO_DESC"
-			ideology = neutrality
+			ideology = nationalist
 			focuses = {
 				MD2026_SAU_vision_2030
 				MD2026_SAU_opec_dominance
@@ -45,7 +45,7 @@ bookmarks = {
 		}
 		"TUR" = {
 			history = "MD2026_TUR_INFERNO_DESC"
-			ideology = neutrality
+			ideology = nationalist
 			focuses = {
 				MD2026_TUR_regional_hegemon
 				MD2026_TUR_nato_loyalty
