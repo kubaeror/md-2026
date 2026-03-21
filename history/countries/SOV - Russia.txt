@@ -1896,7 +1896,7 @@ capital = 652
 			upgrades = {
 				tank_nsb_armor_upgrade = 8
 			}
-			icon = "gfx/interface/technologies/SOV/LAND/T90.dds"
+			icon = "gfx/interface/technologies/SOV/LAND/T90MS.dds"
 			model = "SOV_T90early_entity"
 		}
 		add_equipment_to_stockpile = {

@@ -268,6 +268,10 @@ ideologies = {
 	# National Populism
 	nationalist = {
 		types = {
+			Nat_Autocracy = { }
+			Nat_Fascism = { }
+			Nat_Populism = { }
+			Monarchist = { }
 			nationalist_Nat_Populism = { }
 			nationalism = { }
 			fascism = { }

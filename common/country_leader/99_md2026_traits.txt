@@ -1,44 +1,6 @@
-# MD2026 Country Leader Traits
-# Overrides and additions for Millennium Dawn 2026
+# MD2026 Additional Country Leader Traits
 
 leader_traits = {
-	# Sub-ideology label traits (from base mod)
-	western_conservatism = {
-		random = no
-		ai_will_do = { factor = 1 }
-	}
-	western_liberalism = {
-		random = no
-		ai_will_do = { factor = 1 }
-	}
-	western_socialism = {
-		random = no
-		ai_will_do = { factor = 1 }
-	}
-	dictator = {
-		random = no
-		political_power_factor = 0.25
-		ai_will_do = { factor = 1 }
-	}
-
-	# Background traits (from base mod)
-	lawyer = {
-		random = yes
-		stability_factor = 0.05
-		ai_will_do = { factor = 1 }
-	}
-	career_politician = {
-		random = yes
-		political_power_factor = 0.1
-		ai_will_do = { factor = 1 }
-	}
-	captain_of_industry = {
-		random = yes
-		production_speed_industrial_complex_factor = 0.1
-		production_speed_infrastructure_factor = 0.1
-		ai_will_do = { factor = 1 }
-	}
-
 	# Political Traits
 	media_personality = {
 		random = yes
@@ -47,7 +9,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	populist_demagogue = {
 		random = yes
 		political_power_factor = 0.1
@@ -57,7 +19,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	authoritarian_ruler = {
 		random = yes
 		political_power_factor = 0.15
@@ -67,7 +29,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	anti_establishment = {
 		random = yes
 		political_power_factor = 0.1
@@ -77,7 +39,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	# Military/War Traits
 	war_hero = {
 		random = yes
@@ -88,7 +50,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	hawk = {
 		random = yes
 		justify_war_goal_time = -0.15
@@ -98,7 +60,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	career_officer = {
 		random = yes
 		army_org_factor = 0.05
@@ -107,7 +69,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	militia_leader = {
 		random = yes
 		non_core_manpower = 0.02
@@ -116,7 +78,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	# Economic Traits
 	oil_baron = {
 		random = yes
@@ -127,7 +89,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	saudi_royal = {
 		random = yes
 		political_power_factor = 0.1
@@ -137,7 +99,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	# Ideological/Intellectual Traits
 	academic = {
 		random = yes
@@ -147,7 +109,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	intelligence_officer = {
 		random = yes
 		intelligence_agency_defense = 0.15
@@ -157,7 +119,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	theocrat = {
 		random = yes
 		stability_factor = 0.1
@@ -167,7 +129,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	# Nationalism Traits
 	nat_populism = {
 		random = yes
@@ -178,7 +140,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	emerging_Nat_Populism = {
 		random = yes
 		political_power_factor = 0.1
@@ -188,17 +150,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
-	nationalist_Nat_Populism = {
-		random = yes
-		political_power_factor = 0.15
-		war_support_factor = 0.15
-		drift_defence_factor = -0.1
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
+
 	# Communist Traits
 	communist_dictator = {
 		random = yes
@@ -209,7 +161,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	nuclear_enthusiast = {
 		random = yes
 		nuclear_production_factor = 0.2
@@ -219,8 +171,8 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
-	# Regional/Traits
+
+	# Regional Traits
 	pro_european = {
 		random = yes
 		opinion_gain_monthly_factor = 0.1
@@ -229,55 +181,11 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
 	pro_latin_american = {
 		random = yes
 		opinion_gain_monthly_factor = 0.15
 		justify_war_goal_time = 0.1
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	# Muslim Brotherhood stance traits (used by Egypt focus tree)
-	pro_brotherhood = {
-		random = no
-		ai_strategy = {
-			type = befriend
-			id = "TUR"
-			value = 100
-		}
-		ai_strategy = {
-			type = befriend
-			id = "QAT"
-			value = 100
-		}
-		ai_strategy = {
-			type = befriend
-			id = "HAM"
-			value = 100
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	opposes_muslim_brotherhood = {
-		random = no
-		ai_strategy = {
-			type = contain
-			id = "TUR"
-			value = 100
-		}
-		ai_strategy = {
-			type = contain
-			id = "QAT"
-			value = 100
-		}
-		ai_strategy = {
-			type = contain
-			id = "HAM"
-			value = 100
-		}
 		ai_will_do = {
 			factor = 1
 		}
