@@ -560,4 +560,3 @@ capital = 186
 	complete_national_focus = SYR_cultural_rebirth
 	complete_national_focus = SYR_deal_with_the_trade_unions
 	complete_national_focus = SYR_reassert_russian_ties
-}

@@ -514,4 +514,3 @@ country_event = {
 	complete_national_focus = ARM_hovik_guidelines
 	complete_national_focus = ARM_mandatory_pension_system
 	complete_national_focus = ARM_serzh_free_speech
-}

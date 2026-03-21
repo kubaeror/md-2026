@@ -2024,4 +2024,3 @@ capital = 207
 	complete_national_focus = ISR_regulate_finance
 	complete_national_focus = ISR_raise_tax_on_wealthy
 	complete_national_focus = ISR_public_transport
-}

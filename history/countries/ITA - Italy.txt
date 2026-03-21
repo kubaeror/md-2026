@@ -2199,4 +2199,3 @@ capital = 81
 	complete_national_focus = ITA_new_industrial_nobility
 	complete_national_focus = ITA_peaceful_takeovers
 	complete_national_focus = ITA_recognize_free_market_efficiency
-}

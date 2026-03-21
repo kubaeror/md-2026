@@ -1303,4 +1303,3 @@ capital = 91
 	complete_national_focus = SPR_adopt_andalucian
 	complete_national_focus = SPR_andalucian_assimilation
 	complete_national_focus = SPR_the_union_of_languages
-}

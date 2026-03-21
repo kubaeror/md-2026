@@ -1114,4 +1114,3 @@ capital = 602
 	complete_national_focus = NKO_illict_trade_routes
 	complete_national_focus = NKO_expand_black_market
 	complete_national_focus = NKO_acquire_military_equipment
-}

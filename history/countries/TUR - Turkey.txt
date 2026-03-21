@@ -984,4 +984,3 @@ capital = 159
 	complete_national_focus = TUR_the_armed_forces_of_turkiye
 	complete_national_focus = TUR_ground_force
 	complete_national_focus = TUR_battery_bases
-}

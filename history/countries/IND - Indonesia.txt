@@ -616,4 +616,3 @@ capital = 631
 	complete_national_focus = IND_proficient_supply
 	complete_national_focus = IND_connect_docks
 	complete_national_focus = IND_a_resilient_currency
-}
