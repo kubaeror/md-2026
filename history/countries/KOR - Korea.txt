@@ -1291,7 +1291,7 @@ capital = 604
 	complete_national_focus = MD2026_KOR_nk_deterrence
 	complete_national_focus = MD2026_KOR_k_defense
 	complete_national_focus = MD2026_KOR_k_economy
-	complete_national_focus = MD2026_KOR_kf21
+	complete_national_focus = MD2026_KOR_kf21_boramae
 
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 	complete_national_focus = KOR_the_rok_armed_forces

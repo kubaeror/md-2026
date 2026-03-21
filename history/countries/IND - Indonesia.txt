@@ -555,7 +555,6 @@ capital = 631
 
 	# MD2026 pre-completed focuses
 	complete_national_focus = md2026_idn_nusantara_capital
-	complete_national_focus = md2026_idn_nickel_export
 }
 	complete_national_focus = IND_indonesias_future
 	complete_national_focus = IND_asia_financial_crisis
