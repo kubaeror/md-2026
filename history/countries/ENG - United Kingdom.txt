@@ -2697,28 +2697,9 @@ capital = 13
 	set_variable = { current_term = 1 }
 
 	# MD2026 Pre-completed focuses (already happened by Jan 2026)
-	complete_national_focus = MD2026_ENG_global_britain
-	complete_national_focus = MD2026_ENG_nuclear_deterrent
-	complete_national_focus = MD2026_ENG_aukus
-	complete_national_focus = MD2026_ENG_carrier_strike
-	complete_national_focus = MD2026_ENG_post_brexit_trade
-	complete_national_focus = MD2026_ENG_special_relationship
-	complete_national_focus = MD2026_ENG_five_eyes
-	complete_national_focus = MD2026_ENG_ukraine_support
-	complete_national_focus = MD2026_ENG_armed_forces
-	complete_national_focus = MD2026_ENG_cyber_warfare
-	complete_national_focus = MD2026_ENG_army_modernization
-	complete_national_focus = MD2026_ENG_science_innovation
-	complete_national_focus = MD2026_ENG_ai_strategy
-	complete_national_focus = MD2026_ENG_biotech_hub
 
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
-	complete_national_focus = ENG_britannia_armed_forces
-	complete_national_focus = ENG_ambitions_for_britain
-	complete_national_focus = ENG_cleanup_westminster
-	complete_national_focus = ENG_democratic_reform
-	complete_national_focus = ENG_a_more_balanced_economy
-	complete_national_focus = ENG_field_army_expansion
-	complete_national_focus = ENG_multi_ocean_navy
-	complete_national_focus = ENG_tax_reform
 }
+
+	### Pre-completed focuses (run on the first daily tick) ###
+	set_country_flag = md2026_focuses_pending

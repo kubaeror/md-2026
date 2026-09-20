@@ -397,7 +397,7 @@ def debug_flags():
     return {}
 
 
-def apply_debug_flags(patch, flags):
+def apply_debug_flags(patch, flags, tag=None):
     """Temporarily disable parts of the 2026 setup for crash bisection."""
     if flags.get("skip_tech_tiers"):
         patch = re.sub(r"(?m)^(\s*)(md2026_tier[0-9]_2026_techs\s*=\s*yes)",
@@ -410,7 +410,8 @@ def apply_debug_flags(patch, flags):
                        r"\1# BISECT: OOB disabled\n\1# \2", patch)
     if flags.get("skip_wars"):
         patch = re.sub(r"(?ms)^(\s*)declare_war_on\s*=\s*\{.*?\n\1\}", r"\1# BISECT: war disabled", patch)
-    if flags.get("skip_leaders"):
+    skip_tags = flags.get("skip_leaders_tags") or []
+    if flags.get("skip_leaders") or (tag and tag in skip_tags):
         patch = re.sub(r"(?ms)^(\s*)create_country_leader\s*=\s*\{.*?\n\1\}", r"\1# BISECT: leader disabled", patch)
     return patch
 
@@ -642,11 +643,48 @@ def md_state_file(md, state_id):
     return None
 
 
+def write_deferred_focuses(focuses_by_tag):
+    """Pre-completed focuses run on the first daily tick, not during history.
+
+    Focus rewards call ingame-only systems (ingame_update_setup and friends)
+    that are not initialised while history is still being processed - MD itself
+    never completes a focus from a history file.  Completing them here keeps the
+    2026 start identical while avoiding the crash.
+    """
+    lines = [
+        "### Millennium Dawn 2026 - pre-completed focuses ###",
+        "# Completed on the first daily tick after game start (not in history):",
+        "# focus rewards touch ingame-only economy systems that are not ready yet.",
+        "",
+        "on_actions = {",
+        "\ton_daily = {",
+        "\t\teffect = {",
+        "\t\t\tif = {",
+        "\t\t\t\tlimit = { has_country_flag = md2026_focuses_pending }",
+        "\t\t\t\tclr_country_flag = md2026_focuses_pending",
+    ]
+    for tag in sorted(focuses_by_tag):
+        focuses = focuses_by_tag[tag]
+        if not focuses:
+            continue
+        lines.append("\t\t\t\tif = {")
+        lines.append(f"\t\t\t\t\tlimit = {{ tag = {tag} }}")
+        for f in focuses:
+            lines.append(f"\t\t\t\t\tcomplete_national_focus = {f}")
+        lines.append("\t\t\t\t}")
+    lines += ["\t\t\t}", "\t\t}", "\t}", "}", ""]
+    path = os.path.join(REPO, "common", "on_actions", "md2026_precompleted_focuses.txt")
+    write(path, "\n".join(lines))
+    n = sum(len(v) for v in focuses_by_tag.values())
+    print(f"  generated deferred focuses: {n} focuses for {len(focuses_by_tag)} countries")
+
+
 def rebase_history(md, rename_map):
     out_dir = os.path.join(REPO, "history", "countries")
     patch_dir = os.path.join(REPO, "patches", "history_countries")
     techs, chars = md_reference_sets(md)
     used = set()
+    focuses_by_tag = {}
     for pf in sorted(os.listdir(patch_dir)):
         if not pf.endswith(".txt"):
             continue
@@ -661,11 +699,20 @@ def rebase_history(md, rename_map):
         patch = read(os.path.join(patch_dir, pf))
         if tag != md_tag:
             patch = re.sub(r"(?<![\w])" + re.escape(tag) + r"(?![A-Za-z])", md_tag, patch)
-        patch = apply_debug_flags(patch, debug_flags())
+        patch = apply_debug_flags(patch, debug_flags(), md_tag)
         if debug_flags().get("skip_2026_blocks"):
             patch = "# BISECT: entire 2026 block disabled\n"
+        # Pre-completed focuses are deferred to the first daily tick: their
+        # rewards are ingame-only code (see write_deferred_focuses).
+        focuses = re.findall(r"(?m)^[ \t]*complete_national_focus\s*=\s*([A-Za-z0-9_]+)\s*$", patch)
+        if focuses:
+            patch = re.sub(r"(?m)^[ \t]*complete_national_focus\s*=.*\n?", "", patch)
+            patch = patch.rstrip() + "\n\n\t### Pre-completed focuses (run on the first daily tick) ###\n" \
+                                    "\tset_country_flag = md2026_focuses_pending\n"
+            focuses_by_tag[md_tag] = focuses
         out = apply_fixups(base.rstrip() + "\n\n" + patch, techs, chars, md, md_tag)
         write(os.path.join(out_dir, fname), out)
+    write_deferred_focuses(focuses_by_tag)
     print(f"  generated {len(used)} country history files")
 
     s_out = os.path.join(REPO, "history", "states")

@@ -1952,21 +1952,12 @@ capital = 615
 	set_variable = { current_term = 1 }
 
 	# MD2026 Pre-completed focuses (already happened by Jan 2026)
-	complete_national_focus = MD2026_JAP_active_defense
-	complete_national_focus = MD2026_JAP_constitutional_reform
-	complete_national_focus = MD2026_JAP_indo_pacific
-	complete_national_focus = MD2026_JAP_economic_revitalization
 
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 	# MD2026: dropped (no MD 2.0 equivalent): JAP_bushido
-	complete_national_focus = JAP_economic_sectors
 	# MD2026: dropped (no MD 2.0 equivalent): JAP_finish_nishiseto
-	complete_national_focus = JAP_air_self_defence_force
 	# MD2026: dropped (no MD 2.0 equivalent): JAP_continental_campaigns
-	complete_national_focus = JAP_kanto_infrastructure
-	complete_national_focus = JAP_automotive_industry
-	complete_national_focus = JAP_a_nation_reborn
-	complete_national_focus = JAP_economic_partnership_agreements
-	complete_national_focus = JAP_blue_water_navy
-	complete_national_focus = JAP_infrastructure_investments
 }
+
+	### Pre-completed focuses (run on the first daily tick) ###
+	set_country_flag = md2026_focuses_pending

@@ -6,5 +6,5 @@
   "skip_leaders": false,
   "skip_focus_branches": false,
   "minimal_bookmark": false,
-  "_comment": "Diagnostic switches for crash bisection. All false = normal build. Set a flag to true, run `python tools/rebase.py generate`, and test."
+  "_comment": "Normal build: all bisect switches off."
 }

@@ -511,15 +511,7 @@ capital = 141
 	}
 
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
-	complete_national_focus = GRE_glass_cannon_economics
-	complete_national_focus = GRE_pharma
-	complete_national_focus = GRE_turn_century
-	complete_national_focus = GRE_unemployed
-	complete_national_focus = GRE_pharma
-	complete_national_focus = GRE_chi_investments
-	complete_national_focus = GRE_foreign_relations
-	complete_national_focus = GRE_china
-	complete_national_focus = GRE_pharma
-	complete_national_focus = GRE_the_hellenic_republic
-	complete_national_focus = GRE_strength
 }
+
+	### Pre-completed focuses (run on the first daily tick) ###
+	set_country_flag = md2026_focuses_pending

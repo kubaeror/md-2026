@@ -3499,35 +3499,18 @@ capital = 547
 	}
 
 	# MD2026 Pre-completed focuses (already happened by Jan 2026)
-	complete_national_focus = MD2026_CHI_great_rejuvenation
-	complete_national_focus = MD2026_CHI_belt_road_2
-	complete_national_focus = MD2026_CHI_naval_expansion
-	complete_national_focus = MD2026_CHI_tech_dominance
-	complete_national_focus = MD2026_CHI_taiwan_question
-	complete_national_focus = MD2026_CHI_south_china_sea
-	complete_national_focus = MD2026_CHI_semiconductor_war
-	complete_national_focus = MD2026_CHI_global_infrastructure
 
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
-	complete_national_focus = CHI_hu_jintao_reign
-	complete_national_focus = CHI_Leverage_Influence
-	complete_national_focus = CHI_SAR_one_china_framework
 	# MD2026: dropped (no MD 2.0 equivalent): CHI_Preserve_the_Revolution
-	complete_national_focus = CHI_Leverage_Influence
 	# MD2026: dropped (no MD 2.0 equivalent): CHI_The_Untapped_Market
 	# MD2026: dropped (no MD 2.0 equivalent): CHI_End_PLA_Business_Ventures
 	# MD2026: dropped (no MD 2.0 equivalent): CHI_Future_of_the_CPC
-	complete_national_focus = CHI_three_represents_codified
 	# MD2026: dropped (no MD 2.0 equivalent): CHI_Favor_Multipolarity
-	complete_national_focus = CHI_Form_the_SCO
-	complete_national_focus = CHI_Forum_on_China_African_Cooperation
-	complete_national_focus = CHI_three_red_lines_crackdown
 	# MD2026: dropped (no MD 2.0 equivalent): CHI_Proper_State_Atheism
-	complete_national_focus = CHI_SAR_two_systems_commitment
 	# MD2026: dropped (no MD 2.0 equivalent): CHI_Smash_the_Iron_Rice_Bowl
-	complete_national_focus = CHI_The_Indian_Subcontinent
 	# MD2026: dropped (no MD 2.0 equivalent): CHI_The_Korean_Peninsula
-	complete_national_focus = CHI_The_Mandate_Of_The_Seas
 	# MD2026: dropped (no MD 2.0 equivalent): CHI_The_Northern_Shield
-	complete_national_focus = CHI_The_South_China_Sea
 }
+
+	### Pre-completed focuses (run on the first daily tick) ###
+	set_country_flag = md2026_focuses_pending

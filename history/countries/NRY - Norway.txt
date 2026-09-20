@@ -737,23 +737,7 @@ capital = 32
 	set_variable = { current_term = 1 }
 
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
-	complete_national_focus = NRY_norwegian_armed_forces
-	complete_national_focus = NRY_the_norwegian_economy
-	complete_national_focus = NRY_party_of_labour
-	complete_national_focus = NRY_cyber_defense_force
-	complete_national_focus = NRY_german_technicians
-	complete_national_focus = NRY_norwegian_air_forces
-	complete_national_focus = NRY_norwegian_land_forces
-	complete_national_focus = NRY_norwegian_navy_forces
-	complete_national_focus = NRY_migration_to_norway
-	complete_national_focus = NRY_ministry_of_agriculture_and_food
-	complete_national_focus = NRY_ministry_of_transport_communication
-	complete_national_focus = NRY_norge_ming
-	complete_national_focus = NRY_norsk_industri
-	complete_national_focus = NRY_north_sea_oil
-	complete_national_focus = NRY_renewable_investments
-	complete_national_focus = NRY_standardize_infrastructure
-	complete_national_focus = NRY_modernization_of_the_welfare_state
-	complete_national_focus = NRY_the_political_earthquake
-	complete_national_focus = NRY_workers_youth_league
 }
+
+	### Pre-completed focuses (run on the first daily tick) ###
+	set_country_flag = md2026_focuses_pending

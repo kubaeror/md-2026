@@ -505,6 +505,47 @@ def check_precompleted_focuses(md):
                     f"{tag}: {f} (tree {tid} -> {sorted(tags)[:3]})")
 
 
+def check_deferred_focuses(md):
+    """Pre-completed focuses must run on the first daily tick, never in history:
+    their rewards call ingame-only systems (ingame_update_setup) that are not
+    initialised while history is processed."""
+    rename = {"NOR": "NRY"}
+    patch_focuses = {}
+    for p in files(os.path.join(REPO, "patches", "history_countries")):
+        tag = rename.get(os.path.basename(p)[:3], os.path.basename(p)[:3])
+        found = re.findall(r"complete_national_focus\s*=\s*([A-Za-z0-9_]+)", rebase.read(p))
+        if found:
+            patch_focuses[tag] = found
+
+    hist_dir = os.path.join(REPO, "history", "countries")
+    for p in files(hist_dir):
+        if "complete_national_focus" in rebase.strip_comments(rebase.read(p)):
+            ERRORS["focus completed in history"].append(rel(p))
+
+    for tag in sorted(patch_focuses):
+        cand = [p for p in files(hist_dir) if os.path.basename(p).startswith(tag + " -")]
+        if not cand:
+            ERRORS["deferred focuses: no history file"].append(tag)
+        elif "md2026_focuses_pending" not in rebase.read(cand[0]):
+            ERRORS["deferred focuses: missing pending flag"].append(f"{tag} ({os.path.basename(cand[0])})")
+
+    path = os.path.join(REPO, "common", "on_actions", "md2026_precompleted_focuses.txt")
+    if not os.path.exists(path):
+        ERRORS["deferred focuses: no on_actions file"].append(path)
+        return
+    deferred = rebase.strip_comments(rebase.read(path))
+    blocks = {}
+    for m in re.finditer(r"tag\s*=\s*([A-Z]{3})\s*\}\s*((?:\s*complete_national_focus\s*=\s*[A-Za-z0-9_]+\s*)+)",
+                         deferred):
+        blocks[m.group(1)] = re.findall(r"complete_national_focus\s*=\s*([A-Za-z0-9_]+)", m.group(2))
+    for tag, fs in sorted(patch_focuses.items()):
+        got = blocks.get(tag)
+        if got is None:
+            ERRORS["deferred focuses: tag missing"].append(tag)
+        elif sorted(got) != sorted(fs):
+            ERRORS["deferred focuses: list mismatch"].append(f"{tag}: {len(fs)} w patchu, {len(got)} w on_actions")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--md", default=os.environ.get("MD_PATH", rebase.DEFAULT_MD))
@@ -569,6 +610,7 @@ def main():
     check_equipment_refs(sets)
     check_leader_traits(sets)
     check_precompleted_focuses(md)
+    check_deferred_focuses(md)
     check_installation()
 
     print()

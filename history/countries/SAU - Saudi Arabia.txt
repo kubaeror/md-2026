@@ -638,10 +638,6 @@ capital = 176
 	set_variable = { current_term = 1 }
 
 	# MD2026 Pre-completed focuses (already happened by Jan 2026)
-	complete_national_focus = MD2026_SAU_vision_2030
-	complete_national_focus = MD2026_SAU_diversification
-	complete_national_focus = MD2026_SAU_oil_strategy
-	complete_national_focus = MD2026_SAU_regional_balance
 
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 
@@ -664,3 +660,6 @@ capital = 176
 
 
 }
+
+	### Pre-completed focuses (run on the first daily tick) ###
+	set_country_flag = md2026_focuses_pending
