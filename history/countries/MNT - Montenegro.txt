@@ -199,10 +199,8 @@ oob = "GENERIC_OOB"
 	if = {
 		limit = { has_dlc = "No Step Back" }
 		set_oob = "MNT_2026_nsb"
-		else = {
-			set_oob = "MNT_2000_nonnsb"
-		}
 	}
+	# MD 2.0 has no non-NSB OOB for Montenegro - no fallback
 
 	### Technology 2026 ###
 	md2026_tier5_2026_techs = yes

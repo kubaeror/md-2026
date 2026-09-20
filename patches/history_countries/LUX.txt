@@ -7,7 +7,7 @@
 		limit = { has_dlc = "No Step Back" }
 		set_oob = "LUX_2026_nsb"
 		else = {
-			set_oob = "LUX_2000_nonnsb"
+			set_oob = "LUX_2000"
 		}
 	}
 

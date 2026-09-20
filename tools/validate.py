@@ -461,6 +461,50 @@ def check_leader_traits(sets):
                     ERRORS["unknown leader trait"].append(f"{tr}  ({rel(p)})")
 
 
+def check_precompleted_focuses(md):
+    """A focus completed in a country history file must not belong to another
+    country's focus tree (SAU completing Gulf-tree focuses crashed the game)."""
+    tree_tags = {}
+    focus_tree = {}
+    for root in (os.path.join(md, "common", "national_focus"), os.path.join(REPO, "common", "national_focus")):
+        for p in files(root):
+            text = rebase.strip_comments(rebase.read(p))
+            for m in re.finditer(r"focus_tree\s*=\s*\{", text):
+                ob = text.index("{", m.start())
+                end = rebase.find_block(text, ob)
+                body = text[ob:end]
+                idm = re.search(r"(?m)^\s*id\s*=\s*([A-Za-z0-9_]+)", body[:400])
+                if not idm:
+                    continue
+                tid = idm.group(1)
+                tags = set()
+                cb = re.search(r"country\s*=\s*\{", body[:2000])
+                if cb:
+                    cb_ob = body.index("{", cb.start())
+                    cb_end = rebase.find_block(body, cb_ob)
+                    tags = set(re.findall(r"(?:tag|original_tag)\s*=\s*([A-Z]{3})", body[cb_ob:cb_end]))
+                tree_tags[tid] = tags
+                for fm in re.finditer(r"(?m)^\s*(?:focus|shared_focus|joint_focus)\s*=\s*\{", body):
+                    fob = body.index("{", fm.end() - 1)
+                    fend = rebase.find_block(body, fob)
+                    fid = re.search(r"(?m)^\s*id\s*=\s*([A-Za-z0-9_]+)", body[fob:fend][:300])
+                    if fid:
+                        focus_tree[fid.group(1)] = tid
+    rename = {"NOR": "NRY"}
+    for p in files(os.path.join(REPO, "patches", "history_countries")):
+        tag = rename.get(os.path.basename(p)[:3], os.path.basename(p)[:3])
+        text = rebase.read(p)
+        for m in re.finditer(r"complete_national_focus\s*=\s*([A-Za-z0-9_]+)", text):
+            f = m.group(1)
+            tid = focus_tree.get(f)
+            if not tid:
+                continue  # shared/joint focus, pulled in by its branch root
+            tags = tree_tags.get(tid, set())
+            if tags and tag not in tags:
+                ERRORS["focus from another country's tree"].append(
+                    f"{tag}: {f} (tree {tid} -> {sorted(tags)[:3]})")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--md", default=os.environ.get("MD_PATH", rebase.DEFAULT_MD))
@@ -524,6 +568,7 @@ def main():
     check_portraits(md)
     check_equipment_refs(sets)
     check_leader_traits(sets)
+    check_precompleted_focuses(md)
     check_installation()
 
     print()
