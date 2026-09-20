@@ -1,0 +1,139 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "AST_2026_nsb"
+		else = {
+			set_oob = "AST_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier2_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 65.000 }
+	set_variable = { var = debt value = 650.000 }
+	set_variable = { var = treasury value = 100 }
+	set_variable = { var = corporate_tax_rate value = 30 }
+	set_variable = { var = population_tax_rate value = 23 }
+	set_variable = { var = int_investments value = 120 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 1300 }
+	}
+	set_variable = { overall_productivity = 1300 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 60.0
+		communism = 3.0
+		fascism = 0.0
+		neutrality = 12.0
+		nationalist = 25.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2025.5.3"
+		election_frequency = 36
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^3 = 0.330 }   #socialism (Labor)
+	set_variable = { party_pop_array^1 = 0.310 }   #conservatism (Coalition LNP)
+	set_variable = { party_pop_array^17 = 0.110 }   #Neutral_green (Greens)
+	set_variable = { party_pop_array^2 = 0.060 }   #liberalism (Teals)
+	set_variable = { party_pop_array^20 = 0.060 }   #Nat_Populism (One Nation)
+	set_variable = { party_pop_array^14 = 0.040 }   #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0.045 }   #oligarchism
+	set_variable = { party_pop_array^18 = 0.025 }   #neutral_Social
+	set_variable = { party_pop_array^4 = 0.020 }   #Communist-State
+
+	add_to_array = { ruling_party = 3 }             #socialism (Labor)
+
+	set_variable = { party_pop_elect_array^3 = 0.330 }  #Labor
+	set_variable = { party_pop_elect_array^1 = 0.310 }  #Coalition
+	set_variable = { party_pop_elect_array^17 = 0.115 }  #Greens
+	set_variable = { party_pop_elect_array^2 = 0.065 }  #Teals
+	set_variable = { party_pop_elect_array^20 = 0.040 }  #One Nation
+
+	startup_politics = yes
+
+	### Country Leader: Anthony Albanese ###
+	create_country_leader = {
+		name = "Anthony Albanese"
+		picture = "gfx/leaders/AST/Anthony_Albanese.dds"
+		expire = "2028.5.21"
+		ideology = socialism
+		traits = {
+			western_socialism
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	### National Spirits ###
+	add_ideas = {
+		md2026_ast_aukus_partner
+	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_AST_pacific_partner
+	complete_national_focus = MD2026_AST_aukus_commitment
+	complete_national_focus = MD2026_AST_nuclear_submarines
+	complete_national_focus = MD2026_AST_missile_capability
+	complete_national_focus = MD2026_AST_china_balancing
+	complete_national_focus = MD2026_AST_pacific_islands
+	complete_national_focus = MD2026_AST_pacific_aid
+	complete_national_focus = MD2026_AST_pacific_security
+	complete_national_focus = MD2026_AST_defense_expansion
+	complete_national_focus = MD2026_AST_northern_bases
+	complete_national_focus = MD2026_AST_cyber_defense
+	complete_national_focus = MD2026_AST_economic_resilience
+	complete_national_focus = MD2026_AST_green_energy
+	complete_national_focus = MD2026_AST_innovation_economy
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = GENERIC_air_force_reform
+	complete_national_focus = GENERIC_army_reform
+	complete_national_focus = GENERIC_build_primary_schools
+	complete_national_focus = GENERIC_build_roads
+	complete_national_focus = GENERIC_ease_of_business_reforms
+	complete_national_focus = GENERIC_international_diplomacy
+	complete_national_focus = GENERIC_light_industry_investments
+	complete_national_focus = GENERIC_military_emergency
+	complete_national_focus = GENERIC_naval_reform
+	complete_national_focus = GENERIC_political_reform
+	complete_national_focus = GENERIC_agricultural_district_subsidization
+	complete_national_focus = GENERIC_air_doctrine_innovations
+	complete_national_focus = GENERIC_alignment_debate
+	complete_national_focus = GENERIC_anti_corruption_reforms
+	complete_national_focus = GENERIC_assure_access_to_education
+	complete_national_focus = GENERIC_attract_foreign_investors
+	complete_national_focus = GENERIC_build_highways
+	complete_national_focus = GENERIC_build_railways
+	complete_national_focus = GENERIC_cabinet_reform
+	complete_national_focus = GENERIC_capital_defense_scheme
+	complete_national_focus = GENERIC_debt_refactoring
+	complete_national_focus = GENERIC_diplomatic_positions
+	complete_national_focus = GENERIC_expand_the_secret_service
+	complete_national_focus = GENERIC_fighter_planes
+	complete_national_focus = GENERIC_heavy_industry_investments
+	complete_national_focus = GENERIC_land_doctrine_innovations
+	complete_national_focus = GENERIC_military_education_reform
+	complete_national_focus = GENERIC_military_equipment_procurement
+	complete_national_focus = GENERIC_military_exercises
+	complete_national_focus = GENERIC_mobilize_the_working_class
+	complete_national_focus = GENERIC_naval_bases
+	complete_national_focus = GENERIC_naval_doctrine_innovations
+	complete_national_focus = GENERIC_network_infrastructure
+	complete_national_focus = GENERIC_our_place
+	complete_national_focus = GENERIC_strengthen_government
+	complete_national_focus = GENERIC_submarines
+	complete_national_focus = GENERIC_surface_ships
+	complete_national_focus = GENERIC_trade_with_the_neighbors
+}

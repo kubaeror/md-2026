@@ -1,0 +1,5 @@
+﻿		# MD2026: Donetsk Oblast mostly under Russian control (Mariupol fell May 2022)
+		2026.1.1 = {
+			owner = SOV
+			add_core_of = SOV
+		}

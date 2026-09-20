@@ -1,0 +1,122 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "ARM_2026_nsb"
+		else = {
+			set_oob = "ARM_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier4_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 8.000 }
+	set_variable = { var = debt value = 10.000 }
+	set_variable = { var = treasury value = 5 }
+	set_variable = { var = corporate_tax_rate value = 18 }
+	set_variable = { var = population_tax_rate value = 20 }
+	set_variable = { var = int_investments value = 10 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 400 }
+	}
+	set_variable = { overall_productivity = 400 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 20.0
+		communism = 50.0
+		fascism = 0.0
+		neutrality = 10.0
+		nationalist = 20.0
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "2021.6.20"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^6 = 0.500 }   #Conservative (Civil Contract)
+	set_variable = { party_pop_array^20 = 0.150 }   #Nat_Populism (Armenia Alliance)
+	set_variable = { party_pop_array^7 = 0.100 }   #Autocracy (I Have Honor)
+	set_variable = { party_pop_array^1 = 0.060 }   #conservatism (Republic Party)
+	set_variable = { party_pop_array^2 = 0.050 }   #liberalism
+	set_variable = { party_pop_array^15 = 0.060 }   #oligarchism
+	set_variable = { party_pop_array^14 = 0.050 }   #Neutral_conservatism
+	set_variable = { party_pop_array^4 = 0.030 }   #Communist-State
+
+	add_to_array = { ruling_party = 6 }             #Conservative (Civil Contract)
+
+	set_variable = { party_pop_elect_array^6 = 0.538 }  #Civil Contract
+	set_variable = { party_pop_elect_array^20 = 0.212 }  #Armenia Alliance
+	set_variable = { party_pop_elect_array^7 = 0.055 }  #I Have Honor
+	set_variable = { party_pop_elect_array^1 = 0.044 }  #misc
+
+	startup_politics = yes
+
+	### Country Leader: Nikol Pashinyan ###
+	create_country_leader = {
+		name = "Nikol Pashinyan"
+		picture = "gfx/leaders/ARM/Nikol_Pashinyan.dds"
+		expire = "2026.6.20"
+		ideology = Conservative
+		traits = {
+			reformer
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = ARM_army
+	complete_national_focus = ARM_defence
+	complete_national_focus = ARM_echoes_of_1999
+	complete_national_focus = ARM_economy_lavash
+	complete_national_focus = ARM_foreseeing_the_prophecy
+	complete_national_focus = ARM_in_between_empires
+	complete_national_focus = ARM_Kocharjan
+	complete_national_focus = ARM_Sargsyan
+	complete_national_focus = ARM_triump_revolution_barhat
+	complete_national_focus = ARM_inner_troops
+	complete_national_focus = ARM_institute_mo_ra
+	complete_national_focus = ARM_intern_cooperat
+	complete_national_focus = ARM_militia
+	complete_national_focus = ARM_vazgen_academy
+	complete_national_focus = ARM_nss
+	complete_national_focus = ARM_police
+	complete_national_focus = ARM_economy_armenian_card
+	complete_national_focus = ARM_economy_grand_candy
+	complete_national_focus = ARM_economy_ml_mining
+	complete_national_focus = ARM_economy_orange
+	complete_national_focus = ARM_economy_techout_mining
+	complete_national_focus = ARM_economy_tobacco
+	complete_national_focus = ARM_economy_tourism
+	complete_national_focus = ARM_economy_wto
+	complete_national_focus = ARM_economy_ycrdi
+	complete_national_focus = ARM_economy_yerevan_ararat_factory
+	complete_national_focus = ARM_economy_yerevan_destiny_brandy
+	complete_national_focus = ARM_economy_yerevan_factori_restore
+	complete_national_focus = ARM_economy_zangezur_copper
+	complete_national_focus = ARM_government_subsid_it_sphere
+	complete_national_focus = ARM_higher_educ_sph_development
+	complete_national_focus = ARM_friendship_syria
+	complete_national_focus = ARM_gods_land
+	complete_national_focus = ARM_levons_legacy
+	complete_national_focus = ARM_mithridates_legacy
+	complete_national_focus = ARM_northern_neighbor
+	complete_national_focus = ARM_polish_cherries
+	complete_national_focus = ARM_post_ussr_partnersh
+	complete_national_focus = ARM_relat_in_kurdistan
+	complete_national_focus = ARM_relations_with_america
+	complete_national_focus = ARM_relations_with_europe
+	complete_national_focus = ARM_relations_with_iran
+	complete_national_focus = ARM_relations_with_russia
+}

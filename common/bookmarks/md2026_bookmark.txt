@@ -1,0 +1,241 @@
+﻿bookmarks = {
+	bookmark = {
+		name = "MD_2026"
+		desc = "MD_2026_DESC"
+		date = 2026.1.1.12
+		picture = "GFX_select_date_2000"
+		default_country = "USA"
+		default = no
+		filters = { new_content continent }
+
+		#United States
+		"USA" = {
+			history = "USA_MD2026_DESC"
+			ideology = nationalist
+			ideas = {
+				NATO_member
+				land_of_the_free
+				p5_member
+			}
+			focuses = {
+				USA_focus_ending_clintonomics
+				USA_focus_the_2000_joint_exercises
+				USA_focus_the_regulatory_merry_go_round
+			}
+		}
+		#Russia
+		"SOV" = {
+			history = "SOV_MD2026_DESC"
+			ideology = communism
+			ideas = {
+				russian_legacy
+				p5_member
+				SOV_outdated_army_idea_2
+			}
+			focuses = {
+				SOV_rus_sphere_united_arms
+				SOV_the_new_dictator
+				SOV_economic_russian
+			}
+		}
+		#China
+		"CHI" = {
+			history = "CHI_MD2026_DESC"
+			ideology = communism
+			ideas = {
+				CHI_anti_corruption_purge
+				CHI_610_directive_active
+				p5_member
+			}
+			focuses = {
+				MD2026_CHI_great_rejuvenation
+				CHI_Form_the_SCO
+				CHI_Belt_and_Road_Initiative
+			}
+		}
+		#Ukraine
+		"UKR" = {
+			history = "UKR_MD2026_DESC"
+			ideology = democratic
+			ideas = {
+				UKR_drone_army
+				UKR_every_man_ataman
+				UKR_kleptocracy
+			}
+			focuses = {
+				MD2026_UKR_war_path
+				UKR_drone_army
+				UKR_declare_ussr
+			}
+		}
+		#Israel
+		"ISR" = {
+			history = "ISR_MD2026_DESC"
+			ideology = democratic
+			ideas = {
+				oslo_accords_1
+				unintegrated_ultraorthodox_community_1
+				peoples_army_6
+			}
+			focuses = {
+				ISR_intifada_darkest_hour
+				ISR_middle_east_peace
+				ISR_camp_david_2000
+			}
+		}
+		#Turkey
+		"TUR" = {
+			history = "TUR_MD2026_DESC"
+			ideology = communism
+			ideas = {
+				TUR_mafia_active
+				TUR_turkish_media_unctrolled
+				TUR_kurdish_trouble
+			}
+			focuses = {
+				TUR_the_armed_forces_of_turkiye
+				TUR_through_troubles
+				TUR_party_of_development_and_justice
+			}
+		}
+		#Poland
+		"POL" = {
+			history = "POL_MD2026_DESC"
+			ideology = democratic
+			ideas = {
+				christian
+				NATO_member
+				western_country
+			}
+			focuses = {
+				POL_red_dream
+				POL_stay_on_track
+				POL_army_reform
+			}
+		}
+		#Japan
+		"JAP" = {
+			history = "JAP_MD2026_DESC"
+			ideology = democratic
+			ideas = {
+				JAP_american_pressure_article_nine
+				idea_JAP_emperor_akihito
+				JAP_entrenched_demand_shortfall_idea_2
+			}
+			focuses = {
+				MD2026_JAP_active_defense
+				JAP_article_nine
+				JAP_a_nation_reborn
+			}
+		}
+
+		#MINORS
+		"GER" = {
+			minor = yes
+			history = "GER_MD2026_DESC"
+			ideology = democratic
+		}
+		"FRA" = {
+			minor = yes
+			history = "FRA_MD2026_DESC"
+			ideology = democratic
+		}
+		"ENG" = {
+			minor = yes
+			history = "ENG_MD2026_DESC"
+			ideology = democratic
+		}
+		"ITA" = {
+			minor = yes
+			history = "ITA_MD2026_DESC"
+			ideology = nationalist
+		}
+		"RAJ" = {
+			minor = yes
+			history = "RAJ_MD2026_DESC"
+			ideology = communism
+		}
+		"BRA" = {
+			minor = yes
+			history = "BRA_MD2026_DESC"
+			ideology = democratic
+		}
+		"PER" = {
+			minor = yes
+			history = "PER_MD2026_DESC"
+			ideology = communism
+		}
+		"KOR" = {
+			minor = yes
+			history = "KOR_MD2026_DESC"
+			ideology = democratic
+		}
+		"NKO" = {
+			minor = yes
+			history = "NKO_MD2026_DESC"
+			ideology = communism
+		}
+		"SAU" = {
+			minor = yes
+			history = "SAU_MD2026_DESC"
+			ideology = fascism
+		}
+		"SYR" = {
+			minor = yes
+			history = "SYR_MD2026_DESC"
+			ideology = communism
+		}
+		"CAN" = {
+			minor = yes
+			history = "CAN_MD2026_DESC"
+			ideology = democratic
+		}
+		"SWE" = {
+			minor = yes
+			history = "SWE_MD2026_DESC"
+			ideology = democratic
+		}
+		"FIN" = {
+			minor = yes
+			history = "FIN_MD2026_DESC"
+			ideology = democratic
+		}
+		"NRY" = {
+			minor = yes
+			history = "NRY_MD2026_DESC"
+			ideology = democratic
+		}
+		"HUN" = {
+			minor = yes
+			history = "HUN_MD2026_DESC"
+			ideology = nationalist
+		}
+		"ROM" = {
+			minor = yes
+			history = "ROM_MD2026_DESC"
+			ideology = democratic
+		}
+		"AST" = {
+			minor = yes
+			history = "AST_MD2026_DESC"
+			ideology = democratic
+		}
+		"SUD" = {
+			minor = yes
+			history = "SUD_MD2026_DESC"
+			ideology = communism
+		}
+		"BRM" = {
+			minor = yes
+			history = "BRM_MD2026_DESC"
+			ideology = nationalist
+		}
+		"---" = {
+			minor = yes
+			history = "OTHER_MD2026_DESC"
+		}
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+		}
+	}
+}

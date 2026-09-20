@@ -1,4 +1,4 @@
-### Millennium Dawn 2026 - Decision Categories ###
+﻿### Millennium Dawn 2026 - Decision Categories ###
 
 md2026_sanctions_category = {
 	icon = generic_economy
@@ -42,7 +42,7 @@ md2026_nato_decisions_category = {
 			original_tag = ITA
 			original_tag = POL
 			original_tag = TUR
-			original_tag = NOR
+			original_tag = NRY
 			original_tag = DEN
 			original_tag = HOL
 			original_tag = BEL

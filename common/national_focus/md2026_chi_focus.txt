@@ -1,4 +1,4 @@
-### MD2026 China Focus Branch ###
+﻿### MD2026 China Focus Branch ###
 # Shared focuses for China's 2026 focus tree branch
 # Root focus at absolute x=38, y=0
 # Gated by date > 2025.12.31

@@ -1,0 +1,123 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "SPR_2026_nsb"
+		else = {
+			set_oob = "SPR_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier3_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 33.000 }
+	set_variable = { var = debt value = 1600.000 }
+	set_variable = { var = treasury value = 80 }
+	set_variable = { var = corporate_tax_rate value = 25 }
+	set_variable = { var = population_tax_rate value = 19 }
+	set_variable = { var = int_investments value = 90 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 1000 }
+	}
+	set_variable = { overall_productivity = 1000 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 55.0
+		communism = 8.0
+		fascism = 0.0
+		neutrality = 12.0
+		nationalist = 25.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2023.7.23"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^3 = 0.310 }   #socialism (PSOE)
+	set_variable = { party_pop_array^1 = 0.330 }   #conservatism (PP)
+	set_variable = { party_pop_array^20 = 0.140 }   #Nat_Populism (Vox)
+	set_variable = { party_pop_array^4 = 0.050 }   #Communist-State (Sumar)
+	set_variable = { party_pop_array^2 = 0.040 }   #liberalism (Ciudadanos)
+	set_variable = { party_pop_array^15 = 0.060 }   #oligarchism
+	set_variable = { party_pop_array^14 = 0.050 }   #Neutral_conservatism
+	set_variable = { party_pop_array^17 = 0.020 }   #Neutral_green
+
+	add_to_array = { ruling_party = 3 }             #socialism (PSOE)
+	add_to_array = { gov_coalition_array = 4 }       #Communist-State (Sumar)
+
+	set_variable = { party_pop_elect_array^1 = 0.331 }  #PP
+	set_variable = { party_pop_elect_array^3 = 0.316 }  #PSOE
+	set_variable = { party_pop_elect_array^20 = 0.124 }  #Vox
+	set_variable = { party_pop_elect_array^4 = 0.048 }  #Sumar
+
+	startup_politics = yes
+
+	### Country Leader: Pedro Sanchez ###
+	create_country_leader = {
+		name = "Pedro Sanchez"
+		picture = "gfx/leaders/SPR/Pedro_Sanchez.dds"
+		expire = "2027.7.23"
+		ideology = socialism
+		traits = {
+			western_socialism
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	add_ideas = {
+		md2026_spr_territorial_tensions
+	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = SPR_armada_espanola
+	complete_national_focus = SPR_economia_espanola
+	complete_national_focus = SPR_ejercito_de_tierra
+	complete_national_focus = SPR_ejercito_del_aire
+	complete_national_focus = SPR_fuerzas_aeromoviles_del_ejercito_de_tierra
+	complete_national_focus = SPR_industria_espanola
+	complete_national_focus = SPR_sector_defensa
+	complete_national_focus = SPR_the_political_sphere
+	complete_national_focus = SPR_agricultura_espanola
+	complete_national_focus = SPR_apc_modernization
+	complete_national_focus = SPR_bases_aereas_del_norte
+	complete_national_focus = SPR_begin_army_reforms
+	complete_national_focus = SPR_calm_before_the_typhoon
+	complete_national_focus = SPR_close_air_support
+	complete_national_focus = SPR_comercio_espanol
+	complete_national_focus = SPR_energia_espanola
+	complete_national_focus = SPR_escuela_naval_militar
+	complete_national_focus = SPR_eurocopter_cougar
+	complete_national_focus = SPR_eurocopter_tigre
+	complete_national_focus = SPR_expand_the_high_speed_rail_network
+	complete_national_focus = SPR_fabricacion_espanola
+	complete_national_focus = SPR_fabricas_de_armas
+	complete_national_focus = SPR_faith_in_the_constitution
+	complete_national_focus = SPR_floan
+	complete_national_focus = SPR_floan_r_and_d
+	complete_national_focus = SPR_guard_our_coasts
+	complete_national_focus = SPR_hug_the_hornets_nest
+	complete_national_focus = SPR_hybrid_territorial_model
+	complete_national_focus = SPR_infraestructura_maritima_del_norte
+	complete_national_focus = SPR_integrate_the_underground_economy
+	complete_national_focus = SPR_mineria_espanola
+	complete_national_focus = SPR_programa_coraza_2000
+	complete_national_focus = SPR_reverse_engineering_fighters
+	complete_national_focus = SPR_sector_servicios_espanol
+	complete_national_focus = SPR_spanish_ifv_programme
+	complete_national_focus = SPR_start_a_bomber_fleet
+	complete_national_focus = SPR_tedae
+	complete_national_focus = SPR_the_foreign_legion
+	complete_national_focus = SPR_the_regulares
+}

@@ -1,0 +1,99 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "BOS_2026_nsb"
+		else = {
+			set_oob = "BOS_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier5_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 8.000 }
+	set_variable = { var = debt value = 10.000 }
+	set_variable = { var = treasury value = 3 }
+	set_variable = { var = corporate_tax_rate value = 10 }
+	set_variable = { var = population_tax_rate value = 10 }
+	set_variable = { var = int_investments value = 5 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 350 }
+	}
+	set_variable = { overall_productivity = 350 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 30.0
+		communism = 5.0
+		fascism = 5.0
+		neutrality = 25.0
+		nationalist = 35.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2022.10.2"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^1 = 0.250 }   #conservatism (HDZ BiH)
+	set_variable = { party_pop_array^20 = 0.200 }   #Nat_Populism (SNSD Dodik)
+	set_variable = { party_pop_array^12 = 0.150 }   #Neutral_Muslim_Brotherhood (SDA)
+	set_variable = { party_pop_array^3 = 0.100 }   #socialism (SDP)
+	set_variable = { party_pop_array^2 = 0.060 }   #liberalism (NiP)
+	set_variable = { party_pop_array^14 = 0.070 }   #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0.060 }   #oligarchism
+	set_variable = { party_pop_array^22 = 0.060 }   #Nat_Autocracy
+	set_variable = { party_pop_array^4 = 0.030 }   #Communist-State
+	set_variable = { party_pop_array^18 = 0.020 }   #neutral_Social
+
+	add_to_array = { ruling_party = 1 }             #conservatism (HDZ BiH)
+	add_to_array = { gov_coalition_array = 12 }       #Neutral_Muslim_Brotherhood (SDA)
+	add_to_array = { gov_coalition_array = 20 }       #Nat_Populism (SNSD Dodik)
+
+	set_variable = { party_pop_elect_array^20 = 0.198 }  #SNSD
+	set_variable = { party_pop_elect_array^1 = 0.245 }  #HDZ BiH
+	set_variable = { party_pop_elect_array^12 = 0.162 }  #SDA
+	set_variable = { party_pop_elect_array^3 = 0.089 }  #SDP
+	set_variable = { party_pop_elect_array^2 = 0.068 }  #NiP
+
+	startup_politics = yes
+
+	### Country Leader: Borjana Kristo ###
+	create_country_leader = {
+		name = "Borjana Kristo"
+		picture = "gfx/leaders/BOS/Borjana_Kristo.dds"
+		expire = "2026.10.2"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = BOS_house_of_representatives
+	complete_national_focus = BOS_bosnian_elections
+	complete_national_focus = BOS_economic_revision
+	complete_national_focus = BOS_politicized_army
+	complete_national_focus = BOS_post_war_effort
+	complete_national_focus = BOS_air_doctrine
+	complete_national_focus = BOS_army_of_republic_of_srpska
+	complete_national_focus = BOS_army_of_the_federation_bosnia_herzegovina
+	complete_national_focus = BOS_land_doctrine
+	complete_national_focus = BOS_the_federation
+	complete_national_focus = BOS_elections_political
+	complete_national_focus = BOS_the_state
+	complete_national_focus = BOS_grant_herzegovinians_more_rights
+	complete_national_focus = BOS_grant_more_rights_to_serbian_peoples
+	complete_national_focus = BOS_detain_serbian_generals
+}

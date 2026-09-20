@@ -1,0 +1,119 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "NKO_2026_nsb"
+		else = {
+			set_oob = "NKO_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier4_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 1.800 }
+	set_variable = { var = debt value = 5.000 }
+	set_variable = { var = treasury value = 2 }
+	set_variable = { var = corporate_tax_rate value = 0 }
+	set_variable = { var = population_tax_rate value = 0 }
+	set_variable = { var = int_investments value = 2 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 120 }
+	}
+	set_variable = { overall_productivity = 120 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 0.0
+		communism = 98.0
+		fascism = 0.0
+		neutrality = 1.0
+		nationalist = 1.0
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "2000.1.1"
+		election_frequency = 999
+		elections_allowed = no
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^4 = 0.950 }   #Communist-State (WPK)
+	set_variable = { party_pop_array^7 = 0.030 }   #Autocracy
+	set_variable = { party_pop_array^13 = 0.020 }   #Neutral_Autocracy
+
+	add_to_array = { ruling_party = 4 }             #Communist-State (WPK)
+
+	startup_politics = yes
+
+	### 2026 National Spirits ###
+	add_ideas = {
+		md2026_nko_total_isolation
+	}
+
+	### Country Leader: Kim Jong-un ###
+	create_country_leader = {
+		name = "Kim Jong-un"
+		picture = "gfx/leaders/NKO/Kim_Jong-un.dds"
+		expire = "2065.1.1"
+		ideology = Communist-State
+		traits = {
+			communist_dictator
+			authoritarian_ruler
+			nuclear_enthusiast
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_NKO_nuclear_shield
+	complete_national_focus = MD2026_NKO_nuclear_expansion
+	complete_national_focus = MD2026_NKO_icbm_program
+	complete_national_focus = MD2026_NKO_tactical_nukes
+	complete_national_focus = MD2026_NKO_russia_alliance
+	complete_national_focus = MD2026_NKO_arms_for_russia
+	complete_national_focus = MD2026_NKO_russian_tech
+	complete_national_focus = MD2026_NKO_provocations
+	complete_national_focus = MD2026_NKO_regime_maintenance
+	complete_national_focus = MD2026_NKO_cult_personality
+	complete_national_focus = MD2026_NKO_juche_economy
+	complete_national_focus = MD2026_NKO_cyber_warfare
+	complete_national_focus = MD2026_NKO_crypto_theft
+	complete_national_focus = MD2026_NKO_information_warfare
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = NKO_kim_jong_il_death
+	complete_national_focus = NKO_national_defence_force
+	complete_national_focus = NKO_people_army
+	complete_national_focus = NKO_the_38th_parallel
+	complete_national_focus = NKO_struggle_for_power
+	complete_national_focus = NKO_red_dawn
+	complete_national_focus = NKO_bureau_38
+	complete_national_focus = NKO_national_recovery_plan
+	complete_national_focus = NKO_promote_songun
+	complete_national_focus = NKO_solve_the_arduous_march
+	complete_national_focus = NKO_kim_jong_un
+	complete_national_focus = NKO_orthodox_successor
+	complete_national_focus = NKO_the_road_to_war
+	complete_national_focus = NKO_begin_uranium_enrichment
+	complete_national_focus = NKO_naval_modernization
+	complete_national_focus = NKO_people_air_force
+	complete_national_focus = NKO_revolutionary_military_spirit
+	complete_national_focus = NKO_self_produced_rifles
+	complete_national_focus = NKO_emphasis_self_reliance
+	complete_national_focus = NKO_industrial_modernization
+	complete_national_focus = NKO_resource_extraction
+	complete_national_focus = NKO_food_production_boost
+	complete_national_focus = NKO_healthcare_reform
+	complete_national_focus = NKO_humanitarian_aid
+	complete_national_focus = NKO_international_black_market
+	complete_national_focus = NKO_red_star_os
+	complete_national_focus = NKO_sanction_evasions
+	complete_national_focus = NKO_korean_iron_fist
+}

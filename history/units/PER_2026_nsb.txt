@@ -1,4 +1,4 @@
-##### Division Templates #####
+﻿##### Division Templates #####
 # Iran 2026 — Dual military: Artesh (regular) + IRGC (Sepah-e Pasdaran)
 
 division_template = {

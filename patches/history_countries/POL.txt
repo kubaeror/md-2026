@@ -1,0 +1,127 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### OOB 2026 ###
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "POL_2026_nsb"
+		else = {
+			set_oob = "POL_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier3_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 22.000 }
+	set_variable = { var = debt value = 380.000 }
+	set_variable = { var = treasury value = 60 }
+	set_variable = { var = corporate_tax_rate value = 19 }
+	set_variable = { var = population_tax_rate value = 17 }
+	set_variable = { var = int_investments value = 80 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 900 }
+	}
+	set_variable = { overall_productivity = 900 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 55.0
+		communism = 5.0
+		fascism = 0.0
+		neutrality = 10.0
+		nationalist = 30.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2023.10.15"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^2 = 0.305 }   #liberalism (KO)
+	set_variable = { party_pop_array^1 = 0.085 }   #conservatism (Trzecia Droga)
+	set_variable = { party_pop_array^3 = 0.065 }   #socialism (Lewica)
+	set_variable = { party_pop_array^20 = 0.355 }   #Nat_Populism (PiS)
+	set_variable = { party_pop_array^14 = 0.070 }   #Neutral_conservatism (Konfederacja)
+	set_variable = { party_pop_array^15 = 0.060 }   #oligarchism
+	set_variable = { party_pop_array^4 = 0.020 }   #Communist-State
+	set_variable = { party_pop_array^21 = 0.040 }   #Nat_Fascism
+
+	add_to_array = { ruling_party = 2 }             #liberalism (KO)
+	add_to_array = { gov_coalition_array = 1 }       #conservatism (Trzecia Droga)
+	add_to_array = { gov_coalition_array = 3 }       #socialism (Lewica)
+
+	set_variable = { party_pop_elect_array^2 = 0.307 }  #KO
+	set_variable = { party_pop_elect_array^20 = 0.353 }  #PiS
+	set_variable = { party_pop_elect_array^1 = 0.086 }  #Trzecia Droga
+	set_variable = { party_pop_elect_array^3 = 0.063 }  #Lewica
+	set_variable = { party_pop_elect_array^14 = 0.072 }  #Konfederacja
+
+	startup_politics = yes
+
+	### 2026 National Spirits ###
+	add_ideas = {
+		md2026_pol_eastern_shield
+	}
+
+	### Country Leader: Donald Tusk ###
+	create_country_leader = {
+		name = "Donald Tusk"
+		picture = "gfx/leaders/POL/Donald_Tusk.dds"
+		expire = "2027.10.15"
+		ideology = liberalism
+		traits = {
+			western_liberalism
+			career_politician
+			diplomat
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_POL_eastern_shield
+	complete_national_focus = MD2026_POL_fortress_poland
+	complete_national_focus = MD2026_POL_army_modernization
+	complete_national_focus = MD2026_POL_eu_powerhouse
+	complete_national_focus = MD2026_POL_k2_tanks
+	complete_national_focus = MD2026_POL_patriot_batteries
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = POL_sily_zbrojne_rzeczypospolitej_polskiej
+	complete_national_focus = POL_revitalize_government
+	complete_national_focus = POL_foreign_friends
+	complete_national_focus = POL_begin_contruction_of_space_company
+	complete_national_focus = POL_missile_company
+	complete_national_focus = POL_csto_is_the_enemy
+	complete_national_focus = POL_platforma_obivatelska
+	complete_national_focus = POL_pravda_i_spravedlivost
+	complete_national_focus = POL_intervention_in_ukraine
+	complete_national_focus = POL_lithuania_and_belarus
+	complete_national_focus = POL_closeup_of_the_visegrad_group
+	complete_national_focus = POL_socialdemocracy
+	complete_national_focus = POL_betray_the_communists
+	complete_national_focus = POL_continue_anti_corrpution
+	complete_national_focus = POL_discussion_of_the_world_situation
+	complete_national_focus = POL_expansion_of_ukrainian_grain_imports
+	complete_national_focus = POL_ground_air_systems
+	complete_national_focus = POL_honor_lost_army
+	complete_national_focus = POL_improve_civil_administration
+	complete_national_focus = POL_intercontinental_missiles_prototypes
+	complete_national_focus = POL_passing_the_homeland_defense_act
+	complete_national_focus = POL_polish_german_highway
+	complete_national_focus = POL_polsa_grand_opening
+	complete_national_focus = POL_preparations_against_kaliningrad
+	complete_national_focus = POL_promote_eu_values
+	complete_national_focus = POL_promote_industrial_quality
+	complete_national_focus = POL_rail_baltica
+	complete_national_focus = POL_speak_against_russia
+	complete_national_focus = POL_stay_on_track
+	complete_national_focus = POL_wolyn_recognition
+}

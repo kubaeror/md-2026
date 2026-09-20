@@ -1,4 +1,4 @@
-##### Division Templates #####
+﻿##### Division Templates #####
 # South Africa 2026
 
 division_template = {

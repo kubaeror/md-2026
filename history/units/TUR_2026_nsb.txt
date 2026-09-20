@@ -1,4 +1,4 @@
-##### TUR 2026 OOB - Turkey (NATO 2nd largest army) #####
+﻿##### TUR 2026 OOB - Turkey (NATO 2nd largest army) #####
 # Modernized with domestic production: Altay MBT (limited), M60T Sabra, Leopard 2A4
 # T-155 Firtina SPH, T-129 ATAK helos, Kirpi/BMC MRAP, FNSS ACV-15/Kaplan IFV
 

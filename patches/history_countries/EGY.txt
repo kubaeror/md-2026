@@ -1,0 +1,132 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "EGY_2026_nsb"
+		else = {
+			set_oob = "EGY_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier3_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 4.500 }
+	set_variable = { var = debt value = 400.000 }
+	set_variable = { var = treasury value = 20 }
+	set_variable = { var = corporate_tax_rate value = 22 }
+	set_variable = { var = population_tax_rate value = 10 }
+	set_variable = { var = int_investments value = 30 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 350 }
+	}
+	set_variable = { overall_productivity = 350 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 15.0
+		communism = 15.0
+		fascism = 20.0
+		neutrality = 40.0
+		nationalist = 10.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2024.12.10"
+		election_frequency = 72
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^0 = 0.600 }   #Western_Autocracy (el-Sisi bloc)
+	set_variable = { party_pop_array^12 = 0.100 }   #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^11 = 0.050 }   #Caliphate (Salafists)
+	set_variable = { party_pop_array^3 = 0.060 }   #socialism
+	set_variable = { party_pop_array^7 = 0.060 }   #Autocracy (military)
+	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
+	set_variable = { party_pop_array^14 = 0.040 }   #Neutral_conservatism
+	set_variable = { party_pop_array^2 = 0.040 }   #liberalism
+
+	add_to_array = { ruling_party = 0 }             #Western_Autocracy (el-Sisi bloc)
+
+	set_variable = { party_pop_elect_array^0 = 0.898 }  #el-Sisi
+	set_variable = { party_pop_elect_array^14 = 0.044 }  #misc opposition
+	set_variable = { party_pop_elect_array^3 = 0.024 }  #misc
+	set_variable = { party_pop_elect_array^2 = 0.018 }  #misc
+
+	startup_politics = yes
+
+	### Country Leader: Abdel Fattah el-Sisi ###
+	create_country_leader = {
+		name = "Abdel Fattah el-Sisi"
+		picture = "gfx/leaders/EGY/Abdel_Fattah_el-Sisi.dds"
+		expire = "2030.4.2"
+		ideology = Western_Autocracy
+		traits = {
+			authoritarian_ruler
+			career_officer
+		}
+	}
+	set_variable = { term_limit = 2 }
+	set_variable = { current_term = 3 }
+
+	### National Spirits ###
+	add_ideas = {
+		md2026_egy_military_state
+	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_EGY_nile_power
+	complete_national_focus = MD2026_EGY_military_modernization
+	complete_national_focus = MD2026_EGY_economic_crisis
+	complete_national_focus = MD2026_EGY_imf_program
+	complete_national_focus = MD2026_EGY_gulf_investment
+	complete_national_focus = MD2026_EGY_regional_role
+	complete_national_focus = MD2026_EGY_gaza_mediator
+	complete_national_focus = MD2026_EGY_nile_dispute
+	complete_national_focus = MD2026_EGY_mega_projects
+	complete_national_focus = MD2026_EGY_new_capital
+	complete_national_focus = MD2026_EGY_infrastructure_expansion
+	complete_national_focus = MD2026_EGY_energy_future
+	complete_national_focus = MD2026_EGY_nuclear_power
+	complete_national_focus = MD2026_EGY_solar_farms
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = EGY_al_sisi_rise
+	complete_national_focus = EGY_buy_arms
+	complete_national_focus = EGY_egyptian_divide_foc
+	complete_national_focus = EGY_egyptian_economy
+	complete_national_focus = EGY_egyptian_politics
+	complete_national_focus = EGY_lessons
+	complete_national_focus = EGY_Hosni_mubarak
+	complete_national_focus = EGY_abrams
+	complete_national_focus = EGY_admin_capital
+	complete_national_focus = EGY_agricultural_issues
+	complete_national_focus = EGY_ally_mubarak
+	complete_national_focus = EGY_army
+	complete_national_focus = EGY_buy_m777
+	complete_national_focus = EGY_cont_us_egy_partn
+	complete_national_focus = EGY_dontallow_copt_pol
+	complete_national_focus = EGY_energy_subsidies
+	complete_national_focus = EGY_find_oil
+	complete_national_focus = EGY_gas_exports
+	complete_national_focus = EGY_gold_mining
+	complete_national_focus = EGY_industrial_section
+	complete_national_focus = EGY_joining_wto
+	complete_national_focus = EGY_keep_secularization
+	complete_national_focus = EGY_morsi
+	complete_national_focus = EGY_natfront_all
+	complete_national_focus = EGY_new_suez
+	complete_national_focus = EGY_orascom_construct
+	complete_national_focus = EGY_prowest_approach
+	complete_national_focus = EGY_ru_kornet
+	complete_national_focus = EGY_telecom_egypt
+	complete_national_focus = EGY_tourism_sector
+	complete_national_focus = EGY_us_afv
+	complete_national_focus = EGY_us_ar
+}

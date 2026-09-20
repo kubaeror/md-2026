@@ -1,0 +1,91 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "KAZ_2026_nsb"
+		else = {
+			set_oob = "KAZ_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier4_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 12.000 }
+	set_variable = { var = debt value = 50.000 }
+	set_variable = { var = treasury value = 40 }
+	set_variable = { var = corporate_tax_rate value = 20 }
+	set_variable = { var = population_tax_rate value = 10 }
+	set_variable = { var = int_investments value = 50 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 550 }
+	}
+	set_variable = { overall_productivity = 550 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 5.0
+		communism = 75.0
+		fascism = 0.0
+		neutrality = 10.0
+		nationalist = 10.0
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "2022.11.20"
+		election_frequency = 84
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^7 = 0.700 }   #Autocracy (Amanat/Nur Otan)
+	set_variable = { party_pop_array^6 = 0.100 }   #Conservative (loyalist)
+	set_variable = { party_pop_array^14 = 0.060 }   #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0.060 }   #oligarchism
+	set_variable = { party_pop_array^2 = 0.040 }   #liberalism (reformists)
+	set_variable = { party_pop_array^4 = 0.040 }   #Communist-State (KNPK)
+
+	add_to_array = { ruling_party = 7 }             #Autocracy (Amanat/Nur Otan)
+
+	set_variable = { party_pop_elect_array^7 = 0.812 }  #Tokayev
+	set_variable = { party_pop_elect_array^6 = 0.055 }  #misc
+	set_variable = { party_pop_elect_array^4 = 0.036 }  #KNPK
+
+	startup_politics = yes
+
+	### Country Leader: Kassym-Jomart Tokayev ###
+	create_country_leader = {
+		name = "Kassym-Jomart Tokayev"
+		picture = "gfx/leaders/KAZ/Kassym-Jomart_Tokayev.dds"
+		expire = "2029.11.20"
+		ideology = Autocracy
+		traits = {
+			authoritarian_ruler
+			diplomat
+		}
+	}
+	set_variable = { term_limit = 1 }
+	set_variable = { current_term = 1 }
+
+	add_ideas = {
+		md2026_kaz_multi_vector_diplomacy
+	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = CES_our_state_kaz
+	complete_national_focus = CES_newly_reestab_militar
+	complete_national_focus = CES_economic_affairs
+	complete_national_focus = CES_oligarchic_drift
+	complete_national_focus = CES_raise_from_ash
+	complete_national_focus = CES_assemble_generals
+	complete_national_focus = CES_buying_tanks
+	complete_national_focus = CES_improve_borderline_guards
+	complete_national_focus = CES_infantr_guns
+	complete_national_focus = CES_kaz_reform_vs
+	complete_national_focus = CES_navy
+}

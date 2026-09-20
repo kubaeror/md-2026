@@ -1,0 +1,131 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### OOB 2026 ###
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "FRA_2026_nsb"
+		else = {
+			set_oob = "FRA_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier2_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 44.000 }
+	set_variable = { var = debt value = 3200.000 }
+	set_variable = { var = treasury value = 100 }
+	set_variable = { var = corporate_tax_rate value = 25 }
+	set_variable = { var = population_tax_rate value = 25 }
+	set_variable = { var = int_investments value = 120 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 1150 }
+	}
+	set_variable = { overall_productivity = 1150 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 55.0
+		communism = 8.0
+		fascism = 0.0
+		neutrality = 15.0
+		nationalist = 22.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2024.7.7"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^2 = 0.220 }   #liberalism (Renaissance/Macron)
+	set_variable = { party_pop_array^1 = 0.080 }   #conservatism (LR)
+	set_variable = { party_pop_array^3 = 0.150 }   #socialism (PS + NFP)
+	set_variable = { party_pop_array^4 = 0.050 }   #Communist-State (PCF)
+	set_variable = { party_pop_array^18 = 0.060 }  #neutral_Social (LFI/Melenchon)
+	set_variable = { party_pop_array^17 = 0.030 }  #Neutral_green (EELV)
+	set_variable = { party_pop_array^20 = 0.220 }  #Nat_Populism (RN/Le Pen)
+	set_variable = { party_pop_array^21 = 0.020 }  #Nat_Fascism (Reconquete)
+	set_variable = { party_pop_array^16 = 0.100 }  #libertarians
+	set_variable = { party_pop_array^15 = 0.070 }  #oligarchism
+
+	add_to_array = { ruling_party = 2 }             #liberalism (Renaissance)
+	add_to_array = { gov_coalition_array = 1 }       #conservatism (LR)
+
+	# 2024 legislative election results
+	set_variable = { party_pop_elect_array^3 = 0.259 }  #NFP (PS+PCF+LFI+EELV)
+	set_variable = { party_pop_elect_array^2 = 0.210 }  #Ensemble (Renaissance)
+	set_variable = { party_pop_elect_array^20 = 0.331 } #RN + allies
+	set_variable = { party_pop_elect_array^1 = 0.066 }  #LR
+
+	startup_politics = yes
+
+	### Country Leader: Emmanuel Macron ###
+	create_country_leader = {
+		name = "Emmanuel Macron"
+		picture = "gfx/leaders/FRA/Emmanuel_Macron.dds"
+		expire = "2027.5.14"
+		ideology = liberalism
+		traits = {
+			western_liberalism
+			captain_of_industry
+			media_personality
+			pro_european
+		}
+	}
+	set_variable = { term_limit = 2 }
+	set_variable = { current_term = 2 }
+
+	### National Spirits ###
+	add_ideas = {
+		md2026_fra_european_defense_leader
+		md2026_fra_social_unrest
+	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_FRA_european_power
+	complete_national_focus = MD2026_FRA_european_defense
+	complete_national_focus = MD2026_FRA_nuclear_deterrent
+	complete_national_focus = MD2026_FRA_arms_exports
+	complete_national_focus = MD2026_FRA_african_policy
+	complete_national_focus = MD2026_FRA_domestic_reform
+	complete_national_focus = MD2026_FRA_2027_elections
+	complete_national_focus = MD2026_FRA_economic_competitiveness
+	complete_national_focus = MD2026_FRA_strategic_autonomy
+	complete_national_focus = MD2026_FRA_indo_pacific_presence
+	complete_national_focus = MD2026_FRA_eu_defense_fund
+	complete_national_focus = MD2026_FRA_energy_transition
+	complete_national_focus = MD2026_FRA_nuclear_energy
+	complete_national_focus = MD2026_FRA_green_industry
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = FRA_economic_policy
+	complete_national_focus = FRA_francosphere
+	complete_national_focus = FRA_french_armed_forces
+	complete_national_focus = FRA_state_of_french_politics
+	complete_national_focus = FRA_energy_sector
+	complete_national_focus = FRA_free_market
+	complete_national_focus = FRA_french_economic_intervention
+	complete_national_focus = FRA_luxury_goods
+	complete_national_focus = FRA_the_french_agriculture
+	complete_national_focus = FRA_total_sa
+	complete_national_focus = FRA_tourism_industry
+	complete_national_focus = FRA_French_pillar_of_counterterrorism
+	complete_national_focus = FRA_francafrique
+	complete_national_focus = FRA_haitian_coup
+	complete_national_focus = FRA_intervention_in_africa
+	complete_national_focus = FRA_repeal_the_ordiance
+	complete_national_focus = FRA_returning_to_indochina
+	complete_national_focus = FRA_the_levant_problem
+	complete_national_focus = FRA_french_navy
+	complete_national_focus = FRA_the_french_air_force
+	complete_national_focus = FRA_the_french_army
+	complete_national_focus = FRA_french_space
+	complete_national_focus = FRA_state_power
+}

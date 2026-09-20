@@ -1,0 +1,5 @@
+﻿		# MD2026: Luhansk Oblast fully under Russian control (2022)
+		2026.1.1 = {
+			owner = SOV
+			add_core_of = SOV
+		}

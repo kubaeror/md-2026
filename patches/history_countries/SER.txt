@@ -1,0 +1,95 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "SER_2026_nsb"
+		else = {
+			set_oob = "SER_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier4_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 12.000 }
+	set_variable = { var = debt value = 35.000 }
+	set_variable = { var = treasury value = 10 }
+	set_variable = { var = corporate_tax_rate value = 15 }
+	set_variable = { var = population_tax_rate value = 10 }
+	set_variable = { var = int_investments value = 20 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 550 }
+	}
+	set_variable = { overall_productivity = 550 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 15.0
+		communism = 10.0
+		fascism = 0.0
+		neutrality = 20.0
+		nationalist = 55.0
+	}
+	set_politics = {
+		ruling_party = nationalist
+		last_election = "2023.12.17"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^20 = 0.480 }   #Nat_Populism (SNS/Vucic)
+	set_variable = { party_pop_array^3 = 0.120 }   #socialism (SPS)
+	set_variable = { party_pop_array^2 = 0.100 }   #liberalism (SSP/ProGlas)
+	set_variable = { party_pop_array^1 = 0.060 }   #conservatism
+	set_variable = { party_pop_array^14 = 0.060 }   #Neutral_conservatism
+	set_variable = { party_pop_array^22 = 0.050 }   #Nat_Autocracy (SRS radicals)
+	set_variable = { party_pop_array^15 = 0.060 }   #oligarchism
+	set_variable = { party_pop_array^4 = 0.040 }   #Communist-State
+	set_variable = { party_pop_array^21 = 0.030 }   #Nat_Fascism
+
+	add_to_array = { ruling_party = 20 }             #Nat_Populism (SNS/Vucic)
+	add_to_array = { gov_coalition_array = 3 }       #socialism (SPS)
+
+	set_variable = { party_pop_elect_array^20 = 0.467 }  #SNS
+	set_variable = { party_pop_elect_array^2 = 0.115 }  #SSP/ProGlas
+	set_variable = { party_pop_elect_array^3 = 0.068 }  #SPS
+	set_variable = { party_pop_elect_array^22 = 0.040 }  #SRS
+	set_variable = { party_pop_elect_array^14 = 0.052 }  #misc
+
+	startup_politics = yes
+
+	### Country Leader: Milos Vucevic ###
+	create_country_leader = {
+		name = "Milos Vucevic"
+		picture = "gfx/leaders/SER/Milos_Vucevic.dds"
+		expire = "2028.12.17"
+		ideology = Nat_Populism
+		traits = {
+			nat_populism
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 3 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = SER_economic_development
+	complete_national_focus = SER_serbian_armed_forces
+	complete_national_focus = SER_the_high_castle
+	complete_national_focus = SER_Belgrade_School_of_Medicine
+	complete_national_focus = SER_Ministry_of_Education
+	complete_national_focus = SER_anti_opposition_measures
+	complete_national_focus = SER_army
+	complete_national_focus = SER_avia
+	complete_national_focus = SER_begin_repairing_works1
+	complete_national_focus = SER_deals_with_criminal_world
+	complete_national_focus = SER_genshtab
+	complete_national_focus = SER_mvd
+	complete_national_focus = SER_vpk
+}

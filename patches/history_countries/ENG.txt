@@ -1,0 +1,116 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### OOB 2026 ###
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "ENG_2026_nsb"
+		else = {
+			set_oob = "ENG_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier2_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 48.000 }
+	set_variable = { var = debt value = 2800.000 }
+	set_variable = { var = treasury value = 120 }
+	set_variable = { var = corporate_tax_rate value = 25 }
+	set_variable = { var = population_tax_rate value = 20 }
+	set_variable = { var = int_investments value = 150 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 1250 }
+	}
+	set_variable = { overall_productivity = 1250 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 82.0
+		communism = 2.0
+		fascism = 0.0
+		neutrality = 6.0
+		nationalist = 10.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2024.7.4"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^3 = 0.340 }   #socialism (Labour)
+	set_variable = { party_pop_array^1 = 0.240 }   #conservatism (Conservatives)
+	set_variable = { party_pop_array^2 = 0.120 }   #liberalism (Lib Dems)
+	set_variable = { party_pop_array^20 = 0.080 }  #Nat_Populism (Reform UK)
+	set_variable = { party_pop_array^17 = 0.070 }  #Neutral_green (Greens)
+	set_variable = { party_pop_array^14 = 0.040 }  #Neutral_conservatism (SNP)
+	set_variable = { party_pop_array^18 = 0.030 }  #neutral_Social (Plaid Cymru etc.)
+	set_variable = { party_pop_array^4 = 0.010 }   #Communist-State
+	set_variable = { party_pop_array^16 = 0.050 }  #libertarians
+	set_variable = { party_pop_array^21 = 0.020 }  #Nat_Fascism (fringe)
+
+	add_to_array = { ruling_party = 3 }             #socialism (Labour)
+	add_to_array = { gov_coalition_array = 18 }      #neutral_Social
+
+	# 2024 general election results
+	set_variable = { party_pop_elect_array^3 = 0.338 }  #Labour
+	set_variable = { party_pop_elect_array^1 = 0.237 }  #Conservatives
+	set_variable = { party_pop_elect_array^20 = 0.143 } #Reform UK
+	set_variable = { party_pop_elect_array^2 = 0.122 }  #Lib Dems
+	set_variable = { party_pop_elect_array^17 = 0.069 } #Greens
+	set_variable = { party_pop_elect_array^14 = 0.024 } #SNP
+
+	startup_politics = yes
+
+	### 2026 National Spirits ###
+	add_ideas = {
+		md2026_eng_post_brexit
+	}
+
+	### Country Leader: Keir Starmer ###
+	create_country_leader = {
+		name = "Keir Starmer"
+		picture = "gfx/leaders/ENG/Keir_Starmer.dds"
+		expire = "2029.7.4"
+		ideology = socialism
+		traits = {
+			western_socialism
+			lawyer
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_ENG_global_britain
+	complete_national_focus = MD2026_ENG_nuclear_deterrent
+	complete_national_focus = MD2026_ENG_aukus
+	complete_national_focus = MD2026_ENG_carrier_strike
+	complete_national_focus = MD2026_ENG_post_brexit_trade
+	complete_national_focus = MD2026_ENG_special_relationship
+	complete_national_focus = MD2026_ENG_five_eyes
+	complete_national_focus = MD2026_ENG_ukraine_support
+	complete_national_focus = MD2026_ENG_armed_forces
+	complete_national_focus = MD2026_ENG_cyber_warfare
+	complete_national_focus = MD2026_ENG_army_modernization
+	complete_national_focus = MD2026_ENG_science_innovation
+	complete_national_focus = MD2026_ENG_ai_strategy
+	complete_national_focus = MD2026_ENG_biotech_hub
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = ENG_britannia_armed_forces
+	complete_national_focus = ENG_ambitions_for_britain
+	complete_national_focus = ENG_cleanup_westminster
+	complete_national_focus = ENG_democratic_reform
+	complete_national_focus = ENG_a_more_balanced_economy
+	complete_national_focus = ENG_field_army_expansion
+	complete_national_focus = ENG_multi_ocean_navy
+	complete_national_focus = ENG_tax_reform
+}

@@ -1,4 +1,4 @@
-##### Division Templates #####
+﻿##### Division Templates #####
 # Finland 2026 — NATO member since 2023, strong reserve system
 
 division_template = {

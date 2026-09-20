@@ -1,0 +1,136 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### OOB 2026 ###
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "GER_2026_nsb"
+		else = {
+			set_oob = "GER_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier2_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 52.000 }
+	set_variable = { var = debt value = 2600.000 }
+	set_variable = { var = treasury value = 150 }
+	set_variable = { var = corporate_tax_rate value = 30 }
+	set_variable = { var = population_tax_rate value = 25 }
+	set_variable = { var = int_investments value = 180 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 1200 }
+	}
+	set_variable = { overall_productivity = 1200 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 65.0
+		communism = 5.0
+		fascism = 0.0
+		neutrality = 12.0
+		nationalist = 18.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2025.2.23"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^1 = 0.285 }   #conservatism (CDU/CSU)
+	set_variable = { party_pop_array^3 = 0.145 }   #socialism (SPD)
+	set_variable = { party_pop_array^17 = 0.085 }  #Neutral_green (Gruene)
+	set_variable = { party_pop_array^2 = 0.045 }   #liberalism (FDP)
+	set_variable = { party_pop_array^4 = 0.030 }   #Communist-State (Die Linke)
+	set_variable = { party_pop_array^20 = 0.180 }  #Nat_Populism (AfD)
+	set_variable = { party_pop_array^18 = 0.065 }  #neutral_Social (BSW/Wagenknecht)
+	set_variable = { party_pop_array^16 = 0.090 }  #libertarians
+	set_variable = { party_pop_array^21 = 0.015 }  #Nat_Fascism (fringe)
+	set_variable = { party_pop_array^15 = 0.060 }  #oligarchism
+
+	add_to_array = { ruling_party = 1 }             #conservatism (CDU/CSU)
+	add_to_array = { gov_coalition_array = 3 }       #socialism (SPD)
+
+	# 2025 federal election results
+	set_variable = { party_pop_elect_array^1 = 0.288 }  #CDU/CSU
+	set_variable = { party_pop_elect_array^20 = 0.208 } #AfD
+	set_variable = { party_pop_elect_array^3 = 0.162 }  #SPD
+	set_variable = { party_pop_elect_array^17 = 0.118 } #Gruene
+	set_variable = { party_pop_elect_array^18 = 0.048 } #BSW
+
+	startup_politics = yes
+
+	### 2026 National Spirits ###
+	add_ideas = {
+		md2026_ger_zeitenwende
+	}
+
+	### Country Leader: Friedrich Merz ###
+	create_country_leader = {
+		name = "Friedrich Merz"
+		picture = "gfx/leaders/GER/Friedrich_Merz.dds"
+		expire = "2029.2.23"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+			captain_of_industry
+			lawyer
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_GER_zeitenwende_2026
+	complete_national_focus = MD2026_GER_energy_transition
+	complete_national_focus = MD2026_GER_eu_enlargement
+	complete_national_focus = MD2026_GER_european_army_corps
+	complete_national_focus = MD2026_GER_nato_commitment
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = GER_Alexander_von_humboldt_Institutes_Strengthen_reswarch_cooperations
+	complete_national_focus = GER_Digitale_Agenda
+	complete_national_focus = GER_Interventionism_for_democracy
+	complete_national_focus = GER_Neuer_Markt
+	complete_national_focus = GER_Reform_bundeswehr
+	complete_national_focus = GER_Regional_Innovation_Center
+	complete_national_focus = GER_Schulen_ans_Netz
+	complete_national_focus = GER_Startup_Investments
+	complete_national_focus = GER_Tech_DAX
+	complete_national_focus = GER_UMTS_License_auction
+	complete_national_focus = GER_deutschland_industrie
+	complete_national_focus = GER_german_politics
+	complete_national_focus = GER_the_constitution_of_germany
+	complete_national_focus = GER_home_Grown_Software
+	complete_national_focus = GER_DAAD_Expand_Academic_exchange_service
+	complete_national_focus = GER_Found_InWent
+	complete_national_focus = GER_KFW_Restructure
+	complete_national_focus = GER_Modernize_Goethe_Institutes
+	complete_national_focus = GER_Reform_and_Strenghen_of_german_foreign_intitutes
+	complete_national_focus = GER_Reform_the_DED
+	complete_national_focus = GER_found_Bundesagentur_fur_Aussenwirtschaft
+	complete_national_focus = GER_CDU_rises
+	complete_national_focus = GER_FDP
+	complete_national_focus = GER_agenda_2010
+	complete_national_focus = GER_green_alliance
+	complete_national_focus = GER_the_alternative
+	complete_national_focus = GER_the_left
+	complete_national_focus = GER_Restructure_Infrastructure
+	complete_national_focus = GER_alt_energy
+	complete_national_focus = GER_expand_mainstream_industry
+	complete_national_focus = GER_expand_oil_gas
+	complete_national_focus = GER_mining_in_germany
+	complete_national_focus = GER_unemployment_crisis
+	complete_national_focus = GER_Establish_Streitkrafte_basis
+	complete_national_focus = GER_Deutsche_Post_AG
+	complete_national_focus = GER_duetches_telekom
+	complete_national_focus = GER_dismantle_russian_aggression
+	complete_national_focus = GER_expand_article_twenty
+	complete_national_focus = GER_expand_article_twenty_one
+}

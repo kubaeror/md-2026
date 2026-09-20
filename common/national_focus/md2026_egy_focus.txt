@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # MD2026 Egypt (EGY) Focus Tree
 # 2026 Shared Focuses - Nile Power
 # 26 focuses: 1 root + 5 branches + capstone

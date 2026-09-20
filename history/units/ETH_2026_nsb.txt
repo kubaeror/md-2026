@@ -1,4 +1,4 @@
-##### Ethiopia - 2026 OOB (Post-Tigray War) #####
+﻿##### Ethiopia - 2026 OOB (Post-Tigray War) #####
 # ENDF rebuilt after Tigray conflict; large but equipment-depleted force
 # Focus on infantry mass with limited mechanized capability
 

@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # MD2026 France (FRA) Focus Tree
 # 2026 Shared Focuses - European Power
 # 26 focuses: 1 root + 5 branches + capstone

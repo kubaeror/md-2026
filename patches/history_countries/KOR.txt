@@ -1,0 +1,110 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### OOB 2026 ###
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "KOR_2026_nsb"
+		else = {
+			set_oob = "KOR_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier2_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 35.000 }
+	set_variable = { var = debt value = 900.000 }
+	set_variable = { var = treasury value = 100 }
+	set_variable = { var = corporate_tax_rate value = 25 }
+	set_variable = { var = population_tax_rate value = 20 }
+	set_variable = { var = int_investments value = 120 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 1100 }
+	}
+	set_variable = { overall_productivity = 1100 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 55.0
+		communism = 3.0
+		fascism = 0.0
+		neutrality = 12.0
+		nationalist = 30.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2024.4.10"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^1 = 0.350 }   #conservatism (PPP)
+	set_variable = { party_pop_array^3 = 0.370 }   #socialism (DPK)
+	set_variable = { party_pop_array^2 = 0.060 }   #liberalism (Reform Party)
+	set_variable = { party_pop_array^20 = 0.060 }   #Nat_Populism
+	set_variable = { party_pop_array^14 = 0.050 }   #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
+	set_variable = { party_pop_array^18 = 0.030 }   #neutral_Social
+	set_variable = { party_pop_array^4 = 0.030 }   #Communist-State
+
+	add_to_array = { ruling_party = 1 }             #conservatism (PPP)
+
+	set_variable = { party_pop_elect_array^3 = 0.371 }  #DPK
+	set_variable = { party_pop_elect_array^1 = 0.363 }  #PPP
+	set_variable = { party_pop_elect_array^2 = 0.051 }  #Reform
+	set_variable = { party_pop_elect_array^20 = 0.039 }  #misc
+
+	startup_politics = yes
+
+	### Country Leader: Han Duck-soo ###
+	create_country_leader = {
+		name = "Han Duck-soo"
+		picture = "gfx/leaders/KOR/Han_Duck-soo.dds"
+		expire = "2027.5.9"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+			career_politician
+			economist
+		}
+	}
+	set_variable = { term_limit = 1 }
+	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_KOR_shield_freedom
+	complete_national_focus = MD2026_KOR_nk_deterrence
+	complete_national_focus = MD2026_KOR_k_defense
+	complete_national_focus = MD2026_KOR_k_economy
+	complete_national_focus = MD2026_KOR_kf21_boramae
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = KOR_economics_improvement
+	complete_national_focus = KOR_middle_power_diplomacy
+	complete_national_focus = KOR_state_of_the_republic
+	complete_national_focus = KOR_the_rok_armed_forces
+	complete_national_focus = KOR_CELLTRION
+	complete_national_focus = KOR_hyundai
+	complete_national_focus = KOR_lg
+	complete_national_focus = KOR_naver
+	complete_national_focus = KOR_posco
+	complete_national_focus = KOR_samsung
+	complete_national_focus = KOR_bridging_eurasia
+	complete_national_focus = KOR_engage_with_africa
+	complete_national_focus = KOR_peace_in_east_asia
+	complete_national_focus = KOR_southern_focus
+	complete_national_focus = KOR_turn_to_the_middle_east
+	complete_national_focus = KOR_electoral_reform
+	complete_national_focus = KOR_the_korean_left
+	complete_national_focus = KOR_the_korean_right
+	complete_national_focus = KOR_blue_water_navy
+	complete_national_focus = KOR_conscription_policy
+	complete_national_focus = KOR_foreign_procurement
+	complete_national_focus = KOR_korea_aerospace_industries
+	complete_national_focus = KOR_modernize_the_army
+}

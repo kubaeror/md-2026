@@ -1,0 +1,520 @@
+"""MD 2026 Rework - rebase tool.
+
+Keeps every file that overrides Millennium Dawn generated from:
+  * the currently installed MD (source of truth for 2000-01-01 state), and
+  * the hand-maintained 2026 patches in patches/.
+
+Usage:
+    python tools/rebase.py extract     # one-time: split old copies into patches/
+    python tools/rebase.py generate    # rebuild all MD overrides from MD + patches
+    python tools/rebase.py focus       # rebuild focus tree overrides only
+    python tools/rebase.py history     # rebuild history/countries + history/states
+
+MD path can be overridden with --md <path> or the MD_PATH env var.
+"""
+
+import argparse
+import csv
+import json
+import os
+import re
+import sys
+
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DEFAULT_MD = r"D:\SteamLibrary\steamapps\workshop\content\394360\2777392649"
+
+MD = None
+
+
+def read(path):
+    with open(path, encoding="utf-8-sig", errors="replace") as f:
+        return f.read()
+
+
+def write(path, text):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8-sig", newline="\n") as f:
+        f.write(text)
+
+
+def strip_comments(text):
+    return "\n".join(line.split("#")[0] for line in text.split("\n"))
+
+
+def find_block(text, start):
+    """Given index of an opening '{', return index just past its matching '}'."""
+    depth = 0
+    i = start
+    while i < len(text):
+        c = text[i]
+        if c == "{":
+            depth += 1
+        elif c == "}":
+            depth -= 1
+            if depth == 0:
+                return i + 1
+        i += 1
+    raise ValueError("unbalanced braces")
+
+
+def extract_dated_block(text, date):
+    """Return the 'YYYY.M.D = { ... }' block (with leading comments) or None."""
+    pat = re.compile(r"^\s*" + re.escape(date) + r"\s*=\s*\{", re.MULTILINE)
+    m = pat.search(text)
+    if not m:
+        return None
+    open_brace = text.index("{", m.start())
+    end = find_block(text, open_brace)
+    # include trailing comment lines directly above the date line
+    start = m.start()
+    lines = text[:start].split("\n")
+    k = len(lines) - 1
+    while k > 0 and lines[k - 1].strip().startswith("#"):
+        k -= 1
+    start = len("\n".join(lines[:k])) + (1 if k > 0 else 0)
+    return text[start:end]
+
+
+# --------------------------------------------------------------------------
+# extract: old full copies -> patches (2026 delta only)
+# --------------------------------------------------------------------------
+
+def extract_history_countries():
+    src_dir = os.path.join(REPO, "history", "countries")
+    dst_dir = os.path.join(REPO, "patches", "history_countries")
+    os.makedirs(dst_dir, exist_ok=True)
+    n = 0
+    for name in sorted(os.listdir(src_dir)):
+        if not name.endswith(".txt"):
+            continue
+        tag = name.split(" ")[0]
+        text = read(os.path.join(src_dir, name))
+        block = extract_dated_block(text, "2026.1.1")
+        if not block:
+            print(f"  !! no 2026.1.1 block in {name}")
+            continue
+        write(os.path.join(dst_dir, tag + ".txt"), block.rstrip() + "\n")
+        n += 1
+    print(f"extracted {n} country patches -> patches/history_countries/")
+
+
+def extract_history_states():
+    src_dir = os.path.join(REPO, "history", "states")
+    dst_dir = os.path.join(REPO, "patches", "history_states")
+    os.makedirs(dst_dir, exist_ok=True)
+    n = 0
+    for name in sorted(os.listdir(src_dir)):
+        if not name.endswith(".txt"):
+            continue
+        state_id = name.split("-")[0].strip()
+        text = read(os.path.join(src_dir, name))
+        block = extract_dated_block(text, "2026.1.1")
+        if not block:
+            print(f"  !! no 2026.1.1 block in {name}")
+            continue
+        write(os.path.join(dst_dir, state_id + ".txt"), block.rstrip() + "\n")
+        n += 1
+    print(f"extracted {n} state patches -> patches/history_states/")
+
+
+# --------------------------------------------------------------------------
+# focus trees
+# --------------------------------------------------------------------------
+
+def focus_inject_config():
+    path = os.path.join(REPO, "patches", "focus_inject.json")
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def md_focus_file_by_tree_id(md, tree_id):
+    """Find the MD national_focus file that defines focus_tree with this id."""
+    root = os.path.join(md, "common", "national_focus")
+    for name in sorted(os.listdir(root)):
+        if not name.endswith(".txt"):
+            continue
+        text = read(os.path.join(root, name))
+        for m in re.finditer(r"focus_tree\s*=\s*\{", text):
+            open_brace = text.index("{", m.start())
+            end = find_block(text, open_brace)
+            head = text[open_brace:end][:400]
+            if re.search(r"(?m)^\s*id\s*=\s*" + re.escape(tree_id) + r"\s*$", head):
+                return name
+    return None
+
+
+def rebase_focus(md):
+    """Rebuild focus tree overrides: copy the MD file and inject shared focuses
+    into every tree the config assigns a branch to."""
+    cfg = focus_inject_config()  # tree_id -> [shared focus ids]
+    out_dir = os.path.join(REPO, "common", "national_focus")
+    root = os.path.join(md, "common", "national_focus")
+    generated = set()
+    for name in sorted(os.listdir(root)):
+        if not name.endswith(".txt"):
+            continue
+        text = read(os.path.join(root, name))
+        blocks = []
+        for m in re.finditer(r"focus_tree\s*=\s*\{", text):
+            ob = text.index("{", m.start())
+            end = find_block(text, ob)
+            head = text[ob:end][:400]
+            idm = re.search(r"(?m)^\s*id\s*=\s*([A-Za-z0-9_]+)", head)
+            if idm and idm.group(1) in cfg and cfg[idm.group(1)]:
+                indent = re.search(r"(?m)^(\s*)id", text[ob:ob + 400]).group(1)
+                blocks.append((ob + idm.start(), idm.group(1), indent))
+        if not blocks:
+            continue
+        text = apply_fixups(text, *md_reference_sets(md))
+        for abs_id, tree_id, ind in reversed(blocks):
+            line_end = text.index("\n", abs_id)
+            ins = "\n" + "\n".join(f"{ind}shared_focus = {sid}" for sid in cfg[tree_id])
+            text = text[:line_end] + ins + text[line_end:]
+        write(os.path.join(out_dir, name), text)
+        generated.add(name)
+        print(f"  generated {name} ({', '.join(t for _, t, _ in blocks)})")
+    missing = [t for t in cfg if t not in sum((md_tree_ids_in_file(md, n) for n in os.listdir(root) if n.endswith('.txt')), [])]
+    for t in missing:
+        print(f"  !! tree id not found in MD: {t}")
+    return generated
+
+
+def md_tree_ids_in_file(md, fname):
+    """All focus_tree ids defined in an MD national_focus file."""
+    text = read(os.path.join(md, "common", "national_focus", fname))
+    ids = []
+    for m in re.finditer(r"focus_tree\s*=\s*\{", text):
+        ob = text.index("{", m.start())
+        end = find_block(text, ob)
+        idm = re.search(r"(?m)^\s*id\s*=\s*([A-Za-z0-9_]+)", text[ob:end][:400])
+        if idm:
+            ids.append(idm.group(1))
+    return ids
+
+
+def cleanup_old_focus_copies(expected):
+    out_dir = os.path.join(REPO, "common", "national_focus")
+    removed = 0
+    for name in sorted(os.listdir(out_dir)):
+        if name.startswith("md2026_") or not name.endswith(".txt"):
+            continue
+        if name not in expected:
+            os.remove(os.path.join(out_dir, name))
+            removed += 1
+            print(f"  removed obsolete copy {name}")
+    return removed
+
+
+# --------------------------------------------------------------------------
+# technology effects (generated from MD's own tech tree)
+# --------------------------------------------------------------------------
+
+def children(text):
+    """Return (name, body) for top-level 'name = { ... }' blocks only."""
+    out = []
+    i = 0
+    n = len(text)
+    pat = re.compile(r"([A-Za-z0-9_\-\.]+)\s*=\s*\{")
+    while i < n:
+        c = text[i]
+        if (i == 0 or text[i - 1] in " \t\r\n") and (c.isalnum() or c == "_"):
+            m = pat.match(text, i)
+            if m:
+                ob = text.index("{", m.start())
+                end = find_block(text, ob)
+                out.append((m.group(1), text[ob + 1:end - 1]))
+                i = end
+                continue
+        i += 1
+    return out
+
+
+def parse_techs(md):
+    root = os.path.join(md, "common", "technologies")
+    techs = {}
+    for name in sorted(os.listdir(root)):
+        if not name.endswith(".txt"):
+            continue
+        text = strip_comments(read(os.path.join(root, name)))
+        for m in re.finditer(r"technologies\s*=\s*\{", text):
+            ob = text.index("{", m.start())
+            end = find_block(text, ob)
+            for tname, body in children(text[ob + 1:end - 1]):
+                if tname.startswith("@"):
+                    continue
+                if re.search(r"allow\s*=\s*\{\s*always\s*=\s*no", body):
+                    continue  # hidden tech (special projects)
+                ym = re.search(r"start_year\s*=\s*(\d+)", body)
+                year = int(ym.group(1)) if ym else 1936
+                conds = []
+                ab = re.search(r"allow_branch\s*=\s*\{", body)
+                if ab:
+                    aob = body.index("{", ab.start())
+                    aend = find_block(body, aob)
+                    inner = body[aob + 1:aend - 1]
+                    neg = re.findall(r"NOT\s*=\s*\{([^{}]*)\}", inner)
+                    for n in neg:
+                        for d in re.findall(r'has_dlc\s*=\s*"([^"]+)"', n):
+                            conds.append(("not", d))
+                    rest = re.sub(r"NOT\s*=\s*\{[^{}]*\}", "", inner)
+                    for d in re.findall(r'has_dlc\s*=\s*"([^"]+)"', rest):
+                        conds.append(("has", d))
+                techs[tname] = (year, tuple(sorted(set(conds))))
+    return techs
+
+
+BANDS = [(2005, 0, 2005), (2010, 2005, 2010), (2015, 2010, 2015),
+         (2020, 2015, 2020), (2025, 2020, 2025), (2026, 2025, 2026)]
+
+
+def _cond_limit(conds):
+    parts = []
+    for kind, dlc in conds:
+        if kind == "has":
+            parts.append(f'has_dlc = "{dlc}"')
+        else:
+            parts.append(f'NOT = {{ has_dlc = "{dlc}" }}')
+    return " ".join(parts)
+
+
+def generate_tech_effects(md):
+    techs = parse_techs(md)
+    lines = [
+        "# MD2026 Technology Scripted Effects",
+        "# GENERATED FILE - do not edit by hand.",
+        "# Rebuild with: python tools/rebase.py tech",
+        "#",
+        "# Grants every Millennium Dawn technology up to a given year,",
+        "# mirroring MD's own DLC gating. Tiers are compositions of the bands.",
+        "",
+    ]
+    for band, lo, hi in BANDS:
+        sel = {t: c for t, (y, c) in techs.items() if lo < y <= hi}
+        lines.append(f"md2026_techs_{band} = {{")
+        groups = {}
+        for t, c in sel.items():
+            groups.setdefault(c, []).append(t)
+        # ungated first, then gated
+        for conds in sorted(groups, key=lambda c: (len(c), c)):
+            names = sorted(groups[conds])
+            body = "\n".join(f"\t\t{t} = 1" for t in names)
+            if not conds:
+                lines.append("\tset_technology = {")
+                lines.append(body)
+                lines.append("\t}")
+            else:
+                lines.append(f"\tif = {{ limit = {{ {_cond_limit(conds)} }}")
+                lines.append("\t\tset_technology = {")
+                lines.append(body)
+                lines.append("\t\t}")
+                lines.append("\t}")
+        lines.append("}")
+        lines.append("")
+
+    tiers = {
+        "tier1_2026": ["2005", "2010", "2015", "2020", "2025", "2026"],
+        "tier2_2026": ["2005", "2010", "2015", "2020", "2025"],
+        "tier3_2026": ["2005", "2010", "2015", "2020"],
+        "tier4_2026": ["2005", "2010", "2015"],
+        "tier5_2026": ["2005", "2010"],
+    }
+    for tier, bands in tiers.items():
+        lines.append(f"md2026_{tier}_techs = {{")
+        for b in bands:
+            lines.append(f"\tmd2026_techs_{b} = yes")
+        lines.append("}")
+        lines.append("")
+
+    write(os.path.join(REPO, "common", "scripted_effects", "md2026_technology_effects.txt"),
+          "\n".join(lines))
+    print(f"  generated technology effects: {len(techs)} techs, bands {[b for b, _, _ in BANDS]}")
+
+
+# --------------------------------------------------------------------------
+# fixups for known MD 2.0 bugs, applied to generated (overriding) files
+# --------------------------------------------------------------------------
+
+def md_reference_sets(md):
+    techs, chars = set(), set()
+    for p in [os.path.join(md, "common", "technologies", n) for n in os.listdir(os.path.join(md, "common", "technologies"))] \
+            if os.path.isdir(os.path.join(md, "common", "technologies")) else []:
+        text = strip_comments(read(p))
+        for m in re.finditer(r"technologies\s*=\s*\{", text):
+            ob = text.index("{", m.start())
+            end = find_block(text, ob)
+            for name, _ in children(text[ob + 1:end - 1]):
+                if not name.startswith("@"):
+                    techs.add(name)
+    cdir = os.path.join(md, "common", "characters")
+    for n in os.listdir(cdir) if os.path.isdir(cdir) else []:
+        if not n.endswith(".txt"):
+            continue
+        text = strip_comments(read(os.path.join(cdir, n)))
+        for m in re.finditer(r"characters\s*=\s*\{", text):
+            ob = text.index("{", m.start())
+            end = find_block(text, ob)
+            for name, _ in children(text[ob + 1:end - 1]):
+                chars.add(name)
+    return techs, chars
+
+
+def apply_fixups(text, techs, chars):
+    low_t = {t.lower(): t for t in techs}
+    low_c = {c.lower(): c for c in chars}
+
+    # character references: fix case, drop broken ones
+    def char_line(m):
+        ind, kind, name = m.group(1), m.group(2), m.group(3)
+        if name in chars:
+            return m.group(0)
+        if name.lower() in low_c:
+            return f"{ind}{kind} = {low_c[name.lower()]}"
+        return f"{ind}# MD2026: dropped broken MD reference ({kind} = {name})"
+
+    text = re.sub(r"(?m)^(\s*)(recruit_character|promote_character|retire_character|has_character)\s*=\s*([^\s#]+)[ \t]*$",
+                  char_line, text)
+
+    # technologies inside set_technology blocks
+    out = []
+    pos = 0
+    for m in re.finditer(r"set_technology\s*=\s*\{", text):
+        ob = text.index("{", m.start())
+        end = find_block(text, ob)
+        body = text[ob + 1:end - 1]
+        new_lines = []
+        for line in body.split("\n"):
+            tm = re.match(r"^(\s*)([A-Za-z0-9_]+)(\s*=\s*[0-9]+.*)$", line)
+            if tm:
+                ind, name, rest = tm.groups()
+                if name not in techs and name.lower() in low_t:
+                    line = f"{ind}{low_t[name.lower()]}{rest}"
+                elif name not in techs:
+                    line = f"{ind}# MD2026: dropped broken MD tech reference ({name})"
+            new_lines.append(line)
+        text = text[:ob + 1] + "\n".join(new_lines) + text[end - 1:]
+
+    # has_tech references
+    def has_tech(m):
+        name = m.group(2)
+        if name in techs:
+            return m.group(0)
+        if name.lower() in low_t:
+            return f"{m.group(1)}{low_t[name.lower()]}"
+        return f"# MD2026: dropped broken MD tech reference (has_tech = {name})"
+
+    text = re.sub(r"(?m)^(\s*has_tech\s*=\s*)([A-Za-z0-9_]+)", has_tech, text)
+
+    # Norway tag rename leftovers in MD's own content
+    text = re.sub(r"(?<![\w])(original_tag|tag)\s*=\s*NOR(?![\w])", r"\1 = NRY", text)
+    return text
+
+
+# --------------------------------------------------------------------------
+# history generation
+# --------------------------------------------------------------------------
+
+def md_history_country_file(md, tag):
+    root = os.path.join(md, "history", "countries")
+    for name in sorted(os.listdir(root)):
+        if name.startswith(tag + " ") and name.endswith(".txt"):
+            return name
+    # tag might have been renamed in MD (e.g. NOR -> NRY)
+    return None
+
+
+def md_state_file(md, state_id):
+    root = os.path.join(md, "history", "states")
+    for name in sorted(os.listdir(root)):
+        if name.endswith(".txt") and name.split("-")[0].strip() == str(state_id):
+            return name
+    return None
+
+
+def rebase_history(md, rename_map):
+    out_dir = os.path.join(REPO, "history", "countries")
+    patch_dir = os.path.join(REPO, "patches", "history_countries")
+    techs, chars = md_reference_sets(md)
+    used = set()
+    for pf in sorted(os.listdir(patch_dir)):
+        if not pf.endswith(".txt"):
+            continue
+        tag = pf[:-4]
+        md_tag = rename_map.get(tag, tag)
+        fname = md_history_country_file(md, md_tag)
+        if not fname:
+            print(f"  !! no MD history file for {md_tag}")
+            continue
+        used.add(fname)
+        base = read(os.path.join(md, "history", "countries", fname))
+        patch = read(os.path.join(patch_dir, pf))
+        if tag != md_tag:
+            patch = re.sub(r"(?<![\w])" + re.escape(tag) + r"(?![A-Za-z])", md_tag, patch)
+        out = apply_fixups(base.rstrip() + "\n\n" + patch, techs, chars)
+        write(os.path.join(out_dir, fname), out)
+    print(f"  generated {len(used)} country history files")
+
+    s_out = os.path.join(REPO, "history", "states")
+    s_patch = os.path.join(REPO, "patches", "history_states")
+    n = 0
+    used_states = set()
+    for pf in sorted(os.listdir(s_patch)):
+        if not pf.endswith(".txt"):
+            continue
+        sid = pf[:-4]
+        fname = md_state_file(md, sid)
+        if not fname:
+            print(f"  !! no MD state file for {sid}")
+            continue
+        base = read(os.path.join(md, "history", "states", fname))
+        patch = read(os.path.join(s_patch, pf)).strip("\n")
+        # state date blocks live inside the state's history = { } block
+        hm = re.search(r"history\s*=\s*\{", base)
+        if not hm:
+            print(f"  !! no history block in {fname}")
+            continue
+        ob = base.index("{", hm.start())
+        end = find_block(base, ob)
+        patch_ind = patch
+        base = apply_fixups(base[:end - 1].rstrip() + "\n\n" + patch_ind + "\n" + base[end - 1:], techs, chars)
+        write(os.path.join(s_out, fname), base)
+        used_states.add(fname)
+        n += 1
+    print(f"  generated {n} state history files")
+
+    # drop leftovers from the old copy-based approach
+    for name in sorted(os.listdir(out_dir)):
+        if name.endswith(".txt") and name not in used:
+            os.remove(os.path.join(out_dir, name))
+            print(f"  removed obsolete history copy {name}")
+    for name in sorted(os.listdir(s_out)):
+        if name.endswith(".txt") and name not in used_states:
+            os.remove(os.path.join(s_out, name))
+            print(f"  removed obsolete state copy {name}")
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("mode", choices=["extract", "generate", "focus", "history", "tech"])
+    ap.add_argument("--md", default=os.environ.get("MD_PATH", DEFAULT_MD))
+    args = ap.parse_args()
+
+    global MD
+    MD = args.md
+    if not os.path.isdir(MD):
+        sys.exit(f"MD not found: {MD}")
+
+    if args.mode in ("extract",):
+        extract_history_countries()
+        extract_history_states()
+    if args.mode in ("generate", "focus"):
+        exp = rebase_focus(MD)
+        cleanup_old_focus_copies(exp)
+    if args.mode in ("generate", "history"):
+        rename = {"NOR": "NRY"}
+        rebase_history(MD, rename)
+    if args.mode in ("generate", "tech"):
+        generate_tech_effects(MD)
+
+
+if __name__ == "__main__":
+    main()

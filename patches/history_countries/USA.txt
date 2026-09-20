@@ -1,0 +1,234 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### OOB 2026 ###
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "USA_2026_nsb"
+		else = {
+			set_oob = "USA_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier1_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 85.000 }
+	set_variable = { var = debt value = 36100.000 }
+	set_variable = { var = treasury value = 350 }
+	set_variable = { var = corporate_tax_rate value = 21 }
+	set_variable = { var = population_tax_rate value = 24 }
+	set_variable = { var = int_investments value = 600 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 1500 }
+	}
+	set_variable = { overall_productivity = 1500 }
+
+	### Updated Ideas ###
+	# Remove outdated ideas and add 2026-specific ones
+	remove_ideas = {
+		stable_growth
+		nuclear_power_off
+	}
+	add_ideas = {
+		fast_growth
+		nuclear_power_off
+		md2026_usa_political_polarization
+		md2026_usa_america_first
+	}
+
+	### Internal Faction Opinion ###
+	set_variable = { wall_street_opinion = 60 }
+	set_variable = { defense_industry_opinion = 70 }
+	set_variable = { intelligence_community_opinion = 40 }
+
+	### NATO 2026 Expansion ###
+	# Add new NATO members (post-2000 enlargements)
+	add_to_faction = ROM    # 2004
+	add_to_faction = BUL    # 2004
+	add_to_faction = EST    # 2004
+	add_to_faction = LAT    # 2004
+	add_to_faction = LIT    # 2004
+	add_to_faction = SLO    # 2004
+	add_to_faction = SLV    # 2004
+	add_to_faction = ALB    # 2009
+	add_to_faction = CRO    # 2009
+	add_to_faction = MNT    # 2017
+	add_to_faction = FYR    # 2020
+	add_to_faction = FIN    # 2023
+	add_to_faction = SWE    # 2024
+
+	### NATO Global Array Update (add post-2000 members) ###
+	if = { limit = { NOT = { is_in_array = { global.nato_members = ROM } } }
+		add_to_array = { global.nato_members = ROM }
+	}
+	if = { limit = { NOT = { is_in_array = { global.nato_members = BUL } } }
+		add_to_array = { global.nato_members = BUL }
+	}
+	if = { limit = { NOT = { is_in_array = { global.nato_members = EST } } }
+		add_to_array = { global.nato_members = EST }
+	}
+	if = { limit = { NOT = { is_in_array = { global.nato_members = LAT } } }
+		add_to_array = { global.nato_members = LAT }
+	}
+	if = { limit = { NOT = { is_in_array = { global.nato_members = LIT } } }
+		add_to_array = { global.nato_members = LIT }
+	}
+	if = { limit = { NOT = { is_in_array = { global.nato_members = SLO } } }
+		add_to_array = { global.nato_members = SLO }
+	}
+	if = { limit = { NOT = { is_in_array = { global.nato_members = SLV } } }
+		add_to_array = { global.nato_members = SLV }
+	}
+	if = { limit = { NOT = { is_in_array = { global.nato_members = ALB } } }
+		add_to_array = { global.nato_members = ALB }
+	}
+	if = { limit = { NOT = { is_in_array = { global.nato_members = CRO } } }
+		add_to_array = { global.nato_members = CRO }
+	}
+	if = { limit = { NOT = { is_in_array = { global.nato_members = MNT } } }
+		add_to_array = { global.nato_members = MNT }
+	}
+	if = { limit = { NOT = { is_in_array = { global.nato_members = FYR } } }
+		add_to_array = { global.nato_members = FYR }
+	}
+	if = { limit = { NOT = { is_in_array = { global.nato_members = FIN } } }
+		add_to_array = { global.nato_members = FIN }
+	}
+	if = { limit = { NOT = { is_in_array = { global.nato_members = SWE } } }
+		add_to_array = { global.nato_members = SWE }
+	}
+
+	### Updated Opinion Modifiers ###
+	# Sanctions on Russia (post-2014, escalated 2022)
+	add_opinion_modifier = { target = SOV modifier = embargo }
+	reverse_add_opinion_modifier = { target = SOV modifier = embargo }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 47
+		fascism = 0
+		communism = 3
+		neutrality = 10
+		nationalist = 40
+	}
+	set_politics = {
+		ruling_party = nationalist
+		last_election = "2024.11.5"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+	# 2026 party popularities
+	set_variable = { party_pop_array^1 = 0.160 }  #republican traditional conservatives
+	set_variable = { party_pop_array^14 = 0.030 }  #republican constitutionists
+	set_variable = { party_pop_array^20 = 0.270 }  #MAGA / right populists (ruling)
+	set_variable = { party_pop_array^21 = 0.015 }  #neo-fascist & fringe
+	set_variable = { party_pop_array^22 = 0.025 }  #militarist & pentagon lobby
+	set_variable = { party_pop_array^2 = 0.250 }   #democrat liberals
+	set_variable = { party_pop_array^3 = 0.060 }   #democrat progressives
+	set_variable = { party_pop_array^18 = 0.020 }  #democratic socialist fringes
+	set_variable = { party_pop_array^4 = 0.010 }   #CPUSA
+	set_variable = { party_pop_array^5 = 0.010 }   #PSL
+	set_variable = { party_pop_array^6 = 0.010 }   #AFP
+	set_variable = { party_pop_array^16 = 0.110 }  #libertarians
+	set_variable = { party_pop_array^17 = 0.030 }  #Greens
+
+	add_to_array = { ruling_party = 20 }            #MAGA / Nat_Populism
+	add_to_array = { gov_coalition_array = 1 }       #republican traditional
+	add_to_array = { gov_coalition_array = 14 }      #republican constitutionists
+	add_to_array = { gov_coalition_array = 22 }      #militarist & pentagon
+
+	# 2024 election results
+	set_variable = { party_pop_elect_array^20 = 0.312 } #MAGA populists
+	set_variable = { party_pop_elect_array^1 = 0.195 }  #repub traditional
+	set_variable = { party_pop_elect_array^2 = 0.310 }  #dem liberals
+	set_variable = { party_pop_elect_array^3 = 0.073 }  #dem progressives
+	set_variable = { party_pop_elect_array^16 = 0.032 } #libertarians
+	set_variable = { party_pop_elect_array^17 = 0.012 } #greens
+
+	startup_politics = yes
+
+	### Country Leader: Donald Trump ###
+	create_country_leader = {
+		name = "Donald Trump"
+		picture = "gfx/leaders/USA/Donald_Trump.dds"
+		expire = "2029.1.20"
+		ideology = Nat_Populism
+		traits = {
+			nationalist_Nat_Populism
+			captain_of_industry
+			media_personality
+			populist_demagogue
+			anti_establishment
+		}
+	}
+	set_variable = { term_limit = 2 }
+	set_variable = { current_term = 2 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_USA_trump_second_term
+	complete_national_focus = MD2026_USA_trade_tariffs
+	complete_national_focus = MD2026_USA_energy_dominance
+	complete_national_focus = MD2026_USA_nato_pressure
+	complete_national_focus = MD2026_USA_deal_with_russia
+	complete_national_focus = MD2026_USA_trade_war_china
+	complete_national_focus = MD2026_USA_drill_baby_drill
+	complete_national_focus = MD2026_USA_pentagon_budget
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = USA_continue_space_efforts
+	complete_national_focus = USA_focus_2004_republicans
+	complete_national_focus = USA_focus_2008_democrats
+	complete_national_focus = USA_focus_2012_democrats
+	complete_national_focus = USA_focus_2016_republican_victory
+	complete_national_focus = USA_focus_ending_clintonomics
+	complete_national_focus = USA_focus_foreign_policy_plan
+	complete_national_focus = USA_focus_iraq_leadership_problems
+	complete_national_focus = USA_focus_the_2000_joint_exercises
+	complete_national_focus = USA_focus_the_afghanistan_question
+	complete_national_focus = USA_focus_the_arab_spring
+	complete_national_focus = USA_focus_the_regulatory_merry_go_round
+	complete_national_focus = USA_new_millennia_new_media
+	complete_national_focus = USA_scars_from_the_forever_war
+	complete_national_focus = USA_focus_congressional_chaos
+	complete_national_focus = USA_finance_private_space_ventures
+	complete_national_focus = USA_focus_2004_economic_deregulation
+	complete_national_focus = USA_focus_2004_military_contracts
+	complete_national_focus = USA_focus_2008_environmental_safeguards
+	complete_national_focus = USA_focus_2008_inter_economic_deals
+	complete_national_focus = USA_focus_2009_tax_reforms
+	complete_national_focus = USA_focus_riding_green_wave
+	complete_national_focus = USA_focus_greater_plains_act
+	complete_national_focus = USA_focus_lithium_act
+	complete_national_focus = USA_focus_enjoy_surplus
+	complete_national_focus = USA_focus_limited_indust_expansion
+	complete_national_focus = USA_focus_great_plains_states_region
+	complete_national_focus = USA_focus_greater_lakes_region
+	complete_national_focus = USA_focus_near_western_states_region
+	complete_national_focus = USA_focus_pacific_states_region
+	complete_national_focus = USA_focus_the_capital_region
+	complete_national_focus = USA_focus_the_lone_south
+	complete_national_focus = USA_focus_the_northeastern_region
+	complete_national_focus = USA_focus_the_southeastern_region
+	complete_national_focus = USA_focus_arming_our_horse
+	complete_national_focus = USA_focus_indirect_support_of_freedom
+	complete_national_focus = USA_focus_starting_the_war_on_terror
+	complete_national_focus = USA_focus_kuwait_defensive_aid
+	complete_national_focus = USA_focus_oil_for_aid
+	complete_national_focus = USA_focus_war_on_terror_phase_two
+	complete_national_focus = USA_focus_advisory_policy
+	complete_national_focus = USA_focus_monetary_policy
+	complete_national_focus = USA_focus_war_on_terror_policy
+	complete_national_focus = USA_focus_support_the_democratic_movement
+	complete_national_focus = USA_focus_support_the_nationalist_movement
+	complete_national_focus = USA_focus_the_interventionist_will
+	complete_national_focus = USA_focus_the_pentagon_wars
+	complete_national_focus = USA_focus_secretary_to_president
+	complete_national_focus = USA_more_opinion_pieces
+	complete_national_focus = USA_cutting_failed_programs
+}

@@ -1,0 +1,97 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "ETH_2026_nsb"
+		else = {
+			set_oob = "ETH_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier5_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 1.300 }
+	set_variable = { var = debt value = 60.000 }
+	set_variable = { var = treasury value = 5 }
+	set_variable = { var = corporate_tax_rate value = 15 }
+	set_variable = { var = population_tax_rate value = 5 }
+	set_variable = { var = int_investments value = 10 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 150 }
+	}
+	set_variable = { overall_productivity = 150 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 10.0
+		communism = 55.0
+		fascism = 0.0
+		neutrality = 15.0
+		nationalist = 20.0
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "2021.6.21"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^5 = 0.600 }   #anarchist_communism (Prosperity Party)
+	set_variable = { party_pop_array^6 = 0.120 }   #Conservative (ethnic parties)
+	set_variable = { party_pop_array^20 = 0.080 }   #Nat_Populism (TPLF remnants)
+	set_variable = { party_pop_array^7 = 0.060 }   #Autocracy (OLF/OLA)
+	set_variable = { party_pop_array^14 = 0.050 }   #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
+	set_variable = { party_pop_array^4 = 0.040 }   #Communist-State
+
+	add_to_array = { ruling_party = 5 }             #anarchist_communism (Prosperity Party)
+
+	set_variable = { party_pop_elect_array^5 = 0.610 }  #Prosperity Party
+	set_variable = { party_pop_elect_array^6 = 0.110 }  #ethnic parties
+	set_variable = { party_pop_elect_array^14 = 0.050 }  #misc
+
+	startup_politics = yes
+
+	### Country Leader: Abiy Ahmed ###
+	create_country_leader = {
+		name = "Abiy Ahmed"
+		picture = "gfx/leaders/ETH/Abiy_Ahmed.dds"
+		expire = "2031.10.4"
+		ideology = anarchist_communism
+		traits = {
+			reformer
+			career_politician
+			hawk
+		}
+	}
+	set_variable = { term_limit = 2 }
+	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = ETH_defense_of_ethiopia
+	complete_national_focus = ETH_eritrea_start
+	complete_national_focus = ETH_international_diplomacy
+	complete_national_focus = ETH_invite_foreign_investors
+	complete_national_focus = ETH_the_future_of_ethiopia
+	complete_national_focus = ETH_expand_the_endf
+	complete_national_focus = ETH_expand_the_etaf
+	complete_national_focus = ETH_secure_the_eritrean_border
+	complete_national_focus = ETH_eritrea_dissolve_assembly
+	complete_national_focus = ETH_eritrea_federation
+	complete_national_focus = ETH_african_economic_relationships
+	complete_national_focus = ETH_anti_corruption_measurements
+	complete_national_focus = ETH_european_economic_relationships
+	complete_national_focus = ETH_italian_ethiopian_friendship
+	complete_national_focus = ETH_refactor_our_debt
+	complete_national_focus = ETH_invite_coca_cola
+	complete_national_focus = ETH_invite_karuturi_global
+	complete_national_focus = ETH_invite_lifan_industry
+	complete_national_focus = ETH_strengthen_the_republic
+}

@@ -1,0 +1,99 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "GRE_2026_nsb"
+		else = {
+			set_oob = "GRE_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier3_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 24.000 }
+	set_variable = { var = debt value = 400.000 }
+	set_variable = { var = treasury value = 25 }
+	set_variable = { var = corporate_tax_rate value = 22 }
+	set_variable = { var = population_tax_rate value = 22 }
+	set_variable = { var = int_investments value = 40 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 800 }
+	}
+	set_variable = { overall_productivity = 800 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 50.0
+		communism = 10.0
+		fascism = 0.0
+		neutrality = 15.0
+		nationalist = 25.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2023.6.25"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^1 = 0.405 }   #conservatism (ND)
+	set_variable = { party_pop_array^3 = 0.180 }   #socialism (SYRIZA)
+	set_variable = { party_pop_array^4 = 0.070 }   #Communist-State (KKE)
+	set_variable = { party_pop_array^18 = 0.045 }   #neutral_Social (PASOK)
+	set_variable = { party_pop_array^20 = 0.060 }   #Nat_Populism (Elliniki Lysi)
+	set_variable = { party_pop_array^2 = 0.035 }   #liberalism
+	set_variable = { party_pop_array^15 = 0.055 }   #oligarchism
+	set_variable = { party_pop_array^14 = 0.050 }   #Neutral_conservatism
+	set_variable = { party_pop_array^17 = 0.030 }   #Neutral_green
+	set_variable = { party_pop_array^21 = 0.040 }   #Nat_Fascism (Spartiates)
+
+	add_to_array = { ruling_party = 1 }             #conservatism (ND)
+
+	set_variable = { party_pop_elect_array^1 = 0.405 }  #ND
+	set_variable = { party_pop_elect_array^3 = 0.178 }  #SYRIZA
+	set_variable = { party_pop_elect_array^18 = 0.118 }  #PASOK
+	set_variable = { party_pop_elect_array^4 = 0.073 }  #KKE
+	set_variable = { party_pop_elect_array^20 = 0.047 }  #Elliniki Lysi
+	set_variable = { party_pop_elect_array^21 = 0.046 }  #Spartiates
+
+	startup_politics = yes
+
+	### Country Leader: Kyriakos Mitsotakis ###
+	create_country_leader = {
+		name = "Kyriakos Mitsotakis"
+		picture = "gfx/leaders/GRE/Kyriakos_Mitsotakis.dds"
+		expire = "2027.6.25"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+			career_politician
+			economist
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	add_ideas = {
+		md2026_gre_economic_recovery
+	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = GRE_glass_cannon_economics
+	complete_national_focus = GRE_pharma
+	complete_national_focus = GRE_turn_century
+	complete_national_focus = GRE_unemployed
+	complete_national_focus = GRE_pharma
+	complete_national_focus = GRE_chi_investments
+	complete_national_focus = GRE_foreign_relations
+	complete_national_focus = GRE_china
+	complete_national_focus = GRE_pharma
+	complete_national_focus = GRE_the_hellenic_republic
+	complete_national_focus = GRE_strength
+}

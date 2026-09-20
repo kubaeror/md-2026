@@ -1,0 +1,89 @@
+{
+  "BRA_focus_tree": [
+    "MD2026_BRA_return"
+  ],
+  "Syria_2000": [
+    "MD2026_SYR_new_syria"
+  ],
+  "australia_abbottgov_focus": [
+    "MD2026_AST_pacific_partner"
+  ],
+  "canada_focus": [
+    "MD2026_CAN_northern_shield"
+  ],
+  "china_focus": [
+    "MD2026_CHI_great_rejuvenation"
+  ],
+  "costellogov_focus": [
+    "MD2026_AST_pacific_partner"
+  ],
+  "egypt_focus": [
+    "MD2026_EGY_nile_power"
+  ],
+  "france_focus": [
+    "MD2026_FRA_european_power"
+  ],
+  "generic_focus": [
+    "MD2026_TAI_porcupine_defense"
+  ],
+  "germany_focus": [
+    "MD2026_GER_zeitenwende_2026"
+  ],
+  "gillardgov_focus": [
+    "MD2026_AST_pacific_partner"
+  ],
+  "gulf_focus": [
+    "MD2026_SAU_vision_2030"
+  ],
+  "howardgov_focus": [
+    "MD2026_AST_pacific_partner"
+  ],
+  "india_focus": [
+    "MD2026_RAJ_indias_century"
+  ],
+  "iran_focus": [
+    "MD2026_PER_regime_survival"
+  ],
+  "israel_focus": [
+    "MD2026_ISR_iron_wall"
+  ],
+  "italy_focus": [
+    "MD2026_ITA_mediterranean_crossroads"
+  ],
+  "japan_focus": [
+    "MD2026_JAP_active_defense"
+  ],
+  "korea_south_focus": [
+    "MD2026_KOR_shield_freedom"
+  ],
+  "north_korea_focus": [
+    "MD2026_NKO_nuclear_shield"
+  ],
+  "polish_focus": [
+    "MD2026_POL_eastern_shield"
+  ],
+  "ruddgov_focus": [
+    "MD2026_AST_pacific_partner"
+  ],
+  "ruddgov_return_focus": [
+    "MD2026_AST_pacific_partner"
+  ],
+  "russia_focus": [
+    "MD2026_SOV_war_crossroads"
+  ],
+  "saudi_focus_tree": [
+    "MD2026_SAU_vision_2030"
+  ],
+  "turkey_focus": [
+    "MD2026_TUR_new_era"
+  ],
+  "ukraine_focus": [
+    "MD2026_UKR_war_path"
+  ],
+  "united_kingdom_focus": [
+    "MD2026_ENG_global_britain"
+  ],
+  "united_states_focus": [
+    "MD2026_USA_trump_second_term"
+  ]
+}

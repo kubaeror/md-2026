@@ -1,0 +1,105 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "KOS_2026_nsb"
+		else = {
+			set_oob = "KOS_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier5_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 6.000 }
+	set_variable = { var = debt value = 3.000 }
+	set_variable = { var = treasury value = 2 }
+	set_variable = { var = corporate_tax_rate value = 10 }
+	set_variable = { var = population_tax_rate value = 10 }
+	set_variable = { var = int_investments value = 5 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 300 }
+	}
+	set_variable = { overall_productivity = 300 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 45.0
+		communism = 5.0
+		fascism = 0.0
+		neutrality = 15.0
+		nationalist = 35.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2021.2.14"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^3 = 0.500 }   #socialism (Vetevendosje)
+	set_variable = { party_pop_array^1 = 0.220 }   #conservatism (LDK)
+	set_variable = { party_pop_array^20 = 0.080 }   #Nat_Populism (PDK)
+	set_variable = { party_pop_array^2 = 0.050 }   #liberalism (AAK)
+	set_variable = { party_pop_array^14 = 0.050 }   #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
+	set_variable = { party_pop_array^18 = 0.030 }   #neutral_Social (Srpska Lista)
+	set_variable = { party_pop_array^4 = 0.020 }   #Communist-State
+
+	add_to_array = { ruling_party = 3 }             #socialism (Vetevendosje)
+
+	set_variable = { party_pop_elect_array^3 = 0.501 }  #Vetevendosje
+	set_variable = { party_pop_elect_array^1 = 0.127 }  #LDK
+	set_variable = { party_pop_elect_array^20 = 0.170 }  #PDK
+	set_variable = { party_pop_elect_array^2 = 0.073 }  #AAK
+
+	startup_politics = yes
+
+	### Country Leader: Albin Kurti ###
+	create_country_leader = {
+		name = "Albin Kurti"
+		picture = "gfx/leaders/KOS/Albin_Kurti.dds"
+		expire = "2025.2.14"
+		ideology = socialism
+		traits = {
+			western_socialism
+			career_politician
+			reformer
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = KOS_democratic_agenda
+	complete_national_focus = KOS_maintain_un
+	complete_national_focus = KOS_national_movement
+	complete_national_focus = KOS_pdk
+	complete_national_focus = KOS_security_troubles
+	complete_national_focus = KOS_struggle_for_recognition
+	complete_national_focus = KOS_the_dawn_of_the_new_scentenary
+	complete_national_focus = KOS_Industrial_Awakening
+	complete_national_focus = KOS_kren
+	complete_national_focus = KOS_patch_the_scars
+	complete_national_focus = KOS_attacking_the_right
+	complete_national_focus = KOS_kosovan_independence
+	complete_national_focus = KOS_military_funding
+	complete_national_focus = KOS_push_for_albanian_unity
+	complete_national_focus = KOS_support_minorities
+	complete_national_focus = KOS_call_for_investments
+	complete_national_focus = KOS_europeanization
+	complete_national_focus = KOS_campaign_asia
+	complete_national_focus = KOS_campaign_east_europe
+	complete_national_focus = KOS_campaign_south_america
+	complete_national_focus = KOS_kosvan_identity
+	complete_national_focus = KOS_welfare_programs
+	complete_national_focus = KOS_reform_kfor
+	complete_national_focus = KOS_un_economists
+	complete_national_focus = KOS_un_government_assistance
+}

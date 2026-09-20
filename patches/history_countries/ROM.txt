@@ -1,0 +1,103 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "ROM_2026_nsb"
+		else = {
+			set_oob = "ROM_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier4_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 18.000 }
+	set_variable = { var = debt value = 180.000 }
+	set_variable = { var = treasury value = 30 }
+	set_variable = { var = corporate_tax_rate value = 16 }
+	set_variable = { var = population_tax_rate value = 10 }
+	set_variable = { var = int_investments value = 50 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 750 }
+	}
+	set_variable = { overall_productivity = 750 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 50.0
+		communism = 5.0
+		fascism = 0.0
+		neutrality = 15.0
+		nationalist = 30.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2024.12.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^3 = 0.220 }   #socialism (PSD)
+	set_variable = { party_pop_array^1 = 0.180 }   #conservatism (PNL)
+	set_variable = { party_pop_array^2 = 0.160 }   #liberalism (USR)
+	set_variable = { party_pop_array^20 = 0.190 }   #Nat_Populism (AUR)
+	set_variable = { party_pop_array^14 = 0.080 }   #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0.060 }   #oligarchism
+	set_variable = { party_pop_array^21 = 0.050 }   #Nat_Fascism (SOS)
+	set_variable = { party_pop_array^4 = 0.030 }   #Communist-State
+	set_variable = { party_pop_array^17 = 0.030 }   #Neutral_green
+
+	add_to_array = { ruling_party = 1 }             #ruling
+	add_to_array = { gov_coalition_array = 3 }       #socialism (PSD)
+
+	set_variable = { party_pop_elect_array^3 = 0.221 }  #PSD
+	set_variable = { party_pop_elect_array^20 = 0.189 }  #AUR
+	set_variable = { party_pop_elect_array^2 = 0.158 }  #USR
+	set_variable = { party_pop_elect_array^1 = 0.174 }  #PNL
+	set_variable = { party_pop_elect_array^21 = 0.052 }  #SOS
+
+	startup_politics = yes
+
+	### Country Leader: Marcel Ciolacu ###
+	create_country_leader = {
+		name = "Marcel Ciolacu"
+		picture = "gfx/leaders/ROM/Marcel_Ciolacu.dds"
+		expire = "2028.12.1"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 2 }
+	set_variable = { current_term = 1 }
+
+	add_ideas = {
+
+		NATO_member
+		md2026_rom_frontline_nato
+	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = ROM_armed_forces
+	complete_national_focus = ROM_death_of_the_king
+	complete_national_focus = ROM_economy
+	complete_national_focus = ROM_political_scene
+	complete_national_focus = ROM_air_force
+	complete_national_focus = ROM_army
+	complete_national_focus = ROM_navy
+	complete_national_focus = ROM_foundation_of_the_romanian_it_sector
+	complete_national_focus = ROM_natural_resources
+	complete_national_focus = ROM_problem_of_aging_infrastructure
+	complete_national_focus = ROM_reverse_industrial_decline
+	complete_national_focus = ROM_revitalize_romanian_agriculture
+	complete_national_focus = ROM_issue_of_corruption
+	complete_national_focus = ROM_political_parties
+	complete_national_focus = ROM_queen_margareta
+}

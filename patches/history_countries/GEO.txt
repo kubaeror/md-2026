@@ -1,0 +1,106 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "GEO_2026_nsb"
+		else = {
+			set_oob = "GEO_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier4_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 8.000 }
+	set_variable = { var = debt value = 10.000 }
+	set_variable = { var = treasury value = 5 }
+	set_variable = { var = corporate_tax_rate value = 15 }
+	set_variable = { var = population_tax_rate value = 20 }
+	set_variable = { var = int_investments value = 10 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 400 }
+	}
+	set_variable = { overall_productivity = 400 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 25.0
+		communism = 45.0
+		fascism = 0.0
+		neutrality = 10.0
+		nationalist = 20.0
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "2024.10.26"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^7 = 0.540 }   #Autocracy (Georgian Dream)
+	set_variable = { party_pop_array^2 = 0.140 }   #liberalism (UNM)
+	set_variable = { party_pop_array^1 = 0.080 }   #conservatism (Coalition for Change)
+	set_variable = { party_pop_array^3 = 0.060 }   #socialism (For Georgia)
+	set_variable = { party_pop_array^20 = 0.050 }   #Nat_Populism (Strong Georgia)
+	set_variable = { party_pop_array^15 = 0.060 }   #oligarchism
+	set_variable = { party_pop_array^14 = 0.040 }   #Neutral_conservatism
+	set_variable = { party_pop_array^4 = 0.030 }   #Communist-State
+
+	add_to_array = { ruling_party = 7 }             #Autocracy (Georgian Dream)
+
+	set_variable = { party_pop_elect_array^7 = 0.541 }  #Georgian Dream
+	set_variable = { party_pop_elect_array^2 = 0.111 }  #UNM
+	set_variable = { party_pop_elect_array^1 = 0.080 }  #Coalition for Change
+	set_variable = { party_pop_elect_array^3 = 0.078 }  #For Georgia
+	set_variable = { party_pop_elect_array^20 = 0.051 }  #Strong Georgia
+
+	startup_politics = yes
+
+	### Country Leader: Irakli Kobakhidze ###
+	create_country_leader = {
+		name = "Irakli Kobakhidze"
+		picture = "gfx/leaders/GEO/Irakli_Kobakhidze.dds"
+		expire = "2028.10.26"
+		ideology = Autocracy
+		traits = {
+			authoritarian_ruler
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	add_ideas = {
+		md2026_geo_eu_aspirations
+	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = GEO_Military
+	complete_national_focus = GEO_geo_elections2003
+	complete_national_focus = GEO_geo_elections2013
+	complete_national_focus = GEO_geopolice
+	complete_national_focus = GEO_money_from_outside
+	complete_national_focus = GEO_shervad_victory
+	# MD2026: dropped (no MD 2.0 equivalent): GEO_whyareyouhere
+	complete_national_focus = GEO_Geo_air_mil
+	complete_national_focus = GEO_Geo_navy_mil
+	complete_national_focus = GEO_kick_russian_troops
+	complete_national_focus = GEO_gergiandream2013
+	complete_national_focus = GEO_bring_back_order
+	complete_national_focus = GEO_budget_deficit
+	complete_national_focus = GEO_electro_problems
+	complete_national_focus = GEO_gas_postavka
+	complete_national_focus = GEO_geo_railway
+	complete_national_focus = GEO_polminmeet
+	complete_national_focus = GEO_tbilisi_aero
+	complete_national_focus = GEO_transit_tax
+	complete_national_focus = GEO_unesco_bablo
+	complete_national_focus = GEO_help_chechens_pankis
+	complete_national_focus = GEO_polt_crisis_aknowl
+}

@@ -1,4 +1,4 @@
-##### KOR 2026 OOB - Republic of Korea (ROK Army) #####
+﻿##### KOR 2026 OOB - Republic of Korea (ROK Army) #####
 # K2 Black Panther MBT, K21 IFV, K9 Thunder SPH, K239 Chunmoo MLRS
 # KUH-1 Surion, LAH helicopter, K808/K806 wheeled APC
 

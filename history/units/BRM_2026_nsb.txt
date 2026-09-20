@@ -1,4 +1,4 @@
-##### Division Templates #####
+﻿##### Division Templates #####
 # Myanmar 2026 — Civil war/insurgency, fragmented forces
 
 division_template = {

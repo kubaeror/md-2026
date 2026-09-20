@@ -1,4 +1,4 @@
-### Millennium Dawn 2026 - On Actions ###
+﻿### Millennium Dawn 2026 - On Actions ###
 # Hooks into game events for initialization, war, peace, monthly ticks
 
 on_actions = {
@@ -20,9 +20,9 @@ on_actions = {
 					news_event = { id = md2026_system.1 hours = 1 }
 				}
 
-				# Set NATO member flags for all current members
+				# Set NATO member flags for all current members (MD 2.0 marker idea)
 				every_country = {
-					limit = { is_in_faction_with = USA }
+					limit = { has_idea = NATO_member }
 					set_country_flag = md2026_nato_member
 				}
 
@@ -75,6 +75,11 @@ on_actions = {
 
 				# Russia-Ukraine war exhaustion
 				SOV = {
+					# make sure the exhaustion counter always exists
+					if = {
+						limit = { NOT = { has_variable = md2026_war_months } }
+						set_variable = { md2026_war_months = 0 }
+					}
 					if = {
 						limit = {
 							has_war_with = UKR
@@ -116,6 +121,11 @@ on_actions = {
 
 			# Ukraine war exhaustion
 			UKR = {
+				# make sure the exhaustion counter always exists
+				if = {
+					limit = { NOT = { has_variable = md2026_war_months } }
+					set_variable = { md2026_war_months = 0 }
+				}
 				if = {
 					limit = {
 						has_war_with = SOV

@@ -1,0 +1,98 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "FIN_2026_nsb"
+		else = {
+			set_oob = "FIN_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier3_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 54.000 }
+	set_variable = { var = debt value = 180.000 }
+	set_variable = { var = treasury value = 40 }
+	set_variable = { var = corporate_tax_rate value = 20 }
+	set_variable = { var = population_tax_rate value = 30 }
+	set_variable = { var = int_investments value = 60 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 1200 }
+	}
+	set_variable = { overall_productivity = 1200 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 60.0
+		communism = 5.0
+		fascism = 0.0
+		neutrality = 12.0
+		nationalist = 23.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2023.4.2"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^1 = 0.205 }   #conservatism (KOK)
+	set_variable = { party_pop_array^3 = 0.195 }   #socialism (SDP)
+	set_variable = { party_pop_array^20 = 0.195 }   #Nat_Populism (PS)
+	set_variable = { party_pop_array^14 = 0.115 }   #Neutral_conservatism (Keskusta)
+	set_variable = { party_pop_array^2 = 0.050 }   #liberalism (RKP)
+	set_variable = { party_pop_array^4 = 0.075 }   #Communist-State (Vasemmistoliitto)
+	set_variable = { party_pop_array^17 = 0.040 }   #Neutral_green (Vihreät)
+	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
+	set_variable = { party_pop_array^18 = 0.040 }   #neutral_Social
+	set_variable = { party_pop_array^16 = 0.035 }   #Neutral_Libertarian (KD)
+
+	add_to_array = { ruling_party = 1 }             #conservatism (KOK)
+	add_to_array = { gov_coalition_array = 20 }       #Nat_Populism (PS)
+	add_to_array = { gov_coalition_array = 2 }       #liberalism (RKP)
+
+	set_variable = { party_pop_elect_array^1 = 0.204 }  #KOK
+	set_variable = { party_pop_elect_array^20 = 0.201 }  #PS
+	set_variable = { party_pop_elect_array^3 = 0.196 }  #SDP
+	set_variable = { party_pop_elect_array^14 = 0.115 }  #Keskusta
+	set_variable = { party_pop_elect_array^4 = 0.072 }  #Vasemmistoliitto
+	set_variable = { party_pop_elect_array^17 = 0.070 }  #Vihreät
+	set_variable = { party_pop_elect_array^2 = 0.044 }  #RKP
+	set_variable = { party_pop_elect_array^16 = 0.042 }  #KD
+
+	startup_politics = yes
+
+	### Country Leader: Petteri Orpo ###
+	create_country_leader = {
+		name = "Petteri Orpo"
+		picture = "gfx/leaders/FIN/Petteri_Orpo.dds"
+		expire = "2027.4.2"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	add_ideas = {
+
+		NATO_member
+		md2026_fin_new_nato_member
+	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = FIN_government_expansion
+	complete_national_focus = FIN_expand_the_financial_ministry
+	complete_national_focus = FIN_expand_the_foreign_ministry
+	complete_national_focus = FIN_expand_the_interior_ministry
+	complete_national_focus = FIN_expand_the_ministry_of_defense
+}

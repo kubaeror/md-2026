@@ -1,0 +1,102 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### OOB 2026 ###
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "JAP_2026_nsb"
+		else = {
+			set_oob = "JAP_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier2_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 34.000 }
+	set_variable = { var = debt value = 9800.000 }
+	set_variable = { var = treasury value = 200 }
+	set_variable = { var = corporate_tax_rate value = 23 }
+	set_variable = { var = population_tax_rate value = 20 }
+	set_variable = { var = int_investments value = 250 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 1050 }
+	}
+	set_variable = { overall_productivity = 1050 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 72.0
+		communism = 10.0
+		fascism = 0.0
+		neutrality = 8.0
+		nationalist = 10.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2024.10.27"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^1 = 0.360 }   #conservatism (LDP)
+	set_variable = { party_pop_array^3 = 0.150 }   #socialism (CDP)
+	set_variable = { party_pop_array^14 = 0.100 }  #Neutral_conservatism (Komeito)
+	set_variable = { party_pop_array^4 = 0.050 }   #Communist-State (JCP)
+	set_variable = { party_pop_array^2 = 0.080 }   #liberalism (Ishin/Nippon)
+	set_variable = { party_pop_array^20 = 0.060 }  #Nat_Populism (nationalists)
+	set_variable = { party_pop_array^16 = 0.120 }  #libertarians
+	set_variable = { party_pop_array^17 = 0.030 }  #Neutral_green
+	set_variable = { party_pop_array^18 = 0.050 }  #neutral_Social (SDP)
+
+	add_to_array = { ruling_party = 1 }             #conservatism (LDP)
+	add_to_array = { gov_coalition_array = 14 }      #Neutral_conservatism (Komeito)
+
+	# 2024 House of Representatives election
+	set_variable = { party_pop_elect_array^1 = 0.386 }  #LDP
+	set_variable = { party_pop_elect_array^3 = 0.211 }  #CDP
+	set_variable = { party_pop_elect_array^2 = 0.103 }  #Ishin
+	set_variable = { party_pop_elect_array^14 = 0.116 } #Komeito
+	set_variable = { party_pop_elect_array^4 = 0.072 }  #JCP
+
+	startup_politics = yes
+
+	### Country Leader: Shigeru Ishiba ###
+	create_country_leader = {
+		name = "Shigeru Ishiba"
+		picture = "gfx/leaders/JAP/Shigeru_Ishiba.dds"
+		expire = "2028.10.27"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+			career_politician
+			military_career
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_JAP_active_defense
+	complete_national_focus = MD2026_JAP_constitutional_reform
+	complete_national_focus = MD2026_JAP_indo_pacific
+	complete_national_focus = MD2026_JAP_economic_revitalization
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	# MD2026: dropped (no MD 2.0 equivalent): JAP_bushido
+	complete_national_focus = JAP_economic_sectors
+	# MD2026: dropped (no MD 2.0 equivalent): JAP_finish_nishiseto
+	complete_national_focus = JAP_air_self_defence_force
+	# MD2026: dropped (no MD 2.0 equivalent): JAP_continental_campaigns
+	complete_national_focus = JAP_kanto_infrastructure
+	complete_national_focus = JAP_automotive_industry
+	complete_national_focus = JAP_a_nation_reborn
+	complete_national_focus = JAP_economic_partnership_agreements
+	complete_national_focus = JAP_blue_water_navy
+	complete_national_focus = JAP_infrastructure_investments
+}

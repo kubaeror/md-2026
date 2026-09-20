@@ -1,0 +1,163 @@
+﻿##### Norway - 2026 OOB #####
+# Norwegian Armed Forces - NATO founding member
+# Arctic warfare specialization, expanding post-2022
+
+division_template = {
+	name = "Mekanisert Brigade"		# Mechanized Brigade (Brigade Nord)
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		armor_Bat = { x = 1 y = 1 }
+		Mot_Inf_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Arm_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		combat_service_support_company = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "Garnisonsgruppe"		# Garrison/Border Guard Group
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Ranger_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Spesialkommandoen"		# Special Operations
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Norwegian Armed Forces #####
+
+	# Brigade Nord - Bardufoss / Northern Norway
+	division = {
+		name = "Brigade Nord"
+		location = 9116
+		division_template = "Mekanisert Brigade"
+		start_experience_factor = 0.50
+		start_equipment_factor = 0.85
+	}
+
+	# Finnmark garrison - Arctic border
+	division = {
+		name = "Finnmark Landforsvar"
+		location = 3145
+		division_template = "Garnisonsgruppe"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.80
+	}
+
+	# Southern Norway garrison
+	division = {
+		name = "Oslo Garnisonsgruppe"
+		location = 6116
+		division_template = "Garnisonsgruppe"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.75
+	}
+
+	# SOF
+	division = {
+		name = "Forsvarets Spesialkommando"
+		location = 3136
+		division_template = "Spesialkommandoen"
+		start_experience_factor = 0.60
+		start_equipment_factor = 0.85
+	}
+
+	##### Sjøforsvaret (Royal Norwegian Navy) #####
+	fleet = {
+		name = "Sjøforsvaret"
+		naval_base = 122		# Bergen / Haakonsvern
+		task_force = {
+			name = "Fregattvåpenet"
+			location = 122
+			# Fridtjof Nansen-class frigates
+			ship = { name = "KNM Fridtjof Nansen (F310)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = NOR version_name = "Fridtjof Nansen class" } } }
+			ship = { name = "KNM Roald Amundsen (F311)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = NOR version_name = "Fridtjof Nansen class" } } }
+			ship = { name = "KNM Otto Sverdrup (F312)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = NOR version_name = "Fridtjof Nansen class" } } }
+			ship = { name = "KNM Thor Heyerdahl (F314)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = NOR version_name = "Fridtjof Nansen class" } } }
+			# KNM Maud logistics ship
+			ship = { name = "KNM Maud (A530)" definition = helicopter_operator equipment = { helicopter_operator_hull_1 = { amount = 1 owner = NOR version_name = "Maud class" } } }
+		}
+		task_force = {
+			name = "Kystkorvett-Skvadronen"
+			location = 122
+			# Skjold-class coastal corvettes
+			ship = { name = "KNM Storm (P961)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = NOR version_name = "Skjold class" } } }
+			ship = { name = "KNM Skudd (P962)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = NOR version_name = "Skjold class" } } }
+			ship = { name = "KNM Steil (P963)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = NOR version_name = "Skjold class" } } }
+			ship = { name = "KNM Glimt (P964)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = NOR version_name = "Skjold class" } } }
+			ship = { name = "KNM Gnist (P965)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = NOR version_name = "Skjold class" } } }
+			ship = { name = "KNM Odda (P966)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = NOR version_name = "Skjold class" } } }
+		}
+		task_force = {
+			name = "Undervannsbåtvåpenet"
+			location = 122
+			# Ula-class submarines
+			ship = { name = "KNM Ula (S300)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = NOR version_name = "Ula class" } } }
+			ship = { name = "KNM Utsira (S301)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = NOR version_name = "Ula class" } } }
+			ship = { name = "KNM Utstein (S302)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = NOR version_name = "Ula class" } } }
+			ship = { name = "KNM Utvær (S303)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = NOR version_name = "Ula class" } } }
+			ship = { name = "KNM Uredd (S305)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = NOR version_name = "Ula class" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons5
+		amount = 2000
+		producer = NOR
+	}
+}
+
+##### Luftforsvaret (Royal Norwegian Air Force) #####
+air_wings = {
+	# Ørland Main Air Station - F-35A Lightning II
+	542 = {
+		small_plane_strike_airframe_2 = { owner = "NOR" creator = "USA" amount = 28 version_name = "F-35A Lightning II" }
+		name = "332 Skvadron"
+		start_experience_factor = 0.55
+	}
+	# Evenes Air Station - F-35A
+	31 = {
+		small_plane_strike_airframe_2 = { owner = "NOR" creator = "USA" amount = 12 version_name = "F-35A Lightning II" }
+		name = "331 Skvadron"
+		start_experience_factor = 0.55
+	}
+	# P-8A Poseidon - Maritime Patrol
+	31 = {
+		large_plane_maritime_patrol_airframe_1 = { owner = "NOR" creator = "USA" amount = 3 version_name = "P-8A Poseidon" }
+		name = "333 Skvadron"
+		start_experience_factor = 0.5
+	}
+	# C-130J-30 Transport - Gardermoen
+	32 = {
+		large_plane_air_transport_airframe_1 = { owner = "NOR" creator = "USA" amount = 4 version_name = "C-130J-30 Super Hercules" }
+		name = "335 Skvadron"
+		start_experience_factor = 0.5
+	}
+}

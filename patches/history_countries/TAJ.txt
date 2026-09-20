@@ -1,0 +1,87 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "TAJ_2026_nsb"
+		else = {
+			set_oob = "TAJ_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier5_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 1.100 }
+	set_variable = { var = debt value = 4.000 }
+	set_variable = { var = treasury value = 1 }
+	set_variable = { var = corporate_tax_rate value = 13 }
+	set_variable = { var = population_tax_rate value = 8 }
+	set_variable = { var = int_investments value = 2 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 120 }
+	}
+	set_variable = { overall_productivity = 120 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 3.0
+		communism = 85.0
+		fascism = 0.0
+		neutrality = 7.0
+		nationalist = 5.0
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "2020.10.11"
+		election_frequency = 84
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^6 = 0.800 }   #Conservative (PDPT)
+	set_variable = { party_pop_array^7 = 0.080 }   #Autocracy
+	set_variable = { party_pop_array^12 = 0.040 }   #Neutral_Muslim_Brotherhood (IRPT banned)
+	set_variable = { party_pop_array^15 = 0.040 }   #oligarchism
+	set_variable = { party_pop_array^4 = 0.040 }   #Communist-State (CPT)
+
+	add_to_array = { ruling_party = 6 }             #Conservative (PDPT)
+
+	set_variable = { party_pop_elect_array^6 = 0.908 }  #Rahmon
+	set_variable = { party_pop_elect_array^7 = 0.032 }  #misc
+	set_variable = { party_pop_elect_array^4 = 0.028 }  #CPT
+
+	startup_politics = yes
+
+	### Country Leader: Emomali Rahmon ###
+	create_country_leader = {
+		name = "Emomali Rahmon"
+		picture = "gfx/leaders/TAJ/Emomali_Rahmon.dds"
+		expire = "2034.10.11"
+		ideology = Conservative
+		traits = {
+			authoritarian_ruler
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 5 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = TAJ_central_asias_poorest
+	complete_national_focus = TAJ_rahmons_rotting_fruit
+	complete_national_focus = TAJ_the_peoples_party
+	complete_national_focus = TAJ_armed_forces
+	complete_national_focus = TAJ_his_excellency
+	complete_national_focus = TAJ_rejuvinate_the_opposition
+	complete_national_focus = TAJ_situation_in_pamir
+	complete_national_focus = TAJ_bode_to_industry
+	complete_national_focus = TAJ_rural_hunger
+	complete_national_focus = TAJ_strain_of_energy
+	complete_national_focus = TAJ_water_melon_economy
+	complete_national_focus = TAJ_minbari_khalq
+}

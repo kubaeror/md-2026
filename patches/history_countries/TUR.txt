@@ -1,0 +1,131 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### OOB 2026 ###
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "TUR_2026_nsb"
+		else = {
+			set_oob = "TUR_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier2_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 13.000 }
+	set_variable = { var = debt value = 480.000 }
+	set_variable = { var = treasury value = 40 }
+	set_variable = { var = corporate_tax_rate value = 25 }
+	set_variable = { var = population_tax_rate value = 15 }
+	set_variable = { var = int_investments value = 20 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 650 }
+	}
+	set_variable = { overall_productivity = 650 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 20.0
+		communism = 35.0
+		fascism = 0.0
+		neutrality = 15.0
+		nationalist = 30.0
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "2023.5.14"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^7 = 0.350 }   #Autocracy (AKP/Erdogan)
+	set_variable = { party_pop_array^1 = 0.100 }   #conservatism (CHP reform wing)
+	set_variable = { party_pop_array^3 = 0.100 }   #socialism (CHP left wing)
+	set_variable = { party_pop_array^20 = 0.200 }  #Nat_Populism (MHP)
+	set_variable = { party_pop_array^22 = 0.050 }  #Nat_Autocracy (Ulku Ocaklari)
+	set_variable = { party_pop_array^2 = 0.050 }   #liberalism (DEVA/IYI)
+	set_variable = { party_pop_array^14 = 0.050 }  #Neutral_conservatism (Saadet)
+	set_variable = { party_pop_array^4 = 0.050 }   #Communist-State (HDP/DEM)
+	set_variable = { party_pop_array^16 = 0.050 }  #libertarians
+
+	add_to_array = { ruling_party = 7 }             #Autocracy (AKP)
+	add_to_array = { gov_coalition_array = 20 }      #Nat_Populism (MHP)
+	add_to_array = { gov_coalition_array = 22 }      #Nat_Autocracy
+
+	# 2023 election results
+	set_variable = { party_pop_elect_array^7 = 0.355 }  #AKP
+	set_variable = { party_pop_elect_array^20 = 0.102 } #MHP
+	set_variable = { party_pop_elect_array^3 = 0.254 }  #CHP
+	set_variable = { party_pop_elect_array^2 = 0.097 }  #IYI
+
+	startup_politics = yes
+
+	### 2026 National Spirits ###
+	add_ideas = {
+		md2026_tur_erdogan_autocracy
+	}
+
+	### Country Leader: Recep Tayyip Erdogan ###
+	create_country_leader = {
+		name = "Recep Tayyip Erdogan"
+		picture = "gfx/leaders/TUR/Recep_Erdogan.dds"
+		expire = "2028.6.1"
+		ideology = Autocracy
+		traits = {
+			emerging_Autocracy
+			career_politician
+			populist_demagogue
+			stubborn
+		}
+	}
+	set_variable = { term_limit = 2 }
+	set_variable = { current_term = 2 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_TUR_new_era
+	complete_national_focus = MD2026_TUR_defense_industry
+	complete_national_focus = MD2026_TUR_mediation_power
+	complete_national_focus = MD2026_TUR_central_corridor
+	complete_national_focus = MD2026_TUR_bayraktar
+	complete_national_focus = MD2026_TUR_syria_influence
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = TUR_only_getting_started
+	complete_national_focus = TUR_our_society
+	complete_national_focus = TUR_through_troubles
+	complete_national_focus = TUR_tubitak
+	complete_national_focus = TUR_turkish_intervention
+	complete_national_focus = TUR_turkish_medias
+	complete_national_focus = TUR_turkish_relations
+	complete_national_focus = TUR_ataturks_heirs
+	complete_national_focus = TUR_businessmans_turkey
+	complete_national_focus = TUR_conservative_victory
+	complete_national_focus = TUR_economic_reforms
+	complete_national_focus = TUR_forward_with_social_democracy
+	complete_national_focus = TUR_islamist_victory
+	complete_national_focus = TUR_return_of_socialism
+	complete_national_focus = TUR_right_wing_victory
+	complete_national_focus = TUR_the_armed_forces_of_turkiye
+	complete_national_focus = TUR_disaster_relief
+	complete_national_focus = TUR_drug_problem
+	complete_national_focus = TUR_migration_problems
+	complete_national_focus = TUR_mit
+	complete_national_focus = TUR_rising_nationalism
+	complete_national_focus = TUR_close_kurdish_medias
+	complete_national_focus = TUR_combat_cybercrime
+	complete_national_focus = TUR_deal_with_journalists
+	complete_national_focus = TUR_intervene_afghan_war
+	complete_national_focus = TUR_intervene_iraq_war
+	complete_national_focus = TUR_intervene_syrian_civilwar
+	complete_national_focus = TUR_turkish_agriculture
+	complete_national_focus = TUR_turkish_mining
+	complete_national_focus = TUR_western_alignment
+	complete_national_focus = TUR_contact_italian_mafia
+	complete_national_focus = TUR_utilize_gray_wolves
+}

@@ -1,4 +1,4 @@
-##### ISR 2026 OOB - Israel Defense Forces (post-Gaza War) #####
+﻿##### ISR 2026 OOB - Israel Defense Forces (post-Gaza War) #####
 # Battle-hardened from 2023-2024 Gaza operations, high experience
 # Merkava Mk.4/4M MBT, Namer IFV, Eitan APC, Iron Dome, Trophy APS
 # AH-64D Saraf, Hermes 900/450 UAVs

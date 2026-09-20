@@ -1,0 +1,9 @@
+﻿		# MD2026: Zaporizhzhia Oblast partially occupied by Russia
+		# Russia controls south (Melitopol, Energodar, nuclear plant)
+		# Ukraine controls Zaporizhzhia city (main VP)
+		# Province-level control can only be set at runtime.
+		# State remains UKR-owned; Russia gets cores. War + unit placement
+		# in startup effects handles the frontline.
+		2026.1.1 = {
+			add_core_of = SOV
+		}

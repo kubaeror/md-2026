@@ -1,0 +1,98 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "AFG_2026_nsb"
+		else = {
+			set_oob = "AFG_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier5_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 0.400 }
+	set_variable = { var = debt value = 2.000 }
+	set_variable = { var = treasury value = 1 }
+	set_variable = { var = corporate_tax_rate value = 0 }
+	set_variable = { var = population_tax_rate value = 2 }
+	set_variable = { var = int_investments value = 1 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 50 }
+	}
+	set_variable = { overall_productivity = 50 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 0.0
+		communism = 5.0
+		fascism = 15.0
+		neutrality = 75.0
+		nationalist = 5.0
+	}
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "2000.1.1"
+		election_frequency = 999
+		elections_allowed = no
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^12 = 0.800 }   #Neutral_Muslim_Brotherhood (Taliban)
+	set_variable = { party_pop_array^11 = 0.080 }   #Caliphate (IS-K)
+	set_variable = { party_pop_array^13 = 0.050 }   #Neutral_Autocracy (warlords)
+	set_variable = { party_pop_array^14 = 0.040 }   #Neutral_conservatism
+	set_variable = { party_pop_array^2 = 0.030 }   #liberalism (NRF resistance)
+
+	add_to_array = { ruling_party = 12 }             #Neutral_Muslim_Brotherhood (Taliban)
+
+	startup_politics = yes
+
+	### Country Leader: Hibatullah Akhundzada ###
+	create_country_leader = {
+		name = "Hibatullah Akhundzada"
+		picture = "gfx/leaders/AFG/Hibatullah_Akhundzada.dds"
+		expire = "2065.1.1"
+		ideology = Neutral_Muslim_Brotherhood
+		traits = {
+			theocrat
+			authoritarian_ruler
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = AFG_anjuman_pass
+	complete_national_focus = AFG_ashraf_ghani
+	complete_national_focus = AFG_basej_e_milli
+	complete_national_focus = AFG_endorse_the_american_candidate
+	complete_national_focus = AFG_islamic_democracy
+	complete_national_focus = AFG_naveen
+	complete_national_focus = AFG_future_national_policy
+	complete_national_focus = AFG_heirs_o_the_mujahideen
+	complete_national_focus = AFG_imu_countermeasures
+	complete_national_focus = AFG_massoud_s_mig_and_sukho
+	complete_national_focus = AFG_shura_system
+	complete_national_focus = AFG_local_military_pressure
+	complete_national_focus = AFG_centralise_the_apparatus_of_the_state
+	complete_national_focus = AFG_expand_the_education_ministry
+	complete_national_focus = AFG_parliamentary_illusion
+	complete_national_focus = AFG_atlanticism
+	complete_national_focus = AFG_standardised_taxation
+	complete_national_focus = AFG_the_republic_survives_another_day
+	complete_national_focus = AFG_saarc_membership
+	complete_national_focus = AFG_the_new_chairman
+	complete_national_focus = AFG_the_islamic_republic
+	complete_national_focus = AFG_agricultural_modernisation
+	complete_national_focus = AFG_reinforce_the_government
+	complete_national_focus = AFG_counite_masouds_works
+	complete_national_focus = AFG_new_class_of_jam_iat_reformers
+	complete_national_focus = AFG_future_diplomacy
+	complete_national_focus = AFG_internal_policy
+}

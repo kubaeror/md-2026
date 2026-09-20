@@ -1,0 +1,124 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### NATO membership (MD 2.0 marker) ###
+	add_ideas = { NATO_member }
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "CRO_2026_nsb"
+		else = {
+			set_oob = "CRO_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier4_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 20.000 }
+	set_variable = { var = debt value = 45.000 }
+	set_variable = { var = treasury value = 15 }
+	set_variable = { var = corporate_tax_rate value = 18 }
+	set_variable = { var = population_tax_rate value = 20 }
+	set_variable = { var = int_investments value = 35 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 750 }
+	}
+	set_variable = { overall_productivity = 750 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 50.0
+		communism = 5.0
+		fascism = 0.0
+		neutrality = 15.0
+		nationalist = 30.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2024.4.17"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^1 = 0.345 }   #conservatism (HDZ)
+	set_variable = { party_pop_array^3 = 0.260 }   #socialism (SDP)
+	set_variable = { party_pop_array^2 = 0.050 }   #liberalism (Mozemo)
+	set_variable = { party_pop_array^20 = 0.080 }   #Nat_Populism (DP)
+	set_variable = { party_pop_array^14 = 0.070 }   #Neutral_conservatism (Most)
+	set_variable = { party_pop_array^15 = 0.060 }   #oligarchism
+	set_variable = { party_pop_array^4 = 0.035 }   #Communist-State
+	set_variable = { party_pop_array^17 = 0.040 }   #Neutral_green
+	set_variable = { party_pop_array^18 = 0.040 }   #neutral_Social
+	set_variable = { party_pop_array^21 = 0.020 }   #Nat_Fascism
+
+	add_to_array = { ruling_party = 1 }             #conservatism (HDZ)
+	add_to_array = { gov_coalition_array = 20 }       #Nat_Populism (DP)
+
+	set_variable = { party_pop_elect_array^1 = 0.346 }  #HDZ
+	set_variable = { party_pop_elect_array^3 = 0.258 }  #SDP+
+	set_variable = { party_pop_elect_array^20 = 0.087 }  #DP
+	set_variable = { party_pop_elect_array^2 = 0.067 }  #Mozemo
+	set_variable = { party_pop_elect_array^14 = 0.066 }  #Most
+
+	startup_politics = yes
+
+	### Country Leader: Andrej Plenkovic ###
+	create_country_leader = {
+		name = "Andrej Plenkovic"
+		picture = "gfx/leaders/CRO/Andrej_Plenkovic.dds"
+		expire = "2028.4.17"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+			career_politician
+			diplomat
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 3 }
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = GENERIC_air_force_reform
+	complete_national_focus = GENERIC_army_reform
+	complete_national_focus = GENERIC_build_primary_schools
+	complete_national_focus = GENERIC_build_roads
+	complete_national_focus = GENERIC_ease_of_business_reforms
+	complete_national_focus = GENERIC_international_diplomacy
+	complete_national_focus = GENERIC_light_industry_investments
+	complete_national_focus = GENERIC_military_emergency
+	complete_national_focus = GENERIC_naval_reform
+	complete_national_focus = GENERIC_political_reform
+	complete_national_focus = GENERIC_agricultural_district_subsidization
+	complete_national_focus = GENERIC_air_doctrine_innovations
+	complete_national_focus = GENERIC_alignment_debate
+	complete_national_focus = GENERIC_anti_corruption_reforms
+	complete_national_focus = GENERIC_assure_access_to_education
+	complete_national_focus = GENERIC_attract_foreign_investors
+	complete_national_focus = GENERIC_build_highways
+	complete_national_focus = GENERIC_build_railways
+	complete_national_focus = GENERIC_cabinet_reform
+	complete_national_focus = GENERIC_capital_defense_scheme
+	complete_national_focus = GENERIC_debt_refactoring
+	complete_national_focus = GENERIC_diplomatic_positions
+	complete_national_focus = GENERIC_expand_the_secret_service
+	complete_national_focus = GENERIC_fighter_planes
+	complete_national_focus = GENERIC_heavy_industry_investments
+	complete_national_focus = GENERIC_land_doctrine_innovations
+	complete_national_focus = GENERIC_military_education_reform
+	complete_national_focus = GENERIC_military_equipment_procurement
+	complete_national_focus = GENERIC_military_exercises
+	complete_national_focus = GENERIC_mobilize_the_working_class
+	complete_national_focus = GENERIC_naval_bases
+	complete_national_focus = GENERIC_naval_doctrine_innovations
+	complete_national_focus = GENERIC_network_infrastructure
+	complete_national_focus = GENERIC_our_place
+	complete_national_focus = GENERIC_strengthen_government
+	complete_national_focus = GENERIC_submarines
+	complete_national_focus = GENERIC_surface_ships
+	complete_national_focus = GENERIC_trade_with_the_neighbors
+}

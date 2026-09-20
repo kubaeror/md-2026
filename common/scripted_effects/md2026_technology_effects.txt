@@ -1,1227 +1,941 @@
-# MD2026 Technology Scripted Effects
-# Assigns technologies to countries based on tier for the 2026 bookmark
-# Technologies organized by start_year era, composed into 5 tiers
+﻿# MD2026 Technology Scripted Effects
+# GENERATED FILE - do not edit by hand.
+# Rebuild with: python tools/rebase.py tech
 #
-# Tier 1: Superpowers (USA, SOV, CHI) — all through 2025 + cutting-edge
-# Tier 2: Major powers (ENG, FRA, GER, JAP, KOR, ISR, ITA, RAJ, AST, TUR, CAN) — all through 2025
-# Tier 3: Modern mid-tier (POL, SPR, HOL, NOR, SWE, FIN, UKR, GRE, DEN, BEL, TAI, SAU, UAE, PAK, BRA, SAF, POR, EGY) — all through 2020
-# Tier 4: Regional/developing (ROM, NKO, PER, CZE, HUN, SER, BUL, CRO, BRM, KAZ, BLR, GEO, ARM, EST, LAT, LIT, SLO) — all through 2015
-# Tier 5: Basic (AFG, ALB, BOS, ETH, FYR, ICE, KOS, KYR, LUX, MLV, MNT, SLV, SUD, SYR, TAJ, UZB, YEM) — all through 2010
+# Grants every Millennium Dawn technology up to a given year,
+# mirroring MD's own DLC gating. Tiers are compositions of the bands.
 
-### ===== PREREQUISITE "GLUE" TECHNOLOGIES ===== ###
-# These are pre-2005 techs that connect early-era branches to our 2005+ grants.
-# Without them, the tech tree has visual gaps (later techs shown without prereqs).
-# Called at the start of every tier composition effect.
-
-md2026_techs_prereqs = {
-	### Anti-Tank prereqs (pre-2005, shared — no DLC gating) ###
+md2026_techs_2005 = {
 	set_technology = {
-		Anti_tank_0 = 1
-		Heavy_Anti_tank_0 = 1
+		AA_upgrade_1 = 1
+		AA_upgrade_2 = 1
+		AA_upgrade_3 = 1
+		APC_1 = 1
+		APC_2 = 1
+		APC_3 = 1
+		APC_4 = 1
+		APC_5 = 1
+		AS_Fighter1 = 1
+		AS_Fighter2 = 1
+		AS_Fighter3 = 1
+		AS_Fighter4 = 1
+		AS_upgrade_1 = 1
 		AT_upgrade_1 = 1
-		Anti_tank_1 = 1
-		Heavy_Anti_tank_1 = 1
 		AT_upgrade_2 = 1
-	}
-
-	### Artillery & Anti-Air prereqs (pre-2005) ###
-	if = { limit = { has_dlc = "No Step Back" }
-		set_technology = {
-			# NSB artillery main line
-			nsb_artillery_0 = 1
-			nsb_Arty_upgrade_1 = 1
-			nsb_artillery_1 = 1
-			nsb_Arty_upgrade_2 = 1
-			nsb_Arty_upgrade_3 = 1
-			nsb_barrel_conversions = 1
-			nsb_fire_modes_1 = 1
-			# NSB ammo line
-			nsb_artillery_ammo_1 = 1
-			nsb_artillery_ammo_2 = 1
-			nsb_special_ammo_0 = 1
-			nsb_special_ammo_1 = 1
-			# NSB gun technology line
-			nsb_gun_technology_1 = 1
-			nsb_gun_technology_2 = 1
-			# NSB anti-air main line
-			nsb_Anti_Air_0 = 1
-			nsb_AA_upgrade_1 = 1
-			nsb_Anti_Air_1 = 1
-			nsb_AA_upgrade_2 = 1
-			# NSB SHORAD missiles
-			nsb_SHORAD_missile_0 = 1
-			nsb_SHORAD_missile_1 = 1
-			# NSB dual-role missiles
-			nsb_dual_role_missile_0 = 1
-			nsb_dual_role_missile_1 = 1
-			# NSB AA autocannons
-			nsb_AA_autocannon_0 = 1
-			nsb_AA_autocannon_1 = 1
-			# NSB Armor: MBT hull chain (1945-1995 prereqs for mbt_tech_3 @ 2020)
-			mbt_tech_ops = 1
-			mbt_tech = 1
-			mbt_tech_1 = 1
-			mbt_tech_2 = 1
-			# NSB Armor: Components/FCS chain (1965-1995 prereqs for tank_components_tech_4 @ 2015)
-			tank_components_tech = 1
-			tank_components_tech_2 = 1
-			tank_components_tech_3 = 1
-			# NSB Armor: ERA chain (1975-1985 prereqs for era_tech_3 @ 2005)
-			era_tech = 1
-			era_tech_2 = 1
-			# NSB Armor: Composite armor chain (1965-1985 prereqs for armor_tech_3 @ 2005)
-			armor_tech = 1
-			armor_tech_2 = 1
-			# NSB Armor: NERA armor (1985 prereq for nera_armor_tech_2 @ 2005)
-			nera_armor_tech_1 = 1
-			# NSB Armor: Defensive systems chain (1970-1995 prereqs for defensive_systems_4 @ 2015)
-			defensive_systems = 1
-			defensive_systems_2 = 1
-			defensive_systems_3 = 1
-			# NSB Armor: Diesel engine chain (1965-1995 prereqs for diesel_engine_tech_5 @ 2005)
-			diesel_engine_tech = 1
-			diesel_engine_tech_2 = 1
-			diesel_engine_tech_3 = 1
-			diesel_engine_tech_4 = 1
-			# NSB Armor: Turbine engine chain (1975-1995 prereqs for turbine_engine_tech_4 @ 2005)
-			turbine_engine_tech = 1
-			turbine_engine_tech_2 = 1
-			turbine_engine_tech_3 = 1
-			# NSB Armor: Electric engine chain (1975-1995 prereqs for electric_engine_tech_3 @ 2025)
-			electric_engine_tech_1 = 1
-			electric_engine_tech_2 = 1
-			# NSB Armor: Ammo chain (1970-1985 prereqs for modern_ammo @ 2005)
-			early_cold_war_ammo = 1
-			cold_war_ammo = 1
-			# NSB Armor: Small/medium gun chain (1945-1985 prereqs for small_medium_gun_tech_3 @ 2005)
-			small_medium_gun_tech = 1
-			small_medium_gun_tech_2 = 1
-			# NSB Armor: Medium gun chain (1965-1985 prereqs for medium_gun_tech_3 @ 2015)
-			medium_gun_tech = 1
-			medium_gun_tech_2 = 1
-			# NSB Armor: Large gun (1995 prereq for large_gun_tech_2 @ 2015)
-			large_gun_tech = 1
-			# NSB Armor: Small autocannon chain (1945-1975 prereqs for small_autocannon_tech_3 @ 2015)
-			small_autocannon_tech = 1
-			small_autocannon_tech_2 = 1
-			# NSB Armor: Big autocannon chain (1965-1985 prereqs for big_autocannon_tech_3 @ 2015)
-			big_autocannon_tech = 1
-			big_autocannon_tech_2 = 1
-			# NSB Armor: Assault gun chain (1965-1985 prereqs for assault_gun_tech_3 @ 2015)
-			assault_gun_tech = 1
-			assault_gun_tech_2 = 1
-			# NSB Helicopter: root (1965 prereq for all NSB heli branches)
-			helo_ops_tech = 1
-			# NSB Helicopter: Attack chain (1965-1985 prereqs for nsb_attack_helicopter_tech_3 @ 2005)
-			nsb_attack_helicopter_tech_1 = 1
-			nsb_attack_helicopter_tech_2 = 1
-			# NSB Helicopter: Transport chain (1965-1985 prereqs for nsb_transport_helicopter3 @ 2005)
-			nsb_transport_helicopter1 = 1
-			nsb_transport_helicopter2 = 1
-			# NSB Helicopter: Engine chain (1965-1985 prereqs for nsb_engine_tech_3 @ 2005)
-			nsb_engine_tech_1 = 1
-			nsb_engine_tech_2 = 1
-			# NSB Helicopter: ATGM chain (1965-1985 prereqs for nsb_atgm_tech_3 @ 2005)
-			nsb_atgm_tech_1 = 1
-			nsb_atgm_tech_2 = 1
-			# NSB Helicopter: Multiple ATGM chain (1965-1985 prereqs for nsb_multiple_atgm_tech_3 @ 2005)
-			nsb_multiple_atgm_tech_1 = 1
-			nsb_multiple_atgm_tech_2 = 1
-			# NSB Helicopter: Heavy ATGM chain (1965-1985 prereqs for nsb_heavy_atgm_tech_3 @ 2005)
-			nsb_heavy_atgm_tech_1 = 1
-			nsb_heavy_atgm_tech_2 = 1
-			# NSB Helicopter: Rocket Pods chain (1965-1985 prereqs for nsb_rocket_pods_tech_3 @ 2005)
-			nsb_rocket_pods_tech_1 = 1
-			nsb_rocket_pods_tech_2 = 1
-			# NSB Helicopter: Gun Pods chain (1965-1985 prereqs for nsb_gun_pods_tech_3 @ 2005)
-			nsb_gun_pods_tech_1 = 1
-			nsb_gun_pods_tech_2 = 1
-			# NSB Helicopter: Light Nose Gun chain (1965-1985 prereqs for nsb_light_nose_gun_tech_3 @ 2005)
-			nsb_light_nose_gun_tech_1 = 1
-			nsb_light_nose_gun_tech_2 = 1
-			# NSB Helicopter: Defense chain (1985-2000 prereqs for nsb_defense_tech_3 @ 2015)
-			nsb_defense_tech_1 = 1
-			nsb_defense_tech_2 = 1
-		}
-		else = {
-			set_technology = {
-				# Non-NSB artillery main line
-				artillery_0 = 1
-				SP_arty_0 = 1
-				SP_R_arty_0 = 1
-				Arty_upgrade_1 = 1
-				artillery_1 = 1
-				SP_arty_1 = 1
-				SP_R_arty_1 = 1
-				Arty_upgrade_2 = 1
-				Arty_upgrade_3 = 1
-				# Non-NSB anti-air main line
-				Anti_Air_0 = 1
-				SP_Anti_Air_0 = 1
-				AA_upgrade_1 = 1
-				Anti_Air_1 = 1
-				SP_Anti_Air_1 = 1
-				AA_upgrade_2 = 1
-				AA_upgrade_3 = 1
-				# Non-NSB armor: root + MBT chain (1945-1995 prereqs for MBT_5 @ 2015)
-				Early_APC = 1
-				MBT_1 = 1
-				MBT_2 = 1
-				MBT_3 = 1
-				MBT_4 = 1
-				# Non-NSB armor: APC chain (1965-1995 prereqs for APC_5 @ 2005)
-				APC_1 = 1
-				APC_2 = 1
-				APC_3 = 1
-				APC_4 = 1
-				# Non-NSB armor: IFV chain (1965-1995 prereqs for IFV_5 @ 2005)
-				IFV_1 = 1
-				IFV_2 = 1
-				IFV_3 = 1
-				IFV_4 = 1
-				# Non-NSB armor: Rec tank chain (1965-1985 prereqs for Rec_tank_2 @ 2005)
-				Rec_tank_0 = 1
-				Rec_tank_1 = 1
-				# Non-NSB Helicopter: Attack chain (1965-1985 prereqs for attack_helicopter3 @ 2005)
-				attack_helicopter1 = 1
-				attack_helicopter2 = 1
-				# Non-NSB Helicopter: Transport chain (1965-1985 prereqs for transport_helicopter3 @ 2005)
-				transport_helicopter1 = 1
-				transport_helicopter2 = 1
-			}
-		}
-	}
-
-	### Infantry prereqs (pre-2005, shared — no DLC gating) ###
-	set_technology = {
-		# Infantry Weapons chain (1965-1995 prereqs for infantry_weapons4 @ 2005)
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		infantry_weapons3 = 1
-		# Utility Vehicles chain (1965-1995 prereqs for util_vehicle_4 @ 2005)
-		util_vehicle_0 = 1
-		util_vehicle_1 = 1
-		util_vehicle_2 = 1
-		util_vehicle_3 = 1
-		# Night Vision chain (1965-1985 prereqs for night_vision_4 @ 2015)
-		night_vision_1 = 1
-		night_vision_2 = 1
-		night_vision_3 = 1
-		# Command & Control chain (1975-1995 prereqs for command_control_equipment3 @ 2005)
-		command_control_equipment = 1
-		command_control_equipment1 = 1
-		command_control_equipment2 = 1
-		# Land Drones chain (1985-1995 prereqs for land_Drone_equipment2 @ 2005)
-		land_Drone_equipment = 1
-		land_Drone_equipment1 = 1
-		# Body Armor chain (1980-2000 prereqs for body_armor_2010 @ 2010)
-		body_armor_1980 = 1
-		body_armor_2000 = 1
-		# Camouflage chain (1965-2000 prereqs for camouflage4 @ 2020)
-		camouflage = 1
-		camouflage2 = 1
-		camouflage3 = 1
-		# Support Weapons chain (1965-1995 prereqs for support_weapons4 @ 2005)
-		support_weapons = 1
-		squad_automatic_weapon = 1
-		tandem_charge_warheads = 1
-		support_weapons2 = 1
-		support_weapons3 = 1
-		# Special Forces chain (1965-1995 prereqs for special_forces5 @ 2005)
-		special_forces = 1
-		special_forces2 = 1
-		special_forces3 = 1
-		special_forces4 = 1
-		# Combat Engineer (standalone 1965 base tech)
-		combat_eng_equipment = 1
-	}
-
-	### Engineering prereqs (pre-2005, shared — no DLC gating) ###
-	set_technology = {
-		# AI/Robotics chain (1985-2000 prereqs for early_ai_robotics @ 2005)
-		neural_networks_revival = 1
-		data_mining = 1
-		machine_learning = 1
-		sociable_machines = 1
-		# Computing chain (1945-1995 prereqs for computing4 @ 2005)
-		basic_computing = 1
-		integrated_circuit = 1
-		computing1 = 1
-		microprocessors = 1
-		computing2 = 1
-		computing3 = 1
-		# Encryption chain (1965-1995 prereqs for encryption4 @ 2005)
-		encryption1 = 1
-		encryption2 = 1
-		encryption3 = 1
-		# Decryption chain (1965-1995 prereqs for decryption4 @ 2005)
-		decryption1 = 1
-		decryption2 = 1
-		decryption3 = 1
-		# Internet chain (1945-2000 prereqs for umts/edge @ 2005)
-		radar = 1
-		internet1 = 1
-		internet2 = 1
-		gprs = 1
-		internet3 = 1
-		# WiFi chain (2000 prereq for lifi @ 2020)
-		wifi = 1
-	}
-
-	### BBA Aircraft prereqs (pre-2005) ###
-	if = { limit = { has_dlc = "By Blood Alone" }
-		set_technology = {
-			# Root techs (1955)
-			early_airframe_designs = 1
-			early_weapons = 1
-			# Airframe light chain (1960-1980 prereqs for gen_5_light @ 2015)
-			gen_3_light = 1
-			gen_4_light = 1
-			# Airframe medium chain (1960-1980 prereqs for gen_5_medium @ 2015)
-			gen_3_medium = 1
-			gen_4_medium = 1
-			# Airframe large chain (1960-1980 prereqs for gen_5_large @ 2015)
-			gen_3_large = 1
-			gen_4_large = 1
-			# Avionics chain (1980-2000 prereqs for avionics_3 @ 2020)
-			avionics_1 = 1
-			avionics_2 = 1
-			# AWACS (1985 prereq for awacs_2 @ 2005)
-			awacs_1 = 1
-			# Wing designs (1970-1990 prereqs for stealth/fwdswept/diamond)
-			flying_wing_design = 1
-			variable_wing_design = 1
-			delta_wing_design = 1
-			# Engines (1975 prereq for engines_3 @ 2010)
-			engines_2 = 1
-			# Refueling (1980 prereq for refueling_2 @ 2005)
-			refueling_1 = 1
-			# Air-to-air weapons chain (1965-1990 prereqs for air_weapons_3 @ 2020)
-			air_weapons_1 = 1
-			air_weapons_2 = 1
-			# Air-to-ground weapons chain (1965-1990 prereqs for ag_weapons_3 @ 2020)
-			ag_weapons_1 = 1
-			ag_weapons_2 = 1
-			# Naval weapons chain (1965-1990 prereqs for naval_weapons_3 @ 2020)
-			naval_weapons_1 = 1
-			naval_weapons_2 = 1
-			# Special MAD chain (1970-1995 prereqs for special_mad_3 @ 2025)
-			special_mad_1 = 1
-			special_mad_2 = 1
-			# TGP/Recon chain (1970-1995 prereqs for tgp_recon_3 @ 2025)
-			tgp_recon_1 = 1
-			tgp_recon_2 = 1
-			# Gunship chain (1970-1995 prereqs for rapid_dragon @ 2025)
-			gunship_1 = 1
-			gunship_2 = 1
-			# Internal weapons (2000 prereq for internal_weapons_2 @ 2025)
-			internal_weapons_1 = 1
-		}
-		else = {
-			set_technology = {
-				# Non-BBA fixed wing root (1945)
-				early_fighter = 1
-				# AS Fighter chain (1965-1995 prereqs for AS_Fighter4 @ 2015)
-				AS_Fighter1 = 1
-				AS_Fighter2 = 1
-				AS_upgrade_1 = 1
-				# MR Fighter chain (1965-1995 prereqs for MR_Fighter4 @ 2015)
-				MR_Fighter1 = 1
-				MR_Fighter2 = 1
-				MR_upgrade_1 = 1
-				# Strike Fighter chain (1965-1995 prereqs for Strike_fighter4 @ 2015)
-				Strike_fighter1 = 1
-				Strike_fighter2 = 1
-				Strike_upgrade_1 = 1
-				# L_Strike chain (1965-1995 prereqs for L_Strike_fighter3 @ 2015)
-				L_Strike_fighter1 = 1
-				L_Strike_fighter2 = 1
-				# UAV (1995 prereq for Air_UAV2 @ 2015)
-				Air_UAV1 = 1
-				# Non-BBA heavy aircraft root (1945)
-				early_bomber = 1
-				# Strategic Bomber chain (1965-1985 prereqs for strategic_bomber4 @ 2015)
-				strategic_bomber1 = 1
-				strategic_bomber2 = 1
-				strategic_bomber3 = 1
-				# Transport Plane chain (1965-1995 prereqs for transport_plane4 @ 2015)
-				transport_plane1 = 1
-				transport_plane2 = 1
-				transport_plane3 = 1
-				# Naval Plane chain (1965-1985 prereqs for naval_plane4 @ 2015)
-				naval_plane1 = 1
-				naval_plane2 = 1
-				naval_plane3 = 1
-				# CAS chain (1975-1995 prereqs for cas3 @ 2015)
-				cas1 = 1
-				cas2 = 1
-				# AWACS plane (1985 prereq for awacs_plane2 @ 2015)
-				awacs_plane1 = 1
-				cv_awacs_plane1 = 1
-			}
-		}
-	}
-
-	### Naval prereqs (pre-2005, shared — no DLC gating) ###
-	set_technology = {
-		# Root techs (1945 era)
-		tech_naval_systems_engineering = 1
-		aircraft_carrier_engineering = 1
-		tech_submarine_engineering = 1
-		tech_early_naval_weapon_systems = 1
-
-		# Surface ship hulls (1965-1995)
-		corvette_hull_1 = 1
-		corvette_hull_2 = 1
-		corvette_hull_3 = 1
-		frigate_hull_1 = 1
-		frigate_hull_2 = 1
-		frigate_hull_3 = 1
-		destroyer_hull_1 = 1
-		destroyer_hull_2 = 1
-		cruiser_hull_1 = 1
-		cruiser_hull_2 = 1
-		battleship_hull_1 = 1
-
-		# Carrier / Heli Operator (1965-1995)
-		carrier_hull_1 = 1
-		carrier_hull_2 = 1
-		aircraft_heli_engineering_1 = 1
-		aircraft_heli_engineering_2 = 1
-		helicopter_operator_hull_1 = 1
-		helicopter_operator_hull_2 = 1
-
-		# Submarines (1965-1995)
-		attack_submarine_hull_1 = 1
-		attack_submarine_hull_2 = 1
-		attack_submarine_hull_3 = 1
-		missile_submarine_hull_1 = 1
-		missile_submarine_hull_2 = 1
-		missile_submarine_hull_3 = 1
-		tech_submarine_engineering_1 = 1
-		tech_submarine_engineering_2 = 1
-
-		# Naval systems / power / fire control
-		tech_combat_support_systems = 1
-		tech_power_systems = 1
-		tech_power_systems_1 = 1
-		tech_nuclear_power_systems = 1
-		tech_nuclear_power_systems_1 = 1
-		tech_fire_control = 1
-		tech_fire_control_1 = 1
-
-		# Naval electronics (1980-1995)
-		tech_combat_radar = 1
-		tech_combat_radar_1 = 1
-		tech_combat_sonar = 1
-		tech_combat_sonar_1 = 1
-
-		# Naval weapons (1965-2000)
-		tech_naval_weapon_systems = 1
-		tech_light_guns = 1
-		tech_light_guns_1 = 1
-		tech_point_defense_system = 1
-		tech_point_defense_system_1 = 1
-		tech_point_defense_system_2 = 1
-		tech_turret_missiles_surface = 1
-		tech_turret_missiles_surface_1 = 1
-		tech_turret_missiles_surface_2 = 1
-		tech_turret_missiles_aa = 1
-		tech_turret_missiles_aa_1 = 1
-		tech_turret_missiles_aa_2 = 1
-		tech_vls_surface = 1
-		tech_vls_surface_1 = 1
-		tech_vls_surface_2 = 1
-		tech_vls_aa = 1
-		tech_vls_aa_1 = 1
-		tech_vls_aa_2 = 1
-		tech_torpedoes = 1
-		tech_torpedoes_1 = 1
-
-		# Landing craft (1965-2000)
-		tech_landing_craft = 1
-		tech_amphibious_assault_ship = 1
-		tech_air_cushioned_landing_craft = 1
-		tech_modern_landing_craft = 1
-	}
-
-	### Industry prereqs (pre-2005, shared) ###
-	set_technology = {
-		# Nanofibers chain (1985-2000)
-		industrial_electrospun_polymeric_nanofibers = 1
-		multiwalled_carbon_nanotubes = 1
-		modern_electrospinning = 1
-		inorganic_fibers_fabrication = 1
-
-		# 3D Printing chain (1985-2000)
-		stereolitography = 1
-		early_3D_printers = 1
-		t3D_wax_printer = 1
-		large_scale_3D_printing = 1
-
-		# Genetics chains (1985-2000)
-		DNA_fingerprinting = 1
-		modern_gmo = 1
-		gene_therapy = 1
-		genetically_modified_crops = 1
-		crispr = 1
-
-		# Energy root (1985)
-		fuel_silos = 1
-
-		# Electrification chain (1995-2000)
-		electrification_1 = 1
-		electrification_2 = 1
-
-		# Energy Efficiency chain (1990-2000)
-		energy_efficiency = 1
-		energy_efficiency2 = 1
-		energy_efficiency3 = 1
-
-		# Renewables chain (1990-2000)
-		early_renewables = 1
-		renewables = 1
-		improved_renewables = 1
-
-		# Fuel Efficiency chain (1990-2000)
-		fuel_efficiency = 1
-		fuel_efficiency2 = 1
-
-		# Fuel Refining chain (1990-2000)
-		fuel_refining = 1
-		fuel_refining2 = 1
-		fuel_refining3 = 1
-
-		# Battery Storage (2000)
-		utility_scale_battery_storage = 1
-
-		# Nuclear Reactors chain (1985-1995)
-		nuclear_technology = 1
-		reactor1 = 1
-		reactor2 = 1
-
-		# Construction chain (1985-2000)
-		construction1 = 1
-		construction2 = 1
-		construction3 = 1
-
-		# Excavation chain (1985-2000)
-		excavation1 = 1
-		excavation2 = 1
-		excavation3 = 1
-
-		# Fortifications (1990-2000)
-		land_fort_building_1 = 1
-		land_fort_building_2 = 1
-
-		# Infrastructure/Rail chain (1985-2000)
-		integrated_transportation_system = 1
-		post_conventional_rail = 1
-		early_freight_locomotive = 1
-		early_high_speed_rail = 1
-
-		# Agriculture chain (1990-2000)
-		gps_agricultural_applications = 1
-		automated_irrigation_systems = 1
-		farming_data_analytic_softwares = 1
-	}
-
-	### Space prereqs (pre-2005, shared) ###
-	set_technology = {
-		# GNSS chain (1965-1995)
-		GNSS1 = 1
-		GNSS2 = 1
-		GNSS3 = 1
-		GNSS4 = 1
-
-		# COMSAT chain (1965-1995)
+		Air_Kamikaze1 = 1
+		Air_Kamikaze2 = 1
+		Air_Kamikaze3 = 1
+		Air_Kamikaze4 = 1
+		Air_UAV1 = 1
+		Air_UAV2 = 1
+		Anti_Air_1 = 1
+		Anti_Air_2 = 1
+		Anti_tank_0 = 1
+		Anti_tank_1 = 1
+		Anti_tank_2 = 1
+		Arty_upgrade_1 = 1
+		Arty_upgrade_2 = 1
+		Arty_upgrade_3 = 1
 		COMSAT1 = 1
 		COMSAT2 = 1
 		COMSAT3 = 1
 		COMSAT4 = 1
-
-		# SPYSAT chain (1965-1995)
-		SPYSAT1 = 1
-		SPYSAT2 = 1
-		SPYSAT3 = 1
-		SPYSAT4 = 1
-
-		# KILLSAT chain (1985-1995)
+		COMSAT5 = 1
+		CV_L_Strike_fighter1 = 1
+		CV_L_Strike_fighter2 = 1
+		CV_L_Strike_fighter3 = 1
+		CV_L_Strike_fighter4 = 1
+		CV_L_Strike_fighter5 = 1
+		CV_MR_Fighter1 = 1
+		CV_MR_Fighter2 = 1
+		CV_MR_Fighter3 = 1
+		CV_MR_Fighter4 = 1
+		CV_MR_Fighter5 = 1
+		CV_MR_Fighter6 = 1
+		CV_MR_Fighter7 = 1
+		CZE_engine_tech = 1
+		CZE_engine_tech_2 = 1
+		CZE_engine_tech_3 = 1
+		CZE_engine_tech_4 = 1
+		CZE_engine_tech_7 = 1
+		EH_300_tech = 1
+		EH_chimera_units = 1
+		EH_observe_local_fauna_tech = 1
+		EH_our_weakness_to_their_disadvantage_tech = 1
+		EH_sandstorms_are_our_allies_tech = 1
+		Early_APC = 1
+		FAD_access_tech = 1
+		GLCM1 = 1
+		GLCM1_non_got = 1
+		GLCM2 = 1
+		GLCM2_non_got = 1
+		GLCM3 = 1
+		GLCM3_non_got = 1
+		GLCM4 = 1
+		GLCM4_non_got = 1
+		GLCM5 = 1
+		GLCM5_non_got = 1
+		GLCM_non_got = 1
+		GNSS1 = 1
+		GNSS2 = 1
+		GNSS3 = 1
+		GNSS4 = 1
+		GNSS5 = 1
+		HOL_marechaussee_support_tech = 1
+		Heavy_Anti_tank_0 = 1
+		Heavy_Anti_tank_1 = 1
+		Heavy_Anti_tank_2 = 1
+		ICBM = 1
+		ICBM1 = 1
+		ICBM2 = 1
+		ICBM3 = 1
+		ICBM4 = 1
+		ICBM5 = 1
+		IFV_1 = 1
+		IFV_2 = 1
+		IFV_3 = 1
+		IFV_4 = 1
+		IFV_5 = 1
+		IRBM1 = 1
+		IRBM2 = 1
+		IRBM3 = 1
+		IRBM4 = 1
+		IRBM5 = 1
 		KILLSAT1 = 1
 		KILLSAT2 = 1
-
-		# OLV chain (1965-1995)
+		KILLSAT3 = 1
+		KOR_celltrion_tech = 1
+		L_Strike_fighter1 = 1
+		L_Strike_fighter2 = 1
+		L_Strike_fighter3 = 1
+		MBT_1 = 1
+		MBT_2 = 1
+		MBT_3 = 1
+		MBT_4 = 1
+		MR_Fighter1 = 1
+		MR_Fighter2 = 1
+		MR_Fighter3 = 1
+		MR_Fighter4 = 1
+		MR_upgrade_1 = 1
+		NIRBM1 = 1
+		NIRBM2 = 1
+		NIRBM3 = 1
+		NIRBM4 = 1
 		OLV1 = 1
 		OLV2 = 1
 		OLV3 = 1
 		OLV4 = 1
-	}
-
-	### Missiles prereqs (pre-2005) ###
-	if = { limit = { has_dlc = "Gotterdammerung" }
-		set_technology = {
-			# Ballistic missile roots (1945-1995 prereqs for ICBM5/IRBM5/NIRBM4 @ 2005)
-			ballistic_missile = 1
-			ICBM = 1
-			ICBM1 = 1
-			ICBM2 = 1
-			ICBM3 = 1
-			ICBM4 = 1
-			IRBM = 1
-			IRBM1 = 1
-			IRBM2 = 1
-			IRBM3 = 1
-			IRBM4 = 1
-			NIRBM1 = 1
-			NIRBM2 = 1
-			NIRBM3 = 1
-			# Cruise missile chain (1945-1995 prereqs for GLCM5/TEL_7 @ 2005)
-			cruise_missile = 1
-			GLCM = 1
-			GLCM1 = 1
-			GLCM2 = 1
-			GLCM3 = 1
-			GLCM4 = 1
-			TEL_launched_missiles = 1
-			TEL_3 = 1
-			TEL_4 = 1
-			TEL_5 = 1
-			TEL_6 = 1
-			# SAM chain (1945-1995 prereqs for SAM4 @ 2005)
-			air_defense = 1
-			SAM = 1
-			SAM0 = 1
-			SAM1 = 1
-			SAM2 = 1
-			SAM3 = 1
-		}
-		else = {
-			set_technology = {
-				# Non-Gotterdammerung cruise missile chain (1945-1995 prereqs for GLCM5_non_got @ 2005)
-				cruise_missile_non_got = 1
-				GLCM_non_got = 1
-				GLCM1_non_got = 1
-				GLCM2_non_got = 1
-				GLCM3_non_got = 1
-				GLCM4_non_got = 1
-				TEL_launched_missiles_non_got = 1
-				TEL_3_non_got = 1
-				TEL_4_non_got = 1
-				TEL_5_non_got = 1
-				TEL_6_non_got = 1
-				# Non-Gotterdammerung SAM chain (1945-1975 prereqs for SAM2_non_got @ 1985 end of chain)
-				air_defense_non_got = 1
-				SAM_non_got = 1
-				SAM0_non_got = 1
-				SAM1_non_got = 1
-			}
-		}
-	}
-}
-
-
-### ===== YEAR-BASED TECHNOLOGY BLOCKS ===== ###
-
-# ─────────────────────────────────────────────
-# Technologies with start_year = 2005
-# ─────────────────────────────────────────────
-md2026_techs_2005 = {
-	set_technology = {
-		### Infantry ###
-		infantry_weapons4 = 1
-		util_vehicle_4 = 1
-		command_control_equipment3 = 1
-		land_Drone_equipment2 = 1
-		support_weapons4 = 1
-		special_forces5 = 1
-
-		### Anti-Tank ###
-		Anti_tank_2 = 1
-		Heavy_Anti_tank_2 = 1
-
-		### Engineering ###
-		early_ai_robotics = 1
-		humanoid_robot = 1
-		computing4 = 1
-		decryption4 = 1
-		encryption4 = 1
-		edge = 1
-		umts = 1
-
-		### Industry ###
-		industrial_production_of_nanofibers = 1
-		self-replicated_3D_printer = 1
-		human_genome_project = 1
-		cas9_gene_editing = 1
-		electrification_3 = 1
-		energy_efficiency4 = 1
-		advanced_renewables = 1
-		reactor3 = 1
-		construction4 = 1
-		excavation4 = 1
-		high_speed_rail = 1
-		limited_automated_harvesting_software = 1
-
-		### Space ###
-		GNSS5 = 1
-		COMSAT5 = 1
-		SPYSAT5 = 1
-		KILLSAT3 = 1
 		OLV5 = 1
-
-		### Naval ###
-		destroyer_hull_3 = 1
-		cruiser_hull_3 = 1
-		battleship_hull_2 = 1
+		Rec_tank_0 = 1
+		Rec_tank_1 = 1
+		Rec_tank_2 = 1
+		SAM0 = 1
+		SAM0_non_got = 1
+		SAM1 = 1
+		SAM1_non_got = 1
+		SAM2 = 1
+		SAM2_non_got = 1
+		SAM3 = 1
+		SAM4 = 1
+		SAM_non_got = 1
+		SPYSAT1 = 1
+		SPYSAT2 = 1
+		SPYSAT3 = 1
+		SPYSAT4 = 1
+		SPYSAT5 = 1
+		SP_Anti_Air_0 = 1
+		SP_Anti_Air_1 = 1
+		SP_Anti_Air_2 = 1
+		SP_Anti_Air_3 = 1
+		SP_Anti_Air_4 = 1
+		SP_R_arty_1 = 1
+		SP_R_arty_2 = 1
+		SP_R_arty_3 = 1
+		SP_R_arty_4 = 1
+		SP_arty_1 = 1
+		SP_arty_2 = 1
+		Strike_fighter1 = 1
+		Strike_fighter2 = 1
+		Strike_fighter3 = 1
+		Strike_fighter4 = 1
+		Strike_upgrade_1 = 1
+		TEL_3 = 1
+		TEL_3_non_got = 1
+		TEL_4 = 1
+		TEL_4_non_got = 1
+		TEL_5 = 1
+		TEL_5_non_got = 1
+		TEL_6 = 1
+		TEL_6_non_got = 1
+		TEL_7 = 1
+		TEL_7_non_got = 1
+		TEL_launched_missiles = 1
+		TEL_launched_missiles_non_got = 1
+		advanced_renewables = 1
+		ag_weapons_1 = 1
+		ag_weapons_2 = 1
+		air_assault_artillery = 1
+		air_defense = 1
+		air_weapons_1 = 1
+		air_weapons_2 = 1
+		airborne_armor = 1
+		aircraft_carrier_engineering = 1
+		aircraft_heli_engineering_1 = 1
+		aircraft_heli_engineering_2 = 1
 		aircraft_heli_engineering_3 = 1
+		armor_tech = 1
+		armor_tech_2 = 1
+		armor_tech_3 = 1
+		armoured_mass_assault = 1
+		artificial_intelligence_1 = 1
+		artificial_intelligence_2 = 1
+		artificial_intelligence_3 = 1
+		artificial_intelligence_4 = 1
+		artificial_intelligence_5 = 1
+		assault_gun_tech = 1
+		assault_gun_tech_2 = 1
+		attack_helicopter_2 = 1
+		attack_helicopter_3 = 1
+		attack_submarine_hull_1 = 1
+		attack_submarine_hull_2 = 1
+		attack_submarine_hull_3 = 1
+		automated_irrigation_systems = 1
+		avionics_1 = 1
+		avionics_2 = 1
+		awacs_1 = 1
+		awacs_2 = 1
+		awacs_plane1 = 1
+		ballistic_missile = 1
+		basic_computing = 1
+		battleship_hull_1 = 1
+		battleship_hull_2 = 1
+		beachhead_raiding_parties = 1
+		big_autocannon_tech = 1
+		big_autocannon_tech_2 = 1
+		body_armor_1 = 1
+		body_armor_2 = 1
+		camouflage_1 = 1
+		camouflage_2 = 1
+		camouflage_3 = 1
+		carrier_hull_1 = 1
+		carrier_hull_2 = 1
 		carrier_hull_3 = 1
+		cas1 = 1
+		cas2 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
+		cnc_equipment_3 = 1
+		cnc_equipment_4 = 1
+		combat_eng_equipment = 1
+		combined_arms = 1
+		composite_production_1 = 1
+		composite_production_2 = 1
+		composite_production_3 = 1
+		computing1 = 1
+		computing2 = 1
+		computing3 = 1
+		computing4 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		construction4 = 1
+		coordinated_combat_jumps = 1
+		corvette_hull_1 = 1
+		corvette_hull_2 = 1
+		corvette_hull_3 = 1
+		countermeasures_1 = 1
+		countermeasures_2 = 1
+		crispr_1 = 1
+		crispr_2 = 1
+		cruise_missile = 1
+		cruiser_hull_1 = 1
+		cruiser_hull_2 = 1
+		cruiser_hull_3 = 1
+		cv_awacs_plane1 = 1
+		dedicated_saboteurs = 1
+		defensive_systems = 1
+		defensive_systems_2 = 1
+		defensive_systems_3 = 1
+		destroyer_hull_1 = 1
+		destroyer_hull_2 = 1
+		destroyer_hull_3 = 1
+		diesel_engine_tech = 1
+		diesel_engine_tech_2 = 1
+		diesel_engine_tech_3 = 1
+		diesel_engine_tech_4 = 1
+		diesel_engine_tech_5 = 1
+		drone_1 = 1
+		drone_2 = 1
+		early_airframe_designs = 1
+		early_bomber = 1
+		early_fighter = 1
+		early_freight_locomotive = 1
+		early_guerilla_warfare = 1
+		early_high_speed_rail = 1
+		early_renewables = 1
+		early_weapons = 1
+		edge = 1
+		electric_engine_tech_1 = 1
+		electric_engine_tech_2 = 1
+		electrification_1 = 1
+		electrification_2 = 1
+		electrification_3 = 1
+		energy_efficiency = 1
+		energy_efficiency2 = 1
+		energy_efficiency3 = 1
+		energy_efficiency4 = 1
+		engines_2 = 1
+		era_tech = 1
+		era_tech_2 = 1
+		era_tech_3 = 1
+		excavation1 = 1
+		excavation2 = 1
+		excavation3 = 1
+		excavation4 = 1
+		fake_CAT_armor = 1
+		farming_data_analytic_softwares = 1
+		flying_wing_design = 1
+		frigate_hull_1 = 1
+		frigate_hull_2 = 1
+		frigate_hull_3 = 1
+		fuel_efficiency = 1
+		fuel_efficiency2 = 1
+		fuel_refining = 1
+		fuel_refining2 = 1
+		fuel_refining3 = 1
+		fuel_silos = 1
+		fwdswept_wing_design = 1
+		gen_3_large = 1
+		gen_3_light = 1
+		gen_3_medium = 1
+		gen_4_large = 1
+		gen_4_light = 1
+		gen_4_medium = 1
+		genetics_1 = 1
+		genetics_2 = 1
+		genetics_3 = 1
+		genetics_4 = 1
+		genetics_5 = 1
+		gprs = 1
+		gps_agricultural_applications = 1
+		gunship_1 = 1
+		gunship_2 = 1
+		heavy_frigate = 1
+		helicopter_operator_hull_1 = 1
+		helicopter_operator_hull_2 = 1
+		hid_tech_missile_1 = 1
+		hid_tech_missile_10 = 1
+		hid_tech_missile_2 = 1
+		hid_tech_missile_3 = 1
+		hid_tech_missile_4 = 1
+		hid_tech_missile_5 = 1
+		hid_tech_missile_6 = 1
+		hid_tech_missile_7 = 1
+		hid_tech_missile_8 = 1
+		hid_tech_missile_9 = 1
+		high_speed_rail = 1
+		improved_building_constructions_1 = 1
+		improved_building_constructions_2 = 1
+		improved_building_constructions_3 = 1
+		improved_renewables = 1
+		infantry_mass_assault = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
+		infantry_weapons_4 = 1
+		infantry_weapons_5 = 1
+		integrated_circuit = 1
+		integrated_transportation_system = 1
+		internal_weapons_1 = 1
+		internet1 = 1
+		internet2 = 1
+		internet3 = 1
+		land_drone_equipment_1 = 1
+		land_drone_equipment_tech_2 = 1
+		land_drone_equipment_type = 1
+		land_fort_building_1 = 1
+		land_fort_building_2 = 1
+		large_gun_tech = 1
+		limited_automated_harvesting_software = 1
+		marine_commandos = 1
+		marine_raider_groups = 1
+		mbt_tech = 1
+		mbt_tech_1 = 1
+		mbt_tech_2 = 1
+		mbt_tech_ops = 1
+		mech_militia = 1
+		medium_gun_tech = 1
+		medium_gun_tech_2 = 1
+		microchip_production_1 = 1
+		microchip_production_2 = 1
+		microchip_production_3 = 1
+		microprocessors = 1
+		missile_submarine_hull_1 = 1
+		missile_submarine_hull_2 = 1
+		missile_submarine_hull_3 = 1
+		nanofibers_1 = 1
+		nanofibers_2 = 1
+		nanofibers_3 = 1
+		nanofibers_4 = 1
+		nanofibers_5 = 1
+		naval_plane1 = 1
+		naval_plane2 = 1
+		naval_plane3 = 1
+		naval_weapons_1 = 1
+		naval_weapons_2 = 1
+		nera_armor_tech_1 = 1
+		nera_armor_tech_2 = 1
+		night_vision_1 = 1
+		night_vision_2 = 1
+		night_vision_3 = 1
+		nsb_AA_autocannon_1 = 1
+		nsb_AA_autocannon_2 = 1
+		nsb_AA_upgrade_1 = 1
+		nsb_AA_upgrade_2 = 1
+		nsb_Anti_Air_1 = 1
+		nsb_Anti_Air_2 = 1
+		nsb_Arty_upgrade_1 = 1
+		nsb_Arty_upgrade_2 = 1
+		nsb_SHORAD_missile_1 = 1
+		nsb_SHORAD_missile_2 = 1
+		nsb_artillery_1 = 1
+		nsb_artillery_2 = 1
+		nsb_atgm_tech_2 = 1
+		nsb_atgm_tech_3 = 1
+		nsb_attack_helicopter_tech_2 = 1
+		nsb_attack_helicopter_tech_3 = 1
+		nsb_dual_role_missile_1 = 1
+		nsb_dual_role_missile_2 = 1
+		nsb_engine_tech_2 = 1
+		nsb_engine_tech_3 = 1
+		nsb_gun_pods_tech_2 = 1
+		nsb_gun_pods_tech_3 = 1
+		nsb_heavy_atgm_tech_2 = 1
+		nsb_heavy_atgm_tech_3 = 1
+		nsb_light_nose_gun_tech_2 = 1
+		nsb_light_nose_gun_tech_3 = 1
+		nsb_multiple_atgm_tech_2 = 1
+		nsb_multiple_atgm_tech_3 = 1
+		nsb_rocket_pods_tech_2 = 1
+		nsb_rocket_pods_tech_3 = 1
+		nsb_transport_helicopter_1 = 1
+		nsb_transport_helicopter_2 = 1
+		nsb_transport_helicopter_3 = 1
+		nuclear_engines = 1
+		nuclear_technology = 1
+		pathfinders = 1
+		patrol_boat_hull_1_tech = 1
+		patrol_boat_hull_2_tech = 1
+		patrol_boats = 1
+		post_conventional_rail = 1
+		printing_1 = 1
+		printing_2 = 1
+		printing_3 = 1
+		printing_4 = 1
+		printing_5 = 1
+		production_line_improvements_1 = 1
+		production_line_improvements_2 = 1
+		production_line_improvements_3 = 1
+		radar = 1
+		rangers = 1
+		reactor1 = 1
+		reactor2 = 1
+		reactor3 = 1
+		redundant_1 = 1
+		redundant_2 = 1
+		refueling_1 = 1
+		refueling_2 = 1
+		renewables = 1
+		robotics_1 = 1
+		small_autocannon_tech = 1
+		small_autocannon_tech_2 = 1
+		small_medium_gun_tech = 1
+		small_medium_gun_tech_2 = 1
+		small_medium_gun_tech_3 = 1
+		special_forces_tech_1 = 1
+		special_forces_tech_2 = 1
+		special_forces_tech_3 = 1
+		special_forces_tech_4 = 1
+		special_forces_tech_5 = 1
+		special_mad_1 = 1
+		special_mad_2 = 1
+		squad_automatic_weapon = 1
+		stealth_tech_1 = 1
+		strategic_bomber1 = 1
+		strategic_bomber2 = 1
+		strategic_bomber3 = 1
+		stronghold_building_1 = 1
+		suicide_drone_1 = 1
+		superior_firepower = 1
+		support_weapons = 1
+		support_weapons2 = 1
+		support_weapons3 = 1
+		support_weapons4 = 1
+		tandem_charge_warheads = 1
+		tank_ammo_1 = 1
+		tank_ammo_2 = 1
+		tank_ammo_3 = 1
+		tank_components_tech = 1
+		tank_components_tech_2 = 1
+		tank_components_tech_3 = 1
+		tech_arty_1 = 1
+		tech_arty_2 = 1
+		tech_combat_radar_1 = 1
 		tech_combat_radar_2 = 1
+		tech_combat_radar_3 = 1
+		tech_combat_sonar_1 = 1
 		tech_combat_sonar_2 = 1
+		tech_combat_sonar_3 = 1
+		tech_combat_support_systems = 1
+		tech_diesel_power_systems_1 = 1
+		tech_diesel_power_systems_2 = 1
+		tech_early_naval_weapon_systems = 1
+		tech_fire_control_1 = 1
+		tech_fire_control_2 = 1
+		tech_landing_craft_1 = 1
+		tech_landing_craft_2 = 1
+		tech_landing_craft_3 = 1
+		tech_landing_craft_4 = 1
+		tech_light_guns_1 = 1
+		tech_light_guns_2 = 1
+		tech_naval_systems_engineering = 1
+		tech_naval_weapon_systems = 1
+		tech_nuclear_power_systems_1 = 1
+		tech_nuclear_power_systems_2 = 1
+		tech_point_defense_chain_gun = 1
+		tech_point_defense_system_1 = 1
+		tech_point_defense_system_2 = 1
 		tech_point_defense_system_3 = 1
+		tech_power_systems_1 = 1
+		tech_power_systems_2 = 1
+		tech_radar_jammer_1 = 1
+		tech_submarine_engineering_1 = 1
+		tech_submarine_engineering_2 = 1
+		tech_submarine_engineering_3 = 1
+		tech_torpedoes_1 = 1
+		tech_torpedoes_2 = 1
+		tech_turret_missiles_aa_1 = 1
+		tech_turret_missiles_aa_2 = 1
+		tech_turret_missiles_aa_3 = 1
+		tech_turret_missiles_surface_1 = 1
+		tech_turret_missiles_surface_2 = 1
+		tech_turret_missiles_surface_3 = 1
+		tech_vls_aa_1 = 1
+		tech_vls_aa_2 = 1
+		tech_vls_aa_3 = 1
+		tech_vls_surface_1 = 1
+		tech_vls_surface_2 = 1
+		tech_vls_surface_3 = 1
+		tgp_recon_1 = 1
+		tgp_recon_2 = 1
+		transport_helicopter_2 = 1
+		transport_helicopter_3 = 1
+		transport_plane1 = 1
+		transport_plane2 = 1
+		transport_plane3 = 1
+		turbine_engine_tech = 1
+		turbine_engine_tech_2 = 1
+		turbine_engine_tech_3 = 1
+		turbine_engine_tech_4 = 1
+		ukr_mykolayiv_cnc = 1
+		ukr_pivdenne_communication_satellite = 1
+		ukr_pivdenne_navigation_satellite = 1
+		ukr_pivdenne_new_olv = 1
+		ukr_pivdenne_recons_satellite = 1
+		ukr_pivdenne_res_satellite = 1
+		ukr_pivdenne_sov_olv = 1
+		ukr_zhytomyr_art = 1
+		ukr_zhytomyr_combat_maintenance_company = 1
+		ukr_zhytomyr_combat_service_support_company = 1
+		ukr_zhytomyr_engi_h = 1
+		umts = 1
+		util_vehicle_1 = 1
+		util_vehicle_2 = 1
+		util_vehicle_3 = 1
+		util_vehicle_4 = 1
+		util_vehicle_5 = 1
+		utility_scale_battery_storage = 1
+		variable_wing_design = 1
+		wifi = 1
+		zombietech = 1
 	}
-
-	### Missiles (Gotterdammerung DLC) ###
 	if = { limit = { has_dlc = "Gotterdammerung" }
 		set_technology = {
-			ICBM5 = 1
-			IRBM5 = 1
-			NIRBM4 = 1
-			TEL_7 = 1
-			GLCM5 = 1
-			SAM4 = 1
-		}
-		else = {
-			set_technology = {
-				GLCM5_non_got = 1
-				TEL_7_non_got = 1
-				SAM2_non_got = 1
-			}
+		GLCM = 1
+		IRBM = 1
+		SAM = 1
 		}
 	}
-
-	### Armor & Land Systems (No Step Back DLC) ###
 	if = { limit = { has_dlc = "No Step Back" }
 		set_technology = {
-			# Tank designer modules
-			era_tech_3 = 1
-			armor_tech_3 = 1
-			modern_ammo = 1
-			diesel_engine_tech_5 = 1
-			turbine_engine_tech_4 = 1
-			small_medium_gun_tech_3 = 1
-			nera_armor_tech_2 = 1
-			# NSB Artillery
-			nsb_artillery_ammo_3 = 1
-			nsb_special_ammo_2 = 1
-			nsb_gun_technology_3 = 1
-			nsb_fire_modes_2 = 1
-			nsb_artillery_2 = 1
-			# NSB Anti-Air
-			nsb_SHORAD_missile_2 = 1
-			nsb_dual_role_missile_2 = 1
-			nsb_AA_autocannon_2 = 1
-			nsb_Anti_Air_2 = 1
-			# NSB Helicopters
-			nsb_attack_helicopter_tech_3 = 1
-			nsb_transport_helicopter3 = 1
-			nsb_engine_tech_3 = 1
-			nsb_atgm_tech_3 = 1
-			nsb_multiple_atgm_tech_3 = 1
-			nsb_heavy_atgm_tech_3 = 1
-			nsb_rocket_pods_tech_3 = 1
-			nsb_gun_pods_tech_3 = 1
-			nsb_light_nose_gun_tech_3 = 1
-			nsb_drone_tech_1 = 1
-		}
-		else = {
-			set_technology = {
-				# Non-NSB armor
-				APC_5 = 1
-				IFV_5 = 1
-				Rec_tank_2 = 1
-				# Non-NSB artillery
-				artillery_2 = 1
-				SP_arty_2 = 1
-				SP_R_arty_2 = 1
-				# Non-NSB anti-air
-				Anti_Air_2 = 1
-				SP_Anti_Air_2 = 1
-				# Non-NSB helicopters
-				attack_helicopter3 = 1
-				transport_helicopter3 = 1
-			}
+		helo_ops_tech = 1
+		nsb_AA_autocannon_0 = 1
+		nsb_Anti_Air_0 = 1
+		nsb_SHORAD_missile_0 = 1
+		nsb_artillery_0 = 1
+		nsb_artillery_ammo_1 = 1
+		nsb_artillery_ammo_2 = 1
+		nsb_artillery_ammo_3 = 1
+		nsb_atgm_tech_1 = 1
+		nsb_attack_helicopter_tech_1 = 1
+		nsb_barrel_conversions = 1
+		nsb_defense_tech_1 = 1
+		nsb_defense_tech_2 = 1
+		nsb_drone_tech_1 = 1
+		nsb_dual_role_missile_0 = 1
+		nsb_engine_tech_1 = 1
+		nsb_fire_modes_1 = 1
+		nsb_fire_modes_2 = 1
+		nsb_gun_pods_tech_1 = 1
+		nsb_gun_technology_1 = 1
+		nsb_gun_technology_2 = 1
+		nsb_gun_technology_3 = 1
+		nsb_heavy_atgm_tech_1 = 1
+		nsb_light_nose_gun_tech_1 = 1
+		nsb_multiple_atgm_tech_1 = 1
+		nsb_rocket_pods_tech_1 = 1
+		nsb_special_ammo_0 = 1
+		nsb_special_ammo_1 = 1
+		nsb_special_ammo_2 = 1
 		}
 	}
-
-	### Aircraft (By Blood Alone DLC) ###
-	if = { limit = { has_dlc = "By Blood Alone" }
+	if = { limit = { NOT = { has_dlc = "Gotterdammerung" } }
 		set_technology = {
-			awacs_2 = 1
-			drone_2 = 1
-			stealth_tech_1 = 1
-			refueling_2 = 1
+		air_defense_non_got = 1
+		cruise_missile_non_got = 1
+		}
+	}
+	if = { limit = { NOT = { has_dlc = "La Resistance" } }
+		set_technology = {
+		decryption1 = 1
+		decryption2 = 1
+		decryption3 = 1
+		decryption4 = 1
+		encryption1 = 1
+		encryption2 = 1
+		encryption3 = 1
+		encryption4 = 1
+		}
+	}
+	if = { limit = { NOT = { has_dlc = "No Step Back" } }
+		set_technology = {
+		Anti_Air_0 = 1
+		SP_R_arty_0 = 1
+		SP_arty_0 = 1
+		attack_helicopter_1 = 1
+		tech_arty_0 = 1
+		transport_helicopter_1 = 1
 		}
 	}
 }
 
-# ─────────────────────────────────────────────
-# Technologies with start_year = 2010
-# ─────────────────────────────────────────────
 md2026_techs_2010 = {
 	set_technology = {
-		### Infantry ###
-		body_armor_2010 = 1
-
-		### Engineering ###
-		advanced_industrial_robotics = 1
-		advanced_ai = 1
-		internet4 = 1
-		hsupa = 1
-
-		### Industry ###
-		nanofibers_in_medicine = 1
-		commercial_nanomanufacturing = 1
-		gene_targeting_pesticides = 1
-		tracrrna = 1
-		utility_scale_battery_storage2 = 1
-		fuel_efficiency3 = 1
-		energy_efficiency5 = 1
-		modern_renewables = 1
-		fuel_refining4 = 1
-		electrification_4 = 1
-		construction5 = 1
-		excavation5 = 1
-		land_fort_building_3 = 1
-		modern_high_speed_rail = 1
-		satellite_based_agricultural_planning = 1
-
-		### Naval ###
-		corvette_hull_4 = 1
-		stealth_corvette_hull_1 = 1
-		frigate_hull_4 = 1
-		stealth_frigate_hull_1 = 1
+		CZE_el_engine_tech = 1
+		CZE_engine_tech_8 = 1
+		artificial_intelligence_6 = 1
 		attack_submarine_hull_4 = 1
+		body_armor_3 = 1
+		construction5 = 1
+		corvette_hull_4 = 1
+		crispr_3 = 1
+		delta_wing_design = 1
+		diamond_wing_design = 1
+		electrification_4 = 1
+		energy_efficiency5 = 1
+		engines_3 = 1
+		excavation5 = 1
+		frigate_hull_4 = 1
+		fuel_efficiency3 = 1
+		fuel_refining4 = 1
+		genetics_6 = 1
+		hsupa = 1
+		internet4 = 1
+		land_fort_building_3 = 1
 		missile_submarine_hull_4 = 1
-		tech_torpedoes_2 = 1
-	}
-
-	### Aircraft (BBA) ###
-	if = { limit = { has_dlc = "By Blood Alone" }
-		set_technology = {
-			suicide_drone_2 = 1
-			fwdswept_wing_design = 1
-			diamond_wing_design = 1
-			engines_3 = 1
-		}
+		modern_high_speed_rail = 1
+		modern_renewables = 1
+		nanofibers_6 = 1
+		nsb_Arty_upgrade_3 = 1
+		printing_6 = 1
+		robotics_2 = 1
+		satellite_based_agricultural_planning = 1
+		stealth_corvette_hull_1 = 1
+		stealth_frigate_hull_1 = 1
+		suicide_drone_2 = 1
+		tech_torpedoes_3 = 1
+		utility_scale_battery_storage2 = 1
 	}
 }
 
-# ─────────────────────────────────────────────
-# Technologies with start_year = 2015
-# ─────────────────────────────────────────────
 md2026_techs_2015 = {
 	set_technology = {
-		### Infantry ###
-		infantry_weapons5 = 1
-		util_vehicle_5 = 1
-		night_vision_4 = 1
-		command_control_equipment4 = 1
-		land_Drone_equipment3 = 1
-		exoskeleton_1 = 1
-		support_weapons5 = 1
-
-		### Engineering ###
-		smart_drones = 1
-		modern_deep_learning = 1
+		APC_6 = 1
+		AS_Fighter5 = 1
+		AS_upgrade_2 = 1
+		Air_UAV3 = 1
+		COMSAT6 = 1
+		CZE_engine_tech_5 = 1
+		CZE_engine_tech_6 = 1
+		GLCM6 = 1
+		GLCM6_non_got = 1
+		GNSS6 = 1
+		HSCM = 1
+		HSCM_non_got = 1
+		ICBM6 = 1
+		IFV_6 = 1
+		IRBM6 = 1
+		KILLSAT4 = 1
+		L_Strike_fighter4 = 1
+		MBT_5 = 1
+		MR_Fighter5 = 1
+		MR_upgrade_2 = 1
+		NIRBM5 = 1
+		OLV6 = 1
+		Rec_tank_3 = 1
+		SAM5 = 1
+		SPYSAT6 = 1
+		Strike_fighter5 = 1
+		Strike_upgrade_2 = 1
+		artificial_intelligence_7 = 1
+		assault_gun_tech_3 = 1
+		attack_helicopter_4 = 1
+		awacs_plane2 = 1
+		big_autocannon_tech_3 = 1
+		cas3 = 1
+		cnc_equipment_5 = 1
+		composite_production_4 = 1
 		computing5 = 1
+		construction6 = 1
+		cv_awacs_plane2 = 1
+		defensive_systems_4 = 1
+		diesel_engine_tech_6 = 1
+		electrification_5 = 1
+		energy_efficiency6 = 1
+		excavation6 = 1
+		exoskeleton_1 = 1
+		freight_locomotive = 1
+		gen_5_large = 1
+		gen_5_light = 1
+		gen_5_medium = 1
+		genetics_7 = 1
+		improved_building_constructions_4 = 1
+		improved_modern_renewables = 1
+		infantry_weapons_6 = 1
+		land_drone_equipment_tech_3 = 1
+		large_gun_tech_2 = 1
+		lte = 1
+		medium_gun_tech_3 = 1
+		microchip_production_4 = 1
+		nanofibers_7 = 1
+		naval_plane4 = 1
+		night_vision_4 = 1
+		nsb_atgm_tech_4 = 1
+		nsb_attack_helicopter_tech_4 = 1
+		nsb_engine_tech_4 = 1
+		nsb_gun_pods_tech_4 = 1
+		nsb_heavy_atgm_tech_4 = 1
+		nsb_multiple_atgm_tech_4 = 1
+		nsb_rocket_pods_tech_4 = 1
+		nsb_transport_helicopter_4 = 1
+		printing_7 = 1
+		production_line_improvements_4 = 1
+		programmable_harvesters = 1
+		reactor4 = 1
+		robotics_3 = 1
+		small_autocannon_tech_3 = 1
+		stealth_destroyer_hull_1 = 1
+		strategic_bomber4 = 1
+		support_weapons5 = 1
+		tank_components_tech_4 = 1
+		tech_air_anti_ship_drone_1 = 1
+		tech_air_hypersonic_engine_upgrade_1 = 1
+		tech_anti_torpedoes_1 = 1
+		tech_diesel_power_systems_3 = 1
+		tech_fire_control_3 = 1
+		tech_landing_craft_5 = 1
+		tech_naval_recon_drones_1 = 1
+		tech_nuclear_power_systems_3 = 1
+		tech_power_systems_3 = 1
+		tech_rail_guns_1 = 1
+		tech_submarine_engineering_4 = 1
+		tech_turret_missiles_aa_4 = 1
+		tech_turret_missiles_drone_1 = 1
+		tech_turret_missiles_surface_4 = 1
+		tech_vls_aa_4 = 1
+		tech_vls_surface_4 = 1
+		transport_helicopter_4 = 1
+		transport_plane4 = 1
+		turbine_engine_tech_5 = 1
+		util_vehicle_6 = 1
+		wimax = 1
+	}
+	if = { limit = { has_dlc = "No Step Back" }
+		set_technology = {
+		nsb_defense_tech_3 = 1
+		nsb_drone_tech_2 = 1
+		}
+	}
+	if = { limit = { NOT = { has_dlc = "La Resistance" } }
+		set_technology = {
 		decryption5 = 1
 		encryption5 = 1
-		lte = 1
-		wimax = 1
-
-		### Industry ###
-		centrifugal_spinning = 1
-		modern_3D_printing = 1
-		synthetic_life = 1
-		energy_efficiency6 = 1
-		improved_modern_renewables = 1
-		electrification_5 = 1
-		reactor4 = 1
-		construction6 = 1
-		excavation6 = 1
-		freight_locomotive = 1
-		programmable_harvesters = 1
-
-		### Space ###
-		GNSS6 = 1
-		COMSAT6 = 1
-		SPYSAT6 = 1
-		KILLSAT4 = 1
-		OLV6 = 1
-
-		### Naval ###
-		stealth_destroyer_hull_1 = 1
-		tech_submarine_engineering_3 = 1
-		tech_power_systems_2 = 1
-		tech_nuclear_power_systems_2 = 1
-		tech_fire_control_2 = 1
-		tech_rail_guns = 1
-		tech_turret_missiles_surface_3 = 1
-		tech_turret_missiles_aa_3 = 1
-		tech_vls_surface_3 = 1
-		tech_vls_aa_3 = 1
-		tech_specialized_protective_equipment = 1
-	}
-
-	### Missiles (Gotterdammerung) ###
-	if = { limit = { has_dlc = "Gotterdammerung" }
-		set_technology = {
-			ICBM6 = 1
-			IRBM6 = 1
-			NIRBM5 = 1
-			HSCM = 1
-			GLCM6 = 1
-			SAM5 = 1
-		}
-		else = {
-			set_technology = {
-				GLCM6_non_got = 1
-				HSCM_non_got = 1
-			}
-		}
-	}
-
-	### NSB DLC ###
-	if = { limit = { has_dlc = "No Step Back" }
-		set_technology = {
-			# Tank designer
-			tank_components_tech_4 = 1
-			defensive_systems_4 = 1
-			diesel_engine_tech_6 = 1
-			turbine_engine_tech_5 = 1
-			medium_gun_tech_3 = 1
-			large_gun_tech_2 = 1
-			small_autocannon_tech_3 = 1
-			big_autocannon_tech_3 = 1
-			assault_gun_tech_3 = 1
-			# NSB Helicopters
-			nsb_attack_helicopter_tech_4 = 1
-			nsb_transport_helicopter4 = 1
-			nsb_engine_tech_4 = 1
-			nsb_atgm_tech_4 = 1
-			nsb_multiple_atgm_tech_4 = 1
-			nsb_heavy_atgm_tech_4 = 1
-			nsb_rocket_pods_tech_4 = 1
-			nsb_gun_pods_tech_4 = 1
-			nsb_defense_tech_3 = 1
-			nsb_drone_tech_2 = 1
-		}
-		else = {
-			set_technology = {
-				# Non-NSB armor
-				MBT_5 = 1
-				APC_6 = 1
-				IFV_6 = 1
-				Rec_tank_3 = 1
-				# Non-NSB helicopters
-				attack_helicopter4 = 1
-				transport_helicopter4 = 1
-			}
-		}
-	}
-
-	### BBA DLC ###
-	if = { limit = { has_dlc = "By Blood Alone" }
-		set_technology = {
-			gen_5_light = 1
-			gen_5_medium = 1
-			gen_5_large = 1
-		}
-		else = {
-			set_technology = {
-				# Non-BBA fighters
-				AS_Fighter4 = 1
-				MR_Fighter4 = 1
-				Strike_fighter4 = 1
-				L_Strike_fighter3 = 1
-				Air_UAV2 = 1
-				# Non-BBA bombers/transport
-				strategic_bomber4 = 1
-				transport_plane4 = 1
-				naval_plane4 = 1
-				cas3 = 1
-				awacs_plane2 = 1
-				cv_awacs_plane2 = 1
-			}
 		}
 	}
 }
 
-# ─────────────────────────────────────────────
-# Technologies with start_year = 2020
-# ─────────────────────────────────────────────
 md2026_techs_2020 = {
 	set_technology = {
-		### Infantry ###
-		camouflage4 = 1
-
-		### Anti-Tank ###
 		AT_upgrade_3 = 1
-
-		### Engineering ###
-		fully_automated_drones = 1
-		human_imitation_ai = 1
-		internet5 = 1
-		lifi = 1
-
-		### Industry ###
-		safe_cloning = 1
-		crispr_treatment_experimentation = 1
-		utility_scale_battery_storage3 = 1
-		fuel_efficiency4 = 1
+		CZE_el_engine_tech_2 = 1
+		CZE_engine_tech_10 = 1
+		CZE_engine_tech_9 = 1
 		advanced_modern_renewables = 1
-		fuel_refining5 = 1
-		electrification_6 = 1
-		reactor5 = 1
-		land_fort_building_4 = 1
-		improved_harvesting_automation = 1
-
-		### Space ###
-		part_reusable_OLV6 = 1
-
-		### Naval ###
-		helicopter_operator_hull_3 = 1
+		ag_weapons_3 = 1
+		air_tech_pdl_1 = 1
+		air_weapons_3 = 1
+		artificial_intelligence_8 = 1
+		avionics_3 = 1
 		battleship_hull_3 = 1
-		tech_combat_radar_3 = 1
-		tech_combat_sonar_3 = 1
+		camouflage_4 = 1
+		countermeasures_3 = 1
+		crispr_4 = 1
+		electrification_6 = 1
+		fuel_efficiency4 = 1
+		fuel_refining5 = 1
+		genetics_8 = 1
+		helicopter_operator_hull_3 = 1
+		improved_harvesting_automation = 1
+		internet5 = 1
+		land_fort_building_4 = 1
+		lifi = 1
+		mbt_tech_3 = 1
+		naval_weapons_3 = 1
+		part_reusable_OLV6 = 1
+		reactor5 = 1
+		robotics_4 = 1
+		solar_engines_1 = 1
+		tech_combat_radar_4 = 1
+		tech_combat_sonar_4 = 1
+		tech_drone_torpedoes_1 = 1
+		tech_nuclear_torpedoes_1 = 1
 		tech_point_defense_system_4 = 1
-		tech_torpedoes_3 = 1
-	}
-
-	### NSB DLC ###
-	if = { limit = { has_dlc = "No Step Back" }
-		set_technology = {
-			mbt_tech_3 = 1
-			nsb_Arty_upgrade_4 = 1
-		}
-		else = {
-			set_technology = {
-				Arty_upgrade_4 = 1
-			}
-		}
-	}
-
-	### BBA DLC ###
-	if = { limit = { has_dlc = "By Blood Alone" }
-		set_technology = {
-			avionics_3 = 1
-			solar_engines_1 = 1
-			air_weapons_3 = 1
-			countermeasures_3 = 1
-			naval_weapons_3 = 1
-			ag_weapons_3 = 1
-		}
-		else = {
-			set_technology = {
-				AS_upgrade_2 = 1
-				MR_upgrade_2 = 1
-				Strike_upgrade_2 = 1
-			}
-		}
+		tech_radar_jammer_2 = 1
+		tech_torpedoes_4 = 1
+		utility_scale_battery_storage3 = 1
 	}
 }
 
-# ─────────────────────────────────────────────
-# Technologies with start_year = 2025 (standard)
-# ─────────────────────────────────────────────
 md2026_techs_2025 = {
 	set_technology = {
-		### Infantry ###
-		infantry_weapons6 = 1
-		util_vehicle_6 = 1
-		command_control_equipment5 = 1
-		land_Drone_equipment4 = 1
-
-		### Anti-Tank ###
+		APC_7 = 1
+		AS_Fighter6 = 1
+		Air_UAV4 = 1
+		Anti_Air_3 = 1
 		Anti_tank_3 = 1
-		Heavy_Anti_tank_3 = 1
-
-		### Industry ###
-		energy_efficiency7 = 1
-		electrification_7 = 1
-		reactor6 = 1
-		construction7 = 1
-		excavation7 = 1
-		early_maglev_rail = 1
-		robotic_harvesters = 1
-
-		### Space ###
-		GNSS7 = 1
+		Arty_upgrade_4 = 1
 		COMSAT7 = 1
-		SPYSAT7 = 1
-		OLV7 = 1
-
-		### Naval ###
-		corvette_hull_5 = 1
-		frigate_hull_5 = 1
-		destroyer_hull_4 = 1
-		cruiser_hull_4 = 1
-		carrier_hull_4 = 1
-		attack_submarine_hull_5 = 1
-		missile_submarine_hull_5 = 1
-		tech_light_guns_2 = 1
-		tech_advanced_landing_craft = 1
-	}
-
-	### Missiles (Gotterdammerung) ###
-	if = { limit = { has_dlc = "Gotterdammerung" }
-		set_technology = {
-			ICBM7 = 1
-			IRBM7 = 1
-			NIRBM6 = 1
-			HSCM1 = 1
-			GLCM7 = 1
-			SAM6 = 1
-		}
-		else = {
-			set_technology = {
-				GLCM7_non_got = 1
-				HSCM1_non_got = 1
-			}
-		}
-	}
-
-	### NSB DLC ###
-	if = { limit = { has_dlc = "No Step Back" }
-		set_technology = {
-			# Tank designer
-			era_tech_4 = 1
-			small_medium_gun_tech_4 = 1
-			small_autocannon_tech_4 = 1
-			big_autocannon_tech_4 = 1
-			assault_gun_tech_4 = 1
-			# NSB Artillery
-			nsb_artillery_ammo_4 = 1
-			nsb_special_ammo_3 = 1
-			nsb_gun_technology_4 = 1
-			nsb_fire_modes_3 = 1
-			nsb_artillery_3 = 1
-			# NSB Anti-Air
-			nsb_SHORAD_missile_3 = 1
-			nsb_dual_role_missile_3 = 1
-			nsb_AA_autocannon_3 = 1
-			nsb_Anti_Air_3 = 1
-			nsb_AA_upgrade_3 = 1
-		}
-		else = {
-			set_technology = {
-				# Non-NSB armor
-				MBT_7 = 1
-				APC_7 = 1
-				IFV_7 = 1
-				Rec_tank_4 = 1
-				# Non-NSB artillery
-				artillery_3 = 1
-				SP_arty_3 = 1
-				SP_R_arty_3 = 1
-				# Non-NSB anti-air
-				Anti_Air_3 = 1
-				SP_Anti_Air_3 = 1
-			}
-		}
-	}
-
-	### BBA DLC ###
-	if = { limit = { has_dlc = "By Blood Alone" }
-		set_technology = {
-			awacs_3 = 1
-			drone_3 = 1
-		}
-		else = {
-			set_technology = {
-				# Non-BBA fighters
-				AS_Fighter5 = 1
-				MR_Fighter5 = 1
-				Strike_fighter5 = 1
-				L_Strike_fighter4 = 1
-				Air_UAV3 = 1
-				# Non-BBA bombers/transport
-				strategic_bomber5 = 1
-				transport_plane5 = 1
-				naval_plane5 = 1
-				cas4 = 1
-			}
-		}
-	}
-}
-
-# ─────────────────────────────────────────────
-# Advanced 2025 technologies (Tier 1 only)
-# ─────────────────────────────────────────────
-md2026_techs_2025_advanced = {
-	set_technology = {
-		### Infantry (cutting-edge) ###
-		augmented_vision_1 = 1
-		exoskeleton_2 = 1
-		rc_fire_support_drone = 1
-
-		### Industry (cutting-edge) ###
-		t3D_printed_nanofibers = 1
-		crispr_treatment = 1
-
-		### Space ###
+		GLCM7 = 1
+		GLCM7_non_got = 1
+		GNSS7 = 1
+		HSCM1 = 1
+		HSCM1_non_got = 1
+		Heavy_Anti_tank_3 = 1
+		ICBM7 = 1
+		IFV_7 = 1
+		IRBM7 = 1
 		KILLSAT5 = 1
-
-		### Engineering ###
-		nanorobotics = 1
-
-		### Naval (stealth) ###
+		L_Strike_fighter5 = 1
+		MBT_7 = 1
+		MR_Fighter6 = 1
+		NIRBM6 = 1
+		OLV7 = 1
+		Rec_tank_4 = 1
+		SAM6 = 1
+		SPYSAT7 = 1
+		SP_arty_3 = 1
+		Strike_fighter6 = 1
+		attack_submarine_hull_5 = 1
+		augmented_vision_1 = 1
+		awacs_3 = 1
+		carrier_hull_4 = 1
+		cas4 = 1
+		cnc_equipment_6 = 1
+		construction7 = 1
+		corvette_hull_5 = 1
+		cruiser_hull_4 = 1
+		destroyer_hull_4 = 1
+		drone_3 = 1
+		early_maglev_rail = 1
+		electric_engine_tech_3 = 1
+		electrification_7 = 1
+		energy_efficiency7 = 1
+		era_tech_4 = 1
+		excavation7 = 1
+		exoskeleton_2 = 1
+		frigate_hull_5 = 1
+		genetics_9 = 1
+		improved_building_constructions_5 = 1
+		infantry_weapons_7 = 1
+		internal_weapons_2 = 1
+		land_drone_equipment_4 = 1
+		microchip_production_5 = 1
+		missile_submarine_hull_5 = 1
+		naval_plane5 = 1
+		nsb_AA_autocannon_3 = 1
+		nsb_AA_upgrade_3 = 1
+		nsb_Anti_Air_3 = 1
+		nsb_SHORAD_missile_3 = 1
+		nsb_artillery_3 = 1
+		nsb_dual_role_missile_3 = 1
+		printing_8 = 1
+		production_line_improvements_5 = 1
+		rapid_dragon = 1
+		rc_fire_support_drone = 1
+		robotic_harvesters = 1
+		robotics_5 = 1
+		small_medium_gun_tech_4 = 1
+		special_mad_3 = 1
 		stealth_corvette_hull_2 = 1
 		stealth_frigate_hull_2 = 1
-		tech_rail_guns_1 = 1
+		stealth_tech_2 = 1
+		strategic_bomber5 = 1
+		tank_ammo_4 = 1
+		tech_arty_3 = 1
+		tech_fusion_power_systems_1 = 1
+		tech_landing_craft_6 = 1
+		tech_light_guns_3 = 1
+		tech_naval_recon_drones_2 = 1
+		tech_rail_guns_2 = 1
+		tech_tank_nuclear_engine_1 = 1
+		tgp_recon_3 = 1
+		transport_plane5 = 1
+		util_vehicle_7 = 1
 	}
-
-	### NSB DLC ###
 	if = { limit = { has_dlc = "No Step Back" }
 		set_technology = {
-			near_future_ammo = 1
-			turbine_engine_tech_6 = 1
-			electric_engine_tech_3 = 1
-		}
-	}
-
-	### BBA DLC ###
-	if = { limit = { has_dlc = "By Blood Alone" }
-		set_technology = {
-			stealth_tech_2 = 1
-			internal_weapons_2 = 1
-			rapid_dragon = 1
-			special_mad_3 = 1
-			tgp_recon_3 = 1
+		nsb_artillery_ammo_4 = 1
+		nsb_drone_artillery_ammo_1 = 1
+		nsb_fire_modes_3 = 1
+		nsb_gun_technology_4 = 1
+		nsb_special_ammo_3 = 1
 		}
 	}
 }
 
+md2026_techs_2026 = {
+}
 
-### ===== TIER COMPOSITION EFFECTS ===== ###
-
-# Tier 1: Superpowers (all through 2025 + cutting edge)
-# Countries: USA, SOV, CHI
 md2026_tier1_2026_techs = {
-	md2026_techs_prereqs = yes
 	md2026_techs_2005 = yes
 	md2026_techs_2010 = yes
 	md2026_techs_2015 = yes
 	md2026_techs_2020 = yes
 	md2026_techs_2025 = yes
-	md2026_techs_2025_advanced = yes
+	md2026_techs_2026 = yes
 }
 
-# Tier 2: Major military powers (all through 2025)
-# Countries: ENG, FRA, GER, JAP, KOR, ISR, ITA, RAJ, AST, TUR, CAN
 md2026_tier2_2026_techs = {
-	md2026_techs_prereqs = yes
 	md2026_techs_2005 = yes
 	md2026_techs_2010 = yes
 	md2026_techs_2015 = yes
@@ -1229,29 +943,20 @@ md2026_tier2_2026_techs = {
 	md2026_techs_2025 = yes
 }
 
-# Tier 3: Modern mid-tier militaries (all through 2020)
-# Countries: POL, SPR, HOL, NOR, SWE, FIN, UKR, GRE, DEN, BEL, TAI, SAU, UAE, PAK, BRA, SAF, POR, EGY
 md2026_tier3_2026_techs = {
-	md2026_techs_prereqs = yes
 	md2026_techs_2005 = yes
 	md2026_techs_2010 = yes
 	md2026_techs_2015 = yes
 	md2026_techs_2020 = yes
 }
 
-# Tier 4: Regional/developing militaries (all through 2015)
-# Countries: ROM, NKO, PER, CZE, HUN, SER, BUL, CRO, BRM, KAZ, BLR, GEO, ARM, EST, LAT, LIT, SLO
 md2026_tier4_2026_techs = {
-	md2026_techs_prereqs = yes
 	md2026_techs_2005 = yes
 	md2026_techs_2010 = yes
 	md2026_techs_2015 = yes
 }
 
-# Tier 5: Basic modernized (all through 2010)
-# Countries: AFG, ALB, BOS, ETH, FYR, ICE, KOS, KYR, LUX, MLV, MNT, SLV, SUD, SYR, TAJ, UZB, YEM
 md2026_tier5_2026_techs = {
-	md2026_techs_prereqs = yes
 	md2026_techs_2005 = yes
 	md2026_techs_2010 = yes
 }

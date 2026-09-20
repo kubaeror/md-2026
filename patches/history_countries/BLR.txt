@@ -1,0 +1,103 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "BLR_2026_nsb"
+		else = {
+			set_oob = "BLR_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier4_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 8.000 }
+	set_variable = { var = debt value = 20.000 }
+	set_variable = { var = treasury value = 8 }
+	set_variable = { var = corporate_tax_rate value = 18 }
+	set_variable = { var = population_tax_rate value = 13 }
+	set_variable = { var = int_investments value = 15 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 400 }
+	}
+	set_variable = { overall_productivity = 400 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 5.0
+		communism = 80.0
+		fascism = 0.0
+		neutrality = 10.0
+		nationalist = 5.0
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "2025.1.26"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^6 = 0.750 }   #Conservative (Lukashenko bloc)
+	set_variable = { party_pop_array^7 = 0.100 }   #Autocracy (siloviki)
+	set_variable = { party_pop_array^2 = 0.050 }   #liberalism (opposition in exile)
+	set_variable = { party_pop_array^4 = 0.040 }   #Communist-State (KPB)
+	set_variable = { party_pop_array^15 = 0.030 }   #oligarchism
+	set_variable = { party_pop_array^14 = 0.030 }   #Neutral_conservatism
+
+	add_to_array = { ruling_party = 6 }             #Conservative (Lukashenko bloc)
+
+	set_variable = { party_pop_elect_array^6 = 0.867 }  #Lukashenko
+	set_variable = { party_pop_elect_array^7 = 0.050 }  #loyalist candidates
+	set_variable = { party_pop_elect_array^14 = 0.030 }  #misc
+
+	startup_politics = yes
+
+	### Country Leader: Alexander Lukashenko ###
+	create_country_leader = {
+		name = "Alexander Lukashenko"
+		picture = "gfx/leaders/BLR/Alexander_Lukashenko.dds"
+		expire = "2030.1.26"
+		ideology = Conservative
+		traits = {
+			authoritarian_ruler
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 7 }
+
+	add_ideas = {
+		md2026_blr_russian_satellite
+	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = BLR_presidential_election_of_2001
+	# MD2026: dropped (no MD 2.0 equivalent): USSR_Legacy
+	complete_national_focus = BLR_Increase_funding_Police
+	complete_national_focus = BLR_assembly_shop_of_europe
+	complete_national_focus = BLR_soviet_system
+	complete_national_focus = BLR_church_reforms
+	complete_national_focus = BLR_china_friendship
+	complete_national_focus = BLR_Lykashenko
+	complete_national_focus = BLR_140_zavod
+	complete_national_focus = BLR_558_zavod
+	complete_national_focus = BLR_MZKT
+	complete_national_focus = BLR_mtz
+	complete_national_focus = BLR_MVD
+	complete_national_focus = BLR_kgb_expand
+	complete_national_focus = BLR_riot_finance
+	complete_national_focus = BLR_bountiful_fields
+	complete_national_focus = BLR_treading_on_thin_steel
+	complete_national_focus = BLR_free_weapon
+	complete_national_focus = BLR_new_church
+	complete_national_focus = BLR_work_army
+	complete_national_focus = BLR_church_state
+	complete_national_focus = BLR_Bel_G2
+	complete_national_focus = BLR_Chinese_Modernization_Railway
+}

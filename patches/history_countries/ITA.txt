@@ -1,0 +1,165 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "ITA_2026_nsb"
+		else = {
+			set_oob = "ITA_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier2_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 37.000 }
+	set_variable = { var = debt value = 3000.000 }
+	set_variable = { var = treasury value = 100 }
+	set_variable = { var = corporate_tax_rate value = 24 }
+	set_variable = { var = population_tax_rate value = 23 }
+	set_variable = { var = int_investments value = 100 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 1050 }
+	}
+	set_variable = { overall_productivity = 1050 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 30.0
+		communism = 5.0
+		fascism = 0.0
+		neutrality = 15.0
+		nationalist = 50.0
+	}
+	set_politics = {
+		ruling_party = nationalist
+		last_election = "2022.9.25"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^20 = 0.290 }   #Nat_Populism (FdI)
+	set_variable = { party_pop_array^1 = 0.090 }   #conservatism (Forza Italia)
+	set_variable = { party_pop_array^23 = 0.085 }   #Monarchist (Lega)
+	set_variable = { party_pop_array^3 = 0.230 }   #socialism (PD)
+	set_variable = { party_pop_array^18 = 0.075 }   #neutral_Social (M5S)
+	set_variable = { party_pop_array^2 = 0.040 }   #liberalism (Azione/IV)
+	set_variable = { party_pop_array^4 = 0.030 }   #Communist-State
+	set_variable = { party_pop_array^15 = 0.060 }   #oligarchism
+	set_variable = { party_pop_array^17 = 0.050 }   #Neutral_green
+	set_variable = { party_pop_array^21 = 0.050 }   #Nat_Fascism
+
+	add_to_array = { ruling_party = 20 }             #Nat_Populism (FdI)
+	add_to_array = { gov_coalition_array = 1 }       #conservatism (Forza Italia)
+	add_to_array = { gov_coalition_array = 23 }       #Monarchist (Lega)
+
+	set_variable = { party_pop_elect_array^20 = 0.260 }  #FdI
+	set_variable = { party_pop_elect_array^3 = 0.192 }  #PD
+	set_variable = { party_pop_elect_array^18 = 0.154 }  #M5S
+	set_variable = { party_pop_elect_array^23 = 0.089 }  #Lega
+	set_variable = { party_pop_elect_array^1 = 0.082 }  #Forza Italia
+	set_variable = { party_pop_elect_array^2 = 0.079 }  #Azione/IV
+
+	startup_politics = yes
+
+	### Country Leader: Giorgia Meloni ###
+	create_country_leader = {
+		name = "Giorgia Meloni"
+		picture = "gfx/leaders/ITA/Giorgia_Meloni.dds"
+		expire = "2027.9.25"
+		ideology = Nat_Populism
+		traits = {
+			nat_populism
+			career_politician
+			media_personality
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	### National Spirits ###
+	add_ideas = {
+		md2026_ita_demographic_crisis
+		md2026_ita_right_wing_government
+	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_ITA_mediterranean_crossroads
+	complete_national_focus = MD2026_ITA_nato_southern_flank
+	complete_national_focus = MD2026_ITA_naval_power
+	complete_national_focus = MD2026_ITA_tempest_fighter
+	complete_national_focus = MD2026_ITA_economic_reform
+	complete_national_focus = MD2026_ITA_migration_crisis
+	complete_national_focus = MD2026_ITA_fortress_europe
+	complete_national_focus = MD2026_ITA_integration_plan
+	complete_national_focus = MD2026_ITA_piano_mattei
+	complete_national_focus = MD2026_ITA_energy_corridors
+	complete_national_focus = MD2026_ITA_libya_stabilization
+	complete_national_focus = MD2026_ITA_eu_leadership
+	complete_national_focus = MD2026_ITA_eurozone_reform
+	complete_national_focus = MD2026_ITA_cultural_heritage
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = ITA_diplomatic_focus
+	complete_national_focus = ITA_divided_nation
+	complete_national_focus = ITA_economic_policies
+	complete_national_focus = ITA_environmental_policies
+	complete_national_focus = ITA_ideology_focus
+	complete_national_focus = ITA_industrial_focus
+	complete_national_focus = ITA_post_cold_war_reforms
+	complete_national_focus = ITA_relations_with_the_church
+	complete_national_focus = ITA_roma_capitale
+	complete_national_focus = ITA_social_policies
+	complete_national_focus = ITA_North_South_divide
+	complete_national_focus = ITA_a_secular_state
+	complete_national_focus = ITA_advanced_technology
+	complete_national_focus = ITA_allow_euthanasia
+	complete_national_focus = ITA_ban_gmos
+	complete_national_focus = ITA_ban_nuclear_power
+	complete_national_focus = ITA_build_waste_incinerators
+	complete_national_focus = ITA_building_amnesty
+	complete_national_focus = ITA_carbon_tax
+	complete_national_focus = ITA_central_infrastructure
+	complete_national_focus = ITA_citizenship_income
+	complete_national_focus = ITA_disastrous_transports_rome
+	complete_national_focus = ITA_encourage_micro_hydropower
+	complete_national_focus = ITA_encourage_renewables
+	complete_national_focus = ITA_european_relations
+	complete_national_focus = ITA_flat_tax
+	complete_national_focus = ITA_further_protect_workers_rights
+	complete_national_focus = ITA_future_airforce
+	complete_national_focus = ITA_future_army
+	complete_national_focus = ITA_future_navy
+	complete_national_focus = ITA_generational_divide
+	complete_national_focus = ITA_inefficient_administration
+	complete_national_focus = ITA_islands_infrastructure
+	complete_national_focus = ITA_italian_media
+	complete_national_focus = ITA_let_companies_fail
+	complete_national_focus = ITA_military_infrastructure
+	complete_national_focus = ITA_military_leadership
+	complete_national_focus = ITA_modify_article_18
+	complete_national_focus = ITA_municipalities_corruption_rome
+	complete_national_focus = ITA_normalize_extraordinary_bonuses
+	complete_national_focus = ITA_north_infrastructure
+	complete_national_focus = ITA_our_past
+	complete_national_focus = ITA_political_instability
+	complete_national_focus = ITA_procurement_choice
+	complete_national_focus = ITA_protect_local_food_products
+	complete_national_focus = ITA_protect_migrant_rights
+	complete_national_focus = ITA_protect_our_traditions
+	complete_national_focus = ITA_protect_prisoners_rights
+	complete_national_focus = ITA_save_struggling_companies
+	complete_national_focus = ITA_sell_government_shares_in_companies
+	complete_national_focus = ITA_south_infrastructure
+	complete_national_focus = ITA_stop_building_abuse
+	complete_national_focus = ITA_strenghten_ties_with_west
+	complete_national_focus = ITA_tourism_is_our_oil
+	complete_national_focus = ITA_urban_waste_management_rome
+	complete_national_focus = ITA_what_we_are
+	complete_national_focus = ITA_widespread_absenteeism
+}

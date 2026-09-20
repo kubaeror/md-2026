@@ -1,0 +1,103 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "SWE_2026_nsb"
+		else = {
+			set_oob = "SWE_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier3_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 58.000 }
+	set_variable = { var = debt value = 200.000 }
+	set_variable = { var = treasury value = 60 }
+	set_variable = { var = corporate_tax_rate value = 20 }
+	set_variable = { var = population_tax_rate value = 30 }
+	set_variable = { var = int_investments value = 80 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 1250 }
+	}
+	set_variable = { overall_productivity = 1250 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 60.0
+		communism = 5.0
+		fascism = 0.0
+		neutrality = 12.0
+		nationalist = 23.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2022.9.11"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^1 = 0.195 }   #conservatism (Moderaterna)
+	set_variable = { party_pop_array^3 = 0.290 }   #socialism (Socialdemokraterna)
+	set_variable = { party_pop_array^20 = 0.205 }   #Nat_Populism (SD)
+	set_variable = { party_pop_array^2 = 0.050 }   #liberalism (Liberalerna)
+	set_variable = { party_pop_array^14 = 0.060 }   #Neutral_conservatism (Centerpartiet)
+	set_variable = { party_pop_array^4 = 0.070 }   #Communist-State (Vansterpartiet)
+	set_variable = { party_pop_array^17 = 0.050 }   #Neutral_green (Miljopartiet)
+	set_variable = { party_pop_array^16 = 0.035 }   #Neutral_Libertarian (KD)
+	set_variable = { party_pop_array^15 = 0.045 }   #oligarchism
+
+	add_to_array = { ruling_party = 1 }             #conservatism (Moderaterna)
+	add_to_array = { gov_coalition_array = 2 }       #liberalism (Liberalerna)
+	add_to_array = { gov_coalition_array = 16 }       #Neutral_Libertarian (KD)
+
+	set_variable = { party_pop_elect_array^3 = 0.302 }  #Socialdemokraterna
+	set_variable = { party_pop_elect_array^20 = 0.206 }  #SD
+	set_variable = { party_pop_elect_array^1 = 0.193 }  #Moderaterna
+	set_variable = { party_pop_elect_array^14 = 0.067 }  #Centerpartiet
+	set_variable = { party_pop_elect_array^4 = 0.068 }  #Vansterpartiet
+	set_variable = { party_pop_elect_array^17 = 0.052 }  #Miljopartiet
+	set_variable = { party_pop_elect_array^2 = 0.046 }  #Liberalerna
+	set_variable = { party_pop_elect_array^16 = 0.051 }  #KD
+
+	startup_politics = yes
+
+	### Country Leader: Ulf Kristersson ###
+	create_country_leader = {
+		name = "Ulf Kristersson"
+		picture = "gfx/leaders/SWE/Ulf_Kristersson.dds"
+		expire = "2026.9.11"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	add_ideas = {
+
+		NATO_member
+		md2026_swe_new_nato_member
+	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = SWE_internal_politics
+	complete_national_focus = SWE_swedish_projects
+	complete_national_focus = SWE_the_New_army
+	complete_national_focus = SWE_Airforce_structure
+	complete_national_focus = SWE_Armestaben
+	complete_national_focus = SWE_Navy_reforms
+	complete_national_focus = SWE_found_visit_sverige
+	complete_national_focus = SWE_infrastructure_projects
+	complete_national_focus = SWE_revitalize_the_nation
+	complete_national_focus = SWE_old_traditions
+	complete_national_focus = SWE_sverigedemokraterna
+}

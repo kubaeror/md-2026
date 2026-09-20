@@ -1,0 +1,136 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "TAI_2026_nsb"
+		else = {
+			set_oob = "TAI_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier3_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 36.000 }
+	set_variable = { var = debt value = 30.000 }
+	set_variable = { var = treasury value = 50 }
+	set_variable = { var = corporate_tax_rate value = 20 }
+	set_variable = { var = population_tax_rate value = 20 }
+	set_variable = { var = int_investments value = 80 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 1100 }
+	}
+	set_variable = { overall_productivity = 1100 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 60.0
+		communism = 3.0
+		fascism = 0.0
+		neutrality = 12.0
+		nationalist = 25.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2024.1.13"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^2 = 0.400 }   #liberalism (DPP)
+	set_variable = { party_pop_array^1 = 0.335 }   #conservatism (KMT)
+	set_variable = { party_pop_array^14 = 0.120 }   #Neutral_conservatism (TPP)
+	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
+	set_variable = { party_pop_array^20 = 0.040 }   #Nat_Populism
+	set_variable = { party_pop_array^18 = 0.030 }   #neutral_Social
+	set_variable = { party_pop_array^4 = 0.025 }   #Communist-State
+
+	add_to_array = { ruling_party = 2 }             #liberalism (DPP)
+
+	set_variable = { party_pop_elect_array^2 = 0.401 }  #DPP
+	set_variable = { party_pop_elect_array^1 = 0.335 }  #KMT
+	set_variable = { party_pop_elect_array^14 = 0.263 }  #TPP
+
+	startup_politics = yes
+
+	### Country Leader: Lai Ching-te ###
+	create_country_leader = {
+		name = "Lai Ching-te"
+		picture = "gfx/leaders/TAI/Lai_Ching-te.dds"
+		expire = "2028.5.20"
+		ideology = liberalism
+		traits = {
+			western_liberalism
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 2 }
+	set_variable = { current_term = 1 }
+
+	### National Spirits ###
+	add_ideas = {
+		md2026_tai_silicon_shield
+		md2026_tai_china_threat
+	}
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_TAI_porcupine_defense
+	complete_national_focus = MD2026_TAI_asymmetric_defense
+	complete_national_focus = MD2026_TAI_anti_ship_missiles
+	complete_national_focus = MD2026_TAI_reserve_mobilization
+	complete_national_focus = MD2026_TAI_silicon_shield
+	complete_national_focus = MD2026_TAI_tsmc_dominance
+	complete_national_focus = MD2026_TAI_tech_sovereignty
+	complete_national_focus = MD2026_TAI_international_space
+	complete_national_focus = MD2026_TAI_civil_defense
+	complete_national_focus = MD2026_TAI_shelter_program
+	complete_national_focus = MD2026_TAI_information_warfare
+	complete_national_focus = MD2026_TAI_economic_diversification
+	complete_national_focus = MD2026_TAI_green_energy
+	complete_national_focus = MD2026_TAI_southbound_policy
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = GENERIC_air_force_reform
+	complete_national_focus = GENERIC_army_reform
+	complete_national_focus = GENERIC_build_primary_schools
+	complete_national_focus = GENERIC_build_roads
+	complete_national_focus = GENERIC_ease_of_business_reforms
+	complete_national_focus = GENERIC_international_diplomacy
+	complete_national_focus = GENERIC_light_industry_investments
+	complete_national_focus = GENERIC_military_emergency
+	complete_national_focus = GENERIC_naval_reform
+	complete_national_focus = GENERIC_political_reform
+	complete_national_focus = GENERIC_agricultural_district_subsidization
+	complete_national_focus = GENERIC_air_doctrine_innovations
+	complete_national_focus = GENERIC_alignment_debate
+	complete_national_focus = GENERIC_anti_corruption_reforms
+	complete_national_focus = GENERIC_assure_access_to_education
+	complete_national_focus = GENERIC_attract_foreign_investors
+	complete_national_focus = GENERIC_build_highways
+	complete_national_focus = GENERIC_build_railways
+	complete_national_focus = GENERIC_cabinet_reform
+	complete_national_focus = GENERIC_capital_defense_scheme
+	complete_national_focus = GENERIC_debt_refactoring
+	complete_national_focus = GENERIC_diplomatic_positions
+	complete_national_focus = GENERIC_expand_the_secret_service
+	complete_national_focus = GENERIC_fighter_planes
+	complete_national_focus = GENERIC_heavy_industry_investments
+	complete_national_focus = GENERIC_land_doctrine_innovations
+	complete_national_focus = GENERIC_military_education_reform
+	complete_national_focus = GENERIC_military_equipment_procurement
+	complete_national_focus = GENERIC_military_exercises
+	complete_national_focus = GENERIC_mobilize_the_working_class
+	complete_national_focus = GENERIC_naval_bases
+	complete_national_focus = GENERIC_naval_doctrine_innovations
+	complete_national_focus = GENERIC_network_infrastructure
+	complete_national_focus = GENERIC_our_place
+	complete_national_focus = GENERIC_strengthen_government
+	complete_national_focus = GENERIC_submarines
+	complete_national_focus = GENERIC_surface_ships
+	complete_national_focus = GENERIC_trade_with_the_neighbors
+}

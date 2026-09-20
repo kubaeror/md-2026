@@ -1,0 +1,110 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "YEM_2026_nsb"
+		else = {
+			set_oob = "YEM_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier5_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 0.700 }
+	set_variable = { var = debt value = 10.000 }
+	set_variable = { var = treasury value = 1 }
+	set_variable = { var = corporate_tax_rate value = 10 }
+	set_variable = { var = population_tax_rate value = 5 }
+	set_variable = { var = int_investments value = 2 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 80 }
+	}
+	set_variable = { overall_productivity = 80 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 10.0
+		communism = 15.0
+		fascism = 25.0
+		neutrality = 35.0
+		nationalist = 15.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2000.1.1"
+		election_frequency = 999
+		elections_allowed = no
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^0 = 0.300 }   #Western_Autocracy (PLC government)
+	set_variable = { party_pop_array^9 = 0.350 }   #Vilayat_e_Faqih (Houthi/Ansar Allah)
+	set_variable = { party_pop_array^12 = 0.100 }   #Neutral_Muslim_Brotherhood (Islah)
+	set_variable = { party_pop_array^13 = 0.080 }   #Neutral_Autocracy
+	set_variable = { party_pop_array^11 = 0.060 }   #Caliphate (AQAP)
+	set_variable = { party_pop_array^15 = 0.060 }   #oligarchism
+	set_variable = { party_pop_array^14 = 0.050 }   #Neutral_conservatism
+
+	add_to_array = { ruling_party = 0 }             #Western_Autocracy (PLC government)
+
+	startup_politics = yes
+
+	### Country Leader: Rashad al-Alimi ###
+	create_country_leader = {
+		name = "Rashad al-Alimi"
+		picture = "gfx/leaders/YEM/Rashad_al-Alimi.dds"
+		expire = "2030.1.1"
+		ideology = Western_Autocracy
+		traits = {
+			authoritarian_ruler
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = GENERIC_air_force_reform
+	complete_national_focus = GENERIC_army_reform
+	complete_national_focus = GENERIC_build_primary_schools
+	complete_national_focus = GENERIC_build_roads
+	complete_national_focus = GENERIC_ease_of_business_reforms
+	complete_national_focus = GENERIC_international_diplomacy
+	complete_national_focus = GENERIC_light_industry_investments
+	complete_national_focus = GENERIC_military_emergency
+	complete_national_focus = GENERIC_naval_reform
+	complete_national_focus = GENERIC_political_reform
+	complete_national_focus = GENERIC_agricultural_district_subsidization
+	complete_national_focus = GENERIC_air_doctrine_innovations
+	complete_national_focus = GENERIC_alignment_debate
+	complete_national_focus = GENERIC_anti_corruption_reforms
+	complete_national_focus = GENERIC_assure_access_to_education
+	complete_national_focus = GENERIC_attract_foreign_investors
+	complete_national_focus = GENERIC_build_highways
+	complete_national_focus = GENERIC_build_railways
+	complete_national_focus = GENERIC_cabinet_reform
+	complete_national_focus = GENERIC_capital_defense_scheme
+	complete_national_focus = GENERIC_debt_refactoring
+	complete_national_focus = GENERIC_diplomatic_positions
+	complete_national_focus = GENERIC_expand_the_secret_service
+	complete_national_focus = GENERIC_fighter_planes
+	complete_national_focus = GENERIC_heavy_industry_investments
+	complete_national_focus = GENERIC_land_doctrine_innovations
+	complete_national_focus = GENERIC_military_education_reform
+	complete_national_focus = GENERIC_military_equipment_procurement
+	complete_national_focus = GENERIC_military_exercises
+	complete_national_focus = GENERIC_mobilize_the_working_class
+	complete_national_focus = GENERIC_naval_bases
+	complete_national_focus = GENERIC_naval_doctrine_innovations
+	complete_national_focus = GENERIC_network_infrastructure
+	complete_national_focus = GENERIC_our_place
+	complete_national_focus = GENERIC_strengthen_government
+	complete_national_focus = GENERIC_submarines
+	complete_national_focus = GENERIC_surface_ships
+	complete_national_focus = GENERIC_trade_with_the_neighbors
+}

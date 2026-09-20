@@ -1,0 +1,6 @@
+old,new,refs,example_file
+SOV_rao_ues,,2,history\countries\SOV - Russia.txt
+SOV_russian_army_idea,SOV_russians_back_idea,2,history\countries\SOV - Russia.txt
+UKR_old_army,UKR_drone_army,2,history\countries\UKR - Ukraine.txt
+UKR_russian_dependent_military,URA_russian_dependent_military,2,history\countries\UKR - Ukraine.txt
+modest_corruption,,2,history\countries\USA - USA.txt

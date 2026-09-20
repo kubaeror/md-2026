@@ -1,4 +1,4 @@
-### Millennium Dawn 2026 - Scripted Triggers ###
+﻿### Millennium Dawn 2026 - Scripted Triggers ###
 
 # Check if 2026 bookmark is active
 md2026_is_active = {
@@ -8,8 +8,8 @@ md2026_is_active = {
 # NATO membership check
 md2026_is_nato_member = {
 	OR = {
+		has_idea = NATO_member          # MD 2.0 membership marker
 		has_country_flag = md2026_nato_member
-		is_in_faction_with = USA
 	}
 }
 
@@ -113,7 +113,7 @@ md2026_is_eu_member = {
 		tag = EST
 		tag = LAT
 		tag = LIT
-		tag = IRL
+		tag = IRE
 		tag = CYP
 		tag = MLT
 	}

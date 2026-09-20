@@ -1,0 +1,84 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "BRM_2026_nsb"
+		else = {
+			set_oob = "BRM_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier4_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 1.400 }
+	set_variable = { var = debt value = 15.000 }
+	set_variable = { var = treasury value = 3 }
+	set_variable = { var = corporate_tax_rate value = 15 }
+	set_variable = { var = population_tax_rate value = 5 }
+	set_variable = { var = int_investments value = 5 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 180 }
+	}
+	set_variable = { overall_productivity = 180 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 10.0
+		communism = 10.0
+		fascism = 5.0
+		neutrality = 15.0
+		nationalist = 60.0
+	}
+	set_politics = {
+		ruling_party = nationalist
+		last_election = "2000.1.1"
+		election_frequency = 999
+		elections_allowed = no
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^22 = 0.600 }   #Nat_Autocracy (Tatmadaw junta)
+	set_variable = { party_pop_array^20 = 0.100 }   #Nat_Populism (USDP)
+	set_variable = { party_pop_array^2 = 0.080 }   #liberalism (NLD in exile)
+	set_variable = { party_pop_array^5 = 0.060 }   #anarchist_communism (ethnic resistance)
+	set_variable = { party_pop_array^14 = 0.060 }   #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
+	set_variable = { party_pop_array^4 = 0.050 }   #Communist-State
+
+	add_to_array = { ruling_party = 22 }             #Nat_Autocracy (Tatmadaw junta)
+
+	startup_politics = yes
+
+	### Country Leader: Min Aung Hlaing ###
+	create_country_leader = {
+		name = "Min Aung Hlaing"
+		picture = "gfx/leaders/BRM/Min_Aung_Hlaing.dds"
+		expire = "2030.1.1"
+		ideology = Nat_Autocracy
+		traits = {
+			authoritarian_ruler
+			career_officer
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	add_ideas = {
+		md2026_brm_civil_war_chaos
+	}
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = BRM_address_the_democracy_question
+	complete_national_focus = BRM_focus_on_the_tatmadaw
+	complete_national_focus = BRM_revisit_the_rohingya_issue
+	complete_national_focus = BRM_inward_orientation
+	complete_national_focus = BRM_outward_orientation
+	complete_national_focus = BRM_reject_the_way_for_civilian_rule
+	complete_national_focus = BRM_the_path_of_intolerance
+}

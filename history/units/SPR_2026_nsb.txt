@@ -1,4 +1,4 @@
-##### Division Templates #####
+﻿##### Division Templates #####
 # Spain 2026
 
 division_template = {

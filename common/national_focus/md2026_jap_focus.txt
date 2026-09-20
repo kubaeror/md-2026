@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # MD2026 Japan (JAP) Focus Tree
 # 2026 Shared Focuses - Active Defense Era
 # 26 focuses: 1 root + 5 branches + capstone

@@ -1,0 +1,105 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### NATO membership (MD 2.0 marker) ###
+	add_ideas = { NATO_member }
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "BUL_2026_nsb"
+		else = {
+			set_oob = "BUL_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier4_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 15.000 }
+	set_variable = { var = debt value = 40.000 }
+	set_variable = { var = treasury value = 15 }
+	set_variable = { var = corporate_tax_rate value = 10 }
+	set_variable = { var = population_tax_rate value = 10 }
+	set_variable = { var = int_investments value = 35 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 650 }
+	}
+	set_variable = { overall_productivity = 650 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 40.0
+		communism = 8.0
+		fascism = 0.0
+		neutrality = 17.0
+		nationalist = 35.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2024.6.9"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^1 = 0.260 }   #conservatism (GERB)
+	set_variable = { party_pop_array^2 = 0.140 }   #liberalism (PP-DB)
+	set_variable = { party_pop_array^20 = 0.150 }   #Nat_Populism (Vazrazhdane)
+	set_variable = { party_pop_array^7 = 0.120 }   #Autocracy (DPS)
+	set_variable = { party_pop_array^3 = 0.100 }   #socialism (BSP)
+	set_variable = { party_pop_array^14 = 0.070 }   #Neutral_conservatism (ITN)
+	set_variable = { party_pop_array^15 = 0.060 }   #oligarchism
+	set_variable = { party_pop_array^4 = 0.040 }   #Communist-State
+	set_variable = { party_pop_array^18 = 0.040 }   #neutral_Social
+	set_variable = { party_pop_array^21 = 0.020 }   #Nat_Fascism
+
+	add_to_array = { ruling_party = 1 }             #conservatism (GERB)
+	add_to_array = { gov_coalition_array = 2 }       #liberalism (PP-DB)
+
+	set_variable = { party_pop_elect_array^1 = 0.262 }  #GERB
+	set_variable = { party_pop_elect_array^2 = 0.140 }  #PP-DB
+	set_variable = { party_pop_elect_array^20 = 0.138 }  #Vazrazhdane
+	set_variable = { party_pop_elect_array^7 = 0.117 }  #DPS
+	set_variable = { party_pop_elect_array^3 = 0.075 }  #BSP
+
+	startup_politics = yes
+
+	### Country Leader: Dimitar Glavchev ###
+	create_country_leader = {
+		name = "Dimitar Glavchev"
+		picture = "gfx/leaders/BUL/Dimitar_Glavchev.dds"
+		expire = "2028.6.9"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+			career_politician
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = BUL_generic_army_effort
+	complete_national_focus = BUL_generic_political_effort
+	complete_national_focus = BUL_global_diplomacy
+	complete_national_focus = BUL_industrial_effort
+	complete_national_focus = BUL_inter_defence
+	complete_national_focus = BUL_astrabioplant
+	complete_national_focus = BUL_foreign
+	complete_national_focus = BUL_general_bank
+	complete_national_focus = BUL_railways
+	complete_national_focus = BUL_vivacom
+	complete_national_focus = BUL_help_army
+	complete_national_focus = BUL_new_army
+	complete_national_focus = BUL_revitalizing_militar_industry
+	complete_national_focus = BUL_collectivist_ethos
+	complete_national_focus = BUL_steady
+	complete_national_focus = BUL_align_to_nato
+	complete_national_focus = BUL_align_to_usa
+	complete_national_focus = BUL_align_russia
+	complete_national_focus = BUL_special_police_troops
+}

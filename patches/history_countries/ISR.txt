@@ -1,0 +1,138 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### OOB 2026 ###
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "ISR_2026_nsb"
+		else = {
+			set_oob = "ISR_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier2_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 55.000 }
+	set_variable = { var = debt value = 350.000 }
+	set_variable = { var = treasury value = 80 }
+	set_variable = { var = corporate_tax_rate value = 23 }
+	set_variable = { var = population_tax_rate value = 25 }
+	set_variable = { var = int_investments value = 100 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 1200 }
+	}
+	set_variable = { overall_productivity = 1200 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 45.0
+		communism = 5.0
+		fascism = 0.0
+		neutrality = 10.0
+		nationalist = 40.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2022.11.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^1 = 0.235 }   #conservatism (Likud)
+	set_variable = { party_pop_array^20 = 0.110 }   #Nat_Populism (Religious Zionism)
+	set_variable = { party_pop_array^21 = 0.065 }   #Nat_Fascism (Otzma Yehudit)
+	set_variable = { party_pop_array^3 = 0.180 }   #socialism (Yesh Atid)
+	set_variable = { party_pop_array^14 = 0.080 }   #Neutral_conservatism (National Unity)
+	set_variable = { party_pop_array^2 = 0.070 }   #liberalism (Yisrael Beiteinu)
+	set_variable = { party_pop_array^16 = 0.060 }   #Neutral_Libertarian (UTJ)
+	set_variable = { party_pop_array^10 = 0.055 }   #Kingdom (Shas)
+	set_variable = { party_pop_array^4 = 0.045 }   #Communist-State (Hadash-Taal)
+	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
+	set_variable = { party_pop_array^18 = 0.050 }   #neutral_Social (Labor)
+
+	add_to_array = { ruling_party = 1 }             #conservatism (Likud)
+	add_to_array = { gov_coalition_array = 20 }       #Nat_Populism (Religious Zionism)
+	add_to_array = { gov_coalition_array = 21 }       #Nat_Fascism (Otzma Yehudit)
+	add_to_array = { gov_coalition_array = 16 }       #Neutral_Libertarian (UTJ)
+	add_to_array = { gov_coalition_array = 10 }       #Kingdom (Shas)
+
+	set_variable = { party_pop_elect_array^1 = 0.234 }  #Likud
+	set_variable = { party_pop_elect_array^3 = 0.178 }  #Yesh Atid
+	set_variable = { party_pop_elect_array^20 = 0.109 }  #Religious Zionism
+	set_variable = { party_pop_elect_array^14 = 0.083 }  #National Unity
+	set_variable = { party_pop_elect_array^16 = 0.059 }  #UTJ
+	set_variable = { party_pop_elect_array^10 = 0.054 }  #Shas
+	set_variable = { party_pop_elect_array^21 = 0.065 }  #Otzma Yehudit
+	set_variable = { party_pop_elect_array^2 = 0.048 }  #Yisrael Beiteinu
+
+	startup_politics = yes
+
+	### 2026 National Spirits ###
+	add_ideas = {
+		md2026_isr_wartime_footing
+	}
+
+	### Country Leader: Benjamin Netanyahu ###
+	create_country_leader = {
+		name = "Benjamin Netanyahu"
+		picture = "gfx/leaders/ISR/Benjamin_Netanyahu.dds"
+		expire = "2028.11.1"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+			career_politician
+			hawk
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 6 }
+
+	# MD2026 Pre-completed focuses (already happened by Jan 2026)
+	complete_national_focus = MD2026_ISR_iron_wall
+	complete_national_focus = MD2026_ISR_gaza_aftermath
+	complete_national_focus = MD2026_ISR_iran_threat
+	complete_national_focus = MD2026_ISR_abraham_accords
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = ISR_arab_spring
+	complete_national_focus = ISR_camp_david_2000
+	complete_national_focus = ISR_economy_branch_focus
+	complete_national_focus = ISR_gaza_uprising
+	complete_national_focus = ISR_passover_massacre
+	complete_national_focus = ISR_speak_to_cabinet
+	complete_national_focus = ISR_speak_to_government
+	complete_national_focus = ISR_speak_to_malal
+	complete_national_focus = ISR_speak_to_police
+	complete_national_focus = ISR_speak_to_staff
+	complete_national_focus = ISR_suppress_the_hebron_uprising
+	complete_national_focus = ISR_blockade_gaza
+	complete_national_focus = ISR_cyrus_accords
+	complete_national_focus = ISR_dawn_of_a_new_day
+	complete_national_focus = ISR_democratic_first
+	complete_national_focus = ISR_democratic_jewish_balance
+	complete_national_focus = ISR_discover_gas
+	complete_national_focus = ISR_focus_air
+	complete_national_focus = ISR_focus_ground_forces
+	complete_national_focus = ISR_focus_navy
+	complete_national_focus = ISR_form_the_national_guard
+	complete_national_focus = ISR_infrastructure_focus
+	complete_national_focus = ISR_intifada_darkest_hour
+	complete_national_focus = ISR_jenin_situation
+	complete_national_focus = ISR_jewish_first
+	complete_national_focus = ISR_lighthouse
+	complete_national_focus = ISR_middle_east_peace
+	complete_national_focus = ISR_operation_defensive_shield
+	complete_national_focus = ISR_plan_bet
+	complete_national_focus = ISR_shine_like_a_diamond
+	complete_national_focus = ISR_support_our_pmcs
+	complete_national_focus = ISR_talk_to_sharon
+	complete_national_focus = ISR_travel_morocco
+	complete_national_focus = ISR_usa_china_balance
+	complete_national_focus = ISR_watch_their_moves
+}

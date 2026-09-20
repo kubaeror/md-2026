@@ -1,4 +1,4 @@
-### MD2026 USA Focus Branch ###
+﻿### MD2026 USA Focus Branch ###
 # These shared focuses are added to the USA focus tree via shared_focus reference
 # Root focus positioned at absolute x=38, y=0 (right side of tree, avoiding existing content)
 # Gated by allow_branch date > 2025.12.31 so only visible in 2026 bookmark

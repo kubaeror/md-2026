@@ -1,4 +1,4 @@
-version="1.0.0"
+version="1.1.0"
 tags={
 	"Alternative History"
 	"Technologies"
@@ -12,8 +12,7 @@ tags={
 }
 name="Millennium Dawn 2026 Rework"
 picture="thumbnail.png"
-supported_version="1.17.*"
+supported_version="1.19.*"
 dependencies={
 	"Millennium Dawn: A Modern Day Mod"
 }
-replace_path="common/bookmarks"

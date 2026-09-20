@@ -1,4 +1,4 @@
-##### Division Templates #####
+﻿##### Division Templates #####
 # North Korea 2026 — Large but outdated army, Soviet/Chinese equipment
 
 division_template = {

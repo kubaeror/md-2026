@@ -1,0 +1,105 @@
+﻿##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "NOR_2026_nsb"
+		else = {
+			set_oob = "NOR_2000_nonnsb"
+		}
+	}
+
+	### Technology 2026 ###
+	md2026_tier3_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 88.000 }
+	set_variable = { var = debt value = 200.000 }
+	set_variable = { var = treasury value = 200 }
+	set_variable = { var = corporate_tax_rate value = 22 }
+	set_variable = { var = population_tax_rate value = 30 }
+	set_variable = { var = int_investments value = 120 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 1400 }
+	}
+	set_variable = { overall_productivity = 1400 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 65.0
+		communism = 5.0
+		fascism = 0.0
+		neutrality = 10.0
+		nationalist = 20.0
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2021.9.13"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^3 = 0.215 }   #socialism (Ap)
+	set_variable = { party_pop_array^1 = 0.260 }   #conservatism (Hoyre)
+	set_variable = { party_pop_array^20 = 0.110 }   #Nat_Populism (FrP)
+	set_variable = { party_pop_array^14 = 0.070 }   #Neutral_conservatism (Sp)
+	set_variable = { party_pop_array^4 = 0.050 }   #Communist-State (SV)
+	set_variable = { party_pop_array^17 = 0.040 }   #Neutral_green (MDG)
+	set_variable = { party_pop_array^2 = 0.050 }   #liberalism (Venstre)
+	set_variable = { party_pop_array^15 = 0.055 }   #oligarchism
+	set_variable = { party_pop_array^18 = 0.050 }   #neutral_Social (Rodt)
+	set_variable = { party_pop_array^16 = 0.040 }   #Neutral_Libertarian (KrF)
+
+	add_to_array = { ruling_party = 3 }             #socialism (Ap)
+	add_to_array = { gov_coalition_array = 14 }       #Neutral_conservatism (Sp)
+
+	set_variable = { party_pop_elect_array^3 = 0.262 }  #Ap
+	set_variable = { party_pop_elect_array^1 = 0.204 }  #Hoyre
+	set_variable = { party_pop_elect_array^14 = 0.134 }  #Sp
+	set_variable = { party_pop_elect_array^4 = 0.076 }  #SV
+	set_variable = { party_pop_elect_array^20 = 0.113 }  #FrP
+	set_variable = { party_pop_elect_array^17 = 0.037 }  #MDG
+	set_variable = { party_pop_elect_array^2 = 0.046 }  #Venstre
+	set_variable = { party_pop_elect_array^16 = 0.038 }  #KrF
+
+	startup_politics = yes
+
+	### Country Leader: Jonas Gahr Store ###
+	create_country_leader = {
+		name = "Jonas Gahr Store"
+		picture = "gfx/leaders/NOR/Jonas_Gahr_Store.dds"
+		expire = "2025.9.13"
+		ideology = socialism
+		traits = {
+			western_socialism
+			diplomat
+		}
+	}
+	set_variable = { term_limit = 0 }
+	set_variable = { current_term = 1 }
+
+	# Base MD pre-completed focuses (root + T1, 2000-2026)
+	complete_national_focus = NRY_norwegian_armed_forces
+	complete_national_focus = NRY_the_norwegian_economy
+	complete_national_focus = NRY_party_of_labour
+	complete_national_focus = NRY_cyber_defense_force
+	complete_national_focus = NRY_german_technicians
+	complete_national_focus = NRY_norwegian_air_forces
+	complete_national_focus = NRY_norwegian_land_forces
+	complete_national_focus = NRY_norwegian_navy_forces
+	complete_national_focus = NRY_migration_to_norway
+	complete_national_focus = NRY_ministry_of_agriculture_and_food
+	complete_national_focus = NRY_ministry_of_transport_communication
+	complete_national_focus = NRY_norge_ming
+	complete_national_focus = NRY_norsk_industri
+	complete_national_focus = NRY_north_sea_oil
+	complete_national_focus = NRY_renewable_investments
+	complete_national_focus = NRY_standardize_infrastructure
+	complete_national_focus = NRY_modernization_of_the_welfare_state
+	complete_national_focus = NRY_the_political_earthquake
+	complete_national_focus = NRY_workers_youth_league
+}
