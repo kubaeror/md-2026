@@ -406,6 +406,11 @@ def apply_fixups(text, techs, chars):
 
     # Norway tag rename leftovers in MD's own content
     text = re.sub(r"(?<![\w])(original_tag|tag)\s*=\s*NOR(?![\w])", r"\1 = NRY", text)
+
+    # MD 2.0 renamed the computing tech category
+    text = text.replace("CAT_computing_tech", "CAT_computer_systems")
+    # MD uses the short doctrine category names; normalise to the canonical form
+    text = re.sub(r"(?m)^(\s*category\s*=\s*)(land|naval|air)_doctrine\s*$", r"\1CAT_\2_doctrine", text)
     return text
 
 

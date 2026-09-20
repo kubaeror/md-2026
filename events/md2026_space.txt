@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # MD2026 Space Race Events
 # Lunar programs, satellite warfare, commercial space, Mars ambitions
 ###################################
@@ -14,7 +14,7 @@ country_event = {
 	id = md2026_space.1
 	title = md2026_space.1.t
 	desc = md2026_space.1.d
-	picture = GFX_report_event_generic_research
+	picture = GFX_report_event_generic_research_lab
 
 	fire_only_once = yes
 
@@ -76,7 +76,7 @@ country_event = {
 	id = md2026_space.2
 	title = md2026_space.2.t
 	desc = md2026_space.2.d
-	picture = GFX_report_event_generic_military
+	picture = GFX_report_event_generic_military_parade
 
 	fire_only_once = yes
 
@@ -144,7 +144,7 @@ country_event = {
 	id = md2026_space.3
 	title = md2026_space.3.t
 	desc = md2026_space.3.d
-	picture = GFX_report_event_generic_research
+	picture = GFX_report_event_generic_research_lab
 
 	fire_only_once = yes
 
@@ -199,7 +199,7 @@ country_event = {
 	id = md2026_space.10
 	title = md2026_space.10.t
 	desc = md2026_space.10.d
-	picture = GFX_report_event_generic_research
+	picture = GFX_report_event_generic_research_lab
 
 	fire_only_once = yes
 
@@ -258,7 +258,7 @@ news_event = {
 	id = md2026_space_news.1
 	title = md2026_space_news.1.t
 	desc = md2026_space_news.1.d
-	picture = GFX_news_event_generic_research
+	picture = GFX_news_event_generic_research_lab
 
 	major = yes
 
@@ -275,7 +275,7 @@ news_event = {
 	id = md2026_space_news.2
 	title = md2026_space_news.2.t
 	desc = md2026_space_news.2.d
-	picture = GFX_news_event_generic_military
+	picture = GFX_news_event_generic_army
 
 	major = yes
 

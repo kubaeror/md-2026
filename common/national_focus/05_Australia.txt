@@ -992,7 +992,7 @@ shared_focus = {
 			name = AST_remembering_the_anzacs
 			cost_reduction = 0.5
 			uses = 2
-			category = land_doctrine
+			category = CAT_land_doctrine
 		}
 	}
 
@@ -1460,7 +1460,7 @@ shared_focus = {
 			name = AST_the_royal_australian_navy
 			cost_reduction = 0.5
 			uses = 2
-			category = naval_doctrine
+			category = CAT_naval_doctrine
 		}
 	}
 
@@ -1513,7 +1513,7 @@ shared_focus = {
 			name = AST_whetstone_training
 			cost_reduction = 0.5
 			uses = 2
-			category = naval_doctrine
+			category = CAT_naval_doctrine
 		}
 		custom_effect_tooltip = whetstone_training_tt
 	}
@@ -1769,7 +1769,7 @@ shared_focus = {
 			name = AST_containment_theory
 			cost_reduction = 0.7
 			uses = 2
-			category = naval_doctrine
+			category = CAT_naval_doctrine
 		}
 	}
 
@@ -2031,7 +2031,7 @@ shared_focus = {
 			name = AST_the_raaf
 			cost_reduction = 0.5
 			uses = 2
-			category = air_doctrine
+			category = CAT_air_doctrine
 		}
 	}
 
@@ -2280,11 +2280,11 @@ shared_focus = {
 	}
 
 	ai_will_do = { base = 1 }
+	shared_focus = MD2026_AST_pacific_partner
 }
 
 focus_tree = {
 	id = howardgov_focus
-	shared_focus = MD2026_AST_pacific_partner
 
 	country = {
 		base = 0
@@ -3282,7 +3282,7 @@ focus_tree = {
 					name = AST_tear_out_the_roots
 					cost_reduction = 0.4
 					uses = 2
-					category = land_doctrine
+					category = CAT_land_doctrine
 				}
 			}
 		}
@@ -4518,7 +4518,7 @@ focus_tree = {
 				name = AST_anzus_collaboration
 				cost_reduction = 0.7
 				uses = 2
-				category = land_doctrine
+				category = CAT_land_doctrine
 			}
 			give_guarantee = NZL
 			give_guarantee = USA
@@ -4872,12 +4872,12 @@ focus_tree = {
 		}
 
 		ai_will_do = { base = 1 }
+	shared_focus = MD2026_AST_pacific_partner
 	}
 }
 
 focus_tree = {
 	id = australia_abbottgov_focus
-	shared_focus = MD2026_AST_pacific_partner
 
 	country = {
 		base = 0
@@ -7632,12 +7632,12 @@ focus_tree = {
 		}
 
 		ai_will_do = { base = 1 }
+	shared_focus = MD2026_AST_pacific_partner
 	}
 }
 
 focus_tree = {
 	id = costellogov_focus
-	shared_focus = MD2026_AST_pacific_partner
 
 	country = {
 		base = 0
@@ -9346,12 +9346,12 @@ focus_tree = {
 		}
 
 		ai_will_do = { base = 1 }
+	shared_focus = MD2026_AST_pacific_partner
 	}
 }
 
 focus_tree = {
 	id = ruddgov_focus
-	shared_focus = MD2026_AST_pacific_partner
 
 	country = {
 		base = 0
@@ -11030,7 +11030,7 @@ focus_tree = {
 						name = AST_maintain_obligations
 						cost_reduction = 0.4
 						uses = 2
-						category = land_doctrine
+						category = CAT_land_doctrine
 					}
 				}
 			}
@@ -11715,13 +11715,13 @@ focus_tree = {
 		}
 
 		ai_will_do = { base = 1 }
+	shared_focus = MD2026_AST_pacific_partner
 	}
 
 }
 
 focus_tree = {
 	id = gillardgov_focus
-	shared_focus = MD2026_AST_pacific_partner
 	country = {
 		base = 0
 	}
@@ -13773,6 +13773,7 @@ focus_tree = {
 		}
 
 		ai_will_do = { base = 1 }
+	shared_focus = MD2026_AST_pacific_partner
 	}
 
 
@@ -13780,7 +13781,6 @@ focus_tree = {
 
 focus_tree = {
 	id = ruddgov_return_focus
-	shared_focus = MD2026_AST_pacific_partner
 
 	country = {
 		base = 0

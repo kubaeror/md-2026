@@ -47,7 +47,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_CAN_northwest_passage
-	icon = GFX_goal_generic_navy_doctrines
+	icon = GFX_goal_generic_navy_doctrines_tactics
 	x = -1
 	y = 1
 	cost = 8.6
@@ -88,7 +88,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_CAN_icebreaker_fleet
-	icon = GFX_goal_generic_navy_doctrines
+	icon = GFX_goal_generic_navy_doctrines_tactics
 	x = 0
 	y = 1
 	cost = 12.9
@@ -175,7 +175,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_CAN_us_accommodation
-	icon = align_to_usa
+	icon = GFX_goal_generic_alliance
 	x = 1
 	y = 1
 	cost = 8.6
@@ -239,7 +239,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_CAN_norad_renewal
-	icon = GFX_goal_generic_air_defense
+	icon = GFX_focus_generic_air_defense
 	x = -1
 	y = 1
 	cost = 8.6
@@ -264,7 +264,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_CAN_navy_expansion
-	icon = GFX_goal_generic_navy_doctrines
+	icon = GFX_goal_generic_navy_doctrines_tactics
 	x = 1
 	y = 1
 	cost = 8.6
@@ -288,7 +288,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_CAN_continental_defense
-	icon = GFX_goal_generic_air_defense
+	icon = GFX_focus_generic_air_defense
 	x = 0
 	y = 1
 	cost = 12.9
@@ -312,7 +312,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_CAN_frigate_program
-	icon = GFX_goal_generic_navy_doctrines
+	icon = GFX_goal_generic_navy_doctrines_tactics
 	x = 0
 	y = 1
 	cost = 12.9
@@ -418,7 +418,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_CAN_five_eyes_contribution
-	icon = GFX_goal_generic_intelligence_agency
+	icon = GFX_goal_generic_intelligence_exchange
 	x = 0
 	y = 1
 	cost = 8.6

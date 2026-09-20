@@ -388,7 +388,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_NKO_party_purges
-	icon = GFX_goal_generic_intelligence_agency
+	icon = GFX_goal_generic_intelligence_exchange
 	x = 0
 	y = 1
 	cost = 8.6
@@ -444,7 +444,7 @@ shared_focus = {
 			name = MD2026_NKO_cyber_warfare
 			bonus = 1.0
 			uses = 1
-			category = CAT_computing_tech
+			category = CAT_computer_systems
 		}
 		add_political_power = 25
 	}
@@ -478,7 +478,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_NKO_information_warfare
-	icon = GFX_goal_generic_intelligence_agency
+	icon = GFX_goal_generic_intelligence_exchange
 	x = 1
 	y = 1
 	cost = 8.6
@@ -511,7 +511,7 @@ shared_focus = {
 			name = MD2026_NKO_cyber_army
 			bonus = 1.0
 			uses = 2
-			category = CAT_computing_tech
+			category = CAT_computer_systems
 		}
 		add_political_power = 75
 	}

@@ -47,7 +47,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_ITA_naval_power
-	icon = GFX_goal_generic_navy_doctrines
+	icon = GFX_goal_generic_navy_doctrines_tactics
 	x = -1
 	y = 1
 	cost = 12.9
@@ -284,7 +284,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_ITA_mediterranean_patrol
-	icon = GFX_goal_generic_navy_doctrines
+	icon = GFX_goal_generic_navy_doctrines_tactics
 	x = 0
 	y = 1
 	cost = 12.9

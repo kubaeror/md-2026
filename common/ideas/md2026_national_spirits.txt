@@ -250,7 +250,7 @@
 		### INDIA (Focus Tree Rewards) ###
 
 		md2026_raj_make_in_india = {
-			picture = generic_goods
+			picture = consumer_goods
 			allowed = { original_tag = RAJ }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -276,7 +276,7 @@
 		}
 
 		md2026_jap_economic_stimulus = {
-			picture = economic_growth
+			picture = stable_growth
 			allowed = { original_tag = JAP }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -290,7 +290,7 @@
 		### TURKEY (Focus Tree Rewards) ###
 
 		md2026_tur_defense_industry = {
-			picture = generic_goods
+			picture = consumer_goods
 			allowed = { original_tag = TUR }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -333,7 +333,7 @@
 		### SAUDI ARABIA (Focus Tree Rewards) ###
 
 		md2026_sau_diversification = {
-			picture = economic_growth
+			picture = stable_growth
 			allowed = { original_tag = SAU }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -374,7 +374,7 @@
 		}
 
 		md2026_fra_social_unrest = {
-			picture = strike
+			picture = ICE_general_strike
 			allowed = { original_tag = FRA }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -388,7 +388,7 @@
 		### ITALY ###
 
 		md2026_ita_demographic_crisis = {
-			picture = population
+			picture = population_growth
 			allowed = { original_tag = ITA }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -458,7 +458,7 @@
 		### TAIWAN ###
 
 		md2026_tai_silicon_shield = {
-			picture = electronic_warfare
+			picture = electronic_warfare_generals_spirit
 			allowed = { original_tag = TAI }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -471,7 +471,7 @@
 		}
 
 		md2026_tai_china_threat = {
-			picture = threat
+			picture = kos_ser_threat_idea
 			allowed = { original_tag = TAI }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -499,7 +499,7 @@
 		### CANADA ###
 
 		md2026_can_nato_arctic = {
-			picture = winter_training
+			picture = winter_mt_war
 			allowed = { original_tag = CAN }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -554,7 +554,7 @@
 		### GREECE ###
 
 		md2026_gre_economic_recovery = {
-			picture = economic_growth
+			picture = stable_growth
 			allowed = { original_tag = GRE }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -656,7 +656,7 @@
 		### GEORGIA ###
 
 		md2026_geo_eu_aspirations = {
-			picture = economic_growth
+			picture = stable_growth
 			allowed = { original_tag = GEO }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -670,7 +670,7 @@
 		### JAPAN ###
 
 		md2026_jap_demographic_crisis = {
-			picture = population
+			picture = population_growth
 			allowed = { original_tag = JAP }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -767,7 +767,7 @@
 		}
 
 		md2026_raj_digital_india = {
-			picture = electronic_warfare
+			picture = electronic_warfare_generals_spirit
 			allowed = { original_tag = RAJ }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -995,7 +995,7 @@
 		### USA Focus Spirits ###
 
 		md2026_usa_labor_shortage = {
-			picture = strike
+			picture = ICE_general_strike
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -1084,7 +1084,7 @@
 		}
 
 		md2026_chi_tech_self_reliance = {
-			picture = electronic_warfare
+			picture = electronic_warfare_generals_spirit
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			modifier = {

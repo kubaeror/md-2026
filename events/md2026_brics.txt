@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # MD2026 BRICS+ Expansion Events
 # New members, alternative financial system, de-dollarization
 ###################################
@@ -14,7 +14,7 @@ country_event = {
 	id = md2026_brics.1
 	title = md2026_brics.1.t
 	desc = md2026_brics.1.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	fire_only_once = yes
 
@@ -86,7 +86,7 @@ country_event = {
 	id = md2026_brics.2
 	title = md2026_brics.2.t
 	desc = md2026_brics.2.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -162,7 +162,7 @@ country_event = {
 	id = md2026_brics.3
 	title = md2026_brics.3.t
 	desc = md2026_brics.3.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -211,7 +211,7 @@ country_event = {
 	id = md2026_brics.10
 	title = md2026_brics.10.t
 	desc = md2026_brics.10.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	fire_only_once = yes
 
@@ -271,7 +271,7 @@ country_event = {
 	id = md2026_brics.11
 	title = md2026_brics.11.t
 	desc = md2026_brics.11.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	is_triggered_only = yes
 	fire_only_once = yes

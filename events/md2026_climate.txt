@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # MD2026 Climate & Energy Crisis Events
 # Extreme weather, energy transition, resource competition
 ###################################
@@ -14,7 +14,7 @@ country_event = {
 	id = md2026_climate.1
 	title = md2026_climate.1.t
 	desc = md2026_climate.1.d
-	picture = GFX_report_event_generic_disaster
+	picture = GFX_report_event_generic_ruins
 
 	fire_only_once = yes
 
@@ -91,7 +91,7 @@ country_event = {
 	id = md2026_climate.2
 	title = md2026_climate.2.t
 	desc = md2026_climate.2.d
-	picture = GFX_report_event_generic_industry
+	picture = GFX_report_event_generic_factory
 
 	fire_only_once = yes
 
@@ -163,7 +163,7 @@ country_event = {
 	id = md2026_climate.3
 	title = md2026_climate.3.t
 	desc = md2026_climate.3.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	fire_only_once = yes
 
@@ -236,7 +236,7 @@ country_event = {
 	id = md2026_climate.10
 	title = md2026_climate.10.t
 	desc = md2026_climate.10.d
-	picture = GFX_report_event_generic_disaster
+	picture = GFX_report_event_generic_ruins
 
 	fire_only_once = yes
 
@@ -307,7 +307,7 @@ news_event = {
 	id = md2026_climate_news.1
 	title = md2026_climate_news.1.t
 	desc = md2026_climate_news.1.d
-	picture = GFX_news_event_generic_disaster
+	picture = GFX_news_event_generic_ruins
 
 	major = yes
 
@@ -324,7 +324,7 @@ news_event = {
 	id = md2026_climate_news.2
 	title = md2026_climate_news.2.t
 	desc = md2026_climate_news.2.d
-	picture = GFX_news_event_generic_disaster
+	picture = GFX_news_event_generic_ruins
 
 	major = yes
 

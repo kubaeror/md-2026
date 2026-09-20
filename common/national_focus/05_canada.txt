@@ -2642,7 +2642,7 @@ focus_tree = {
 				name = CAN_clean_vehicles
 				bonus = 0.50
 				uses = 2
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 			add_tech_bonus = {
 				name = CAN_clean_vehicles
@@ -7597,7 +7597,7 @@ focus_tree = {
 				name = CAN_sat_tech
 				bonus = 0.50
 				uses = 2
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 		}
 

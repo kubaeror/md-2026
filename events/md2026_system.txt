@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # MD2026 System Events
 # Intro news event, bookmark initialization
 ###################################
@@ -100,7 +100,7 @@ country_event = {
 	id = md2026_system.3
 	title = md2026_system.3.t
 	desc = md2026_system.3.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	trigger = {
 		has_global_flag = md2026_initialized

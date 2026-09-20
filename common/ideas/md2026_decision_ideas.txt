@@ -73,7 +73,7 @@ ideas = {
 		}
 
 		md2026_cyber_capability = {
-			picture = electronic_warfare
+			picture = electronic_warfare_generals_spirit
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -119,7 +119,7 @@ ideas = {
 		}
 
 		md2026_digital_transformation = {
-			picture = electronic_warfare
+			picture = electronic_warfare_generals_spirit
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -130,7 +130,7 @@ ideas = {
 		}
 
 		md2026_arms_exporter = {
-			picture = generic_goods
+			picture = consumer_goods
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -202,7 +202,7 @@ ideas = {
 		}
 
 		md2026_chi_taiwan_pressure = {
-			picture = threat
+			picture = kos_ser_threat_idea
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -214,7 +214,7 @@ ideas = {
 		}
 
 		md2026_chi_tech_self_sufficiency = {
-			picture = electronic_warfare
+			picture = electronic_warfare_generals_spirit
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			modifier = {
@@ -225,7 +225,7 @@ ideas = {
 		}
 
 		md2026_raj_make_in_india_decision = {
-			picture = generic_goods
+			picture = consumer_goods
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			modifier = {

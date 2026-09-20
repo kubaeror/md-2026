@@ -1,0 +1,11 @@
+# HoI4 script files must keep LF; git's autocrlf would flip them to CRLF
+*.txt text eol=lf
+*.yml text eol=lf
+*.gfx text eol=lf
+*.gui text eol=lf
+*.mod text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.ps1 text eol=lf
+*.png binary

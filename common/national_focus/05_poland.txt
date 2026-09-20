@@ -15051,7 +15051,7 @@ focus_tree = {
 				name = POL_advanced_computers
 				bonus = 0.15
 				uses = 2
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 			set_temp_variable = { treasury_change = -10 }
 			modify_treasury_effect = yes
@@ -15219,7 +15219,7 @@ focus_tree = {
 				name = POL_understanding_quantum_computer_mechanics
 				bonus = 0.1
 				uses = 1
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 			set_temp_variable = { treasury_change = -6 }
 			modify_treasury_effect = yes
@@ -18761,7 +18761,7 @@ focus_tree = {
 				name = POL_it_giant
 				bonus = 0.35
 				uses = 2
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 		}
 
@@ -18891,7 +18891,7 @@ focus_tree = {
 				name = POL_success_through_progress
 				bonus = 0.15
 				uses = 2
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 			add_tech_bonus = {
 				name = POL_success_through_progress
@@ -22636,7 +22636,7 @@ focus_tree = {
 				name = POL_grants_for_czech_scientists
 				bonus = 0.1
 				uses = 3
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 			add_tech_bonus = {
 				name = POL_grants_for_czech_scientists
@@ -23844,7 +23844,7 @@ focus_tree = {
 				name = POL_measures_for_cyber_security
 				bonus = 0.2
 				uses = 3
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 			set_temp_variable = { treasury_change = -10 }
 			modify_treasury_effect = yes

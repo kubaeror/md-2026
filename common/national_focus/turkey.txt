@@ -1770,7 +1770,7 @@ focus_tree = {
 				name = TUR_electronic_research
 				bonus = 0.5
 				uses = 2
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 		}
 
@@ -3365,7 +3365,7 @@ focus_tree = {
 				name = TUR_other_use_woman
 				bonus = 0.2
 				uses = 2
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 		}
 
@@ -14215,7 +14215,7 @@ focus_tree = {
 				bonus = 0.5
 				uses = 1
 				category = CAT_ai
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 				category = CAT_internet_tech
 			}
 		}

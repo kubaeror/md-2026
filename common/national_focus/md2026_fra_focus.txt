@@ -6,7 +6,7 @@
 
 shared_focus = {
 	id = MD2026_FRA_european_power
-	icon = FRA_focus_nuclear
+	icon = GFX_focus_generic_nuclear_development
 	x = 38
 	y = 0
 	cost = 3.6
@@ -282,7 +282,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_FRA_political_realignment
-	icon = GFX_goal_generic_intelligence_agency
+	icon = GFX_goal_generic_intelligence_exchange
 	x = 0
 	y = 1
 	cost = 8.6
@@ -345,7 +345,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_FRA_indo_pacific_presence
-	icon = GFX_goal_generic_navy_doctrines
+	icon = GFX_goal_generic_navy_doctrines_tactics
 	x = -1
 	y = 1
 	cost = 8.6
@@ -511,7 +511,7 @@ shared_focus = {
 			name = MD2026_FRA_reactor_exports
 			bonus = 1.0
 			uses = 1
-			category = CAT_computing_tech
+			category = CAT_computer_systems
 		}
 	}
 	ai_will_do = {

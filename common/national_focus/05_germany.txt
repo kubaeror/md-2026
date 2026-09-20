@@ -13452,7 +13452,7 @@
 					add_tech_bonus = {
 						name = GER_International_cutting_edge_research
 						category = CAT_ai
-						category = CAT_computing_tech
+						category = CAT_computer_systems
 						bonus = 1.0
 						uses = 2
 					}
@@ -13468,7 +13468,7 @@
 				add_tech_bonus = {
 					name = GER_International_cutting_edge_research
 					category = CAT_ai
-					category = CAT_computing_tech
+					category = CAT_computer_systems
 					bonus = 1.0
 					uses = 2
 				}
@@ -13490,7 +13490,7 @@
 					add_tech_bonus = {
 						name = GER_International_cutting_edge_research
 						category = CAT_ai
-						category = CAT_computing_tech
+						category = CAT_computer_systems
 						bonus = 1.0
 						uses = 2
 					}
@@ -13506,7 +13506,7 @@
 				add_tech_bonus = {
 					name = GER_International_cutting_edge_research
 					category = CAT_ai
-					category = CAT_computing_tech
+					category = CAT_computer_systems
 					bonus = 1.0
 					uses = 2
 				}
@@ -13554,7 +13554,7 @@
 					add_tech_bonus = {
 						name = GER_Promote_academic_elites
 						category = CAT_ai
-						category = CAT_computing_tech
+						category = CAT_computer_systems
 						bonus = 1.0
 						uses = 2
 					}
@@ -13570,7 +13570,7 @@
 				add_tech_bonus = {
 					name = GER_Promote_academic_elites
 					category = CAT_ai
-					category = CAT_computing_tech
+					category = CAT_computer_systems
 					bonus = 1.0
 					uses = 2
 				}
@@ -13592,7 +13592,7 @@
 					add_tech_bonus = {
 						name = GER_Promote_academic_elites
 						category = CAT_ai
-						category = CAT_computing_tech
+						category = CAT_computer_systems
 						bonus = 1.0
 						uses = 2
 					}
@@ -13608,7 +13608,7 @@
 				add_tech_bonus = {
 					name = GER_Promote_academic_elites
 					category = CAT_ai
-					category = CAT_computing_tech
+					category = CAT_computer_systems
 					bonus = 1.0
 					uses = 2
 				}
@@ -13899,7 +13899,7 @@
 					name = GER_Strategic_Partnership_South_korea
 					bonus = 0.6
 					uses = 2
-					category = CAT_computing_tech
+					category = CAT_computer_systems
 				}
 			}
 		}
@@ -16129,7 +16129,7 @@
 				name = GER_Industrial_outsourcing
 				bonus = 0.3
 				uses = 1
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 			add_tech_bonus = {
 				name = GER_Industrial_outsourcing
@@ -17209,7 +17209,7 @@
 				bonus = 0.5
 				uses = 2
 				category = CAT_ai
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 		}
 
@@ -23522,7 +23522,7 @@
 				bonus = 0.5
 				uses = 2
 				category = CAT_ai
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 				category = CAT_internet_tech
 			}
 		}

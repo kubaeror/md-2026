@@ -2687,14 +2687,14 @@ focus_tree = {
 				name = RAJ_ultra_tech_content
 				bonus = 0.25
 				uses = 1
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 			add_tech_bonus = {
 				name = RAJ_ultra_tech_content
 				bonus = 0.5
 				uses = 2
 				category = CAT_internet_tech
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 			one_office_construction = yes
 		}
@@ -6775,7 +6775,7 @@ focus_tree = {
 				name = RAJ_miltech_innov
 				bonus = 0.3
 				uses = 1
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 			add_tech_bonus = {
 				name = RAJ_miltech_innov
@@ -6910,7 +6910,7 @@ focus_tree = {
 				name = RAJ_mil_electr
 				bonus = 0.3
 				uses = 1
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 			add_tech_bonus = {
 				name = RAJ_mil_electr
@@ -6997,7 +6997,7 @@ focus_tree = {
 				name = RAJ_command_innov
 				bonus = 0.3
 				uses = 1
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 			add_tech_bonus = {
 				name = RAJ_command_innov
@@ -7041,7 +7041,7 @@ focus_tree = {
 				name = RAJ_bharat
 				bonus = 0.3
 				uses = 1
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 		}
 
@@ -7086,7 +7086,7 @@ focus_tree = {
 				name = RAJ_indian_radar
 				bonus = 0.3
 				uses = 1
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 			random_owned_controlled_state = {
 				add_building_construction = {
@@ -9615,7 +9615,7 @@ focus_tree = {
 				name = RAJ_aadhar_project
 				bonus = 0.3
 				uses = 1
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 			}
 			increase_policing_budget = yes
 		}

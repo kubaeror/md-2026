@@ -116,7 +116,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_GER_air_defense_shield
-	icon = GFX_goal_generic_air_defense
+	icon = GFX_focus_generic_air_defense
 	x = 0
 	y = 1
 	cost = 12.9
@@ -160,7 +160,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_GER_atlantic_solidarity
-	icon = align_to_usa
+	icon = GFX_goal_generic_alliance
 	x = -1
 	y = 1
 	cost = 8.6
@@ -300,7 +300,7 @@ shared_focus = {
 			name = MD2026_GER_hydrogen_economy
 			bonus = 1.0
 			uses = 2
-			category = CAT_computing_tech
+			category = CAT_computer_systems
 		}
 		add_stability = 0.03
 	}
@@ -473,7 +473,7 @@ shared_focus = {
 			name = MD2026_GER_ai_leadership
 			bonus = 1.0
 			uses = 2
-			category = CAT_computing_tech
+			category = CAT_computer_systems
 		}
 	}
 	ai_will_do = {
@@ -519,7 +519,7 @@ shared_focus = {
 			name = MD2026_GER_digital_sovereignty
 			bonus = 1.0
 			uses = 1
-			category = CAT_computing_tech
+			category = CAT_computer_systems
 		}
 	}
 	ai_will_do = {

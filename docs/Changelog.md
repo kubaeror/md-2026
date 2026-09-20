@@ -4,7 +4,44 @@ All notable changes to the Millennium Dawn 2026 Rework submod.
 
 ---
 
-## v1.0.0 — Initial Release
+## v1.1.0 - Millennium Dawn 2.0 / HoI4 1.19 rebase
+
+### Breaking changes
+- The submod now targets **HoI4 1.19.x** and **Millennium Dawn 2.0.0** (previously 1.17 / MD 1.12.3).
+- Removed `replace_path="common/bookmarks"` - the 2026 bookmark is a separate file now and MD's
+  own 2000 bookmark is no longer replaced.
+- Overriding files are **generated** from the installed MD plus `patches/`
+  (`python tools/rebase.py generate`).
+
+### Fixes
+- Launcher: added the missing `.mod` descriptor, thumbnail and `supported_version="1.19.*"`.
+- Bookmarks: 2000 bookmark restored to MD 2.0's version; the 2026 bookmark references only
+  existing ideas/focuses (`NOR` → `NRY`).
+- Focus trees: regenerated from MD 2.0 files with `shared_focus` injection - no more duplicate
+  focus ids (~8,000 removed), 2026 branches now attach to MD 2.0's renamed trees.
+- Characters: stale overrides removed (237 MD 2.0 characters were being deleted).
+- History: regenerated from MD 2.0 + 2026 patches; 1,853 invalid technology and 394 invalid idea
+  references removed; 134 pre-completed focuses remapped to MD 2.0 ids.
+- States: MD 2.0 resources, buildings and variables restored; only 2026 ownership is patched.
+- Technology tiers: generated from MD 2.0's tech tree (`start_year` + DLC gating) instead of a
+  hand-written list of stale tech names.
+- NATO: post-2000 members receive MD 2.0's `NATO_member` idea and are added to `global.nato_members`.
+- War exhaustion: the `md2026_war_months` counter is initialised before use.
+- Localisation: 30 duplicate keys removed, encoding of accented characters fixed.
+- Sprites: 114 references remapped to existing GFX sprites (event pictures, focus icons, idea
+  pictures, decision category icons).
+- `CAT_computing_tech` → `CAT_computer_systems`, short doctrine categories normalised.
+
+### Tooling
+- `tools/rebase.py` - generator (focus trees, histories, states, technology effects).
+- `tools/validate.py` - reference validator (0 errors against MD 2.0.0).
+- `tools/build_focus_config.py`, `tools/fix_focus_refs.py`, `tools/build_mappings.py` - helpers.
+- `tools/install_mod.ps1`, `tools/make_thumbnail.py` - installation helpers.
+- `docs/Architecture.md`, `docs/Testing.md` - new; README/Compatibility/Known-Issues rewritten.
+
+---
+
+## v1.0.0 - Initial Release
 
 ### Infrastructure (FAZA 0)
 - Created `descriptor.mod` with dependency on Millennium Dawn

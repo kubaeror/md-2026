@@ -8431,7 +8431,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_cloud_computing "
 			add_tech_bonus = {
 				name = KOR_cloud_computing
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 				bonus = 0.30
 				uses = 2
 			}
@@ -8946,7 +8946,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_samsung_advanced_packaging"
-			add_tech_bonus = { name = KOR_samsung_advanced_packaging bonus = 0.20 uses = 1 category = CAT_computing_tech }
+			add_tech_bonus = { name = KOR_samsung_advanced_packaging bonus = 0.20 uses = 1 category = CAT_computer_systems }
 			hidden_effect = {
 				if = { limit = { OR = { has_game_rule = { rule = rule_corporate_history option = full } has_game_rule = { rule = rule_corporate_history option = outcomes_only } } } KOR_samsung_initialize_state = yes set_country_flag = KOR_samsung_integrated_stack_strategy add_to_variable = { KOR_samsung_memory_leadership = 1 } add_to_variable = { KOR_samsung_foundry_capability = 1 } KOR_samsung_clamp_state = yes }
 			}

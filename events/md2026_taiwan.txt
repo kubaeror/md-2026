@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # MD2026 Taiwan Crisis Events
 # China-Taiwan escalation, US/Japan response
 ###################################
@@ -110,7 +110,7 @@ country_event = {
 	id = md2026_taiwan.2
 	title = md2026_taiwan.2.t
 	desc = md2026_taiwan.2.d
-	picture = GFX_report_event_merchant_ship
+	picture = GFX_report_event_merchant_ship_01
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -183,7 +183,7 @@ country_event = {
 	id = md2026_taiwan.3
 	title = md2026_taiwan.3.t
 	desc = md2026_taiwan.3.d
-	picture = GFX_report_event_merchant_ship
+	picture = GFX_report_event_merchant_ship_01
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -366,7 +366,7 @@ country_event = {
 	id = md2026_taiwan.6
 	title = md2026_taiwan.6.t
 	desc = md2026_taiwan.6.d
-	picture = GFX_report_event_merchant_ship
+	picture = GFX_report_event_merchant_ship_01
 
 	is_triggered_only = yes
 	fire_only_once = yes

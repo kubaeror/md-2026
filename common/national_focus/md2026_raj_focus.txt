@@ -6,7 +6,7 @@
 
 shared_focus = {
 	id = MD2026_RAJ_indias_century
-	icon = GFX_focus_generic_india_trip_to_europe
+	icon = GFX_focus_RAJ_a_congress_resurgent
 	x = 38
 	y = 0
 	cost = 3.6
@@ -66,7 +66,7 @@ shared_focus = {
 			name = MD2026_RAJ_digital_india
 			bonus = 1.0
 			uses = 2
-			category = CAT_computing_tech
+			category = CAT_computer_systems
 		}
 	}
 	ai_will_do = {
@@ -365,7 +365,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_RAJ_blue_water_navy
-	icon = GFX_goal_generic_navy_doctrines
+	icon = GFX_goal_generic_navy_doctrines_tactics
 	x = 3
 	y = 1
 	cost = 8.6
@@ -536,7 +536,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_RAJ_ai_hub
-	icon = GFX_goal_generic_intelligence_agency
+	icon = GFX_goal_generic_intelligence_exchange
 	x = 1
 	y = 1
 	cost = 8.6
@@ -550,7 +550,7 @@ shared_focus = {
 			name = MD2026_RAJ_ai_hub
 			bonus = 1.0
 			uses = 2
-			category = CAT_computing_tech
+			category = CAT_computer_systems
 		}
 	}
 	ai_will_do = {
@@ -600,7 +600,7 @@ shared_focus = {
 			name = MD2026_RAJ_quantum_computing
 			bonus = 1.0
 			uses = 3
-			category = CAT_computing_tech
+			category = CAT_computer_systems
 		}
 	}
 	ai_will_do = {

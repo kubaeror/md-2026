@@ -69,7 +69,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_ENG_carrier_strike
-	icon = GFX_goal_generic_navy_doctrines
+	icon = GFX_goal_generic_navy_doctrines_tactics
 	x = 1
 	y = 1
 	cost = 12.9
@@ -230,7 +230,7 @@ shared_focus = {
 ### B3: Special Relationship Branch (x=0) ###
 shared_focus = {
 	id = MD2026_ENG_special_relationship
-	icon = align_to_usa
+	icon = GFX_goal_generic_alliance
 	x = 0
 	y = 1
 	cost = 8.6
@@ -250,7 +250,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_ENG_five_eyes
-	icon = GFX_goal_generic_intelligence_agency
+	icon = GFX_goal_generic_intelligence_exchange
 	x = -1
 	y = 1
 	cost = 8.6
@@ -304,7 +304,7 @@ shared_focus = {
 			name = MD2026_ENG_intelligence_dominance
 			bonus = 1.0
 			uses = 2
-			category = CAT_computing_tech
+			category = CAT_computer_systems
 		}
 	}
 	ai_will_do = {
@@ -368,7 +368,7 @@ shared_focus = {
 			name = MD2026_ENG_cyber_warfare
 			bonus = 1.0
 			uses = 2
-			category = CAT_computing_tech
+			category = CAT_computer_systems
 		}
 	}
 	ai_will_do = {
@@ -402,7 +402,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_ENG_gchq_expansion
-	icon = GFX_goal_generic_intelligence_agency
+	icon = GFX_goal_generic_intelligence_exchange
 	x = 0
 	y = 1
 	cost = 12.9
@@ -416,7 +416,7 @@ shared_focus = {
 			name = MD2026_ENG_gchq_expansion
 			bonus = 1.0
 			uses = 1
-			category = CAT_computing_tech
+			category = CAT_computer_systems
 		}
 	}
 	ai_will_do = {
@@ -482,7 +482,7 @@ shared_focus = {
 			name = MD2026_ENG_ai_strategy
 			bonus = 1.0
 			uses = 2
-			category = CAT_computing_tech
+			category = CAT_computer_systems
 		}
 	}
 	ai_will_do = {

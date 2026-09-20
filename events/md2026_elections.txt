@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # MD2026 Elections Events
 # Cyclical elections for democratic countries
 ###################################
@@ -13,7 +13,7 @@ country_event = {
 	id = md2026_elections.1
 	title = md2026_elections.1.t
 	desc = md2026_elections.1.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	trigger = {
 		date > 2026.6.1
@@ -111,7 +111,7 @@ country_event = {
 	id = md2026_elections.10
 	title = md2026_elections.10.t
 	desc = md2026_elections.10.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	fire_only_once = yes
 
@@ -178,7 +178,7 @@ country_event = {
 	id = md2026_elections.20
 	title = md2026_elections.20.t
 	desc = md2026_elections.20.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	fire_only_once = yes
 
@@ -257,7 +257,7 @@ country_event = {
 	id = md2026_elections.30
 	title = md2026_elections.30.t
 	desc = md2026_elections.30.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	fire_only_once = yes
 
@@ -399,7 +399,7 @@ country_event = {
 	id = md2026_elections.40
 	title = md2026_elections.40.t
 	desc = md2026_elections.40.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	fire_only_once = yes
 
@@ -513,7 +513,7 @@ country_event = {
 	id = md2026_elections.50
 	title = md2026_elections.50.t
 	desc = md2026_elections.50.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	fire_only_once = yes
 
@@ -614,7 +614,7 @@ country_event = {
 	id = md2026_elections.60
 	title = md2026_elections.60.t
 	desc = md2026_elections.60.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	fire_only_once = yes
 
@@ -704,7 +704,7 @@ country_event = {
 	id = md2026_elections.70
 	title = md2026_elections.70.t
 	desc = md2026_elections.70.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	fire_only_once = yes
 
@@ -816,7 +816,7 @@ country_event = {
 	id = md2026_elections.80
 	title = md2026_elections.80.t
 	desc = md2026_elections.80.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	fire_only_once = yes
 
@@ -928,7 +928,7 @@ country_event = {
 	id = md2026_elections.90
 	title = md2026_elections.90.t
 	desc = md2026_elections.90.d
-	picture = GFX_report_event_generic_diplomacy
+	picture = GFX_report_event_gre_diplomacy
 
 	fire_only_once = yes
 

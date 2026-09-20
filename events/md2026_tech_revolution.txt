@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # MD2026 AI & Technology Revolution Events
 # Artificial intelligence, automation, cyber warfare, digital economy
 ###################################
@@ -14,7 +14,7 @@ country_event = {
 	id = md2026_tech.1
 	title = md2026_tech.1.t
 	desc = md2026_tech.1.d
-	picture = GFX_report_event_generic_research
+	picture = GFX_report_event_generic_research_lab
 
 	fire_only_once = yes
 
@@ -95,7 +95,7 @@ country_event = {
 	id = md2026_tech.2
 	title = md2026_tech.2.t
 	desc = md2026_tech.2.d
-	picture = GFX_report_event_generic_espionage
+	picture = GFX_focus_generic_secret_service_agency
 
 	fire_only_once = yes
 
@@ -163,7 +163,7 @@ country_event = {
 	id = md2026_tech.3
 	title = md2026_tech.3.t
 	desc = md2026_tech.3.d
-	picture = GFX_report_event_generic_industry
+	picture = GFX_report_event_generic_factory
 
 	fire_only_once = yes
 
@@ -239,7 +239,7 @@ country_event = {
 	id = md2026_tech.10
 	title = md2026_tech.10.t
 	desc = md2026_tech.10.d
-	picture = GFX_report_event_generic_research
+	picture = GFX_report_event_generic_research_lab
 
 	fire_only_once = yes
 
@@ -297,7 +297,7 @@ news_event = {
 	id = md2026_tech_news.1
 	title = md2026_tech_news.1.t
 	desc = md2026_tech_news.1.d
-	picture = GFX_news_event_generic_research
+	picture = GFX_news_event_generic_research_lab
 
 	major = yes
 
@@ -314,7 +314,7 @@ news_event = {
 	id = md2026_tech_news.2
 	title = md2026_tech_news.2.t
 	desc = md2026_tech_news.2.d
-	picture = GFX_news_event_generic_espionage
+	picture = GFX_focus_generic_secret_service_agency
 
 	major = yes
 

@@ -4753,7 +4753,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.6
 				name = CHI_streamline_the_ranks
-				category = land_doctrine
+				category = CAT_land_doctrine
 				uses = 1
 			}
 		}
@@ -21756,7 +21756,7 @@ focus_tree = {
 			newline = yes
 			add_tech_bonus = {
 				name = CHI_smic_advanced_node
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 				bonus = 0.10
 				uses = 1
 			}
@@ -21815,7 +21815,7 @@ focus_tree = {
 			newline = yes
 			add_tech_bonus = {
 				name = CHI_fabless_design_cluster
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 				bonus = 0.10
 				uses = 1
 			}
@@ -21939,7 +21939,7 @@ focus_tree = {
 			newline = yes
 			add_tech_bonus = {
 				name = CHI_domestic_eda
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 				bonus = 0.12
 				uses = 1
 			}
@@ -22192,7 +22192,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = CHI_smee_lithography
-				category = CAT_computing_tech
+				category = CAT_computer_systems
 				ahead_reduction = 2.5
 				uses = 1
 			}
@@ -22452,7 +22452,7 @@ focus_tree = {
 				}
 				add_tech_bonus = {
 					name = CHI_sicarrier_euv
-					category = CAT_computing_tech
+					category = CAT_computer_systems
 					bonus = 0.25
 					uses = 1
 				}

@@ -221,7 +221,73 @@ def check_loc_duplicates():
             WARNINGS["loc encoding"].append(f"{rel(p)}: zawiera uszkodzone znaki (U+FFFD)")
 
 
+def check_sprites(md):
+    """Focus icons, idea pictures and event/decision sprites must exist."""
+    names = set()
+    for root in (os.path.join(md, "interface"), os.path.join(REPO, "interface"),
+                 os.path.join(r"D:\SteamLibrary\steamapps\common\Hearts of Iron IV", "interface")):
+        for p in files(root, ".gfx"):
+            text = rebase.read(p)
+            names |= set(re.findall(r'name\s*=\s*"?([A-Za-z0-9_.\-]+)"?', text))
+
+    def exists(ref):
+        return any(x in names for x in (ref, "GFX_" + ref, "GFX_idea_" + ref,
+                                        "GFX_focus_" + ref, "GFX_decision_" + ref, "GFX_goal_" + ref))
+
+    for p in files(os.path.join(REPO, "common", "national_focus")) + files(os.path.join(REPO, "common", "ideas")) + \
+             files(os.path.join(REPO, "common", "decisions")) + files(os.path.join(REPO, "events")):
+        text = rebase.strip_comments(rebase.read(p))
+        for m in re.finditer(r"(?m)^\s*(?:icon|picture)\s*=\s*([A-Za-z0-9_.\-]+)", text):
+            ref = m.group(1)
+            if ref.lower() in ("yes", "no") or ref.startswith("GFX_report_event"):
+                continue
+            if not exists(ref):
+                WARNINGS["missing sprite"].append(f"{ref}  ({rel(p)})")
+
+
+def check_oob_locations(md):
+    """Unit locations in our OOBs must exist in MD's states."""
+    provinces = set()
+    for p in files(os.path.join(md, "history", "states")):
+        text = rebase.read(p)
+        for m in re.finditer(r"provinces\s*=\s*\{([^}]*)\}", text):
+            provinces |= set(m.group(1).split())
+    for p in files(os.path.join(REPO, "history", "units")):
+        text = rebase.read(p)
+        for m in re.finditer(r"location\s*=\s*(\d+)", text):
+            if m.group(1) not in provinces:
+                WARNINGS["unknown province"].append(f"{m.group(1)}  ({rel(p)})")
+
+
 SCOPE_KEYWORDS = {"ROOT", "PREV", "FROM", "THIS", "OWNER", "CONTROLLER", "CAPITAL", "OVERLORD", "yes", "no"}
+
+
+def check_decision_categories(md):
+    cats = set()
+    for root in (os.path.join(md, "common", "decisions", "categories"), os.path.join(REPO, "common", "decisions", "categories")):
+        for p in files(root):
+            text = rebase.strip_comments(rebase.read(p))
+            cats |= {n for n, _ in rebase.children(text)}
+    tech_cats = set()
+    for p in files(os.path.join(md, "common", "technology_tags")) + files(os.path.join(REPO, "common", "technology_tags")):
+        text = rebase.strip_comments(rebase.read(p))
+        tech_cats |= set(re.findall(r"(?m)^\s*(CAT_[A-Za-z0-9_]+)", text))
+    tech_cats_low = {c.lower() for c in tech_cats}
+    cats_low = {c.lower() for c in cats}
+    for p in files(os.path.join(REPO, "common", "decisions")) + files(os.path.join(REPO, "common", "national_focus")):
+        if "categories" in p:
+            continue
+        text = rebase.strip_comments(rebase.read(p))
+        for m in re.finditer(r"(?m)^\s*category\s*=\s*([A-Za-z0-9_]+)", text):
+            ref = m.group(1)
+            if ref.lower() in tech_cats_low:
+                continue
+            if ref.lower() in cats_low:
+                continue
+            # MD sometimes uses the short doctrine form (land_doctrine)
+            if ("cat_" + ref.lower()) in tech_cats_low:
+                continue
+            WARNINGS["unknown category"].append(f"{ref}  ({rel(p)})")
 
 
 def main():
@@ -278,6 +344,9 @@ def main():
     check_bookmark(sets)
     check_duplicate_focus_ids(md, sets)
     check_loc_duplicates()
+    check_sprites(md)
+    check_oob_locations(md)
+    check_decision_categories(md)
 
     print()
     if ERRORS:

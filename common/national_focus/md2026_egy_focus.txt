@@ -47,7 +47,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MD2026_EGY_us_weapons
-	icon = align_to_usa
+	icon = GFX_goal_generic_alliance
 	x = -1
 	y = 1
 	cost = 12.9
@@ -480,7 +480,7 @@ shared_focus = {
 			name = MD2026_EGY_nuclear_power
 			bonus = 1.0
 			uses = 2
-			category = CAT_computing_tech
+			category = CAT_computer_systems
 		}
 		add_political_power = 50
 	}
