@@ -39,6 +39,7 @@ supported_version="1.19.*"
 dependencies={
 	"Millennium Dawn: A Modern Day Mod"
 }
+path="mod/$ModName"
 "@
 
 if (Test-Path $link) {
@@ -55,4 +56,14 @@ if (Test-Path $link) {
 
 Set-Content -Path $modFile -Value $descriptor -Encoding UTF8
 Write-Host "Wrote launcher descriptor: $modFile"
+
+# sanity check: the launcher descriptor must point at the junction
+$content = Get-Content $modFile -Raw
+if ($content -notmatch 'path\s*=\s*"mod/' -and $content -notmatch 'path\s*=\s*"') {
+    throw "Launcher descriptor is missing the path= line: $modFile"
+}
+if (-not (Test-Path (Join-Path $link "descriptor.mod"))) {
+    throw "Junction does not resolve to the mod folder: $link"
+}
+Write-Host "Verified: mod path resolves, descriptor.mod present."
 Write-Host "Done. Enable both 'Millennium Dawn' and 'Millennium Dawn 2026 Rework' in the launcher."

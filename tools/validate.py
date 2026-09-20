@@ -313,6 +313,42 @@ def check_focus_filters(md):
         WARNINGS["undefined focus filter"].append(f)
 
 
+def check_installation():
+    """Sanity-check the local installation (launcher descriptor, playset, last run)."""
+    mod_dir = os.path.join(os.path.expanduser("~"), "Documents", "Paradox Interactive",
+                           "Hearts of Iron IV", "mod")
+    mod_file = os.path.join(mod_dir, "md-2026.mod")
+    if not os.path.exists(mod_file):
+        WARNINGS["installation"].append("brak mod/md-2026.mod - uruchom tools/install_mod.ps1")
+        return
+    content = rebase.read(mod_file)
+    if not re.search(r'(?m)^\s*path\s*=', content):
+        ERRORS["installation"].append("mod/md-2026.mod nie ma linii path= (gra nie wczyta moda)")
+    link = os.path.join(mod_dir, "md-2026")
+    if not os.path.isdir(link):
+        WARNINGS["installation"].append("brak katalogu mod/md-2026 (junction)")
+    elif not os.path.exists(os.path.join(link, "descriptor.mod")):
+        WARNINGS["installation"].append("mod/md-2026 nie wskazuje na repo (brak descriptor.mod)")
+    playset = os.path.join(os.path.dirname(mod_dir), "dlc_load.json")
+    if os.path.exists(playset):
+        try:
+            data = json.load(open(playset, encoding="utf-8"))
+            if not any("md-2026" in m for m in data.get("enabled_mods", [])):
+                WARNINGS["installation"].append("md-2026 nie jest wlaczony w playset (dlc_load.json)")
+        except Exception:
+            pass
+    log = os.path.join(os.path.dirname(mod_dir), "logs", "system.log")
+    if os.path.exists(log):
+        text = rebase.read(log)
+        for m in re.finditer(r"Active Mod Count: (\d+)", text):
+            count = int(m.group(1))
+            if count < 2:
+                WARNINGS["installation"].append(
+                    f"ostatnie uruchomienie gry: Active Mod Count = {count} (submod nie zostal wczytany)")
+        if "Millennium Dawn 2026 Rework" in text:
+            WARNINGS["installation"].append("ostatnie uruchomienie: submod byl widziany przez gre")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--md", default=os.environ.get("MD_PATH", rebase.DEFAULT_MD))
@@ -371,6 +407,7 @@ def main():
     check_oob_locations(md)
     check_decision_categories(md)
     check_focus_filters(md)
+    check_installation()
 
     print()
     if ERRORS:
