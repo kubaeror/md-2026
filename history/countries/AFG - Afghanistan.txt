@@ -290,7 +290,8 @@ capital = 411
 	### Country Leader: Hibatullah Akhundzada ###
 	create_country_leader = {
 		name = "Hibatullah Akhundzada"
-		picture = "gfx/leaders/AFG/Hibatullah_Akhundzada.dds"
+		picture = "gfx/leaders/generic_politicians/middleeast_001.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2065.1.1"
 		ideology = Neutral_Muslim_Brotherhood
 		traits = {

@@ -459,7 +459,8 @@ country_event = {
 	### Country Leader: Dimitar Glavchev ###
 	create_country_leader = {
 		name = "Dimitar Glavchev"
-		picture = "gfx/leaders/BUL/Dimitar_Glavchev.dds"
+		picture = "gfx/leaders/generic_politicians/white_005.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2028.6.9"
 		ideology = conservatism
 		traits = {

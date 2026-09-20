@@ -67,7 +67,8 @@
 	### Country Leader: Milos Vucevic ###
 	create_country_leader = {
 		name = "Milos Vucevic"
-		picture = "gfx/leaders/SER/Milos_Vucevic.dds"
+		picture = "gfx/leaders/generic_politicians/white_016.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2028.12.17"
 		ideology = Nat_Populism
 		traits = {

@@ -678,7 +678,8 @@ capital = 96
 	### Country Leader: Luis Montenegro ###
 	create_country_leader = {
 		name = "Luis Montenegro"
-		picture = "gfx/leaders/POR/Luis_Montenegro.dds"
+		picture = "gfx/leaders/generic_politicians/white_015.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2028.3.10"
 		ideology = conservatism
 		traits = {

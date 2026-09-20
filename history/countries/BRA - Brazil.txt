@@ -1070,7 +1070,7 @@ capital = 885
 	### Country Leader: Lula da Silva ###
 	create_country_leader = {
 		name = "Luiz Inacio Lula da Silva"
-		picture = "gfx/leaders/BRA/Lula_da_Silva.dds"
+		picture = "gfx/leaders/BRA/luiz_inacio_lula_da_silva.dds"
 		expire = "2027.1.1"
 		ideology = socialism
 		traits = {

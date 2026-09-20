@@ -312,7 +312,8 @@ capital = 195
 	### Country Leader: Rashad al-Alimi ###
 	create_country_leader = {
 		name = "Rashad al-Alimi"
-		picture = "gfx/leaders/YEM/Rashad_al-Alimi.dds"
+		picture = "gfx/leaders/generic_politicians/middleeast_003.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2030.1.1"
 		ideology = Western_Autocracy
 		traits = {

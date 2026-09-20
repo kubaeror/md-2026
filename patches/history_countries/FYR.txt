@@ -68,7 +68,8 @@
 	### Country Leader: Hristijan Mickoski ###
 	create_country_leader = {
 		name = "Hristijan Mickoski"
-		picture = "gfx/leaders/FYR/Hristijan_Mickoski.dds"
+		picture = "gfx/leaders/generic_politicians/white_006.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2028.5.8"
 		ideology = conservatism
 		traits = {

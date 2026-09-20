@@ -338,7 +338,8 @@ capital = 233
 	### Country Leader: Abiy Ahmed ###
 	create_country_leader = {
 		name = "Abiy Ahmed"
-		picture = "gfx/leaders/ETH/Abiy_Ahmed.dds"
+		picture = "gfx/leaders/generic_politicians/black_001.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2031.10.4"
 		ideology = anarchist_communism
 		traits = {

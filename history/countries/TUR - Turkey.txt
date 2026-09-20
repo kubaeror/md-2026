@@ -976,7 +976,7 @@ capital = 159
 	### Country Leader: Recep Tayyip Erdogan ###
 	create_country_leader = {
 		name = "Recep Tayyip Erdogan"
-		picture = "gfx/leaders/TUR/Recep_Erdogan.dds"
+		picture = "gfx/leaders/TUR/Recep_Tayyip_Erdogan.dds"
 		expire = "2028.6.1"
 		ideology = Autocracy
 		traits = {

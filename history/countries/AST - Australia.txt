@@ -771,7 +771,8 @@ capital = 742
 	### Country Leader: Anthony Albanese ###
 	create_country_leader = {
 		name = "Anthony Albanese"
-		picture = "gfx/leaders/AST/Anthony_Albanese.dds"
+		picture = "gfx/leaders/generic_politicians/white_002.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2028.5.21"
 		ideology = socialism
 		traits = {

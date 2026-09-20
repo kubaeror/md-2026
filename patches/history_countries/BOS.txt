@@ -69,7 +69,8 @@
 	### Country Leader: Borjana Kristo ###
 	create_country_leader = {
 		name = "Borjana Kristo"
-		picture = "gfx/leaders/BOS/Borjana_Kristo.dds"
+		picture = "gfx/leaders/generic_politicians/white_004.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2026.10.2"
 		ideology = conservatism
 		traits = {

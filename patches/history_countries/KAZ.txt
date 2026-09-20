@@ -61,7 +61,8 @@
 	### Country Leader: Kassym-Jomart Tokayev ###
 	create_country_leader = {
 		name = "Kassym-Jomart Tokayev"
-		picture = "gfx/leaders/KAZ/Kassym-Jomart_Tokayev.dds"
+		picture = "gfx/leaders/generic_politicians/eastasian_001.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2029.11.20"
 		ideology = Autocracy
 		traits = {

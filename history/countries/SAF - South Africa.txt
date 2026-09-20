@@ -908,7 +908,8 @@ capital = 275
 	### Country Leader: Cyril Ramaphosa ###
 	create_country_leader = {
 		name = "Cyril Ramaphosa"
-		picture = "gfx/leaders/SAF/Cyril_Ramaphosa.dds"
+		picture = "gfx/leaders/generic_politicians/black_002.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2029.5.29"
 		ideology = anarchist_communism
 		traits = {

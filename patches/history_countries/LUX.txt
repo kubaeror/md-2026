@@ -68,7 +68,8 @@
 	### Country Leader: Luc Frieden ###
 	create_country_leader = {
 		name = "Luc Frieden"
-		picture = "gfx/leaders/LUX/Luc_Frieden.dds"
+		picture = "gfx/leaders/generic_politicians/white_011.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2028.10.8"
 		ideology = conservatism
 		traits = {

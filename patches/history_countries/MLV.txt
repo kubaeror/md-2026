@@ -66,7 +66,8 @@
 	### Country Leader: Dorin Recean ###
 	create_country_leader = {
 		name = "Dorin Recean"
-		picture = "gfx/leaders/MLV/Dorin_Recean.dds"
+		picture = "gfx/leaders/generic_politicians/white_012.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2027.7.11"
 		ideology = liberalism
 		traits = {

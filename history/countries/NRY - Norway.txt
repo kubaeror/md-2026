@@ -724,7 +724,8 @@ capital = 32
 	### Country Leader: Jonas Gahr Store ###
 	create_country_leader = {
 		name = "Jonas Gahr Store"
-		picture = "gfx/leaders/NRY/Jonas_Gahr_Store.dds"
+		picture = "gfx/leaders/generic_politicians/white_014.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2025.9.13"
 		ideology = socialism
 		traits = {

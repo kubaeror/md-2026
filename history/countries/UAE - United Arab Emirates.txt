@@ -423,7 +423,7 @@ capital = 180
 	### Country Leader: Mohammed bin Zayed ###
 	create_country_leader = {
 		name = "Mohammed bin Zayed"
-		picture = "gfx/leaders/UAE/Mohammed_bin_Zayed.dds"
+		picture = "gfx/leaders/UAE/mohammed_bin_zayed_al_nahyan.dds"
 		expire = "2065.1.1"
 		ideology = Western_Autocracy
 		traits = {

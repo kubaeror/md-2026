@@ -71,7 +71,7 @@
 	### Country Leader: Andrej Plenkovic ###
 	create_country_leader = {
 		name = "Andrej Plenkovic"
-		picture = "gfx/leaders/CRO/Andrej_Plenkovic.dds"
+		picture = "gfx/leaders/CRO/CRO_Andrej_Plenkovic.dds"
 		expire = "2028.4.17"
 		ideology = conservatism
 		traits = {

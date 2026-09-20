@@ -64,7 +64,8 @@
 	### Country Leader: Nikol Pashinyan ###
 	create_country_leader = {
 		name = "Nikol Pashinyan"
-		picture = "gfx/leaders/ARM/Nikol_Pashinyan.dds"
+		picture = "gfx/leaders/generic_politicians/white_001.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2026.6.20"
 		ideology = Conservative
 		traits = {

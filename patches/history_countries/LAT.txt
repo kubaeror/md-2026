@@ -74,7 +74,8 @@
 	### Country Leader: Evika Silina ###
 	create_country_leader = {
 		name = "Evika Silina"
-		picture = "gfx/leaders/LAT/Evika_Silina.dds"
+		picture = "gfx/leaders/generic_politicians/white_female_001.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2026.10.1"
 		ideology = conservatism
 		traits = {

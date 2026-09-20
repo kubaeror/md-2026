@@ -59,7 +59,8 @@
 	### Country Leader: Ahmad al-Sharaa ###
 	create_country_leader = {
 		name = "Ahmad al-Sharaa"
-		picture = "gfx/leaders/SYR/Ahmad_al-Sharaa.dds"
+		picture = "gfx/leaders/generic_politicians/middleeast_002.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2030.1.1"
 		ideology = Neutral_conservatism
 		traits = {

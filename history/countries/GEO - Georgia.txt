@@ -376,7 +376,8 @@ capital = 707
 	### Country Leader: Irakli Kobakhidze ###
 	create_country_leader = {
 		name = "Irakli Kobakhidze"
-		picture = "gfx/leaders/GEO/Irakli_Kobakhidze.dds"
+		picture = "gfx/leaders/generic_politicians/white_007.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2028.10.26"
 		ideology = Autocracy
 		traits = {

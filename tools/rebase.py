@@ -157,6 +157,7 @@ def rebase_focus(md):
             continue
         text = read(os.path.join(root, name))
         text = apply_fixups(text, *md_reference_sets(md))
+        text = fix_portraits_auto(text, md)
         blocks = []
         for m in re.finditer(r"focus_tree\s*=\s*\{", text):
             ob = text.index("{", m.start())
@@ -360,7 +361,63 @@ def md_reference_sets(md):
     return techs, chars
 
 
-def apply_fixups(text, techs, chars):
+def _portrait_replacement(ref, md, tag):
+    """Return a resolvable portrait path for ref, or '' when nothing matches."""
+    van = r"D:\SteamLibrary\steamapps\common\Hearts of Iron IV"
+    root = os.path.join(md, "gfx", "leaders", tag) if tag else ""
+    files_ = os.listdir(root) if root and os.path.isdir(root) else []
+
+    def norm(s):
+        return re.sub(r"[^a-z0-9]", "", s.lower())
+
+    if "/" in ref:
+        if any(os.path.exists(os.path.join(b, ref)) for b in (md, van)):
+            return ""
+    elif tag and any(os.path.exists(os.path.join(b, "gfx", "leaders", tag, ref)) for b in (md, van)):
+        return ""
+    base = norm(os.path.splitext(os.path.basename(ref))[0])
+    for fn in files_:
+        if base and base in norm(os.path.splitext(fn)[0]):
+            return fn
+    if "_" in base:
+        surname = base.split("_")[-1]
+        if len(surname) > 3:
+            for fn in files_:
+                if surname in norm(fn):
+                    return fn
+    return "gfx/leaders/generic_politicians/white_001.dds"
+
+
+def fix_portraits(text, md, tag):
+    """Replace leader portraits that cannot be resolved (a known crash source)."""
+    def repl(m):
+        new = _portrait_replacement(m.group(2), md, tag)
+        if not new:
+            return m.group(0)
+        if new.startswith("gfx/leaders/generic_politicians"):
+            return (f"{m.group(1)}# MD2026: portrait '{m.group(2)}' missing in MD 2.0\n"
+                    f'{m.group(1)}picture = "{new}"')
+        return f'{m.group(1)}picture = "{new}"'
+    return re.sub(r'(?m)^(\s*)picture\s*=\s*"([^"]+\.dds)"', repl, text)
+
+
+def fix_portraits_auto(text, md):
+    """Same as fix_portraits but derives the country tag from the nearest focus id."""
+    def repl(m):
+        prev = text[:m.start()]
+        ids = re.findall(r"id\s*=\s*([A-Z]{3})[A-Za-z0-9_]*", prev)
+        tag = ids[-1] if ids else ""
+        new = _portrait_replacement(m.group(2), md, tag)
+        if not new:
+            return m.group(0)
+        if new.startswith("gfx/leaders/generic_politicians"):
+            return (f"{m.group(1)}# MD2026: portrait '{m.group(2)}' missing in MD 2.0\n"
+                    f'{m.group(1)}picture = "{new}"')
+        return f'{m.group(1)}picture = "{new}"'
+    return re.sub(r'(?m)^(\s*)picture\s*=\s*"([^"]+\.dds)"', repl, text)
+
+
+def apply_fixups(text, techs, chars, md=None, tag=None):
     low_t = {t.lower(): t for t in techs}
     low_c = {c.lower(): c for c in chars}
 
@@ -408,6 +465,9 @@ def apply_fixups(text, techs, chars):
 
     # Norway tag rename leftovers in MD's own content
     text = re.sub(r"(?<![\w])(original_tag|tag)\s*=\s*NOR(?![\w])", r"\1 = NRY", text)
+
+    if md and tag:
+        text = fix_portraits(text, md, tag)
 
     # MD 2.0 renamed the computing tech category
     text = text.replace("CAT_computing_tech", "CAT_computer_systems")
@@ -519,7 +579,7 @@ def rebase_history(md, rename_map):
         patch = read(os.path.join(patch_dir, pf))
         if tag != md_tag:
             patch = re.sub(r"(?<![\w])" + re.escape(tag) + r"(?![A-Za-z])", md_tag, patch)
-        out = apply_fixups(base.rstrip() + "\n\n" + patch, techs, chars)
+        out = apply_fixups(base.rstrip() + "\n\n" + patch, techs, chars, md, md_tag)
         write(os.path.join(out_dir, fname), out)
     print(f"  generated {len(used)} country history files")
 

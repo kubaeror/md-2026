@@ -23040,7 +23040,8 @@ focus_tree = {
 					change_ruling_party_effect = yes
 					create_country_leader = {
 						name = "Toby 'Hunter' Campbell"
-						picture = "ENG_pmc_leader_2.dds"
+						# MD2026: portrait 'ENG_pmc_leader_2.dds' missing in MD 2.0
+						picture = "gfx/leaders/generic_politicians/white_001.dds"
 						ideology = Nat_Autocracy
 						traits = {
 							nationalist_Nat_Autocracy

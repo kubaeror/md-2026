@@ -42,6 +42,9 @@ overrides, the generator repairs them automatically.
 
 ### Cosmetics
 
+- Leaders without a Millennium Dawn portrait use one of MD's generic politician portraits
+  (`gfx/leaders/generic_politicians/`); the generator marks those lines with a `MD2026:` comment.
+  Using a non-existent portrait file would crash the game at bookmark start.
 - Some event pictures fall back to a generic sprite when MD has no exact match.
 - The 2026 bookmark uses MD's `GFX_select_date_2000` date picture.
 

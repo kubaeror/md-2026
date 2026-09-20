@@ -58,7 +58,7 @@
 	### Country Leader: Abdel Fattah al-Burhan ###
 	create_country_leader = {
 		name = "Abdel Fattah al-Burhan"
-		picture = "gfx/leaders/SUD/Abdel_Fattah_al-Burhan.dds"
+		picture = "gfx/leaders/SUD/Abdel_Fattah_al_Burhan.dds"
 		expire = "2030.1.1"
 		ideology = Neutral_Autocracy
 		traits = {

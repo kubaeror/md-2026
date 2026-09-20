@@ -1062,7 +1062,8 @@ capital = 46
 	### Country Leader: Dick Schoof ###
 	create_country_leader = {
 		name = "Dick Schoof"
-		picture = "gfx/leaders/HOL/Dick_Schoof.dds"
+		picture = "gfx/leaders/generic_politicians/white_009.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2028.11.22"
 		ideology = conservatism
 		traits = {

@@ -4413,7 +4413,8 @@ focus_tree = {
 				retire_country_leader = yes
 				create_country_leader = {
 					name = "Osama bin Laden"
-					picture = "osama_bin_laden.dds"
+					# MD2026: portrait 'osama_bin_laden.dds' missing in MD 2.0
+					picture = "gfx/leaders/generic_politicians/white_001.dds"
 					ideology = Caliphate
 					traits = {
 						salafist_Caliphate
@@ -4488,7 +4489,8 @@ focus_tree = {
 					set_capital = { state = 176 }
 					create_country_leader = {
 						name = "Abdullah bin Abdulaziz Al-Saud"
-						picture = "Abdullah_bin_Abdulaziz_Al-Saud.dds"
+						# MD2026: portrait 'Abdullah_bin_Abdulaziz_Al-Saud.dds' missing in MD 2.0
+						picture = "gfx/leaders/generic_politicians/white_001.dds"
 						ideology = Kingdom
 						traits = {
 							king
@@ -4549,7 +4551,8 @@ focus_tree = {
 				}
 				create_country_leader = {
 					name = "Qasim al-Raymi"
-					picture = "qasim_al_raymi.dds"
+					# MD2026: portrait 'qasim_al_raymi.dds' missing in MD 2.0
+					picture = "gfx/leaders/generic_politicians/white_001.dds"
 					ideology = Caliphate
 					traits = {
 						salafist_Caliphate

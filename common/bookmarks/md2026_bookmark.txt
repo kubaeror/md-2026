@@ -124,7 +124,7 @@ bookmarks = {
 			}
 			focuses = {
 				MD2026_JAP_active_defense
-				JAP_article_nine
+				JAP_article_nine_transition_comittee
 				JAP_a_nation_reborn
 			}
 		}

@@ -765,7 +765,7 @@ capital = 215
 	### Country Leader: Abdel Fattah el-Sisi ###
 	create_country_leader = {
 		name = "Abdel Fattah el-Sisi"
-		picture = "gfx/leaders/EGY/Abdel_Fattah_el-Sisi.dds"
+		picture = "gfx/leaders/EGY/EGY_Abdel_Fattah_el-Sisi.dds"
 		expire = "2030.4.2"
 		ideology = Western_Autocracy
 		traits = {

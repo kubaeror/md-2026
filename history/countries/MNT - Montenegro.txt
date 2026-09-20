@@ -259,7 +259,8 @@ oob = "GENERIC_OOB"
 	### Country Leader: Milojko Spajic ###
 	create_country_leader = {
 		name = "Milojko Spajic"
-		picture = "gfx/leaders/MNT/Milojko_Spajic.dds"
+		picture = "gfx/leaders/generic_politicians/white_013.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2027.6.11"
 		ideology = liberalism
 		traits = {

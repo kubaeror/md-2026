@@ -65,10 +65,26 @@ def load_sets(md):
     s["focus_by_file"] = {}
     for root in (os.path.join(md, "common", "national_focus"), os.path.join(REPO, "common", "national_focus")):
         for p in files(root):
-            text = rebase.read(p)
-            ids = set(re.findall(r"(?m)^\s*id\s*=\s*([A-Za-z0-9_\-\.]+)", text))
+            text = rebase.strip_comments(rebase.read(p))
+            ids = set()
+            for m in re.finditer(r"(?m)^\s*(?:focus|shared_focus|joint_focus)\s*=\s*\{", text):
+                ob = text.index("{", m.end() - 1)
+                end = rebase.find_block(text, ob)
+                idm = re.search(r"(?m)^\s*id\s*=\s*([A-Za-z0-9_\-\.]+)", text[ob:end][:400])
+                if idm:
+                    ids.add(idm.group(1))
             s["focus"] |= ids
             s["focus_by_file"][p] = ids
+
+    s["equipment"] = set()
+    for p in files(os.path.join(md, "common", "units", "equipment")) + files(os.path.join(REPO, "common", "units", "equipment")):
+        text = rebase.strip_comments(rebase.read(p))
+        for name, _ in rebase.children(text):
+            s["equipment"].add(name)
+        # archetypes are usually nested one level down
+        for root_name, body in rebase.children(text):
+            for name, _ in rebase.children(body):
+                s["equipment"].add(name)
 
     s["tag"] = set()
     for p in files(os.path.join(md, "common", "country_tags")) + files(os.path.join(REPO, "common", "country_tags")) + \
@@ -345,8 +361,6 @@ def check_installation():
             if count < 2:
                 WARNINGS["installation"].append(
                     f"ostatnie uruchomienie gry: Active Mod Count = {count} (submod nie zostal wczytany)")
-        if "Millennium Dawn 2026 Rework" in text:
-            WARNINGS["installation"].append("ostatnie uruchomienie: submod byl widziany przez gre")
 
 
 def check_file_hygiene():
@@ -375,6 +389,55 @@ def check_shared_focus_injection(md):
         for m in re.finditer(r"(?m)^\s*shared_focus = (MD2026[A-Za-z0-9_]+)", text):
             if not any(ob < m.start() < end for ob, end in trees):
                 ERRORS["shared_focus outside focus tree"].append(f"{m.group(1)}  ({rel(p)})")
+
+
+def check_portraits(md):
+    """Leader portraits referenced by the submod must resolve (bare names resolve
+    against gfx/leaders/<TAG>/). Only checks our own files/patches - Millennium
+    Dawn's own files are its responsibility."""
+    van = r"D:\SteamLibrary\steamapps\common\Hearts of Iron IV"
+    md_basenames = set()
+    for sub in ("common", "events", "history"):
+        root = os.path.join(md, sub)
+        for dirpath, _, names in os.walk(root):
+            for n in names:
+                md_basenames.add(n)
+
+    targets = list(files(os.path.join(REPO, "patches"))) + \
+        list(files(os.path.join(REPO, "events"))) + \
+        list(files(os.path.join(REPO, "common", "ideas"))) + \
+        list(files(os.path.join(REPO, "common", "decisions"))) + \
+        [p for p in files(os.path.join(REPO, "common", "national_focus")) if os.path.basename(p).startswith("md2026_")]
+    for p in targets:
+        name = os.path.basename(p)
+        tag = name[:3] if name[:3].isupper() else (name.split("_")[1].upper() if name.startswith("md2026_") else "")
+        text = rebase.strip_comments(rebase.read(p))
+        for m in re.finditer(r'(?m)^\s*picture\s*=\s*"([^"]+\.dds)"', text):
+            ref = m.group(1)
+            if "/" in ref:
+                ok = any(os.path.exists(os.path.join(b, ref)) for b in (md, van)) or \
+                     any(os.path.exists(os.path.join(b, "portraits", ref)) for b in (md, van))
+            elif tag:
+                ok = any(os.path.exists(os.path.join(b, "gfx", "leaders", tag, ref)) for b in (md, van))
+            else:
+                ok = True
+            if not ok:
+                ERRORS["missing portrait"].append(f"{ref}  ({rel(p)})")
+
+
+def check_equipment_refs(sets):
+    targets = list(files(os.path.join(REPO, "common", "decisions"))) + \
+        [p for p in files(os.path.join(REPO, "common", "national_focus")) if os.path.basename(p).startswith("md2026_")] + \
+        list(files(os.path.join(REPO, "events"))) + list(files(os.path.join(REPO, "patches")))
+    for p in targets:
+        text = rebase.strip_comments(rebase.read(p))
+        for m in re.finditer(r"(?:add_equipment_to_stockpile|add_equipment_to_stockpile_from_stockpile)\s*=\s*\{", text):
+            ob = text.index("{", m.end() - 1)
+            end = rebase.find_block(text, ob)
+            body = text[ob:end]
+            for tm in re.finditer(r"(?m)^\s*type\s*=\s*([A-Za-z0-9_]+)", body):
+                if tm.group(1) not in sets["equipment"]:
+                    ERRORS["unknown equipment type"].append(f"{tm.group(1)}  ({rel(p)})")
 
 
 def main():
@@ -437,6 +500,8 @@ def main():
     check_focus_filters(md)
     check_file_hygiene()
     check_shared_focus_injection(md)
+    check_portraits(md)
+    check_equipment_refs(sets)
     check_installation()
 
     print()

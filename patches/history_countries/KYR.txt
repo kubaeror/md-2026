@@ -62,7 +62,8 @@
 	### Country Leader: Sadyr Japarov ###
 	create_country_leader = {
 		name = "Sadyr Japarov"
-		picture = "gfx/leaders/KYR/Sadyr_Japarov.dds"
+		picture = "gfx/leaders/generic_politicians/eastasian_003.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2027.1.28"
 		ideology = Autocracy
 		traits = {

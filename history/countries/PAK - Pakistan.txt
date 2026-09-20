@@ -627,7 +627,8 @@ capital = 422
 	### Country Leader: Shehbaz Sharif ###
 	create_country_leader = {
 		name = "Shehbaz Sharif"
-		picture = "gfx/leaders/PAK/Shehbaz_Sharif.dds"
+		picture = "gfx/leaders/generic_politicians/southasian_001.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2029.2.8"
 		ideology = Nat_Autocracy
 		traits = {

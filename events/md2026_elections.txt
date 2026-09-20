@@ -279,7 +279,7 @@ country_event = {
 		set_politics = { ruling_party = democratic }
 		create_country_leader = {
 			name = "Friedrich Merz"
-			picture = "gfx/leaders/GER/Friedrich_Merz.dds"
+			picture = "gfx/leaders/generic_politicians/white_001.dds"
 			expire = "2033.12.31"
 			ideology = conservatism
 			traits = {
@@ -306,7 +306,7 @@ country_event = {
 		set_politics = { ruling_party = democratic }
 		create_country_leader = {
 			name = "Boris Pistorius"
-			picture = "gfx/leaders/GER/Boris_Pistorius.dds"
+			picture = "gfx/leaders/generic_politicians/white_002.dds"
 			expire = "2033.12.31"
 			ideology = socialism
 			traits = {
@@ -373,7 +373,7 @@ country_event = {
 		set_politics = { ruling_party = democratic }
 		create_country_leader = {
 			name = "Robert Habeck"
-			picture = "gfx/leaders/GER/Robert_Habeck.dds"
+			picture = "gfx/leaders/generic_politicians/white_003.dds"
 			expire = "2033.12.31"
 			ideology = liberalism
 			traits = {
@@ -587,7 +587,7 @@ country_event = {
 		set_politics = { ruling_party = democratic }
 		create_country_leader = {
 			name = "Takayuki Kobayashi"
-			picture = "gfx/leaders/JAP/Takayuki_Kobayashi.dds"
+			picture = "gfx/leaders/generic_politicians/eastasian_001.dds"
 			expire = "2031.12.31"
 			ideology = conservatism
 			traits = {
@@ -636,7 +636,7 @@ country_event = {
 		set_politics = { ruling_party = democratic }
 		create_country_leader = {
 			name = "Lee Jae-myung"
-			picture = "gfx/leaders/KOR/Lee_Jae-myung.dds"
+			picture = "gfx/leaders/generic_politicians/eastasian_002.dds"
 			expire = "2032.12.31"
 			ideology = liberalism
 			traits = {
@@ -663,7 +663,7 @@ country_event = {
 		set_politics = { ruling_party = democratic }
 		create_country_leader = {
 			name = "Han Dong-hoon"
-			picture = "gfx/leaders/KOR/Han_Dong-hoon.dds"
+			picture = "gfx/leaders/generic_politicians/eastasian_003.dds"
 			expire = "2032.12.31"
 			ideology = conservatism
 			traits = {
@@ -752,7 +752,7 @@ country_event = {
 		set_politics = { ruling_party = nationalist }
 		create_country_leader = {
 			name = "Tarcisio de Freitas"
-			picture = "gfx/leaders/BRA/Tarcisio_de_Freitas.dds"
+			picture = "gfx/leaders/generic_politicians/latin_001.dds"
 			expire = "2035.12.31"
 			ideology = Nat_Populism
 			traits = {
@@ -790,7 +790,7 @@ country_event = {
 		set_politics = { ruling_party = democratic }
 		create_country_leader = {
 			name = "Simone Tebet"
-			picture = "gfx/leaders/BRA/Simone_Tebet.dds"
+			picture = "gfx/leaders/generic_politicians/latin_002.dds"
 			expire = "2035.12.31"
 			ideology = conservatism
 			traits = {
@@ -976,7 +976,7 @@ country_event = {
 		set_politics = { ruling_party = democratic }
 		create_country_leader = {
 			name = "Elly Schlein"
-			picture = "gfx/leaders/ITA/Elly_Schlein.dds"
+			picture = "gfx/leaders/generic_politicians/white_004.dds"
 			expire = "2033.12.31"
 			ideology = socialism
 			traits = {

@@ -11225,7 +11225,8 @@ focus_tree = {
 							}
 							create_country_leader = {
 								name = "Mohammed Baqi al-Hakem"
-								picture = "Mohammed_Baqi_al-Hakem.dds"
+								# MD2026: portrait 'Mohammed_Baqi_al-Hakem.dds' missing in MD 2.0
+								picture = "gfx/leaders/generic_politicians/white_001.dds"
 								ideology = Mod_Vilayat_e_Faqih
 								traits = {
 									emerging_Vilayat_e_Faqih
@@ -11365,7 +11366,8 @@ focus_tree = {
 								}
 								create_country_leader = {
 									name = "Hadi al-Amiri"
-									picture = "Hadi_Al-Amiri.dds"
+									# MD2026: portrait 'Hadi_Al-Amiri.dds' missing in MD 2.0
+									picture = "gfx/leaders/generic_politicians/white_001.dds"
 									ideology = Vilayat_e_Faqih
 									traits = {
 										emerging_Vilayat_e_Faqih
@@ -13767,7 +13769,8 @@ focus_tree = {
 							}
 							create_country_leader = {
 								name = "Tawhid Ibrahim Begli"
-								picture = "Tawhid_Ibrahim_Begli.dds"
+								# MD2026: portrait 'Tawhid_Ibrahim_Begli.dds' missing in MD 2.0
+								picture = "gfx/leaders/generic_politicians/white_001.dds"
 								ideology = Vilayat_e_Faqih
 								traits = {
 									emerging_Vilayat_e_Faqih
@@ -13810,7 +13813,8 @@ focus_tree = {
 							# Leader
 							create_country_leader = {
 								name = "Tawhid Ibrahim Begli"
-								picture = "Tawhid_Ibrahim_Begli.dds"
+								# MD2026: portrait 'Tawhid_Ibrahim_Begli.dds' missing in MD 2.0
+								picture = "gfx/leaders/generic_politicians/white_001.dds"
 								ideology = Vilayat_e_Faqih
 								traits = {
 									emerging_Vilayat_e_Faqih
@@ -17526,7 +17530,8 @@ focus_tree = {
 					set_cosmetic_tag = AFG_HAZ
 					create_country_leader = {
 						name = "Asif Mohseni"
-						picture = "Asif_Mohseni.dds"
+						# MD2026: portrait 'Asif_Mohseni.dds' missing in MD 2.0
+						picture = "gfx/leaders/generic_politicians/white_001.dds"
 						ideology = Vilayat_e_Faqih
 						traits = {
 							emerging_Vilayat_e_Faqih

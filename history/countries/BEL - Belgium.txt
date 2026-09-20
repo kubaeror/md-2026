@@ -555,7 +555,8 @@ capital = 51
 	### Country Leader: Alexander De Croo ###
 	create_country_leader = {
 		name = "Alexander De Croo"
-		picture = "gfx/leaders/BEL/Alexander_De_Croo.dds"
+		picture = "gfx/leaders/generic_politicians/white_003.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2029.6.9"
 		ideology = liberalism
 		traits = {

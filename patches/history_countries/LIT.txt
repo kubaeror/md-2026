@@ -72,7 +72,8 @@
 	### Country Leader: Gintautas Paluckas ###
 	create_country_leader = {
 		name = "Gintautas Paluckas"
-		picture = "gfx/leaders/LIT/Gintautas_Paluckas.dds"
+		picture = "gfx/leaders/generic_politicians/white_010.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2028.10.27"
 		ideology = socialism
 		traits = {

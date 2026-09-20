@@ -305,7 +305,7 @@ capital = 137
 	### Country Leader: Edi Rama ###
 	create_country_leader = {
 		name = "Edi Rama"
-		picture = "gfx/leaders/ALB/Edi_Rama.dds"
+		picture = "gfx/leaders/ALB/ALB-edi-rama.dds"
 		expire = "2029.4.25"
 		ideology = socialism
 		traits = {

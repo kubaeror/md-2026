@@ -4455,7 +4455,8 @@ focus_tree = {
 						UKR_setup_revolt_government = yes
 						create_country_leader = {
 							name = "Tatiana  Golubeva"
-							picture = "tacciana_holubiewa.dds"
+							# MD2026: portrait 'tacciana_holubiewa.dds' missing in MD 2.0
+							picture = "gfx/leaders/generic_politicians/white_001.dds"
 							ideology = Communist-State
 							traits = {
 								emerging_Communist-State

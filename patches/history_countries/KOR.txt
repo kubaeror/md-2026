@@ -65,7 +65,8 @@
 	### Country Leader: Han Duck-soo ###
 	create_country_leader = {
 		name = "Han Duck-soo"
-		picture = "gfx/leaders/KOR/Han_Duck-soo.dds"
+		picture = "gfx/leaders/generic_politicians/eastasian_002.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2027.5.9"
 		ideology = conservatism
 		traits = {

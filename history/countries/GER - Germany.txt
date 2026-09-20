@@ -2976,7 +2976,8 @@ capital = 45
 	### Country Leader: Friedrich Merz ###
 	create_country_leader = {
 		name = "Friedrich Merz"
-		picture = "gfx/leaders/GER/Friedrich_Merz.dds"
+		picture = "gfx/leaders/generic_politicians/white_008.dds"
+		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2029.2.23"
 		ideology = conservatism
 		traits = {
