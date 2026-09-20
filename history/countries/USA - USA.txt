@@ -5299,9 +5299,9 @@ capital = 1182
 		traits = {
 			nationalist_Nat_Populism
 			captain_of_industry
-			media_personality
-			populist_demagogue
-			anti_establishment
+			popular_figurehead
+			populist
+			populist
 		}
 	}
 	set_variable = { term_limit = 2 }

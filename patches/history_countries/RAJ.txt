@@ -74,8 +74,8 @@
 		traits = {
 			emerging_Conservative
 			captain_of_industry
-			media_personality
-			populist_demagogue
+			popular_figurehead
+			populist
 		}
 	}
 	set_variable = { term_limit = 0 }

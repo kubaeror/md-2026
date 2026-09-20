@@ -317,7 +317,7 @@ capital = 195
 		expire = "2030.1.1"
 		ideology = Western_Autocracy
 		traits = {
-			authoritarian_ruler
+			dictator
 			career_politician
 		}
 	}

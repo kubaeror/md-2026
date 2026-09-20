@@ -145,10 +145,61 @@ def md_focus_file_by_tree_id(md, tree_id):
     return None
 
 
+MINIMAL_BOOKMARK = """bookmarks = {
+\tbookmark = {
+\t\tname = "MD_2026"
+\t\tdesc = "MD_2026_DESC"
+\t\tdate = 2026.1.1.12
+\t\tpicture = "GFX_select_date_2000"
+\t\tdefault_country = "USA"
+\t\tdefault = no
+
+\t\t"USA" = {
+\t\t\thistory = "USA_MILLENNIUM_DAWN_DESC"
+\t\t\tideology = democratic
+\t\t}
+
+\t\t"---" = {
+\t\t\tminor = yes
+\t\t\thistory = "OTHER_MILLENNIUM_DAWN_DESC"
+\t\t}
+
+\t\teffect = {
+\t\t\trandomize_weather = 22345
+\t\t}
+\t}
+}
+"""
+
+
+def generate_bookmark():
+    """Writes the bookmark file. debug.json minimal_bookmark switches to a stub."""
+    dst = os.path.join(REPO, "common", "bookmarks", "md2026_bookmark.txt")
+    if debug_flags().get("minimal_bookmark"):
+        write(dst, "# BISECT: minimal bookmark (no country content)\n" + MINIMAL_BOOKMARK)
+        print("  bookmark: minimal diagnostic bookmark written")
+        return
+    src = os.path.join(REPO, "patches", "bookmark_md2026.txt")
+    if os.path.exists(src):
+        write(dst, read(src))
+        print("  bookmark: restored from patches/bookmark_md2026.txt")
+
+
 def rebase_focus(md):
     """Rebuild focus tree overrides: copy the MD file and inject shared focuses
     into every tree the config assigns a branch to."""
-    cfg = focus_inject_config()  # tree_id -> [shared focus ids]
+    out_dir = os.path.join(REPO, "common", "national_focus")
+    flags = debug_flags()
+    skip_branches = flags.get("skip_focus_branches", False)
+    # move branch definitions out of the way / restore them
+    for name in os.listdir(out_dir):
+        if skip_branches and name.startswith("md2026_") and name.endswith("_focus.txt"):
+            os.rename(os.path.join(out_dir, name), os.path.join(out_dir, name + ".disabled"))
+        elif not skip_branches and name.startswith("md2026_") and name.endswith("_focus.txt.disabled"):
+            os.rename(os.path.join(out_dir, name), os.path.join(out_dir, name[:-len(".disabled")]))
+    if skip_branches:
+        print("  focus branches: DISABLED (diagnostic build)")
+    cfg = {} if skip_branches else focus_inject_config()  # tree_id -> [shared focus ids]
     out_dir = os.path.join(REPO, "common", "national_focus")
     root = os.path.join(md, "common", "national_focus")
     generated = set()
@@ -331,6 +382,37 @@ def generate_tech_effects(md):
     write(os.path.join(REPO, "common", "scripted_effects", "md2026_technology_effects.txt"),
           "\n".join(lines))
     print(f"  generated technology effects: {len(techs)} techs, bands {[b for b, _, _ in BANDS]}")
+
+
+DEBUG_FLAGS_FILE = os.path.join(REPO, "patches", "debug.json")
+
+
+def debug_flags():
+    if os.path.exists(DEBUG_FLAGS_FILE):
+        try:
+            with open(DEBUG_FLAGS_FILE, encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return {}
+    return {}
+
+
+def apply_debug_flags(patch, flags):
+    """Temporarily disable parts of the 2026 setup for crash bisection."""
+    if flags.get("skip_tech_tiers"):
+        patch = re.sub(r"(?m)^(\s*)(md2026_tier[0-9]_2026_techs\s*=\s*yes)",
+                       r"\1# BISECT: tech tiers disabled\n\1# \2", patch)
+    if flags.get("skip_precompleted_focuses"):
+        patch = re.sub(r"(?m)^(\s*)(complete_national_focus\s*=.*)$",
+                       r"\1# BISECT: pre-completed focuses disabled\n\1# \2", patch)
+    if flags.get("skip_oob"):
+        patch = re.sub(r"(?m)^(\s*)(set_(?:oob|air_oob|naval_oob)\s*=.*)$",
+                       r"\1# BISECT: OOB disabled\n\1# \2", patch)
+    if flags.get("skip_wars"):
+        patch = re.sub(r"(?ms)^(\s*)declare_war_on\s*=\s*\{.*?\n\1\}", r"\1# BISECT: war disabled", patch)
+    if flags.get("skip_leaders"):
+        patch = re.sub(r"(?ms)^(\s*)create_country_leader\s*=\s*\{.*?\n\1\}", r"\1# BISECT: leader disabled", patch)
+    return patch
 
 
 # --------------------------------------------------------------------------
@@ -579,6 +661,9 @@ def rebase_history(md, rename_map):
         patch = read(os.path.join(patch_dir, pf))
         if tag != md_tag:
             patch = re.sub(r"(?<![\w])" + re.escape(tag) + r"(?![A-Za-z])", md_tag, patch)
+        patch = apply_debug_flags(patch, debug_flags())
+        if debug_flags().get("skip_2026_blocks"):
+            patch = "# BISECT: entire 2026 block disabled\n"
         out = apply_fixups(base.rstrip() + "\n\n" + patch, techs, chars, md, md_tag)
         write(os.path.join(out_dir, fname), out)
     print(f"  generated {len(used)} country history files")
@@ -639,6 +724,7 @@ def main():
     if args.mode in ("generate", "focus"):
         exp = rebase_focus(MD)
         cleanup_old_focus_copies(exp)
+        generate_bookmark()
     if args.mode in ("generate", "history"):
         rename = {"NOR": "NRY"}
         rebase_history(MD, rename)

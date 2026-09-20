@@ -339,7 +339,7 @@ capital = 724
 		expire = "2034.10.11"
 		ideology = Conservative
 		traits = {
-			authoritarian_ruler
+			dictator
 			career_politician
 		}
 	}

@@ -473,9 +473,9 @@ capital = 121
 		expire = "2026.4.3"
 		ideology = Nat_Populism
 		traits = {
-			nat_populism
+			nationalist_Nat_Populism
 			career_politician
-			authoritarian_ruler
+			dictator
 		}
 	}
 	set_variable = { term_limit = 0 }

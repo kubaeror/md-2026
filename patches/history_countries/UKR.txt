@@ -104,7 +104,7 @@
 			western_liberalism
 			democratic_reformer
 			actor_politician
-			war_hero
+			internationally_decorated_commander
 			pro_american
 		}
 	}

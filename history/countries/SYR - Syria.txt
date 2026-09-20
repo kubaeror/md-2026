@@ -464,8 +464,8 @@ capital = 186
 		expire = "2030.1.1"
 		ideology = Neutral_conservatism
 		traits = {
-			militia_leader
-			authoritarian_ruler
+			guerrilla_leader
+			dictator
 		}
 	}
 	set_variable = { term_limit = 0 }

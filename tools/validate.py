@@ -101,13 +101,16 @@ def load_sets(md):
                 s["char"].add(name)
 
     s["trait"] = set()
-    for p in files(os.path.join(md, "common", "country_leader")) + files(os.path.join(REPO, "common", "country_leader")):
-        text = rebase.strip_comments(rebase.read(p))
-        for m in re.finditer(r"leader_traits\s*=\s*\{", text):
-            ob = text.index("{", m.start())
-            end = rebase.find_block(text, ob)
-            for name, _ in rebase.children(text[ob + 1:end - 1]):
-                s["trait"].add(name)
+    for root in (os.path.join(md, "common", "country_leader"),
+                 os.path.join(REPO, "common", "country_leader"),
+                 r"D:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\country_leader"):
+        for p in files(root):
+            text = rebase.strip_comments(rebase.read(p))
+            for m in re.finditer(r"leader_traits\s*=\s*\{", text):
+                ob = text.index("{", m.start())
+                end = rebase.find_block(text, ob)
+                for name, _ in rebase.children(text[ob + 1:end - 1]):
+                    s["trait"].add(name)
 
     s["ideology"] = set()
     for p in files(os.path.join(md, "common", "ideologies")) + files(os.path.join(REPO, "common", "ideologies")):
@@ -210,6 +213,14 @@ def check_bookmark(sets):
         for f in m.group(1).split():
             if f not in sets["focus"]:
                 ERRORS["bookmark focus"].append(f)
+    # every country entry needs a version key (frontend picks the entry by DLC version;
+    # a missing version crashed the country selection screen in 1.19.3)
+    for m in re.finditer(r'(?m)^\s*"([A-Z]{3})"\s*=\s*\{', text):
+        tag = m.group(1)
+        ob = text.index("{", m.end() - 1)
+        end = rebase.find_block(text, ob)
+        if "version" not in text[ob:end]:
+            ERRORS["bookmark entry without version"].append(tag)
 
 
 def check_duplicate_focus_ids(md, sets):
@@ -440,6 +451,16 @@ def check_equipment_refs(sets):
                     ERRORS["unknown equipment type"].append(f"{tm.group(1)}  ({rel(p)})")
 
 
+def check_leader_traits(sets):
+    for p in files(os.path.join(REPO, "patches")) + list(files(os.path.join(REPO, "events"))) + \
+             [p for p in files(os.path.join(REPO, "common", "national_focus")) if os.path.basename(p).startswith("md2026_")]:
+        text = rebase.strip_comments(rebase.read(p))
+        for m in re.finditer(r"traits\s*=\s*\{([^}]*)\}", text):
+            for tr in m.group(1).split():
+                if tr not in sets["trait"]:
+                    ERRORS["unknown leader trait"].append(f"{tr}  ({rel(p)})")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--md", default=os.environ.get("MD_PATH", rebase.DEFAULT_MD))
@@ -502,6 +523,7 @@ def main():
     check_shared_focus_injection(md)
     check_portraits(md)
     check_equipment_refs(sets)
+    check_leader_traits(sets)
     check_installation()
 
     print()

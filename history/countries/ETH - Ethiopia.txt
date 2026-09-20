@@ -343,7 +343,7 @@ capital = 233
 		expire = "2031.10.4"
 		ideology = anarchist_communism
 		traits = {
-			reformer
+			Reformer
 			career_politician
 			hawk
 		}

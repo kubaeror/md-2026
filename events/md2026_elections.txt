@@ -337,7 +337,7 @@ country_event = {
 			ideology = Nat_Populism
 			traits = {
 				nationalist_Nat_Populism
-				anti_establishment
+				populist
 			}
 		}
 
@@ -453,7 +453,7 @@ country_event = {
 			ideology = conservatism
 			traits = {
 				western_conservatism
-				anti_establishment
+				populist
 			}
 		}
 
@@ -479,8 +479,8 @@ country_event = {
 			ideology = Nat_Populism
 			traits = {
 				nationalist_Nat_Populism
-				media_personality
-				anti_establishment
+				popular_figurehead
+				populist
 			}
 		}
 

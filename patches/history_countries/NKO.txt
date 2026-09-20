@@ -63,8 +63,8 @@
 		expire = "2065.1.1"
 		ideology = Communist-State
 		traits = {
-			communist_dictator
-			authoritarian_ruler
+			dictator
+			dictator
 			nuclear_enthusiast
 		}
 	}

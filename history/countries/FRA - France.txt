@@ -2816,8 +2816,8 @@ capital = 56
 		traits = {
 			western_liberalism
 			captain_of_industry
-			media_personality
-			pro_european
+			popular_figurehead
+			Pro_Western
 		}
 	}
 	set_variable = { term_limit = 2 }

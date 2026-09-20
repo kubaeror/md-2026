@@ -1,0 +1,10 @@
+{
+  "skip_tech_tiers": false,
+  "skip_precompleted_focuses": false,
+  "skip_oob": false,
+  "skip_wars": false,
+  "skip_leaders": false,
+  "skip_focus_branches": false,
+  "minimal_bookmark": false,
+  "_comment": "Diagnostic switches for crash bisection. All false = normal build. Set a flag to true, run `python tools/rebase.py generate`, and test."
+}

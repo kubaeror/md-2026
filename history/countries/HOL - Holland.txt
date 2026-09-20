@@ -1068,7 +1068,7 @@ capital = 46
 		ideology = conservatism
 		traits = {
 			western_conservatism
-			intelligence_officer
+			head_of_intelligence
 		}
 	}
 	set_variable = { term_limit = 0 }

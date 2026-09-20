@@ -982,7 +982,7 @@ capital = 159
 		traits = {
 			emerging_Autocracy
 			career_politician
-			populist_demagogue
+			populist
 			stubborn
 		}
 	}

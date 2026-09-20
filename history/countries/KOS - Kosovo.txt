@@ -260,7 +260,7 @@ capital = 133
 		traits = {
 			western_socialism
 			career_politician
-			reformer
+			Reformer
 		}
 	}
 	set_variable = { term_limit = 0 }

@@ -61,8 +61,8 @@
 		expire = "2065.1.1"
 		ideology = Neutral_Muslim_Brotherhood
 		traits = {
-			theocrat
-			authoritarian_ruler
+			cleric
+			dictator
 		}
 	}
 	set_variable = { term_limit = 0 }

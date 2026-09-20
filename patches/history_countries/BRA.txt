@@ -74,8 +74,8 @@
 		traits = {
 			western_socialism
 			career_politician
-			populist_demagogue
-			pro_latin_american
+			populist
+			pro_american
 		}
 	}
 	set_variable = { term_limit = 2 }

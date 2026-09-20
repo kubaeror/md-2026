@@ -320,7 +320,7 @@ capital = 147
 		expire = "2027.7.11"
 		ideology = liberalism
 		traits = {
-			reformer
+			Reformer
 			career_politician
 		}
 	}

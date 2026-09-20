@@ -449,7 +449,7 @@ country_event = {
 		expire = "2026.6.20"
 		ideology = Conservative
 		traits = {
-			reformer
+			Reformer
 			career_politician
 		}
 	}

@@ -67,7 +67,7 @@
 		expire = "2027.1.28"
 		ideology = Autocracy
 		traits = {
-			authoritarian_ruler
+			dictator
 			career_politician
 		}
 	}

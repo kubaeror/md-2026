@@ -775,7 +775,7 @@ capital = 131
 		expire = "2028.12.17"
 		ideology = Nat_Populism
 		traits = {
-			nat_populism
+			nationalist_Nat_Populism
 			career_politician
 		}
 	}

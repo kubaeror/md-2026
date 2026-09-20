@@ -407,8 +407,8 @@ capital = 504
 		expire = "2030.1.1"
 		ideology = Nat_Autocracy
 		traits = {
-			authoritarian_ruler
-			career_officer
+			dictator
+			military_career
 		}
 	}
 	set_variable = { term_limit = 0 }
