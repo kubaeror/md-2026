@@ -1,3 +1,7 @@
+﻿> **Uwaga (wrzesien 2026):** ten dokument opisuje pierwotny plan z ery Millennium Dawn 1.12.3 / HoI4 1.17.
+> Aktualna architektura i instrukcja regeneracji: [docs/Architecture.md](docs/Architecture.md).
+> Aktualne wymagania: HoI4 1.19.x + Millennium Dawn 2.0.0.
+
 # Millennium Dawn 2026 Rework - Plan Pracy
 
 ## Informacje o projekcie

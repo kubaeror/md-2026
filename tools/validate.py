@@ -14,7 +14,6 @@ import os
 import re
 import sys
 from collections import Counter, defaultdict
-
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import rebase  # noqa: E402
 
@@ -290,6 +289,30 @@ def check_decision_categories(md):
             WARNINGS["unknown category"].append(f"{ref}  ({rel(p)})")
 
 
+def check_focus_filters(md):
+    defined = set()
+    for root in (os.path.join(md, "common", "national_focus"), os.path.join(REPO, "common", "national_focus")):
+        for p in files(root):
+            text = rebase.read(p)
+            defined |= set(re.findall(r"(?m)^\s*(FOCUS_FILTER_[A-Z_0-9]+)\s*=\s*\d+", text))
+    md_defined = set()
+    for p in files(os.path.join(md, "common", "national_focus")):
+        md_defined |= set(re.findall(r"(?m)^\s*(FOCUS_FILTER_[A-Z_0-9]+)\s*=\s*\d+", rebase.read(p)))
+    if md_defined:
+        WARNINGS["MD defines focus filters"].append(
+            f"MD defines {len(md_defined)} search_filter_prios - md2026_search_filters.txt is redundant")
+    used = set()
+    for p in files(os.path.join(REPO, "common", "national_focus")):
+        text = rebase.read(p)
+        for m in re.finditer(r"search_filters\s*=\s*\{([^}]*)\}", text):
+            for f in m.group(1).split():
+                if f.startswith("FOCUS_FILTER"):
+                    used.add(f)
+    missing = used - defined
+    for f in sorted(missing):
+        WARNINGS["undefined focus filter"].append(f)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--md", default=os.environ.get("MD_PATH", rebase.DEFAULT_MD))
@@ -347,6 +370,7 @@ def main():
     check_sprites(md)
     check_oob_locations(md)
     check_decision_categories(md)
+    check_focus_filters(md)
 
     print()
     if ERRORS:

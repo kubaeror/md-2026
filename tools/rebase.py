@@ -19,6 +19,7 @@ import json
 import os
 import re
 import sys
+from collections import Counter
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_MD = r"D:\SteamLibrary\steamapps\workshop\content\394360\2777392649"
@@ -414,6 +415,69 @@ def apply_fixups(text, techs, chars):
     return text
 
 
+def generate_search_filters(md):
+    """MD 2.0 replaced vanilla's common/national_focus/generic.txt (which defined
+    search_filter_prios) without providing a replacement, so every focus search filter
+    is undefined. Restore the priorities for the filters MD and this submod use."""
+    vanilla = {
+        "FOCUS_FILTER_POLITICAL": 1010,
+        "FOCUS_FILTER_RESEARCH": 522,
+        "FOCUS_FILTER_INDUSTRY": 509,
+        "FOCUS_FILTER_BALANCE_OF_POWER": 200,
+        "FOCUS_FILTER_SOV_POLITICAL_PARANOIA": 111,
+        "FOCUS_FILTER_PROPAGANDA": 110,
+        "FOCUS_FILTER_MISSIOLINI": 110,
+        "FOCUS_FILTER_ARMY_XP": 103,
+        "FOCUS_FILTER_NAVY_XP": 102,
+        "FOCUS_FILTER_AIR_XP": 101,
+    }
+    # if MD defines any priority itself, leave it alone
+    defined = set()
+    for name in os.listdir(os.path.join(md, "common", "national_focus")):
+        if not name.endswith(".txt"):
+            continue
+        text = read(os.path.join(md, "common", "national_focus", name))
+        defined |= set(re.findall(r"(?m)^\s*(FOCUS_FILTER_[A-Z_0-9]+)\s*=\s*\d+", text))
+    if defined:
+        print(f"  search filters: MD defines {len(defined)} priorities, skipping generation")
+        return
+
+    used = Counter()
+    for root in (os.path.join(md, "common", "national_focus"), os.path.join(REPO, "common", "national_focus")):
+        for name in os.listdir(root):
+            if not name.endswith(".txt"):
+                continue
+            text = read(os.path.join(root, name))
+            for m in re.finditer(r"search_filters\s*=\s*\{([^}]*)\}", text):
+                for f in m.group(1).split():
+                    if f.startswith("FOCUS_FILTER"):
+                        used[f] += 1
+    lines = [
+        "# GENERATED FILE - do not edit by hand.",
+        "# Rebuild with: python tools/rebase.py filters",
+        "#",
+        "# Millennium Dawn 2.0 replaces common/national_focus (and with it vanilla's",
+        "# generic.txt that defined search_filter_prios) without providing a replacement,",
+        "# which leaves every focus search filter undefined. This file restores them",
+        "# (vanilla priorities where known, otherwise ordered by how often MD uses them).",
+        "",
+        "search_filter_prios = {",
+    ]
+    extra = [f for f in used if f not in vanilla]
+    extra.sort(key=lambda f: (-used[f], f))
+    prio = 900
+    values = dict(vanilla)
+    for f in extra:
+        values[f] = prio
+        prio -= 5
+    for f in sorted(used):
+        lines.append(f"\t{f} = {values[f]}")
+    lines.append("}")
+    lines.append("")
+    write(os.path.join(REPO, "common", "national_focus", "md2026_search_filters.txt"), "\n".join(lines))
+    print(f"  generated search filter priorities: {len(used)} filters")
+
+
 # --------------------------------------------------------------------------
 # history generation
 # --------------------------------------------------------------------------
@@ -499,7 +563,7 @@ def rebase_history(md, rename_map):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("mode", choices=["extract", "generate", "focus", "history", "tech"])
+    ap.add_argument("mode", choices=["extract", "generate", "focus", "history", "tech", "filters"])
     ap.add_argument("--md", default=os.environ.get("MD_PATH", DEFAULT_MD))
     args = ap.parse_args()
 
@@ -519,6 +583,8 @@ def main():
         rebase_history(MD, rename)
     if args.mode in ("generate", "tech"):
         generate_tech_effects(MD)
+    if args.mode in ("generate", "filters"):
+        generate_search_filters(MD)
 
 
 if __name__ == "__main__":

@@ -1,3 +1,7 @@
+﻿> **Note (September 2026):** this document describes the original plan from the Millennium Dawn 1.12.3 /
+> HoI4 1.17 era. See [docs/Architecture.md](docs/Architecture.md) for the current architecture and
+> rebase instructions. Current requirements: HoI4 1.19.x + Millennium Dawn 2.0.0.
+
 # MD2026 — Millennium Dawn 2026 Rework
 
 Submod do Millennium Dawn (Steam Workshop ID: 2777392649) dodający bookmark startowy 1 stycznia 2026.
