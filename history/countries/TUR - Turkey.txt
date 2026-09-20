@@ -1,4 +1,4 @@
-﻿capital = 159
+capital = 159
 2000.1.1 = {
 	set_variable = { currency_strength = 0.7 }
 	set_cosmetic_tag = TUR

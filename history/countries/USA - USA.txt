@@ -1,4 +1,4 @@
-﻿capital = 1182
+capital = 1182
 2000.1.1 = {
 	# If a country has specific cosmetic tags or configuration
 	set_cosmetic_tag = USA

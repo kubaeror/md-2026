@@ -1,4 +1,4 @@
-﻿capital = 233
+capital = 233
 2000.1.1 = {
 	set_variable = { currency_strength = 0.55 }
 	set_cosmetic_tag = ETH

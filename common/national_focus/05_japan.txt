@@ -1,4 +1,4 @@
-﻿
+
 # Author(s): TheGeneral, Raun
 focus_tree = {
 	id = japan_focus

@@ -1,4 +1,4 @@
-﻿capital = 180
+capital = 180
 2000.1.1 = {
 	set_variable = { currency_strength = 0.9 }
 	set_cosmetic_tag = UAE_AUTH

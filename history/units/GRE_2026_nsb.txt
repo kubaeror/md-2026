@@ -1,4 +1,4 @@
-﻿##### Division Templates #####
+##### Division Templates #####
 # Greece 2026 — Large conscript army, Aegean defense focus
 
 division_template = {

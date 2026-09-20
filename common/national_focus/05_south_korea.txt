@@ -1,4 +1,4 @@
-﻿# Author(s): Manchu Yu
+# Author(s): Manchu Yu
 # Last Modified 14/02/2022 by Angriest Bird
 focus_tree = {
 	id = korea_south_focus

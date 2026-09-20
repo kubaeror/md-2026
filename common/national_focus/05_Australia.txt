@@ -1,4 +1,4 @@
-﻿shared_focus = {
+shared_focus = {
 	id = AST_the_lucky_country
 	search_filters = { FOCUS_FILTER_RESOURCE }
 	icon = focus_generic_expand_gold_mining
@@ -2280,11 +2280,11 @@ shared_focus = {
 	}
 
 	ai_will_do = { base = 1 }
-	shared_focus = MD2026_AST_pacific_partner
 }
 
 focus_tree = {
 	id = howardgov_focus
+	shared_focus = MD2026_AST_pacific_partner
 
 	country = {
 		base = 0
@@ -4872,12 +4872,12 @@ focus_tree = {
 		}
 
 		ai_will_do = { base = 1 }
-	shared_focus = MD2026_AST_pacific_partner
 	}
 }
 
 focus_tree = {
 	id = australia_abbottgov_focus
+	shared_focus = MD2026_AST_pacific_partner
 
 	country = {
 		base = 0
@@ -7632,12 +7632,12 @@ focus_tree = {
 		}
 
 		ai_will_do = { base = 1 }
-	shared_focus = MD2026_AST_pacific_partner
 	}
 }
 
 focus_tree = {
 	id = costellogov_focus
+	shared_focus = MD2026_AST_pacific_partner
 
 	country = {
 		base = 0
@@ -9346,12 +9346,12 @@ focus_tree = {
 		}
 
 		ai_will_do = { base = 1 }
-	shared_focus = MD2026_AST_pacific_partner
 	}
 }
 
 focus_tree = {
 	id = ruddgov_focus
+	shared_focus = MD2026_AST_pacific_partner
 
 	country = {
 		base = 0
@@ -11715,13 +11715,13 @@ focus_tree = {
 		}
 
 		ai_will_do = { base = 1 }
-	shared_focus = MD2026_AST_pacific_partner
 	}
 
 }
 
 focus_tree = {
 	id = gillardgov_focus
+	shared_focus = MD2026_AST_pacific_partner
 	country = {
 		base = 0
 	}
@@ -13773,7 +13773,6 @@ focus_tree = {
 		}
 
 		ai_will_do = { base = 1 }
-	shared_focus = MD2026_AST_pacific_partner
 	}
 
 
@@ -13781,6 +13780,7 @@ focus_tree = {
 
 focus_tree = {
 	id = ruddgov_return_focus
+	shared_focus = MD2026_AST_pacific_partner
 
 	country = {
 		base = 0

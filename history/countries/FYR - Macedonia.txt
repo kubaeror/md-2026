@@ -1,4 +1,4 @@
-﻿capital = 136
+capital = 136
 2000.1.1 = {
 	set_variable = { currency_strength = 0.65 }
 	set_cosmetic_tag = FYR

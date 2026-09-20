@@ -1,4 +1,4 @@
-﻿##### Division Templates #####
+##### Division Templates #####
 # Brazil 2026 — Large territory, mixed jungle/urban force
 
 division_template = {

@@ -1,4 +1,4 @@
-﻿		# MD2026: Crimea annexed by Russia (2014)
+		# MD2026: Crimea annexed by Russia (2014)
 		2026.1.1 = {
 			owner = SOV
 			add_core_of = SOV

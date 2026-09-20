@@ -1,4 +1,4 @@
-﻿focus_tree = {
+focus_tree = {
 	id = Syria_2000
 	shared_focus = MD2026_SYR_new_syria
 	country = {

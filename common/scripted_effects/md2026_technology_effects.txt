@@ -1,4 +1,4 @@
-﻿# MD2026 Technology Scripted Effects
+# MD2026 Technology Scripted Effects
 # GENERATED FILE - do not edit by hand.
 # Rebuild with: python tools/rebase.py tech
 #

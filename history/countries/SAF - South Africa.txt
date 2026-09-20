@@ -1,4 +1,4 @@
-﻿capital = 275
+capital = 275
 2000.1.1 = {
 	set_variable = { currency_strength = 0.7 }
 	complete_special_project = sp:sp_composite_production

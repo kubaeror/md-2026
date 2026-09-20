@@ -1,4 +1,4 @@
-﻿##### Sudan - 2026 OOB (Sudanese Armed Forces - SAF) #####
+##### Sudan - 2026 OOB (Sudanese Armed Forces - SAF) #####
 # Civil war since April 2023 between SAF (al-Burhan) and RSF (Hemedti)
 # Military depleted, fighting ongoing; SAF controls Port Sudan and east
 

@@ -349,6 +349,34 @@ def check_installation():
             WARNINGS["installation"].append("ostatnie uruchomienie: submod byl widziany przez gre")
 
 
+def check_file_hygiene():
+    """HoI4 script files must not carry a UTF-8 BOM; localisation must."""
+    for root in ("common", "events", "history", "patches"):
+        for p in files(os.path.join(REPO, root)):
+            with open(p, "rb") as f:
+                if f.read(3) == b"\xef\xbb\xbf":
+                    ERRORS["BOM in script file"].append(rel(p))
+    for p in files(os.path.join(REPO, "localisation"), ".yml"):
+        with open(p, "rb") as f:
+            if f.read(3) != b"\xef\xbb\xbf":
+                WARNINGS["missing BOM in localisation"].append(rel(p))
+
+
+def check_shared_focus_injection(md):
+    """shared_focus = MD2026_* references must sit inside a focus_tree block."""
+    for p in files(os.path.join(REPO, "common", "national_focus")):
+        if os.path.basename(p).startswith("md2026_"):
+            continue
+        text = rebase.read(p)
+        trees = []
+        for m in re.finditer(r"focus_tree\s*=\s*\{", text):
+            ob = text.index("{", m.start())
+            trees.append((ob, rebase.find_block(text, ob)))
+        for m in re.finditer(r"(?m)^\s*shared_focus = (MD2026[A-Za-z0-9_]+)", text):
+            if not any(ob < m.start() < end for ob, end in trees):
+                ERRORS["shared_focus outside focus tree"].append(f"{m.group(1)}  ({rel(p)})")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--md", default=os.environ.get("MD_PATH", rebase.DEFAULT_MD))
@@ -407,6 +435,8 @@ def main():
     check_oob_locations(md)
     check_decision_categories(md)
     check_focus_filters(md)
+    check_file_hygiene()
+    check_shared_focus_injection(md)
     check_installation()
 
     print()

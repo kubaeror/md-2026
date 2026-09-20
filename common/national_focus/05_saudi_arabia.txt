@@ -1,4 +1,4 @@
-﻿focus_tree = {
+focus_tree = {
 	id = saudi_focus_tree
 	shared_focus = MD2026_SAU_vision_2030
 	country = {

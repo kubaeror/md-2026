@@ -1,4 +1,4 @@
-﻿### MD2026 Russia Focus Branch ###
+### MD2026 Russia Focus Branch ###
 # Shared focuses for Russia's 2026 focus tree branch
 # Root focus at absolute x=38, y=0 (right side, avoiding existing content)
 # Gated by date > 2025.12.31

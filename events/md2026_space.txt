@@ -1,4 +1,4 @@
-﻿###################################
+###################################
 # MD2026 Space Race Events
 # Lunar programs, satellite warfare, commercial space, Mars ambitions
 ###################################

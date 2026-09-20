@@ -1,4 +1,4 @@
-﻿		# MD2026: Zaporizhzhia Oblast partially occupied by Russia
+		# MD2026: Zaporizhzhia Oblast partially occupied by Russia
 		# Russia controls south (Melitopol, Energodar, nuclear plant)
 		# Ukraine controls Zaporizhzhia city (main VP)
 		# Province-level control can only be set at runtime.

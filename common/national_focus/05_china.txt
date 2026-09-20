@@ -1,4 +1,4 @@
-﻿# Author(s): TheGeneral
+# Author(s): TheGeneral
 focus_tree = {
 	id = china_focus
 	shared_focus = MD2026_CHI_great_rejuvenation

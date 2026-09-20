@@ -1,4 +1,4 @@
-﻿##### Division Templates #####
+##### Division Templates #####
 # Taiwan (ROC) 2026 — Defensive posture, modern but compact
 
 division_template = {

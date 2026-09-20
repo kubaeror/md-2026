@@ -1,4 +1,4 @@
-﻿capital = 133
+capital = 133
 2000.1.1 = {
 	set_variable = { currency_strength = 0.65 }
 	oob = "KOS_2000"

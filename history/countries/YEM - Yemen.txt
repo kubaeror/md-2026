@@ -1,4 +1,4 @@
-﻿capital = 195
+capital = 195
 2000.1.1 = {
 	set_variable = { currency_strength = 0.4 }
 	set_cosmetic_tag = YEM

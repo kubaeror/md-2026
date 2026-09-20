@@ -1,4 +1,4 @@
-﻿##### Division Templates #####
+##### Division Templates #####
 # Romania 2026 — NATO Eastern flank, modernizing
 
 division_template = {

@@ -1,4 +1,4 @@
-﻿# Author(s): Crocomoth, Roseru, DKL, maja.partygirl and XCezor
+# Author(s): Crocomoth, Roseru, DKL, maja.partygirl and XCezor
 focus_tree = {
 	id = polish_focus
 	shared_focus = MD2026_POL_eastern_shield

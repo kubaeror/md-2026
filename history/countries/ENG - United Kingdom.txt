@@ -1,4 +1,4 @@
-﻿capital = 13
+capital = 13
 2000.1.1 = {
 	set_cosmetic_tag = ENG
 	set_country_flag = antarctica_ccas_member

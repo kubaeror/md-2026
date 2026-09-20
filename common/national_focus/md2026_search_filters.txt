@@ -1,4 +1,4 @@
-﻿# GENERATED FILE - do not edit by hand.
+# GENERATED FILE - do not edit by hand.
 # Rebuild with: python tools/rebase.py filters
 #
 # Millennium Dawn 2.0 replaces common/national_focus (and with it vanilla's

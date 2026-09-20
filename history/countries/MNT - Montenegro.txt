@@ -1,4 +1,4 @@
-﻿capital = 134
+capital = 134
 oob = "GENERIC_OOB"
 2000.1.1 = {
 	set_variable = { currency_strength = 0.65 }

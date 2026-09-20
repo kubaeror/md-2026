@@ -1,4 +1,4 @@
-﻿focus_tree = {
+focus_tree = {
 	id = generic_focus
 	shared_focus = MD2026_TAI_porcupine_defense
 	country = { factor = 2 }

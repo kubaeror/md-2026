@@ -1,4 +1,4 @@
-﻿capital = 220
+capital = 220
 2000.1.1 = {
 	set_variable = { currency_strength = 0.45 }
 	set_cosmetic_tag = SUD

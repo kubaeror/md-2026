@@ -1,4 +1,4 @@
-﻿##### Division Templates #####
+##### Division Templates #####
 # Czech Republic 2026 — NATO, small professional
 
 division_template = {

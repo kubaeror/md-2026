@@ -1,4 +1,4 @@
-﻿##### Division Templates #####
+##### Division Templates #####
 # Sweden 2026 — Rearming after NATO accession
 
 division_template = {

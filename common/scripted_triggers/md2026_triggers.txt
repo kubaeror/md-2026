@@ -1,4 +1,4 @@
-﻿### Millennium Dawn 2026 - Scripted Triggers ###
+### Millennium Dawn 2026 - Scripted Triggers ###
 
 # Check if 2026 bookmark is active
 md2026_is_active = {

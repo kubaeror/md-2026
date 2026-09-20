@@ -1,4 +1,4 @@
-﻿
+
 capital = 504
 2000.1.1 = {
 	set_variable = { currency_strength = 0.5 }

@@ -1,4 +1,4 @@
-﻿bookmarks = {
+bookmarks = {
 	bookmark = {
 		name = "MD_2026"
 		desc = "MD_2026_DESC"

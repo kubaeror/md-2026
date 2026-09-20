@@ -1,4 +1,4 @@
-﻿capital = 431
+capital = 431
 2000.1.1 = {
 	set_variable = { currency_strength = 0.7 }
 	set_cosmetic_tag = RAJ

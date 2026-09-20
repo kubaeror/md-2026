@@ -1,4 +1,4 @@
-﻿capital = 215
+capital = 215
 2000.1.1 = {
 	set_cosmetic_tag = EGY_AUTH
 	set_variable = { dynamic_flag_variant = 2 }

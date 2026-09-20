@@ -1,4 +1,4 @@
-﻿capital = 91
+capital = 91
 2000.1.1 = {
 	set_cosmetic_tag = SPR
 	set_country_flag = antarctica_ccamlr_member

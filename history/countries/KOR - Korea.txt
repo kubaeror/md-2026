@@ -1,4 +1,4 @@
-﻿capital = 604
+capital = 604
 2000.1.1 = {
 	set_variable = { currency_strength = 1.05 }
 	set_cosmetic_tag = KOR

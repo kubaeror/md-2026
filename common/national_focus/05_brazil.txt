@@ -1,4 +1,4 @@
-﻿# Author(s): Angriest Bird/Tortoise, Rafael, Aranhabolt
+# Author(s): Angriest Bird/Tortoise, Rafael, Aranhabolt
 focus_tree = {
 	id = BRA_focus_tree
 	shared_focus = MD2026_BRA_return

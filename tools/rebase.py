@@ -34,7 +34,8 @@ def read(path):
 
 def write(path, text):
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8-sig", newline="\n") as f:
+    # HoI4 script files must NOT have a UTF-8 BOM (the parser reports "Unexpected token: ?")
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(text)
 
 
@@ -155,6 +156,7 @@ def rebase_focus(md):
         if not name.endswith(".txt"):
             continue
         text = read(os.path.join(root, name))
+        text = apply_fixups(text, *md_reference_sets(md))
         blocks = []
         for m in re.finditer(r"focus_tree\s*=\s*\{", text):
             ob = text.index("{", m.start())
@@ -166,7 +168,6 @@ def rebase_focus(md):
                 blocks.append((ob + idm.start(), idm.group(1), indent))
         if not blocks:
             continue
-        text = apply_fixups(text, *md_reference_sets(md))
         for abs_id, tree_id, ind in reversed(blocks):
             line_end = text.index("\n", abs_id)
             ins = "\n" + "\n".join(f"{ind}shared_focus = {sid}" for sid in cfg[tree_id])

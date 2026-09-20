@@ -1,4 +1,4 @@
-﻿###################################
+###################################
 # MD2026 Iran (PER) Focus Tree
 # 2026 Shared Focuses - Regime Survival
 # 26 focuses: 1 root + 5 branches + capstone

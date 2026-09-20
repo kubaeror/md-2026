@@ -1,4 +1,4 @@
-﻿capital = 547
+capital = 547
 2000.1.1 = {
 
 	start_politics_input = yes

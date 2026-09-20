@@ -1,4 +1,4 @@
-﻿capital = 45
+capital = 45
 2000.1.1 = {
 	set_variable = { currency_strength = 1.2 }
 	set_country_flag = EU_joined_the_eurozone

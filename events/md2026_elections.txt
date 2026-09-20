@@ -1,4 +1,4 @@
-﻿###################################
+###################################
 # MD2026 Elections Events
 # Cyclical elections for democratic countries
 ###################################

@@ -1,4 +1,4 @@
-﻿# Author(s): Samrparker12, RainyAngel, forktu, PalleLibere, LordBogdanoff, BoNDeX, PAKMAN, Batalshi
+# Author(s): Samrparker12, RainyAngel, forktu, PalleLibere, LordBogdanoff, BoNDeX, PAKMAN, Batalshi
 
 focus_tree = {
 	id = israel_focus

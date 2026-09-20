@@ -1,4 +1,4 @@
-﻿### Millennium Dawn 2026 - Decision Categories ###
+### Millennium Dawn 2026 - Decision Categories ###
 
 md2026_sanctions_category = {
 	icon = generic_economy

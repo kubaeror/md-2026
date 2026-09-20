@@ -1,4 +1,4 @@
-﻿# Author(s): Angriest Bird, LordBogdanoff, PAKMAN, scotch
+# Author(s): Angriest Bird, LordBogdanoff, PAKMAN, scotch
 focus_tree = {
 	id = ukraine_focus
 	shared_focus = MD2026_UKR_war_path
