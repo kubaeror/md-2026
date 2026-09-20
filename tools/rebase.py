@@ -644,37 +644,71 @@ def md_state_file(md, state_id):
 
 
 def write_deferred_focuses(focuses_by_tag):
-    """Pre-completed focuses run on the first daily tick, not during history.
+    """Pre-completed focuses run after game start, never during history.
 
     Focus rewards call ingame-only systems (ingame_update_setup and friends)
     that are not initialised while history is still being processed - MD itself
-    never completes a focus from a history file.  Completing them here keeps the
-    2026 start identical while avoiding the crash.
+    never completes a focus from a history file.  They are completed in
+    on_startup once MD's own startup pass has run (marker: global.update_monie_ui),
+    with the first daily tick as a fallback for anything still pending.
     """
-    lines = [
+    eff = [
         "### Millennium Dawn 2026 - pre-completed focuses ###",
-        "# Completed on the first daily tick after game start (not in history):",
-        "# focus rewards touch ingame-only economy systems that are not ready yet.",
+        "# Called from common/on_actions/md2026_precompleted_focuses.txt after game",
+        "# start.  Focus rewards touch ingame-only economy systems, so they must not",
+        "# run while history is still being processed.",
         "",
-        "on_actions = {",
-        "\ton_daily = {",
-        "\t\teffect = {",
-        "\t\t\tif = {",
-        "\t\t\t\tlimit = { has_country_flag = md2026_focuses_pending }",
-        "\t\t\t\tclr_country_flag = md2026_focuses_pending",
+        "md2026_complete_precompleted_focuses = {",
     ]
     for tag in sorted(focuses_by_tag):
         focuses = focuses_by_tag[tag]
         if not focuses:
             continue
-        lines.append("\t\t\t\tif = {")
-        lines.append(f"\t\t\t\t\tlimit = {{ tag = {tag} }}")
+        eff.append("\tif = {")
+        eff.append(f"\t\tlimit = {{ tag = {tag} }}")
         for f in focuses:
-            lines.append(f"\t\t\t\t\tcomplete_national_focus = {f}")
-        lines.append("\t\t\t\t}")
-    lines += ["\t\t\t}", "\t\t}", "\t}", "}", ""]
-    path = os.path.join(REPO, "common", "on_actions", "md2026_precompleted_focuses.txt")
-    write(path, "\n".join(lines))
+            eff.append(f"\t\tcomplete_national_focus = {f}")
+        eff.append("\t}")
+    eff += ["}", ""]
+    write(os.path.join(REPO, "common", "scripted_effects", "md2026_precompleted_focuses.txt"),
+          "\n".join(eff))
+
+    act = [
+        "### Millennium Dawn 2026 - pre-completed focuses (driver) ###",
+        "# on_startup: MD's startup pass (00_on_actions.txt) loads first and sets",
+        "# global.update_monie_ui, so by the time this runs the economy is ready.",
+        "# on_daily: fallback for countries still pending (e.g. after loading a save).",
+        "",
+        "on_actions = {",
+        "\ton_startup = {",
+        "\t\teffect = {",
+        "\t\t\tif = {",
+        "\t\t\t\tlimit = {",
+        "\t\t\t\t\tdate > 2025.12.31",
+        "\t\t\t\t\tcheck_variable = { global.update_monie_ui > 0 }",
+        "\t\t\t\t}",
+        "\t\t\t\tevery_country = {",
+        "\t\t\t\t\tlimit = { has_country_flag = md2026_focuses_pending }",
+        "\t\t\t\t\tclr_country_flag = md2026_focuses_pending",
+        "\t\t\t\t\tmd2026_complete_precompleted_focuses = yes",
+        "\t\t\t\t}",
+        "\t\t\t}",
+        "\t\t}",
+        "\t}",
+        "\ton_daily = {",
+        "\t\teffect = {",
+        "\t\t\tevery_country = {",
+        "\t\t\t\tlimit = { has_country_flag = md2026_focuses_pending }",
+        "\t\t\t\tclr_country_flag = md2026_focuses_pending",
+        "\t\t\t\tmd2026_complete_precompleted_focuses = yes",
+        "\t\t\t}",
+        "\t\t}",
+        "\t}",
+        "}",
+        "",
+    ]
+    write(os.path.join(REPO, "common", "on_actions", "md2026_precompleted_focuses.txt"),
+          "\n".join(act))
     n = sum(len(v) for v in focuses_by_tag.values())
     print(f"  generated deferred focuses: {n} focuses for {len(focuses_by_tag)} countries")
 

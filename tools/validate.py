@@ -529,21 +529,29 @@ def check_deferred_focuses(md):
         elif "md2026_focuses_pending" not in rebase.read(cand[0]):
             ERRORS["deferred focuses: missing pending flag"].append(f"{tag} ({os.path.basename(cand[0])})")
 
-    path = os.path.join(REPO, "common", "on_actions", "md2026_precompleted_focuses.txt")
-    if not os.path.exists(path):
-        ERRORS["deferred focuses: no on_actions file"].append(path)
+    eff_path = os.path.join(REPO, "common", "scripted_effects", "md2026_precompleted_focuses.txt")
+    act_path = os.path.join(REPO, "common", "on_actions", "md2026_precompleted_focuses.txt")
+    if not os.path.exists(eff_path) or not os.path.exists(act_path):
+        ERRORS["deferred focuses: missing generated file"].append("md2026_precompleted_focuses")
         return
-    deferred = rebase.strip_comments(rebase.read(path))
+    eff = rebase.strip_comments(rebase.read(eff_path))
     blocks = {}
     for m in re.finditer(r"tag\s*=\s*([A-Z]{3})\s*\}\s*((?:\s*complete_national_focus\s*=\s*[A-Za-z0-9_]+\s*)+)",
-                         deferred):
+                         eff):
         blocks[m.group(1)] = re.findall(r"complete_national_focus\s*=\s*([A-Za-z0-9_]+)", m.group(2))
     for tag, fs in sorted(patch_focuses.items()):
         got = blocks.get(tag)
         if got is None:
             ERRORS["deferred focuses: tag missing"].append(tag)
         elif sorted(got) != sorted(fs):
-            ERRORS["deferred focuses: list mismatch"].append(f"{tag}: {len(fs)} w patchu, {len(got)} w on_actions")
+            ERRORS["deferred focuses: list mismatch"].append(
+                f"{tag}: {len(fs)} w patchu, {len(got)} w scripted effect")
+    act = rebase.strip_comments(rebase.read(act_path))
+    for needle, why in (("on_startup", "brak on_startup"), ("on_daily", "brak on_daily"),
+                        ("md2026_complete_precompleted_focuses = yes", "brak wywolania efektu"),
+                        ("global.update_monie_ui", "brak znacznika startu MD")):
+        if needle not in act:
+            ERRORS["deferred focuses: driver"].append(why)
 
 
 def main():
