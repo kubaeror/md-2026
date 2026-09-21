@@ -89,7 +89,7 @@ bookmarks = {
 			}
 		}
 		#Turkey
-		\"TUR\" = {
+		"TUR" = {
 			history = "TUR_MD2026_DESC"
 			ideology = nationalist
 			version = base_game
@@ -162,7 +162,7 @@ bookmarks = {
 			ideology = nationalist
 			version = base_game
 		}
-		\"RAJ\" = {
+		"RAJ" = {
 			minor = yes
 			history = "RAJ_MD2026_DESC"
 			ideology = democratic

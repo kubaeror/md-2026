@@ -50,8 +50,6 @@ running because it is still ongoing in reality.
   were (the tier digits still follow MD 1.x), so an F-16 wing may field a 1995 airframe.
 - **Bulgaria**: at 2026-01-01 the country was run by Rosen Zhelyazkov's caretaker
   government (the regular cabinet resigned in December 2025).
-- **Bookmark quoting**: `patches/bookmark_md2026.txt` stores country keys as `\"TAG\"`
-  (escaped quotes). The game parses it, but it is unusual; normalise if it ever breaks.
 - **Bookmark picture** still uses MD's 2000 selection picture (`GFX_select_date_2000`).
 - **IND (Indonesia) and VEN (Venezuela)** now have 2026 history patches but no 2026
   order of battle; they use MD's 2000 OOB with 2026 tech levels.
