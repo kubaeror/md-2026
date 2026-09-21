@@ -53,7 +53,7 @@
 	set_variable = { party_pop_array^14 = 0.050 }   #Neutral_conservatism
 	set_variable = { party_pop_array^18 = 0.035 }   #neutral_Social
 
-	add_to_array = { ruling_party = 1 }             #conservatism (CSV)
+	set_variable = { ruling_party = 1 }             #conservatism (CSV)
 	add_to_array = { gov_coalition_array = 2 }       #liberalism (DP)
 
 	set_variable = { party_pop_elect_array^1 = 0.291 }  #CSV

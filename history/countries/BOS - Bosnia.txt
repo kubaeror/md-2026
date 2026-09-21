@@ -340,7 +340,7 @@ set_war_support = 0.27
 	set_variable = { party_pop_array^4 = 0.030 }   #Communist-State
 	set_variable = { party_pop_array^18 = 0.020 }   #neutral_Social
 
-	add_to_array = { ruling_party = 1 }             #conservatism (HDZ BiH)
+	set_variable = { ruling_party = 1 }             #conservatism (HDZ BiH)
 	add_to_array = { gov_coalition_array = 12 }       #Neutral_Muslim_Brotherhood (SDA)
 	add_to_array = { gov_coalition_array = 20 }       #Nat_Populism (SNSD Dodik)
 
@@ -370,5 +370,5 @@ set_war_support = 0.27
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

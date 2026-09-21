@@ -70,7 +70,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons3
+		type = infantry_weapons_3
 		amount = 2000
 		producer = TAJ
 	}
@@ -80,7 +80,7 @@ instant_effect = {
 air_wings = {
 	# Ayni Air Base (Tajik Bactria)
 	724 = {
-		small_plane_strike_airframe_1 = { owner = "TAJ" creator = "CZE" amount = 6 version_name = "Aero L-39 Albatros" }
+		L_Strike_fighter1 = { owner = "TAJ" creator = "CZE" amount = 6 version_name = "Aero L-39 Albatros" }
 		name = "Jet Training / Light Attack Squadron"
 		start_experience_factor = 0.25
 	}

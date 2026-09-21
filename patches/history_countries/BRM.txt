@@ -51,7 +51,7 @@
 	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
 	set_variable = { party_pop_array^4 = 0.050 }   #Communist-State
 
-	add_to_array = { ruling_party = 22 }             #Nat_Autocracy (Tatmadaw junta)
+	set_variable = { ruling_party = 22 }             #Nat_Autocracy (Tatmadaw junta)
 
 	startup_politics = yes
 

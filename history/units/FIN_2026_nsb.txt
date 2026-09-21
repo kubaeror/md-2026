@@ -172,7 +172,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 5000
 		producer = FIN
 	}
@@ -194,7 +194,7 @@ air_wings = {
 	}
 	# Kuljetuslentolaivue — C-295M (Tikkakoski)
 	102 = {
-		large_plane_air_transport_airframe_1 = { owner = "FIN" creator = "SPR" amount = 3 version_name = "C-295M" }
+		transport_plane1 = { owner = "FIN" creator = "SPR" amount = 3 version_name = "C-295M" }
 		name = "Kuljetuslentolaivue"
 		start_experience_factor = 0.4
 	}

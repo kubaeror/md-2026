@@ -51,7 +51,7 @@
 	set_variable = { party_pop_array^15 = 0.040 }   #oligarchism
 	set_variable = { party_pop_array^14 = 0.040 }   #Neutral_conservatism
 
-	add_to_array = { ruling_party = 2 }             #liberalism (Liberal)
+	set_variable = { ruling_party = 2 }             #liberalism (Liberal)
 
 	set_variable = { party_pop_elect_array^2 = 0.440 }  #Liberal
 	set_variable = { party_pop_elect_array^1 = 0.289 }  #Conservative

@@ -121,7 +121,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons4
+		type = infantry_weapons_4
 		amount = 5000
 		producer = UZB
 	}
@@ -131,7 +131,7 @@ instant_effect = {
 air_wings = {
 	# Karshi-Khanabad / Chirchik (Transoxiana)
 	726 = {
-		medium_plane_fighter_airframe_2 = { owner = "UZB" creator = "SOV" amount = 12 version_name = "Su-30SM Flanker-H" }
+		heavy_fighter_equipment_2 = { owner = "UZB" creator = "SOV" amount = 12 version_name = "Su-30SM Flanker-H" }
 		name = "Fighter Aviation Regiment"
 		start_experience_factor = 0.4
 	}
@@ -141,22 +141,22 @@ air_wings = {
 		start_experience_factor = 0.35
 	}
 	726 = {
-		small_plane_cas_airframe_2 = { owner = "UZB" creator = "SOV" amount = 20 version_name = "Su-25 Frogfoot" }
+		CAS_equipment_2 = { owner = "UZB" creator = "SOV" amount = 20 version_name = "Su-25 Frogfoot" }
 		name = "372nd Assault Aviation Squadron"
 		start_experience_factor = 0.3
 	}
 	726 = {
-		medium_plane_cas_airframe_1 = { owner = "UZB" creator = "SOV" amount = 20 version_name = "Su-24M Fencer" }
+		cas1 = { owner = "UZB" creator = "SOV" amount = 20 version_name = "Su-24M Fencer" }
 		name = "735th Bomber Aviation Regiment"
 		start_experience_factor = 0.3
 	}
 	726 = {
-		small_plane_suicide_airframe_2 = { owner = "UZB" creator = "TUR" amount = 6 version_name = "Bayraktar TB2" }
+		Air_UAV2 = { owner = "UZB" creator = "TUR" amount = 6 version_name = "Bayraktar TB2" }
 		name = "UAV Squadron"
 		start_experience_factor = 0.3
 	}
 	726 = {
-		large_plane_air_transport_airframe_1 = { owner = "UZB" creator = "USA" amount = 4 version_name = "C-130H Hercules" }
+		transport_plane1 = { owner = "UZB" creator = "USA" amount = 4 version_name = "C-130H Hercules" }
 		name = "Military Transport Aviation Squadron"
 		start_experience_factor = 0.35
 	}

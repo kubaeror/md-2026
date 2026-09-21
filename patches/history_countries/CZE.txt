@@ -54,7 +54,7 @@
 	set_variable = { party_pop_array^18 = 0.040 }   #neutral_Social
 	set_variable = { party_pop_array^21 = 0.030 }   #Nat_Fascism
 
-	add_to_array = { ruling_party = 1 }             #conservatism (SPOLU)
+	set_variable = { ruling_party = 1 }             #conservatism (SPOLU)
 	add_to_array = { gov_coalition_array = 2 }       #liberalism (STAN)
 	add_to_array = { gov_coalition_array = 17 }       #Neutral_green (Pirates)
 

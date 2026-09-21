@@ -169,7 +169,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 2000
 		producer = SWE
 	}
@@ -179,37 +179,37 @@ instant_effect = {
 air_wings = {
 	# F 7 Såtenäs — JAS 39C/D Gripen
 	35 = {
-		small_plane_strike_airframe_2 = { owner = "SWE" amount = 30 version_name = "JAS 39C/D Gripen" }
+		L_Strike_fighter2 = { owner = "SWE" amount = 30 version_name = "JAS 39C/D Gripen" }
 		name = "F 7 Såtenäs"
 		start_experience_factor = 0.55
 	}
 	# F 17 Blekinge — JAS 39C/D Gripen
 	550 = {
-		small_plane_strike_airframe_2 = { owner = "SWE" amount = 30 version_name = "JAS 39C/D Gripen" }
+		L_Strike_fighter2 = { owner = "SWE" amount = 30 version_name = "JAS 39C/D Gripen" }
 		name = "F 17 Blekinge"
 		start_experience_factor = 0.55
 	}
 	# F 21 Luleå — JAS 39C/D Gripen
 	33 = {
-		small_plane_strike_airframe_2 = { owner = "SWE" amount = 30 version_name = "JAS 39C/D Gripen" }
+		L_Strike_fighter2 = { owner = "SWE" amount = 30 version_name = "JAS 39C/D Gripen" }
 		name = "F 21 Luleå"
 		start_experience_factor = 0.55
 	}
 	# ASC 890 — S 100D Argus (Saab 340 AEW&C) — Linköping
 	35 = {
-		large_plane_awacs_airframe_2 = { owner = "SWE" amount = 4 version_name = "S 100D Argus" }
+		awacs_equipment_2 = { owner = "SWE" amount = 4 version_name = "S 100D Argus" }
 		name = "Flygbasjägarkompaniet AEW"
 		start_experience_factor = 0.5
 	}
 	# Transport — C-130H Hercules (Såtenäs)
 	35 = {
-		large_plane_air_transport_airframe_1 = { owner = "SWE" creator = "USA" amount = 6 version_name = "C-130H Hercules" }
+		transport_plane1 = { owner = "SWE" creator = "USA" amount = 6 version_name = "C-130H Hercules" }
 		name = "Transportflygdivisionen"
 		start_experience_factor = 0.45
 	}
 	# Maritime Surveillance — S 102B Korpen (GlobalEye on order, use Argus equivalent)
 	34 = {
-		large_plane_awacs_airframe_1 = { owner = "SWE" amount = 2 version_name = "S 102B Korpen" }
+		awacs_equipment_1 = { owner = "SWE" amount = 2 version_name = "S 102B Korpen" }
 		name = "Spaningsflygdivisionen"
 		start_experience_factor = 0.4
 	}

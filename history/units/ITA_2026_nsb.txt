@@ -289,7 +289,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 3000
 		producer = ITA
 	}
@@ -299,57 +299,57 @@ instant_effect = {
 air_wings = {
 	## Toscana (Grosseto/Pisa) ##
 	79 = {
-		medium_plane_fighter_airframe_2 = { owner = "ITA" amount = 24 version_name = "Eurofighter Typhoon" }
+		heavy_fighter_equipment_2 = { owner = "ITA" amount = 24 version_name = "Eurofighter Typhoon" }
 		name = "4° Stormo Caccia"
 		start_experience_factor = 0.6
 	}
 	79 = {
-		large_plane_air_transport_airframe_1 = { owner = "ITA" creator = "USA" amount = 22 version_name = "C-130J Super Hercules" }
+		transport_plane1 = { owner = "ITA" creator = "USA" amount = 22 version_name = "C-130J Super Hercules" }
 		name = "46a Brigata Aerea"
 		start_experience_factor = 0.6
 	}
 	## Puglia (Gioia del Colle/Amendola) ##
 	957 = {
-		medium_plane_fighter_airframe_2 = { owner = "ITA" amount = 24 version_name = "Eurofighter Typhoon" }
+		heavy_fighter_equipment_2 = { owner = "ITA" amount = 24 version_name = "Eurofighter Typhoon" }
 		name = "36° Stormo Caccia"
 		start_experience_factor = 0.6
 	}
 	957 = {
-		small_plane_strike_airframe_2 = { owner = "ITA" amount = 40 version_name = "F-35A Lightning II" }
+		L_Strike_fighter2 = { owner = "ITA" amount = 40 version_name = "F-35A Lightning II" }
 		name = "32° Stormo"
 		start_experience_factor = 0.65
 	}
 	957 = {
-		cv_small_plane_strike_airframe_2 = { owner = "ITA" amount = 7 version_name = "F-35B Lightning II" }
+		CV_L_Strike_fighter2 = { owner = "ITA" amount = 7 version_name = "F-35B Lightning II" }
 		name = "Marina Militare - GRUPAER"
 		start_experience_factor = 0.6
 	}
 	957 = {
-		small_plane_suicide_airframe_2 = { owner = "ITA" creator = "USA" amount = 6 version_name = "MQ-9A Reaper" }
+		Air_UAV2 = { owner = "ITA" creator = "USA" amount = 6 version_name = "MQ-9A Reaper" }
 		name = "28° Gruppo RPAS"
 		start_experience_factor = 0.6
 	}
 	## Sicilia (Trapani) ##
 	83 = {
-		medium_plane_fighter_airframe_2 = { owner = "ITA" amount = 24 version_name = "Eurofighter Typhoon" }
+		heavy_fighter_equipment_2 = { owner = "ITA" amount = 24 version_name = "Eurofighter Typhoon" }
 		name = "37° Stormo Caccia"
 		start_experience_factor = 0.6
 	}
 	## Veneto (Istrana) ##
 	78 = {
-		medium_plane_fighter_airframe_2 = { owner = "ITA" amount = 23 version_name = "Eurofighter Typhoon" }
+		heavy_fighter_equipment_2 = { owner = "ITA" amount = 23 version_name = "Eurofighter Typhoon" }
 		name = "51° Stormo Caccia"
 		start_experience_factor = 0.6
 	}
 	## Lombardia (Ghedi) ##
 	80 = {
-		medium_plane_cas_airframe_1 = { owner = "ITA" amount = 15 version_name = "Panavia Tornado IDS" }
+		cas1 = { owner = "ITA" amount = 15 version_name = "Panavia Tornado IDS" }
 		name = "6° Stormo"
 		start_experience_factor = 0.55
 	}
 	## Carrier Air Wings ##
 	"ITS Cavour (CVH-550)" = {
-		cv_small_plane_strike_airframe_2 = { owner = "ITA" amount = 8 version_name = "F-35B Lightning II" }
+		CV_L_Strike_fighter2 = { owner = "ITA" amount = 8 version_name = "F-35B Lightning II" }
 		name = "GRUPAER - Cavour Air Wing"
 		start_experience_factor = 0.65
 	}

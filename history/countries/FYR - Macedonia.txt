@@ -244,7 +244,7 @@ capital = 136
 	set_variable = { party_pop_array^15 = 0.055 }   #oligarchism
 	set_variable = { party_pop_array^18 = 0.050 }   #neutral_Social
 
-	add_to_array = { ruling_party = 1 }             #conservatism (VMRO-DPMNE)
+	set_variable = { ruling_party = 1 }             #conservatism (VMRO-DPMNE)
 	add_to_array = { gov_coalition_array = 7 }       #Autocracy (DUI)
 
 	set_variable = { party_pop_elect_array^1 = 0.431 }  #VMRO-DPMNE
@@ -271,5 +271,5 @@ capital = 136
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

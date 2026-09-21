@@ -124,7 +124,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 2000
 		producer = POR
 	}
@@ -134,19 +134,19 @@ instant_effect = {
 air_wings = {
 	# Monte Real - F-16AM
 	96 = {
-		small_plane_strike_airframe_2 = { owner = "POR" creator = "USA" amount = 30 version_name = "F-16AM Fighting Falcon" }
+		L_Strike_fighter2 = { owner = "POR" creator = "USA" amount = 30 version_name = "F-16AM Fighting Falcon" }
 		name = "Esquadra 201 & 301"
 		start_experience_factor = 0.5
 	}
 	# P-3C CUP+ Orion - Maritime Patrol
 	96 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "POR" creator = "USA" amount = 5 version_name = "P-3C CUP+ Orion" }
+		naval_plane1 = { owner = "POR" creator = "USA" amount = 5 version_name = "P-3C CUP+ Orion" }
 		name = "Esquadra 601"
 		start_experience_factor = 0.5
 	}
 	# C-130H Transport
 	96 = {
-		large_plane_air_transport_airframe_1 = { owner = "POR" creator = "USA" amount = 3 version_name = "C-130H Hercules" }
+		transport_plane1 = { owner = "POR" creator = "USA" amount = 3 version_name = "C-130H Hercules" }
 		name = "Esquadra 501"
 		start_experience_factor = 0.45
 	}

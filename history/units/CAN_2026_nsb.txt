@@ -180,7 +180,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 2000
 		producer = CAN
 	}
@@ -191,36 +191,36 @@ instant_effect = {
 air_wings = {
 	# CFB Cold Lake (Alberta)
 	755 = {
-		small_plane_strike_airframe_2 = { owner = "CAN" creator = "USA" amount = 30 version_name = "CF-188 Hornet" }
+		L_Strike_fighter2 = { owner = "CAN" creator = "USA" amount = 30 version_name = "CF-188 Hornet" }
 		name = "4 Wing Cold Lake"
 		start_experience_factor = 0.45
 	}
 	# CFB Bagotville (Quebec)
 	762 = {
-		small_plane_strike_airframe_2 = { owner = "CAN" creator = "USA" amount = 25 version_name = "CF-188 Hornet" }
+		L_Strike_fighter2 = { owner = "CAN" creator = "USA" amount = 25 version_name = "CF-188 Hornet" }
 		name = "3 Wing Bagotville"
 		start_experience_factor = 0.45
 	}
 	# CFB Trenton (Ontario)
 	763 = {
-		large_plane_air_transport_airframe_1 = { owner = "CAN" creator = "USA" amount = 17 version_name = "CC-130J Hercules" }
+		transport_plane1 = { owner = "CAN" creator = "USA" amount = 17 version_name = "CC-130J Hercules" }
 		name = "8 Wing Trenton"
 		start_experience_factor = 0.4
 	}
 	763 = {
-		large_plane_air_transport_airframe_2 = { owner = "CAN" creator = "USA" amount = 5 version_name = "CC-177 Globemaster III" }
+		transport_plane2 = { owner = "CAN" creator = "USA" amount = 5 version_name = "CC-177 Globemaster III" }
 		name = "429 Transport Squadron"
 		start_experience_factor = 0.45
 	}
 	# CFB Greenwood (Nova Scotia)
 	760 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "CAN" creator = "USA" amount = 5 version_name = "CP-140 Aurora" }
+		naval_plane1 = { owner = "CAN" creator = "USA" amount = 5 version_name = "CP-140 Aurora" }
 		name = "14 Wing Greenwood"
 		start_experience_factor = 0.45
 	}
 	# CFB Comox (British Columbia)
 	754 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "CAN" creator = "USA" amount = 5 version_name = "CP-140 Aurora" }
+		naval_plane1 = { owner = "CAN" creator = "USA" amount = 5 version_name = "CP-140 Aurora" }
 		name = "19 Wing Comox"
 		start_experience_factor = 0.45
 	}

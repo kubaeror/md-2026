@@ -243,7 +243,7 @@ units = {
 ### Equipment Stockpile ###
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 2000
 		producer = ENG
 	}
@@ -258,55 +258,55 @@ instant_effect = {
 air_wings = {
 	# RAF Coningsby — Typhoon QRA & Strike (No. 3(F), 11(F), 29 Sqn)
 	1191 = {
-		medium_plane_fighter_airframe_2 = { owner = "ENG" amount = 36 version_name = "Eurofighter Typhoon FGR.4" }
+		heavy_fighter_equipment_2 = { owner = "ENG" amount = 36 version_name = "Eurofighter Typhoon FGR.4" }
 		name = "No. 1 Group — Coningsby Wing"
 		start_experience_factor = 0.65
 	}
 	# RAF Lossiemouth — Typhoon (No. 1(F), 2, 6, 9(B) Sqn)
 	1195 = {
-		medium_plane_fighter_airframe_2 = { owner = "ENG" amount = 36 version_name = "Eurofighter Typhoon FGR.4" }
+		heavy_fighter_equipment_2 = { owner = "ENG" amount = 36 version_name = "Eurofighter Typhoon FGR.4" }
 		name = "No. 1 Group — Lossiemouth Wing"
 		start_experience_factor = 0.65
 	}
 	# RAF Lossiemouth — P-8A Poseidon MRA.1 (No. 120 Sqn)
 	1195 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "ENG" creator = "USA" amount = 9 version_name = "P-8A Poseidon MRA.1" }
+		naval_plane1 = { owner = "ENG" creator = "USA" amount = 9 version_name = "P-8A Poseidon MRA.1" }
 		name = "No. 120 Squadron"
 		start_experience_factor = 0.55
 	}
 	# RAF Marham — F-35B Lightning (No. 617, 207 Sqn)
 	14 = {
-		small_plane_strike_airframe_2 = { owner = "ENG" creator = "USA" amount = 24 version_name = "F-35B Lightning II" }
+		L_Strike_fighter2 = { owner = "ENG" creator = "USA" amount = 24 version_name = "F-35B Lightning II" }
 		name = "Lightning Force — RAF Marham"
 		start_experience_factor = 0.6
 	}
 	# RAF Brize Norton — Strategic Airlift (No. 99 Sqn)
 	15 = {
-		large_plane_air_transport_airframe_2 = { owner = "ENG" creator = "USA" amount = 8 version_name = "C-17A Globemaster III" }
+		transport_plane2 = { owner = "ENG" creator = "USA" amount = 8 version_name = "C-17A Globemaster III" }
 		name = "No. 99 Squadron"
 		start_experience_factor = 0.6
 	}
 	# RAF Brize Norton — Tactical Airlift (No. 24, 30, 70 Sqn)
 	15 = {
-		large_plane_air_transport_airframe_2 = { owner = "ENG" amount = 22 version_name = "A400M Atlas C.1" }
+		transport_plane2 = { owner = "ENG" amount = 22 version_name = "A400M Atlas C.1" }
 		name = "Air Mobility Force — Brize Norton"
 		start_experience_factor = 0.6
 	}
 	# RAF Waddington — ISTAR (No. 51 Sqn)
 	1191 = {
-		large_plane_awacs_airframe_1 = { owner = "ENG" creator = "USA" amount = 3 version_name = "RC-135W Rivet Joint" }
+		awacs_equipment_1 = { owner = "ENG" creator = "USA" amount = 3 version_name = "RC-135W Rivet Joint" }
 		name = "No. 51 Squadron"
 		start_experience_factor = 0.6
 	}
 	# RAF Waddington — RPAS (No. 31 Sqn)
 	1191 = {
-		small_plane_suicide_airframe_2 = { owner = "ENG" creator = "USA" amount = 5 version_name = "Protector RG.1" }
+		Air_UAV2 = { owner = "ENG" creator = "USA" amount = 5 version_name = "Protector RG.1" }
 		name = "No. 31 Squadron"
 		start_experience_factor = 0.45
 	}
 	# Fleet Air Arm — Carrier Air Wing (HMS Queen Elizabeth)
 	"HMS Queen Elizabeth (R08)" = {
-		cv_small_plane_strike_airframe_2 = { owner = "ENG" creator = "USA" amount = 8 version_name = "F-35B Lightning II" }
+		CV_L_Strike_fighter2 = { owner = "ENG" creator = "USA" amount = 8 version_name = "F-35B Lightning II" }
 		name = "Carrier Air Wing — HMS Queen Elizabeth"
 		start_experience_factor = 0.6
 	}

@@ -54,7 +54,7 @@
 	set_variable = { party_pop_array^18 = 0.050 }   #neutral_Social (Rodt)
 	set_variable = { party_pop_array^16 = 0.040 }   #Neutral_Libertarian (KrF)
 
-	add_to_array = { ruling_party = 3 }             #socialism (Ap)
+	set_variable = { ruling_party = 3 }             #socialism (Ap)
 	add_to_array = { gov_coalition_array = 14 }       #Neutral_conservatism (Sp)
 
 	set_variable = { party_pop_elect_array^3 = 0.262 }  #Ap

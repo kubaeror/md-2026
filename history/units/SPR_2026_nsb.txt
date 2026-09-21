@@ -243,7 +243,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 3000
 		producer = SPR
 	}
@@ -253,18 +253,18 @@ instant_effect = {
 air_wings = {
 	## Andalucía (Morón) ##
 	93 = {
-		medium_plane_fighter_airframe_2 = { owner = "SPR" amount = 36 version_name = "Eurofighter Typhoon" }
+		heavy_fighter_equipment_2 = { owner = "SPR" amount = 36 version_name = "Eurofighter Typhoon" }
 		name = "Ala 11"
 		start_experience_factor = 0.6
 	}
 	93 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "SPR" creator = "USA" amount = 5 version_name = "P-3M Orion" }
+		naval_plane1 = { owner = "SPR" creator = "USA" amount = 5 version_name = "P-3M Orion" }
 		name = "Grupo 22"
 		start_experience_factor = 0.55
 	}
 	## Castilla-La Mancha (Albacete/Los Llanos) ##
 	970 = {
-		medium_plane_fighter_airframe_2 = { owner = "SPR" amount = 37 version_name = "Eurofighter Typhoon" }
+		heavy_fighter_equipment_2 = { owner = "SPR" amount = 37 version_name = "Eurofighter Typhoon" }
 		name = "Ala 14"
 		start_experience_factor = 0.6
 	}
@@ -281,12 +281,12 @@ air_wings = {
 		start_experience_factor = 0.55
 	}
 	87 = {
-		large_plane_air_transport_airframe_2 = { owner = "SPR" amount = 14 version_name = "A400M Atlas" }
+		transport_plane2 = { owner = "SPR" amount = 14 version_name = "A400M Atlas" }
 		name = "31a Escuadrón de Transporte"
 		start_experience_factor = 0.6
 	}
 	87 = {
-		large_plane_air_transport_airframe_1 = { owner = "SPR" creator = "USA" amount = 7 version_name = "C-130H Hercules" }
+		transport_plane1 = { owner = "SPR" creator = "USA" amount = 7 version_name = "C-130H Hercules" }
 		name = "Ala 31 - Transporte"
 		start_experience_factor = 0.55
 	}

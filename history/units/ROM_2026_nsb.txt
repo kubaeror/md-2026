@@ -169,7 +169,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 3000
 		producer = ROM
 	}
@@ -180,31 +180,31 @@ instant_effect = {
 air_wings = {
 	# 53rd Fighter Squadron — F-16AM MLU (Fetesti/Borcea)
 	284 = {
-		small_plane_strike_airframe_2 = { owner = "ROM" creator = "USA" amount = 17 version_name = "F-16AM MLU" }
+		L_Strike_fighter2 = { owner = "ROM" creator = "USA" amount = 17 version_name = "F-16AM MLU" }
 		name = "Escadrila 53 Vanatoare"
 		start_experience_factor = 0.4
 	}
 	# 48th Fighter Squadron — F-16AM MLU (Campia Turzii)
 	151 = {
-		small_plane_strike_airframe_2 = { owner = "ROM" creator = "USA" amount = 15 version_name = "F-16AM MLU" }
+		L_Strike_fighter2 = { owner = "ROM" creator = "USA" amount = 15 version_name = "F-16AM MLU" }
 		name = "Escadrila 48 Vanatoare"
 		start_experience_factor = 0.4
 	}
 	# 90th Airlift Group — C-130H (Bucharest/Otopeni)
 	150 = {
-		large_plane_air_transport_airframe_1 = { owner = "ROM" creator = "USA" amount = 4 version_name = "C-130H Hercules" }
+		transport_plane1 = { owner = "ROM" creator = "USA" amount = 4 version_name = "C-130H Hercules" }
 		name = "Grupul 90 Transport Aerian"
 		start_experience_factor = 0.35
 	}
 	# Tactical Airlift Group — C-27J Spartan (Bucharest)
 	150 = {
-		large_plane_air_transport_airframe_1 = { owner = "ROM" creator = "ITA" amount = 7 version_name = "C-27J Spartan" }
+		transport_plane1 = { owner = "ROM" creator = "ITA" amount = 7 version_name = "C-27J Spartan" }
 		name = "Grupul Transport Tactic"
 		start_experience_factor = 0.35
 	}
 	# ISR Squadron — MQ-9A Reaper (Campia Turzii)
 	151 = {
-		small_plane_suicide_airframe_2 = { owner = "ROM" creator = "USA" amount = 4 version_name = "MQ-9A Reaper" }
+		Air_UAV2 = { owner = "ROM" creator = "USA" amount = 4 version_name = "MQ-9A Reaper" }
 		name = "Escadrila ISR"
 		start_experience_factor = 0.35
 	}

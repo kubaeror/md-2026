@@ -125,12 +125,12 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 5000
 		producer = UAE
 	}
 	add_equipment_to_stockpile = {
-		type = infantry_weapons6
+		type = infantry_weapons_6
 		amount = 1000
 		producer = USA
 	}
@@ -140,31 +140,31 @@ instant_effect = {
 air_wings = {
 	# F-16E/F Block 60 Desert Falcon
 	180 = {
-		small_plane_strike_airframe_2 = { owner = "UAE" creator = "USA" amount = 79 version_name = "F-16E/F Block 60 Desert Falcon" }
+		L_Strike_fighter2 = { owner = "UAE" creator = "USA" amount = 79 version_name = "F-16E/F Block 60 Desert Falcon" }
 		name = "Al Dhafra Fighter Wings"
 		start_experience_factor = 0.55
 	}
 	# Mirage 2000-9
 	180 = {
-		medium_plane_fighter_airframe_2 = { owner = "UAE" creator = "FRA" amount = 55 version_name = "Mirage 2000-9" }
+		heavy_fighter_equipment_2 = { owner = "UAE" creator = "FRA" amount = 55 version_name = "Mirage 2000-9" }
 		name = "Al Minhad Fighter Wings"
 		start_experience_factor = 0.5
 	}
 	# GlobalEye AEW&C
 	180 = {
-		large_plane_awacs_airframe_2 = { owner = "UAE" creator = "SWE" amount = 3 version_name = "GlobalEye AEW&C" }
+		awacs_equipment_2 = { owner = "UAE" creator = "SWE" amount = 3 version_name = "GlobalEye AEW&C" }
 		name = "AEW Squadron"
 		start_experience_factor = 0.5
 	}
 	# C-17A Globemaster III
 	180 = {
-		large_plane_air_transport_airframe_2 = { owner = "UAE" creator = "USA" amount = 6 version_name = "C-17A Globemaster III" }
+		transport_plane2 = { owner = "UAE" creator = "USA" amount = 6 version_name = "C-17A Globemaster III" }
 		name = "Transport Wing"
 		start_experience_factor = 0.5
 	}
 	# Wing Loong II + MQ-1 drones
 	180 = {
-		small_plane_suicide_airframe_2 = { owner = "UAE" creator = "CHI" amount = 10 version_name = "Wing Loong II" }
+		Air_UAV2 = { owner = "UAE" creator = "CHI" amount = 10 version_name = "Wing Loong II" }
 		name = "UAV Squadron"
 		start_experience_factor = 0.55
 	}

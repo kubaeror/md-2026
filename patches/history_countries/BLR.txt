@@ -50,7 +50,7 @@
 	set_variable = { party_pop_array^15 = 0.030 }   #oligarchism
 	set_variable = { party_pop_array^14 = 0.030 }   #Neutral_conservatism
 
-	add_to_array = { ruling_party = 6 }             #Conservative (Lukashenko bloc)
+	set_variable = { ruling_party = 6 }             #Conservative (Lukashenko bloc)
 
 	set_variable = { party_pop_elect_array^6 = 0.867 }  #Lukashenko
 	set_variable = { party_pop_elect_array^7 = 0.050 }  #loyalist candidates

@@ -452,7 +452,7 @@ capital = 186
 	set_variable = { party_pop_array^4 = 0.040 }   #Communist-State (Kurdish left)
 	set_variable = { party_pop_array^20 = 0.040 }   #Nat_Populism
 
-	add_to_array = { ruling_party = 14 }             #Neutral_conservatism (HTS transitional)
+	set_variable = { ruling_party = 14 }             #Neutral_conservatism (HTS transitional)
 
 	startup_politics = yes
 
@@ -480,5 +480,5 @@ capital = 186
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

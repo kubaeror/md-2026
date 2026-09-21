@@ -52,7 +52,7 @@
 	set_variable = { party_pop_array^14 = 0.040 }   #Neutral_conservatism
 	set_variable = { party_pop_array^4 = 0.030 }   #Communist-State
 
-	add_to_array = { ruling_party = 7 }             #Autocracy (Georgian Dream)
+	set_variable = { ruling_party = 7 }             #Autocracy (Georgian Dream)
 
 	set_variable = { party_pop_elect_array^7 = 0.541 }  #Georgian Dream
 	set_variable = { party_pop_elect_array^2 = 0.111 }  #UNM

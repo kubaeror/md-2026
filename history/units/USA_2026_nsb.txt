@@ -565,7 +565,7 @@ units = {
 ### Equipment Stockpile ###
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons6
+		type = infantry_weapons_6
 		amount = 5000
 		producer = USA
 	}
@@ -575,7 +575,7 @@ instant_effect = {
 		producer = USA
 	}
 	add_equipment_to_stockpile = {
-		type = util_vehicle_equipment
+		type = util_vehicle_7
 		amount = 3000
 		producer = USA
 	}
@@ -586,59 +586,59 @@ instant_effect = {
 air_wings = {
 	# USAF Active F-35A Wings
 	805 = {
-		small_plane_strike_airframe_2 = { owner = "USA" amount = 24 version_name = "F-35A Lightning II" }
+		L_Strike_fighter2 = { owner = "USA" amount = 24 version_name = "F-35A Lightning II" }
 		name = "388th Fighter Wing"
 		start_experience_factor = 0.5
 	}
 	806 = {
-		small_plane_strike_airframe_2 = { owner = "USA" amount = 24 version_name = "F-35A Lightning II" }
+		L_Strike_fighter2 = { owner = "USA" amount = 24 version_name = "F-35A Lightning II" }
 		name = "56th Fighter Wing"
 		start_experience_factor = 0.5
 	}
 	795 = {
-		small_plane_strike_airframe_2 = { owner = "USA" amount = 24 version_name = "F-35A Lightning II" }
+		L_Strike_fighter2 = { owner = "USA" amount = 24 version_name = "F-35A Lightning II" }
 		name = "33rd Fighter Wing"
 		start_experience_factor = 0.5
 	}
 	814 = {
-		small_plane_strike_airframe_2 = { owner = "USA" amount = 24 version_name = "F-35A Lightning II" }
+		L_Strike_fighter2 = { owner = "USA" amount = 24 version_name = "F-35A Lightning II" }
 		name = "354th Fighter Wing"
 		start_experience_factor = 0.5
 	}
 	14 = {
-		small_plane_strike_airframe_2 = { owner = "USA" amount = 24 version_name = "F-35A Lightning II" }
+		L_Strike_fighter2 = { owner = "USA" amount = 24 version_name = "F-35A Lightning II" }
 		name = "48th Fighter Wing"
 		start_experience_factor = 0.5
 	}
 	966 = {
-		small_plane_strike_airframe_2 = { owner = "USA" amount = 24 version_name = "F-35A Lightning II" }
+		L_Strike_fighter2 = { owner = "USA" amount = 24 version_name = "F-35A Lightning II" }
 		name = "31st Fighter Wing"
 		start_experience_factor = 0.5
 	}
 
 	# USAF F-22A Raptor Wings
 	772 = {
-		medium_plane_fighter_airframe_2 = { owner = "USA" amount = 24 version_name = "F-22A Raptor" }
+		heavy_fighter_equipment_2 = { owner = "USA" amount = 24 version_name = "F-22A Raptor" }
 		name = "1st Fighter Wing"
 		start_experience_factor = 0.5
 	}
 	814 = {
-		medium_plane_fighter_airframe_2 = { owner = "USA" amount = 24 version_name = "F-22A Raptor" }
+		heavy_fighter_equipment_2 = { owner = "USA" amount = 24 version_name = "F-22A Raptor" }
 		name = "3rd Wing"
 		start_experience_factor = 0.5
 	}
 	803 = {
-		medium_plane_fighter_airframe_2 = { owner = "USA" amount = 24 version_name = "F-22A Raptor" }
+		heavy_fighter_equipment_2 = { owner = "USA" amount = 24 version_name = "F-22A Raptor" }
 		name = "49th Wing"
 		start_experience_factor = 0.5
 	}
 	795 = {
-		medium_plane_fighter_airframe_2 = { owner = "USA" amount = 24 version_name = "F-22A Raptor" }
+		heavy_fighter_equipment_2 = { owner = "USA" amount = 24 version_name = "F-22A Raptor" }
 		name = "325th Fighter Wing"
 		start_experience_factor = 0.5
 	}
 	817 = {
-		medium_plane_fighter_airframe_2 = { owner = "USA" amount = 24 version_name = "F-22A Raptor" }
+		heavy_fighter_equipment_2 = { owner = "USA" amount = 24 version_name = "F-22A Raptor" }
 		name = "154th Wing"
 		start_experience_factor = 0.4
 	}
@@ -657,44 +657,44 @@ air_wings = {
 
 	# USAF F-16C ANG/Active Wings
 	772 = {
-		small_plane_strike_airframe_2 = { owner = "USA" amount = 24 version_name = "F-16C" }
+		L_Strike_fighter2 = { owner = "USA" amount = 24 version_name = "F-16C" }
 		name = "113th Wing"
 		start_experience_factor = 0.4
 	}
 	779 = {
-		small_plane_strike_airframe_2 = { owner = "USA" amount = 24 version_name = "F-16C" }
+		L_Strike_fighter2 = { owner = "USA" amount = 24 version_name = "F-16C" }
 		name = "115th Fighter Wing"
 		start_experience_factor = 0.4
 	}
 	799 = {
-		small_plane_strike_airframe_2 = { owner = "USA" amount = 24 version_name = "F-16C" }
+		L_Strike_fighter2 = { owner = "USA" amount = 24 version_name = "F-16C" }
 		name = "138th Fighter Wing"
 		start_experience_factor = 0.4
 	}
 	770 = {
-		small_plane_strike_airframe_2 = { owner = "USA" amount = 24 version_name = "F-16C" }
+		L_Strike_fighter2 = { owner = "USA" amount = 24 version_name = "F-16C" }
 		name = "177th Fighter Wing"
 		start_experience_factor = 0.4
 	}
 	827 = {
-		small_plane_strike_airframe_2 = { owner = "USA" amount = 24 version_name = "F-16C" }
+		L_Strike_fighter2 = { owner = "USA" amount = 24 version_name = "F-16C" }
 		name = "8th Fighter Wing"
 		start_experience_factor = 0.5
 	}
 
 	# USAF A-10C Thunderbolt II Wings
 	806 = {
-		medium_plane_cas_airframe_2 = { owner = "USA" amount = 24 version_name = "A-10C Thunderbolt II" }
+		cas2 = { owner = "USA" amount = 24 version_name = "A-10C Thunderbolt II" }
 		name = "355th Wing"
 		start_experience_factor = 0.5
 	}
 	772 = {
-		medium_plane_cas_airframe_2 = { owner = "USA" amount = 24 version_name = "A-10C Thunderbolt II" }
+		cas2 = { owner = "USA" amount = 24 version_name = "A-10C Thunderbolt II" }
 		name = "175th Wing"
 		start_experience_factor = 0.4
 	}
 	777 = {
-		medium_plane_cas_airframe_2 = { owner = "USA" amount = 24 version_name = "A-10C Thunderbolt II" }
+		cas2 = { owner = "USA" amount = 24 version_name = "A-10C Thunderbolt II" }
 		name = "127th Wing"
 		start_experience_factor = 0.4
 	}
@@ -728,58 +728,58 @@ air_wings = {
 
 	# USAF Transport Wings
 	809 = {
-		large_plane_air_transport_airframe_2 = { owner = "USA" amount = 24 version_name = "C-17 Globemaster III" }
+		transport_plane2 = { owner = "USA" amount = 24 version_name = "C-17 Globemaster III" }
 		name = "62nd Airlift Wing"
 		start_experience_factor = 0.5
 	}
 	791 = {
-		large_plane_air_transport_airframe_2 = { owner = "USA" amount = 24 version_name = "C-17 Globemaster III" }
+		transport_plane2 = { owner = "USA" amount = 24 version_name = "C-17 Globemaster III" }
 		name = "437th Airlift Wing"
 		start_experience_factor = 0.5
 	}
 	811 = {
-		large_plane_air_transport_airframe_1 = { owner = "USA" amount = 24 version_name = "C-5M Super Galaxy" }
+		transport_plane1 = { owner = "USA" amount = 24 version_name = "C-5M Super Galaxy" }
 		name = "60th Air Mobility Wing"
 		start_experience_factor = 0.5
 	}
 	797 = {
-		large_plane_air_transport_airframe_1 = { owner = "USA" amount = 24 version_name = "C-130J Super Hercules" }
+		transport_plane1 = { owner = "USA" amount = 24 version_name = "C-130J Super Hercules" }
 		name = "19th Airlift Wing"
 		start_experience_factor = 0.5
 	}
 
 	# USAF ISR / AWACS
 	799 = {
-		large_plane_awacs_airframe_2 = { owner = "USA" amount = 12 version_name = "E-3G Sentry" }
+		awacs_equipment_2 = { owner = "USA" amount = 12 version_name = "E-3G Sentry" }
 		name = "552nd Air Control Wing"
 		start_experience_factor = 0.5
 	}
 	785 = {
-		large_plane_awacs_airframe_1 = { owner = "USA" amount = 12 version_name = "RC-135" }
+		awacs_equipment_1 = { owner = "USA" amount = 12 version_name = "RC-135" }
 		name = "55th Wing"
 		start_experience_factor = 0.5
 	}
 
 	# USAF Drones
 	807 = {
-		small_plane_suicide_airframe_2 = { owner = "USA" amount = 24 version_name = "MQ-9 Reaper" }
+		Air_UAV2 = { owner = "USA" amount = 24 version_name = "MQ-9 Reaper" }
 		name = "432nd Wing"
 		start_experience_factor = 0.5
 	}
 
 	# USN Maritime Patrol
 	809 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "USA" amount = 12 version_name = "P-8A Poseidon" }
+		naval_plane1 = { owner = "USA" amount = 12 version_name = "P-8A Poseidon" }
 		name = "VP-1"
 		start_experience_factor = 0.5
 	}
 	795 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "USA" amount = 12 version_name = "P-8A Poseidon" }
+		naval_plane1 = { owner = "USA" amount = 12 version_name = "P-8A Poseidon" }
 		name = "VP-5"
 		start_experience_factor = 0.5
 	}
 	827 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "USA" amount = 12 version_name = "P-8A Poseidon" }
+		naval_plane1 = { owner = "USA" amount = 12 version_name = "P-8A Poseidon" }
 		name = "VP-4"
 		start_experience_factor = 0.5
 	}
@@ -787,12 +787,12 @@ air_wings = {
 	# USN Carrier Air Wings
 	# CVW-8 on CVN-78 Gerald R. Ford (Norfolk)
 	772 = {
-		cv_medium_plane_fighter_airframe_2 = { owner = "USA" amount = 14 version_name = "F-35C Lightning II" }
+		cv_medium_plane_airframe_2 = { owner = "USA" amount = 14 version_name = "F-35C Lightning II" }
 		name = "VFA-31 (CVW-8)"
 		start_experience_factor = 0.5
 	}
 	772 = {
-		cv_medium_plane_fighter_airframe_2 = { owner = "USA" amount = 24 version_name = "F/A-18E Super Hornet" }
+		cv_medium_plane_airframe_2 = { owner = "USA" amount = 24 version_name = "F/A-18E Super Hornet" }
 		name = "VFA-87 (CVW-8)"
 		start_experience_factor = 0.5
 	}
@@ -802,19 +802,19 @@ air_wings = {
 		start_experience_factor = 0.5
 	}
 	772 = {
-		cv_medium_plane_scout_airframe_2 = { owner = "USA" amount = 5 version_name = "E-2D Advanced Hawkeye" }
+		cv_awacs_equipment_2 = { owner = "USA" amount = 5 version_name = "E-2D Advanced Hawkeye" }
 		name = "VAW-124 (CVW-8)"
 		start_experience_factor = 0.5
 	}
 	772 = {
-		cv_medium_plane_maritime_patrol_airframe_1 = { owner = "USA" amount = 5 version_name = "CMV-22B Osprey" }
+		cv_medium_plane_maritime_patrol_airframe = { owner = "USA" amount = 5 version_name = "CMV-22B Osprey" }
 		name = "VRM-40 Det (CVW-8)"
 		start_experience_factor = 0.5
 	}
 
 	# CVW-9 on CVN-72 Abraham Lincoln (San Diego)
 	811 = {
-		cv_medium_plane_fighter_airframe_2 = { owner = "USA" amount = 24 version_name = "F/A-18E Super Hornet" }
+		cv_medium_plane_airframe_2 = { owner = "USA" amount = 24 version_name = "F/A-18E Super Hornet" }
 		name = "VFA-14 (CVW-9)"
 		start_experience_factor = 0.5
 	}
@@ -824,14 +824,14 @@ air_wings = {
 		start_experience_factor = 0.5
 	}
 	811 = {
-		cv_medium_plane_scout_airframe_2 = { owner = "USA" amount = 5 version_name = "E-2D Advanced Hawkeye" }
+		cv_awacs_equipment_2 = { owner = "USA" amount = 5 version_name = "E-2D Advanced Hawkeye" }
 		name = "VAW-112 (CVW-9)"
 		start_experience_factor = 0.5
 	}
 
 	# CVW-5 on CVN-73 George Washington (Yokosuka)
 	827 = {
-		cv_medium_plane_fighter_airframe_2 = { owner = "USA" amount = 24 version_name = "F/A-18E Super Hornet" }
+		cv_medium_plane_airframe_2 = { owner = "USA" amount = 24 version_name = "F/A-18E Super Hornet" }
 		name = "VFA-27 (CVW-5)"
 		start_experience_factor = 0.5
 	}
@@ -841,14 +841,14 @@ air_wings = {
 		start_experience_factor = 0.5
 	}
 	827 = {
-		cv_medium_plane_scout_airframe_2 = { owner = "USA" amount = 5 version_name = "E-2D Advanced Hawkeye" }
+		cv_awacs_equipment_2 = { owner = "USA" amount = 5 version_name = "E-2D Advanced Hawkeye" }
 		name = "VAW-115 (CVW-5)"
 		start_experience_factor = 0.5
 	}
 
 	# CVW-1 on CVN-75 Harry S. Truman (Norfolk)
 	772 = {
-		cv_medium_plane_fighter_airframe_2 = { owner = "USA" amount = 24 version_name = "F/A-18E Super Hornet" }
+		cv_medium_plane_airframe_2 = { owner = "USA" amount = 24 version_name = "F/A-18E Super Hornet" }
 		name = "VFA-136 (CVW-1)"
 		start_experience_factor = 0.5
 	}
@@ -858,19 +858,19 @@ air_wings = {
 		start_experience_factor = 0.5
 	}
 	772 = {
-		cv_medium_plane_scout_airframe_2 = { owner = "USA" amount = 5 version_name = "E-2D Advanced Hawkeye" }
+		cv_awacs_equipment_2 = { owner = "USA" amount = 5 version_name = "E-2D Advanced Hawkeye" }
 		name = "VAW-126 (CVW-1)"
 		start_experience_factor = 0.5
 	}
 
 	# USMC F-35B on LHAs
 	811 = {
-		cv_small_plane_strike_airframe_2 = { owner = "USA" amount = 12 version_name = "F-35B Lightning II" }
+		CV_L_Strike_fighter2 = { owner = "USA" amount = 12 version_name = "F-35B Lightning II" }
 		name = "VMA-211 (LHA-6 America)"
 		start_experience_factor = 0.5
 	}
 	827 = {
-		cv_small_plane_strike_airframe_2 = { owner = "USA" amount = 12 version_name = "F-35B Lightning II" }
+		CV_L_Strike_fighter2 = { owner = "USA" amount = 12 version_name = "F-35B Lightning II" }
 		name = "VMA-121 (LHA-7 Tripoli)"
 		start_experience_factor = 0.5
 	}

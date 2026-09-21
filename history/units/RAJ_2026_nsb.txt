@@ -556,7 +556,7 @@ units = {
 ### Equipment Stockpile ###
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons4
+		type = infantry_weapons_4
 		amount = 10000
 		producer = RAJ
 	}
@@ -566,7 +566,7 @@ instant_effect = {
 		producer = RAJ
 	}
 	add_equipment_to_stockpile = {
-		type = util_vehicle_equipment
+		type = util_vehicle_7
 		amount = 3000
 		producer = RAJ
 	}
@@ -588,7 +588,7 @@ air_wings = {
 	}
 	# Rafale — Ambala (No. 17 & 101 Sqn)
 	440 = {
-		medium_plane_fighter_airframe_2 = { owner = "RAJ" creator = "FRA" amount = 36 version_name = "Rafale EH/DH" }
+		heavy_fighter_equipment_2 = { owner = "RAJ" creator = "FRA" amount = 36 version_name = "Rafale EH/DH" }
 		name = "17 & 101 Squadron (Rafale)"
 		start_experience_factor = 0.6
 	}
@@ -600,66 +600,66 @@ air_wings = {
 	}
 	# Tejas Mk.1 — Southern Air Command
 	462 = {
-		small_plane_strike_airframe_2 = { owner = "RAJ" amount = 80 version_name = "Tejas Mk.1" }
+		L_Strike_fighter2 = { owner = "RAJ" amount = 80 version_name = "Tejas Mk.1" }
 		name = "Tejas Squadrons"
 		start_experience_factor = 0.5
 	}
 	# Jaguar IS/DARIN III — Strike wings
 	440 = {
-		medium_plane_cas_airframe_1 = { owner = "RAJ" creator = "ENG" amount = 50 version_name = "Jaguar IS DARIN III" }
+		cas1 = { owner = "RAJ" creator = "ENG" amount = 50 version_name = "Jaguar IS DARIN III" }
 		name = "Jaguar Strike Squadrons"
 		start_experience_factor = 0.4
 	}
 	# AWACS — A-50EI Phalcon + DRDO Netra
 	440 = {
-		large_plane_awacs_airframe_2 = { owner = "RAJ" creator = "ISR" amount = 3 version_name = "A-50EI Phalcon" }
+		awacs_equipment_2 = { owner = "RAJ" creator = "ISR" amount = 3 version_name = "A-50EI Phalcon" }
 		name = "AWACS Squadron"
 		start_experience_factor = 0.5
 	}
 	440 = {
-		large_plane_awacs_airframe_1 = { owner = "RAJ" amount = 2 version_name = "DRDO AEW&CS Netra" }
+		awacs_equipment_1 = { owner = "RAJ" amount = 2 version_name = "DRDO AEW&CS Netra" }
 		name = "Netra AEW Squadron"
 		start_experience_factor = 0.45
 	}
 	# C-17A Globemaster III — Strategic transport
 	440 = {
-		large_plane_air_transport_airframe_2 = { owner = "RAJ" creator = "USA" amount = 11 version_name = "C-17A Globemaster III" }
+		transport_plane2 = { owner = "RAJ" creator = "USA" amount = 11 version_name = "C-17A Globemaster III" }
 		name = "81 Squadron (Skylords)"
 		start_experience_factor = 0.5
 	}
 	# C-130J Super Hercules
 	440 = {
-		large_plane_air_transport_airframe_1 = { owner = "RAJ" creator = "USA" amount = 12 version_name = "C-130J Super Hercules" }
+		transport_plane1 = { owner = "RAJ" creator = "USA" amount = 12 version_name = "C-130J Super Hercules" }
 		name = "77 & 87 Squadron"
 		start_experience_factor = 0.5
 	}
 	# Il-76 Gajraj
 	440 = {
-		large_plane_air_transport_airframe_2 = { owner = "RAJ" creator = "SOV" amount = 17 version_name = "Il-76MD Gajraj" }
+		transport_plane2 = { owner = "RAJ" creator = "SOV" amount = 17 version_name = "Il-76MD Gajraj" }
 		name = "44 Squadron (Mighty Jumbos)"
 		start_experience_factor = 0.4
 	}
 	# P-8I Neptune — Indian Navy MPA
 	462 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "RAJ" creator = "USA" amount = 12 version_name = "P-8I Neptune" }
+		naval_plane1 = { owner = "RAJ" creator = "USA" amount = 12 version_name = "P-8I Neptune" }
 		name = "Indian Navy INAS 312"
 		start_experience_factor = 0.5
 	}
 	# Heron TP / Hermes 900 — UCAV/ISR
 	440 = {
-		small_plane_suicide_airframe_2 = { owner = "RAJ" creator = "ISR" amount = 15 version_name = "Heron TP / Hermes 900" }
+		Air_UAV2 = { owner = "RAJ" creator = "ISR" amount = 15 version_name = "Heron TP / Hermes 900" }
 		name = "UAV Squadron"
 		start_experience_factor = 0.4
 	}
 	# INS Vikrant carrier air wing
 	"INS Vikrant (R11)" = {
-		cv_medium_plane_fighter_airframe_2 = { owner = "RAJ" creator = "SOV" amount = 20 version_name = "MiG-29K" }
+		cv_medium_plane_airframe_2 = { owner = "RAJ" creator = "SOV" amount = 20 version_name = "MiG-29K" }
 		name = "INAS 303 Black Panthers"
 		start_experience_factor = 0.5
 	}
 	# INS Vikramaditya carrier air wing
 	"INS Vikramaditya (R33)" = {
-		cv_medium_plane_fighter_airframe_2 = { owner = "RAJ" creator = "SOV" amount = 20 version_name = "MiG-29K" }
+		cv_medium_plane_airframe_2 = { owner = "RAJ" creator = "SOV" amount = 20 version_name = "MiG-29K" }
 		name = "INAS 300 White Tigers"
 		start_experience_factor = 0.5
 	}

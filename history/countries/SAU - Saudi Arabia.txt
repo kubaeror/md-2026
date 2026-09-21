@@ -618,7 +618,7 @@ capital = 176
 	set_variable = { party_pop_array^15 = 0.030 }   #oligarchism
 	set_variable = { party_pop_array^13 = 0.040 }   #Neutral_Autocracy
 
-	add_to_array = { ruling_party = 10 }             #Kingdom (House of Saud)
+	set_variable = { ruling_party = 10 }             #Kingdom (House of Saud)
 
 	startup_politics = yes
 
@@ -661,5 +661,5 @@ capital = 176
 
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

@@ -242,7 +242,7 @@ capital = 133
 	set_variable = { party_pop_array^18 = 0.030 }   #neutral_Social (Srpska Lista)
 	set_variable = { party_pop_array^4 = 0.020 }   #Communist-State
 
-	add_to_array = { ruling_party = 3 }             #socialism (Vetevendosje)
+	set_variable = { ruling_party = 3 }             #socialism (Vetevendosje)
 
 	set_variable = { party_pop_elect_array^3 = 0.501 }  #Vetevendosje
 	set_variable = { party_pop_elect_array^1 = 0.127 }  #LDK
@@ -269,5 +269,5 @@ capital = 133
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

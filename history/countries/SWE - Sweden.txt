@@ -1788,7 +1788,7 @@ capital = 34
 	set_variable = { party_pop_array^16 = 0.035 }   #Neutral_Libertarian (KD)
 	set_variable = { party_pop_array^15 = 0.045 }   #oligarchism
 
-	add_to_array = { ruling_party = 1 }             #conservatism (Moderaterna)
+	set_variable = { ruling_party = 1 }             #conservatism (Moderaterna)
 	add_to_array = { gov_coalition_array = 2 }       #liberalism (Liberalerna)
 	add_to_array = { gov_coalition_array = 16 }       #Neutral_Libertarian (KD)
 
@@ -1826,5 +1826,5 @@ capital = 34
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

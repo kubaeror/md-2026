@@ -52,7 +52,7 @@
 	set_variable = { party_pop_array^14 = 0.050 }   #Neutral_conservatism
 	set_variable = { party_pop_array^4 = 0.030 }   #Communist-State
 
-	add_to_array = { ruling_party = 6 }             #Conservative (Civil Contract)
+	set_variable = { ruling_party = 6 }             #Conservative (Civil Contract)
 
 	set_variable = { party_pop_elect_array^6 = 0.538 }  #Civil Contract
 	set_variable = { party_pop_elect_array^20 = 0.212 }  #Armenia Alliance

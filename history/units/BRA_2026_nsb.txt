@@ -285,7 +285,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons4
+		type = infantry_weapons_4
 		amount = 5000
 		producer = BRA
 	}
@@ -296,12 +296,12 @@ instant_effect = {
 air_wings = {
 	# Anápolis (Goiás)
 	885 = {
-		small_plane_strike_airframe_2 = { owner = "BRA" creator = "SWE" amount = 24 version_name = "JAS 39E/F Gripen" }
+		L_Strike_fighter2 = { owner = "BRA" creator = "SWE" amount = 24 version_name = "JAS 39E/F Gripen" }
 		name = "1º Grupo de Defesa Aérea"
 		start_experience_factor = 0.5
 	}
 	885 = {
-		large_plane_awacs_airframe_1 = { owner = "BRA" amount = 5 version_name = "E-99M" }
+		awacs_equipment_1 = { owner = "BRA" amount = 5 version_name = "E-99M" }
 		name = "2º/6º Grupo de Aviação"
 		start_experience_factor = 0.45
 	}
@@ -313,28 +313,28 @@ air_wings = {
 	}
 	# Santa Cruz (Rio de Janeiro)
 	883 = {
-		small_plane_cas_airframe_2 = { owner = "BRA" amount = 20 version_name = "A-1M AMX" }
+		CAS_equipment_2 = { owner = "BRA" amount = 20 version_name = "A-1M AMX" }
 		name = "1º/16º Grupo de Aviação"
 		start_experience_factor = 0.4
 	}
 	883 = {
-		large_plane_air_transport_airframe_2 = { owner = "BRA" amount = 8 version_name = "KC-390 Millennium" }
+		transport_plane2 = { owner = "BRA" amount = 8 version_name = "KC-390 Millennium" }
 		name = "1º/15º Grupo de Aviação"
 		start_experience_factor = 0.5
 	}
 	883 = {
-		large_plane_air_transport_airframe_1 = { owner = "BRA" creator = "USA" amount = 10 version_name = "C-130H Hercules" }
+		transport_plane1 = { owner = "BRA" creator = "USA" amount = 10 version_name = "C-130H Hercules" }
 		name = "1º Grupo de Transporte"
 		start_experience_factor = 0.35
 	}
 	# Natal / Ceará area
 	889 = {
-		small_plane_cas_airframe_2 = { owner = "BRA" amount = 20 version_name = "A-1M AMX" }
+		CAS_equipment_2 = { owner = "BRA" amount = 20 version_name = "A-1M AMX" }
 		name = "3º/10º Grupo de Aviação"
 		start_experience_factor = 0.4
 	}
 	889 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "BRA" creator = "USA" amount = 8 version_name = "P-3AM Orion" }
+		naval_plane1 = { owner = "BRA" creator = "USA" amount = 8 version_name = "P-3AM Orion" }
 		name = "1º/7º Grupo de Aviação"
 		start_experience_factor = 0.4
 	}

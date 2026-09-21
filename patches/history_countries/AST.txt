@@ -53,7 +53,7 @@
 	set_variable = { party_pop_array^18 = 0.025 }   #neutral_Social
 	set_variable = { party_pop_array^4 = 0.020 }   #Communist-State
 
-	add_to_array = { ruling_party = 3 }             #socialism (Labor)
+	set_variable = { ruling_party = 3 }             #socialism (Labor)
 
 	set_variable = { party_pop_elect_array^3 = 0.330 }  #Labor
 	set_variable = { party_pop_elect_array^1 = 0.310 }  #Coalition

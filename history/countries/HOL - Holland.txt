@@ -1045,7 +1045,7 @@ capital = 46
 	set_variable = { party_pop_array^4 = 0.030 }   #Communist-State (SP)
 	set_variable = { party_pop_array^21 = 0.020 }   #Nat_Fascism (FvD)
 
-	add_to_array = { ruling_party = 1 }             #ruling
+	set_variable = { ruling_party = 1 }             #ruling
 	add_to_array = { gov_coalition_array = 20 }       #Nat_Populism (PVV)
 	add_to_array = { gov_coalition_array = 14 }       #Neutral_conservatism (NSC)
 	add_to_array = { gov_coalition_array = 18 }       #neutral_Social (BBB)
@@ -1078,5 +1078,5 @@ capital = 46
 	# MD2026: dropped (no MD 2.0 equivalent): HOL_NAM
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

@@ -1,2 +1,4 @@
 generate_*.py
 nul
+
+__pycache__/

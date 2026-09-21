@@ -77,7 +77,9 @@ def load_sets(md):
             s["focus_by_file"][p] = ids
 
     s["equipment"] = set()
-    for p in files(os.path.join(md, "common", "units", "equipment")) + files(os.path.join(REPO, "common", "units", "equipment")):
+    for p in files(os.path.join(md, "common", "units", "equipment")) + \
+             files(os.path.join(REPO, "common", "units", "equipment")) + \
+             files(os.path.join(rebase.VANILLA, "common", "units", "equipment")):
         text = rebase.strip_comments(rebase.read(p))
         for name, _ in rebase.children(text):
             s["equipment"].add(name)
@@ -461,6 +463,40 @@ def check_leader_traits(sets):
                     ERRORS["unknown leader trait"].append(f"{tr}  ({rel(p)})")
 
 
+def check_oob_equipment(sets):
+    """Equipment referenced by our OOB files must exist in MD 2.0 (the old
+    submod used MD 1.x names, which silently dropped stockpiles and air wings)."""
+    oob = os.path.join(REPO, "history", "units")
+    for p in files(oob):
+        text = rebase.strip_comments(rebase.read(p))
+        for m in re.finditer(r"type[ \t]*=[ \t]*([A-Za-z0-9_]+)", text):
+            if m.group(1) not in sets["equipment"]:
+                ERRORS["unknown OOB equipment"].append(f"{m.group(1)}  ({rel(p)})")
+        for block_re in (r"equipment[ \t]*=[ \t]*\{", r"air_wings[ \t]*=[ \t]*\{"):
+            for m in re.finditer(block_re, text):
+                ob = text.index("{", m.end() - 1)
+                body = text[ob:rebase.find_block(text, ob)]
+                for mm in re.finditer(r"(?m)^[ \t]*([A-Za-z_][A-Za-z0-9_]*)[ \t]*=[ \t]*\{", body):
+                    name = mm.group(1)
+                    if name.isdigit():
+                        continue
+                    if name not in sets["equipment"]:
+                        ERRORS["unknown OOB equipment"].append(f"{name}  ({rel(p)})")
+
+
+def check_history_syntax():
+    """Catch scalar/array mix-ups in our history blocks (MD sets the ruling
+    party index with set_variable = { ruling_party = N }, not add_to_array)."""
+    scalars = ("ruling_party", "party_pop_array", "party_pop_elect_array")
+    targets = list(files(os.path.join(REPO, "patches", "history_countries"))) + \
+        list(files(os.path.join(REPO, "history", "countries")))
+    for p in targets:
+        text = rebase.strip_comments(rebase.read(p))
+        for m in re.finditer(r"add_to_array\s*=\s*\{\s*([A-Za-z_][A-Za-z0-9_]*)", text):
+            if m.group(1) in scalars:
+                ERRORS["array syntax for scalar"].append(f"{m.group(1)}  ({rel(p)})")
+
+
 def check_precompleted_focuses(md):
     """A focus completed in a country history file must not belong to another
     country's focus tree (SAU completing Gulf-tree focuses crashed the game)."""
@@ -506,16 +542,22 @@ def check_precompleted_focuses(md):
 
 
 def check_deferred_focuses(md):
-    """Pre-completed focuses must run on the first daily tick, never in history:
-    their rewards call ingame-only systems (ingame_update_setup) that are not
-    initialised while history is processed."""
+    """Pre-completed focuses must run after game start, never in history, and
+    must not wreck the 2026 setup (civil wars, releases, government changes)."""
     rename = {"NOR": "NRY"}
+    unsafe = rebase.unsafe_precompleted_focuses(md)
+    groups = rebase.exclusive_focus_groups(md)
     patch_focuses = {}
     for p in files(os.path.join(REPO, "patches", "history_countries")):
         tag = rename.get(os.path.basename(p)[:3], os.path.basename(p)[:3])
         found = re.findall(r"complete_national_focus\s*=\s*([A-Za-z0-9_]+)", rebase.read(p))
-        if found:
-            patch_focuses[tag] = found
+        if not found:
+            continue
+        kept = [f for f in found if f not in unsafe]
+        conflict = {f for f in kept if any(o in kept for o in groups.get(f, ()))}
+        kept = [f for f in kept if f not in conflict]
+        if kept:
+            patch_focuses[tag] = kept
 
     hist_dir = os.path.join(REPO, "history", "countries")
     for p in files(hist_dir):
@@ -616,6 +658,8 @@ def main():
     check_shared_focus_injection(md)
     check_portraits(md)
     check_equipment_refs(sets)
+    check_oob_equipment(sets)
+    check_history_syntax()
     check_leader_traits(sets)
     check_precompleted_focuses(md)
     check_deferred_focuses(md)

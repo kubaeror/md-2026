@@ -191,7 +191,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 2000
 		producer = AST
 	}
@@ -202,7 +202,7 @@ instant_effect = {
 air_wings = {
 	# RAAF Williamtown (NSW)
 	1221 = {
-		small_plane_strike_airframe_2 = { owner = "AST" creator = "USA" amount = 30 version_name = "F-35A Lightning II" }
+		L_Strike_fighter2 = { owner = "AST" creator = "USA" amount = 30 version_name = "F-35A Lightning II" }
 		name = "No. 3 Squadron RAAF"
 		start_experience_factor = 0.5
 	}
@@ -217,29 +217,29 @@ air_wings = {
 		start_experience_factor = 0.5
 	}
 	1221 = {
-		large_plane_awacs_airframe_2 = { owner = "AST" creator = "USA" amount = 6 version_name = "E-7A Wedgetail" }
+		awacs_equipment_2 = { owner = "AST" creator = "USA" amount = 6 version_name = "E-7A Wedgetail" }
 		name = "No. 2 Squadron RAAF"
 		start_experience_factor = 0.5
 	}
 	# RAAF Amberley (Queensland)
 	741 = {
-		large_plane_air_transport_airframe_2 = { owner = "AST" creator = "USA" amount = 8 version_name = "C-17A Globemaster III" }
+		transport_plane2 = { owner = "AST" creator = "USA" amount = 8 version_name = "C-17A Globemaster III" }
 		name = "No. 36 Squadron RAAF"
 		start_experience_factor = 0.45
 	}
 	741 = {
-		large_plane_air_transport_airframe_1 = { owner = "AST" creator = "USA" amount = 12 version_name = "C-130J Super Hercules" }
+		transport_plane1 = { owner = "AST" creator = "USA" amount = 12 version_name = "C-130J Super Hercules" }
 		name = "No. 37 Squadron RAAF"
 		start_experience_factor = 0.4
 	}
 	741 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "AST" creator = "USA" amount = 12 version_name = "P-8A Poseidon" }
+		naval_plane1 = { owner = "AST" creator = "USA" amount = 12 version_name = "P-8A Poseidon" }
 		name = "No. 11 Squadron RAAF"
 		start_experience_factor = 0.5
 	}
 	# RAAF Tindal (Northern Territory)
 	747 = {
-		small_plane_strike_airframe_2 = { owner = "AST" creator = "USA" amount = 20 version_name = "F-35A Lightning II" }
+		L_Strike_fighter2 = { owner = "AST" creator = "USA" amount = 20 version_name = "F-35A Lightning II" }
 		name = "No. 75 Squadron RAAF"
 		start_experience_factor = 0.5
 	}

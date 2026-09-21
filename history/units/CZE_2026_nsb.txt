@@ -83,7 +83,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 1500
 		producer = CZE
 	}
@@ -93,19 +93,19 @@ instant_effect = {
 air_wings = {
 	# 211th Tactical Squadron — JAS 39C/D Gripen (Čáslav)
 	117 = {
-		small_plane_strike_airframe_2 = { owner = "CZE" creator = "SWE" amount = 14 version_name = "JAS 39C/D Gripen" }
+		L_Strike_fighter2 = { owner = "CZE" creator = "SWE" amount = 14 version_name = "JAS 39C/D Gripen" }
 		name = "211. taktická letka"
 		start_experience_factor = 0.5
 	}
 	# 212th Tactical Squadron — L-159 ALCA (Čáslav)
 	117 = {
-		small_plane_cas_airframe_2 = { owner = "CZE" amount = 20 version_name = "L-159 ALCA" }
+		CAS_equipment_2 = { owner = "CZE" amount = 20 version_name = "L-159 ALCA" }
 		name = "212. taktická letka"
 		start_experience_factor = 0.4
 	}
 	# 241st Transport Squadron — C-295M (Kbely, Prague)
 	117 = {
-		large_plane_air_transport_airframe_1 = { owner = "CZE" creator = "SPR" amount = 4 version_name = "C-295M" }
+		transport_plane1 = { owner = "CZE" creator = "SPR" amount = 4 version_name = "C-295M" }
 		name = "241. dopravní letka"
 		start_experience_factor = 0.4
 	}

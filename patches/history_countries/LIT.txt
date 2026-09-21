@@ -57,7 +57,7 @@
 	set_variable = { party_pop_array^16 = 0.050 }   #Neutral_Libertarian (DSVL)
 	set_variable = { party_pop_array^17 = 0.040 }   #Neutral_green
 
-	add_to_array = { ruling_party = 3 }             #socialism (LSDP)
+	set_variable = { ruling_party = 3 }             #socialism (LSDP)
 	add_to_array = { gov_coalition_array = 18 }       #neutral_Social (Nemuno Ausra)
 
 	set_variable = { party_pop_elect_array^3 = 0.199 }  #LSDP

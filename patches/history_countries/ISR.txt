@@ -56,7 +56,7 @@
 	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
 	set_variable = { party_pop_array^18 = 0.050 }   #neutral_Social (Labor)
 
-	add_to_array = { ruling_party = 1 }             #conservatism (Likud)
+	set_variable = { ruling_party = 1 }             #conservatism (Likud)
 	add_to_array = { gov_coalition_array = 20 }       #Nat_Populism (Religious Zionism)
 	add_to_array = { gov_coalition_array = 21 }       #Nat_Fascism (Otzma Yehudit)
 	add_to_array = { gov_coalition_array = 16 }       #Neutral_Libertarian (UTJ)

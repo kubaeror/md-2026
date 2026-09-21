@@ -52,7 +52,7 @@
 	set_variable = { party_pop_array^14 = 0.050 }   #Neutral_conservatism
 	set_variable = { party_pop_array^17 = 0.020 }   #Neutral_green
 
-	add_to_array = { ruling_party = 3 }             #socialism (PSOE)
+	set_variable = { ruling_party = 3 }             #socialism (PSOE)
 	add_to_array = { gov_coalition_array = 4 }       #Communist-State (Sumar)
 
 	set_variable = { party_pop_elect_array^1 = 0.331 }  #PP

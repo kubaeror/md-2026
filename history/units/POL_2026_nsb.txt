@@ -262,22 +262,22 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons4
+		type = infantry_weapons_4
 		amount = 20000
 		producer = POL
 	}
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 10000
 		producer = POL
 	}
 	add_equipment_to_stockpile = {
-		type = command_control_equipment2
+		type = cnc_equipment_2
 		amount = 5000
 		producer = POL
 	}
 	add_equipment_to_stockpile = {
-		type = small_plane_strike_airframe_2
+		type = L_Strike_fighter2
 		variant_name = "F-35A Lightning II"
 		amount = 8
 		producer = USA
@@ -286,20 +286,20 @@ instant_effect = {
 
 air_wings = {
 	111 = {
-		small_plane_strike_airframe_2 = { owner = "POL" creator = "USA" amount = 24 version_name = "F-16C Block 52+" }
+		L_Strike_fighter2 = { owner = "POL" creator = "USA" amount = 24 version_name = "F-16C Block 52+" }
 		name = "31. Baza Lotnictwa Taktycznego"
 		start_experience_factor = 0.6
 		#
-		large_plane_air_transport_airframe_1 = { owner = "POL" creator = "USA" amount = 5 version_name = "C-130E Hercules" }
+		transport_plane1 = { owner = "POL" creator = "USA" amount = 5 version_name = "C-130E Hercules" }
 		name = "33. Eskadra Lotnictwa Transportowego"
 		start_experience_factor = 0.5
 		#
-		large_plane_air_transport_airframe_1 = { owner = "POL" creator = "SPR" amount = 12 version_name = "C-295M CASA" }
+		transport_plane1 = { owner = "POL" creator = "SPR" amount = 12 version_name = "C-295M CASA" }
 		name = "8. Baza Lotnictwa Transportowego"
 		start_experience_factor = 0.5
 	}
 	433 = {
-		small_plane_strike_airframe_2 = { owner = "POL" creator = "USA" amount = 24 version_name = "F-16C Block 52+" }
+		L_Strike_fighter2 = { owner = "POL" creator = "USA" amount = 24 version_name = "F-16C Block 52+" }
 		name = "32. Baza Lotnictwa Taktycznego"
 		start_experience_factor = 0.6
 	}
@@ -309,16 +309,16 @@ air_wings = {
 		start_experience_factor = 0.5
 	}
 	113 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "POL" amount = 8 version_name = "M-28B Bryza" }
+		naval_plane1 = { owner = "POL" amount = 8 version_name = "M-28B Bryza" }
 		name = "Brygada Lotnictwa Marynarki Wojennej"
 		start_experience_factor = 0.5
 	}
 	628 = {
-		small_plane_suicide_airframe_2 = { owner = "POL" creator = "USA" amount = 4 version_name = "MQ-9A Reaper" }
+		Air_UAV2 = { owner = "POL" creator = "USA" amount = 4 version_name = "MQ-9A Reaper" }
 		name = "12. Baza Bezzalogowych Statkow Powietrznych"
 		start_experience_factor = 0.4
 		#
-		small_plane_suicide_airframe_2 = { owner = "POL" creator = "TUR" amount = 20 version_name = "Bayraktar TB2" }
+		Air_UAV2 = { owner = "POL" creator = "TUR" amount = 20 version_name = "Bayraktar TB2" }
 		name = "Eskadra Bezzalogowa"
 		start_experience_factor = 0.4
 	}

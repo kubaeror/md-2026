@@ -308,7 +308,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 5000
 		producer = TAI
 	}
@@ -319,18 +319,18 @@ instant_effect = {
 air_wings = {
 	# Hualien Air Base
 	600 = {
-		small_plane_strike_airframe_2 = { owner = "TAI" creator = "USA" amount = 60 version_name = "F-16V Viper" }
+		L_Strike_fighter2 = { owner = "TAI" creator = "USA" amount = 60 version_name = "F-16V Viper" }
 		name = "401st Tactical Fighter Wing"
 		start_experience_factor = 0.5
 	}
 	# Chiayi / Kaohsiung area
 	599 = {
-		small_plane_strike_airframe_2 = { owner = "TAI" creator = "USA" amount = 60 version_name = "F-16V Viper" }
+		L_Strike_fighter2 = { owner = "TAI" creator = "USA" amount = 60 version_name = "F-16V Viper" }
 		name = "455th Tactical Fighter Wing"
 		start_experience_factor = 0.5
 	}
 	599 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "TAI" creator = "USA" amount = 12 version_name = "P-3C Orion" }
+		naval_plane1 = { owner = "TAI" creator = "USA" amount = 12 version_name = "P-3C Orion" }
 		name = "439th Composite Wing"
 		start_experience_factor = 0.45
 	}
@@ -341,7 +341,7 @@ air_wings = {
 		start_experience_factor = 0.4
 	}
 	1155 = {
-		small_plane_strike_airframe_2 = { owner = "TAI" creator = "USA" amount = 30 version_name = "F-16V Viper" }
+		L_Strike_fighter2 = { owner = "TAI" creator = "USA" amount = 30 version_name = "F-16V Viper" }
 		name = "1st Tactical Fighter Wing"
 		start_experience_factor = 0.5
 	}
@@ -352,12 +352,12 @@ air_wings = {
 		start_experience_factor = 0.45
 	}
 	1156 = {
-		large_plane_air_transport_airframe_1 = { owner = "TAI" creator = "USA" amount = 16 version_name = "C-130H Hercules" }
+		transport_plane1 = { owner = "TAI" creator = "USA" amount = 16 version_name = "C-130H Hercules" }
 		name = "6th Composite Wing"
 		start_experience_factor = 0.4
 	}
 	1156 = {
-		large_plane_awacs_airframe_1 = { owner = "TAI" creator = "USA" amount = 6 version_name = "E-2K Hawkeye" }
+		awacs_equipment_1 = { owner = "TAI" creator = "USA" amount = 6 version_name = "E-2K Hawkeye" }
 		name = "AEW Squadron"
 		start_experience_factor = 0.5
 	}

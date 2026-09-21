@@ -219,7 +219,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons3
+		type = infantry_weapons_3
 		amount = 5000
 		producer = BRM
 	}
@@ -236,13 +236,13 @@ air_wings = {
 	}
 	# Attack Squadron — Yak-130 (Meiktila/Upper Burma)
 	505 = {
-		small_plane_cas_airframe_2 = { owner = "BRM" creator = "SOV" amount = 12 version_name = "Yak-130" }
+		CAS_equipment_2 = { owner = "BRM" creator = "SOV" amount = 12 version_name = "Yak-130" }
 		name = "Attack Squadron"
 		start_experience_factor = 0.2
 	}
 	# Transport Squadron — Y-8 (Meiktila)
 	505 = {
-		large_plane_air_transport_airframe_1 = { owner = "BRM" creator = "CHI" amount = 4 version_name = "Y-8 Transport" }
+		transport_plane1 = { owner = "BRM" creator = "CHI" amount = 4 version_name = "Y-8 Transport" }
 		name = "Transport Squadron"
 		start_experience_factor = 0.2
 	}

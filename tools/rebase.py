@@ -23,6 +23,7 @@ from collections import Counter
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_MD = r"D:\SteamLibrary\steamapps\workshop\content\394360\2777392649"
+VANILLA = r"D:\SteamLibrary\steamapps\common\Hearts of Iron IV"
 
 MD = None
 
@@ -387,6 +388,163 @@ def generate_tech_effects(md):
 DEBUG_FLAGS_FILE = os.path.join(REPO, "patches", "debug.json")
 
 
+# --------------------------------------------------------------------------
+# pre-completed focus safety
+#
+# Completing a focus runs its completion_reward.  Some rewards are not safe to
+# pre-complete for a country that is on a different path: they start a civil
+# war, release or annex countries, declare war, change the government or set a
+# path cosmetic tag.  (POL_betray_the_communists gave Poland a civil war on
+# 2026.01.01.)  Such focuses are skipped and reported instead.
+# --------------------------------------------------------------------------
+
+_UNSAFE_PATTERNS = (
+    ("civil war", r"\bstart_civil_war\b|\bcreate_civil_war\b"),
+    ("country release", r"(?m)^[ \t]*release[ \t]*=|set_autonomy[ \t]*=|add_autonomy_state[ \t]*=|"
+                        r"release_as_puppet\b|^[ \t]*puppet[ \t]*="),
+    ("annexation", r"\bannex_country\b"),
+    ("war", r"\bdeclare_war_on\b|\badd_to_war\b"),
+    ("exile", r"\bbecome_exile\b|\bgo_into_exile\b"),
+    ("identity", r"\bset_cosmetic_tag\b"),
+    ("government", r"\bchange_ruling_party_effect\b|\bset_politics\b"),
+)
+
+_unsafe_cache = {}
+
+
+def _md_focus_bodies(md):
+    """focus id -> completion_reward body (MD and our own focus files)."""
+    out = {}
+    for root in (os.path.join(md, "common", "national_focus"),
+                 os.path.join(REPO, "common", "national_focus")):
+        for dirpath, _, fs in os.walk(root):
+            for fn in fs:
+                if not fn.endswith(".txt"):
+                    continue
+                try:
+                    text = strip_comments(read(os.path.join(dirpath, fn)))
+                except Exception:
+                    continue
+                for m in re.finditer(r"(?m)^\s*(?:focus|shared_focus|joint_focus)\s*=\s*\{", text):
+                    ob = text.index("{", m.end() - 1)
+                    body = text[ob:find_block(text, ob)]
+                    idm = re.search(r"(?m)^\s*id\s*=\s*([A-Za-z0-9_]+)", body[:400])
+                    rm = re.search(r"completion_reward\s*=\s*\{", body)
+                    if not idm or not rm:
+                        continue
+                    rb = body.index("{", rm.end() - 1)
+                    out[idm.group(1)] = body[rb:find_block(body, rb)]
+    return out
+
+
+def _md_effect_bodies(md):
+    out = {}
+    for dirpath, _, fs in os.walk(os.path.join(md, "common", "scripted_effects")):
+        for fn in fs:
+            if not fn.endswith(".txt"):
+                continue
+            try:
+                text = strip_comments(read(os.path.join(dirpath, fn)))
+            except Exception:
+                continue
+            for m in re.finditer(r"(?m)^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*\{", text):
+                ob = text.index("{", m.end() - 1)
+                out.setdefault(m.group(1), text[ob:find_block(text, ob)])
+    return out
+
+
+def _md_event_bodies(md):
+    out = {}
+    for dirpath, _, fs in os.walk(os.path.join(md, "events")):
+        for fn in fs:
+            if not fn.endswith(".txt"):
+                continue
+            try:
+                text = strip_comments(read(os.path.join(dirpath, fn)))
+            except Exception:
+                continue
+            for m in re.finditer(r"(?:country_event|news_event|state_event)\s*=\s*\{", text):
+                ob = text.index("{", m.end() - 1)
+                body = text[ob:find_block(text, ob)]
+                idm = re.search(r"(?m)^\s*id\s*=\s*([A-Za-z0-9_]+\.[0-9]+)", body[:300])
+                if idm:
+                    out[idm.group(1)] = body
+    return out
+
+
+def _scan_unsafe(body, effects, events, depth=4, seen=None):
+    if seen is None:
+        seen = set()
+    for reason, pattern in _UNSAFE_PATTERNS:
+        if re.search(pattern, body):
+            return reason
+    if depth <= 0:
+        return None
+    for name in set(re.findall(r"(?m)^[ \t]*([A-Za-z_][A-Za-z0-9_]*)[ \t]*=[ \t]*yes[ \t]*$", body)):
+        if name in seen:
+            continue
+        seen.add(name)
+        eff = effects.get(name)
+        if eff:
+            got = _scan_unsafe(eff, effects, events, depth - 1, seen)
+            if got:
+                return f"{got} ({name})"
+    for eid in set(re.findall(r"(?:country_event|news_event)\s*=\s*\{?\s*id\s*=\s*([A-Za-z0-9_]+\.[0-9]+)", body)):
+        if eid in seen:
+            continue
+        seen.add(eid)
+        ev = events.get(eid)
+        if ev:
+            got = _scan_unsafe(ev, effects, events, depth - 1, seen)
+            if got:
+                return f"{got} ({eid})"
+    return None
+
+
+def unsafe_precompleted_focuses(md):
+    """focus id -> reason why it must not be pre-completed."""
+    if md in _unsafe_cache:
+        return _unsafe_cache[md]
+    rewards = _md_focus_bodies(md)
+    effects = _md_effect_bodies(md)
+    events = _md_event_bodies(md)
+    out = {}
+    for fid, body in rewards.items():
+        reason = _scan_unsafe(body, effects, events)
+        if reason:
+            out[fid] = reason
+    _unsafe_cache[md] = out
+    return out
+
+
+def exclusive_focus_groups(md):
+    """focus id -> set of mutually exclusive focus ids (MD + our focus files)."""
+    groups = {}
+    for root in (os.path.join(md, "common", "national_focus"),
+                 os.path.join(REPO, "common", "national_focus")):
+        for dirpath, _, fs in os.walk(root):
+            for fn in fs:
+                if not fn.endswith(".txt"):
+                    continue
+                try:
+                    text = strip_comments(read(os.path.join(dirpath, fn)))
+                except Exception:
+                    continue
+                for m in re.finditer(r"(?m)^\s*(?:focus|shared_focus|joint_focus)\s*=\s*\{", text):
+                    ob = text.index("{", m.end() - 1)
+                    body = text[ob:find_block(text, ob)]
+                    idm = re.search(r"(?m)^\s*id\s*=\s*([A-Za-z0-9_]+)", body[:400])
+                    if not idm:
+                        continue
+                    me = set()
+                    for mm in re.finditer(r"mutually_exclusive\s*=\s*\{([^}]*)\}", body):
+                        me |= set(re.findall(r"focus\s*=\s*([A-Za-z0-9_]+)", mm.group(1)))
+                    if me:
+                        groups[idm.group(1)] = me
+    return groups
+
+
+
 def debug_flags():
     if os.path.exists(DEBUG_FLAGS_FILE):
         try:
@@ -736,14 +894,40 @@ def rebase_history(md, rename_map):
         patch = apply_debug_flags(patch, debug_flags(), md_tag)
         if debug_flags().get("skip_2026_blocks"):
             patch = "# BISECT: entire 2026 block disabled\n"
-        # Pre-completed focuses are deferred to the first daily tick: their
-        # rewards are ingame-only code (see write_deferred_focuses).
+        # Pre-completed focuses are deferred to after game start: their
+        # rewards are ingame-only code (see write_deferred_focuses).  Focuses
+        # that would wreck the 2026 setup (civil war, releases, government or
+        # path changes) are skipped and reported.
         focuses = re.findall(r"(?m)^[ \t]*complete_national_focus\s*=\s*([A-Za-z0-9_]+)\s*$", patch)
         if focuses:
+            unsafe = unsafe_precompleted_focuses(md)
+            groups = exclusive_focus_groups(md)
+            kept, skipped = [], []
+            for f in focuses:
+                if f in unsafe:
+                    skipped.append((f, unsafe[f]))
+                else:
+                    kept.append(f)
+            conflict = set()
+            for f in kept:
+                if any(other in kept for other in groups.get(f, ())):
+                    conflict.add(f)
+            if conflict:
+                for f in list(kept):
+                    if f in conflict:
+                        kept.remove(f)
+                        skipped.append((f, "mutually exclusive with another pre-completed focus"))
+            if skipped:
+                for f, why in skipped:
+                    print(f"  -- {md_tag}: skipping pre-completed focus {f} ({why})")
+            focuses = kept
+        if focuses:
             patch = re.sub(r"(?m)^[ \t]*complete_national_focus\s*=.*\n?", "", patch)
-            patch = patch.rstrip() + "\n\n\t### Pre-completed focuses (run on the first daily tick) ###\n" \
+            patch = patch.rstrip() + "\n\n\t### Pre-completed focuses (run after game start) ###\n" \
                                     "\tset_country_flag = md2026_focuses_pending\n"
             focuses_by_tag[md_tag] = focuses
+        else:
+            patch = re.sub(r"(?m)^[ \t]*complete_national_focus\s*=.*\n?", "", patch)
         out = apply_fixups(base.rstrip() + "\n\n" + patch, techs, chars, md, md_tag)
         write(os.path.join(out_dir, fname), out)
     write_deferred_focuses(focuses_by_tag)

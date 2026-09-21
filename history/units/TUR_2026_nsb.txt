@@ -335,17 +335,17 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons4
+		type = infantry_weapons_4
 		amount = 30000
 		producer = TUR
 	}
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 15000
 		producer = TUR
 	}
 	add_equipment_to_stockpile = {
-		type = command_control_equipment2
+		type = cnc_equipment_2
 		amount = 8000
 		producer = TUR
 	}
@@ -355,73 +355,73 @@ instant_effect = {
 air_wings = {
 	# 1st Main Jet Base (Eskişehir) — F-16C Block 50+
 	159 = {
-		small_plane_strike_airframe_2 = { owner = "TUR" creator = "USA" amount = 40 version_name = "F-16C Block 50+" }
+		L_Strike_fighter2 = { owner = "TUR" creator = "USA" amount = 40 version_name = "F-16C Block 50+" }
 		name = "1. Ana Jet Üs Komutanlığı"
 		start_experience_factor = 0.5
 	}
 	# 4th Main Jet Base (Ankara/Akıncı) — F-16C Block 50+
 	159 = {
-		small_plane_strike_airframe_2 = { owner = "TUR" creator = "USA" amount = 40 version_name = "F-16C Block 50+" }
+		L_Strike_fighter2 = { owner = "TUR" creator = "USA" amount = 40 version_name = "F-16C Block 50+" }
 		name = "4. Ana Jet Üs Komutanlığı"
 		start_experience_factor = 0.5
 	}
 	# 5th Main Jet Base (Merzifon) — F-16C Block 50+
 	160 = {
-		small_plane_strike_airframe_2 = { owner = "TUR" creator = "USA" amount = 40 version_name = "F-16C Block 50+" }
+		L_Strike_fighter2 = { owner = "TUR" creator = "USA" amount = 40 version_name = "F-16C Block 50+" }
 		name = "5. Ana Jet Üs Komutanlığı"
 		start_experience_factor = 0.5
 	}
 	# 6th Main Jet Base (Bandırma) — F-16C Block 50+
 	155 = {
-		small_plane_strike_airframe_2 = { owner = "TUR" creator = "USA" amount = 40 version_name = "F-16C Block 50+" }
+		L_Strike_fighter2 = { owner = "TUR" creator = "USA" amount = 40 version_name = "F-16C Block 50+" }
 		name = "6. Ana Jet Üs Komutanlığı"
 		start_experience_factor = 0.5
 	}
 	# 8th Main Jet Base (Diyarbakır) — F-16C Block 50+
 	162 = {
-		small_plane_strike_airframe_2 = { owner = "TUR" creator = "USA" amount = 40 version_name = "F-16C Block 50+" }
+		L_Strike_fighter2 = { owner = "TUR" creator = "USA" amount = 40 version_name = "F-16C Block 50+" }
 		name = "8. Ana Jet Üs Komutanlığı"
 		start_experience_factor = 0.55
 	}
 	# 9th Main Jet Base (Balıkesir) — F-16C Block 50+
 	156 = {
-		small_plane_strike_airframe_2 = { owner = "TUR" creator = "USA" amount = 40 version_name = "F-16C Block 50+" }
+		L_Strike_fighter2 = { owner = "TUR" creator = "USA" amount = 40 version_name = "F-16C Block 50+" }
 		name = "9. Ana Jet Üs Komutanlığı"
 		start_experience_factor = 0.5
 	}
 	# E-7T Wedgetail AEW&C (Konya)
 	159 = {
-		large_plane_awacs_airframe_2 = { owner = "TUR" creator = "AST" amount = 4 version_name = "E-7T Wedgetail" }
+		awacs_equipment_2 = { owner = "TUR" creator = "AST" amount = 4 version_name = "E-7T Wedgetail" }
 		name = "131. Filo"
 		start_experience_factor = 0.5
 	}
 	# A400M Atlas transport (Kayseri)
 	159 = {
-		large_plane_air_transport_airframe_2 = { owner = "TUR" amount = 10 version_name = "A400M Atlas" }
+		transport_plane2 = { owner = "TUR" amount = 10 version_name = "A400M Atlas" }
 		name = "221. Filo"
 		start_experience_factor = 0.45
 	}
 	# C-130 Hercules + CN-235
 	159 = {
-		large_plane_air_transport_airframe_1 = { owner = "TUR" creator = "USA" amount = 13 version_name = "C-130E/H Hercules" }
+		transport_plane1 = { owner = "TUR" creator = "USA" amount = 13 version_name = "C-130E/H Hercules" }
 		name = "222. Filo"
 		start_experience_factor = 0.4
 	}
 	# Bayraktar TB2 / Akıncı UCAV
 	162 = {
-		small_plane_suicide_airframe_2 = { owner = "TUR" amount = 60 version_name = "Bayraktar TB2" }
+		Air_UAV2 = { owner = "TUR" amount = 60 version_name = "Bayraktar TB2" }
 		name = "İHA Komutanlığı"
 		start_experience_factor = 0.6
 	}
 	# Bayraktar Akıncı
 	159 = {
-		small_plane_suicide_airframe_2 = { owner = "TUR" amount = 24 version_name = "Bayraktar Akıncı" }
+		Air_UAV2 = { owner = "TUR" amount = 24 version_name = "Bayraktar Akıncı" }
 		name = "Akıncı Filosu"
 		start_experience_factor = 0.55
 	}
 	# TCG Anadolu carrier air wing — Bayraktar TB3
 	"TCG Anadolu (L-408)" = {
-		cv_small_plane_strike_airframe_2 = { owner = "TUR" amount = 10 version_name = "Bayraktar TB3" }
+		CV_L_Strike_fighter2 = { owner = "TUR" amount = 10 version_name = "Bayraktar TB3" }
 		name = "Anadolu Hava Grubu"
 		start_experience_factor = 0.5
 	}

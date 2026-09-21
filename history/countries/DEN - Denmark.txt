@@ -792,7 +792,7 @@ capital = 4
 	set_variable = { party_pop_array^14 = 0.060 }   #Neutral_conservatism (Konservative)
 	set_variable = { party_pop_array^18 = 0.040 }   #neutral_Social
 
-	add_to_array = { ruling_party = 3 }             #socialism (Socialdemokratiet)
+	set_variable = { ruling_party = 3 }             #socialism (Socialdemokratiet)
 	add_to_array = { gov_coalition_array = 2 }       #liberalism (Venstre)
 	add_to_array = { gov_coalition_array = 1 }       #conservatism (Moderaterne)
 
@@ -823,5 +823,5 @@ capital = 4
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

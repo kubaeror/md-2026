@@ -115,7 +115,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 2000
 		producer = CRO
 	}
@@ -125,7 +125,7 @@ instant_effect = {
 air_wings = {
 	# Rafale F3-R (delivered from France 2024-2025)
 	126 = {
-		medium_plane_fighter_airframe_2 = { owner = "CRO" creator = "FRA" amount = 12 version_name = "Rafale F3-R" }
+		heavy_fighter_equipment_2 = { owner = "CRO" creator = "FRA" amount = 12 version_name = "Rafale F3-R" }
 		name = "Eskadrila Lovaca"
 		start_experience_factor = 0.4
 	}

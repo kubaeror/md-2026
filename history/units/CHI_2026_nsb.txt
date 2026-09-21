@@ -760,7 +760,7 @@ units = {
 ### Equipment Stockpile ###
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 15000
 		producer = CHI
 	}
@@ -770,7 +770,7 @@ instant_effect = {
 		producer = CHI
 	}
 	add_equipment_to_stockpile = {
-		type = util_vehicle_equipment
+		type = util_vehicle_7
 		amount = 5000
 		producer = CHI
 	}
@@ -780,7 +780,7 @@ instant_effect = {
 air_wings = {
 	# J-20A Stealth Fighter (Wuhu / Anhui)
 	564 = {
-		medium_plane_fighter_airframe_2 = { owner = "CHI" amount = 100 version_name = "J-20A" }
+		heavy_fighter_equipment_2 = { owner = "CHI" amount = 100 version_name = "J-20A" }
 		name = "王牌歼击师"
 		start_experience_factor = 0.6
 	}
@@ -792,19 +792,19 @@ air_wings = {
 	}
 	# J-10C Fighter (Sichuan / Chengdu)
 	585 = {
-		small_plane_strike_airframe_2 = { owner = "CHI" amount = 200 version_name = "J-10C" }
+		L_Strike_fighter2 = { owner = "CHI" amount = 200 version_name = "J-10C" }
 		name = "歼击第2师"
 		start_experience_factor = 0.5
 	}
 	# J-10C Fighter (Nanjing)
 	536 = {
-		small_plane_strike_airframe_2 = { owner = "CHI" amount = 200 version_name = "J-10C" }
+		L_Strike_fighter2 = { owner = "CHI" amount = 200 version_name = "J-10C" }
 		name = "歼击第3师"
 		start_experience_factor = 0.5
 	}
 	# J-11B/BS Flanker (Liaoning)
 	552 = {
-		medium_plane_fighter_airframe_2 = { owner = "CHI" amount = 100 version_name = "J-11B" }
+		heavy_fighter_equipment_2 = { owner = "CHI" amount = 100 version_name = "J-11B" }
 		name = "歼击第4师"
 		start_experience_factor = 0.45
 	}
@@ -822,13 +822,13 @@ air_wings = {
 	}
 	# KJ-500 / KJ-2000 AWACS
 	547 = {
-		large_plane_awacs_airframe_2 = { owner = "CHI" amount = 10 version_name = "KJ-500" }
+		awacs_equipment_2 = { owner = "CHI" amount = 10 version_name = "KJ-500" }
 		name = "预警航空兵旅"
 		start_experience_factor = 0.5
 	}
 	# Y-20 Strategic Transport (Chengdu)
 	585 = {
-		large_plane_air_transport_airframe_2 = { owner = "CHI" amount = 40 version_name = "Y-20A" }
+		transport_plane2 = { owner = "CHI" amount = 40 version_name = "Y-20A" }
 		name = "运输航空兵师"
 		start_experience_factor = 0.5
 	}
@@ -840,31 +840,31 @@ air_wings = {
 	}
 	# Carrier Air Wing — Liaoning
 	"CNS Liaoning (CV-16)" = {
-		cv_medium_plane_fighter_airframe_2 = { owner = "CHI" amount = 24 version_name = "J-15" }
+		cv_medium_plane_airframe_2 = { owner = "CHI" amount = 24 version_name = "J-15" }
 		name = "辽宁舰舰载机联队"
 		start_experience_factor = 0.5
 	}
 	# Carrier Air Wing — Shandong
 	"CNS Shandong (CV-17)" = {
-		cv_medium_plane_fighter_airframe_2 = { owner = "CHI" amount = 28 version_name = "J-15B" }
+		cv_medium_plane_airframe_2 = { owner = "CHI" amount = 28 version_name = "J-15B" }
 		name = "山东舰舰载机联队"
 		start_experience_factor = 0.55
 	}
 	# Carrier Air Wing — Fujian
 	"CNS Fujian (CV-18)" = {
-		cv_medium_plane_fighter_airframe_2 = { owner = "CHI" amount = 32 version_name = "J-35" }
+		cv_medium_plane_airframe_2 = { owner = "CHI" amount = 32 version_name = "J-35" }
 		name = "福建舰舰载机联队"
 		start_experience_factor = 0.5
 	}
 	# GJ-11 / WZ-7 / CH-5 — UCAV/Drone wings
 	537 = {
-		small_plane_suicide_airframe_2 = { owner = "CHI" amount = 60 version_name = "GJ-11/CH-5" }
+		Air_UAV2 = { owner = "CHI" amount = 60 version_name = "GJ-11/CH-5" }
 		name = "无人机航空兵旅"
 		start_experience_factor = 0.5
 	}
 	# Maritime Patrol — KQ-200 (Y-8Q)
 	531 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "CHI" amount = 20 version_name = "KQ-200" }
+		naval_plane1 = { owner = "CHI" amount = 20 version_name = "KQ-200" }
 		name = "海上巡逻航空兵旅"
 		start_experience_factor = 0.45
 	}

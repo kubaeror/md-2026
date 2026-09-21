@@ -226,7 +226,7 @@ units = {
 ### Equipment Stockpile ###
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 3000
 		producer = GER
 	}
@@ -241,54 +241,54 @@ instant_effect = {
 air_wings = {
 	# TaktLwG 71 "Richthofen" — Wittmund (Niedersachsen)
 	38 = {
-		medium_plane_fighter_airframe_2 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
+		heavy_fighter_equipment_2 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
 		name = "TaktLwG 71 Richthofen — Wittmund"
 		start_experience_factor = 0.6
 	}
 	# TaktLwG 73 "Steinhoff" — Laage (Mecklenburg-Vorpommern)
 	539 = {
-		medium_plane_fighter_airframe_2 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
+		heavy_fighter_equipment_2 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
 		name = "TaktLwG 73 Steinhoff — Laage"
 		start_experience_factor = 0.6
 	}
 	# TaktLwG 74 — Neuburg an der Donau (Bayern)
 	43 = {
-		medium_plane_fighter_airframe_2 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
+		heavy_fighter_equipment_2 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
 		name = "TaktLwG 74 — Neuburg"
 		start_experience_factor = 0.6
 	}
 	# TaktLwG 31 "Boelcke" — Noervenich (NRW)
 	966 = {
-		medium_plane_fighter_airframe_2 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
+		heavy_fighter_equipment_2 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
 		name = "TaktLwG 31 Boelcke — Noervenich"
 		start_experience_factor = 0.6
 	}
 	# TaktLwG 33 — Buechel (nuclear sharing, Tornado IDS)
 	40 = {
-		medium_plane_cas_airframe_1 = { owner = "GER" amount = 30 version_name = "Tornado IDS/ECR" }
+		cas1 = { owner = "GER" amount = 30 version_name = "Tornado IDS/ECR" }
 		name = "TaktLwG 33 — Buechel"
 		start_experience_factor = 0.55
 	}
 	# LTG 62 — Wunstorf (A400M transport)
 	38 = {
-		large_plane_air_transport_airframe_2 = { owner = "GER" amount = 36 version_name = "A400M Atlas" }
+		transport_plane2 = { owner = "GER" amount = 36 version_name = "A400M Atlas" }
 		name = "LTG 62 — Wunstorf"
 		start_experience_factor = 0.6
 	}
 	# TaktLwG 51 "Immelmann" — Jagel (recon/C-130J/drones)
 	37 = {
-		large_plane_air_transport_airframe_1 = { owner = "GER" creator = "USA" amount = 4 version_name = "KC-130J Super Hercules" }
+		transport_plane1 = { owner = "GER" creator = "USA" amount = 4 version_name = "KC-130J Super Hercules" }
 		name = "Deutsch-Franz. Staffel — Jagel"
 		start_experience_factor = 0.55
 	}
 	37 = {
-		small_plane_suicide_airframe_2 = { owner = "GER" creator = "ISR" amount = 5 version_name = "IAI Heron TP" }
+		Air_UAV2 = { owner = "GER" creator = "ISR" amount = 5 version_name = "IAI Heron TP" }
 		name = "Aufklaerungs MALE — Jagel"
 		start_experience_factor = 0.5
 	}
 	# MFG 3 — Nordholz (maritime patrol P-3C, last operational)
 	38 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "GER" creator = "USA" amount = 5 version_name = "P-3C Orion" }
+		naval_plane1 = { owner = "GER" creator = "USA" amount = 5 version_name = "P-3C Orion" }
 		name = "MFG 3 — Nordholz"
 		start_experience_factor = 0.5
 	}

@@ -189,12 +189,12 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons3
+		type = infantry_weapons_3
 		amount = 5000
 		producer = SUD
 	}
 	add_equipment_to_stockpile = {
-		type = infantry_weapons2
+		type = infantry_weapons_2
 		amount = 4000
 		producer = SOV
 	}
@@ -210,13 +210,13 @@ air_wings = {
 	}
 	# Su-25 (ground attack, some operational)
 	221 = {
-		small_plane_cas_airframe_2 = { owner = "SUD" creator = "SOV" amount = 8 version_name = "Su-25 Frogfoot" }
+		CAS_equipment_2 = { owner = "SUD" creator = "SOV" amount = 8 version_name = "Su-25 Frogfoot" }
 		name = "SAF Attack Squadron"
 		start_experience_factor = 0.3
 	}
 	# Bayraktar TB2 drones
 	221 = {
-		small_plane_suicide_airframe_2 = { owner = "SUD" creator = "TUR" amount = 6 version_name = "Bayraktar TB2" }
+		Air_UAV2 = { owner = "SUD" creator = "TUR" amount = 6 version_name = "Bayraktar TB2" }
 		name = "SAF UAV Squadron"
 		start_experience_factor = 0.35
 	}

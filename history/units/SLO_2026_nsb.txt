@@ -51,7 +51,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons4
+		type = infantry_weapons_4
 		amount = 1500
 		producer = SLO
 	}
@@ -61,12 +61,12 @@ instant_effect = {
 air_wings = {
 	# Sliac Air Base (Western Slovakia)
 	119 = {
-		small_plane_strike_airframe_2 = { owner = "SLO" creator = "USA" amount = 14 version_name = "F-16V Block 70" }
+		L_Strike_fighter2 = { owner = "SLO" creator = "USA" amount = 14 version_name = "F-16V Block 70" }
 		name = "1st Tactical Squadron"
 		start_experience_factor = 0.35
 	}
 	119 = {
-		large_plane_air_transport_airframe_1 = { owner = "SLO" creator = "ITA" amount = 2 version_name = "C-27J Spartan" }
+		transport_plane1 = { owner = "SLO" creator = "ITA" amount = 2 version_name = "C-27J Spartan" }
 		name = "Transport Squadron"
 		start_experience_factor = 0.4
 	}

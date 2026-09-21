@@ -1281,7 +1281,7 @@ capital = 405
 	set_variable = { party_pop_array^4 = 0.020 }   #Communist-State (Tudeh remnants)
 	set_variable = { party_pop_array^16 = 0.050 }  #libertarians
 
-	add_to_array = { ruling_party = 9 }             #Vilayat_e_Faqih (Supreme Leader)
+	set_variable = { ruling_party = 9 }             #Vilayat_e_Faqih (Supreme Leader)
 	add_to_array = { gov_coalition_array = 7 }       #Autocracy (IRGC)
 	add_to_array = { gov_coalition_array = 6 }       #Conservative (pragmatists)
 
@@ -1314,5 +1314,5 @@ capital = 405
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

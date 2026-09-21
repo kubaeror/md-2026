@@ -340,7 +340,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons4
+		type = infantry_weapons_4
 		amount = 10000
 		producer = PER
 	}
@@ -351,7 +351,7 @@ instant_effect = {
 air_wings = {
 	# 8th Tactical Fighter Base (Isfahan/Khatami) — F-14A Tomcat
 	976 = {
-		medium_plane_fighter_airframe_2 = { owner = "PER" creator = "USA" amount = 24 version_name = "F-14A Tomcat" }
+		heavy_fighter_equipment_2 = { owner = "PER" creator = "USA" amount = 24 version_name = "F-14A Tomcat" }
 		name = "81st Tactical Fighter Squadron"
 		start_experience_factor = 0.4
 	}
@@ -363,19 +363,19 @@ air_wings = {
 	}
 	# 6th Tactical Fighter Base (Bandar Abbas) — F-4E
 	978 = {
-		medium_plane_cas_airframe_1 = { owner = "PER" creator = "USA" amount = 10 version_name = "F-4E Phantom II" }
+		cas1 = { owner = "PER" creator = "USA" amount = 10 version_name = "F-4E Phantom II" }
 		name = "61st Tactical Fighter Squadron"
 		start_experience_factor = 0.3
 	}
 	# 7th Tactical Fighter Base (Bushehr) — F-4E
 	1146 = {
-		medium_plane_cas_airframe_1 = { owner = "PER" creator = "USA" amount = 10 version_name = "F-4E Phantom II" }
+		cas1 = { owner = "PER" creator = "USA" amount = 10 version_name = "F-4E Phantom II" }
 		name = "71st Tactical Fighter Squadron"
 		start_experience_factor = 0.3
 	}
 	# 3rd Tactical Fighter Base (Hamadan/Nojeh) — F-4E
 	1148 = {
-		medium_plane_cas_airframe_1 = { owner = "PER" creator = "USA" amount = 10 version_name = "F-4E Phantom II" }
+		cas1 = { owner = "PER" creator = "USA" amount = 10 version_name = "F-4E Phantom II" }
 		name = "31st Tactical Fighter Squadron"
 		start_experience_factor = 0.3
 	}
@@ -393,19 +393,19 @@ air_wings = {
 	}
 	# 9th Tactical Fighter Base (Shiraz) — Su-24MK
 	400 = {
-		medium_plane_cas_airframe_1 = { owner = "PER" creator = "SOV" amount = 20 version_name = "Su-24MK Fencer" }
+		cas1 = { owner = "PER" creator = "SOV" amount = 20 version_name = "Su-24MK Fencer" }
 		name = "91st Tactical Fighter Squadron"
 		start_experience_factor = 0.3
 	}
 	# Transport — Mehrabad (Tehran)
 	405 = {
-		large_plane_air_transport_airframe_1 = { owner = "PER" creator = "USA" amount = 8 version_name = "C-130E/H Hercules" }
+		transport_plane1 = { owner = "PER" creator = "USA" amount = 8 version_name = "C-130E/H Hercules" }
 		name = "11th Tactical Airlift Squadron"
 		start_experience_factor = 0.3
 	}
 	# IRGC Aerospace Force — Mohajer-6 UCAV
 	399 = {
-		small_plane_suicide_airframe_2 = { owner = "PER" amount = 12 version_name = "Mohajer-6 UCAV" }
+		Air_UAV2 = { owner = "PER" amount = 12 version_name = "Mohajer-6 UCAV" }
 		name = "IRGC Aerospace UAV Wing"
 		start_experience_factor = 0.45
 	}

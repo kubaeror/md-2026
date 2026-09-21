@@ -92,7 +92,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 2000
 		producer = BEL
 	}
@@ -102,18 +102,18 @@ instant_effect = {
 air_wings = {
 	# Kleine Brogel - F-35A (early deliveries) + remaining F-16AM
 	50 = {
-		small_plane_strike_airframe_2 = { owner = "BEL" creator = "USA" amount = 10 version_name = "F-35A Lightning II" }
+		L_Strike_fighter2 = { owner = "BEL" creator = "USA" amount = 10 version_name = "F-35A Lightning II" }
 		name = "10 Tactical Wing"
 		start_experience_factor = 0.5
 	}
 	50 = {
-		small_plane_strike_airframe_2 = { owner = "BEL" creator = "USA" amount = 30 version_name = "F-16AM Fighting Falcon" }
+		L_Strike_fighter2 = { owner = "BEL" creator = "USA" amount = 30 version_name = "F-16AM Fighting Falcon" }
 		name = "2 Tactical Wing"
 		start_experience_factor = 0.5
 	}
 	# A400M Transport
 	52 = {
-		large_plane_air_transport_airframe_2 = { owner = "BEL" amount = 4 version_name = "A400M Atlas" }
+		transport_plane2 = { owner = "BEL" amount = 4 version_name = "A400M Atlas" }
 		name = "15 Transport Wing"
 		start_experience_factor = 0.45
 	}

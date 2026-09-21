@@ -6167,7 +6167,7 @@ capital = 652
 	set_variable = { party_pop_array^21 = 0.020 }  #Nat_Fascism (fringe)
 
 	#Government:
-	add_to_array = { ruling_party = 7 }             #Autocracy (United Russia)
+	set_variable = { ruling_party = 7 }             #Autocracy (United Russia)
 	add_to_array = { gov_coalition_array = 6 }       #Conservative (systemic parties)
 	add_to_array = { gov_coalition_array = 15 }      #oligarchism
 
@@ -6201,5 +6201,5 @@ capital = 652
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

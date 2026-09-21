@@ -363,7 +363,7 @@ capital = 707
 	set_variable = { party_pop_array^14 = 0.040 }   #Neutral_conservatism
 	set_variable = { party_pop_array^4 = 0.030 }   #Communist-State
 
-	add_to_array = { ruling_party = 7 }             #Autocracy (Georgian Dream)
+	set_variable = { ruling_party = 7 }             #Autocracy (Georgian Dream)
 
 	set_variable = { party_pop_elect_array^7 = 0.541 }  #Georgian Dream
 	set_variable = { party_pop_elect_array^2 = 0.111 }  #UNM
@@ -396,5 +396,5 @@ capital = 707
 	# MD2026: dropped (no MD 2.0 equivalent): GEO_whyareyouhere
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

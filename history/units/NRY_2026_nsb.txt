@@ -128,7 +128,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 2000
 		producer = NOR
 	}
@@ -138,25 +138,25 @@ instant_effect = {
 air_wings = {
 	# Ørland Main Air Station - F-35A Lightning II
 	542 = {
-		small_plane_strike_airframe_2 = { owner = "NOR" creator = "USA" amount = 28 version_name = "F-35A Lightning II" }
+		L_Strike_fighter2 = { owner = "NOR" creator = "USA" amount = 28 version_name = "F-35A Lightning II" }
 		name = "332 Skvadron"
 		start_experience_factor = 0.55
 	}
 	# Evenes Air Station - F-35A
 	31 = {
-		small_plane_strike_airframe_2 = { owner = "NOR" creator = "USA" amount = 12 version_name = "F-35A Lightning II" }
+		L_Strike_fighter2 = { owner = "NOR" creator = "USA" amount = 12 version_name = "F-35A Lightning II" }
 		name = "331 Skvadron"
 		start_experience_factor = 0.55
 	}
 	# P-8A Poseidon - Maritime Patrol
 	31 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "NOR" creator = "USA" amount = 3 version_name = "P-8A Poseidon" }
+		naval_plane1 = { owner = "NOR" creator = "USA" amount = 3 version_name = "P-8A Poseidon" }
 		name = "333 Skvadron"
 		start_experience_factor = 0.5
 	}
 	# C-130J-30 Transport - Gardermoen
 	32 = {
-		large_plane_air_transport_airframe_1 = { owner = "NOR" creator = "USA" amount = 4 version_name = "C-130J-30 Super Hercules" }
+		transport_plane1 = { owner = "NOR" creator = "USA" amount = 4 version_name = "C-130J-30 Super Hercules" }
 		name = "335 Skvadron"
 		start_experience_factor = 0.5
 	}

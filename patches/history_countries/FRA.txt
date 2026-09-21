@@ -55,7 +55,7 @@
 	set_variable = { party_pop_array^16 = 0.100 }  #libertarians
 	set_variable = { party_pop_array^15 = 0.070 }  #oligarchism
 
-	add_to_array = { ruling_party = 2 }             #liberalism (Renaissance)
+	set_variable = { ruling_party = 2 }             #liberalism (Renaissance)
 	add_to_array = { gov_coalition_array = 1 }       #conservatism (LR)
 
 	# 2024 legislative election results

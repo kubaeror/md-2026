@@ -396,7 +396,7 @@ capital = 504
 	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
 	set_variable = { party_pop_array^4 = 0.050 }   #Communist-State
 
-	add_to_array = { ruling_party = 22 }             #Nat_Autocracy (Tatmadaw junta)
+	set_variable = { ruling_party = 22 }             #Nat_Autocracy (Tatmadaw junta)
 
 	startup_politics = yes
 
@@ -421,5 +421,5 @@ capital = 504
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

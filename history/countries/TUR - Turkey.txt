@@ -956,7 +956,7 @@ capital = 159
 	set_variable = { party_pop_array^4 = 0.050 }   #Communist-State (HDP/DEM)
 	set_variable = { party_pop_array^16 = 0.050 }  #libertarians
 
-	add_to_array = { ruling_party = 7 }             #Autocracy (AKP)
+	set_variable = { ruling_party = 7 }             #Autocracy (AKP)
 	add_to_array = { gov_coalition_array = 20 }      #Nat_Populism (MHP)
 	add_to_array = { gov_coalition_array = 22 }      #Nat_Autocracy
 
@@ -994,5 +994,5 @@ capital = 159
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

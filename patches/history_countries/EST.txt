@@ -56,7 +56,7 @@
 	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
 	set_variable = { party_pop_array^17 = 0.040 }   #Neutral_green
 
-	add_to_array = { ruling_party = 2 }             #liberalism (Reform)
+	set_variable = { ruling_party = 2 }             #liberalism (Reform)
 	add_to_array = { gov_coalition_array = 3 }       #socialism (SDE)
 	add_to_array = { gov_coalition_array = 14 }       #Neutral_conservatism (Eesti 200)
 

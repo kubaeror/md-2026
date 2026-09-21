@@ -61,7 +61,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons3
+		type = infantry_weapons_3
 		amount = 1500
 		producer = MLV
 	}
@@ -76,7 +76,7 @@ air_wings = {
 		start_experience_factor = 0.25
 	}
 	147 = {
-		large_plane_air_transport_airframe_1 = { owner = "MLV" creator = "UKR" amount = 2 version_name = "An-26" }
+		transport_plane1 = { owner = "MLV" creator = "UKR" amount = 2 version_name = "An-26" }
 		name = "Transport Aviation Squadron"
 		start_experience_factor = 0.3
 	}

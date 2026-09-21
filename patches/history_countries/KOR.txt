@@ -53,7 +53,7 @@
 	set_variable = { party_pop_array^18 = 0.030 }   #neutral_Social
 	set_variable = { party_pop_array^4 = 0.030 }   #Communist-State
 
-	add_to_array = { ruling_party = 1 }             #conservatism (PPP)
+	set_variable = { ruling_party = 1 }             #conservatism (PPP)
 
 	set_variable = { party_pop_elect_array^3 = 0.371 }  #DPK
 	set_variable = { party_pop_elect_array^1 = 0.363 }  #PPP

@@ -276,22 +276,22 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 15000
 		producer = ISR
 	}
 	add_equipment_to_stockpile = {
-		type = infantry_weapons6
+		type = infantry_weapons_6
 		amount = 5000
 		producer = ISR
 	}
 	add_equipment_to_stockpile = {
-		type = command_control_equipment2
+		type = cnc_equipment_2
 		amount = 4000
 		producer = ISR
 	}
 	add_equipment_to_stockpile = {
-		type = command_control_equipment3
+		type = cnc_equipment_3
 		amount = 2000
 		producer = ISR
 	}
@@ -301,12 +301,12 @@ instant_effect = {
 air_wings = {
 	## Negev (Nevatim/Ramon/Hatzerim) ##
 	206 = {
-		small_plane_strike_airframe_2 = { owner = "ISR" creator = "USA" amount = 50 version_name = "F-35I Adir" }
+		L_Strike_fighter2 = { owner = "ISR" creator = "USA" amount = 50 version_name = "F-35I Adir" }
 		name = "116/140 Squadron - 'Adir' Wing"
 		start_experience_factor = 0.8
 	}
 	206 = {
-		small_plane_strike_airframe_2 = { owner = "ISR" creator = "USA" amount = 98 version_name = "F-16I Sufa" }
+		L_Strike_fighter2 = { owner = "ISR" creator = "USA" amount = 98 version_name = "F-16I Sufa" }
 		name = "107/119/253 Squadron - 'Sufa' Wing"
 		start_experience_factor = 0.7
 	}
@@ -316,34 +316,34 @@ air_wings = {
 		start_experience_factor = 0.7
 	}
 	206 = {
-		large_plane_awacs_airframe_1 = { owner = "ISR" creator = "USA" amount = 3 version_name = "G550 Eitam CAEW" }
+		awacs_equipment_1 = { owner = "ISR" creator = "USA" amount = 3 version_name = "G550 Eitam CAEW" }
 		name = "122nd 'Nachshon' Squadron"
 		start_experience_factor = 0.7
 	}
 	## Judea (Hatzor/Tel Nof) ##
 	204 = {
-		small_plane_strike_airframe_2 = { owner = "ISR" creator = "USA" amount = 50 version_name = "F-16C/D Barak" }
+		L_Strike_fighter2 = { owner = "ISR" creator = "USA" amount = 50 version_name = "F-16C/D Barak" }
 		name = "101/105 Squadron - 'Barak' Wing"
 		start_experience_factor = 0.65
 	}
 	204 = {
-		medium_plane_fighter_airframe_2 = { owner = "ISR" creator = "USA" amount = 20 version_name = "F-15C/D Baz" }
+		heavy_fighter_equipment_2 = { owner = "ISR" creator = "USA" amount = 20 version_name = "F-15C/D Baz" }
 		name = "106/133 Squadron - 'Baz' Wing"
 		start_experience_factor = 0.6
 	}
 	204 = {
-		large_plane_air_transport_airframe_1 = { owner = "ISR" creator = "USA" amount = 19 version_name = "C-130H/J Karnaf" }
+		transport_plane1 = { owner = "ISR" creator = "USA" amount = 19 version_name = "C-130H/J Karnaf" }
 		name = "103/131 Squadron - Transport Wing"
 		start_experience_factor = 0.6
 	}
 	## Galilee (Ramat David) ##
 	205 = {
-		small_plane_strike_airframe_2 = { owner = "ISR" creator = "USA" amount = 50 version_name = "F-16C/D Barak" }
+		L_Strike_fighter2 = { owner = "ISR" creator = "USA" amount = 50 version_name = "F-16C/D Barak" }
 		name = "109/110/117 Squadron - 'Barak' Wing"
 		start_experience_factor = 0.65
 	}
 	205 = {
-		small_plane_suicide_airframe_2 = { owner = "ISR" amount = 20 version_name = "Hermes 900 Kochav" }
+		Air_UAV2 = { owner = "ISR" amount = 20 version_name = "Hermes 900 Kochav" }
 		name = "161/166 Squadron - UAV Wing"
 		start_experience_factor = 0.7
 	}

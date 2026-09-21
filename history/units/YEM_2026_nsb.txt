@@ -156,12 +156,12 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons3
+		type = infantry_weapons_3
 		amount = 3000
 		producer = YEM
 	}
 	add_equipment_to_stockpile = {
-		type = infantry_weapons2
+		type = infantry_weapons_2
 		amount = 4000
 		producer = SOV
 	}
@@ -171,7 +171,7 @@ instant_effect = {
 air_wings = {
 	# Samad / Shahed-type attack drones
 	195 = {
-		small_plane_suicide_airframe_2 = { owner = "YEM" creator = "PER" amount = 20 version_name = "Samad-3 / Shahed-136" }
+		Air_UAV2 = { owner = "YEM" creator = "PER" amount = 20 version_name = "Samad-3 / Shahed-136" }
 		name = "Ansar Allah UAV Force"
 		start_experience_factor = 0.5
 	}

@@ -124,7 +124,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 3000
 		producer = HOL
 	}
@@ -134,25 +134,25 @@ instant_effect = {
 air_wings = {
 	# Leeuwarden Air Base - F-35A
 	1169 = {
-		small_plane_strike_airframe_2 = { owner = "HOL" creator = "USA" amount = 26 version_name = "F-35A Lightning II" }
+		L_Strike_fighter2 = { owner = "HOL" creator = "USA" amount = 26 version_name = "F-35A Lightning II" }
 		name = "322 & 323 Squadron"
 		start_experience_factor = 0.55
 	}
 	# Volkel Air Base - F-35A
 	47 = {
-		small_plane_strike_airframe_2 = { owner = "HOL" creator = "USA" amount = 26 version_name = "F-35A Lightning II" }
+		L_Strike_fighter2 = { owner = "HOL" creator = "USA" amount = 26 version_name = "F-35A Lightning II" }
 		name = "312 & 313 Squadron"
 		start_experience_factor = 0.55
 	}
 	# MQ-9A Reaper
 	46 = {
-		small_plane_suicide_airframe_2 = { owner = "HOL" creator = "USA" amount = 4 version_name = "MQ-9A Reaper" }
+		Air_UAV2 = { owner = "HOL" creator = "USA" amount = 4 version_name = "MQ-9A Reaper" }
 		name = "306 Squadron"
 		start_experience_factor = 0.5
 	}
 	# C-130H / C-130J Transport
 	46 = {
-		large_plane_air_transport_airframe_1 = { owner = "HOL" creator = "USA" amount = 4 version_name = "C-130H Hercules" }
+		transport_plane1 = { owner = "HOL" creator = "USA" amount = 4 version_name = "C-130H Hercules" }
 		name = "336 Squadron"
 		start_experience_factor = 0.5
 	}

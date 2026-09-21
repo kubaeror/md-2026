@@ -242,7 +242,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 4000
 		producer = GRE
 	}
@@ -259,19 +259,19 @@ air_wings = {
 	}
 	# 340 Mira "Alepou" — F-16V Viper (Souda/Crete region, but based Thessaly)
 	139 = {
-		small_plane_strike_airframe_2 = { owner = "GRE" creator = "USA" amount = 40 version_name = "F-16V Viper" }
+		L_Strike_fighter2 = { owner = "GRE" creator = "USA" amount = 40 version_name = "F-16V Viper" }
 		name = "340 Mira"
 		start_experience_factor = 0.45
 	}
 	# 347 Mira "Perseus" — F-16C Block 52+ (Nea Anchialos/Thessaly)
 	139 = {
-		small_plane_strike_airframe_2 = { owner = "GRE" creator = "USA" amount = 35 version_name = "F-16C Block 52+" }
+		L_Strike_fighter2 = { owner = "GRE" creator = "USA" amount = 35 version_name = "F-16C Block 52+" }
 		name = "347 Mira"
 		start_experience_factor = 0.4
 	}
 	# 343 Mira "Asteri" — F-16C Block 52+ (West Thrace)
 	974 = {
-		small_plane_strike_airframe_2 = { owner = "GRE" creator = "USA" amount = 35 version_name = "F-16C Block 52+" }
+		L_Strike_fighter2 = { owner = "GRE" creator = "USA" amount = 35 version_name = "F-16C Block 52+" }
 		name = "343 Mira"
 		start_experience_factor = 0.4
 	}
@@ -283,19 +283,19 @@ air_wings = {
 	}
 	# 380 Mira — E-2C Hawkeye (Eleusis/Central Greece)
 	141 = {
-		large_plane_awacs_airframe_1 = { owner = "GRE" creator = "USA" amount = 4 version_name = "E-2C Hawkeye" }
+		awacs_equipment_1 = { owner = "GRE" creator = "USA" amount = 4 version_name = "E-2C Hawkeye" }
 		name = "380 Mira"
 		start_experience_factor = 0.4
 	}
 	# 356 MTM — C-130H Transport (Eleusis)
 	141 = {
-		large_plane_air_transport_airframe_1 = { owner = "GRE" creator = "USA" amount = 12 version_name = "C-130H Hercules" }
+		transport_plane1 = { owner = "GRE" creator = "USA" amount = 12 version_name = "C-130H Hercules" }
 		name = "356 MTM"
 		start_experience_factor = 0.35
 	}
 	# 353 Mira — P-3B Orion (Eleusis)
 	141 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "GRE" creator = "USA" amount = 6 version_name = "P-3B Orion" }
+		naval_plane1 = { owner = "GRE" creator = "USA" amount = 6 version_name = "P-3B Orion" }
 		name = "353 Mira"
 		start_experience_factor = 0.3
 	}

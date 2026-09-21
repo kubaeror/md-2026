@@ -49,7 +49,7 @@
 	set_variable = { party_pop_array^14 = 0.040 }   #Neutral_conservatism
 	set_variable = { party_pop_array^2 = 0.030 }   #liberalism (NRF resistance)
 
-	add_to_array = { ruling_party = 12 }             #Neutral_Muslim_Brotherhood (Taliban)
+	set_variable = { ruling_party = 12 }             #Neutral_Muslim_Brotherhood (Taliban)
 
 	startup_politics = yes
 

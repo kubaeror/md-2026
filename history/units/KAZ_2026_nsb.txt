@@ -131,12 +131,12 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons4
+		type = infantry_weapons_4
 		amount = 5000
 		producer = KAZ
 	}
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 1000
 		producer = TUR
 	}
@@ -146,7 +146,7 @@ instant_effect = {
 air_wings = {
 	# Su-30SM (delivered from Russia)
 	719 = {
-		medium_plane_fighter_airframe_2 = { owner = "KAZ" creator = "SOV" amount = 12 version_name = "Su-30SM Flanker-H" }
+		heavy_fighter_equipment_2 = { owner = "KAZ" creator = "SOV" amount = 12 version_name = "Su-30SM Flanker-H" }
 		name = "604th Air Base"
 		start_experience_factor = 0.4
 	}
@@ -158,19 +158,19 @@ air_wings = {
 	}
 	# MiG-31 interceptors
 	715 = {
-		medium_plane_fighter_airframe_2 = { owner = "KAZ" creator = "SOV" amount = 14 version_name = "MiG-31BS Foxhound" }
+		heavy_fighter_equipment_2 = { owner = "KAZ" creator = "SOV" amount = 14 version_name = "MiG-31BS Foxhound" }
 		name = "356th Fighter Regiment"
 		start_experience_factor = 0.35
 	}
 	# Su-25 attack
 	719 = {
-		small_plane_cas_airframe_2 = { owner = "KAZ" creator = "SOV" amount = 12 version_name = "Su-25 Frogfoot" }
+		CAS_equipment_2 = { owner = "KAZ" creator = "SOV" amount = 12 version_name = "Su-25 Frogfoot" }
 		name = "Assault Aviation Squadron"
 		start_experience_factor = 0.35
 	}
 	# C-295M Transport
 	716 = {
-		large_plane_air_transport_airframe_1 = { owner = "KAZ" creator = "SPR" amount = 8 version_name = "C-295M" }
+		transport_plane1 = { owner = "KAZ" creator = "SPR" amount = 8 version_name = "C-295M" }
 		name = "Transport Aviation"
 		start_experience_factor = 0.4
 	}

@@ -53,7 +53,7 @@
 	set_variable = { party_pop_array^4 = 0.040 }   #Communist-State
 	set_variable = { party_pop_array^21 = 0.030 }   #Nat_Fascism
 
-	add_to_array = { ruling_party = 20 }             #Nat_Populism (SNS/Vucic)
+	set_variable = { ruling_party = 20 }             #Nat_Populism (SNS/Vucic)
 	add_to_array = { gov_coalition_array = 3 }       #socialism (SPS)
 
 	set_variable = { party_pop_elect_array^20 = 0.467 }  #SNS

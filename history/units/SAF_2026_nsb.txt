@@ -154,7 +154,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons4
+		type = infantry_weapons_4
 		amount = 2000
 		producer = SAF
 	}
@@ -164,19 +164,19 @@ instant_effect = {
 air_wings = {
 	# 2 Squadron — JAS 39C/D Gripen (AFB Makhado)
 	275 = {
-		small_plane_strike_airframe_2 = { owner = "SAF" creator = "SWE" amount = 26 version_name = "JAS 39C/D Gripen" }
+		L_Strike_fighter2 = { owner = "SAF" creator = "SWE" amount = 26 version_name = "JAS 39C/D Gripen" }
 		name = "2 Squadron SAAF"
 		start_experience_factor = 0.4
 	}
 	# 85 Combat Flying School — BAE Hawk Mk.120 (AFB Makhado)
 	275 = {
-		small_plane_cas_airframe_2 = { owner = "SAF" creator = "ENG" amount = 12 version_name = "Hawk Mk.120 LIFT" }
+		CAS_equipment_2 = { owner = "SAF" creator = "ENG" amount = 12 version_name = "Hawk Mk.120 LIFT" }
 		name = "85 Combat Flying School"
 		start_experience_factor = 0.35
 	}
 	# 28 Squadron — C-130BZ Hercules (AFB Waterkloof, Pretoria)
 	275 = {
-		large_plane_air_transport_airframe_1 = { owner = "SAF" creator = "USA" amount = 5 version_name = "C-130BZ Hercules" }
+		transport_plane1 = { owner = "SAF" creator = "USA" amount = 5 version_name = "C-130BZ Hercules" }
 		name = "28 Squadron SAAF"
 		start_experience_factor = 0.35
 	}

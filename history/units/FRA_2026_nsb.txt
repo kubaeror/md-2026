@@ -302,7 +302,7 @@ units = {
 ### Equipment Stockpile ###
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 2500
 		producer = FRA
 	}
@@ -329,7 +329,7 @@ air_wings = {
 	}
 	# BA 133 Nancy-Ochey — Mirage 2000D (EC 3 Ardennes)
 	57 = {
-		medium_plane_cas_airframe_1 = { owner = "FRA" amount = 40 version_name = "Mirage 2000D" }
+		cas1 = { owner = "FRA" amount = 40 version_name = "Mirage 2000D" }
 		name = "Escadre de Chasse 3 — Nancy"
 		start_experience_factor = 0.55
 	}
@@ -341,19 +341,19 @@ air_wings = {
 	}
 	# BA 123 Orleans-Bricy — Strategic/Tactical Airlift (ET 1/61)
 	59 = {
-		large_plane_air_transport_airframe_2 = { owner = "FRA" amount = 18 version_name = "A400M Atlas" }
+		transport_plane2 = { owner = "FRA" amount = 18 version_name = "A400M Atlas" }
 		name = "Escadre de Transport 1/61 — Orleans"
 		start_experience_factor = 0.6
 	}
 	# BA 123 Orleans — C-130H/J Hercules (ET 2/61)
 	59 = {
-		large_plane_air_transport_airframe_1 = { owner = "FRA" creator = "USA" amount = 14 version_name = "C-130H/J Hercules" }
+		transport_plane1 = { owner = "FRA" creator = "USA" amount = 14 version_name = "C-130H/J Hercules" }
 		name = "Escadre de Transport 2/61 — Orleans"
 		start_experience_factor = 0.55
 	}
 	# BA 709 Cognac — MQ-9A Reaper (ED 1/33 Belfort)
 	958 = {
-		small_plane_suicide_airframe_2 = { owner = "FRA" creator = "USA" amount = 6 version_name = "MQ-9A Reaper" }
+		Air_UAV2 = { owner = "FRA" creator = "USA" amount = 6 version_name = "MQ-9A Reaper" }
 		name = "Escadron de Drones 1/33 Belfort"
 		start_experience_factor = 0.55
 	}
@@ -365,19 +365,19 @@ air_wings = {
 	}
 	# BAN Lann-Bihoue — Atlantique 2 Maritime Patrol (Flottilles 21F/23F)
 	64 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "FRA" amount = 18 version_name = "Atlantique 2" }
+		naval_plane1 = { owner = "FRA" amount = 18 version_name = "Atlantique 2" }
 		name = "Flottilles 21F/23F — Lann-Bihoue"
 		start_experience_factor = 0.6
 	}
 	# Groupe Aerien Embarque — Charles de Gaulle (Rafale M)
 	"Charles de Gaulle (R91)" = {
-		cv_medium_plane_fighter_airframe_2 = { owner = "FRA" amount = 18 version_name = "Dassault Rafale M" }
+		cv_medium_plane_airframe_2 = { owner = "FRA" amount = 18 version_name = "Dassault Rafale M" }
 		name = "Groupe Aerien Embarque"
 		start_experience_factor = 0.7
 	}
 	# Charles de Gaulle — E-2C Hawkeye (Flottille 4F)
 	"Charles de Gaulle (R91)" = {
-		cv_medium_plane_scout_airframe_2 = { owner = "FRA" creator = "USA" amount = 3 version_name = "E-2C Hawkeye" }
+		cv_awacs_equipment_2 = { owner = "FRA" creator = "USA" amount = 3 version_name = "E-2C Hawkeye" }
 		name = "Flottille 4F — Det. CdG"
 		start_experience_factor = 0.6
 	}

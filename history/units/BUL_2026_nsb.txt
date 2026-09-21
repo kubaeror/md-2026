@@ -119,12 +119,12 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons4
+		type = infantry_weapons_4
 		amount = 3000
 		producer = BUL
 	}
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 1000
 		producer = USA
 	}
@@ -134,7 +134,7 @@ instant_effect = {
 air_wings = {
 	# Graf Ignatievo - F-16V Block 70
 	153 = {
-		small_plane_strike_airframe_2 = { owner = "BUL" creator = "USA" amount = 8 version_name = "F-16V Block 70" }
+		L_Strike_fighter2 = { owner = "BUL" creator = "USA" amount = 8 version_name = "F-16V Block 70" }
 		name = "1st Fighter Air Base"
 		start_experience_factor = 0.4
 	}
@@ -146,7 +146,7 @@ air_wings = {
 	}
 	# C-27J Spartan Transport
 	153 = {
-		large_plane_air_transport_airframe_1 = { owner = "BUL" creator = "ITA" amount = 3 version_name = "C-27J Spartan" }
+		transport_plane1 = { owner = "BUL" creator = "ITA" amount = 3 version_name = "C-27J Spartan" }
 		name = "16th Transport Air Group"
 		start_experience_factor = 0.4
 	}

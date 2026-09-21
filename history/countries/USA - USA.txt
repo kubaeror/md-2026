@@ -5275,7 +5275,7 @@ capital = 1182
 	set_variable = { party_pop_array^16 = 0.110 }  #libertarians
 	set_variable = { party_pop_array^17 = 0.030 }  #Greens
 
-	add_to_array = { ruling_party = 20 }            #MAGA / Nat_Populism
+	set_variable = { ruling_party = 20 }            #MAGA / Nat_Populism
 	add_to_array = { gov_coalition_array = 1 }       #republican traditional
 	add_to_array = { gov_coalition_array = 14 }      #republican constitutionists
 	add_to_array = { gov_coalition_array = 22 }      #militarist & pentagon
@@ -5312,5 +5312,5 @@ capital = 1182
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

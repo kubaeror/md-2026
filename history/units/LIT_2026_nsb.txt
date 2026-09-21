@@ -95,7 +95,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons5
+		type = infantry_weapons_5
 		amount = 2000
 		producer = LIT
 	}
@@ -105,7 +105,7 @@ instant_effect = {
 air_wings = {
 	# Siauliai / Zokniai Air Base
 	109 = {
-		large_plane_air_transport_airframe_1 = { owner = "LIT" creator = "ITA" amount = 3 version_name = "C-27J Spartan" }
+		transport_plane1 = { owner = "LIT" creator = "ITA" amount = 3 version_name = "C-27J Spartan" }
 		name = "Air Force Transport Squadron"
 		start_experience_factor = 0.4
 	}

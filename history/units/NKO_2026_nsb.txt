@@ -480,7 +480,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons3
+		type = infantry_weapons_3
 		amount = 15000
 		producer = NKO
 	}
@@ -497,7 +497,7 @@ air_wings = {
 	}
 	# Ground Attack Regiment — Su-25 (Pyongyang area)
 	602 = {
-		small_plane_cas_airframe_2 = { owner = "NKO" creator = "SOV" amount = 35 version_name = "Su-25K Frogfoot" }
+		CAS_equipment_2 = { owner = "NKO" creator = "SOV" amount = 35 version_name = "Su-25K Frogfoot" }
 		name = "CAS Air Regiment"
 		start_experience_factor = 0.25
 	}

@@ -480,7 +480,7 @@ capital = 141
 	set_variable = { party_pop_array^17 = 0.030 }   #Neutral_green
 	set_variable = { party_pop_array^21 = 0.040 }   #Nat_Fascism (Spartiates)
 
-	add_to_array = { ruling_party = 1 }             #conservatism (ND)
+	set_variable = { ruling_party = 1 }             #conservatism (ND)
 
 	set_variable = { party_pop_elect_array^1 = 0.405 }  #ND
 	set_variable = { party_pop_elect_array^3 = 0.178 }  #SYRIZA
@@ -513,5 +513,5 @@ capital = 141
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

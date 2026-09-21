@@ -2020,7 +2020,7 @@ capital = 81
 	set_variable = { party_pop_array^17 = 0.050 }   #Neutral_green
 	set_variable = { party_pop_array^21 = 0.050 }   #Nat_Fascism
 
-	add_to_array = { ruling_party = 20 }             #Nat_Populism (FdI)
+	set_variable = { ruling_party = 20 }             #Nat_Populism (FdI)
 	add_to_array = { gov_coalition_array = 1 }       #conservatism (Forza Italia)
 	add_to_array = { gov_coalition_array = 23 }       #Monarchist (Lega)
 
@@ -2059,5 +2059,5 @@ capital = 81
 	# Base MD pre-completed focuses (root + T1, 2000-2026)
 }
 
-	### Pre-completed focuses (run on the first daily tick) ###
+	### Pre-completed focuses (run after game start) ###
 	set_country_flag = md2026_focuses_pending

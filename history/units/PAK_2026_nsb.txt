@@ -375,7 +375,7 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = infantry_weapons4
+		type = infantry_weapons_4
 		amount = 8000
 		producer = PAK
 	}
@@ -386,73 +386,73 @@ instant_effect = {
 air_wings = {
 	# No. 9 Squadron "Griffins" — F-16C/D Block 52+ (Mushaf/Sargodha)
 	422 = {
-		small_plane_strike_airframe_2 = { owner = "PAK" creator = "USA" amount = 18 version_name = "F-16C/D Block 52+" }
+		L_Strike_fighter2 = { owner = "PAK" creator = "USA" amount = 18 version_name = "F-16C/D Block 52+" }
 		name = "No. 9 Squadron"
 		start_experience_factor = 0.5
 	}
 	# No. 16 Squadron "Black Panthers" — JF-17 Thunder (Kamra/Minhas)
 	422 = {
-		small_plane_strike_airframe_2 = { owner = "PAK" amount = 50 version_name = "JF-17 Thunder" }
+		L_Strike_fighter2 = { owner = "PAK" amount = 50 version_name = "JF-17 Thunder" }
 		name = "No. 16 Squadron"
 		start_experience_factor = 0.4
 	}
 	# No. 15 Squadron — J-10CE (Kamra)
 	422 = {
-		small_plane_strike_airframe_2 = { owner = "PAK" creator = "CHI" amount = 25 version_name = "J-10CE Vigorous Dragon" }
+		L_Strike_fighter2 = { owner = "PAK" creator = "CHI" amount = 25 version_name = "J-10CE Vigorous Dragon" }
 		name = "No. 15 Squadron"
 		start_experience_factor = 0.35
 	}
 	# No. 2 Squadron "Minhasians" — JF-17 Thunder (Rafiqui)
 	563 = {
-		small_plane_strike_airframe_2 = { owner = "PAK" amount = 40 version_name = "JF-17 Thunder" }
+		L_Strike_fighter2 = { owner = "PAK" amount = 40 version_name = "JF-17 Thunder" }
 		name = "No. 2 Squadron"
 		start_experience_factor = 0.4
 	}
 	# No. 6 Squadron — C-130 Transport (Chaklala)
 	563 = {
-		large_plane_air_transport_airframe_1 = { owner = "PAK" creator = "USA" amount = 12 version_name = "C-130E/H Hercules" }
+		transport_plane1 = { owner = "PAK" creator = "USA" amount = 12 version_name = "C-130E/H Hercules" }
 		name = "No. 6 Squadron"
 		start_experience_factor = 0.35
 	}
 	# No. 5 Squadron "Falcons" — F-16A/B MLU (Masroor/Karachi)
 	426 = {
-		small_plane_strike_airframe_2 = { owner = "PAK" creator = "USA" amount = 27 version_name = "F-16A/B MLU" }
+		L_Strike_fighter2 = { owner = "PAK" creator = "USA" amount = 27 version_name = "F-16A/B MLU" }
 		name = "No. 5 Squadron"
 		start_experience_factor = 0.45
 	}
 	# No. 8 Squadron "Haiders" — Mirage V (Masroor)
 	426 = {
-		small_plane_cas_airframe_2 = { owner = "PAK" creator = "FRA" amount = 30 version_name = "Mirage IIIEP/V" }
+		CAS_equipment_2 = { owner = "PAK" creator = "FRA" amount = 30 version_name = "Mirage IIIEP/V" }
 		name = "No. 8 Squadron"
 		start_experience_factor = 0.3
 	}
 	# No. 3 AEW&C Squadron — ZDK-03 Karakoram Eagle (Masroor)
 	426 = {
-		large_plane_awacs_airframe_1 = { owner = "PAK" creator = "CHI" amount = 4 version_name = "ZDK-03 Karakoram Eagle" }
+		awacs_equipment_1 = { owner = "PAK" creator = "CHI" amount = 4 version_name = "ZDK-03 Karakoram Eagle" }
 		name = "No. 3 AEW&C Squadron"
 		start_experience_factor = 0.4
 	}
 	# No. 4 AEW&C Squadron — Saab 2000 Erieye (Masroor)
 	426 = {
-		large_plane_awacs_airframe_2 = { owner = "PAK" creator = "SWE" amount = 3 version_name = "Saab 2000 Erieye" }
+		awacs_equipment_2 = { owner = "PAK" creator = "SWE" amount = 3 version_name = "Saab 2000 Erieye" }
 		name = "No. 4 AEW&C Squadron"
 		start_experience_factor = 0.4
 	}
 	# No. 29 Maritime Squadron — P-3C Orion (Mehran/Karachi)
 	426 = {
-		large_plane_maritime_patrol_airframe_1 = { owner = "PAK" creator = "USA" amount = 8 version_name = "P-3C Orion" }
+		naval_plane1 = { owner = "PAK" creator = "USA" amount = 8 version_name = "P-3C Orion" }
 		name = "No. 29 Maritime Squadron"
 		start_experience_factor = 0.35
 	}
 	# No. 23 Squadron — JF-17 Thunder (Samungli/Quetta)
 	416 = {
-		small_plane_strike_airframe_2 = { owner = "PAK" amount = 20 version_name = "JF-17 Thunder" }
+		L_Strike_fighter2 = { owner = "PAK" amount = 20 version_name = "JF-17 Thunder" }
 		name = "No. 23 Squadron"
 		start_experience_factor = 0.35
 	}
 	# UCAV Wing — CH-4B (Balochistan)
 	416 = {
-		small_plane_suicide_airframe_2 = { owner = "PAK" creator = "CHI" amount = 8 version_name = "CH-4B" }
+		Air_UAV2 = { owner = "PAK" creator = "CHI" amount = 8 version_name = "CH-4B" }
 		name = "UAV Wing"
 		start_experience_factor = 0.4
 	}

@@ -52,7 +52,7 @@
 	set_variable = { party_pop_array^14 = 0.050 }   #Neutral_conservatism
 	set_variable = { party_pop_array^4 = 0.040 }   #Communist-State
 
-	add_to_array = { ruling_party = 22 }             #Nat_Autocracy (PML-N)
+	set_variable = { ruling_party = 22 }             #Nat_Autocracy (PML-N)
 	add_to_array = { gov_coalition_array = 23 }       #Monarchist (PPP)
 
 	set_variable = { party_pop_elect_array^20 = 0.340 }  #PTI independents
