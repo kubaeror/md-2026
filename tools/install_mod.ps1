@@ -21,7 +21,7 @@ if (-not (Test-Path $modDir)) {
 
 # The launcher descriptor. Kept in sync with descriptor.mod by hand (same fields).
 $descriptor = @"
-version="1.1.0"
+version="1.2.0"
 tags={
 	"Alternative History"
 	"Technologies"

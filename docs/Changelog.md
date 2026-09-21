@@ -4,6 +4,51 @@ All notable changes to the Millennium Dawn 2026 Rework submod.
 
 ---
 
+## v1.2.0 - 2026 OOB pass, focus overrides, Polish localisation
+
+### Gameplay fixes
+- **All 67 order-of-battle files lost their equipment**: `instant_effect` in the OOB adds
+  stock, but an equipment version only exists after the unlocking technology is granted.
+  Every history patch now grants the 2026 tech tiers **before** `set_oob`, and stockpiles are
+  produced by the country itself (a foreign producer's history has not run yet at that point).
+  This removes ~200 `Invalid equipment version` / `invalid database object` errors per start.
+- **Vanilla equipment names** (`CAS_equipment_2`, `heavy_fighter_equipment_2`,
+  `artillery_equipment`) removed by MD's `replace_path` mapped to real MD 2.0 equipment
+  (`cas2`, `MR_Fighter3/4`, `artillery_2`); air wings were silently empty before.
+- **Norway's OOB** used the removed `NOR` tag (21 parse errors).
+- **Ukraine**: `Bryhada TRO` (Territorial Defence) division template added - MD's
+  `05_ukraine.txt` reward expects it but never defines it.
+- **China**: two air wings moved from state 585 (no air base) to 586.
+- **MD's hidden `Light_*` sub-units**: generated override adds the missing `support` type
+  (9 startup errors).
+- **Vanilla SIA operation effects** that MD's `replace_path` dropped are defined as no-ops.
+- **Ideology case typos** in MD focus rewards (`Democratic`, `Nat_populism`,
+  `has_government = Democratic`) are normalised in our generated copies.
+- **Focus overrides**: `RAJ_bharatiya_janata_party`, `SOV_putin`, `GEO_gergiandream2013` and
+  `EGY_al_sisi_rise` are pre-completed again with 2026-safe rewards
+  (`patches/focus_overrides.json`); the Putin branch is playable again without firing
+  2000-era events or replacing the 2026 government.
+
+### New content
+- **Non-NSB orders of battle** for all 67 countries (`<TAG>_2026_nonnsb.txt`); without
+  *No Step Back* the 2026 bookmark no longer falls back to MD's 2000 army.
+- **Indonesia and Venezuela**: 2026 OOBs (TNI / FANB) and bookmark entries with
+  descriptions.
+- **Polish localisation**: all 1720 keys translated
+  (`localisation/polish/md2026_l_polish.yml`).
+
+### Tooling and docs
+- `tools/make_nonnsb_oob.py`, `tools/audit_2026.py` (coverage report -> `docs/Coverage.md`),
+  `tools/loc_keys.py`, `tools/economy_report.py` (-> `docs/Economy-2026.md`),
+  `tools/check_pl_part.py` / `tools/assemble_pl.py`.
+- `tools/validate.py` gained checks for OOB tags/sub-units/equipment, stockpile types,
+  tech-before-OOB order, non-NSB coverage, air-base states, DLC-only equipment,
+  `create_unit` templates, focus overrides and missing/duplicate localisation keys.
+- `docs/Known-Issues.md` now lists the 37 focuses that are deliberately not pre-completed
+  and the remaining Millennium Dawn log entries.
+
+---
+
 ## v1.1.1 - 2026 real-world data pass + stability fixes
 
 ### Game-breaking fixes

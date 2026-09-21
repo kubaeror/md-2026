@@ -30,15 +30,27 @@ Before testing:
 - [ ] Crimea/Donbas/Kherson/Zaporizhzhia belong to Russia, the rest of Ukraine to UKR.
 - [ ] NATO members (incl. FIN, SWE, POL, BAL states) have the `NATO_member` idea.
 - [ ] The 2026 focus branch is visible at the edge of the tree (USA, POL, UKR, CHI, JAP, GER, ...).
-- [ ] Pre-completed focuses do not show as available again.
+- [ ] Pre-completed focuses do not show as available again; Russia's Putin branch is open.
 - [ ] Technology: a tier-1 country (USA) has modern equipment unlocked; a tier-5 country has less.
 - [ ] Army: units exist with 2026 names; no "invalid division template" errors.
+- [ ] Army: stockpiles are not empty (check Army -> Equipment; infantry weapons should show).
+- [ ] Air wings: 4th/4.5-generation aircraft exist (F-16, Eurofighter, Su-30) instead of empty wings.
 - [ ] Decisions: the `md2026_` decision categories are visible and open without errors.
 - [ ] Events: `event md2026_system.1` fires and displays text (not raw keys).
+- [ ] Ukraine's `Bryhada TRO` rewards create divisions (complete a TDF focus or check the pre-completed ones).
 - [ ] Save and reload the 2026 game.
 
+### 2026 start without No Step Back (in the launcher, disable the DLC)
+- [ ] The game starts with the same units (the non-NSB OOB variant loads).
+- [ ] No "unknown equipment" or "invalid equipment version" errors for our files.
+
+### Localisation
+- [ ] Switch the game language to Polish: bookmark descriptions, focus names and events are in Polish.
+- [ ] No raw loc keys are displayed anywhere.
+
 ### Log
-- [ ] `error.log` contains no `md2026` errors other than cosmetic ones.
+- [ ] `error.log` contains no `md2026` errors other than the MD-side entries documented in
+      `docs/Known-Issues.md`.
 
 Report issues at https://github.com/kubaeror/md-2026/issues with the `error.log` section and
 the steps to reproduce.
