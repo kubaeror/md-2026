@@ -865,6 +865,30 @@ def check_create_unit_templates(md):
             f"{', '.join(sorted(md_side)[:3])}")
 
 
+def check_localisation(md):
+    """Every loc key our content needs must be defined (in our file, MD's or the
+    base game's); keys defined for one language should exist in all of ours."""
+    import loc_keys as L
+    langs = L.defined_keys()
+    en = langs.get("english", {})
+    need = L.expected_keys()
+    need.update(L.idea_keys())
+    need.update(L.decision_keys())
+    external = L.external_keys(md)
+    for k, v in sorted(need.items()):
+        if k in en or k in external:
+            continue
+        if any(L.is_our_file(f) for f in v):
+            ERRORS["missing localisation key"].append(f"{k}  ({sorted(v)[0]})")
+    for k, path, line in L.duplicate_keys():
+        ERRORS["duplicate localisation key"].append(f"{k}  ({path}:{line})")
+    for lang, keys in sorted(langs.items()):
+        if lang == "english":
+            continue
+        for k in sorted(k for k in en if k not in keys):
+            ERRORS[f"missing {lang} translation"].append(k)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--md", default=os.environ.get("MD_PATH", rebase.DEFAULT_MD))
@@ -943,6 +967,7 @@ def main():
     check_air_wings_states(md)
     check_equipment_dlc_paths(md)
     check_create_unit_templates(md)
+    check_localisation(md)
     check_installation()
 
     print()

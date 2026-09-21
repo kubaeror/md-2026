@@ -27,7 +27,7 @@
  CAN_MD2026_DESC:0 "Canada maintains its commitment to NATO and Western alliances while facing Arctic sovereignty challenges from Russia and economic pressures from US trade policies."
  SWE_MD2026_DESC:0 "Sweden has joined NATO, ending decades of neutrality in response to Russia's aggression in Ukraine. A strong economy and advanced defense industry strengthen the alliance's northern flank."
  FIN_MD2026_DESC:0 "Finland joined NATO in 2023, adding 1,340 km of border with Russia to the alliance. One of Europe's most capable militaries with deep experience in Arctic warfare."
- NOR_MD2026_DESC:0 "Norway guards NATO's Arctic flank while benefiting from high energy prices as Europe's key natural gas supplier following the cutoff of Russian energy."
+ NRY_MD2026_DESC:0 "Norway guards NATO's Arctic flank while benefiting from high energy prices as Europe's key natural gas supplier following the cutoff of Russian energy."
  HUN_MD2026_DESC:0 "Hungary under PM Orban pursues an independent foreign policy within NATO and the EU, maintaining closer ties with Russia and China than its allies prefer."
  ROM_MD2026_DESC:0 "Romania sits at the strategic junction of NATO's eastern and southern flanks, hosting allied forces and monitoring the Black Sea as the war in Ukraine continues."
  AST_MD2026_DESC:0 "Australia deepens its security ties with the US through AUKUS while managing complex economic relations with China, its largest trading partner."
@@ -1112,9 +1112,9 @@
  MD2026_NKO_eternal_leader:0 "Eternal Leader"
  MD2026_NKO_eternal_leader_desc:0 "Kim Jong-un consolidates absolute power — a nuclear-armed dictator defying the world."
 
- # Override loc for renamed base MD focus (NKO_kim_yo_jongs -> NKO_kim_yo_jong)
- NKO_kim_yo_jong:0 "Kim Yo-jong"
- NKO_kim_yo_jong_desc:0 "Kim Yo-jong, the younger sister of Kim Jong-un, has emerged as a powerful political figure. Her influence within the regime continues to grow."
+ # Override loc for MD's renamed North Korea focus (empty description in MD)
+ NKO_kim_yo_jongs:0 "Kim Yo-jong"
+ NKO_kim_yo_jongs_desc:0 "Kim Yo-jong, the younger sister of Kim Jong-un, has emerged as a powerful political figure. Her influence within the regime continues to grow."
 
  ### FOCUS TREES - CANADA (CAN) ###
  MD2026_CAN_northern_shield:0 "Northern Shield"
