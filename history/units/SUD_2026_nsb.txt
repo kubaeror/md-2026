@@ -196,7 +196,7 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = infantry_weapons_2
 		amount = 4000
-		producer = SOV
+		producer = SUD
 	}
 }
 
@@ -210,7 +210,7 @@ air_wings = {
 	}
 	# Su-25 (ground attack, some operational)
 	221 = {
-		CAS_equipment_2 = { owner = "SUD" creator = "SOV" amount = 8 version_name = "Su-25 Frogfoot" }
+		cas2 = { owner = "SUD" creator = "SOV" amount = 8 version_name = "Su-25 Frogfoot" }
 		name = "SAF Attack Squadron"
 		start_experience_factor = 0.3
 	}

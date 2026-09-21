@@ -205,7 +205,7 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = infantry_weapons_2
 		amount = 5000
-		producer = SOV
+		producer = ETH
 	}
 }
 
@@ -213,7 +213,7 @@ instant_effect = {
 air_wings = {
 	# Su-27/Su-30 (post-Tigray war survivors)
 	233 = {
-		heavy_fighter_equipment_2 = { owner = "ETH" creator = "SOV" amount = 16 version_name = "Su-27SK/Su-30MK Flanker" }
+		MR_Fighter4 = { owner = "ETH" creator = "SOV" amount = 16 version_name = "Su-27SK/Su-30MK Flanker" }
 		name = "Debre Zeit Fighter Wing"
 		start_experience_factor = 0.35
 	}

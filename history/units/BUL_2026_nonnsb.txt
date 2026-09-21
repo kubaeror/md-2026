@@ -1,0 +1,156 @@
+# GENERATED FILE - do not edit by hand.
+# Non-No-Step-Back variant of BUL_2026_nsb.txt.
+# Rebuild with: python tools/make_nonnsb_oob.py --apply
+##### Bulgaria - 2026 OOB #####
+# Bulgarian Armed Forces - NATO member since 2004
+# Transitioning from Soviet to Western equipment, mixed capability
+
+division_template = {
+	name = "Mekhanizirana Brigada"		# Mechanized Brigade
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		armor_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Pehotna Brigada"		# Infantry Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Spetsialni Sili"		# Special Forces
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Bulgarian Armed Forces #####
+
+	# 2nd Mechanized Brigade - Stara Zagora
+	division = {
+		name = "2. Mekhanizirana Brigada"
+		location = 6857
+		division_template = "Mekhanizirana Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.70
+	}
+
+	# 61st Mechanized Brigade - Karlovo
+	division = {
+		name = "61. Mekhanizirana Brigada"
+		location = 949
+		division_template = "Mekhanizirana Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.70
+	}
+
+	# Infantry - Pleven
+	division = {
+		name = "1. Pehotna Brigada"
+		location = 793
+		division_template = "Pehotna Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+
+	# Southern border
+	division = {
+		name = "2. Pehotna Brigada"
+		location = 11813
+		division_template = "Pehotna Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+
+	# SOF
+	division = {
+		name = "68. Brigada Spetsialni Sili"
+		location = 6814
+		division_template = "Spetsialni Sili"
+		start_experience_factor = 0.50
+		start_equipment_factor = 0.75
+	}
+
+	##### Военноморски сили (Bulgarian Navy) #####
+	fleet = {
+		name = "Bulgarian Navy"
+		naval_base = 9783		# Varna
+		task_force = {
+			name = "Varna Naval Base"
+			location = 9783
+			# Wielingen-class frigates (ex-Belgian)
+			ship = { name = "BGS Drazki (F41)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Wielingen class" } } }
+			ship = { name = "BGS Gordi (F42)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Wielingen class" } } }
+			ship = { name = "BGS Reshitelni (F43)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Wielingen class" } } }
+		}
+		task_force = {
+			name = "Atia Naval Base"
+			location = 9902		# Burgas
+			# Corvette
+			ship = { name = "BGS Bodri (F13)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = BUL creator = BUL version_name = "Poti class" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_4
+		amount = 3000
+		producer = BUL
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_5
+		amount = 1000
+		producer = BUL
+	}
+}
+
+##### Военновъздушни сили (Bulgarian Air Force) #####
+air_wings = {
+	# Graf Ignatievo - F-16V Block 70
+	153 = {
+		L_Strike_fighter2 = { owner = "BUL" creator = "USA" amount = 8 version_name = "F-16V Block 70" }
+		name = "1st Fighter Air Base"
+		start_experience_factor = 0.4
+	}
+	# MiG-29 (remaining operational)
+	153 = {
+		small_plane_airframe_2 = { owner = "BUL" creator = "SOV" amount = 12 version_name = "MiG-29A Fulcrum" }
+		name = "3/2 Fighter Squadron"
+		start_experience_factor = 0.4
+	}
+	# C-27J Spartan Transport
+	153 = {
+		transport_plane1 = { owner = "BUL" creator = "ITA" amount = 3 version_name = "C-27J Spartan" }
+		name = "16th Transport Air Group"
+		start_experience_factor = 0.4
+	}
+}

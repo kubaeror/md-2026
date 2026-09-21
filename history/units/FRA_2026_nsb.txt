@@ -307,7 +307,7 @@ instant_effect = {
 		producer = FRA
 	}
 	add_equipment_to_stockpile = {
-		type = artillery_equipment
+		type = artillery_2
 		amount = 400
 		producer = FRA
 	}

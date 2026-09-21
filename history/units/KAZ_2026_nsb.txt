@@ -138,7 +138,7 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = infantry_weapons_5
 		amount = 1000
-		producer = TUR
+		producer = KAZ
 	}
 }
 
@@ -146,7 +146,7 @@ instant_effect = {
 air_wings = {
 	# Su-30SM (delivered from Russia)
 	719 = {
-		heavy_fighter_equipment_2 = { owner = "KAZ" creator = "SOV" amount = 12 version_name = "Su-30SM Flanker-H" }
+		MR_Fighter4 = { owner = "KAZ" creator = "SOV" amount = 12 version_name = "Su-30SM Flanker-H" }
 		name = "604th Air Base"
 		start_experience_factor = 0.4
 	}
@@ -158,13 +158,13 @@ air_wings = {
 	}
 	# MiG-31 interceptors
 	715 = {
-		heavy_fighter_equipment_2 = { owner = "KAZ" creator = "SOV" amount = 14 version_name = "MiG-31BS Foxhound" }
+		MR_Fighter4 = { owner = "KAZ" creator = "SOV" amount = 14 version_name = "MiG-31BS Foxhound" }
 		name = "356th Fighter Regiment"
 		start_experience_factor = 0.35
 	}
 	# Su-25 attack
 	719 = {
-		CAS_equipment_2 = { owner = "KAZ" creator = "SOV" amount = 12 version_name = "Su-25 Frogfoot" }
+		cas2 = { owner = "KAZ" creator = "SOV" amount = 12 version_name = "Su-25 Frogfoot" }
 		name = "Assault Aviation Squadron"
 		start_experience_factor = 0.35
 	}

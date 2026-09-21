@@ -299,7 +299,7 @@ instant_effect = {
 air_wings = {
 	## Toscana (Grosseto/Pisa) ##
 	79 = {
-		heavy_fighter_equipment_2 = { owner = "ITA" amount = 24 version_name = "Eurofighter Typhoon" }
+		MR_Fighter4 = { owner = "ITA" amount = 24 version_name = "Eurofighter Typhoon" }
 		name = "4° Stormo Caccia"
 		start_experience_factor = 0.6
 	}
@@ -310,7 +310,7 @@ air_wings = {
 	}
 	## Puglia (Gioia del Colle/Amendola) ##
 	957 = {
-		heavy_fighter_equipment_2 = { owner = "ITA" amount = 24 version_name = "Eurofighter Typhoon" }
+		MR_Fighter4 = { owner = "ITA" amount = 24 version_name = "Eurofighter Typhoon" }
 		name = "36° Stormo Caccia"
 		start_experience_factor = 0.6
 	}
@@ -331,13 +331,13 @@ air_wings = {
 	}
 	## Sicilia (Trapani) ##
 	83 = {
-		heavy_fighter_equipment_2 = { owner = "ITA" amount = 24 version_name = "Eurofighter Typhoon" }
+		MR_Fighter4 = { owner = "ITA" amount = 24 version_name = "Eurofighter Typhoon" }
 		name = "37° Stormo Caccia"
 		start_experience_factor = 0.6
 	}
 	## Veneto (Istrana) ##
 	78 = {
-		heavy_fighter_equipment_2 = { owner = "ITA" amount = 23 version_name = "Eurofighter Typhoon" }
+		MR_Fighter4 = { owner = "ITA" amount = 23 version_name = "Eurofighter Typhoon" }
 		name = "51° Stormo Caccia"
 		start_experience_factor = 0.6
 	}

@@ -138,7 +138,7 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = infantry_weapons_5
 		amount = 1000
-		producer = SOV
+		producer = SER
 	}
 }
 
@@ -152,7 +152,7 @@ air_wings = {
 	}
 	# J-22 Orao (ground attack)
 	131 = {
-		CAS_equipment_2 = { owner = "SER" amount = 10 version_name = "J-22 Orao" }
+		cas2 = { owner = "SER" amount = 10 version_name = "J-22 Orao" }
 		name = "241. Lovačko-Bombarderska Eskadrila"
 		start_experience_factor = 0.35
 	}

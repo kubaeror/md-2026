@@ -236,7 +236,7 @@ air_wings = {
 	}
 	# Attack Squadron — Yak-130 (Meiktila/Upper Burma)
 	505 = {
-		CAS_equipment_2 = { owner = "BRM" creator = "SOV" amount = 12 version_name = "Yak-130" }
+		cas2 = { owner = "BRM" creator = "SOV" amount = 12 version_name = "Yak-130" }
 		name = "Attack Squadron"
 		start_experience_factor = 0.2
 	}

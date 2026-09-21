@@ -132,7 +132,7 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = infantry_weapons_6
 		amount = 1000
-		producer = USA
+		producer = UAE
 	}
 }
 
@@ -146,7 +146,7 @@ air_wings = {
 	}
 	# Mirage 2000-9
 	180 = {
-		heavy_fighter_equipment_2 = { owner = "UAE" creator = "FRA" amount = 55 version_name = "Mirage 2000-9" }
+		MR_Fighter4 = { owner = "UAE" creator = "FRA" amount = 55 version_name = "Mirage 2000-9" }
 		name = "Al Minhad Fighter Wings"
 		start_experience_factor = 0.5
 	}

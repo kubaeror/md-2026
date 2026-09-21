@@ -261,6 +261,75 @@ def cleanup_old_focus_copies(expected):
 
 
 # --------------------------------------------------------------------------
+# Millennium Dawn unit definitions
+# --------------------------------------------------------------------------
+
+def fix_support_group_subunits(text):
+    """MD's hidden ``Light_*`` sub-units declare ``group = support`` without
+    listing ``support`` in their ``type``, so the game logs
+
+        Sub-unit 'Light_SP_AA_Bat' has 'group = support' but no 'support' in its
+        type list
+
+    for every one of them at startup.  Add the missing type."""
+    out = text.split("\n")
+    fixed = []
+    i = 0
+    while i < len(out):
+        m = re.match(r"^\t([A-Za-z_][A-Za-z0-9_]*)\s*=\s*\{\s*(?:#.*)?$", out[i])
+        if not m:
+            i += 1
+            continue
+        depth = 0
+        j = i
+        while j < len(out):
+            depth += out[j].count("{") - out[j].count("}")
+            if depth == 0:
+                break
+            j += 1
+        block = out[i:j + 1]
+        if any("group = support" in line for line in block):
+            tm = next((k for k, line in enumerate(block) if re.match(r"^\t\ttype\s*=\s*\{", line)), None)
+            if tm is not None:
+                line = block[tm]
+                after = line[line.index("{") + 1:]
+                if "}" in after:
+                    # single-line: type = { armor anti_air }
+                    inner = after[:after.index("}")]
+                    if "support" not in inner.split():
+                        block[tm] = line[:line.index("{") + 1] + inner.rstrip() + " support }"
+                        fixed.append(m.group(1))
+                else:
+                    # multi-line: insert a 'support' line before the closing }
+                    close = next((k for k in range(tm + 1, len(block)) if re.match(r"^\t\t\}", block[k])), None)
+                    if close is not None and "support" not in " ".join(block[tm + 1:close]).split():
+                        block.insert(close, "\t\t\tsupport")
+                        fixed.append(m.group(1))
+        out[i:j + 1] = block
+        i += len(block)
+    return "\n".join(out), fixed
+
+
+def generate_unit_fixes(md):
+    """Override MD unit files that need a fixup in our copies."""
+    src = os.path.join(md, "common", "units", "MD_regimental_support.txt")
+    if not os.path.exists(src):
+        print("  !! MD_regimental_support.txt not found")
+        return
+    text, fixed = fix_support_group_subunits(read(src))
+    if not fixed:
+        print("  unit fixes: MD_regimental_support.txt needs no fixups")
+        return
+    header = ("# GENERATED FILE - do not edit by hand.\n"
+              "# Copy of Millennium Dawn's common/units/MD_regimental_support.txt with\n"
+              "# 'support' added to the type list of the hidden Light_* sub-units\n"
+              "# (group = support but no 'support' in type).\n"
+              "# Rebuild with: python tools/rebase.py units\n")
+    write(os.path.join(REPO, "common", "units", "MD_regimental_support.txt"), header + text)
+    print(f"  generated unit fixes: MD_regimental_support.txt ({len(fixed)} sub-units)")
+
+
+# --------------------------------------------------------------------------
 # technology effects (generated from MD's own tech tree)
 # --------------------------------------------------------------------------
 
@@ -990,7 +1059,7 @@ def rebase_history(md, rename_map):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("mode", choices=["extract", "generate", "focus", "history", "tech", "filters"])
+    ap.add_argument("mode", choices=["extract", "generate", "focus", "history", "tech", "filters", "units"])
     ap.add_argument("--md", default=os.environ.get("MD_PATH", DEFAULT_MD))
     args = ap.parse_args()
 
@@ -1013,6 +1082,8 @@ def main():
         generate_tech_effects(MD)
     if args.mode in ("generate", "filters"):
         generate_search_filters(MD)
+    if args.mode in ("generate", "units"):
+        generate_unit_fixes(MD)
 
 
 if __name__ == "__main__":

@@ -327,7 +327,7 @@ air_wings = {
 		start_experience_factor = 0.65
 	}
 	204 = {
-		heavy_fighter_equipment_2 = { owner = "ISR" creator = "USA" amount = 20 version_name = "F-15C/D Baz" }
+		MR_Fighter4 = { owner = "ISR" creator = "USA" amount = 20 version_name = "F-15C/D Baz" }
 		name = "106/133 Squadron - 'Baz' Wing"
 		start_experience_factor = 0.6
 	}

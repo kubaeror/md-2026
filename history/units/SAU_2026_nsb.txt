@@ -355,7 +355,7 @@ air_wings = {
 		start_experience_factor = 0.45
 	}
 	176 = {
-		heavy_fighter_equipment_2 = { owner = "SAU" creator = "ENG" amount = 36 version_name = "EF-2000 Typhoon" }
+		MR_Fighter4 = { owner = "SAU" creator = "ENG" amount = 36 version_name = "EF-2000 Typhoon" }
 		name = "No. 10 Squadron"
 		start_experience_factor = 0.45
 	}
@@ -393,7 +393,7 @@ air_wings = {
 	}
 	# King Faisal Air Base, Tabuk
 	932 = {
-		heavy_fighter_equipment_2 = { owner = "SAU" creator = "ENG" amount = 36 version_name = "EF-2000 Typhoon" }
+		MR_Fighter4 = { owner = "SAU" creator = "ENG" amount = 36 version_name = "EF-2000 Typhoon" }
 		name = "No. 11 Squadron"
 		start_experience_factor = 0.45
 	}

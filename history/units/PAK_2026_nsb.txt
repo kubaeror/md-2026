@@ -422,7 +422,7 @@ air_wings = {
 	}
 	# No. 8 Squadron "Haiders" — Mirage V (Masroor)
 	426 = {
-		CAS_equipment_2 = { owner = "PAK" creator = "FRA" amount = 30 version_name = "Mirage IIIEP/V" }
+		cas2 = { owner = "PAK" creator = "FRA" amount = 30 version_name = "Mirage IIIEP/V" }
 		name = "No. 8 Squadron"
 		start_experience_factor = 0.3
 	}

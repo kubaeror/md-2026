@@ -110,7 +110,7 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = infantry_weapons_5
 		amount = 1000
-		producer = USA
+		producer = GEO
 	}
 }
 
@@ -118,7 +118,7 @@ instant_effect = {
 air_wings = {
 	# Marneuli / Vaziani Air Base (Eastern Georgia)
 	708 = {
-		CAS_equipment_2 = { owner = "GEO" creator = "SOV" amount = 12 version_name = "Su-25KM Scorpion" }
+		cas2 = { owner = "GEO" creator = "SOV" amount = 12 version_name = "Su-25KM Scorpion" }
 		name = "Tactical Aviation Brigade"
 		start_experience_factor = 0.4
 	}

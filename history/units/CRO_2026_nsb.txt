@@ -125,7 +125,7 @@ instant_effect = {
 air_wings = {
 	# Rafale F3-R (delivered from France 2024-2025)
 	126 = {
-		heavy_fighter_equipment_2 = { owner = "CRO" creator = "FRA" amount = 12 version_name = "Rafale F3-R" }
+		MR_Fighter4 = { owner = "CRO" creator = "FRA" amount = 12 version_name = "Rafale F3-R" }
 		name = "Eskadrila Lovaca"
 		start_experience_factor = 0.4
 	}

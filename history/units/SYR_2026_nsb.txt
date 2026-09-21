@@ -188,7 +188,7 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = infantry_weapons_3
 		amount = 5000
-		producer = SOV
+		producer = SYR
 	}
 }
 
@@ -202,7 +202,7 @@ air_wings = {
 	}
 	# L-39 Albatros (trainer/light attack, some still flying)
 	186 = {
-		CAS_equipment_2 = { owner = "SYR" creator = "SOV" amount = 10 version_name = "L-39ZA Albatros" }
+		cas2 = { owner = "SYR" creator = "SOV" amount = 10 version_name = "L-39ZA Albatros" }
 		name = "Training Squadron"
 		start_experience_factor = 0.15
 	}

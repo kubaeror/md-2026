@@ -313,7 +313,7 @@ air_wings = {
 	}
 	# Santa Cruz (Rio de Janeiro)
 	883 = {
-		CAS_equipment_2 = { owner = "BRA" amount = 20 version_name = "A-1M AMX" }
+		cas2 = { owner = "BRA" amount = 20 version_name = "A-1M AMX" }
 		name = "1º/16º Grupo de Aviação"
 		start_experience_factor = 0.4
 	}
@@ -329,7 +329,7 @@ air_wings = {
 	}
 	# Natal / Ceará area
 	889 = {
-		CAS_equipment_2 = { owner = "BRA" amount = 20 version_name = "A-1M AMX" }
+		cas2 = { owner = "BRA" amount = 20 version_name = "A-1M AMX" }
 		name = "3º/10º Grupo de Aviação"
 		start_experience_factor = 0.4
 	}

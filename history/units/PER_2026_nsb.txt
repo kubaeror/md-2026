@@ -351,7 +351,7 @@ instant_effect = {
 air_wings = {
 	# 8th Tactical Fighter Base (Isfahan/Khatami) — F-14A Tomcat
 	976 = {
-		heavy_fighter_equipment_2 = { owner = "PER" creator = "USA" amount = 24 version_name = "F-14A Tomcat" }
+		MR_Fighter4 = { owner = "PER" creator = "USA" amount = 24 version_name = "F-14A Tomcat" }
 		name = "81st Tactical Fighter Squadron"
 		start_experience_factor = 0.4
 	}

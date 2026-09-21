@@ -640,7 +640,7 @@ instant_effect = {
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {
-		type = artillery_equipment
+		type = artillery_2
 		amount = 2000
 		producer = SOV
 	}
@@ -658,13 +658,13 @@ air_wings = {
 
 	# 23rd Fighter Aviation Regiment - Dzemgi, Khabarovsk
 	687 = {
-		heavy_fighter_equipment_2 = { owner = "SOV" amount = 20 version_name = "Su-35S" }
+		MR_Fighter4 = { owner = "SOV" amount = 20 version_name = "Su-35S" }
 		name = "23rd Fighter Aviation Regiment"
 		start_experience_factor = 0.45
 	}
 	# 22nd Guards Fighter Aviation Regiment - Primorye
 	692 = {
-		heavy_fighter_equipment_2 = { owner = "SOV" amount = 20 version_name = "Su-35S" }
+		MR_Fighter4 = { owner = "SOV" amount = 20 version_name = "Su-35S" }
 		name = "22nd Guards Fighter Aviation Regiment"
 		start_experience_factor = 0.45
 	}
@@ -688,13 +688,13 @@ air_wings = {
 	}
 	# 120th Fighter Aviation Regiment - Chita (MiG-31BM)
 	1070 = {
-		heavy_fighter_equipment_2 = { owner = "SOV" amount = 16 version_name = "MiG-31BM" }
+		MR_Fighter4 = { owner = "SOV" amount = 16 version_name = "MiG-31BM" }
 		name = "120th Fighter Aviation Regiment"
 		start_experience_factor = 0.4
 	}
 	# 790th Fighter Aviation Regiment - Tver (MiG-31BM)
 	649 = {
-		heavy_fighter_equipment_2 = { owner = "SOV" amount = 16 version_name = "MiG-31BM" }
+		MR_Fighter4 = { owner = "SOV" amount = 16 version_name = "MiG-31BM" }
 		name = "790th Fighter Aviation Regiment"
 		start_experience_factor = 0.4
 	}
@@ -742,13 +742,13 @@ air_wings = {
 	}
 	# 960th Assault Aviation Regiment - Krasnodar (Su-25SM3)
 	668 = {
-		CAS_equipment_2 = { owner = "SOV" amount = 16 version_name = "Su-25SM3" }
+		cas2 = { owner = "SOV" amount = 16 version_name = "Su-25SM3" }
 		name = "960th Assault Aviation Regiment"
 		start_experience_factor = 0.4
 	}
 	# 368th Assault Aviation Regiment - Krasnodar (Su-25SM3)
 	668 = {
-		CAS_equipment_2 = { owner = "SOV" amount = 16 version_name = "Su-25SM3" }
+		cas2 = { owner = "SOV" amount = 16 version_name = "Su-25SM3" }
 		name = "368th Assault Aviation Regiment"
 		start_experience_factor = 0.4
 	}

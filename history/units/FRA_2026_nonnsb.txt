@@ -1,0 +1,387 @@
+# GENERATED FILE - do not edit by hand.
+# Non-No-Step-Back variant of FRA_2026_nsb.txt.
+# Rebuild with: python tools/make_nonnsb_oob.py --apply
+### FRA 2026 OOB (NSB) ###
+### Millennium Dawn 2026 Rework ###
+### French Armed Forces - January 2026 ###
+
+## Division Templates ##
+
+# Brigade Blindée (Armored Brigade) - Leclerc + VBCI
+division_template = {
+	name = "Brigade Blindee"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		Arm_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+		attack_helo_bat = { x = 1 y = 1 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+
+# Brigade Interarmes (Combined Arms - Griffon/Jaguar)
+division_template = {
+	name = "Brigade Interarmes"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		L_arm_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		Mech_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		drone_tactical_company = { x = 0 y = 4 }
+	}
+}
+
+# Brigade Legere (Light Brigade - Mountain/Infantry)
+division_template = {
+	name = "Brigade Legere"
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# 11e Brigade Parachutiste
+division_template = {
+	name = "Brigade Parachutiste"
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+		L_Air_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+# COS (Special Operations)
+division_template = {
+	name = "Commandement des Operations Speciales"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		L_Ranger_Recce_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+	}
+}
+
+# Foreign Legion Brigade
+division_template = {
+	name = "Brigade de la Legion Etrangere"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+## Unit Deployments ##
+
+units = {
+	# 1re Division - Northeast
+	division = {
+		name = "1re Brigade Blindee"
+		location = 6545
+		division_template = "Brigade Blindee"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "2e Brigade Blindee"
+		location = 6698
+		division_template = "Brigade Blindee"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "7e Brigade Blindee"
+		location = 6698
+		division_template = "Brigade Interarmes"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.75
+	}
+
+	# 3e Division
+	division = {
+		name = "9e Brigade Interarmes"
+		location = 3626
+		division_template = "Brigade Interarmes"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "27e Brigade Montagne"
+		location = 3768
+		division_template = "Brigade Legere"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "6e Brigade Legere Blindee"
+		location = 958
+		division_template = "Brigade Interarmes"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+
+	# 11e Brigade Parachutiste
+	division = {
+		name = "11e Brigade Parachutiste"
+		location = 6766
+		division_template = "Brigade Parachutiste"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.8
+	}
+
+	# Foreign Legion
+	division = {
+		name = "Brigade de la Legion Etrangere"
+		location = 521
+		division_template = "Brigade de la Legion Etrangere"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.8
+	}
+
+	# Franco-German Brigade (in Germany)
+	division = {
+		name = "Brigade Franco-Allemande"
+		location = 3679
+		division_template = "Brigade Interarmes"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+
+	# COS
+	division = {
+		name = "COS"
+		location = 454
+		division_template = "Commandement des Operations Speciales"
+		start_experience_factor = 0.85
+		start_equipment_factor = 0.85
+	}
+
+	# Overseas (French Guiana)
+	division = {
+		name = "Forces en Guyane"
+		location = 12885
+		division_template = "Brigade Legere"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.6
+	}
+
+	### Marine Nationale ###
+	fleet = {
+		name = "Force d'Action Navale"
+		naval_base = 911
+		task_force = {
+			name = "Groupe Aeronaval"
+			location = 911
+			ship = { name = "Charles de Gaulle (R91)" definition = carrier start_experience_factor = 0.75 equipment = { carrier_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Charles de Gaulle Class" } } }
+			ship = { name = "Forbin (D620)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = FRA creator = FRA version_name = "Horizon Class" } } }
+			ship = { name = "Chevalier Paul (D621)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = FRA creator = FRA version_name = "Horizon Class" } } }
+			ship = { name = "Aquitaine (D650)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Normandie (D651)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Provence (D652)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Aquitaine Class" } } }
+		}
+		task_force = {
+			name = "Escadre de Frigates — Mediterranee"
+			location = 911
+			ship = { name = "Alsace (D656)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Alsace Class" } } }
+			ship = { name = "Lorraine (D657)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Alsace Class" } } }
+			ship = { name = "La Fayette (F710)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "La Fayette Class" } } }
+			ship = { name = "Surcouf (F711)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "La Fayette Class" } } }
+		}
+		task_force = {
+			name = "Force Amphibie"
+			location = 911
+			ship = { name = "Mistral (L9013)" definition = helicopter_operator start_experience_factor = 0.7 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Mistral Class" } } }
+			ship = { name = "Tonnerre (L9014)" definition = helicopter_operator start_experience_factor = 0.7 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Mistral Class" } } }
+			ship = { name = "Dixmude (L9015)" definition = helicopter_operator start_experience_factor = 0.65 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Mistral Class" } } }
+		}
+	}
+	fleet = {
+		name = "Force d'Action Navale Atlantique"
+		naval_base = 3552
+		task_force = {
+			name = "Escadre de Frigates — Atlantique"
+			location = 3552
+			ship = { name = "Languedoc (D653)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Auvergne (D654)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Bretagne (D655)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Courbet (F712)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "La Fayette Class" } } }
+			ship = { name = "Aconit (F713)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "La Fayette Class" } } }
+			ship = { name = "Guepratte (F714)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "La Fayette Class" } } }
+		}
+	}
+	fleet = {
+		name = "Forces Sous-Marines"
+		naval_base = 911
+		task_force = {
+			name = "Escadrille des SNA"
+			location = 911
+			ship = { name = "Suffren (S635)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = FRA creator = FRA version_name = "Suffren Class" } } }
+			ship = { name = "Duguay-Trouin (S636)" definition = attack_submarine start_experience_factor = 0.7 equipment = { attack_submarine_hull_3 = { amount = 1 owner = FRA creator = FRA version_name = "Suffren Class" } } }
+			ship = { name = "Emeraude (S604)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Rubis Class" } } }
+			ship = { name = "Perle (S606)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Rubis Class" } } }
+		}
+		task_force = {
+			name = "Force Oceanique Strategique"
+			location = 3552
+			ship = { name = "Le Triomphant (S616)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Triomphant Class" } } }
+			ship = { name = "Le Temeraire (S617)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Triomphant Class" } } }
+			ship = { name = "Le Vigilant (S618)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Triomphant Class" } } }
+			ship = { name = "Le Terrible (S619)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Triomphant Class" } } }
+		}
+	}
+	fleet = {
+		name = "Forces Maritimes Outre-Mer"
+		naval_base = 13017
+		task_force = {
+			name = "Zone Maritime Ocean Indien"
+			location = 13017
+			ship = { name = "Floreal (F730)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA creator = FRA version_name = "Floreal Class" } } }
+			ship = { name = "Nivose (F732)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA creator = FRA version_name = "Floreal Class" } } }
+		}
+		task_force = {
+			name = "Zone Maritime Caraibes"
+			location = 177
+			ship = { name = "Ventose (F733)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA creator = FRA version_name = "Floreal Class" } } }
+			ship = { name = "Germinal (F735)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA creator = FRA version_name = "Floreal Class" } } }
+		}
+		task_force = {
+			name = "Zone Maritime Pacifique"
+			location = 12132
+			ship = { name = "Vendemiaire (F734)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA creator = FRA version_name = "Floreal Class" } } }
+		}
+		task_force = {
+			name = "Zone Maritime Polynesie"
+			location = 12148
+			ship = { name = "Prairial (F731)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA creator = FRA version_name = "Floreal Class" } } }
+		}
+	}
+}
+
+### Equipment Stockpile ###
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_5
+		amount = 2500
+		producer = FRA
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_2
+		amount = 400
+		producer = FRA
+	}
+}
+
+### Armee de l'Air et de l'Espace & Aeronavale ###
+air_wings = {
+	# BA 113 Saint-Dizier — Rafale (EC 4 Gascogne/La Fayette/Provence)
+	305 = {
+		medium_plane_airframe_2 = { owner = "FRA" amount = 45 version_name = "Dassault Rafale C/B" }
+		name = "Escadre de Chasse 4 — Saint-Dizier"
+		start_experience_factor = 0.65
+	}
+	# BA 118 Mont-de-Marsan — Rafale (EC 30 Normandie-Niemen/Lorraine)
+	60 = {
+		medium_plane_airframe_2 = { owner = "FRA" amount = 30 version_name = "Dassault Rafale C/B" }
+		name = "Escadre de Chasse 30 — Mont-de-Marsan"
+		start_experience_factor = 0.6
+	}
+	# BA 133 Nancy-Ochey — Mirage 2000D (EC 3 Ardennes)
+	57 = {
+		cas1 = { owner = "FRA" amount = 40 version_name = "Mirage 2000D" }
+		name = "Escadre de Chasse 3 — Nancy"
+		start_experience_factor = 0.55
+	}
+	# BA 116 Luxeuil — Mirage 2000-5F (EC 2 Cigognes)
+	963 = {
+		small_plane_airframe_2 = { owner = "FRA" amount = 18 version_name = "Mirage 2000-5F" }
+		name = "Escadre de Chasse 2 — Luxeuil"
+		start_experience_factor = 0.5
+	}
+	# BA 123 Orleans-Bricy — Strategic/Tactical Airlift (ET 1/61)
+	59 = {
+		transport_plane2 = { owner = "FRA" amount = 18 version_name = "A400M Atlas" }
+		name = "Escadre de Transport 1/61 — Orleans"
+		start_experience_factor = 0.6
+	}
+	# BA 123 Orleans — C-130H/J Hercules (ET 2/61)
+	59 = {
+		transport_plane1 = { owner = "FRA" creator = "USA" amount = 14 version_name = "C-130H/J Hercules" }
+		name = "Escadre de Transport 2/61 — Orleans"
+		start_experience_factor = 0.55
+	}
+	# BA 709 Cognac — MQ-9A Reaper (ED 1/33 Belfort)
+	958 = {
+		Air_UAV2 = { owner = "FRA" creator = "USA" amount = 6 version_name = "MQ-9A Reaper" }
+		name = "Escadron de Drones 1/33 Belfort"
+		start_experience_factor = 0.55
+	}
+	# BAN Landivisiau — Rafale M shore-based (Flottilles 11F/17F)
+	64 = {
+		medium_plane_airframe_2 = { owner = "FRA" amount = 20 version_name = "Dassault Rafale M" }
+		name = "Flottilles 11F/17F — Landivisiau"
+		start_experience_factor = 0.65
+	}
+	# BAN Lann-Bihoue — Atlantique 2 Maritime Patrol (Flottilles 21F/23F)
+	64 = {
+		naval_plane1 = { owner = "FRA" amount = 18 version_name = "Atlantique 2" }
+		name = "Flottilles 21F/23F — Lann-Bihoue"
+		start_experience_factor = 0.6
+	}
+	# Groupe Aerien Embarque — Charles de Gaulle (Rafale M)
+	"Charles de Gaulle (R91)" = {
+		cv_medium_plane_airframe_2 = { owner = "FRA" amount = 18 version_name = "Dassault Rafale M" }
+		name = "Groupe Aerien Embarque"
+		start_experience_factor = 0.7
+	}
+	# Charles de Gaulle — E-2C Hawkeye (Flottille 4F)
+	"Charles de Gaulle (R91)" = {
+		cv_awacs_equipment_2 = { owner = "FRA" creator = "USA" amount = 3 version_name = "E-2C Hawkeye" }
+		name = "Flottille 4F — Det. CdG"
+		start_experience_factor = 0.6
+	}
+}

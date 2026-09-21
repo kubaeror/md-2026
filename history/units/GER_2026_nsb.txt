@@ -231,7 +231,7 @@ instant_effect = {
 		producer = GER
 	}
 	add_equipment_to_stockpile = {
-		type = artillery_equipment
+		type = artillery_2
 		amount = 400
 		producer = GER
 	}
@@ -241,25 +241,25 @@ instant_effect = {
 air_wings = {
 	# TaktLwG 71 "Richthofen" — Wittmund (Niedersachsen)
 	38 = {
-		heavy_fighter_equipment_2 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
+		MR_Fighter4 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
 		name = "TaktLwG 71 Richthofen — Wittmund"
 		start_experience_factor = 0.6
 	}
 	# TaktLwG 73 "Steinhoff" — Laage (Mecklenburg-Vorpommern)
 	539 = {
-		heavy_fighter_equipment_2 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
+		MR_Fighter4 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
 		name = "TaktLwG 73 Steinhoff — Laage"
 		start_experience_factor = 0.6
 	}
 	# TaktLwG 74 — Neuburg an der Donau (Bayern)
 	43 = {
-		heavy_fighter_equipment_2 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
+		MR_Fighter4 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
 		name = "TaktLwG 74 — Neuburg"
 		start_experience_factor = 0.6
 	}
 	# TaktLwG 31 "Boelcke" — Noervenich (NRW)
 	966 = {
-		heavy_fighter_equipment_2 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
+		MR_Fighter4 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
 		name = "TaktLwG 31 Boelcke — Noervenich"
 		start_experience_factor = 0.6
 	}

@@ -253,7 +253,7 @@ instant_effect = {
 air_wings = {
 	## Andalucía (Morón) ##
 	93 = {
-		heavy_fighter_equipment_2 = { owner = "SPR" amount = 36 version_name = "Eurofighter Typhoon" }
+		MR_Fighter4 = { owner = "SPR" amount = 36 version_name = "Eurofighter Typhoon" }
 		name = "Ala 11"
 		start_experience_factor = 0.6
 	}
@@ -264,7 +264,7 @@ air_wings = {
 	}
 	## Castilla-La Mancha (Albacete/Los Llanos) ##
 	970 = {
-		heavy_fighter_equipment_2 = { owner = "SPR" amount = 37 version_name = "Eurofighter Typhoon" }
+		MR_Fighter4 = { owner = "SPR" amount = 37 version_name = "Eurofighter Typhoon" }
 		name = "Ala 14"
 		start_experience_factor = 0.6
 	}

@@ -1,0 +1,85 @@
+# GENERATED FILE - do not edit by hand.
+# Non-No-Step-Back variant of EST_2026_nsb.txt.
+# Rebuild with: python tools/make_nonnsb_oob.py --apply
+##### Estonia - 2026 OOB #####
+# Estonian Defence Forces - NATO frontline state
+# Expanded post-2022, territorial defense model + professional core
+
+division_template = {
+	name = "Jalaväebrigaad"		# Infantry Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Kaitseliidu Brigaad"		# Territorial Defence Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+		L_Inf_Bat = { x = 1 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "1. Jalaväebrigaad"
+		location = 9079
+		division_template = "Jalaväebrigaad"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "2. Jalaväebrigaad"
+		location = 9079
+		division_template = "Jalaväebrigaad"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.70
+	}
+	division = {
+		name = "Kaitseliidu Brigaad"
+		location = 9079
+		division_template = "Kaitseliidu Brigaad"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.60
+	}
+
+	##### Estonian Navy (Tallinn) #####
+	fleet = {
+		name = "Estonian Navy"
+		naval_base = 3152
+		task_force = {
+			name = "Mine Countermeasures Division"
+			location = 3152
+			ship = { name = "EML Ugandi (M313)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = EST creator = EST version_name = "Sandown Class" } } }
+			ship = { name = "EML Sakala (M314)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = EST creator = EST version_name = "Sandown Class" } } }
+			ship = { name = "EML Wambola (M315)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = EST creator = EST version_name = "Sandown Class" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_5
+		amount = 2000
+		producer = EST
+	}
+}

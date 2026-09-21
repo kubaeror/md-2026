@@ -3,16 +3,16 @@
 ##############################
 2026.1.1 = {
 
+	### Technology 2026 ###
+	md2026_tier3_2026_techs = yes
+
 	if = {
 		limit = { has_dlc = "No Step Back" }
 		set_oob = "BEL_2026_nsb"
 		else = {
-			set_oob = "BEL_2000_nonnsb"
+			set_oob = "BEL_2026_nonnsb"
 		}
 	}
-
-	### Technology 2026 ###
-	md2026_tier3_2026_techs = yes
 
 	### GDP & Economic Variables ###
 	set_variable = { gdp_per_capita = 52.000 }

@@ -110,7 +110,7 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = infantry_weapons_5
 		amount = 1000
-		producer = RAJ
+		producer = ARM
 	}
 }
 
@@ -118,12 +118,12 @@ instant_effect = {
 air_wings = {
 	# Erebuni Air Base (Yerevan)
 	709 = {
-		heavy_fighter_equipment_2 = { owner = "ARM" creator = "SOV" amount = 4 version_name = "Su-30SM Flanker-H" }
+		MR_Fighter4 = { owner = "ARM" creator = "SOV" amount = 4 version_name = "Su-30SM Flanker-H" }
 		name = "Fighter Squadron"
 		start_experience_factor = 0.4
 	}
 	709 = {
-		CAS_equipment_2 = { owner = "ARM" creator = "SOV" amount = 8 version_name = "Su-25" }
+		cas2 = { owner = "ARM" creator = "SOV" amount = 8 version_name = "Su-25" }
 		name = "Attack Aviation Squadron"
 		start_experience_factor = 0.35
 	}

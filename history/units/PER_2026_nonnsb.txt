@@ -1,0 +1,415 @@
+# GENERATED FILE - do not edit by hand.
+# Non-No-Step-Back variant of PER_2026_nsb.txt.
+# Rebuild with: python tools/make_nonnsb_oob.py --apply
+##### Division Templates #####
+# Iran 2026 — Dual military: Artesh (regular) + IRGC (Sepah-e Pasdaran)
+
+division_template = {
+	name = "Lashkar-e Zerehi"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Lashkar-e Mechanize"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Tip-e Piade Nezam"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Arty_Bat = { x = 2 y = 0 }
+		Arty_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Tip-e Chatrbaz"
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Tofangdarane Daryayee"
+	regiments = {
+		L_Marine_Bat = { x = 0 y = 0 }
+		L_Marine_Bat = { x = 0 y = 1 }
+		L_Marine_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "IRGC Division"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Quds Force"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		Special_Forces = { x = 0 y = 2 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+##### Units #####
+
+units = {
+	##### Artesh — Regular Army #####
+
+	# 16th Armored Division (Qazvin)
+	division = {
+		name = "16th Armoured Division"
+		location = 9059
+		division_template = "Lashkar-e Zerehi"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	# 81st Armored Division (Kerman)
+	division = {
+		name = "81st Armoured Division"
+		location = 8074
+		division_template = "Lashkar-e Zerehi"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	# 88th Armored Division (Zahedan)
+	division = {
+		name = "88th Armoured Division"
+		location = 14271
+		division_template = "Lashkar-e Zerehi"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	# 92nd Armored Division (Ahvaz)
+	division = {
+		name = "92nd Armoured Division"
+		location = 10454
+		division_template = "Lashkar-e Zerehi"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	# 21st Infantry Division (Tabriz)
+	division = {
+		name = "21st Infantry Division"
+		location = 3988
+		division_template = "Tip-e Piade Nezam"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.7
+	}
+	# 28th Mechanized Division (Sanandaj)
+	division = {
+		name = "28th Mechanized Division"
+		location = 2000
+		division_template = "Lashkar-e Mechanize"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	# 30th Infantry Division (Gorgan)
+	division = {
+		name = "30th Infantry Division"
+		location = 4609
+		division_template = "Tip-e Piade Nezam"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.7
+	}
+	# 58th Infantry Division (Shahrud)
+	division = {
+		name = "58th Infantry Division"
+		location = 10828
+		division_template = "Tip-e Piade Nezam"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.7
+	}
+	# 64th Infantry Division (Urmia)
+	division = {
+		name = "64th Infantry Division"
+		location = 4959
+		division_template = "Tip-e Piade Nezam"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.7
+	}
+	# 77th Infantry Division (Isfahan)
+	division = {
+		name = "77th Infantry Division"
+		location = 4618
+		division_template = "Tip-e Piade Nezam"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.7
+	}
+	# 55th Airborne Brigade
+	division = {
+		name = "55th Airborne Brigade"
+		location = 10768
+		division_template = "Tip-e Chatrbaz"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	# Marines (Artesh Navy)
+	division = {
+		name = "Artesh Marines"
+		location = 4580
+		division_template = "Tofangdarane Daryayee"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+
+	##### IRGC Ground Forces #####
+
+	# 1st IRGC Division (Tehran)
+	division = {
+		name = "1st Sarallah IRGC Division"
+		location = 1957
+		division_template = "IRGC Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# 5th IRGC Division (Hamadan)
+	division = {
+		name = "5th Nasr IRGC Division"
+		location = 3908
+		division_template = "IRGC Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# 8th IRGC Division (Isfahan)
+	division = {
+		name = "8th Najaf IRGC Division"
+		location = 4618
+		division_template = "IRGC Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# 10th IRGC Division (Shiraz)
+	division = {
+		name = "10th Seyyed al-Shuhada IRGC Division"
+		location = 829
+		division_template = "IRGC Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# 14th IRGC Division (Kermanshah)
+	division = {
+		name = "14th Imam Hossein IRGC Division"
+		location = 7602
+		division_template = "IRGC Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# 17th IRGC Division (Kurdistan)
+	division = {
+		name = "17th Ali ibn Abi Talib IRGC Division"
+		location = 4356
+		division_template = "IRGC Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# 19th IRGC Division (Khorasan)
+	division = {
+		name = "19th Fajr IRGC Division"
+		location = 8040
+		division_template = "IRGC Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# 25th IRGC Division (Sistan)
+	division = {
+		name = "25th Karbala IRGC Division"
+		location = 2026
+		division_template = "IRGC Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# IRGC Marines
+	division = {
+		name = "IRGC Naval Forces"
+		location = 5050
+		division_template = "Tofangdarane Daryayee"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+
+	##### Quds Force #####
+
+	# Quds Force
+	division = {
+		name = "Quds Force"
+		location = 1982
+		division_template = "Quds Force"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+
+	##### IRIN — Islamic Republic of Iran Navy #####
+
+	# Southern Fleet (Persian Gulf / Gulf of Oman — Bandar Abbas)
+	fleet = {
+		name = "IRIN Southern Fleet"
+		naval_base = 7982
+		task_force = {
+			name = "1st Surface Group"
+			location = 7982
+			ship = { name = "IRIS Jamaran (76)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = PER creator = PER version_name = "Moudge-class" } } }
+			ship = { name = "IRIS Sahand (74)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = PER creator = PER version_name = "Moudge-class" } } }
+			ship = { name = "IRIS Dena (75)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PER creator = PER version_name = "Moudge-class" } } }
+			ship = { name = "IRIS Alvand (71)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = PER creator = PER version_name = "Alvand-class" } } }
+			ship = { name = "IRIS Alborz (72)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = PER creator = PER version_name = "Alvand-class" } } }
+			ship = { name = "IRIS Sabalan (73)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = PER creator = PER version_name = "Alvand-class" } } }
+		}
+		task_force = {
+			name = "Submarine Flotilla"
+			location = 7982
+			ship = { name = "IRIS Tareg (901)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PER creator = PER version_name = "Kilo-class (Type 877EKM)" } } }
+			ship = { name = "IRIS Noor (902)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PER creator = PER version_name = "Kilo-class (Type 877EKM)" } } }
+			ship = { name = "IRIS Yunes (903)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PER creator = PER version_name = "Kilo-class (Type 877EKM)" } } }
+			ship = { name = "IRIS Fateh (S-1)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_1 = { amount = 1 owner = PER creator = PER version_name = "Fateh-class" } } }
+		}
+	}
+
+	# Caspian Fleet (Bandar-e Anzali)
+	fleet = {
+		name = "IRIN Caspian Fleet"
+		naval_base = 14619
+		task_force = {
+			name = "Caspian Task Force"
+			location = 14619
+			ship = { name = "IRIS Damavand (77)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PER creator = PER version_name = "Moudge-class" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_4
+		amount = 10000
+		producer = PER
+	}
+}
+
+##### IRIAF — Islamic Republic of Iran Air Force #####
+
+air_wings = {
+	# 8th Tactical Fighter Base (Isfahan/Khatami) — F-14A Tomcat
+	976 = {
+		MR_Fighter4 = { owner = "PER" creator = "USA" amount = 24 version_name = "F-14A Tomcat" }
+		name = "81st Tactical Fighter Squadron"
+		start_experience_factor = 0.4
+	}
+	# 2nd Tactical Fighter Base (Tabriz) — MiG-29A
+	407 = {
+		small_plane_airframe_2 = { owner = "PER" creator = "SOV" amount = 25 version_name = "MiG-29A Fulcrum" }
+		name = "21st Tactical Fighter Squadron"
+		start_experience_factor = 0.35
+	}
+	# 6th Tactical Fighter Base (Bandar Abbas) — F-4E
+	978 = {
+		cas1 = { owner = "PER" creator = "USA" amount = 10 version_name = "F-4E Phantom II" }
+		name = "61st Tactical Fighter Squadron"
+		start_experience_factor = 0.3
+	}
+	# 7th Tactical Fighter Base (Bushehr) — F-4E
+	1146 = {
+		cas1 = { owner = "PER" creator = "USA" amount = 10 version_name = "F-4E Phantom II" }
+		name = "71st Tactical Fighter Squadron"
+		start_experience_factor = 0.3
+	}
+	# 3rd Tactical Fighter Base (Hamadan/Nojeh) — F-4E
+	1148 = {
+		cas1 = { owner = "PER" creator = "USA" amount = 10 version_name = "F-4E Phantom II" }
+		name = "31st Tactical Fighter Squadron"
+		start_experience_factor = 0.3
+	}
+	# 4th Tactical Fighter Base (Dezful) — F-5E
+	406 = {
+		small_plane_airframe_2 = { owner = "PER" creator = "USA" amount = 20 version_name = "F-5E Tiger II" }
+		name = "41st Tactical Fighter Squadron"
+		start_experience_factor = 0.25
+	}
+	# 14th Tactical Fighter Base (Mashhad) — F-5E
+	402 = {
+		small_plane_airframe_2 = { owner = "PER" creator = "USA" amount = 20 version_name = "F-5E Tiger II" }
+		name = "141st Tactical Fighter Squadron"
+		start_experience_factor = 0.25
+	}
+	# 9th Tactical Fighter Base (Shiraz) — Su-24MK
+	400 = {
+		cas1 = { owner = "PER" creator = "SOV" amount = 20 version_name = "Su-24MK Fencer" }
+		name = "91st Tactical Fighter Squadron"
+		start_experience_factor = 0.3
+	}
+	# Transport — Mehrabad (Tehran)
+	405 = {
+		transport_plane1 = { owner = "PER" creator = "USA" amount = 8 version_name = "C-130E/H Hercules" }
+		name = "11th Tactical Airlift Squadron"
+		start_experience_factor = 0.3
+	}
+	# IRGC Aerospace Force — Mohajer-6 UCAV
+	399 = {
+		Air_UAV2 = { owner = "PER" amount = 12 version_name = "Mohajer-6 UCAV" }
+		name = "IRGC Aerospace UAV Wing"
+		start_experience_factor = 0.45
+	}
+}

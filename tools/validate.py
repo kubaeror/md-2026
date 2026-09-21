@@ -77,16 +77,33 @@ def load_sets(md):
             s["focus_by_file"][p] = ids
 
     s["equipment"] = set()
+    s["equipment_md"] = set()
+    s["equipment_archetype"] = set()
     for p in files(os.path.join(md, "common", "units", "equipment")) + \
              files(os.path.join(REPO, "common", "units", "equipment")) + \
              files(os.path.join(rebase.VANILLA, "common", "units", "equipment")):
         text = rebase.strip_comments(rebase.read(p))
+        is_md = rebase.VANILLA not in p
         for name, _ in rebase.children(text):
             s["equipment"].add(name)
+            if is_md:
+                s["equipment_md"].add(name)
         # archetypes are usually nested one level down
         for root_name, body in rebase.children(text):
-            for name, _ in rebase.children(body):
+            for name, bbody in rebase.children(body):
                 s["equipment"].add(name)
+                if is_md:
+                    s["equipment_md"].add(name)
+                    if re.search(r"(?m)^\s*is_archetype\s*=\s*yes", bbody):
+                        s["equipment_archetype"].add(name)
+
+    s["subunit"] = set()
+    for p in files(os.path.join(md, "common", "units")) + files(os.path.join(REPO, "common", "units")):
+        text = rebase.strip_comments(rebase.read(p))
+        for m in re.finditer(r"(?m)^\s*sub_units\s*=\s*\{", text):
+            ob = text.index("{", m.end() - 1)
+            for name, _ in rebase.children(text[ob:rebase.find_block(text, ob)]):
+                s["subunit"].add(name)
 
     s["tag"] = set()
     for p in files(os.path.join(md, "common", "country_tags")) + files(os.path.join(REPO, "common", "country_tags")) + \
@@ -671,6 +688,183 @@ def check_deferred_focuses(md):
             ERRORS["deferred focuses: driver"].append(why)
 
 
+def oob_files():
+    return [p for p in files(os.path.join(REPO, "history", "units"))
+            if re.search(r"[A-Z]{3}_2026(_nsb|_nonnsb)?\.txt$", os.path.basename(p))]
+
+
+def check_oob_tags(sets):
+    """owner / creator / producer in our OOB files must be real country tags."""
+    for p in files(os.path.join(REPO, "history", "units")):
+        text = rebase.strip_comments(rebase.read(p))
+        for m in re.finditer(r"(?m)^[ \t]*(owner|creator|producer|tag)\s*=\s*\"?([A-Z]{3})\"?", text):
+            if m.group(2) not in sets["tag"]:
+                ERRORS["unknown tag in OOB"].append(f"{m.group(1)} = {m.group(2)}  ({rel(p)})")
+
+
+def check_oob_subunits(sets):
+    """Battalions in our division templates must be defined sub-units."""
+    for p in files(os.path.join(REPO, "history", "units")):
+        text = rebase.strip_comments(rebase.read(p))
+        for block_re in (r"regiments\s*=\s*\{", r"regimental_support\s*=\s*\{", r"support\s*=\s*\{"):
+            for m in re.finditer(block_re, text):
+                ob = text.index("{", m.end() - 1)
+                body = text[ob:rebase.find_block(text, ob)]
+                for mm in re.finditer(r"(?m)^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*\{", body):
+                    if mm.group(1) not in sets["subunit"]:
+                        ERRORS["unknown sub-unit in OOB"].append(f"{mm.group(1)}  ({rel(p)})")
+
+
+def check_stockpile_types(sets):
+    """add_equipment_to_stockpile needs a concrete equipment, not an archetype.
+
+    Focus files that override an MD file carry MD's own rewards too; those are
+    reported as MD-side warnings instead of errors."""
+    targets = [(p, False) for p in files(os.path.join(REPO, "history", "units"))]
+    for p in files(os.path.join(REPO, "common", "national_focus")):
+        targets.append((p, not os.path.basename(p).startswith("md2026_")))
+    for p in files(os.path.join(REPO, "patches")):
+        targets.append((p, False))
+    for p, md_side in targets:
+        text = rebase.strip_comments(rebase.read(p))
+        for m in re.finditer(r"add_equipment_to_stockpile\s*=\s*\{", text):
+            ob = text.index("{", m.end() - 1)
+            body = text[ob:rebase.find_block(text, ob)]
+            tm = re.search(r"type\s*=\s*([A-Za-z0-9_]+)", body)
+            if not tm:
+                ERRORS["stockpile without type"].append(rel(p))
+                continue
+            name = tm.group(1)
+            if name in sets["equipment_archetype"]:
+                bucket = WARNINGS if md_side else ERRORS
+                bucket["stockpile of an archetype"].append(f"{name}  ({rel(p)})")
+            elif name not in sets["equipment_md"]:
+                bucket = WARNINGS if md_side else ERRORS
+                bucket["stockpile of an unknown equipment"].append(f"{name}  ({rel(p)})")
+
+
+def check_oob_tech_order():
+    """The 2026 tech tiers must be granted before set_oob: the OOB's
+    instant_effect adds stock, and a producer only has an equipment version
+    after the technology that unlocks it has been granted."""
+    for p in files(os.path.join(REPO, "patches", "history_countries")):
+        text = rebase.strip_comments(rebase.read(p))
+        tm = re.search(r"(?m)^\s*md2026_tier[0-9]_2026_techs\s*=", text)
+        om = re.search(r"(?m)^\s*set_oob\s*=", text)
+        if tm and om and tm.start() > om.start():
+            ERRORS["tech tier after set_oob"].append(rel(p))
+
+
+def check_nonnsb_variants():
+    """Every 2026 OOB needs a non-NSB variant, and the non-NSB branch of the
+    country history must point at it."""
+    have = {n[:-len("_2026_nonnsb.txt")] for n in os.listdir(os.path.join(REPO, "history", "units"))
+            if n.endswith("_2026_nonnsb.txt")}
+    for p in files(os.path.join(REPO, "history", "units")):
+        m = re.search(r"([A-Z]{3})_2026_nsb\.txt$", os.path.basename(p))
+        if m and m.group(1) not in have:
+            ERRORS["missing non-NSB OOB"].append(m.group(1))
+    rename = {"NOR": "NRY"}
+    for p in files(os.path.join(REPO, "patches", "history_countries")):
+        tag = rename.get(os.path.basename(p)[:3], os.path.basename(p)[:3])
+        text = rebase.strip_comments(rebase.read(p))
+        if "set_oob" not in text:
+            continue
+        mm = re.search(r"else\s*=\s*\{\s*set_oob\s*=\s*\"([^\"]+)\"", text)
+        if not mm:
+            WARNINGS["no non-NSB OOB branch"].append(tag)
+            continue
+        if mm.group(1) != f"{os.path.basename(p)[:3]}_2026_nonnsb":
+            ERRORS["non-NSB branch points elsewhere"].append(f"{tag}: {mm.group(1)}")
+
+
+def check_air_wings_states(md):
+    """air_wings = { <state> = ... } needs a state with an air base."""
+    air = set()
+    for root in (os.path.join(md, "history", "states"), os.path.join(REPO, "history", "states")):
+        for p in files(root):
+            text = rebase.read(p)
+            idm = re.search(r"(?m)^\s*id\s*=\s*(\d+)", text)
+            if idm and re.search(r"(?m)^\s*air_base\s*=\s*[1-9]", text):
+                air.add(idm.group(1))
+    for p in files(os.path.join(REPO, "history", "units")):
+        text = rebase.strip_comments(rebase.read(p))
+        for m in re.finditer(r"air_wings\s*=\s*\{", text):
+            ob = text.index("{", m.end() - 1)
+            body = text[ob:rebase.find_block(text, ob)]
+            for mm in re.finditer(r"(?m)^\s*(\d+)\s*=\s*\{", body):
+                if mm.group(1) not in air:
+                    ERRORS["air wing in state without air base"].append(
+                        f"state {mm.group(1)}  ({rel(p)})")
+
+
+def check_equipment_dlc_paths(md):
+    """Equipment only unlocked by NSB technologies must not appear in the
+    non-NSB OOB variants."""
+    avail = defaultdict(set)
+    root = os.path.join(md, "common", "technologies")
+    for name in sorted(os.listdir(root)):
+        if not name.endswith(".txt"):
+            continue
+        text = rebase.strip_comments(rebase.read(os.path.join(root, name)))
+        for m in re.finditer(r"(?m)^\s*([A-Za-z0-9_]+)\s*=\s*\{", text):
+            ob = text.index("{", m.end() - 1)
+            body = text[ob:rebase.find_block(text, ob)]
+            if "enable_equipment" not in body:
+                continue
+            names = set()
+            for g in re.findall(r"enable_equipments\s*=\s*\{([^}]*)\}", body):
+                names |= set(g.split())
+            if re.search(r"NOT\s*=\s*\{[^}]*has_dlc\s*=\s*\"No Step Back\"", body):
+                kind = "nonsb"
+            elif 'has_dlc = "No Step Back"' in body or name.startswith("NSB_"):
+                kind = "nsb"
+            else:
+                kind = "both"
+            for n in names:
+                avail[n].add(kind)
+    for p in files(os.path.join(REPO, "history", "units")):
+        if not p.endswith("_2026_nonnsb.txt"):
+            continue
+        text = rebase.strip_comments(rebase.read(p))
+        for m in re.finditer(r"type[ \t]*=[ \t]*([A-Za-z0-9_]+)", text):
+            paths = avail.get(m.group(1))
+            if paths and "nsb" in paths and "nonsb" not in paths and "both" not in paths:
+                WARNINGS["NSB-only equipment in non-NSB OOB"].append(
+                    f"{m.group(1)}  ({rel(p)})")
+
+
+def check_create_unit_templates(md):
+    """``create_unit`` rewards reference a division template by name; the name
+    must be defined in an order-of-battle file (MD's or ours)."""
+    defined = set()
+    for root in (os.path.join(md, "history", "units"), os.path.join(REPO, "history", "units")):
+        for p in files(root):
+            text = rebase.strip_comments(rebase.read(p))
+            for m in re.finditer(r"division_template\s*=\s*\{", text):
+                ob = text.index("{", m.end() - 1)
+                body = text[ob:rebase.find_block(text, ob)]
+                nm = re.search(r'name\s*=\s*"([^"]+)"', body)
+                if nm:
+                    defined.add(nm.group(1))
+    targets = [(p, not os.path.basename(p).startswith("md2026_"))
+               for p in files(os.path.join(REPO, "common", "national_focus"))]
+    md_side = set()
+    for p, md_side_file in targets:
+        text = rebase.read(p)
+        for m in re.finditer(r'division_template\s*=\s*\\"([^"\\]+)\\"', text):
+            if m.group(1) not in defined:
+                if md_side_file:
+                    md_side.add(m.group(1))
+                else:
+                    ERRORS["create_unit with unknown division template"].append(
+                        f"{m.group(1)}  ({rel(p)})")
+    if md_side:
+        WARNINGS["create_unit with unknown division template (MD-side)"].append(
+            f"{len(md_side)} templates referenced by MD's own focus rewards, e.g. "
+            f"{', '.join(sorted(md_side)[:3])}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--md", default=os.environ.get("MD_PATH", rebase.DEFAULT_MD))
@@ -741,6 +935,14 @@ def main():
     check_leader_ideology(md)
     check_membership_lists()
     check_unsafe_focuses(sets)
+    check_oob_tags(sets)
+    check_oob_subunits(sets)
+    check_stockpile_types(sets)
+    check_oob_tech_order()
+    check_nonnsb_variants()
+    check_air_wings_states(md)
+    check_equipment_dlc_paths(md)
+    check_create_unit_templates(md)
     check_installation()
 
     print()

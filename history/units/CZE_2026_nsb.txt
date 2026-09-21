@@ -99,7 +99,7 @@ air_wings = {
 	}
 	# 212th Tactical Squadron — L-159 ALCA (Čáslav)
 	117 = {
-		CAS_equipment_2 = { owner = "CZE" amount = 20 version_name = "L-159 ALCA" }
+		cas2 = { owner = "CZE" amount = 20 version_name = "L-159 ALCA" }
 		name = "212. taktická letka"
 		start_experience_factor = 0.4
 	}

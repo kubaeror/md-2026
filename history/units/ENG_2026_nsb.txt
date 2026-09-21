@@ -248,7 +248,7 @@ instant_effect = {
 		producer = ENG
 	}
 	add_equipment_to_stockpile = {
-		type = artillery_equipment
+		type = artillery_2
 		amount = 300
 		producer = ENG
 	}
@@ -258,13 +258,13 @@ instant_effect = {
 air_wings = {
 	# RAF Coningsby — Typhoon QRA & Strike (No. 3(F), 11(F), 29 Sqn)
 	1191 = {
-		heavy_fighter_equipment_2 = { owner = "ENG" amount = 36 version_name = "Eurofighter Typhoon FGR.4" }
+		MR_Fighter4 = { owner = "ENG" amount = 36 version_name = "Eurofighter Typhoon FGR.4" }
 		name = "No. 1 Group — Coningsby Wing"
 		start_experience_factor = 0.65
 	}
 	# RAF Lossiemouth — Typhoon (No. 1(F), 2, 6, 9(B) Sqn)
 	1195 = {
-		heavy_fighter_equipment_2 = { owner = "ENG" amount = 36 version_name = "Eurofighter Typhoon FGR.4" }
+		MR_Fighter4 = { owner = "ENG" amount = 36 version_name = "Eurofighter Typhoon FGR.4" }
 		name = "No. 1 Group — Lossiemouth Wing"
 		start_experience_factor = 0.65
 	}

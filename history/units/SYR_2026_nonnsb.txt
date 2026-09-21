@@ -1,0 +1,212 @@
+# GENERATED FILE - do not edit by hand.
+# Non-No-Step-Back variant of SYR_2026_nsb.txt.
+# Rebuild with: python tools/make_nonnsb_oob.py --apply
+##### Syria - 2026 OOB (Transitional Government, post-Assad) #####
+# Military fragmented after civil war; rebuilding under new transitional authority
+# Mix of remnant SAA equipment + militia forces being integrated
+
+division_template = {
+	name = "Firqa Mushaat"		# Infantry Division
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+		Militia_Bat = { x = 2 y = 0 }
+		Militia_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Arty_Battery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Firqa Miliishiya"		# Militia Division
+	regiments = {
+		Militia_Bat = { x = 0 y = 0 }
+		Militia_Bat = { x = 0 y = 1 }
+		Militia_Bat = { x = 0 y = 2 }
+		Militia_Bat = { x = 1 y = 0 }
+		Militia_Bat = { x = 1 y = 1 }
+		Militia_Bat = { x = 1 y = 2 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Firqa Madra'a"		# Motorized Division (remnant)
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		L_Inf_Bat = { x = 2 y = 0 }
+		L_Inf_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		Arty_Battery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Liwa' Mudarra'"		# Armored Brigade (remnant)
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Transitional Syrian Military #####
+
+	# Damascus area
+	division = {
+		name = "1. Firqa Mushaat"
+		location = 1074
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.50
+	}
+	division = {
+		name = "2. Firqa Mushaat"
+		location = 6302
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.50
+	}
+
+	# Aleppo area
+	division = {
+		name = "3. Firqa Mushaat"
+		location = 6206
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name = "1. Firqa Miliishiya"
+		location = 6206
+		division_template = "Firqa Miliishiya"
+		start_experience_factor = 0.20
+		start_equipment_factor = 0.40
+	}
+
+	# Homs / Central
+	division = {
+		name = "4. Firqa Mushaat"
+		location = 1088
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name = "2. Firqa Miliishiya"
+		location = 4111
+		division_template = "Firqa Miliishiya"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
+	}
+
+	# Eastern Syria (Deir ez-Zor / SDF area)
+	division = {
+		name = "3. Firqa Miliishiya"
+		location = 7140
+		division_template = "Firqa Miliishiya"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.40
+	}
+	division = {
+		name = "4. Firqa Miliishiya"
+		location = 12473
+		division_template = "Firqa Miliishiya"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.35
+	}
+
+	# Motorized / Armor remnants
+	division = {
+		name = "1. Firqa Madra'a"
+		location = 1074
+		division_template = "Firqa Madra'a"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.40
+	}
+	division = {
+		name = "1. Liwa' Mudarra'"
+		location = 6302
+		division_template = "Liwa' Mudarra'"
+		start_experience_factor = 0.20
+		start_equipment_factor = 0.30
+	}
+
+	# Coastal / Latakia
+	division = {
+		name = "5. Firqa Miliishiya"
+		location = 1108
+		division_template = "Firqa Miliishiya"
+		start_experience_factor = 0.20
+		start_equipment_factor = 0.40
+	}
+
+	# Southern border
+	division = {
+		name = "5. Firqa Mushaat"
+		location = 6312
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.20
+		start_equipment_factor = 0.45
+	}
+
+	##### Syrian Navy (remnant) #####
+	fleet = {
+		name = "Syrian Navy"
+		naval_base = 10087		# Latakia / Tartus
+		task_force = {
+			name = "Latakia Naval Detachment"
+			location = 10087
+			# Remnant patrol craft
+			ship = { name = "Tishreen" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = SYR creator = SYR version_name = "Petya class" } } }
+			ship = { name = "Al Assad" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = SYR creator = SYR version_name = "Osa class" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_4
+		amount = 3000
+		producer = SYR
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_3
+		amount = 5000
+		producer = SYR
+	}
+}
+
+##### Syrian Air Force (remnant, minimal operational capability) #####
+air_wings = {
+	# Surviving MiG-29 (very few operational)
+	186 = {
+		small_plane_airframe_2 = { owner = "SYR" creator = "SOV" amount = 6 version_name = "MiG-29A Fulcrum" }
+		name = "Remnant Fighter Squadron"
+		start_experience_factor = 0.2
+	}
+	# L-39 Albatros (trainer/light attack, some still flying)
+	186 = {
+		cas2 = { owner = "SYR" creator = "SOV" amount = 10 version_name = "L-39ZA Albatros" }
+		name = "Training Squadron"
+		start_experience_factor = 0.15
+	}
+}

@@ -497,7 +497,7 @@ air_wings = {
 	}
 	# Ground Attack Regiment — Su-25 (Pyongyang area)
 	602 = {
-		CAS_equipment_2 = { owner = "NKO" creator = "SOV" amount = 35 version_name = "Su-25K Frogfoot" }
+		cas2 = { owner = "NKO" creator = "SOV" amount = 35 version_name = "Su-25K Frogfoot" }
 		name = "CAS Air Regiment"
 		start_experience_factor = 0.25
 	}

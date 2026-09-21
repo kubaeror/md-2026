@@ -1,0 +1,219 @@
+# GENERATED FILE - do not edit by hand.
+# Non-No-Step-Back variant of SWE_2026_nsb.txt.
+# Rebuild with: python tools/make_nonnsb_oob.py --apply
+##### Division Templates #####
+# Sweden 2026 — Rearming after NATO accession
+
+division_template = {
+	name = "Mekaniserad Brigad"
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Arm_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Infanteribrigad"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Amfibiebataljon"
+	regiments = {
+		L_Marine_Bat = { x = 0 y = 0 }
+		L_Marine_Bat = { x = 0 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Specialförbanden"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Hemvärnsbrigad"
+	regiments = {
+		Militia_Bat = { x = 0 y = 0 }
+		Militia_Bat = { x = 0 y = 1 }
+		Militia_Bat = { x = 0 y = 2 }
+		Militia_Bat = { x = 0 y = 3 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	# Norrbottens Mekaniserade Brigad (MekB 19)
+	division = {
+		name = "MekB 19 Norrbotten"
+		location = 6050
+		division_template = "Mekaniserad Brigad"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.85
+	}
+	# Skaraborgs Mekaniserade Brigad (MekB 4)
+	division = {
+		name = "MekB 4 Skaraborg"
+		location = 6208
+		division_template = "Mekaniserad Brigad"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.85
+	}
+	# Gotlands Regemente (Inf)
+	division = {
+		name = "P 18 Gotland"
+		location = 383
+		division_template = "Infanteribrigad"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.8
+	}
+	# Amfibieregementet
+	division = {
+		name = "Amf 1 Amfibieregementet"
+		location = 161
+		division_template = "Amfibiebataljon"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.85
+	}
+	# Specialförbanden
+	division = {
+		name = "Specialförbanden"
+		location = 6397
+		division_template = "Specialförbanden"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	# Hemvärn brigades
+	division = {
+		name = "Hemvärnsbrigad Nord"
+		location = 9054
+		division_template = "Hemvärnsbrigad"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Hemvärnsbrigad Mitt"
+		location = 11311
+		division_template = "Hemvärnsbrigad"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Hemvärnsbrigad Syd"
+		location = 6412
+		division_template = "Hemvärnsbrigad"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+
+	##### Fleet — Svenska Marinen #####
+	fleet = {
+		name = "Svenska Marinen"
+		naval_base = 11215
+		# 3rd Naval Warfare Flotilla — Visby-class corvettes (Karlskrona)
+		task_force = {
+			name = "3. Sjöstridsflottiljen"
+			location = 11215
+			ship = { name = "HMS Visby (K31)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = SWE creator = SWE version_name = "Visby Class" } } }
+			ship = { name = "HMS Helsingborg (K32)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = SWE creator = SWE version_name = "Visby Class" } } }
+			ship = { name = "HMS Härnösand (K33)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = SWE creator = SWE version_name = "Visby Class" } } }
+			ship = { name = "HMS Nyköping (K34)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = SWE creator = SWE version_name = "Visby Class" } } }
+			ship = { name = "HMS Karlstad (K35)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = SWE creator = SWE version_name = "Visby Class" } } }
+		}
+		# Gävle-class corvettes (Stockholm)
+		task_force = {
+			name = "4. Sjöstridsflottiljen"
+			location = 6050
+			ship = { name = "HMS Gävle (K22)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_2 = { amount = 1 owner = SWE creator = SWE version_name = "Gävle Class" } } }
+			ship = { name = "HMS Sundsvall (K24)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_2 = { amount = 1 owner = SWE creator = SWE version_name = "Gävle Class" } } }
+		}
+		# 1st Submarine Flotilla — Gotland-class SSK
+		task_force = {
+			name = "1. Ubåtsflottiljen"
+			location = 11215
+			ship = { name = "HMS Gotland (Gtd)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SWE creator = SWE version_name = "Gotland Class" } } }
+			ship = { name = "HMS Uppland (Upd)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SWE creator = SWE version_name = "Gotland Class" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_5
+		amount = 2000
+		producer = SWE
+	}
+}
+
+##### Air Wings — Flygvapnet #####
+air_wings = {
+	# F 7 Såtenäs — JAS 39C/D Gripen
+	35 = {
+		L_Strike_fighter2 = { owner = "SWE" amount = 30 version_name = "JAS 39C/D Gripen" }
+		name = "F 7 Såtenäs"
+		start_experience_factor = 0.55
+	}
+	# F 17 Blekinge — JAS 39C/D Gripen
+	550 = {
+		L_Strike_fighter2 = { owner = "SWE" amount = 30 version_name = "JAS 39C/D Gripen" }
+		name = "F 17 Blekinge"
+		start_experience_factor = 0.55
+	}
+	# F 21 Luleå — JAS 39C/D Gripen
+	33 = {
+		L_Strike_fighter2 = { owner = "SWE" amount = 30 version_name = "JAS 39C/D Gripen" }
+		name = "F 21 Luleå"
+		start_experience_factor = 0.55
+	}
+	# ASC 890 — S 100D Argus (Saab 340 AEW&C) — Linköping
+	35 = {
+		awacs_equipment_2 = { owner = "SWE" amount = 4 version_name = "S 100D Argus" }
+		name = "Flygbasjägarkompaniet AEW"
+		start_experience_factor = 0.5
+	}
+	# Transport — C-130H Hercules (Såtenäs)
+	35 = {
+		transport_plane1 = { owner = "SWE" creator = "USA" amount = 6 version_name = "C-130H Hercules" }
+		name = "Transportflygdivisionen"
+		start_experience_factor = 0.45
+	}
+	# Maritime Surveillance — S 102B Korpen (GlobalEye on order, use Argus equivalent)
+	34 = {
+		awacs_equipment_1 = { owner = "SWE" amount = 2 version_name = "S 102B Korpen" }
+		name = "Spaningsflygdivisionen"
+		start_experience_factor = 0.4
+	}
+}

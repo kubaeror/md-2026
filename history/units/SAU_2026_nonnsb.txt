@@ -1,0 +1,403 @@
+# GENERATED FILE - do not edit by hand.
+# Non-No-Step-Back variant of SAU_2026_nsb.txt.
+# Rebuild with: python tools/make_nonnsb_oob.py --apply
+##### Division Templates #####
+
+division_template = {
+	name = "Armoured Brigade"
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Mechanized Brigade"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Infantry Brigade"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Airborne Brigade"
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "National Guard Brigade"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 0 y = 3 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Marine Regiment"
+	regiments = {
+		L_Marine_Bat = { x = 0 y = 0 }
+		L_Marine_Bat = { x = 0 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Royal Guard"
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		armor_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+
+##### Units #####
+
+units = {
+	##### Royal Saudi Land Forces #####
+
+	# 4th Armoured Brigade
+	division = {
+		name = "4th Armoured Brigade"
+		location = 8101
+		division_template = "Armoured Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 8th Armoured Brigade
+	division = {
+		name = "8th Armoured Brigade"
+		location = 3339
+		division_template = "Armoured Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 12th Armoured Brigade
+	division = {
+		name = "12th Armoured Brigade"
+		location = 14398
+		division_template = "Armoured Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 6th Mechanized Brigade
+	division = {
+		name = "6th Mechanized Brigade"
+		location = 4974
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 10th Mechanized Brigade
+	division = {
+		name = "10th Mechanized Brigade"
+		location = 5006
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 11th Mechanized Brigade
+	division = {
+		name = "11th Mechanized Brigade"
+		location = 12455
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 20th Mechanized Brigade
+	division = {
+		name = "20th Mechanized Brigade"
+		location = 8073
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 2nd Airborne Brigade
+	division = {
+		name = "2nd Airborne Brigade"
+		location = 10815
+		division_template = "Airborne Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	# Royal Saudi Marines
+	division = {
+		name = "Royal Saudi Marines"
+		location = 8060
+		division_template = "Marine Regiment"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+
+	##### Saudi Arabian National Guard #####
+
+	# 1st SANG Brigade
+	division = {
+		name = "1st SANG Brigade 'Imam Muhammad ibn Saud'"
+		location = 10923
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 2nd SANG Brigade
+	division = {
+		name = "2nd SANG Brigade 'King Abdul Aziz'"
+		location = 10923
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 3rd SANG Brigade
+	division = {
+		name = "3rd SANG Brigade"
+		location = 3378
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 4th SANG Brigade
+	division = {
+		name = "4th SANG Brigade"
+		location = 5037
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 5th SANG Brigade
+	division = {
+		name = "5th SANG Brigade"
+		location = 10791
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 6th SANG Brigade
+	division = {
+		name = "6th SANG Brigade"
+		location = 10791
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 7th SANG Brigade
+	division = {
+		name = "7th SANG Brigade"
+		location = 12702
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 8th SANG Brigade
+	division = {
+		name = "8th SANG Brigade"
+		location = 12101
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 9th SANG Brigade
+	division = {
+		name = "9th SANG Brigade"
+		location = 12101
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 10th SANG Brigade
+	division = {
+		name = "10th SANG Brigade"
+		location = 5058
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 11th SANG Brigade
+	division = {
+		name = "11th SANG Brigade"
+		location = 4981
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 12th SANG Brigade
+	division = {
+		name = "12th SANG Brigade"
+		location = 4981
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+
+	##### Royal Guard #####
+
+	# Royal Guard Regiment
+	division = {
+		name = "Royal Guard Regiment"
+		location = 10923
+		division_template = "Royal Guard"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.95
+	}
+
+	##### Royal Saudi Naval Forces #####
+
+	fleet = {
+		name = "Western Fleet"
+		naval_base = 12702
+		task_force = {
+			name = "Western Fleet"
+			location = 12702
+			ship = { name = "Makkah (814)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Riyadh Class" } } }
+			ship = { name = "Al Madinah (702)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU creator = SAU version_name = "Al Madinah Class" } } }
+			ship = { name = "Hofouf (704)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU creator = SAU version_name = "Al Madinah Class" } } }
+			ship = { name = "Badr" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
+			ship = { name = "Al Yamamah" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
+		}
+	}
+
+	fleet = {
+		name = "Eastern Fleet"
+		naval_base = 12883
+		task_force = {
+			name = "Eastern Fleet"
+			location = 12883
+			ship = { name = "Al Riyadh (812)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Riyadh Class" } } }
+			ship = { name = "Al Dammam (816)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Riyadh Class" } } }
+			ship = { name = "Abha (706)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU creator = SAU version_name = "Al Madinah Class" } } }
+			ship = { name = "Taif (708)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU creator = SAU version_name = "Al Madinah Class" } } }
+			ship = { name = "Hitteen" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
+			ship = { name = "Tabuk" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_5
+		amount = 5000
+		producer = SAU
+	}
+}
+
+##### Royal Saudi Air Force #####
+
+air_wings = {
+	# King Khalid Air Base, Khamis Mushait
+	178 = {
+		medium_plane_airframe_2 = { owner = "SAU" creator = "USA" amount = 30 version_name = "F-15SA Strike Eagle" }
+		name = "No. 55 Squadron"
+		start_experience_factor = 0.5
+	}
+	178 = {
+		cas1 = { owner = "SAU" creator = "ENG" amount = 24 version_name = "Tornado IDS" }
+		name = "No. 83 Squadron"
+		start_experience_factor = 0.4
+	}
+	# Prince Sultan Air Base, Al Kharj
+	176 = {
+		medium_plane_airframe_2 = { owner = "SAU" creator = "USA" amount = 30 version_name = "F-15S Eagle" }
+		name = "No. 92 Squadron"
+		start_experience_factor = 0.45
+	}
+	176 = {
+		MR_Fighter4 = { owner = "SAU" creator = "ENG" amount = 36 version_name = "EF-2000 Typhoon" }
+		name = "No. 10 Squadron"
+		start_experience_factor = 0.45
+	}
+	176 = {
+		awacs_equipment_2 = { owner = "SAU" creator = "USA" amount = 5 version_name = "E-3A Sentry" }
+		name = "No. 18 Squadron"
+		start_experience_factor = 0.5
+	}
+	176 = {
+		Air_UAV2 = { owner = "SAU" creator = "USA" amount = 12 version_name = "MQ-9A Reaper" }
+		name = "No. 91 Squadron"
+		start_experience_factor = 0.4
+	}
+	# King Abdulaziz Air Base, Dhahran
+	174 = {
+		medium_plane_airframe_2 = { owner = "SAU" creator = "USA" amount = 30 version_name = "F-15SA Strike Eagle" }
+		name = "No. 13 Squadron"
+		start_experience_factor = 0.5
+	}
+	174 = {
+		transport_plane1 = { owner = "SAU" creator = "USA" amount = 16 version_name = "C-130H Hercules" }
+		name = "No. 4 Squadron"
+		start_experience_factor = 0.4
+	}
+	# King Fahd Air Base, Taif
+	177 = {
+		medium_plane_airframe_2 = { owner = "SAU" creator = "USA" amount = 24 version_name = "F-15SA Strike Eagle" }
+		name = "No. 5 Squadron"
+		start_experience_factor = 0.5
+	}
+	177 = {
+		medium_plane_airframe_2 = { owner = "SAU" creator = "USA" amount = 30 version_name = "F-15S Eagle" }
+		name = "No. 6 Squadron"
+		start_experience_factor = 0.45
+	}
+	# King Faisal Air Base, Tabuk
+	932 = {
+		MR_Fighter4 = { owner = "SAU" creator = "ENG" amount = 36 version_name = "EF-2000 Typhoon" }
+		name = "No. 11 Squadron"
+		start_experience_factor = 0.45
+	}
+}

@@ -1,0 +1,117 @@
+# GENERATED FILE - do not edit by hand.
+# Non-No-Step-Back variant of HUN_2026_nsb.txt.
+# Rebuild with: python tools/make_nonnsb_oob.py --apply
+##### Division Templates #####
+# Hungary 2026 — Small NATO army, modernizing
+
+division_template = {
+	name = "Gépesített Dandár"
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Lövész Dandár"
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Különleges Műveleti"
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+units = {
+	# 25th György Klapka Mechanized Brigade (Tata)
+	division = {
+		name = "25. Klapka György Dandár"
+		location = 11659
+		division_template = "Gépesített Dandár"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.85
+	}
+	# 2nd Vitéz Bertalan Árpád Brigade (Hódmezővásárhely)
+	division = {
+		name = "2. Vitéz Árpád Dandár"
+		location = 9676
+		division_template = "Lövész Dandár"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 5th Bocskai István Infantry Brigade (Debrecen)
+	division = {
+		name = "5. Bocskai István Dandár"
+		location = 682
+		division_template = "Lövész Dandár"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 86th Szolnok Helicopter Brigade (helo-converted to mech role)
+	division = {
+		name = "86. Szolnok Dandár"
+		location = 730
+		division_template = "Lövész Dandár"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# Special Operations Forces Command
+	division = {
+		name = "MH 34. Bercsényi László KMD"
+		location = 730
+		division_template = "Különleges Műveleti"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.85
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_5
+		amount = 1500
+		producer = HUN
+	}
+}
+
+##### Air Wings #####
+air_wings = {
+	# Puma Squadron — JAS 39C/D Gripen (Kecskemét)
+	999 = {
+		L_Strike_fighter2 = { owner = "HUN" creator = "SWE" amount = 14 version_name = "JAS 39C/D Gripen" }
+		name = "MH 59. Szentgyörgyi Dezső Repülőbázis"
+		start_experience_factor = 0.45
+	}
+	# Transport Squadron — C-17 (SAC Pápa) + An-26
+	123 = {
+		transport_plane2 = { owner = "HUN" creator = "USA" amount = 1 version_name = "C-17A Globemaster III" }
+		name = "MH Pápa Bázisrepülőtér"
+		start_experience_factor = 0.4
+	}
+}

@@ -170,7 +170,7 @@ air_wings = {
 	}
 	# 85 Combat Flying School — BAE Hawk Mk.120 (AFB Makhado)
 	275 = {
-		CAS_equipment_2 = { owner = "SAF" creator = "ENG" amount = 12 version_name = "Hawk Mk.120 LIFT" }
+		cas2 = { owner = "SAF" creator = "ENG" amount = 12 version_name = "Hawk Mk.120 LIFT" }
 		name = "85 Combat Flying School"
 		start_experience_factor = 0.35
 	}

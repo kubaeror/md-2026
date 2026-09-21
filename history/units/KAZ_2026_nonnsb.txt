@@ -1,0 +1,180 @@
+# GENERATED FILE - do not edit by hand.
+# Non-No-Step-Back variant of KAZ_2026_nsb.txt.
+# Rebuild with: python tools/make_nonnsb_oob.py --apply
+##### Kazakhstan - 2026 OOB #####
+# Kazakhstan Armed Forces - largest Central Asian military by area
+# Modernizing with mixed Russian/Western/Turkish equipment
+
+division_template = {
+	name = "Mekhanizirovannya Brigada"		# Mechanized Brigade
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		armor_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Motostrelkovaya Brigada"		# Motorized Rifle Brigade
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Desantnaya Brigada"		# Airmobile Brigade
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Pehotnaya Brigada"		# Light Infantry
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	##### Kazakh Armed Forces #####
+
+	# Astana (Capital)
+	division = {
+		name = "1. Mekhanizirovannya Brigada"
+		location = 10308
+		division_template = "Mekhanizirovannya Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.70
+	}
+	division = {
+		name = "Desantnaya Brigada"
+		location = 10308
+		division_template = "Desantnaya Brigada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.70
+	}
+
+	# Almaty (Southern)
+	division = {
+		name = "1. Motostrelkovaya Brigada"
+		location = 1864
+		division_template = "Motostrelkovaya Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "2. Motostrelkovaya Brigada"
+		location = 10603
+		division_template = "Motostrelkovaya Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+
+	# Western (Caspian)
+	division = {
+		name = "2. Mekhanizirovannya Brigada"
+		location = 4333
+		division_template = "Mekhanizirovannya Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+
+	# Eastern
+	division = {
+		name = "1. Pehotnaya Brigada"
+		location = 10547
+		division_template = "Pehotnaya Brigada"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.60
+	}
+
+	# Southern border
+	division = {
+		name = "2. Pehotnaya Brigada"
+		location = 10619
+		division_template = "Pehotnaya Brigada"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.60
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_4
+		amount = 5000
+		producer = KAZ
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_5
+		amount = 1000
+		producer = KAZ
+	}
+}
+
+##### Kazakh Air Defence Forces #####
+air_wings = {
+	# Su-30SM (delivered from Russia)
+	719 = {
+		MR_Fighter4 = { owner = "KAZ" creator = "SOV" amount = 12 version_name = "Su-30SM Flanker-H" }
+		name = "604th Air Base"
+		start_experience_factor = 0.4
+	}
+	# MiG-29 fighters
+	719 = {
+		small_plane_airframe_2 = { owner = "KAZ" creator = "SOV" amount = 28 version_name = "MiG-29 Fulcrum" }
+		name = "600th Air Base"
+		start_experience_factor = 0.35
+	}
+	# MiG-31 interceptors
+	715 = {
+		MR_Fighter4 = { owner = "KAZ" creator = "SOV" amount = 14 version_name = "MiG-31BS Foxhound" }
+		name = "356th Fighter Regiment"
+		start_experience_factor = 0.35
+	}
+	# Su-25 attack
+	719 = {
+		cas2 = { owner = "KAZ" creator = "SOV" amount = 12 version_name = "Su-25 Frogfoot" }
+		name = "Assault Aviation Squadron"
+		start_experience_factor = 0.35
+	}
+	# C-295M Transport
+	716 = {
+		transport_plane1 = { owner = "KAZ" creator = "SPR" amount = 8 version_name = "C-295M" }
+		name = "Transport Aviation"
+		start_experience_factor = 0.4
+	}
+}

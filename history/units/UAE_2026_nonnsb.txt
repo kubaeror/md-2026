@@ -1,0 +1,174 @@
+# GENERATED FILE - do not edit by hand.
+# Non-No-Step-Back variant of UAE_2026_nsb.txt.
+# Rebuild with: python tools/make_nonnsb_oob.py --apply
+##### UAE - 2026 OOB #####
+# UAE Armed Forces - well-equipped, modern military
+# Heavy investment in French/US equipment, combat experience from Yemen
+
+division_template = {
+	name = "Liwa' Mudarra'"		# Armored Brigade
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		Arm_Inf_Bat = { x = 1 y = 1 }
+		Mech_Inf_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Arm_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+		combat_service_support_company = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "Liwa' Mushaat Mikaniki"		# Mechanized Infantry Brigade
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		Mot_Inf_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Quwat Khassa"		# Presidential Guard / SOF
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+		L_Ranger_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		attack_helo_comp = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	##### UAE Armed Forces #####
+
+	# Abu Dhabi
+	division = {
+		name = "1. Liwa' Mudarra'"
+		location = 3725
+		division_template = "Liwa' Mudarra'"
+		start_experience_factor = 0.50
+		start_equipment_factor = 0.90
+	}
+	division = {
+		name = "Haras al-Ri'asa"
+		location = 3725
+		division_template = "Quwat Khassa"
+		start_experience_factor = 0.60
+		start_equipment_factor = 0.90
+	}
+
+	# Dubai area
+	division = {
+		name = "1. Liwa' Mushaat Mikaniki"
+		location = 3689
+		division_template = "Liwa' Mushaat Mikaniki"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.85
+	}
+
+	# Northern Emirates
+	division = {
+		name = "2. Liwa' Mushaat Mikaniki"
+		location = 3585
+		division_template = "Liwa' Mushaat Mikaniki"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.85
+	}
+
+	# Western region
+	division = {
+		name = "2. Liwa' Mudarra'"
+		location = 7960
+		division_template = "Liwa' Mudarra'"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.85
+	}
+
+	##### UAE Navy #####
+	fleet = {
+		name = "UAE Navy"
+		naval_base = 3689		# Abu Dhabi
+		task_force = {
+			name = "Corvette Squadron"
+			location = 3689
+			# Baynunah-class corvettes
+			ship = { name = "UAES Baynunah (P171)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE creator = UAE version_name = "Baynunah class" } } }
+			ship = { name = "UAES Al Hesen (P172)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE creator = UAE version_name = "Baynunah class" } } }
+			ship = { name = "UAES Al Dhafra (P173)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE creator = UAE version_name = "Baynunah class" } } }
+			ship = { name = "UAES Mezyad (P174)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE creator = UAE version_name = "Baynunah class" } } }
+			ship = { name = "UAES Al Jahili (P175)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE creator = UAE version_name = "Baynunah class" } } }
+			ship = { name = "UAES Shahama (P176)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE creator = UAE version_name = "Baynunah class" } } }
+		}
+		task_force = {
+			name = "Patrol Squadron"
+			location = 3689
+			# Falaj 2-class patrol vessels
+			ship = { name = "UAES Ghantoot (P251)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = UAE creator = UAE version_name = "Falaj 2 class" } } }
+			ship = { name = "UAES Salahah (P252)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = UAE creator = UAE version_name = "Falaj 2 class" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_5
+		amount = 5000
+		producer = UAE
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_6
+		amount = 1000
+		producer = UAE
+	}
+}
+
+##### UAE Air Force #####
+air_wings = {
+	# F-16E/F Block 60 Desert Falcon
+	180 = {
+		L_Strike_fighter2 = { owner = "UAE" creator = "USA" amount = 79 version_name = "F-16E/F Block 60 Desert Falcon" }
+		name = "Al Dhafra Fighter Wings"
+		start_experience_factor = 0.55
+	}
+	# Mirage 2000-9
+	180 = {
+		MR_Fighter4 = { owner = "UAE" creator = "FRA" amount = 55 version_name = "Mirage 2000-9" }
+		name = "Al Minhad Fighter Wings"
+		start_experience_factor = 0.5
+	}
+	# GlobalEye AEW&C
+	180 = {
+		awacs_equipment_2 = { owner = "UAE" creator = "SWE" amount = 3 version_name = "GlobalEye AEW&C" }
+		name = "AEW Squadron"
+		start_experience_factor = 0.5
+	}
+	# C-17A Globemaster III
+	180 = {
+		transport_plane2 = { owner = "UAE" creator = "USA" amount = 6 version_name = "C-17A Globemaster III" }
+		name = "Transport Wing"
+		start_experience_factor = 0.5
+	}
+	# Wing Loong II + MQ-1 drones
+	180 = {
+		Air_UAV2 = { owner = "UAE" creator = "CHI" amount = 10 version_name = "Wing Loong II" }
+		name = "UAV Squadron"
+		start_experience_factor = 0.55
+	}
+}

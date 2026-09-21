@@ -765,7 +765,7 @@ instant_effect = {
 		producer = CHI
 	}
 	add_equipment_to_stockpile = {
-		type = artillery_equipment
+		type = artillery_2
 		amount = 3000
 		producer = CHI
 	}
@@ -791,7 +791,7 @@ air_wings = {
 		start_experience_factor = 0.55
 	}
 	# J-10C Fighter (Sichuan / Chengdu)
-	585 = {
+	586 = {
 		L_Strike_fighter2 = { owner = "CHI" amount = 200 version_name = "J-10C" }
 		name = "歼击第2师"
 		start_experience_factor = 0.5
@@ -804,7 +804,7 @@ air_wings = {
 	}
 	# J-11B/BS Flanker (Liaoning)
 	552 = {
-		heavy_fighter_equipment_2 = { owner = "CHI" amount = 100 version_name = "J-11B" }
+		MR_Fighter4 = { owner = "CHI" amount = 100 version_name = "J-11B" }
 		name = "歼击第4师"
 		start_experience_factor = 0.45
 	}
@@ -827,7 +827,7 @@ air_wings = {
 		start_experience_factor = 0.5
 	}
 	# Y-20 Strategic Transport (Chengdu)
-	585 = {
+	586 = {
 		transport_plane2 = { owner = "CHI" amount = 40 version_name = "Y-20A" }
 		name = "运输航空兵师"
 		start_experience_factor = 0.5

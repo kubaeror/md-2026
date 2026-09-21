@@ -131,7 +131,7 @@ instant_effect = {
 air_wings = {
 	# Karshi-Khanabad / Chirchik (Transoxiana)
 	726 = {
-		heavy_fighter_equipment_2 = { owner = "UZB" creator = "SOV" amount = 12 version_name = "Su-30SM Flanker-H" }
+		MR_Fighter4 = { owner = "UZB" creator = "SOV" amount = 12 version_name = "Su-30SM Flanker-H" }
 		name = "Fighter Aviation Regiment"
 		start_experience_factor = 0.4
 	}
@@ -141,7 +141,7 @@ air_wings = {
 		start_experience_factor = 0.35
 	}
 	726 = {
-		CAS_equipment_2 = { owner = "UZB" creator = "SOV" amount = 20 version_name = "Su-25 Frogfoot" }
+		cas2 = { owner = "UZB" creator = "SOV" amount = 20 version_name = "Su-25 Frogfoot" }
 		name = "372nd Assault Aviation Squadron"
 		start_experience_factor = 0.3
 	}

@@ -1,0 +1,115 @@
+# GENERATED FILE - do not edit by hand.
+# Non-No-Step-Back variant of LIT_2026_nsb.txt.
+# Rebuild with: python tools/make_nonnsb_oob.py --apply
+##### Lithuania - 2026 OOB #####
+# Lithuanian Armed Forces - NATO, largest Baltic military
+# Expanding significantly post-2022, conscription reintroduced
+
+division_template = {
+	name = "Mehanizuota Brigada"		# Mechanized Brigade
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+		armor_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Motorizuota Brigada"		# Motorized Brigade
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+		L_Inf_Bat = { x = 1 y = 2 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Specialiuju Operaciju"		# SOF
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "Iron Wolf Brigada"
+		location = 3320
+		division_template = "Mehanizuota Brigada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "Griffon Brigada"
+		location = 6296
+		division_template = "Motorizuota Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.70
+	}
+	division = {
+		name = "Aitvaras Brigada"
+		location = 3288
+		division_template = "Motorizuota Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "Specialiuju Operaciju Pajegos"
+		location = 3320
+		division_template = "Specialiuju Operaciju"
+		start_experience_factor = 0.50
+		start_equipment_factor = 0.75
+	}
+
+	##### Lithuanian Naval Force #####
+	fleet = {
+		name = "Lithuanian Naval Force"
+		naval_base = 13258
+		task_force = {
+			name = "Lithuanian Naval Force"
+			location = 13258
+			ship = { name = "P11 Zemaitis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT creator = LIT version_name = "Flyvefisken Class" } } }
+			ship = { name = "P12 Aukstaitis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT creator = LIT version_name = "Flyvefisken Class" } } }
+			ship = { name = "M51 Kursis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT creator = LIT version_name = "Hunt Class" } } }
+			ship = { name = "M52 Suduvis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT creator = LIT version_name = "Hunt Class" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_5
+		amount = 2000
+		producer = LIT
+	}
+}
+
+##### Lithuanian Air Force #####
+air_wings = {
+	# Siauliai / Zokniai Air Base
+	109 = {
+		transport_plane1 = { owner = "LIT" creator = "ITA" amount = 3 version_name = "C-27J Spartan" }
+		name = "Air Force Transport Squadron"
+		start_experience_factor = 0.4
+	}
+}

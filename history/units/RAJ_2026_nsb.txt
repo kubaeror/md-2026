@@ -561,7 +561,7 @@ instant_effect = {
 		producer = RAJ
 	}
 	add_equipment_to_stockpile = {
-		type = artillery_equipment
+		type = artillery_2
 		amount = 2000
 		producer = RAJ
 	}
@@ -588,7 +588,7 @@ air_wings = {
 	}
 	# Rafale — Ambala (No. 17 & 101 Sqn)
 	440 = {
-		heavy_fighter_equipment_2 = { owner = "RAJ" creator = "FRA" amount = 36 version_name = "Rafale EH/DH" }
+		MR_Fighter4 = { owner = "RAJ" creator = "FRA" amount = 36 version_name = "Rafale EH/DH" }
 		name = "17 & 101 Squadron (Rafale)"
 		start_experience_factor = 0.6
 	}

@@ -2744,17 +2744,17 @@ capital = 56
 ##############################
 2026.1.1 = {
 
+	### Technology 2026 ###
+	md2026_tier2_2026_techs = yes
+
 	### OOB 2026 ###
 	if = {
 		limit = { has_dlc = "No Step Back" }
 		set_oob = "FRA_2026_nsb"
 		else = {
-			set_oob = "FRA_2000_nonnsb"
+			set_oob = "FRA_2026_nonnsb"
 		}
 	}
-
-	### Technology 2026 ###
-	md2026_tier2_2026_techs = yes
 
 	### GDP & Economic Variables ###
 	set_variable = { gdp_per_capita = 44.000 }

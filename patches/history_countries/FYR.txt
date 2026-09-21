@@ -6,16 +6,16 @@
 	### NATO membership (MD 2.0 marker) ###
 	add_ideas = { NATO_member }
 
+	### Technology 2026 ###
+	md2026_tier5_2026_techs = yes
+
 	if = {
 		limit = { has_dlc = "No Step Back" }
 		set_oob = "FYR_2026_nsb"
 		else = {
-			set_oob = "FYR_2000_nonnsb"
+			set_oob = "FYR_2026_nonnsb"
 		}
 	}
-
-	### Technology 2026 ###
-	md2026_tier5_2026_techs = yes
 
 	### GDP & Economic Variables ###
 	set_variable = { gdp_per_capita = 8.000 }

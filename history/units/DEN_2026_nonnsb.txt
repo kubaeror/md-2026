@@ -1,0 +1,136 @@
+# GENERATED FILE - do not edit by hand.
+# Non-No-Step-Back variant of DEN_2026_nsb.txt.
+# Rebuild with: python tools/make_nonnsb_oob.py --apply
+##### Denmark - 2026 OOB #####
+# Danish Defence - small professional, NATO framework nation
+# Recently expanded post-2022, mechanized focus
+
+division_template = {
+	name = "Mekaniseret Brigade"		# Mechanized Brigade
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		armor_Bat = { x = 1 y = 1 }
+		Mot_Inf_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Let Infanteri Brigade"		# Light Infantry Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Jaegerkorpset"		# Special Operations
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	##### Royal Danish Army #####
+
+	# 1st Brigade - Jutland
+	division = {
+		name = "1. Brigade"
+		location = 394
+		division_template = "Mekaniseret Brigade"
+		start_experience_factor = 0.50
+		start_equipment_factor = 0.80
+	}
+
+	# 2nd Brigade (light) - Zealand
+	division = {
+		name = "2. Brigade"
+		location = 399
+		division_template = "Let Infanteri Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.80
+	}
+
+	# Jaeger Corps
+	division = {
+		name = "Jaegerkorpset"
+		location = 6287
+		division_template = "Jaegerkorpset"
+		start_experience_factor = 0.60
+		start_equipment_factor = 0.85
+	}
+
+	##### Søværnet (Royal Danish Navy) #####
+	fleet = {
+		name = "Søværnet"
+		naval_base = 394		# Frederikshavn
+		task_force = {
+			name = "1. Eskadre"
+			location = 394
+			# Iver Huitfeldt-class frigates
+			ship = { name = "HDMS Iver Huitfeldt (F361)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = DEN creator = DEN version_name = "Iver Huitfeldt class" } } }
+			ship = { name = "HDMS Peter Willemoes (F362)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = DEN creator = DEN version_name = "Iver Huitfeldt class" } } }
+			ship = { name = "HDMS Niels Juel (F363)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = DEN creator = DEN version_name = "Iver Huitfeldt class" } } }
+		}
+		task_force = {
+			name = "2. Eskadre"
+			location = 14542		# Korsør
+			# Absalon-class support ships
+			ship = { name = "HDMS Absalon (L16)" definition = helicopter_operator equipment = { helicopter_operator_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Absalon class" } } }
+			ship = { name = "HDMS Esbern Snare (L17)" definition = helicopter_operator equipment = { helicopter_operator_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Absalon class" } } }
+		}
+		task_force = {
+			name = "Arktisk Kommando"
+			location = 394
+			# Thetis-class OPVs
+			ship = { name = "HDMS Thetis (F357)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Thetis class" } } }
+			ship = { name = "HDMS Triton (F358)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Thetis class" } } }
+			ship = { name = "HDMS Vaedderen (F359)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Thetis class" } } }
+			ship = { name = "HDMS Hvidbjørnen (F360)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Thetis class" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_5
+		amount = 2000
+		producer = DEN
+	}
+}
+
+##### Flyvevåbnet (Royal Danish Air Force) #####
+air_wings = {
+	# Skrydstrup - F-35A Lightning II
+	6 = {
+		L_Strike_fighter3 = { owner = "DEN" creator = "USA" amount = 27 version_name = "F-35A Lightning II" }
+		name = "Fighter Wing Skrydstrup"
+		start_experience_factor = 0.5
+	}
+	# Transport - C-130J-30
+	4 = {
+		transport_plane1 = { owner = "DEN" creator = "USA" amount = 4 version_name = "C-130J-30 Super Hercules" }
+		name = "Transport Wing Aalborg"
+		start_experience_factor = 0.5
+	}
+}

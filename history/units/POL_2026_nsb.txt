@@ -280,7 +280,7 @@ instant_effect = {
 		type = L_Strike_fighter2
 		variant_name = "F-35A Lightning II"
 		amount = 8
-		producer = USA
+		producer = POL
 	}
 }
 

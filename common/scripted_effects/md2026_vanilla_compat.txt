@@ -1,0 +1,11 @@
+### MD 2026 - compatibility with vanilla content that Millennium Dawn does not replace.
+###
+### Millennium Dawn replaces common/scripted_effects, but not common/operations, so
+### vanilla operations can call scripted effects that no longer exist.  The game
+### logs "Invalid effect 'X'" and the operation outcome does nothing.  The effects
+### below are no-ops: Siam (SIA) has no Indochina focus tree under Millennium Dawn,
+### so the vanilla sabotage operation is dead content and only needs to resolve.
+
+# Trial of Allegiance: SIA "sabotage Indochina ports" operation outcome.
+SIA_plant_indochina_port_charges = { }
+SIA_detonate_indochina_port_charges = { }

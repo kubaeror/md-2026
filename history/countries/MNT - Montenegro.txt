@@ -196,14 +196,16 @@ oob = "GENERIC_OOB"
 	### NATO membership (MD 2.0 marker) ###
 	add_ideas = { NATO_member }
 
+	### Technology 2026 ###
+	md2026_tier5_2026_techs = yes
+
 	if = {
 		limit = { has_dlc = "No Step Back" }
 		set_oob = "MNT_2026_nsb"
+		else = {
+			set_oob = "MNT_2026_nonnsb"
+		}
 	}
-	# MD 2.0 has no non-NSB OOB for Montenegro - no fallback
-
-	### Technology 2026 ###
-	md2026_tier5_2026_techs = yes
 
 	### GDP & Economic Variables ###
 	set_variable = { gdp_per_capita = 12.000 }

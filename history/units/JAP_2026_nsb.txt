@@ -315,7 +315,7 @@ instant_effect = {
 		producer = JAP
 	}
 	add_equipment_to_stockpile = {
-		type = artillery_equipment
+		type = artillery_2
 		amount = 500
 		producer = JAP
 	}
@@ -325,7 +325,7 @@ instant_effect = {
 air_wings = {
 	# 2nd Air Wing — Chitose (Hokkaido) — F-15J Air Defense
 	617 = {
-		heavy_fighter_equipment_2 = { owner = "JAP" amount = 40 version_name = "F-15J Eagle" }
+		MR_Fighter4 = { owner = "JAP" amount = 40 version_name = "F-15J Eagle" }
 		name = "2nd Air Wing — Chitose"
 		start_experience_factor = 0.6
 	}
@@ -343,13 +343,13 @@ air_wings = {
 	}
 	# 6th Air Wing — Komatsu (Chubu) — F-15J Air Defense
 	613 = {
-		heavy_fighter_equipment_2 = { owner = "JAP" amount = 30 version_name = "F-15J Eagle" }
+		MR_Fighter4 = { owner = "JAP" amount = 30 version_name = "F-15J Eagle" }
 		name = "6th Air Wing — Komatsu"
 		start_experience_factor = 0.6
 	}
 	# 7th Air Wing — Hyakuri (Kanto) — F-15J Air Defense
 	615 = {
-		heavy_fighter_equipment_2 = { owner = "JAP" amount = 30 version_name = "F-15J Eagle" }
+		MR_Fighter4 = { owner = "JAP" amount = 30 version_name = "F-15J Eagle" }
 		name = "7th Air Wing — Hyakuri"
 		start_experience_factor = 0.55
 	}
@@ -361,7 +361,7 @@ air_wings = {
 	}
 	# 9th Air Wing — Naha (Okinawa) — F-15J Air Defense
 	618 = {
-		heavy_fighter_equipment_2 = { owner = "JAP" amount = 30 version_name = "F-15J Eagle" }
+		MR_Fighter4 = { owner = "JAP" amount = 30 version_name = "F-15J Eagle" }
 		name = "9th Air Wing — Naha"
 		start_experience_factor = 0.6
 	}

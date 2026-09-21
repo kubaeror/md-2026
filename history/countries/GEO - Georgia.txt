@@ -314,16 +314,16 @@ capital = 707
 ##############################
 2026.1.1 = {
 
+	### Technology 2026 ###
+	md2026_tier4_2026_techs = yes
+
 	if = {
 		limit = { has_dlc = "No Step Back" }
 		set_oob = "GEO_2026_nsb"
 		else = {
-			set_oob = "GEO_2000_nonnsb"
+			set_oob = "GEO_2026_nonnsb"
 		}
 	}
-
-	### Technology 2026 ###
-	md2026_tier4_2026_techs = yes
 
 	### GDP & Economic Variables ###
 	set_variable = { gdp_per_capita = 8.000 }

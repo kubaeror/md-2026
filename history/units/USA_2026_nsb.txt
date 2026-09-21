@@ -570,7 +570,7 @@ instant_effect = {
 		producer = USA
 	}
 	add_equipment_to_stockpile = {
-		type = artillery_equipment
+		type = artillery_2
 		amount = 800
 		producer = USA
 	}
@@ -807,7 +807,7 @@ air_wings = {
 		start_experience_factor = 0.5
 	}
 	772 = {
-		cv_medium_plane_maritime_patrol_airframe = { owner = "USA" amount = 5 version_name = "CMV-22B Osprey" }
+		transport_plane2 = { owner = "USA" amount = 5 version_name = "CMV-22B Osprey" }
 		name = "VRM-40 Det (CVW-8)"
 		start_experience_factor = 0.5
 	}
