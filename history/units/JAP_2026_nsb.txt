@@ -211,17 +211,17 @@ units = {
 		task_force = {
 			name = "Carrier Division 1"
 			location = 9998
-			ship = { name = "JS Izumo (DDH-183)" definition = helicopter_operator start_experience_factor = 0.75 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = JAP version_name = "Izumo Class" } } }
-			ship = { name = "JS Maya (DDG-179)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = JAP version_name = "Maya Class" } } }
-			ship = { name = "JS Atago (DDG-177)" definition = destroyer start_experience_factor = 0.65 equipment = { destroyer_hull_3 = { amount = 1 owner = JAP version_name = "Atago Class" } } }
+			ship = { name = "JS Izumo (DDH-183)" definition = helicopter_operator start_experience_factor = 0.75 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Izumo Class" } } }
+			ship = { name = "JS Maya (DDG-179)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Maya Class" } } }
+			ship = { name = "JS Atago (DDG-177)" definition = destroyer start_experience_factor = 0.65 equipment = { destroyer_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Atago Class" } } }
 		}
 		task_force = {
 			name = "Escort Division 1"
 			location = 9998
-			ship = { name = "JS Akizuki (DD-115)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Akizuki Class" } } }
-			ship = { name = "JS Teruzuki (DD-116)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Akizuki Class" } } }
-			ship = { name = "JS Takanami (DD-110)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Takanami Class" } } }
-			ship = { name = "JS Onami (DD-111)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Takanami Class" } } }
+			ship = { name = "JS Akizuki (DD-115)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Akizuki Class" } } }
+			ship = { name = "JS Teruzuki (DD-116)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Akizuki Class" } } }
+			ship = { name = "JS Takanami (DD-110)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Takanami Class" } } }
+			ship = { name = "JS Onami (DD-111)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Takanami Class" } } }
 		}
 	}
 	fleet = {
@@ -230,19 +230,19 @@ units = {
 		task_force = {
 			name = "Carrier Division 2"
 			location = 1158
-			ship = { name = "JS Kaga (DDH-184)" definition = helicopter_operator start_experience_factor = 0.75 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = JAP version_name = "Izumo Class" } } }
-			ship = { name = "JS Haguro (DDG-180)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = JAP version_name = "Maya Class" } } }
-			ship = { name = "JS Ashigara (DDG-178)" definition = destroyer start_experience_factor = 0.65 equipment = { destroyer_hull_3 = { amount = 1 owner = JAP version_name = "Atago Class" } } }
+			ship = { name = "JS Kaga (DDH-184)" definition = helicopter_operator start_experience_factor = 0.75 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Izumo Class" } } }
+			ship = { name = "JS Haguro (DDG-180)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Maya Class" } } }
+			ship = { name = "JS Ashigara (DDG-178)" definition = destroyer start_experience_factor = 0.65 equipment = { destroyer_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Atago Class" } } }
 		}
 		task_force = {
 			name = "Escort Division 2"
 			location = 1158
-			ship = { name = "JS Suzutsuki (DD-117)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Akizuki Class" } } }
-			ship = { name = "JS Fuyuzuki (DD-118)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Akizuki Class" } } }
-			ship = { name = "JS Makinami (DD-112)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Takanami Class" } } }
-			ship = { name = "JS Sazanami (DD-113)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Takanami Class" } } }
-			ship = { name = "JS Mogami (FFM-1)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = JAP version_name = "Mogami Class" } } }
-			ship = { name = "JS Kumano (FFM-2)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = JAP version_name = "Mogami Class" } } }
+			ship = { name = "JS Suzutsuki (DD-117)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Akizuki Class" } } }
+			ship = { name = "JS Fuyuzuki (DD-118)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Akizuki Class" } } }
+			ship = { name = "JS Makinami (DD-112)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Takanami Class" } } }
+			ship = { name = "JS Sazanami (DD-113)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Takanami Class" } } }
+			ship = { name = "JS Mogami (FFM-1)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Mogami Class" } } }
+			ship = { name = "JS Kumano (FFM-2)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Mogami Class" } } }
 		}
 	}
 	fleet = {
@@ -251,18 +251,18 @@ units = {
 		task_force = {
 			name = "Carrier Division 3"
 			location = 1092
-			ship = { name = "JS Hyuga (DDH-181)" definition = helicopter_operator start_experience_factor = 0.65 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = JAP version_name = "Hyuga Class" } } }
-			ship = { name = "JS Kongo (DDG-173)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Kongo Class" } } }
-			ship = { name = "JS Kirishima (DDG-174)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Kongo Class" } } }
+			ship = { name = "JS Hyuga (DDH-181)" definition = helicopter_operator start_experience_factor = 0.65 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Hyuga Class" } } }
+			ship = { name = "JS Kongo (DDG-173)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Kongo Class" } } }
+			ship = { name = "JS Kirishima (DDG-174)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Kongo Class" } } }
 		}
 		task_force = {
 			name = "Escort Division 3"
 			location = 1092
-			ship = { name = "JS Asahi (DD-119)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Asahi Class" } } }
-			ship = { name = "JS Shiranui (DD-120)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Asahi Class" } } }
-			ship = { name = "JS Suzunami (DD-114)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Takanami Class" } } }
-			ship = { name = "JS Noshiro (FFM-3)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = JAP version_name = "Mogami Class" } } }
-			ship = { name = "JS Mikuma (FFM-4)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = JAP version_name = "Mogami Class" } } }
+			ship = { name = "JS Asahi (DD-119)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Asahi Class" } } }
+			ship = { name = "JS Shiranui (DD-120)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Asahi Class" } } }
+			ship = { name = "JS Suzunami (DD-114)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Takanami Class" } } }
+			ship = { name = "JS Noshiro (FFM-3)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Mogami Class" } } }
+			ship = { name = "JS Mikuma (FFM-4)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Mogami Class" } } }
 		}
 	}
 	fleet = {
@@ -271,18 +271,18 @@ units = {
 		task_force = {
 			name = "Carrier Division 4"
 			location = 1136
-			ship = { name = "JS Ise (DDH-182)" definition = helicopter_operator start_experience_factor = 0.65 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = JAP version_name = "Hyuga Class" } } }
-			ship = { name = "JS Myoko (DDG-175)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Kongo Class" } } }
-			ship = { name = "JS Chokai (DDG-176)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Kongo Class" } } }
+			ship = { name = "JS Ise (DDH-182)" definition = helicopter_operator start_experience_factor = 0.65 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Hyuga Class" } } }
+			ship = { name = "JS Myoko (DDG-175)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Kongo Class" } } }
+			ship = { name = "JS Chokai (DDG-176)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Kongo Class" } } }
 		}
 		task_force = {
 			name = "Escort Division 4"
 			location = 1136
-			ship = { name = "JS Murasame (DD-101)" definition = destroyer start_experience_factor = 0.55 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Murasame Class" } } }
-			ship = { name = "JS Harusame (DD-102)" definition = destroyer start_experience_factor = 0.55 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Murasame Class" } } }
-			ship = { name = "JS Ariake (DD-109)" definition = destroyer start_experience_factor = 0.55 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP version_name = "Murasame Class" } } }
-			ship = { name = "JS Yahagi (FFM-5)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = JAP version_name = "Mogami Class" } } }
-			ship = { name = "JS Agano (FFM-6)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = JAP version_name = "Mogami Class" } } }
+			ship = { name = "JS Murasame (DD-101)" definition = destroyer start_experience_factor = 0.55 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Murasame Class" } } }
+			ship = { name = "JS Harusame (DD-102)" definition = destroyer start_experience_factor = 0.55 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Murasame Class" } } }
+			ship = { name = "JS Ariake (DD-109)" definition = destroyer start_experience_factor = 0.55 equipment = { destroyer_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Murasame Class" } } }
+			ship = { name = "JS Yahagi (FFM-5)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Mogami Class" } } }
+			ship = { name = "JS Agano (FFM-6)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = JAP creator = JAP version_name = "Mogami Class" } } }
 		}
 	}
 	fleet = {
@@ -291,18 +291,18 @@ units = {
 		task_force = {
 			name = "Submarine Division — Taigei/Soryu"
 			location = 1136
-			ship = { name = "JS Taigei (SS-513)" definition = attack_submarine start_experience_factor = 0.7 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP version_name = "Taigei Class" } } }
-			ship = { name = "JS Hakugei (SS-514)" definition = attack_submarine start_experience_factor = 0.7 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP version_name = "Taigei Class" } } }
-			ship = { name = "JS Jingei (SS-515)" definition = attack_submarine start_experience_factor = 0.65 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP version_name = "Taigei Class" } } }
-			ship = { name = "JS Raigei (SS-516)" definition = attack_submarine start_experience_factor = 0.65 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP version_name = "Taigei Class" } } }
-			ship = { name = "JS Soryu (SS-501)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP version_name = "Soryu Class" } } }
-			ship = { name = "JS Unryu (SS-502)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP version_name = "Soryu Class" } } }
-			ship = { name = "JS Hakuryu (SS-503)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP version_name = "Soryu Class" } } }
-			ship = { name = "JS Kenryu (SS-504)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP version_name = "Soryu Class" } } }
-			ship = { name = "JS Zuiryu (SS-505)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP version_name = "Soryu Class" } } }
-			ship = { name = "JS Kokuryu (SS-506)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP version_name = "Soryu Class" } } }
-			ship = { name = "JS Jinryu (SS-507)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP version_name = "Soryu Class" } } }
-			ship = { name = "JS Sekiryu (SS-508)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP version_name = "Soryu Class" } } }
+			ship = { name = "JS Taigei (SS-513)" definition = attack_submarine start_experience_factor = 0.7 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Taigei Class" } } }
+			ship = { name = "JS Hakugei (SS-514)" definition = attack_submarine start_experience_factor = 0.7 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Taigei Class" } } }
+			ship = { name = "JS Jingei (SS-515)" definition = attack_submarine start_experience_factor = 0.65 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Taigei Class" } } }
+			ship = { name = "JS Raigei (SS-516)" definition = attack_submarine start_experience_factor = 0.65 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Taigei Class" } } }
+			ship = { name = "JS Soryu (SS-501)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Soryu Class" } } }
+			ship = { name = "JS Unryu (SS-502)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Soryu Class" } } }
+			ship = { name = "JS Hakuryu (SS-503)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Soryu Class" } } }
+			ship = { name = "JS Kenryu (SS-504)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Soryu Class" } } }
+			ship = { name = "JS Zuiryu (SS-505)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Soryu Class" } } }
+			ship = { name = "JS Kokuryu (SS-506)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Soryu Class" } } }
+			ship = { name = "JS Jinryu (SS-507)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Soryu Class" } } }
+			ship = { name = "JS Sekiryu (SS-508)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = JAP creator = JAP version_name = "Soryu Class" } } }
 		}
 	}
 }
@@ -331,7 +331,7 @@ air_wings = {
 	}
 	# 3rd Air Wing — Misawa (Tohoku) — F-35A Lightning II
 	616 = {
-		L_Strike_fighter2 = { owner = "JAP" creator = "USA" amount = 40 version_name = "F-35A Lightning II" }
+		L_Strike_fighter3 = { owner = "JAP" creator = "USA" amount = 40 version_name = "F-35A Lightning II" }
 		name = "3rd Air Wing — Misawa (F-35A)"
 		start_experience_factor = 0.6
 	}

@@ -16,7 +16,7 @@
 	md2026_tier2_2026_techs = yes
 
 	### GDP & Economic Variables ###
-	set_variable = { gdp_per_capita = 3.500 }
+	set_variable = { gdp_per_capita = 2.800 }
 	set_variable = { var = debt value = 2800.000 }
 	set_variable = { var = treasury value = 80 }
 	set_variable = { var = corporate_tax_rate value = 25 }
@@ -36,7 +36,7 @@
 		nationalist = 25.0
 	}
 	set_politics = {
-		ruling_party = communism
+		ruling_party = democratic
 		last_election = "2024.4.19"
 		election_frequency = 60
 		elections_allowed = yes
@@ -44,16 +44,16 @@
 
 	start_politics_input = yes
 
-	set_variable = { party_pop_array^6 = 0.370 }   #Conservative (BJP - Hindu nationalist)
+	set_variable = { party_pop_array^6 = 0.020 }   #Conservative (BJP - Hindu nationalist)
 	set_variable = { party_pop_array^3 = 0.200 }   #socialism (INC - Congress)
 	set_variable = { party_pop_array^4 = 0.080 }   #Communist-State (CPI/CPM)
 	set_variable = { party_pop_array^14 = 0.100 }  #Neutral_conservatism (regional parties)
 	set_variable = { party_pop_array^20 = 0.100 }  #Nat_Populism (Hindutva hardliners)
-	set_variable = { party_pop_array^1 = 0.050 }   #conservatism
+	set_variable = { party_pop_array^1 = 0.400 }   #conservatism
 	set_variable = { party_pop_array^2 = 0.050 }   #liberalism (AAP etc.)
 	set_variable = { party_pop_array^16 = 0.050 }  #libertarians
 
-	set_variable = { ruling_party = 6 }             #Conservative (BJP)
+	set_variable = { ruling_party = 1 }             #Conservative (BJP)
 	add_to_array = { gov_coalition_array = 14 }      #Neutral_conservatism (NDA allies)
 	add_to_array = { gov_coalition_array = 20 }      #Nat_Populism (RSS-aligned)
 
@@ -70,7 +70,7 @@
 		name = "Narendra Modi"
 		picture = "gfx/leaders/RAJ/Narendra_Modi.dds"
 		expire = "2029.5.20"
-		ideology = Conservative
+		ideology = conservatism
 		traits = {
 			emerging_Conservative
 			captain_of_industry

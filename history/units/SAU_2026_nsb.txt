@@ -302,11 +302,11 @@ units = {
 		task_force = {
 			name = "Western Fleet"
 			location = 12702
-			ship = { name = "Makkah (814)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_3 = { amount = 1 owner = SAU version_name = "Al Riyadh Class" } } }
-			ship = { name = "Al Madinah (702)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU version_name = "Al Madinah Class" } } }
-			ship = { name = "Hofouf (704)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU version_name = "Al Madinah Class" } } }
-			ship = { name = "Badr" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU version_name = "Badr Class" } } }
-			ship = { name = "Al Yamamah" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU version_name = "Badr Class" } } }
+			ship = { name = "Makkah (814)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Riyadh Class" } } }
+			ship = { name = "Al Madinah (702)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU creator = SAU version_name = "Al Madinah Class" } } }
+			ship = { name = "Hofouf (704)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU creator = SAU version_name = "Al Madinah Class" } } }
+			ship = { name = "Badr" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
+			ship = { name = "Al Yamamah" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
 		}
 	}
 
@@ -316,12 +316,12 @@ units = {
 		task_force = {
 			name = "Eastern Fleet"
 			location = 12883
-			ship = { name = "Al Riyadh (812)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_3 = { amount = 1 owner = SAU version_name = "Al Riyadh Class" } } }
-			ship = { name = "Al Dammam (816)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_3 = { amount = 1 owner = SAU version_name = "Al Riyadh Class" } } }
-			ship = { name = "Abha (706)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU version_name = "Al Madinah Class" } } }
-			ship = { name = "Taif (708)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU version_name = "Al Madinah Class" } } }
-			ship = { name = "Hitteen" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU version_name = "Badr Class" } } }
-			ship = { name = "Tabuk" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU version_name = "Badr Class" } } }
+			ship = { name = "Al Riyadh (812)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Riyadh Class" } } }
+			ship = { name = "Al Dammam (816)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Riyadh Class" } } }
+			ship = { name = "Abha (706)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU creator = SAU version_name = "Al Madinah Class" } } }
+			ship = { name = "Taif (708)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU creator = SAU version_name = "Al Madinah Class" } } }
+			ship = { name = "Hitteen" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
+			ship = { name = "Tabuk" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
 		}
 	}
 }

@@ -96,28 +96,28 @@ units = {
 			name = "Eskader"
 			location = 14945
 			# De Zeven Provinciën-class LCF frigates
-			ship = { name = "HNLMS De Zeven Provinciën (F802)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = HOL version_name = "De Zeven Provinciën class" } } }
-			ship = { name = "HNLMS Tromp (F803)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = HOL version_name = "De Zeven Provinciën class" } } }
-			ship = { name = "HNLMS De Ruyter (F804)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = HOL version_name = "De Zeven Provinciën class" } } }
-			ship = { name = "HNLMS Evertsen (F805)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = HOL version_name = "De Zeven Provinciën class" } } }
+			ship = { name = "HNLMS De Zeven Provinciën (F802)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = HOL creator = HOL version_name = "De Zeven Provinciën class" } } }
+			ship = { name = "HNLMS Tromp (F803)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = HOL creator = HOL version_name = "De Zeven Provinciën class" } } }
+			ship = { name = "HNLMS De Ruyter (F804)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = HOL creator = HOL version_name = "De Zeven Provinciën class" } } }
+			ship = { name = "HNLMS Evertsen (F805)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = HOL creator = HOL version_name = "De Zeven Provinciën class" } } }
 			# Karel Doorman JSS
-			ship = { name = "HNLMS Karel Doorman (A833)" definition = helicopter_operator equipment = { helicopter_operator_hull_2 = { amount = 1 owner = HOL version_name = "Karel Doorman class" } } }
+			ship = { name = "HNLMS Karel Doorman (A833)" definition = helicopter_operator equipment = { helicopter_operator_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Karel Doorman class" } } }
 		}
 		task_force = {
 			name = "Holland-klasse Patrouilleschepen"
 			location = 14945
 			# Holland-class OPVs
-			ship = { name = "HNLMS Holland (P840)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = HOL version_name = "Holland class" } } }
-			ship = { name = "HNLMS Zeeland (P841)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = HOL version_name = "Holland class" } } }
-			ship = { name = "HNLMS Friesland (P842)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = HOL version_name = "Holland class" } } }
-			ship = { name = "HNLMS Groningen (P843)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = HOL version_name = "Holland class" } } }
+			ship = { name = "HNLMS Holland (P840)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Holland class" } } }
+			ship = { name = "HNLMS Zeeland (P841)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Holland class" } } }
+			ship = { name = "HNLMS Friesland (P842)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Holland class" } } }
+			ship = { name = "HNLMS Groningen (P843)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Holland class" } } }
 		}
 		task_force = {
 			name = "Onderzeedienst"
 			location = 14945
 			# Walrus-class submarines
-			ship = { name = "HNLMS Walrus (S802)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = HOL version_name = "Walrus class" } } }
-			ship = { name = "HNLMS Zeeleeuw (S803)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = HOL version_name = "Walrus class" } } }
+			ship = { name = "HNLMS Walrus (S802)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Walrus class" } } }
+			ship = { name = "HNLMS Zeeleeuw (S803)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Walrus class" } } }
 		}
 	}
 }
@@ -134,13 +134,13 @@ instant_effect = {
 air_wings = {
 	# Leeuwarden Air Base - F-35A
 	1169 = {
-		L_Strike_fighter2 = { owner = "HOL" creator = "USA" amount = 26 version_name = "F-35A Lightning II" }
+		L_Strike_fighter3 = { owner = "HOL" creator = "USA" amount = 26 version_name = "F-35A Lightning II" }
 		name = "322 & 323 Squadron"
 		start_experience_factor = 0.55
 	}
 	# Volkel Air Base - F-35A
 	47 = {
-		L_Strike_fighter2 = { owner = "HOL" creator = "USA" amount = 26 version_name = "F-35A Lightning II" }
+		L_Strike_fighter3 = { owner = "HOL" creator = "USA" amount = 26 version_name = "F-35A Lightning II" }
 		name = "312 & 313 Squadron"
 		start_experience_factor = 0.55
 	}

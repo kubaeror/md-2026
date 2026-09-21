@@ -24,6 +24,38 @@ was broken on MD 2.0.0 / HoI4 1.19. The rebase fixed, among others:
 
 ## Open issues
 
+### 2026 real-world data pass (September 2026)
+
+A full audit against real January 2026 data corrected nine leaders (Japan, South Korea,
+Czechia, Belgium, Iceland, Lithuania, Serbia, Bulgaria, Romania), India's and Turkey's
+ideology, North Korea's leader ideology, Moldova's ruling party, the Japanese emperor
+idea, the BRICS membership list (Indonesia was missing), three GDP values and the
+US-Venezuela crisis (new `events/md2026_venezuela.txt`).
+
+`MD`'s 2000-era wars are now settled at game start (`md2026_legacy_wars_settled` in
+`common/on_actions/md2026_on_actions.txt`): Chechnya, Aceh, Tamil Eelam, the Taliban
+state, the Eritrea/South Sudan wars and the defunct rebel movements (AFR, LUR, MLC,
+RCD, NPM, UNI) are resolved to their real 2026 state. The Somali civil war is left
+running because it is still ongoing in reality.
+
+### Known limitations
+
+- **Ukraine `create_unit` focuses**: MD's own rewards in `05_ukraine.txt` use a division
+  string the 1.19 parser rejects (`create_unit -- division string was not parsed
+  correctly`). The units are not created; the focuses are still pre-completed for their
+  other effects. This is an MD-side bug.
+- **OOB equipment tiers**: the equipment names in `history/units/*` are valid MD 2.0
+  names and 5th-generation air wings (F-35, F-22, Su-57, J-20) were upgraded to
+  year-appropriate airframes with `tools/fix_oob_tiers.py`. Lower tiers were left as they
+  were (the tier digits still follow MD 1.x), so an F-16 wing may field a 1995 airframe.
+- **Bulgaria**: at 2026-01-01 the country was run by Rosen Zhelyazkov's caretaker
+  government (the regular cabinet resigned in December 2025).
+- **Bookmark quoting**: `patches/bookmark_md2026.txt` stores country keys as `\"TAG\"`
+  (escaped quotes). The game parses it, but it is unusual; normalise if it ever breaks.
+- **Bookmark picture** still uses MD's 2000 selection picture (`GFX_select_date_2000`).
+- **IND (Indonesia) and VEN (Venezuela)** now have 2026 history patches but no 2026
+  order of battle; they use MD's 2000 OOB with 2026 tech levels.
+
 ### Army orders of battle require No Step Back
 
 `history/units/<TAG>_2026_nsb.txt` exists only in the NSB variant. Without No Step Back the

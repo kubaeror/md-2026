@@ -938,7 +938,7 @@ capital = 159
 		nationalist = 30.0
 	}
 	set_politics = {
-		ruling_party = communism
+		ruling_party = nationalist
 		last_election = "2023.5.14"
 		election_frequency = 60
 		elections_allowed = yes
@@ -946,17 +946,17 @@ capital = 159
 
 	start_politics_input = yes
 
-	set_variable = { party_pop_array^7 = 0.350 }   #Autocracy (AKP/Erdogan)
+	set_variable = { party_pop_array^7 = 0.050 }   #Autocracy (AKP/Erdogan)
 	set_variable = { party_pop_array^1 = 0.100 }   #conservatism (CHP reform wing)
 	set_variable = { party_pop_array^3 = 0.100 }   #socialism (CHP left wing)
-	set_variable = { party_pop_array^20 = 0.200 }  #Nat_Populism (MHP)
-	set_variable = { party_pop_array^22 = 0.050 }  #Nat_Autocracy (Ulku Ocaklari)
+	set_variable = { party_pop_array^20 = 0.350 }  #Nat_Populism (MHP)
+	set_variable = { party_pop_array^22 = 0.150 }  #Nat_Autocracy (Ulku Ocaklari)
 	set_variable = { party_pop_array^2 = 0.050 }   #liberalism (DEVA/IYI)
 	set_variable = { party_pop_array^14 = 0.050 }  #Neutral_conservatism (Saadet)
 	set_variable = { party_pop_array^4 = 0.050 }   #Communist-State (HDP/DEM)
 	set_variable = { party_pop_array^16 = 0.050 }  #libertarians
 
-	set_variable = { ruling_party = 7 }             #Autocracy (AKP)
+	set_variable = { ruling_party = 20 }             #Autocracy (AKP)
 	add_to_array = { gov_coalition_array = 20 }      #Nat_Populism (MHP)
 	add_to_array = { gov_coalition_array = 22 }      #Nat_Autocracy
 
@@ -978,7 +978,7 @@ capital = 159
 		name = "Recep Tayyip Erdogan"
 		picture = "gfx/leaders/TUR/Recep_Tayyip_Erdogan.dds"
 		expire = "2028.6.1"
-		ideology = Autocracy
+		ideology = Nat_Populism
 		traits = {
 			emerging_Autocracy
 			career_politician

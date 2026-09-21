@@ -497,6 +497,81 @@ def check_history_syntax():
                 ERRORS["array syntax for scalar"].append(f"{m.group(1)}  ({rel(p)})")
 
 
+def ideology_families(md):
+    """sub-ideology -> top-level ideology (from types = { } blocks)."""
+    fam = {}
+    for root in (os.path.join(md, "common", "ideologies"),
+                 os.path.join(rebase.VANILLA, "common", "ideologies")):
+        for p in files(root):
+            text = rebase.strip_comments(rebase.read(p))
+            for m in re.finditer(r"(?m)^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*\{", text):
+                ob = text.index("{", m.end() - 1)
+                body = text[ob:rebase.find_block(text, ob)]
+                tm = re.search(r"types\s*=\s*\{", body)
+                if not tm:
+                    continue
+                tb = body.index("{", tm.end() - 1)
+                te = rebase.find_block(body, tb)
+                for name, _ in rebase.children(body[tb + 1:te - 1]):
+                    if not name.startswith("@"):
+                        fam[name] = m.group(1)
+    return fam
+
+
+def check_leader_ideology(md):
+    """Our 2026 leaders must belong to the ruling party's ideology family,
+    otherwise the game will not show them as the current leader."""
+    fam = ideology_families(md)
+    for p in files(os.path.join(REPO, "patches", "history_countries")):
+        text = rebase.strip_comments(rebase.read(p))
+        sp = re.search(r"set_politics\s*=\s*\{([^}]*)\}", text)
+        if not sp:
+            continue
+        ruling = re.search(r"ruling_party\s*=\s*([A-Za-z_]+)", sp.group(1))
+        if not ruling:
+            continue
+        rf = fam.get(ruling.group(1), ruling.group(1))
+        for m in re.finditer(r"create_country_leader\s*=\s*\{", text):
+            ob = text.index("{", m.end() - 1)
+            body = text[ob:rebase.find_block(text, ob)]
+            ide = re.search(r"ideology\s*=\s*([A-Za-z_\-]+)", body)
+            if not ide:
+                continue
+            lf = fam.get(ide.group(1), ide.group(1))
+            if lf != rf:
+                ERRORS["leader ideology outside ruling family"].append(
+                    f"{os.path.basename(p)[:3]}: {ide.group(1)} ({lf}) vs {ruling.group(1)} ({rf})")
+
+
+def check_membership_lists():
+    """BRICS 2026 has 11 members; NATO has 32 (MD's 19 + our 13 joiners)."""
+    on_actions = rebase.read(os.path.join(REPO, "common", "on_actions", "md2026_on_actions.txt"))
+    m = re.search(r"OR\s*=\s*\{([^}]*)\}\s*\}\s*set_country_flag = md2026_brics_member", on_actions)
+    if not m:
+        ERRORS["BRICS list not found"].append("md2026_on_actions.txt")
+    else:
+        got = set(re.findall(r"tag = ([A-Z]{3})", m.group(1)))
+        want = {"BRA", "CHI", "EGY", "ETH", "IND", "PER", "RAJ", "SAU", "SAF", "SOV", "UAE"}
+        if got != want:
+            ERRORS["BRICS list mismatch"].append(f"brakuje {sorted(want - got)}, zbedne {sorted(got - want)}")
+    joiners = set()
+    for p in files(os.path.join(REPO, "patches", "history_countries")):
+        text = rebase.strip_comments(rebase.read(p))
+        if re.search(r"add_ideas\s*=\s*\{\s*NATO_member", text):
+            joiners.add(os.path.basename(p)[:3])
+    want_joiners = {"ALB", "BUL", "CRO", "EST", "FIN", "FYR", "LAT", "LIT", "MNT", "ROM", "SLO", "SLV", "SWE"}
+    if joiners != want_joiners:
+        ERRORS["NATO joiner list mismatch"].append(
+            f"brakuje {sorted(want_joiners - joiners)}, zbedne {sorted(joiners - want_joiners)}")
+
+
+def check_unsafe_focuses(sets):
+    """Manual pre-completion exclusions must reference real focuses."""
+    for fid in rebase.manual_unsafe_focuses():
+        if fid not in sets["focus"]:
+            ERRORS["unknown manually excluded focus"].append(fid)
+
+
 def check_precompleted_focuses(md):
     """A focus completed in a country history file must not belong to another
     country's focus tree (SAU completing Gulf-tree focuses crashed the game)."""
@@ -663,6 +738,9 @@ def main():
     check_leader_traits(sets)
     check_precompleted_focuses(md)
     check_deferred_focuses(md)
+    check_leader_ideology(md)
+    check_membership_lists()
+    check_unsafe_focuses(sets)
     check_installation()
 
     print()

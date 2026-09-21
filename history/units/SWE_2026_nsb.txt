@@ -144,25 +144,25 @@ units = {
 		task_force = {
 			name = "3. Sjöstridsflottiljen"
 			location = 11215
-			ship = { name = "HMS Visby (K31)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = SWE version_name = "Visby Class" } } }
-			ship = { name = "HMS Helsingborg (K32)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = SWE version_name = "Visby Class" } } }
-			ship = { name = "HMS Härnösand (K33)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = SWE version_name = "Visby Class" } } }
-			ship = { name = "HMS Nyköping (K34)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = SWE version_name = "Visby Class" } } }
-			ship = { name = "HMS Karlstad (K35)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = SWE version_name = "Visby Class" } } }
+			ship = { name = "HMS Visby (K31)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = SWE creator = SWE version_name = "Visby Class" } } }
+			ship = { name = "HMS Helsingborg (K32)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = SWE creator = SWE version_name = "Visby Class" } } }
+			ship = { name = "HMS Härnösand (K33)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = SWE creator = SWE version_name = "Visby Class" } } }
+			ship = { name = "HMS Nyköping (K34)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = SWE creator = SWE version_name = "Visby Class" } } }
+			ship = { name = "HMS Karlstad (K35)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = SWE creator = SWE version_name = "Visby Class" } } }
 		}
 		# Gävle-class corvettes (Stockholm)
 		task_force = {
 			name = "4. Sjöstridsflottiljen"
 			location = 6050
-			ship = { name = "HMS Gävle (K22)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_2 = { amount = 1 owner = SWE version_name = "Gävle Class" } } }
-			ship = { name = "HMS Sundsvall (K24)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_2 = { amount = 1 owner = SWE version_name = "Gävle Class" } } }
+			ship = { name = "HMS Gävle (K22)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_2 = { amount = 1 owner = SWE creator = SWE version_name = "Gävle Class" } } }
+			ship = { name = "HMS Sundsvall (K24)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_2 = { amount = 1 owner = SWE creator = SWE version_name = "Gävle Class" } } }
 		}
 		# 1st Submarine Flotilla — Gotland-class SSK
 		task_force = {
 			name = "1. Ubåtsflottiljen"
 			location = 11215
-			ship = { name = "HMS Gotland (Gtd)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SWE version_name = "Gotland Class" } } }
-			ship = { name = "HMS Uppland (Upd)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SWE version_name = "Gotland Class" } } }
+			ship = { name = "HMS Gotland (Gtd)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SWE creator = SWE version_name = "Gotland Class" } } }
+			ship = { name = "HMS Uppland (Upd)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SWE creator = SWE version_name = "Gotland Class" } } }
 		}
 	}
 }

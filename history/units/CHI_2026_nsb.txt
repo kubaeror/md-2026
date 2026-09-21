@@ -628,36 +628,36 @@ units = {
 		task_force = {
 			name = "驱逐舰第1支队"
 			location = 10000
-			ship = { name = "CNS Nanchang (101)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI version_name = "Type 055" } } }
-			ship = { name = "CNS Lhasa (102)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI version_name = "Type 055" } } }
-			ship = { name = "CNS Xining (117)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI version_name = "Type 052D" } } }
-			ship = { name = "CNS Guiyang (119)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI version_name = "Type 052D" } } }
-			ship = { name = "CNS Qiqihar (121)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI version_name = "Type 052D" } } }
-			ship = { name = "CNS Kaifeng (124)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI version_name = "Type 052D" } } }
+			ship = { name = "CNS Nanchang (101)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 055" } } }
+			ship = { name = "CNS Lhasa (102)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 055" } } }
+			ship = { name = "CNS Xining (117)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
+			ship = { name = "CNS Guiyang (119)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
+			ship = { name = "CNS Qiqihar (121)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
+			ship = { name = "CNS Kaifeng (124)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
 		}
 		task_force = {
 			name = "护卫舰第21支队"
 			location = 10000
-			ship = { name = "CNS Yantai (538)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI version_name = "Type 054A" } } }
-			ship = { name = "CNS Weifang (550)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI version_name = "Type 054A" } } }
-			ship = { name = "CNS Rizhao (598)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI version_name = "Type 054A" } } }
-			ship = { name = "CNS Linyi (547)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI version_name = "Type 054A" } } }
-			ship = { name = "CNS Jining (537)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI version_name = "Type 054A" } } }
+			ship = { name = "CNS Yantai (538)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
+			ship = { name = "CNS Weifang (550)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
+			ship = { name = "CNS Rizhao (598)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
+			ship = { name = "CNS Linyi (547)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
+			ship = { name = "CNS Jining (537)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
 		}
 		task_force = {
 			name = "潜艇第1支队"
 			location = 10000
-			ship = { name = "CNS 330" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 039A" } } }
-			ship = { name = "CNS 331" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 039A" } } }
-			ship = { name = "CNS 332" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 039B" } } }
-			ship = { name = "CNS 333" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 039B" } } }
-			ship = { name = "CNS 405" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI version_name = "Type 093A" } } }
-			ship = { name = "CNS 406" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI version_name = "Type 093A" } } }
+			ship = { name = "CNS 330" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039A" } } }
+			ship = { name = "CNS 331" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039A" } } }
+			ship = { name = "CNS 332" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039B" } } }
+			ship = { name = "CNS 333" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039B" } } }
+			ship = { name = "CNS 405" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093A" } } }
+			ship = { name = "CNS 406" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093A" } } }
 		}
 		task_force = {
 			name = "辽宁号航母战斗群"
 			location = 10000
-			ship = { name = "CNS Liaoning (CV-16)" definition = carrier start_experience_factor = 0.55 equipment = { carrier_hull_2 = { amount = 1 owner = CHI version_name = "Type 001" } } }
+			ship = { name = "CNS Liaoning (CV-16)" definition = carrier start_experience_factor = 0.55 equipment = { carrier_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 001" } } }
 		}
 	}
 
@@ -668,29 +668,29 @@ units = {
 		task_force = {
 			name = "驱逐舰第3支队"
 			location = 9974
-			ship = { name = "CNS Anshan (103)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI version_name = "Type 055" } } }
-			ship = { name = "CNS Wuxi (104)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI version_name = "Type 055" } } }
-			ship = { name = "CNS Taiyuan (131)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI version_name = "Type 052D" } } }
-			ship = { name = "CNS Suzhou (132)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI version_name = "Type 052D" } } }
-			ship = { name = "CNS Nantong (133)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI version_name = "Type 052D" } } }
-			ship = { name = "CNS Changzhou (156)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI version_name = "Type 052D" } } }
-			ship = { name = "CNS Zibo (157)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI version_name = "Type 052D" } } }
+			ship = { name = "CNS Anshan (103)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 055" } } }
+			ship = { name = "CNS Wuxi (104)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 055" } } }
+			ship = { name = "CNS Taiyuan (131)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
+			ship = { name = "CNS Suzhou (132)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
+			ship = { name = "CNS Nantong (133)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
+			ship = { name = "CNS Changzhou (156)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
+			ship = { name = "CNS Zibo (157)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
 		}
 		task_force = {
 			name = "护卫舰第22支队"
 			location = 9974
-			ship = { name = "CNS Yangzhou (578)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI version_name = "Type 054A" } } }
-			ship = { name = "CNS Huanggang (577)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI version_name = "Type 054A" } } }
-			ship = { name = "CNS Xiangtan (531)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI version_name = "Type 054A" } } }
-			ship = { name = "CNS Xuzhou (530)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI version_name = "Type 054A" } } }
+			ship = { name = "CNS Yangzhou (578)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
+			ship = { name = "CNS Huanggang (577)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
+			ship = { name = "CNS Xiangtan (531)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
+			ship = { name = "CNS Xuzhou (530)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
 		}
 		task_force = {
 			name = "潜艇第2支队"
 			location = 9974
-			ship = { name = "CNS 334" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 039B" } } }
-			ship = { name = "CNS 335" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 039B" } } }
-			ship = { name = "CNS 336" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 039C" } } }
-			ship = { name = "CNS 337" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 039C" } } }
+			ship = { name = "CNS 334" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039B" } } }
+			ship = { name = "CNS 335" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039B" } } }
+			ship = { name = "CNS 336" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039C" } } }
+			ship = { name = "CNS 337" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039C" } } }
 		}
 	}
 
@@ -701,58 +701,58 @@ units = {
 		task_force = {
 			name = "驱逐舰第9支队"
 			location = 994
-			ship = { name = "CNS Dalian (105)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI version_name = "Type 055" } } }
-			ship = { name = "CNS Yan'an (106)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI version_name = "Type 055" } } }
-			ship = { name = "CNS Zunyi (107)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI version_name = "Type 055" } } }
-			ship = { name = "CNS Xianyang (108)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI version_name = "Type 055" } } }
-			ship = { name = "CNS Kunming (172)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI version_name = "Type 052D" } } }
-			ship = { name = "CNS Changsha (173)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI version_name = "Type 052D" } } }
-			ship = { name = "CNS Hefei (174)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI version_name = "Type 052D" } } }
-			ship = { name = "CNS Yinchuan (175)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI version_name = "Type 052D" } } }
-			ship = { name = "CNS Nanning (162)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI version_name = "Type 052DL" } } }
-			ship = { name = "CNS Tangshan (164)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI version_name = "Type 052DL" } } }
+			ship = { name = "CNS Dalian (105)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 055" } } }
+			ship = { name = "CNS Yan'an (106)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 055" } } }
+			ship = { name = "CNS Zunyi (107)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 055" } } }
+			ship = { name = "CNS Xianyang (108)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 055" } } }
+			ship = { name = "CNS Kunming (172)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
+			ship = { name = "CNS Changsha (173)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
+			ship = { name = "CNS Hefei (174)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
+			ship = { name = "CNS Yinchuan (175)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
+			ship = { name = "CNS Nanning (162)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052DL" } } }
+			ship = { name = "CNS Tangshan (164)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052DL" } } }
 		}
 		task_force = {
 			name = "护卫舰第17支队"
 			location = 994
-			ship = { name = "CNS Hengyang (568)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI version_name = "Type 054A" } } }
-			ship = { name = "CNS Yulin (569)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI version_name = "Type 054A" } } }
-			ship = { name = "CNS Huangshan (570)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI version_name = "Type 054A" } } }
-			ship = { name = "CNS Liuzhou (573)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI version_name = "Type 054A" } } }
-			ship = { name = "CNS Sanya (574)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI version_name = "Type 054A" } } }
-			ship = { name = "CNS Wuhu (539)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_3 = { amount = 1 owner = CHI version_name = "Type 054B" } } }
+			ship = { name = "CNS Hengyang (568)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
+			ship = { name = "CNS Yulin (569)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
+			ship = { name = "CNS Huangshan (570)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
+			ship = { name = "CNS Liuzhou (573)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
+			ship = { name = "CNS Sanya (574)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
+			ship = { name = "CNS Wuhu (539)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054B" } } }
 		}
 		task_force = {
 			name = "潜艇第3支队"
 			location = 994
-			ship = { name = "CNS 338" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 039B" } } }
-			ship = { name = "CNS 339" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 039B" } } }
-			ship = { name = "CNS 340" definition = attack_submarine start_experience_factor = 0.55 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 039C" } } }
-			ship = { name = "CNS 341" definition = attack_submarine start_experience_factor = 0.55 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 039C" } } }
-			ship = { name = "CNS 407" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI version_name = "Type 093B" } } }
-			ship = { name = "CNS 408" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI version_name = "Type 093B" } } }
-			ship = { name = "CNS 409" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI version_name = "Type 093B" } } }
-			ship = { name = "CNS 410" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI version_name = "Type 093B" } } }
+			ship = { name = "CNS 338" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039B" } } }
+			ship = { name = "CNS 339" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039B" } } }
+			ship = { name = "CNS 340" definition = attack_submarine start_experience_factor = 0.55 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039C" } } }
+			ship = { name = "CNS 341" definition = attack_submarine start_experience_factor = 0.55 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039C" } } }
+			ship = { name = "CNS 407" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093B" } } }
+			ship = { name = "CNS 408" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093B" } } }
+			ship = { name = "CNS 409" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093B" } } }
+			ship = { name = "CNS 410" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093B" } } }
 		}
 		task_force = {
 			name = "弹道导弹潜艇支队"
 			location = 994
-			ship = { name = "CNS 421" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 094A" } } }
-			ship = { name = "CNS 422" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 094A" } } }
-			ship = { name = "CNS 423" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 094A" } } }
-			ship = { name = "CNS 424" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI version_name = "Type 094A" } } }
-			ship = { name = "CNS 425" definition = missile_submarine start_experience_factor = 0.65 equipment = { missile_submarine_hull_3 = { amount = 1 owner = CHI version_name = "Type 094B" } } }
-			ship = { name = "CNS 426" definition = missile_submarine start_experience_factor = 0.65 equipment = { missile_submarine_hull_3 = { amount = 1 owner = CHI version_name = "Type 094B" } } }
+			ship = { name = "CNS 421" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094A" } } }
+			ship = { name = "CNS 422" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094A" } } }
+			ship = { name = "CNS 423" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094A" } } }
+			ship = { name = "CNS 424" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094A" } } }
+			ship = { name = "CNS 425" definition = missile_submarine start_experience_factor = 0.65 equipment = { missile_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094B" } } }
+			ship = { name = "CNS 426" definition = missile_submarine start_experience_factor = 0.65 equipment = { missile_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094B" } } }
 		}
 		task_force = {
 			name = "山东号航母战斗群"
 			location = 994
-			ship = { name = "CNS Shandong (CV-17)" definition = carrier start_experience_factor = 0.6 equipment = { carrier_hull_2 = { amount = 1 owner = CHI version_name = "Type 002" } } }
+			ship = { name = "CNS Shandong (CV-17)" definition = carrier start_experience_factor = 0.6 equipment = { carrier_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 002" } } }
 		}
 		task_force = {
 			name = "福建号航母战斗群"
 			location = 994
-			ship = { name = "CNS Fujian (CV-18)" definition = carrier start_experience_factor = 0.5 equipment = { carrier_hull_2 = { amount = 1 owner = CHI version_name = "Type 003" } } }
+			ship = { name = "CNS Fujian (CV-18)" definition = carrier start_experience_factor = 0.5 equipment = { carrier_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 003" } } }
 		}
 	}
 }
@@ -780,7 +780,7 @@ instant_effect = {
 air_wings = {
 	# J-20A Stealth Fighter (Wuhu / Anhui)
 	564 = {
-		heavy_fighter_equipment_2 = { owner = "CHI" amount = 100 version_name = "J-20A" }
+		AS_Fighter5 = { owner = "CHI" amount = 100 version_name = "J-20A" }
 		name = "王牌歼击师"
 		start_experience_factor = 0.6
 	}
@@ -852,7 +852,7 @@ air_wings = {
 	}
 	# Carrier Air Wing — Fujian
 	"CNS Fujian (CV-18)" = {
-		cv_medium_plane_airframe_2 = { owner = "CHI" amount = 32 version_name = "J-35" }
+		CV_MR_Fighter5 = { owner = "CHI" amount = 32 version_name = "J-35" }
 		name = "福建舰舰载机联队"
 		start_experience_factor = 0.5
 	}

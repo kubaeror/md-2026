@@ -301,7 +301,7 @@ instant_effect = {
 air_wings = {
 	## Negev (Nevatim/Ramon/Hatzerim) ##
 	206 = {
-		L_Strike_fighter2 = { owner = "ISR" creator = "USA" amount = 50 version_name = "F-35I Adir" }
+		L_Strike_fighter3 = { owner = "ISR" creator = "USA" amount = 50 version_name = "F-35I Adir" }
 		name = "116/140 Squadron - 'Adir' Wing"
 		start_experience_factor = 0.8
 	}

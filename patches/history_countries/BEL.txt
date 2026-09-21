@@ -54,7 +54,7 @@
 	set_variable = { party_pop_array^18 = 0.060 }   #neutral_Social
 	set_variable = { party_pop_array^21 = 0.030 }   #Nat_Fascism
 
-	set_variable = { ruling_party = 2 }             #ruling
+	set_variable = { ruling_party = 1 }             #ruling
 	add_to_array = { gov_coalition_array = 1 }       #conservatism (N-VA)
 	add_to_array = { gov_coalition_array = 3 }       #socialism (PS/sp.a)
 	add_to_array = { gov_coalition_array = 14 }       #Neutral_conservatism (cdH/CD&V)
@@ -71,11 +71,11 @@
 
 	### Country Leader: Alexander De Croo ###
 	create_country_leader = {
-		name = "Alexander De Croo"
-		picture = "gfx/leaders/generic_politicians/white_003.dds"
+		name = "Bart De Wever"
+		picture = "gfx/leaders/BEL/BEL_Bart_De_Wever.dds"
 		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2029.6.9"
-		ideology = liberalism
+		ideology = conservatism
 		traits = {
 			western_liberalism
 			career_politician

@@ -145,17 +145,17 @@ units = {
 		task_force = {
 			name = "Maritime Forces Atlantic"
 			location = 7361
-			ship = { name = "HMCS Halifax (FFH-330)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
-			ship = { name = "HMCS Charlottetown (FFH-339)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
-			ship = { name = "HMCS Fredericton (FFH-337)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
-			ship = { name = "HMCS Montreal (FFH-336)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
-			ship = { name = "HMCS St. John's (FFH-340)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
-			ship = { name = "HMCS Toronto (FFH-333)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
-			ship = { name = "HMCS Ville de Québec (FFH-332)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
-			ship = { name = "HMCS Windsor (SSK-877)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = CAN version_name = "Victoria Class" } } }
-			ship = { name = "HMCS Corner Brook (SSK-878)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = CAN version_name = "Victoria Class" } } }
-			ship = { name = "HMCS Harry DeWolf (AOPV-430)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN version_name = "Harry DeWolf Class" } } }
-			ship = { name = "HMCS Margaret Brooke (AOPV-431)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN version_name = "Harry DeWolf Class" } } }
+			ship = { name = "HMCS Halifax (FFH-330)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Charlottetown (FFH-339)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Fredericton (FFH-337)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Montreal (FFH-336)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS St. John's (FFH-340)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Toronto (FFH-333)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Ville de Québec (FFH-332)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Windsor (SSK-877)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = CAN creator = CAN version_name = "Victoria Class" } } }
+			ship = { name = "HMCS Corner Brook (SSK-878)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = CAN creator = CAN version_name = "Victoria Class" } } }
+			ship = { name = "HMCS Harry DeWolf (AOPV-430)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Harry DeWolf Class" } } }
+			ship = { name = "HMCS Margaret Brooke (AOPV-431)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Harry DeWolf Class" } } }
 		}
 	}
 
@@ -165,15 +165,15 @@ units = {
 		task_force = {
 			name = "Maritime Forces Pacific"
 			location = 7259
-			ship = { name = "HMCS Calgary (FFH-335)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
-			ship = { name = "HMCS Ottawa (FFH-341)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
-			ship = { name = "HMCS Regina (FFH-334)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
-			ship = { name = "HMCS Vancouver (FFH-331)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
-			ship = { name = "HMCS Winnipeg (FFH-338)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN version_name = "Halifax Class" } } }
-			ship = { name = "HMCS Victoria (SSK-876)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = CAN version_name = "Victoria Class" } } }
-			ship = { name = "HMCS Chicoutimi (SSK-879)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = CAN version_name = "Victoria Class" } } }
-			ship = { name = "HMCS Max Bernays (AOPV-432)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN version_name = "Harry DeWolf Class" } } }
-			ship = { name = "HMCS William Hall (AOPV-433)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN version_name = "Harry DeWolf Class" } } }
+			ship = { name = "HMCS Calgary (FFH-335)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Ottawa (FFH-341)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Regina (FFH-334)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Vancouver (FFH-331)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Winnipeg (FFH-338)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Halifax Class" } } }
+			ship = { name = "HMCS Victoria (SSK-876)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = CAN creator = CAN version_name = "Victoria Class" } } }
+			ship = { name = "HMCS Chicoutimi (SSK-879)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = CAN creator = CAN version_name = "Victoria Class" } } }
+			ship = { name = "HMCS Max Bernays (AOPV-432)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Harry DeWolf Class" } } }
+			ship = { name = "HMCS William Hall (AOPV-433)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Harry DeWolf Class" } } }
 		}
 	}
 }

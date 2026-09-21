@@ -1560,7 +1560,6 @@ md2026_complete_precompleted_focuses = {
 		complete_national_focus = POL_intervention_in_ukraine
 		complete_national_focus = POL_lithuania_and_belarus
 		complete_national_focus = POL_closeup_of_the_visegrad_group
-		complete_national_focus = POL_socialdemocracy
 		complete_national_focus = POL_continue_anti_corrpution
 		complete_national_focus = POL_discussion_of_the_world_situation
 		complete_national_focus = POL_expansion_of_ukrainian_grain_imports

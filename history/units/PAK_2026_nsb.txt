@@ -352,23 +352,23 @@ units = {
 		task_force = {
 			name = "Surface Flotilla"
 			location = 3866
-			ship = { name = "PNS Tughril (F-261)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = PAK version_name = "Type 054A/P" } } }
-			ship = { name = "PNS Taimur (F-262)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = PAK version_name = "Type 054A/P" } } }
-			ship = { name = "PNS Badr (F-263)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_3 = { amount = 1 owner = PAK version_name = "Type 054A/P" } } }
-			ship = { name = "PNS Hunain (F-264)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_3 = { amount = 1 owner = PAK version_name = "Type 054A/P" } } }
-			ship = { name = "PNS Zulfiquar (F-251)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PAK version_name = "F-22P Zulfiquar-class" } } }
-			ship = { name = "PNS Shamsheer (F-252)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PAK version_name = "F-22P Zulfiquar-class" } } }
-			ship = { name = "PNS Aslat (F-253)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PAK version_name = "F-22P Zulfiquar-class" } } }
+			ship = { name = "PNS Tughril (F-261)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = PAK creator = PAK version_name = "Type 054A/P" } } }
+			ship = { name = "PNS Taimur (F-262)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = PAK creator = PAK version_name = "Type 054A/P" } } }
+			ship = { name = "PNS Badr (F-263)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_3 = { amount = 1 owner = PAK creator = PAK version_name = "Type 054A/P" } } }
+			ship = { name = "PNS Hunain (F-264)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_3 = { amount = 1 owner = PAK creator = PAK version_name = "Type 054A/P" } } }
+			ship = { name = "PNS Zulfiquar (F-251)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "F-22P Zulfiquar-class" } } }
+			ship = { name = "PNS Shamsheer (F-252)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "F-22P Zulfiquar-class" } } }
+			ship = { name = "PNS Aslat (F-253)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "F-22P Zulfiquar-class" } } }
 		}
 		task_force = {
 			name = "Submarine Flotilla"
 			location = 3866
-			ship = { name = "PNS Khalid (S-137)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PAK version_name = "Agosta-90B" } } }
-			ship = { name = "PNS Saad (S-138)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PAK version_name = "Agosta-90B" } } }
-			ship = { name = "PNS Hamza (S-139)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PAK version_name = "Agosta-90B" } } }
-			ship = { name = "PNS Hashmat (S-135)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = PAK version_name = "Agosta-70" } } }
-			ship = { name = "PNS Hurmat (S-136)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = PAK version_name = "Agosta-70" } } }
-			ship = { name = "PNS Hangor (S-141)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PAK version_name = "Hangor-class (Type 039B)" } } }
+			ship = { name = "PNS Khalid (S-137)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "Agosta-90B" } } }
+			ship = { name = "PNS Saad (S-138)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "Agosta-90B" } } }
+			ship = { name = "PNS Hamza (S-139)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "Agosta-90B" } } }
+			ship = { name = "PNS Hashmat (S-135)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = PAK creator = PAK version_name = "Agosta-70" } } }
+			ship = { name = "PNS Hurmat (S-136)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = PAK creator = PAK version_name = "Agosta-70" } } }
+			ship = { name = "PNS Hangor (S-141)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "Hangor-class (Type 039B)" } } }
 		}
 	}
 }

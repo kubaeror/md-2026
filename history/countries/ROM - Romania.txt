@@ -971,7 +971,7 @@ capital = 150
 	md2026_tier4_2026_techs = yes
 
 	### GDP & Economic Variables ###
-	set_variable = { gdp_per_capita = 18.000 }
+	set_variable = { gdp_per_capita = 20.000 }
 	set_variable = { var = debt value = 180.000 }
 	set_variable = { var = treasury value = 30 }
 	set_variable = { var = corporate_tax_rate value = 16 }
@@ -1022,13 +1022,14 @@ capital = 150
 
 	### Country Leader: Marcel Ciolacu ###
 	create_country_leader = {
-		name = "Marcel Ciolacu"
-		picture = "gfx/leaders/ROM/Marcel_Ciolacu.dds"
+		name = "Ilie Bolojan"
+		picture = "gfx/leaders/generic_politicians/white_022.dds"
 		expire = "2028.12.1"
 		ideology = conservatism
 		traits = {
 			western_conservatism
 			career_politician
+			technocrat
 		}
 	}
 	set_variable = { term_limit = 2 }

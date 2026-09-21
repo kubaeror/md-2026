@@ -1,0 +1,65 @@
+##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### Technology 2026 ###
+	md2026_tier3_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 5.000 }
+	set_variable = { var = debt value = 500.000 }
+	set_variable = { var = treasury value = 40 }
+	set_variable = { var = corporate_tax_rate value = 22 }
+	set_variable = { var = population_tax_rate value = 12 }
+	set_variable = { var = int_investments value = 5 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 320 }
+	}
+	set_variable = { overall_productivity = 320 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 45.0
+		communism = 10.0
+		fascism = 5.0
+		neutrality = 20.0
+		nationalist = 20.0
+	}
+	set_politics = {
+		ruling_party = nationalist
+		last_election = "2024.2.14"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^20 = 0.300 }   #Nat_Populism (Gerindra/Prabowo)
+	set_variable = { party_pop_array^3 = 0.250 }    #socialism (PDI-P)
+	set_variable = { party_pop_array^1 = 0.150 }    #conservatism (Golkar/Demokrat)
+	set_variable = { party_pop_array^14 = 0.150 }   #Neutral_conservatism (Islamic parties)
+	set_variable = { party_pop_array^22 = 0.050 }   #Nat_Autocracy
+	set_variable = { party_pop_array^2 = 0.050 }    #liberalism
+	set_variable = { party_pop_array^4 = 0.020 }    #Communist-State
+
+	set_variable = { ruling_party = 20 }
+
+	startup_politics = yes
+
+	### Country Leader: Prabowo Subianto ###
+	create_country_leader = {
+		name = "Prabowo Subianto"
+		picture = "gfx/leaders/generic_politicians/southeastasian_003.dds"
+		expire = "2029.10.20"
+		ideology = Nat_Populism
+		traits = {
+			nationalist_Nat_Populism
+			military_career
+			career_politician
+		}
+	}
+
+	### BRICS member since January 2025 ###
+	set_country_flag = md2026_brics_member
+}

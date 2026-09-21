@@ -89,9 +89,9 @@ bookmarks = {
 			}
 		}
 		#Turkey
-		"TUR" = {
+		\"TUR\" = {
 			history = "TUR_MD2026_DESC"
-			ideology = communism
+			ideology = nationalist
 			version = base_game
 			ideas = {
 				TUR_mafia_active
@@ -127,7 +127,7 @@ bookmarks = {
 			version = base_game
 			ideas = {
 				JAP_american_pressure_article_nine
-				idea_JAP_emperor_akihito
+				idea_JAP_emperor_naruhito
 				JAP_entrenched_demand_shortfall_idea_2
 			}
 			focuses = {
@@ -162,10 +162,10 @@ bookmarks = {
 			ideology = nationalist
 			version = base_game
 		}
-		"RAJ" = {
+		\"RAJ\" = {
 			minor = yes
 			history = "RAJ_MD2026_DESC"
-			ideology = communism
+			ideology = democratic
 			version = base_game
 		}
 		"BRA" = {

@@ -501,6 +501,20 @@ def _scan_unsafe(body, effects, events, depth=4, seen=None):
     return None
 
 
+UNSAFE_FOCUSES_FILE = os.path.join(REPO, "patches", "unsafe_focuses.json")
+
+
+def manual_unsafe_focuses():
+    """Hand-maintained extra exclusions: focus id -> reason."""
+    if os.path.exists(UNSAFE_FOCUSES_FILE):
+        try:
+            with open(UNSAFE_FOCUSES_FILE, encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return {}
+    return {}
+
+
 def unsafe_precompleted_focuses(md):
     """focus id -> reason why it must not be pre-completed."""
     if md in _unsafe_cache:
@@ -513,6 +527,8 @@ def unsafe_precompleted_focuses(md):
         reason = _scan_unsafe(body, effects, events)
         if reason:
             out[fid] = reason
+    for fid, reason in manual_unsafe_focuses().items():
+        out.setdefault(fid, f"manual: {reason}")
     _unsafe_cache[md] = out
     return out
 

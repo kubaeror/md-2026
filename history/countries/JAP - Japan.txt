@@ -1938,8 +1938,8 @@ capital = 615
 
 	### Country Leader: Shigeru Ishiba ###
 	create_country_leader = {
-		name = "Shigeru Ishiba"
-		picture = "gfx/leaders/JAP/Shigeru_Ishiba.dds"
+		name = "Sanae Takaichi"
+		picture = "gfx/leaders/JAP/sanae_takaichi.dds"
 		expire = "2028.10.27"
 		ideology = conservatism
 		traits = {

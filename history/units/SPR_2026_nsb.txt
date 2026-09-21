@@ -191,16 +191,16 @@ units = {
 		task_force = {
 			name = "Grupo Anfibio"
 			location = 279
-			ship = { name = "SPS Juan Carlos I (L61)" definition = helicopter_operator pride_of_the_fleet = yes start_experience_factor = 0.65 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = SPR version_name = "Juan Carlos I Class" } } }
-			ship = { name = "SPS Galicia (L51)" definition = helicopter_operator pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = SPR version_name = "Galicia Class" } } }
-			ship = { name = "SPS Castilla (L52)" definition = helicopter_operator pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = SPR version_name = "Galicia Class" } } }
+			ship = { name = "SPS Juan Carlos I (L61)" definition = helicopter_operator pride_of_the_fleet = yes start_experience_factor = 0.65 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Juan Carlos I Class" } } }
+			ship = { name = "SPS Galicia (L51)" definition = helicopter_operator pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = SPR creator = SPR version_name = "Galicia Class" } } }
+			ship = { name = "SPS Castilla (L52)" definition = helicopter_operator pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = SPR creator = SPR version_name = "Galicia Class" } } }
 		}
 		task_force = {
 			name = "Grupo de Escolta"
 			location = 279
-			ship = { name = "SPS Reina Sofia (F84)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SPR version_name = "Santa Maria Class" } } }
-			ship = { name = "SPS Navarra (F85)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SPR version_name = "Santa Maria Class" } } }
-			ship = { name = "SPS Canarias (F86)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SPR version_name = "Santa Maria Class" } } }
+			ship = { name = "SPS Reina Sofia (F84)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Santa Maria Class" } } }
+			ship = { name = "SPS Navarra (F85)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Santa Maria Class" } } }
+			ship = { name = "SPS Canarias (F86)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Santa Maria Class" } } }
 		}
 	}
 
@@ -211,11 +211,11 @@ units = {
 		task_force = {
 			name = "Fragatas F100"
 			location = 758
-			ship = { name = "SPS Alvaro de Bazan (F101)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = SPR version_name = "Alvaro de Bazan Class" } } }
-			ship = { name = "SPS Almirante Juan de Borbon (F102)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = SPR version_name = "Alvaro de Bazan Class" } } }
-			ship = { name = "SPS Blas de Lezo (F103)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = SPR version_name = "Alvaro de Bazan Class" } } }
-			ship = { name = "SPS Mendez Nunez (F104)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = SPR version_name = "Alvaro de Bazan Class" } } }
-			ship = { name = "SPS Cristobal Colon (F105)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = SPR version_name = "Alvaro de Bazan Class" } } }
+			ship = { name = "SPS Alvaro de Bazan (F101)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = SPR creator = SPR version_name = "Alvaro de Bazan Class" } } }
+			ship = { name = "SPS Almirante Juan de Borbon (F102)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = SPR creator = SPR version_name = "Alvaro de Bazan Class" } } }
+			ship = { name = "SPS Blas de Lezo (F103)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = SPR creator = SPR version_name = "Alvaro de Bazan Class" } } }
+			ship = { name = "SPS Mendez Nunez (F104)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = SPR creator = SPR version_name = "Alvaro de Bazan Class" } } }
+			ship = { name = "SPS Cristobal Colon (F105)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = SPR creator = SPR version_name = "Alvaro de Bazan Class" } } }
 		}
 	}
 
@@ -226,17 +226,17 @@ units = {
 		task_force = {
 			name = "Escuadrilla de Submarinos"
 			location = 6906
-			ship = { name = "SPS Isaac Peral (S81)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = SPR version_name = "Isaac Peral Class" } } }
+			ship = { name = "SPS Isaac Peral (S81)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = SPR creator = SPR version_name = "Isaac Peral Class" } } }
 		}
 		task_force = {
 			name = "Buques de Acción Marítima"
 			location = 6906
-			ship = { name = "SPS Meteoro (P41)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = SPR version_name = "Meteoro Class" } } }
-			ship = { name = "SPS Rayo (P42)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = SPR version_name = "Meteoro Class" } } }
-			ship = { name = "SPS Relampago (P43)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = SPR version_name = "Meteoro Class" } } }
-			ship = { name = "SPS Tornado (P44)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = SPR version_name = "Meteoro Class" } } }
-			ship = { name = "SPS Audaz (P45)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = SPR version_name = "Meteoro Class" } } }
-			ship = { name = "SPS Furor (P46)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { corvette_hull_2 = { amount = 1 owner = SPR version_name = "Meteoro Class" } } }
+			ship = { name = "SPS Meteoro (P41)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Meteoro Class" } } }
+			ship = { name = "SPS Rayo (P42)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Meteoro Class" } } }
+			ship = { name = "SPS Relampago (P43)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Meteoro Class" } } }
+			ship = { name = "SPS Tornado (P44)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Meteoro Class" } } }
+			ship = { name = "SPS Audaz (P45)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Meteoro Class" } } }
+			ship = { name = "SPS Furor (P46)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { corvette_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Meteoro Class" } } }
 		}
 	}
 }

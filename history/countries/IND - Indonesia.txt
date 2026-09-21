@@ -1,0 +1,453 @@
+capital = 631
+##State Modifiers
+622 = { add_dynamic_modifier = { modifier = IND_Aceh_insurgency } }
+638 = { add_dynamic_modifier = { modifier = IND_papua_resist } }
+639 = { add_dynamic_modifier = { modifier = IND_islamic_resist } }
+2000.1.1 = {
+	set_variable = { currency_strength = 0.65 }
+	set_cosmetic_tag = IND
+	set_country_flag = dynamic_flag
+	set_country_flag = dynamic_rebel_flag
+	set_country_flag = is_getting_cdf_subsidies
+	add_to_array = { global.uncdf_recipients = THIS }
+	add_dynamic_modifier = { modifier = un_aid_subsidies_modifier }
+	set_variable = { gdp_per_capita = 5.621 }
+
+	# Special Projects
+	complete_special_project = sp:sp_aircraft_project
+	complete_special_project = sp:sp_composite_production
+	complete_special_project = sp:sp_helicopter_project
+	complete_special_project = sp:sp_naval_vessel_project
+
+	set_technology = {
+		integrated_transportation_system = 1
+		post_conventional_rail = 1
+		early_freight_locomotive = 1
+		infantry_mass_assault = 1
+		night_vision_1 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		util_vehicle_1 = 1
+		util_vehicle_2 = 1
+		util_vehicle_3 = 1
+		combat_eng_equipment = 1
+		Anti_tank_0 = 1
+		Heavy_Anti_tank_0 = 1
+		body_armor_1 = 1
+		camouflage_1 = 1
+		basic_computing = 1
+		integrated_circuit = 1
+		computing1 = 1
+		radar = 1
+		internet1 = 1
+		fuel_silos = 1
+		support_weapons = 1
+		special_forces_tech_1 = 1
+		nanofibers_1 = 1
+		nanofibers_2 = 1
+		printing_1 = 1
+		printing_2 = 1
+		genetics_1 = 1
+		fuel_refining = 1
+		early_renewables = 1
+		renewables = 1
+		electrification_1 = 1
+		construction1 = 1
+		corvette_hull_1 = 1
+		frigate_hull_1 = 1
+		frigate_hull_2 = 1
+		destroyer_hull_1 = 1
+		attack_submarine_hull_1 = 1
+		tech_submarine_engineering_1 = 1
+		tech_naval_systems_engineering = 1
+		tech_power_systems_1 = 1
+		tech_combat_support_systems = 1
+		tech_fire_control_1 = 1
+		tech_combat_radar_1 = 1
+		tech_combat_radar_2 = 1
+		tech_combat_sonar_1 = 1
+		tech_early_naval_weapon_systems = 1
+		tech_naval_weapon_systems = 1
+		tech_light_guns_1 = 1
+		tech_point_defense_chain_gun = 1
+		tech_turret_missiles_surface_1 = 1
+		tech_turret_missiles_aa_1 = 1
+		tech_vls_surface_1 = 1
+		tech_vls_aa_1 = 1
+		tech_torpedoes_1 = 1
+		tech_landing_craft_1 = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "La Resistance" } }
+		set_technology = {
+			decryption1 = 1
+			encryption1 = 1
+		}
+	}
+	complete_special_project = sp:sp_armoured_vehicle_project
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_oob = "IND_2000_nsb"
+
+		set_technology = {
+			mbt_tech_ops = 1
+			mbt_tech = 1
+			nsb_artillery_0 = 1
+			nsb_Anti_Air_0 = 1
+			helo_ops_tech = 1
+			nsb_transport_helicopter_2 = 1
+			nsb_transport_helicopter_1 = 1
+		}
+		else = {
+			set_oob = "IND_2000_nonnsb"
+
+			set_technology = {
+				MBT_1 = 1
+				Early_APC = 1
+				APC_1 = 1
+				IFV_1 = 1
+				tech_arty_0 = 1
+				SP_arty_0 = 1
+				SP_R_arty_0 = 1
+				Anti_Air_0 = 1
+				SP_Anti_Air_0 = 1
+				Rec_tank_0 = 1
+				transport_helicopter_1 = 1
+			}
+		}
+	}
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "IND_2000_bba"
+		set_technology = {
+			early_airframe_designs = 1
+			gen_3_large = 1
+			gen_3_large = 1
+			engines_2 = 1
+			early_weapons = 1
+			countermeasures_1 = 1
+			ag_weapons_1 = 1
+			air_weapons_1 = 1
+		}
+
+		create_equipment_variant = { #Large Transport
+			name = "CASA/IPTN CN-235"
+			type = large_plane_air_transport_airframe_2
+			parent_version = 0
+			modules = {
+				fixed_main_weapon_slot = weap_buff_transport
+				fixed_gun_slot = empty
+				engine_type_slot = engine_prop_quad_1
+				avionics_type_slot = avionics_manned_1
+				wingform_type_slot = wing_straight
+				special_slot_type_2 = spec_redundant_1
+				special_slot_type_3 = empty
+				fixed_auxiliary_weapon_slot_1 = empty
+				fixed_auxiliary_weapon_slot_2 = empty
+			}
+		}
+
+		else = {
+			set_air_oob = "IND_2000_nonbba"
+			set_technology = {
+				early_bomber = 1
+				transport_plane1 = 1
+				transport_plane2 = 1
+			}
+		}
+	}
+	set_naval_oob = "IND_2000_naval_mtg"
+
+	add_ideas = {
+		wto_member
+		partially_privatized_healthcare
+		balanced_protections
+		standard_maintenance
+		us_dollar
+		standard_regulations
+
+		ASEAN_Member
+		corruption_level_09
+		sunni
+		saudi_aid
+		export_economy
+		stagnation
+		defence_01
+		edu_02
+		health_01
+		social_01
+		bureau_03
+		police_02
+		export_economy
+		volunteer_army
+		volunteer_women
+		small_medium_business_owners
+		the_ulema
+		landowners
+		ASEAN_Member
+		multi_ethnic_state_idea
+		officer_advanced_training
+		IND_ethnic_tension
+		IND_aceh_in_turmoil
+		IND_rupiah_crisis
+		IND_popular_tourist_destination
+		IND_growing_radicalization
+		IND_asian_crisis
+		USA_usaid
+		no_currency_backing
+	}
+
+	declare_war_on = {
+		target = ACE
+		type = annex_everything
+	}
+
+	#Chinese diaspora trading network
+	add_opinion_modifier = { target = SIN modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = SIN modifier = bamboo_network }
+	add_opinion_modifier = { target = TAI modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = TAI modifier = bamboo_network }
+	add_opinion_modifier = { target = SIA modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = SIA modifier = bamboo_network }
+	add_opinion_modifier = { target = VIE modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = VIE modifier = bamboo_network }
+	add_opinion_modifier = { target = CBD modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = CBD modifier = bamboo_network }
+	add_opinion_modifier = { target = MAY modifier = bamboo_network }
+	reverse_add_opinion_modifier = { target = MAY modifier = bamboo_network }
+
+	add_opinion_modifier = { target = LAO modifier = asean_relations }
+	reverse_add_opinion_modifier = { target = LAO modifier = asean_relations }
+	add_opinion_modifier = { target = MAY modifier = asean_relations }
+	reverse_add_opinion_modifier = { target = MAY modifier = asean_relations }
+	add_opinion_modifier = { target = BRM modifier = asean_relations }
+	reverse_add_opinion_modifier = { target = BRM modifier = asean_relations }
+	add_opinion_modifier = { target = PHI modifier = asean_relations }
+	reverse_add_opinion_modifier = { target = PHI modifier = asean_relations }
+	add_opinion_modifier = { target = SIN modifier = asean_relations }
+	reverse_add_opinion_modifier = { target = SIN modifier = asean_relations }
+	add_opinion_modifier = { target = SIA modifier = asean_relations }
+	reverse_add_opinion_modifier = { target = SIA modifier = asean_relations }
+	add_opinion_modifier = { target = VIE modifier = asean_relations }
+	reverse_add_opinion_modifier = { target = VIE modifier = asean_relations }
+
+	#Influence system
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 210 }
+	add_to_array = { influence_array = USA.id }
+	add_to_array = { influence_array_val = 102 }
+	add_to_array = { influence_array = CHI.id }
+	add_to_array = { influence_array_val = 98 }
+	add_to_array = { influence_array = RAJ.id }
+	add_to_array = { influence_array_val = 26 }
+	add_to_array = { influence_array = AST.id }
+	add_to_array = { influence_array_val = 44 }
+	add_to_array = { influence_array = MAY.id }
+	add_to_array = { influence_array_val = 9 }
+	add_to_array = { influence_array = HOL.id }
+	add_to_array = { influence_array_val = 9 }
+	add_to_array = { influence_array = SOV.id }
+	add_to_array = { influence_array_val = 12 }
+	sort_influence = yes
+
+	### Economy
+	set_variable = { var = debt value = 1052.183 }
+	set_variable = { var = treasury value = 39.4 }
+	set_variable = { var = int_investments value = 3 }
+	set_variable = { inflation_rate_var = 0.20478 }
+	set_variable = { cb_policy_rate = 13 }
+	set_variable = { var = corporate_tax_rate value = 18 }
+	set_variable = { var = population_tax_rate value = 27 }
+
+	# Custom Investment Targets for Indonesia
+	add_to_array = { IND.investment_targets = SIN } # Singapore
+	add_to_array = { IND.investment_targets = CBD } # Cambodia
+	add_to_array = { IND.investment_targets = VIE } # Vietnam
+	add_to_array = { IND.investment_targets = PHI } # Philippines
+	add_to_array = { IND.investment_targets = AST } # Australia
+	add_to_array = { IND.investment_targets = CHI } # China
+	add_to_array = { IND.investment_targets = RAJ } # India
+	add_to_array = { IND.investment_targets = BAN } # Bangladesh
+	add_to_array = { IND.investment_targets = SIA } # Thailand
+	add_to_array = { IND.investment_targets = BRM } # Myanmar
+	add_to_array = { IND.investment_targets = SRI } # Sri Lanka
+	add_to_array = { IND.investment_targets = JAP } # Japan
+	add_to_array = { IND.investment_targets = FRA } # France
+
+
+	add_to_array = { IND.influence_targets = CBD }
+	add_to_array = { IND.influence_targets = VIE }
+	add_to_array = { IND.influence_targets = LAO }
+	add_to_array = { IND.influence_targets = PHI }
+	add_to_array = { IND.influence_targets = SIN }
+	add_to_array = { IND.influence_targets = MAD }
+	add_to_array = { IND.influence_targets = AST }
+	add_to_array = { IND.influence_targets = NZL }
+	add_to_array = { IND.influence_targets = PAP }
+	add_to_array = { IND.influence_targets = SRI }
+	add_to_array = { IND.influence_targets = TIM }
+	add_to_array = { IND.influence_targets = MAY }
+
+	set_popularities = {
+		democratic = 49.6
+		communism = 38.3
+		fascism = 0.0
+		neutrality = 10.7
+		nationalist = 1.4
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1999.4.1"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	### Party Popularities
+	set_variable = { party_pop_array^1 = 0.424 } #conservatism
+	set_variable = { party_pop_array^2 = 0.071 } #liberalism
+	set_variable = { party_pop_array^3 = 0.001 } #socialism
+	set_variable = { party_pop_array^4 = 0.05 } #Communist-State
+	set_variable = { party_pop_array^5 = 0.33 } #anarchist_communism
+	set_variable = { party_pop_array^6 = 0.003 } #Conservative
+	set_variable = { party_pop_array^19 = 0.107 } #Neutral_Communism
+	set_variable = { party_pop_array^20 = 0.014 } #Nat_Populism
+
+	### Ruling Party
+	set_variable = { ruling_party = 1 }
+
+	startup_politics = yes
+
+	create_country_leader = {
+		name = "Abdurrahman Wahid"
+		picture = "Abdurrahman_Wahid.dds"
+		ideology = conservatism
+		traits = {
+			western_conservatism
+		}
+	}
+	set_variable = { term_limit = 2 }
+	set_variable = { current_term = 1 }
+
+	recruit_character = IND_tyasno_sudarto
+	recruit_character = IND_endriartono_sutarto
+	recruit_character = IND_ryamizard_ryacudu
+	recruit_character = IND_djoko_santoso
+	recruit_character = IND_achmad_sutjipto
+	recruit_character = IND_indroko_sastrowiryono
+	recruit_character = IND_bernard_kent_sondakh
+	recruit_character = IND_hanafie_asnan
+	recruit_character = IND_chappy_hakim
+	recruit_character = IND_djoko_suyanto
+	recruit_character = IND_herman_prayitno
+	recruit_character = IND_bambang_darmono
+	recruit_character = IND_tubagus_hasanuddin
+	recruit_character = IND_moeldoko
+	recruit_character = IND_agus_suhartono
+	recruit_character = IND_marsetio
+
+	set_variable = { overall_productivity = 477 }
+
+	if = {
+		limit = {
+			has_dlc = "La Resistance"
+		}
+		create_intelligence_agency = {
+			name = "State Intelligence Agency (BIN)"
+			icon = GFX_intelligence_agency_logo_ind
+		}
+		set_country_flag = MD_skip_treasury_cost
+		upgrade_intelligence_agency = upgrade_form_department
+		upgrade_intelligence_agency = upgrade_establish_cyber_operations_division
+		clr_country_flag = MD_skip_treasury_cost
+	}
+
+
+	# Relation Starting Configuration (moved from on_startup)
+	add_opinion_modifier = { target = CUB modifier = sanctions }
+	add_relation_modifier = { target = USA modifier = USA_World_Economical_Relations }
+	add_relation_modifier = { target = SOV modifier = SOV_World_Economical_Relations }
+	add_relation_modifier = { target = CHI modifier = CHI_World_Economical_Relations }
+	add_relation_modifier = { target = FRA modifier = FRA_World_Economical_Relations }
+	add_relation_modifier = { target = GER modifier = GER_World_Economical_Relations }
+	add_relation_modifier = { target = ENG modifier = ENG_World_Economical_Relations }
+	add_relation_modifier = { target = SPR modifier = SPR_World_Economical_Relations }
+	add_relation_modifier = { target = ITA modifier = ITA_World_Economical_Relations }
+	add_relation_modifier = { target = UKR modifier = UKR_world_economical_relations }
+	add_relation_modifier = { target = ISR modifier = ISR_World_Economical_Relations }
+	add_opinion_modifier = { target = TTP modifier = AlQaida_Are_Terrorists }
+	add_opinion_modifier = { target = TTP modifier = AlQaida_Are_Terrorists_Trade }
+	add_opinion_modifier = { target = TAL modifier = Taliban_Are_Terrorists }
+	add_opinion_modifier = { target = TAL modifier = Taliban_Are_Terrorists_Trade }
+}
+
+##############################
+### 2026 BOOKMARK SETTINGS ###
+##############################
+2026.1.1 = {
+
+	### Technology 2026 ###
+	md2026_tier3_2026_techs = yes
+
+	### GDP & Economic Variables ###
+	set_variable = { gdp_per_capita = 5.000 }
+	set_variable = { var = debt value = 500.000 }
+	set_variable = { var = treasury value = 40 }
+	set_variable = { var = corporate_tax_rate value = 22 }
+	set_variable = { var = population_tax_rate value = 12 }
+	set_variable = { var = int_investments value = 5 }
+	every_controlled_state = {
+		set_variable = { productivity_state_var = 320 }
+	}
+	set_variable = { overall_productivity = 320 }
+
+	### Politics & Parties ###
+	set_popularities = {
+		democratic = 45.0
+		communism = 10.0
+		fascism = 5.0
+		neutrality = 20.0
+		nationalist = 20.0
+	}
+	set_politics = {
+		ruling_party = nationalist
+		last_election = "2024.2.14"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+
+	start_politics_input = yes
+
+	set_variable = { party_pop_array^20 = 0.300 }   #Nat_Populism (Gerindra/Prabowo)
+	set_variable = { party_pop_array^3 = 0.250 }    #socialism (PDI-P)
+	set_variable = { party_pop_array^1 = 0.150 }    #conservatism (Golkar/Demokrat)
+	set_variable = { party_pop_array^14 = 0.150 }   #Neutral_conservatism (Islamic parties)
+	set_variable = { party_pop_array^22 = 0.050 }   #Nat_Autocracy
+	set_variable = { party_pop_array^2 = 0.050 }    #liberalism
+	set_variable = { party_pop_array^4 = 0.020 }    #Communist-State
+
+	set_variable = { ruling_party = 20 }
+
+	startup_politics = yes
+
+	### Country Leader: Prabowo Subianto ###
+	create_country_leader = {
+		name = "Prabowo Subianto"
+		picture = "gfx/leaders/generic_politicians/southeastasian_003.dds"
+		expire = "2029.10.20"
+		ideology = Nat_Populism
+		traits = {
+			nationalist_Nat_Populism
+			military_career
+			career_politician
+		}
+	}
+
+	### BRICS member since January 2025 ###
+	set_country_flag = md2026_brics_member
+}

@@ -268,19 +268,19 @@ units = {
 		task_force = {
 			name = "Zuoying Fleet"
 			location = 11914
-			ship = { name = "ROCS Tso Ying (DDG-1803)" definition = destroyer start_experience_factor = 0.4 equipment = { destroyer_hull_3 = { amount = 1 owner = TAI version_name = "Kee Lung Class" } } }
-			ship = { name = "ROCS Ma Kong (DDG-1805)" definition = destroyer start_experience_factor = 0.4 equipment = { destroyer_hull_3 = { amount = 1 owner = TAI version_name = "Kee Lung Class" } } }
-			ship = { name = "ROCS Cheng Kung (PFG-1101)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI version_name = "Cheng Kung Class" } } }
-			ship = { name = "ROCS Cheng Ho (PFG-1103)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI version_name = "Cheng Kung Class" } } }
-			ship = { name = "ROCS Chi Kuang (PFG-1105)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI version_name = "Cheng Kung Class" } } }
-			ship = { name = "ROCS Yueh Fei (PFG-1106)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI version_name = "Cheng Kung Class" } } }
-			ship = { name = "ROCS Kang Ding (PFG-1202)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI version_name = "Kang Ding Class" } } }
-			ship = { name = "ROCS Si Ning (PFG-1203)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI version_name = "Kang Ding Class" } } }
-			ship = { name = "ROCS Kun Ming (PFG-1205)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI version_name = "Kang Ding Class" } } }
-			ship = { name = "ROCS Yushan (LPD-1401)" definition = helicopter_operator start_experience_factor = 0.45 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = TAI version_name = "Yu Shan Class" } } }
-			ship = { name = "ROCS Ta Chiang (PGG-619)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = TAI version_name = "Tuo Chiang Class" } } }
-			ship = { name = "ROCS An Chiang (PGG-620)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = TAI version_name = "Tuo Chiang Class" } } }
-			ship = { name = "ROCS Hai Lung (SS-793)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_1 = { amount = 1 owner = TAI version_name = "Hai Lung Class" } } }
+			ship = { name = "ROCS Tso Ying (DDG-1803)" definition = destroyer start_experience_factor = 0.4 equipment = { destroyer_hull_3 = { amount = 1 owner = TAI creator = TAI version_name = "Kee Lung Class" } } }
+			ship = { name = "ROCS Ma Kong (DDG-1805)" definition = destroyer start_experience_factor = 0.4 equipment = { destroyer_hull_3 = { amount = 1 owner = TAI creator = TAI version_name = "Kee Lung Class" } } }
+			ship = { name = "ROCS Cheng Kung (PFG-1101)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Cheng Kung Class" } } }
+			ship = { name = "ROCS Cheng Ho (PFG-1103)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Cheng Kung Class" } } }
+			ship = { name = "ROCS Chi Kuang (PFG-1105)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Cheng Kung Class" } } }
+			ship = { name = "ROCS Yueh Fei (PFG-1106)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Cheng Kung Class" } } }
+			ship = { name = "ROCS Kang Ding (PFG-1202)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Kang Ding Class" } } }
+			ship = { name = "ROCS Si Ning (PFG-1203)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Kang Ding Class" } } }
+			ship = { name = "ROCS Kun Ming (PFG-1205)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Kang Ding Class" } } }
+			ship = { name = "ROCS Yushan (LPD-1401)" definition = helicopter_operator start_experience_factor = 0.45 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = TAI creator = TAI version_name = "Yu Shan Class" } } }
+			ship = { name = "ROCS Ta Chiang (PGG-619)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Tuo Chiang Class" } } }
+			ship = { name = "ROCS An Chiang (PGG-620)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Tuo Chiang Class" } } }
+			ship = { name = "ROCS Hai Lung (SS-793)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_1 = { amount = 1 owner = TAI creator = TAI version_name = "Hai Lung Class" } } }
 		}
 	}
 
@@ -290,18 +290,18 @@ units = {
 		task_force = {
 			name = "Keelung Fleet"
 			location = 14701
-			ship = { name = "ROCS Kee Lung (DDG-1801)" definition = destroyer start_experience_factor = 0.4 equipment = { destroyer_hull_3 = { amount = 1 owner = TAI version_name = "Kee Lung Class" } } }
-			ship = { name = "ROCS Su Ao (DDG-1802)" definition = destroyer start_experience_factor = 0.4 equipment = { destroyer_hull_3 = { amount = 1 owner = TAI version_name = "Kee Lung Class" } } }
-			ship = { name = "ROCS Tzu I (PFG-1107)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI version_name = "Cheng Kung Class" } } }
-			ship = { name = "ROCS Pan Chao (PFG-1108)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI version_name = "Cheng Kung Class" } } }
-			ship = { name = "ROCS Chang Chien (PFG-1109)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI version_name = "Cheng Kung Class" } } }
-			ship = { name = "ROCS Tien Tan (PFG-1110)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI version_name = "Cheng Kung Class" } } }
-			ship = { name = "ROCS Di Hua (PFG-1206)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI version_name = "Kang Ding Class" } } }
-			ship = { name = "ROCS Wu Chang (PFG-1207)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI version_name = "Kang Ding Class" } } }
-			ship = { name = "ROCS Cheng De (PFG-1208)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI version_name = "Kang Ding Class" } } }
-			ship = { name = "ROCS Wan Chiang (PGG-621)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = TAI version_name = "Tuo Chiang Class" } } }
-			ship = { name = "ROCS Hai Hu (SS-794)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_1 = { amount = 1 owner = TAI version_name = "Hai Lung Class" } } }
-			ship = { name = "ROCS Hai Kun (SS-711)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = TAI version_name = "Hai Kun Class" } } }
+			ship = { name = "ROCS Kee Lung (DDG-1801)" definition = destroyer start_experience_factor = 0.4 equipment = { destroyer_hull_3 = { amount = 1 owner = TAI creator = TAI version_name = "Kee Lung Class" } } }
+			ship = { name = "ROCS Su Ao (DDG-1802)" definition = destroyer start_experience_factor = 0.4 equipment = { destroyer_hull_3 = { amount = 1 owner = TAI creator = TAI version_name = "Kee Lung Class" } } }
+			ship = { name = "ROCS Tzu I (PFG-1107)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Cheng Kung Class" } } }
+			ship = { name = "ROCS Pan Chao (PFG-1108)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Cheng Kung Class" } } }
+			ship = { name = "ROCS Chang Chien (PFG-1109)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Cheng Kung Class" } } }
+			ship = { name = "ROCS Tien Tan (PFG-1110)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Cheng Kung Class" } } }
+			ship = { name = "ROCS Di Hua (PFG-1206)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Kang Ding Class" } } }
+			ship = { name = "ROCS Wu Chang (PFG-1207)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Kang Ding Class" } } }
+			ship = { name = "ROCS Cheng De (PFG-1208)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Kang Ding Class" } } }
+			ship = { name = "ROCS Wan Chiang (PGG-621)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Tuo Chiang Class" } } }
+			ship = { name = "ROCS Hai Hu (SS-794)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_1 = { amount = 1 owner = TAI creator = TAI version_name = "Hai Lung Class" } } }
+			ship = { name = "ROCS Hai Kun (SS-711)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Hai Kun Class" } } }
 		}
 	}
 }

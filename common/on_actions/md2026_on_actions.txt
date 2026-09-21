@@ -37,6 +37,7 @@ on_actions = {
 							tag = SAF
 							tag = EGY
 							tag = ETH
+							tag = IND
 							tag = PER
 							tag = UAE
 							tag = SAU
@@ -61,6 +62,63 @@ on_actions = {
 						}
 					}
 					set_country_flag = md2026_nuclear_power
+				}
+
+				# Settle MD's 2000-era wars that ended in reality long before 2026.				# (MD declares them in its 2000 history and never ends them; without
+				# this a 2026 start would still show Russia at war with Chechnya,
+				# Ethiopia with Eritrea, Sudan with South Sudan, ...)
+				if = {
+					limit = { NOT = { has_global_flag = md2026_legacy_wars_settled } }
+					set_global_flag = md2026_legacy_wars_settled
+
+					# Chechnya is part of the Russian Federation since 2009
+					if = { limit = { country_exists = CHE }
+						SOV = { annex_country = { target = CHE transfer_troops = yes } }
+					}
+					# Aceh is an Indonesian province (2005 peace agreement)
+					if = { limit = { country_exists = ACE }
+						IND = { annex_country = { target = ACE transfer_troops = yes } }
+					}
+					# Tamil Eelam was defeated in 2009
+					if = { limit = { country_exists = TML }
+						SRI = { annex_country = { target = TML transfer_troops = yes } }
+					}
+					# The Taliban government *is* Afghanistan since 2021
+					if = { limit = { country_exists = TAL }
+						AFG = { annex_country = { target = TAL transfer_troops = yes } }
+					}
+					# Eritrea and South Sudan are independent states
+					if = { limit = { country_exists = ERI }
+						ETH = { white_peace = ERI }
+					}
+					if = { limit = { country_exists = SSU }
+						SUD = { white_peace = SSU }
+					}
+					# Defunct rebel movements: AFR/LUR (Sierra Leone/Liberia peace),
+					# MLC/RCD (Congo), NPM (Nepal 2006), UNI (Angola 2002)
+					if = { limit = { country_exists = AFR }
+						SIE = { annex_country = { target = AFR transfer_troops = yes } }
+					}
+					if = { limit = { country_exists = LUR }
+						LIB = { annex_country = { target = LUR transfer_troops = yes } }
+					}
+					if = { limit = { country_exists = MLC }
+						DRC = { annex_country = { target = MLC transfer_troops = yes } }
+					}
+					if = { limit = { country_exists = RCD }
+						DRC = { annex_country = { target = RCD transfer_troops = yes } }
+					}
+					if = { limit = { country_exists = NPM }
+						NEP = { annex_country = { target = NPM transfer_troops = yes } }
+					}
+					if = { limit = { country_exists = UNI }
+						AGL = { annex_country = { target = UNI transfer_troops = yes } }
+					}
+				}
+
+				# US pressure campaign against Caracas is already running
+				if = { limit = { country_exists = VEN }
+					USA = { country_event = { id = md2026_venezuela.1 days = 1 } }
 				}
 			}
 		}

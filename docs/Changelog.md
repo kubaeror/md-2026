@@ -4,6 +4,49 @@ All notable changes to the Millennium Dawn 2026 Rework submod.
 
 ---
 
+## v1.1.1 - 2026 real-world data pass + stability fixes
+
+### Game-breaking fixes
+- **2026 start crashed on history load**: the crash was ALB completing
+  `GENERIC_ease_of_business_reforms`, whose reward runs `ingame_update_setup` - ingame-only
+  economy code. Pre-completed focuses now run after game start (`on_startup`, with a daily
+  fallback) instead of during history; MD itself never completes a focus from history.
+- **Poland started with a civil war**: `POL_betray_the_communists` (a communist-path focus)
+  was pre-completed. Focuses whose rewards start civil wars, release/annex countries,
+  declare war, change the government or set path cosmetic tags are now filtered out
+  (40 of 2155 skipped, each reported at generation time).
+- **OOB equipment names**: 24 obsolete MD 1.x names (`infantry_weapons5`,
+  `*_airframe_N`, `command_control_equipment2`, `util_vehicle_equipment`, ...) mapped to
+  MD 2.0 (411 occurrences in 65 files) with `tools/fix_oob_equipment.py`.
+- **Ruling party index** was set with `add_to_array` instead of `set_variable` in all 66
+  patches, so the variable kept its 2000 value.
+
+### Real-world data (January 2026)
+- Leaders: Japan (Takaichi), South Korea (Lee Jae-myung), Czechia (Babis), Belgium
+  (De Wever), Iceland (Frostadottir), Lithuania (Ruginiene), Serbia (Macut), Bulgaria
+  (Zhelyazkov), Romania (Bolojan).
+- India and Turkey are no longer shown as "communist"; North Korea's leader ideology is
+  `Communist-State`; Moldova's ruling party is democratic; Japan gets
+  `idea_JAP_emperor_naruhito`.
+- BRICS now has its real 11 members (Indonesia added); NATO 32; nuclear powers 9.
+- MD's 2000-era wars (Chechnya, Aceh, Tamil Eelam, Taliban, Eritrea, South Sudan, and the
+  defunct rebel movements) are settled at game start.
+- New countries: Indonesia (Prabowo) and Venezuela (Maduro, US pressure campaign with a
+  new event chain).
+- GDP per capita corrected for China, India, Iran, Netherlands, Iceland, Lithuania,
+  Estonia, Hungary, Romania, Bulgaria, Croatia, Slovenia and Moldova.
+
+### Tooling
+- `tools/validate.py`: leader/party ideology consistency, BRICS/NATO membership lists,
+  OOB equipment names, manual focus exclusions, array-vs-scalar syntax.
+- `tools/fix_oob_equipment.py`: maps MD 1.x equipment names to MD 2.0.
+- `tools/fix_oob_tiers.py`: upgrades 5th-generation air wings (F-35/F-22/Su-57/J-20) to
+  year-appropriate airframes (33 wings).
+- `patches/unsafe_focuses.json`: hand-maintained pre-completion exclusions
+  (`POL_socialdemocracy`).
+
+---
+
 ## v1.1.0 - Millennium Dawn 2.0 / HoI4 1.19 rebase
 
 ### Breaking changes

@@ -214,27 +214,27 @@ units = {
 		task_force = {
 			name = "Groupe Aeronaval"
 			location = 911
-			ship = { name = "Charles de Gaulle (R91)" definition = carrier start_experience_factor = 0.75 equipment = { carrier_hull_2 = { amount = 1 owner = FRA version_name = "Charles de Gaulle Class" } } }
-			ship = { name = "Forbin (D620)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = FRA version_name = "Horizon Class" } } }
-			ship = { name = "Chevalier Paul (D621)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = FRA version_name = "Horizon Class" } } }
-			ship = { name = "Aquitaine (D650)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Aquitaine Class" } } }
-			ship = { name = "Normandie (D651)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Aquitaine Class" } } }
-			ship = { name = "Provence (D652)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Charles de Gaulle (R91)" definition = carrier start_experience_factor = 0.75 equipment = { carrier_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Charles de Gaulle Class" } } }
+			ship = { name = "Forbin (D620)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = FRA creator = FRA version_name = "Horizon Class" } } }
+			ship = { name = "Chevalier Paul (D621)" definition = destroyer start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = FRA creator = FRA version_name = "Horizon Class" } } }
+			ship = { name = "Aquitaine (D650)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Normandie (D651)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Provence (D652)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Aquitaine Class" } } }
 		}
 		task_force = {
 			name = "Escadre de Frigates — Mediterranee"
 			location = 911
-			ship = { name = "Alsace (D656)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Alsace Class" } } }
-			ship = { name = "Lorraine (D657)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Alsace Class" } } }
-			ship = { name = "La Fayette (F710)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "La Fayette Class" } } }
-			ship = { name = "Surcouf (F711)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "La Fayette Class" } } }
+			ship = { name = "Alsace (D656)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Alsace Class" } } }
+			ship = { name = "Lorraine (D657)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Alsace Class" } } }
+			ship = { name = "La Fayette (F710)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "La Fayette Class" } } }
+			ship = { name = "Surcouf (F711)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "La Fayette Class" } } }
 		}
 		task_force = {
 			name = "Force Amphibie"
 			location = 911
-			ship = { name = "Mistral (L9013)" definition = helicopter_operator start_experience_factor = 0.7 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = FRA version_name = "Mistral Class" } } }
-			ship = { name = "Tonnerre (L9014)" definition = helicopter_operator start_experience_factor = 0.7 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = FRA version_name = "Mistral Class" } } }
-			ship = { name = "Dixmude (L9015)" definition = helicopter_operator start_experience_factor = 0.65 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = FRA version_name = "Mistral Class" } } }
+			ship = { name = "Mistral (L9013)" definition = helicopter_operator start_experience_factor = 0.7 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Mistral Class" } } }
+			ship = { name = "Tonnerre (L9014)" definition = helicopter_operator start_experience_factor = 0.7 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Mistral Class" } } }
+			ship = { name = "Dixmude (L9015)" definition = helicopter_operator start_experience_factor = 0.65 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Mistral Class" } } }
 		}
 	}
 	fleet = {
@@ -243,12 +243,12 @@ units = {
 		task_force = {
 			name = "Escadre de Frigates — Atlantique"
 			location = 3552
-			ship = { name = "Languedoc (D653)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Aquitaine Class" } } }
-			ship = { name = "Auvergne (D654)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Aquitaine Class" } } }
-			ship = { name = "Bretagne (D655)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "FREMM Aquitaine Class" } } }
-			ship = { name = "Courbet (F712)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "La Fayette Class" } } }
-			ship = { name = "Aconit (F713)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "La Fayette Class" } } }
-			ship = { name = "Guepratte (F714)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA version_name = "La Fayette Class" } } }
+			ship = { name = "Languedoc (D653)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Auvergne (D654)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Bretagne (D655)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "FREMM Aquitaine Class" } } }
+			ship = { name = "Courbet (F712)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "La Fayette Class" } } }
+			ship = { name = "Aconit (F713)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "La Fayette Class" } } }
+			ship = { name = "Guepratte (F714)" definition = frigate start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "La Fayette Class" } } }
 		}
 	}
 	fleet = {
@@ -257,18 +257,18 @@ units = {
 		task_force = {
 			name = "Escadrille des SNA"
 			location = 911
-			ship = { name = "Suffren (S635)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = FRA version_name = "Suffren Class" } } }
-			ship = { name = "Duguay-Trouin (S636)" definition = attack_submarine start_experience_factor = 0.7 equipment = { attack_submarine_hull_3 = { amount = 1 owner = FRA version_name = "Suffren Class" } } }
-			ship = { name = "Emeraude (S604)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = FRA version_name = "Rubis Class" } } }
-			ship = { name = "Perle (S606)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = FRA version_name = "Rubis Class" } } }
+			ship = { name = "Suffren (S635)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = FRA creator = FRA version_name = "Suffren Class" } } }
+			ship = { name = "Duguay-Trouin (S636)" definition = attack_submarine start_experience_factor = 0.7 equipment = { attack_submarine_hull_3 = { amount = 1 owner = FRA creator = FRA version_name = "Suffren Class" } } }
+			ship = { name = "Emeraude (S604)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Rubis Class" } } }
+			ship = { name = "Perle (S606)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Rubis Class" } } }
 		}
 		task_force = {
 			name = "Force Oceanique Strategique"
 			location = 3552
-			ship = { name = "Le Triomphant (S616)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA version_name = "Triomphant Class" } } }
-			ship = { name = "Le Temeraire (S617)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA version_name = "Triomphant Class" } } }
-			ship = { name = "Le Vigilant (S618)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA version_name = "Triomphant Class" } } }
-			ship = { name = "Le Terrible (S619)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA version_name = "Triomphant Class" } } }
+			ship = { name = "Le Triomphant (S616)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Triomphant Class" } } }
+			ship = { name = "Le Temeraire (S617)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Triomphant Class" } } }
+			ship = { name = "Le Vigilant (S618)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Triomphant Class" } } }
+			ship = { name = "Le Terrible (S619)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Triomphant Class" } } }
 		}
 	}
 	fleet = {
@@ -277,24 +277,24 @@ units = {
 		task_force = {
 			name = "Zone Maritime Ocean Indien"
 			location = 13017
-			ship = { name = "Floreal (F730)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA version_name = "Floreal Class" } } }
-			ship = { name = "Nivose (F732)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA version_name = "Floreal Class" } } }
+			ship = { name = "Floreal (F730)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA creator = FRA version_name = "Floreal Class" } } }
+			ship = { name = "Nivose (F732)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA creator = FRA version_name = "Floreal Class" } } }
 		}
 		task_force = {
 			name = "Zone Maritime Caraibes"
 			location = 177
-			ship = { name = "Ventose (F733)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA version_name = "Floreal Class" } } }
-			ship = { name = "Germinal (F735)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA version_name = "Floreal Class" } } }
+			ship = { name = "Ventose (F733)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA creator = FRA version_name = "Floreal Class" } } }
+			ship = { name = "Germinal (F735)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA creator = FRA version_name = "Floreal Class" } } }
 		}
 		task_force = {
 			name = "Zone Maritime Pacifique"
 			location = 12132
-			ship = { name = "Vendemiaire (F734)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA version_name = "Floreal Class" } } }
+			ship = { name = "Vendemiaire (F734)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA creator = FRA version_name = "Floreal Class" } } }
 		}
 		task_force = {
 			name = "Zone Maritime Polynesie"
 			location = 12148
-			ship = { name = "Prairial (F731)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA version_name = "Floreal Class" } } }
+			ship = { name = "Prairial (F731)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_1 = { amount = 1 owner = FRA creator = FRA version_name = "Floreal Class" } } }
 		}
 	}
 }

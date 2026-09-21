@@ -153,16 +153,16 @@ units = {
 		task_force = {
 			name = "Frigate Division"
 			location = 657
-			ship = { name = "ROS Regele Ferdinand (F-221)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.35 equipment = { frigate_hull_1 = { amount = 1 owner = ROM version_name = "Type 22 (ex-Broadsword)" } } }
-			ship = { name = "ROS Regina Maria (F-222)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_1 = { amount = 1 owner = ROM version_name = "Type 22 (ex-Broadsword)" } } }
+			ship = { name = "ROS Regele Ferdinand (F-221)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.35 equipment = { frigate_hull_1 = { amount = 1 owner = ROM creator = ROM version_name = "Type 22 (ex-Broadsword)" } } }
+			ship = { name = "ROS Regina Maria (F-222)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_1 = { amount = 1 owner = ROM creator = ROM version_name = "Type 22 (ex-Broadsword)" } } }
 		}
 		task_force = {
 			name = "Corvette Division"
 			location = 657
-			ship = { name = "ROS Amiral Petre Barbuneanu (F-260)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = ROM version_name = "Tetal II-class" } } }
-			ship = { name = "ROS Viceamiral Eugeniu Rosca (F-261)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = ROM version_name = "Tetal II-class" } } }
-			ship = { name = "ROS Contraamiral Eustatiu Sebastian (F-262)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = ROM version_name = "Tetal II-class" } } }
-			ship = { name = "ROS Contraamiral Horia Macellariu (F-263)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = ROM version_name = "Tetal II-class" } } }
+			ship = { name = "ROS Amiral Petre Barbuneanu (F-260)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = ROM creator = ROM version_name = "Tetal II-class" } } }
+			ship = { name = "ROS Viceamiral Eugeniu Rosca (F-261)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = ROM creator = ROM version_name = "Tetal II-class" } } }
+			ship = { name = "ROS Contraamiral Eustatiu Sebastian (F-262)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = ROM creator = ROM version_name = "Tetal II-class" } } }
+			ship = { name = "ROS Contraamiral Horia Macellariu (F-263)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = ROM creator = ROM version_name = "Tetal II-class" } } }
 		}
 	}
 }

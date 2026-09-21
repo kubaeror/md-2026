@@ -406,7 +406,7 @@ country_event = {
 	md2026_tier4_2026_techs = yes
 
 	### GDP & Economic Variables ###
-	set_variable = { gdp_per_capita = 15.000 }
+	set_variable = { gdp_per_capita = 16.000 }
 	set_variable = { var = debt value = 40.000 }
 	set_variable = { var = treasury value = 15 }
 	set_variable = { var = corporate_tax_rate value = 10 }
@@ -427,7 +427,7 @@ country_event = {
 	}
 	set_politics = {
 		ruling_party = democratic
-		last_election = "2024.6.9"
+		last_election = "2024.10.27"
 		election_frequency = 48
 		elections_allowed = yes
 	}
@@ -458,10 +458,10 @@ country_event = {
 
 	### Country Leader: Dimitar Glavchev ###
 	create_country_leader = {
-		name = "Dimitar Glavchev"
-		picture = "gfx/leaders/generic_politicians/white_005.dds"
+		name = "Rosen Zhelyazkov"
+		picture = "gfx/leaders/generic_politicians/white_021.dds"
 		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
-		expire = "2028.6.9"
+		expire = "2027.4.19"
 		ideology = conservatism
 		traits = {
 			western_conservatism

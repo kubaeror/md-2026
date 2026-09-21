@@ -173,8 +173,8 @@ units = {
 			name = "Latakia Naval Detachment"
 			location = 10087
 			# Remnant patrol craft
-			ship = { name = "Tishreen" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = SYR version_name = "Petya class" } } }
-			ship = { name = "Al Assad" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = SYR version_name = "Osa class" } } }
+			ship = { name = "Tishreen" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = SYR creator = SYR version_name = "Petya class" } } }
+			ship = { name = "Al Assad" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = SYR creator = SYR version_name = "Osa class" } } }
 		}
 	}
 }

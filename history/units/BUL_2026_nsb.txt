@@ -104,15 +104,15 @@ units = {
 			name = "Varna Naval Base"
 			location = 9783
 			# Wielingen-class frigates (ex-Belgian)
-			ship = { name = "BGS Drazki (F41)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL version_name = "Wielingen class" } } }
-			ship = { name = "BGS Gordi (F42)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL version_name = "Wielingen class" } } }
-			ship = { name = "BGS Reshitelni (F43)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL version_name = "Wielingen class" } } }
+			ship = { name = "BGS Drazki (F41)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Wielingen class" } } }
+			ship = { name = "BGS Gordi (F42)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Wielingen class" } } }
+			ship = { name = "BGS Reshitelni (F43)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Wielingen class" } } }
 		}
 		task_force = {
 			name = "Atia Naval Base"
 			location = 9902		# Burgas
 			# Corvette
-			ship = { name = "BGS Bodri (F13)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = BUL version_name = "Poti class" } } }
+			ship = { name = "BGS Bodri (F13)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = BUL creator = BUL version_name = "Poti class" } } }
 		}
 	}
 }

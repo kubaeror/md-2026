@@ -16,7 +16,7 @@
 	md2026_tier1_2026_techs = yes
 
 	### GDP & Economic Variables ###
-	set_variable = { gdp_per_capita = 17.000 }
+	set_variable = { gdp_per_capita = 13.500 }
 	set_variable = { var = debt value = 14500.000 }
 	set_variable = { var = treasury value = 500 }
 	set_variable = { var = corporate_tax_rate value = 25 }

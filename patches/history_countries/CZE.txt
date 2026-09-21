@@ -35,16 +35,16 @@
 		nationalist = 30.0
 	}
 	set_politics = {
-		ruling_party = democratic
-		last_election = "2021.10.8"
+		ruling_party = nationalist
+		last_election = "2025.10.4"
 		election_frequency = 48
 		elections_allowed = yes
 	}
 
 	start_politics_input = yes
 
-	set_variable = { party_pop_array^1 = 0.275 }   #conservatism (SPOLU)
-	set_variable = { party_pop_array^20 = 0.250 }   #Nat_Populism (ANO)
+	set_variable = { party_pop_array^1 = 0.230 }   #conservatism (SPOLU)
+	set_variable = { party_pop_array^20 = 0.320 }   #Nat_Populism (ANO)
 	set_variable = { party_pop_array^2 = 0.060 }   #liberalism (STAN)
 	set_variable = { party_pop_array^3 = 0.070 }   #socialism (CSSD)
 	set_variable = { party_pop_array^4 = 0.040 }   #Communist-State (KSCM)
@@ -54,7 +54,7 @@
 	set_variable = { party_pop_array^18 = 0.040 }   #neutral_Social
 	set_variable = { party_pop_array^21 = 0.030 }   #Nat_Fascism
 
-	set_variable = { ruling_party = 1 }             #conservatism (SPOLU)
+	set_variable = { ruling_party = 20 }             #conservatism (SPOLU)
 	add_to_array = { gov_coalition_array = 2 }       #liberalism (STAN)
 	add_to_array = { gov_coalition_array = 17 }       #Neutral_green (Pirates)
 
@@ -68,14 +68,13 @@
 
 	### Country Leader: Petr Fiala ###
 	create_country_leader = {
-		name = "Petr Fiala"
-		picture = "gfx/leaders/CZE/Petr_Fiala.dds"
-		expire = "2025.10.8"
-		ideology = conservatism
+		name = "Andrej Babis"
+		picture = "gfx/leaders/CZE/andrej_babis.dds"
+		expire = "2029.12.9"
+		ideology = Nat_Populism
 		traits = {
-			western_conservatism
+			nationalist_Nat_Populism
 			career_politician
-			technocrat
 		}
 	}
 	set_variable = { term_limit = 0 }

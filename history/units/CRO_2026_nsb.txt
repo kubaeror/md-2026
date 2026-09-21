@@ -103,12 +103,12 @@ units = {
 			name = "Flotila"
 			location = 3924
 			# Helsinki-class missile boats (ex-Finnish)
-			ship = { name = "RTOP-41 Vukovar" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = CRO version_name = "Helsinki class" } } }
-			ship = { name = "RTOP-42 Dubrovnik" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = CRO version_name = "Helsinki class" } } }
+			ship = { name = "RTOP-41 Vukovar" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = CRO creator = CRO version_name = "Helsinki class" } } }
+			ship = { name = "RTOP-42 Dubrovnik" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = CRO creator = CRO version_name = "Helsinki class" } } }
 			# Kralj-class patrol vessels
-			ship = { name = "OB-51 Omiš" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = CRO version_name = "Kralj class" } } }
-			ship = { name = "OB-52 Šibenik" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = CRO version_name = "Kralj class" } } }
-			ship = { name = "OB-53 Cavtat" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = CRO version_name = "Kralj class" } } }
+			ship = { name = "OB-51 Omiš" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = CRO creator = CRO version_name = "Kralj class" } } }
+			ship = { name = "OB-52 Šibenik" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = CRO creator = CRO version_name = "Kralj class" } } }
+			ship = { name = "OB-53 Cavtat" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = CRO creator = CRO version_name = "Kralj class" } } }
 		}
 	}
 }

@@ -1,0 +1,57 @@
+###################################
+# MD2026 - United States / Venezuela crisis
+# The US pressure campaign against Caracas (Caribbean strikes, sanctions)
+# was ongoing when the 2026 bookmark starts.  The USA decides whether to
+# keep escalating or to de-escalate.
+###################################
+
+add_namespace = md2026_venezuela
+
+country_event = {
+	id = md2026_venezuela.1
+	title = md2026_venezuela.1.t
+	desc = md2026_venezuela.1.d
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		country_exists = VEN
+		has_country_flag = md2026_venezuela_crisis
+	}
+
+	# Option A: keep up the pressure
+	option = {
+		name = md2026_venezuela.1.a
+		log = "[GetDateText]: [This.GetName]: Venezuela pressure continues"
+
+		add_political_power = -25
+		add_war_support = 0.05
+
+		VEN = {
+			add_stability = -0.05
+			add_opinion_modifier = { target = USA modifier = embargo }
+		}
+		set_country_flag = md2026_venezuela_pressure
+
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: de-escalate
+	option = {
+		name = md2026_venezuela.1.b
+		log = "[GetDateText]: [This.GetName]: Venezuela de-escalation"
+
+		add_political_power = 10
+
+		VEN = {
+			add_stability = 0.05
+			reverse_add_opinion_modifier = { target = USA modifier = embargo }
+		}
+		set_country_flag = md2026_venezuela_deescalation
+
+		ai_chance = { base = 40 }
+	}
+}

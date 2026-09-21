@@ -1,6 +1,6 @@
 # Countries & Leaders
 
-This mod updates 66 countries with accurate January 2026 leaders, ideologies, and political configurations.
+This mod updates 68 countries with accurate January 2026 leaders, ideologies, and political configurations.
 
 ---
 
@@ -30,9 +30,9 @@ Full update with focus trees, national spirits, events, and detailed OOB. All 12
 | **United Kingdom** | ENG | Keir Starmer | democratic / socialism | Post-Brexit governance |
 | **France** | FRA | Emmanuel Macron | democratic / liberalism | Final presidential term |
 | **Germany** | GER | Friedrich Merz | democratic / conservatism | New chancellor, Zeitenwende |
-| **India** | RAJ | Narendra Modi | communism / Conservative | Third term, rising power |
-| **Japan** | JAP | Shigeru Ishiba | democratic / conservatism | Security normalization |
-| **Turkey** | TUR | Recep Tayyip Erdogan | communism / Autocracy | Regional power projection |
+| **India** | RAJ | Narendra Modi | democratic / conservatism | Third term, rising power |
+| **Japan** | JAP | Sanae Takaichi | democratic / conservatism | Security normalization |
+| **Turkey** | TUR | Recep Tayyip Erdogan | nationalist / Nat_Populism | Regional power projection |
 | **Iran** | PER | M. Pezeshkian / Khamenei | communism / Vilayat_e_Faqih | Nuclear program, sanctions |
 | **Brazil** | BRA | Lula da Silva | democratic / socialism | BRICS presidency, Amazon |
 | **Ukraine** | UKR | Volodymyr Zelensky | democratic / liberalism | Wartime president, NATO aspirant |
@@ -49,21 +49,21 @@ Full update with leaders, politics, military, alliances. Countries marked with *
 | Italy* | ITA | Giorgia Meloni | nationalist / Nat_Populism |
 | Spain | SPR | Pedro Sanchez | democratic / socialism |
 | Canada* | CAN | Mark Carney | democratic / liberalism |
-| Romania | ROM | Marcel Ciolacu | democratic / conservatism |
+| Romania | ROM | Ilie Bolojan | democratic / conservatism |
 | Netherlands | HOL | Dick Schoof | democratic / conservatism |
-| Belgium | BEL | Alexander De Croo | democratic / liberalism |
+| Belgium | BEL | Bart De Wever | democratic / conservatism |
 | Norway | NOR | Jonas Gahr Store | democratic / socialism |
 | Denmark | DEN | Mette Frederiksen | democratic / socialism |
 | Portugal | POR | Luis Montenegro | democratic / conservatism |
-| Czechia | CZE | Petr Fiala | democratic / conservatism |
+| Czechia | CZE | Andrej Babis | nationalist / Nat_Populism |
 | Greece | GRE | Kyriakos Mitsotakis | democratic / conservatism |
 | Hungary | HUN | Viktor Orban | nationalist / Nat_Populism |
-| Iceland | ICE | Bjarni Benediktsson | democratic / conservatism |
+| Iceland | ICE | Kristrun Frostadottir | democratic / socialism |
 | Luxembourg | LUX | Luc Frieden | democratic / conservatism |
-| Bulgaria | BUL | Dimitar Glavchev | democratic / conservatism |
+| Bulgaria | BUL | Rosen Zhelyazkov (caretaker) | democratic / conservatism |
 | Croatia | CRO | Andrej Plenkovic | democratic / conservatism |
 | Albania | ALB | Edi Rama | democratic / socialism |
-| Lithuania | LIT | Gintautas Paluckas | democratic / socialism |
+| Lithuania | LIT | Inga Ruginiene | democratic / socialism |
 | Latvia | LAT | Evika Silina | democratic / conservatism |
 | Estonia | EST | Kristen Michal | democratic / liberalism |
 | Slovakia | SLO | Robert Fico | nationalist / Nat_Populism |
@@ -75,7 +75,7 @@ Full update with leaders, politics, military, alliances. Countries marked with *
 | Israel* | ISR | Benjamin Netanyahu | democratic / conservatism |
 | Saudi Arabia* | SAU | Mohammed bin Salman | fascism / Kingdom |
 | North Korea* | NKO | Kim Jong-un | communism / Communist-State |
-| South Korea* | KOR | Han Duck-soo (acting) | democratic / conservatism |
+| South Korea* | KOR | Lee Jae-myung | democratic / socialism |
 | Australia* | AST | Anthony Albanese | democratic / socialism |
 
 ---
@@ -111,8 +111,8 @@ Leader and ideology only, using generic OOB and basic setup.
 | Uzbekistan | UZB | Shavkat Mirziyoyev |
 | Armenia | ARM | Nikol Pashinyan |
 | Georgia | GEO | Bidzina Ivanishvili (de facto) |
-| Moldova | MLV | Maia Sandu |
-| Serbia | SER | Aleksandar Vucic |
+| Moldova | MLV | Dorin Recean (PM) |
+| Serbia | SER | Djuro Macut (PM) |
 | Bosnia | BOS | Rotating presidency |
 | Kosovo | KOS | Albin Kurti |
 | Pakistan | PAK | Shehbaz Sharif |

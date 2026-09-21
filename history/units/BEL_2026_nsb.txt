@@ -84,8 +84,8 @@ units = {
 			name = "Fregatten Divisie"
 			location = 6560
 			# Leopold I-class frigates (ex-Karel Doorman M-class)
-			ship = { name = "BNS Leopold I (F930)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BEL version_name = "Leopold I class" } } }
-			ship = { name = "BNS Louise-Marie (F931)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BEL version_name = "Leopold I class" } } }
+			ship = { name = "BNS Leopold I (F930)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BEL creator = BEL version_name = "Leopold I class" } } }
+			ship = { name = "BNS Louise-Marie (F931)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BEL creator = BEL version_name = "Leopold I class" } } }
 		}
 	}
 }
@@ -102,7 +102,7 @@ instant_effect = {
 air_wings = {
 	# Kleine Brogel - F-35A (early deliveries) + remaining F-16AM
 	50 = {
-		L_Strike_fighter2 = { owner = "BEL" creator = "USA" amount = 10 version_name = "F-35A Lightning II" }
+		L_Strike_fighter3 = { owner = "BEL" creator = "USA" amount = 10 version_name = "F-35A Lightning II" }
 		name = "10 Tactical Wing"
 		start_experience_factor = 0.5
 	}

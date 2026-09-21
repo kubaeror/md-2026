@@ -430,23 +430,23 @@ units = {
 		task_force = {
 			name = "East Sea Surface Group"
 			location = 848
-			ship = { name = "DPRK Najin (631)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.25 equipment = { frigate_hull_1 = { amount = 1 owner = NKO version_name = "Najin-class" } } }
-			ship = { name = "DPRK Sariwon-class PCC-1" definition = corvette start_experience_factor = 0.2 equipment = { corvette_hull_1 = { amount = 1 owner = NKO version_name = "Sariwon-class" } } }
-			ship = { name = "DPRK Sariwon-class PCC-2" definition = corvette start_experience_factor = 0.2 equipment = { corvette_hull_1 = { amount = 1 owner = NKO version_name = "Sariwon-class" } } }
+			ship = { name = "DPRK Najin (631)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.25 equipment = { frigate_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Najin-class" } } }
+			ship = { name = "DPRK Sariwon-class PCC-1" definition = corvette start_experience_factor = 0.2 equipment = { corvette_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Sariwon-class" } } }
+			ship = { name = "DPRK Sariwon-class PCC-2" definition = corvette start_experience_factor = 0.2 equipment = { corvette_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Sariwon-class" } } }
 		}
 		task_force = {
 			name = "East Sea Submarine Group"
 			location = 6944
-			ship = { name = "DPRK Romeo-class SS-1" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-2" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-3" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-4" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-5" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-6" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-7" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-8" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-9" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-10" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-1" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-2" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-3" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-4" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-5" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-6" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-7" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-8" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-9" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-10" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
 		}
 	}
 
@@ -457,23 +457,23 @@ units = {
 		task_force = {
 			name = "West Sea Surface Group"
 			location = 3189
-			ship = { name = "DPRK Najin (632)" definition = frigate start_experience_factor = 0.25 equipment = { frigate_hull_1 = { amount = 1 owner = NKO version_name = "Najin-class" } } }
-			ship = { name = "DPRK Sariwon-class PCC-3" definition = corvette start_experience_factor = 0.2 equipment = { corvette_hull_1 = { amount = 1 owner = NKO version_name = "Sariwon-class" } } }
-			ship = { name = "DPRK Sariwon-class PCC-4" definition = corvette start_experience_factor = 0.2 equipment = { corvette_hull_1 = { amount = 1 owner = NKO version_name = "Sariwon-class" } } }
+			ship = { name = "DPRK Najin (632)" definition = frigate start_experience_factor = 0.25 equipment = { frigate_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Najin-class" } } }
+			ship = { name = "DPRK Sariwon-class PCC-3" definition = corvette start_experience_factor = 0.2 equipment = { corvette_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Sariwon-class" } } }
+			ship = { name = "DPRK Sariwon-class PCC-4" definition = corvette start_experience_factor = 0.2 equipment = { corvette_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Sariwon-class" } } }
 		}
 		task_force = {
 			name = "West Sea Submarine Group"
 			location = 3189
-			ship = { name = "DPRK Romeo-class SS-11" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-12" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-13" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-14" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-15" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-16" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-17" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-18" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-19" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
-			ship = { name = "DPRK Romeo-class SS-20" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-11" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-12" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-13" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-14" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-15" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-16" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-17" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-18" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-19" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
+			ship = { name = "DPRK Romeo-class SS-20" definition = attack_submarine start_experience_factor = 0.2 equipment = { attack_submarine_hull_1 = { amount = 1 owner = NKO creator = NKO version_name = "Romeo-class (Type 033)" } } }
 		}
 	}
 }

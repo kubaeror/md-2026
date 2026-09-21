@@ -309,20 +309,20 @@ units = {
 		task_force = {
 			name = "1st Surface Group"
 			location = 7982
-			ship = { name = "IRIS Jamaran (76)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = PER version_name = "Moudge-class" } } }
-			ship = { name = "IRIS Sahand (74)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = PER version_name = "Moudge-class" } } }
-			ship = { name = "IRIS Dena (75)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PER version_name = "Moudge-class" } } }
-			ship = { name = "IRIS Alvand (71)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = PER version_name = "Alvand-class" } } }
-			ship = { name = "IRIS Alborz (72)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = PER version_name = "Alvand-class" } } }
-			ship = { name = "IRIS Sabalan (73)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = PER version_name = "Alvand-class" } } }
+			ship = { name = "IRIS Jamaran (76)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = PER creator = PER version_name = "Moudge-class" } } }
+			ship = { name = "IRIS Sahand (74)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = PER creator = PER version_name = "Moudge-class" } } }
+			ship = { name = "IRIS Dena (75)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PER creator = PER version_name = "Moudge-class" } } }
+			ship = { name = "IRIS Alvand (71)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = PER creator = PER version_name = "Alvand-class" } } }
+			ship = { name = "IRIS Alborz (72)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = PER creator = PER version_name = "Alvand-class" } } }
+			ship = { name = "IRIS Sabalan (73)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = PER creator = PER version_name = "Alvand-class" } } }
 		}
 		task_force = {
 			name = "Submarine Flotilla"
 			location = 7982
-			ship = { name = "IRIS Tareg (901)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PER version_name = "Kilo-class (Type 877EKM)" } } }
-			ship = { name = "IRIS Noor (902)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PER version_name = "Kilo-class (Type 877EKM)" } } }
-			ship = { name = "IRIS Yunes (903)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PER version_name = "Kilo-class (Type 877EKM)" } } }
-			ship = { name = "IRIS Fateh (S-1)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_1 = { amount = 1 owner = PER version_name = "Fateh-class" } } }
+			ship = { name = "IRIS Tareg (901)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PER creator = PER version_name = "Kilo-class (Type 877EKM)" } } }
+			ship = { name = "IRIS Noor (902)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PER creator = PER version_name = "Kilo-class (Type 877EKM)" } } }
+			ship = { name = "IRIS Yunes (903)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PER creator = PER version_name = "Kilo-class (Type 877EKM)" } } }
+			ship = { name = "IRIS Fateh (S-1)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_1 = { amount = 1 owner = PER creator = PER version_name = "Fateh-class" } } }
 		}
 	}
 
@@ -333,7 +333,7 @@ units = {
 		task_force = {
 			name = "Caspian Task Force"
 			location = 14619
-			ship = { name = "IRIS Damavand (77)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PER version_name = "Moudge-class" } } }
+			ship = { name = "IRIS Damavand (77)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PER creator = PER version_name = "Moudge-class" } } }
 		}
 	}
 }

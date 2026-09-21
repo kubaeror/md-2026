@@ -244,18 +244,18 @@ units = {
 		task_force = {
 			name = "Dywizjon Okretow Bojowych"
 			location = 362
-			ship = { name = "ORP Slazak (341)" definition = corvette start_experience_factor = 0.7 equipment = { corvette_hull_2 = { amount = 1 owner = POL version_name = "Slazak Class" } } }
-			ship = { name = "ORP Orkan (421)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = POL version_name = "Orkan Class" } } }
-			ship = { name = "ORP Piorun (422)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = POL version_name = "Orkan Class" } } }
-			ship = { name = "ORP Grom (423)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = POL version_name = "Orkan Class" } } }
-			ship = { name = "ORP Kaszub (240)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_1 = { amount = 1 owner = POL version_name = "Kaszub Class" } } }
+			ship = { name = "ORP Slazak (341)" definition = corvette start_experience_factor = 0.7 equipment = { corvette_hull_2 = { amount = 1 owner = POL creator = POL version_name = "Slazak Class" } } }
+			ship = { name = "ORP Orkan (421)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = POL creator = POL version_name = "Orkan Class" } } }
+			ship = { name = "ORP Piorun (422)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = POL creator = POL version_name = "Orkan Class" } } }
+			ship = { name = "ORP Grom (423)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = POL creator = POL version_name = "Orkan Class" } } }
+			ship = { name = "ORP Kaszub (240)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_1 = { amount = 1 owner = POL creator = POL version_name = "Kaszub Class" } } }
 		}
 		task_force = {
 			name = "Dywizjon Okretow Minowych"
 			location = 362
-			ship = { name = "ORP Kormoran (601)" definition = corvette start_experience_factor = 0.7 equipment = { corvette_hull_2 = { amount = 1 owner = POL version_name = "Kormoran II Class" } } }
-			ship = { name = "ORP Albatros (602)" definition = corvette start_experience_factor = 0.7 equipment = { corvette_hull_2 = { amount = 1 owner = POL version_name = "Kormoran II Class" } } }
-			ship = { name = "ORP Mewa (603)" definition = corvette start_experience_factor = 0.7 equipment = { corvette_hull_2 = { amount = 1 owner = POL version_name = "Kormoran II Class" } } }
+			ship = { name = "ORP Kormoran (601)" definition = corvette start_experience_factor = 0.7 equipment = { corvette_hull_2 = { amount = 1 owner = POL creator = POL version_name = "Kormoran II Class" } } }
+			ship = { name = "ORP Albatros (602)" definition = corvette start_experience_factor = 0.7 equipment = { corvette_hull_2 = { amount = 1 owner = POL creator = POL version_name = "Kormoran II Class" } } }
+			ship = { name = "ORP Mewa (603)" definition = corvette start_experience_factor = 0.7 equipment = { corvette_hull_2 = { amount = 1 owner = POL creator = POL version_name = "Kormoran II Class" } } }
 		}
 	}
 }

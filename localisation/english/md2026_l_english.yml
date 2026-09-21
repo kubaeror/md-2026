@@ -1908,3 +1908,9 @@
  md2026_nuclear_posturing_desc:0 "Adopt an aggressive nuclear posture, publicly signaling willingness to use nuclear weapons. This may deter aggression but will alarm the international community."
  md2026_develop_nuclear_weapons:0 "Develop Nuclear Weapons"
  md2026_develop_nuclear_weapons_desc:0 "Embark on a covert nuclear weapons development program. This long and expensive endeavor will face severe international opposition if discovered, but will provide the ultimate strategic deterrent."
+
+ ### VENEZUELA (US pressure campaign) ###
+ md2026_venezuela.1.t:0 "Pressure on Caracas"
+ md2026_venezuela.1.d:0 "American carrier groups are operating off the Venezuelan coast and strikes on suspected trafficking vessels have become routine. The White House must decide whether to keep the pressure on the Maduro government or to pull back before the confrontation spirals into a full war."
+ md2026_venezuela.1.a:0 "Keep up the pressure."
+ md2026_venezuela.1.b:0 "De-escalate and offer a way out."

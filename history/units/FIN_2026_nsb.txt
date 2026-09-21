@@ -147,25 +147,25 @@ units = {
 		task_force = {
 			name = "1. Korvettidivisioona"
 			location = 11105
-			ship = { name = "FNS Pohjanmaa" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = FIN version_name = "Pohjanmaa Class" } } }
-			ship = { name = "FNS Häme" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = FIN version_name = "Pohjanmaa Class" } } }
+			ship = { name = "FNS Pohjanmaa" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = FIN creator = FIN version_name = "Pohjanmaa Class" } } }
+			ship = { name = "FNS Häme" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = FIN creator = FIN version_name = "Pohjanmaa Class" } } }
 		}
 		# Hamina-class missile boats
 		task_force = {
 			name = "Ohjusvenelaivue"
 			location = 11105
-			ship = { name = "FNS Hamina (80)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = FIN version_name = "Hamina Class" } } }
-			ship = { name = "FNS Tornio (81)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = FIN version_name = "Hamina Class" } } }
-			ship = { name = "FNS Hanko (82)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = FIN version_name = "Hamina Class" } } }
-			ship = { name = "FNS Pori (83)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = FIN version_name = "Hamina Class" } } }
+			ship = { name = "FNS Hamina (80)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = FIN creator = FIN version_name = "Hamina Class" } } }
+			ship = { name = "FNS Tornio (81)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = FIN creator = FIN version_name = "Hamina Class" } } }
+			ship = { name = "FNS Hanko (82)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = FIN creator = FIN version_name = "Hamina Class" } } }
+			ship = { name = "FNS Pori (83)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = FIN creator = FIN version_name = "Hamina Class" } } }
 		}
 		# Rauma-class missile boats
 		task_force = {
 			name = "Rannikkotukikohta"
 			location = 3122
-			ship = { name = "FNS Rauma (70)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_1 = { amount = 1 owner = FIN version_name = "Rauma Class" } } }
-			ship = { name = "FNS Raahe (71)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_1 = { amount = 1 owner = FIN version_name = "Rauma Class" } } }
-			ship = { name = "FNS Naantali (73)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_1 = { amount = 1 owner = FIN version_name = "Rauma Class" } } }
+			ship = { name = "FNS Rauma (70)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_1 = { amount = 1 owner = FIN creator = FIN version_name = "Rauma Class" } } }
+			ship = { name = "FNS Raahe (71)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_1 = { amount = 1 owner = FIN creator = FIN version_name = "Rauma Class" } } }
+			ship = { name = "FNS Naantali (73)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_1 = { amount = 1 owner = FIN creator = FIN version_name = "Rauma Class" } } }
 		}
 	}
 }

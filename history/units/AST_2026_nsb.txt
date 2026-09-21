@@ -155,14 +155,14 @@ units = {
 		task_force = {
 			name = "Fleet Base East"
 			location = 12406
-			ship = { name = "HMAS Canberra (L02)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = AST version_name = "Canberra Class" } } }
-			ship = { name = "HMAS Hobart (DDG-39)" definition = destroyer start_experience_factor = 0.5 equipment = { destroyer_hull_3 = { amount = 1 owner = AST version_name = "Hobart Class" } } }
-			ship = { name = "HMAS Brisbane (DDG-41)" definition = destroyer start_experience_factor = 0.5 equipment = { destroyer_hull_3 = { amount = 1 owner = AST version_name = "Hobart Class" } } }
-			ship = { name = "HMAS Anzac (FFH-150)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST version_name = "Anzac Class" } } }
-			ship = { name = "HMAS Arunta (FFH-151)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST version_name = "Anzac Class" } } }
-			ship = { name = "HMAS Stuart (FFH-153)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST version_name = "Anzac Class" } } }
-			ship = { name = "HMAS Parramatta (FFH-154)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST version_name = "Anzac Class" } } }
-			ship = { name = "HMAS Ballarat (FFH-155)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST version_name = "Anzac Class" } } }
+			ship = { name = "HMAS Canberra (L02)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Canberra Class" } } }
+			ship = { name = "HMAS Hobart (DDG-39)" definition = destroyer start_experience_factor = 0.5 equipment = { destroyer_hull_3 = { amount = 1 owner = AST creator = AST version_name = "Hobart Class" } } }
+			ship = { name = "HMAS Brisbane (DDG-41)" definition = destroyer start_experience_factor = 0.5 equipment = { destroyer_hull_3 = { amount = 1 owner = AST creator = AST version_name = "Hobart Class" } } }
+			ship = { name = "HMAS Anzac (FFH-150)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
+			ship = { name = "HMAS Arunta (FFH-151)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
+			ship = { name = "HMAS Stuart (FFH-153)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
+			ship = { name = "HMAS Parramatta (FFH-154)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
+			ship = { name = "HMAS Ballarat (FFH-155)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
 		}
 	}
 
@@ -172,19 +172,19 @@ units = {
 		task_force = {
 			name = "Fleet Base West"
 			location = 8228
-			ship = { name = "HMAS Adelaide (L01)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = AST version_name = "Canberra Class" } } }
-			ship = { name = "HMAS Sydney (DDG-42)" definition = destroyer start_experience_factor = 0.5 equipment = { destroyer_hull_3 = { amount = 1 owner = AST version_name = "Hobart Class" } } }
-			ship = { name = "HMAS Warramunga (FFH-152)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST version_name = "Anzac Class" } } }
-			ship = { name = "HMAS Toowoomba (FFH-156)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST version_name = "Anzac Class" } } }
-			ship = { name = "HMAS Perth (FFH-157)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST version_name = "Anzac Class" } } }
-			ship = { name = "HMAS Arafura (OPV-301)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = AST version_name = "Arafura Class" } } }
-			ship = { name = "HMAS Pilbara (OPV-302)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = AST version_name = "Arafura Class" } } }
-			ship = { name = "HMAS Collins (SSG-73)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = AST version_name = "Collins Class" } } }
-			ship = { name = "HMAS Farncomb (SSG-74)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = AST version_name = "Collins Class" } } }
-			ship = { name = "HMAS Waller (SSG-75)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = AST version_name = "Collins Class" } } }
-			ship = { name = "HMAS Dechaineux (SSG-76)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = AST version_name = "Collins Class" } } }
-			ship = { name = "HMAS Sheean (SSG-77)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = AST version_name = "Collins Class" } } }
-			ship = { name = "HMAS Rankin (SSG-78)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = AST version_name = "Collins Class" } } }
+			ship = { name = "HMAS Adelaide (L01)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Canberra Class" } } }
+			ship = { name = "HMAS Sydney (DDG-42)" definition = destroyer start_experience_factor = 0.5 equipment = { destroyer_hull_3 = { amount = 1 owner = AST creator = AST version_name = "Hobart Class" } } }
+			ship = { name = "HMAS Warramunga (FFH-152)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
+			ship = { name = "HMAS Toowoomba (FFH-156)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
+			ship = { name = "HMAS Perth (FFH-157)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
+			ship = { name = "HMAS Arafura (OPV-301)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Arafura Class" } } }
+			ship = { name = "HMAS Pilbara (OPV-302)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Arafura Class" } } }
+			ship = { name = "HMAS Collins (SSG-73)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Collins Class" } } }
+			ship = { name = "HMAS Farncomb (SSG-74)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Collins Class" } } }
+			ship = { name = "HMAS Waller (SSG-75)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Collins Class" } } }
+			ship = { name = "HMAS Dechaineux (SSG-76)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Collins Class" } } }
+			ship = { name = "HMAS Sheean (SSG-77)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Collins Class" } } }
+			ship = { name = "HMAS Rankin (SSG-78)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Collins Class" } } }
 		}
 	}
 }
@@ -202,7 +202,7 @@ instant_effect = {
 air_wings = {
 	# RAAF Williamtown (NSW)
 	1221 = {
-		L_Strike_fighter2 = { owner = "AST" creator = "USA" amount = 30 version_name = "F-35A Lightning II" }
+		L_Strike_fighter3 = { owner = "AST" creator = "USA" amount = 30 version_name = "F-35A Lightning II" }
 		name = "No. 3 Squadron RAAF"
 		start_experience_factor = 0.5
 	}
@@ -239,7 +239,7 @@ air_wings = {
 	}
 	# RAAF Tindal (Northern Territory)
 	747 = {
-		L_Strike_fighter2 = { owner = "AST" creator = "USA" amount = 20 version_name = "F-35A Lightning II" }
+		L_Strike_fighter3 = { owner = "AST" creator = "USA" amount = 20 version_name = "F-35A Lightning II" }
 		name = "No. 75 Squadron RAAF"
 		start_experience_factor = 0.5
 	}

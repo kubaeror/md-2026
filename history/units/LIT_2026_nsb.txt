@@ -85,10 +85,10 @@ units = {
 		task_force = {
 			name = "Lithuanian Naval Force"
 			location = 13258
-			ship = { name = "P11 Zemaitis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT version_name = "Flyvefisken Class" } } }
-			ship = { name = "P12 Aukstaitis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT version_name = "Flyvefisken Class" } } }
-			ship = { name = "M51 Kursis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT version_name = "Hunt Class" } } }
-			ship = { name = "M52 Suduvis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT version_name = "Hunt Class" } } }
+			ship = { name = "P11 Zemaitis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT creator = LIT version_name = "Flyvefisken Class" } } }
+			ship = { name = "P12 Aukstaitis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT creator = LIT version_name = "Flyvefisken Class" } } }
+			ship = { name = "M51 Kursis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT creator = LIT version_name = "Hunt Class" } } }
+			ship = { name = "M52 Suduvis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT creator = LIT version_name = "Hunt Class" } } }
 		}
 	}
 }

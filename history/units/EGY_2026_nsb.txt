@@ -281,16 +281,16 @@ units = {
 		task_force = {
 			name = "Mediterranean Fleet"
 			location = 4076
-			ship = { name = "ENS Gamal Abdel Nasser (L1010)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = EGY version_name = "Mistral Class" } } }
-			ship = { name = "ENS Tahya Misr (FFG-1001)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = EGY version_name = "FREMM Class" } } }
-			ship = { name = "ENS Al Galala (FFG-1002)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = EGY version_name = "FREMM Class" } } }
-			ship = { name = "ENS Sharm El Sheikh" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_2 = { amount = 1 owner = EGY version_name = "Oliver Hazard Perry Class" } } }
-			ship = { name = "ENS El Fateh (971)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY version_name = "Gowind 2500 Class" } } }
-			ship = { name = "ENS Port Said (972)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY version_name = "Gowind 2500 Class" } } }
-			ship = { name = "ENS S. Ezzat" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = EGY version_name = "Ambassador Mk III Class" } } }
-			ship = { name = "ENS M. Fahmy" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = EGY version_name = "Ambassador Mk III Class" } } }
-			ship = { name = "S-41" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY version_name = "Type 209/1400 Class" } } }
-			ship = { name = "S-42" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY version_name = "Type 209/1400 Class" } } }
+			ship = { name = "ENS Gamal Abdel Nasser (L1010)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Mistral Class" } } }
+			ship = { name = "ENS Tahya Misr (FFG-1001)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "FREMM Class" } } }
+			ship = { name = "ENS Al Galala (FFG-1002)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "FREMM Class" } } }
+			ship = { name = "ENS Sharm El Sheikh" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Oliver Hazard Perry Class" } } }
+			ship = { name = "ENS El Fateh (971)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "Gowind 2500 Class" } } }
+			ship = { name = "ENS Port Said (972)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "Gowind 2500 Class" } } }
+			ship = { name = "ENS S. Ezzat" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Ambassador Mk III Class" } } }
+			ship = { name = "ENS M. Fahmy" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Ambassador Mk III Class" } } }
+			ship = { name = "S-41" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Type 209/1400 Class" } } }
+			ship = { name = "S-42" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Type 209/1400 Class" } } }
 		}
 	}
 
@@ -300,12 +300,12 @@ units = {
 		task_force = {
 			name = "Red Sea Fleet"
 			location = 4073
-			ship = { name = "ENS Anwar El Sadat (L1020)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = EGY version_name = "Mistral Class" } } }
-			ship = { name = "ENS Taba" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_2 = { amount = 1 owner = EGY version_name = "Oliver Hazard Perry Class" } } }
-			ship = { name = "ENS Al Moez (973)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY version_name = "Gowind 2500 Class" } } }
-			ship = { name = "ENS Luxor (974)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY version_name = "Gowind 2500 Class" } } }
-			ship = { name = "S-43" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY version_name = "Type 209/1400 Class" } } }
-			ship = { name = "S-44" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY version_name = "Type 209/1400 Class" } } }
+			ship = { name = "ENS Anwar El Sadat (L1020)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Mistral Class" } } }
+			ship = { name = "ENS Taba" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Oliver Hazard Perry Class" } } }
+			ship = { name = "ENS Al Moez (973)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "Gowind 2500 Class" } } }
+			ship = { name = "ENS Luxor (974)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "Gowind 2500 Class" } } }
+			ship = { name = "S-43" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Type 209/1400 Class" } } }
+			ship = { name = "S-44" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Type 209/1400 Class" } } }
 		}
 	}
 }

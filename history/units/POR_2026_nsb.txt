@@ -98,26 +98,26 @@ units = {
 			name = "Esquadrilha de Fragatas"
 			location = 11805
 			# Vasco da Gama-class frigates (MEKO 200)
-			ship = { name = "NRP Vasco da Gama (F330)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = POR version_name = "Vasco da Gama class" } } }
-			ship = { name = "NRP Alvares Cabral (F331)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = POR version_name = "Vasco da Gama class" } } }
-			ship = { name = "NRP Corte-Real (F332)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = POR version_name = "Vasco da Gama class" } } }
+			ship = { name = "NRP Vasco da Gama (F330)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = POR creator = POR version_name = "Vasco da Gama class" } } }
+			ship = { name = "NRP Alvares Cabral (F331)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = POR creator = POR version_name = "Vasco da Gama class" } } }
+			ship = { name = "NRP Corte-Real (F332)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = POR creator = POR version_name = "Vasco da Gama class" } } }
 			# Bartolomeu Dias-class frigates (ex-Karel Doorman)
-			ship = { name = "NRP Bartolomeu Dias (F333)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = POR version_name = "Bartolomeu Dias class" } } }
-			ship = { name = "NRP D. Francisco de Almeida (F334)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = POR version_name = "Bartolomeu Dias class" } } }
+			ship = { name = "NRP Bartolomeu Dias (F333)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = POR creator = POR version_name = "Bartolomeu Dias class" } } }
+			ship = { name = "NRP D. Francisco de Almeida (F334)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = POR creator = POR version_name = "Bartolomeu Dias class" } } }
 		}
 		task_force = {
 			name = "Esquadrilha de Submarinos"
 			location = 11805
 			# Tridente-class submarines (Type 209PN)
-			ship = { name = "NRP Tridente (S160)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = POR version_name = "Tridente class" } } }
-			ship = { name = "NRP Arpao (S161)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = POR version_name = "Tridente class" } } }
+			ship = { name = "NRP Tridente (S160)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = POR creator = POR version_name = "Tridente class" } } }
+			ship = { name = "NRP Arpao (S161)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = POR creator = POR version_name = "Tridente class" } } }
 		}
 		task_force = {
 			name = "Patrulha Oceânica"
 			location = 11805
 			# Viana do Castelo-class OPVs
-			ship = { name = "NRP Viana do Castelo (P360)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = POR version_name = "Viana do Castelo class" } } }
-			ship = { name = "NRP Figueira da Foz (P361)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = POR version_name = "Viana do Castelo class" } } }
+			ship = { name = "NRP Viana do Castelo (P360)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = POR creator = POR version_name = "Viana do Castelo class" } } }
+			ship = { name = "NRP Figueira da Foz (P361)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = POR creator = POR version_name = "Viana do Castelo class" } } }
 		}
 	}
 }

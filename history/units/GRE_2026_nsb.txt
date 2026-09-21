@@ -213,29 +213,29 @@ units = {
 		task_force = {
 			name = "Frigate Squadron"
 			location = 4109
-			ship = { name = "HS Hydra (F-452)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = GRE version_name = "Hydra-class (MEKO 200HN)" } } }
-			ship = { name = "HS Spetsai (F-453)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = GRE version_name = "Hydra-class (MEKO 200HN)" } } }
-			ship = { name = "HS Psara (F-454)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = GRE version_name = "Hydra-class (MEKO 200HN)" } } }
-			ship = { name = "HS Salamis (F-455)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = GRE version_name = "Hydra-class (MEKO 200HN)" } } }
+			ship = { name = "HS Hydra (F-452)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Hydra-class (MEKO 200HN)" } } }
+			ship = { name = "HS Spetsai (F-453)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Hydra-class (MEKO 200HN)" } } }
+			ship = { name = "HS Psara (F-454)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Hydra-class (MEKO 200HN)" } } }
+			ship = { name = "HS Salamis (F-455)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Hydra-class (MEKO 200HN)" } } }
 		}
 		task_force = {
 			name = "Fast Attack Squadron"
 			location = 4109
-			ship = { name = "HS Roussen (P-67)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE version_name = "Roussen-class (Super Vita)" } } }
-			ship = { name = "HS Daniolos (P-68)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE version_name = "Roussen-class (Super Vita)" } } }
-			ship = { name = "HS Krystallidis (P-69)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE version_name = "Roussen-class (Super Vita)" } } }
-			ship = { name = "HS Grigoropoulos (P-70)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE version_name = "Roussen-class (Super Vita)" } } }
-			ship = { name = "HS Kavaloudis (P-71)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE version_name = "Roussen-class (Super Vita)" } } }
-			ship = { name = "HS Degiannis (P-72)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE version_name = "Roussen-class (Super Vita)" } } }
-			ship = { name = "HS Laskaridis (P-73)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Roussen (P-67)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Daniolos (P-68)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Krystallidis (P-69)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Grigoropoulos (P-70)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Kavaloudis (P-71)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Degiannis (P-72)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Laskaridis (P-73)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
 		}
 		task_force = {
 			name = "Submarine Command"
 			location = 4109
-			ship = { name = "HS Papanikolis (S-120)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = GRE version_name = "Type 214" } } }
-			ship = { name = "HS Pipinos (S-121)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = GRE version_name = "Type 214" } } }
-			ship = { name = "HS Matrozos (S-122)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = GRE version_name = "Type 214" } } }
-			ship = { name = "HS Katsonis (S-123)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = GRE version_name = "Type 214" } } }
+			ship = { name = "HS Papanikolis (S-120)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Type 214" } } }
+			ship = { name = "HS Pipinos (S-121)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Type 214" } } }
+			ship = { name = "HS Matrozos (S-122)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Type 214" } } }
+			ship = { name = "HS Katsonis (S-123)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Type 214" } } }
 		}
 	}
 }
