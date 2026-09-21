@@ -168,3 +168,23 @@ Prerequisite chains are organized by category (13 batches total):
 11. Missile chains
 12. Naval chains
 13. Industry & space chains
+
+---
+
+## 2026 specialisations (Phase 6 review)
+
+The tiers grant whole technology bands, so countries start with the technologies
+their real 2026 forces rely on. The specialisations below are covered by
+MD's own tech tree (no per-country exceptions needed):
+
+| Specialisation | Country | Notes |
+|---|---|---|
+| Drone warfare | UKR | `UKR_drone_army` idea + `Air_UAV2` wings in the 2026 OOB; MD's drone techs are in the 2020/2025 bands (tier 1-2) |
+| Cyber and AI | CHI | computing/AI chains in the 2015-2026 bands; tier 1 grants all 2026 techs |
+| Space and missile defence | USA, CHI | space-programme techs in the 2020+ bands; `sp_space_program` project completion is MD-driven |
+| Air defence | ISR, UKR, ROM | SAM chains (2015-2025) granted at tier 2-3 |
+| Naval modernisation | CHI, USA, IND | carrier/destroyer chains in the 2015+ bands |
+
+Known limitation: the equipment *tier digits* in the OOB files still follow MD
+1.x in places (see `docs/Order-of-Battle.md`); the technology tiers themselves are
+generated from MD 2.0's `start_year` fields, so they follow the installed version.

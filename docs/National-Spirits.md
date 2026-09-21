@@ -87,3 +87,26 @@ These provide temporary or permanent bonuses as rewards for completing strategic
 - Focus reward spirits use `add_ideas` in the focus completion effect
 - Decision reward ideas are added/removed via decision complete effects
 - Localisation for all spirits is in `localisation/english/md2026_l_english.yml`
+  and `localisation/polish/md2026_l_polish.yml`
+
+---
+
+## 2026 coverage review (Phase 6)
+
+The 2026 spirit set covers the main real-world pressures of the start date:
+
+| Theme | Spirits / ideas | Carriers |
+|---|---|---|
+| Sanctions and war economy | `md2026_sov_western_sanctions`, `md2026_sov_war_mobilization` | SOV |
+| Western aid and mobilisation | `md2026_ukr_western_military_aid`, `md2026_ukr_defensive_mobilization` | UKR |
+| Polarisation and trade policy | `md2026_usa_political_polarization`, `md2026_usa_america_first` | USA |
+| Slowdown and rearmament | `md2026_chi_economic_slowdown`, `md2026_chi_military_modernization` | CHI |
+| Rearmament | `md2026_ger_zeitenwende`, `md2026_pol_eastern_shield` | GER, POL |
+| Authoritarian consolidation | `md2026_tur_erdogan_autocracy`, `md2026_nko_total_isolation` | TUR, NKO |
+| Sanctions and wartime footing | `md2026_per_international_sanctions`, `md2026_isr_wartime_footing` | PER, ISR |
+| Post-Brexit adjustment | `md2026_eng_post_brexit` | ENG |
+
+Gaps that are **not** modelled as national spirits (they use decisions or events
+instead): migration pressure (events + `md2026_migration_tensions` opinion),
+climate and energy shocks (events), AI and technology rivalry (events +
+`md2026_tech_rivalry`). Adding dedicated spirits for these is future work.

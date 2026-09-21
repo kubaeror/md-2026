@@ -49,6 +49,15 @@ The 2026 data and OOB pass:
 
 ## Open issues
 
+### Coverage of Millennium Dawn's own-tree countries
+
+The 2026 bookmark is complete for its 30 countries (patch, focus branch and both
+OOB variants - enforced by `tools/validate.py`). 79 other countries that have
+their own focus tree in Millennium Dawn do not have a 2026 history patch yet:
+their 2026 start uses MD's 2000-era politics and parties at the 2026 date. The
+full list and the reasoning (breakaway tags, generic-tree countries, priority
+lists) are in `docs/Coverage.md`.
+
 ### Focuses that are deliberately not pre-completed
 
 37 path/political focuses are skipped by the pre-completion safety filter,
