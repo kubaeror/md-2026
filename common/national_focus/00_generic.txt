@@ -1,6 +1,8 @@
 focus_tree = {
 	id = generic_focus
 	shared_focus = MD2026_TAI_porcupine_defense
+	shared_focus = MD2026_HUN_sovereignty
+	shared_focus = MD2026_SUD_generals_war
 	country = { factor = 2 }
 	continuous_focus_position = { x = 5 y = 830 }
 

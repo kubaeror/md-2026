@@ -1,0 +1,84 @@
+###################################
+# MD2026 Burma / Myanmar (BRM) Focus Tree
+# 2026 Shared Focuses - The Junta's War
+###################################
+
+shared_focus = {
+	id = MD2026_BRM_juntas_war
+	icon = GFX_focus_generic_military_dictatorship
+	x = 38
+	y = 0
+	cost = 3.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	allow_branch = {
+		original_tag = BRM
+		date > 2025.12.31
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_BRM_juntas_war"
+		add_political_power = 50
+		add_war_support = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_BRM_great_power_support
+	icon = GFX_focus_generic_arms_trade
+	x = -2
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_BRM_juntas_war }
+	relative_position_id = MD2026_BRM_juntas_war
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_BRM_great_power_support"
+		army_experience = 25
+		add_opinion_modifier = { target = SOV modifier = md2026_trade_partner }
+		add_opinion_modifier = { target = CHI modifier = md2026_trade_partner }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_BRM_hold_the_heartland
+	icon = GFX_focus_generic_military_industry
+	x = 0
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_BRM_juntas_war }
+	relative_position_id = MD2026_BRM_juntas_war
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_BRM_hold_the_heartland"
+		add_stability = 0.02
+		army_experience = 15
+		set_country_flag = md2026_brm_hold_the_heartland
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_BRM_dry_season_offensive
+	icon = GFX_focus_generic_crush_the_military
+	x = 2
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_BRM_juntas_war }
+	relative_position_id = MD2026_BRM_juntas_war
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_BRM_dry_season_offensive"
+		add_war_support = 0.05
+		army_experience = 30
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

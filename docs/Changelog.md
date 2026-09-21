@@ -30,6 +30,9 @@ All notable changes to the Millennium Dawn 2026 Rework submod.
   2000-era events or replacing the 2026 government.
 
 ### New content
+- **Focus branches for every bookmark country**: Finland, Sweden, Norway, Romania,
+  Burma, Hungary and Sudan received 2026 branches (`md2026_fin/swe/nry/rom/brm/hun/sud_focus.txt`);
+  the branch count is now 30.
 - **Non-NSB orders of battle** for all 67 countries (`<TAG>_2026_nonnsb.txt`); without
   *No Step Back* the 2026 bookmark no longer falls back to MD's 2000 army.
 - **Indonesia and Venezuela**: 2026 OOBs (TNI / FANB) and bookmark entries with

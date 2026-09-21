@@ -732,6 +732,26 @@ Pre-completed (14): root + 5 T1 + 8 non-ME T2
 
 ---
 
+## Bookmark Country Branches (2026)
+
+Seven bookmark countries that had no 2026 branch received a small shared-focus
+branch (root + three children). The branches use MD's existing focus icons and
+only safe effects (political power, war support, stability, experience, opinion
+modifiers). Hungary and Sudan are injected into MD's `generic_focus` tree and
+gated by `allow_branch = { original_tag = ... }`.
+
+| Country | Root | File | Children |
+|---|---|---|---|
+| Finland (FIN) | `MD2026_FIN_arctic_shield` | `md2026_fin_focus.txt` | NATO integration, defence budget, Arctic logistics |
+| Sweden (SWE) | `MD2026_SWE_total_defense` | `md2026_swe_focus.txt` | northern flank, Gripen programme, Baltic security |
+| Norway (NRY) | `MD2026_NRY_northern_flank` | `md2026_nry_focus.txt` | Arctic defence, energy security, NATO basing |
+| Romania (ROM) | `MD2026_ROM_black_sea_bastion` | `md2026_rom_focus.txt` | allied presence, air defence, Moldova support |
+| Burma (BRM) | `MD2026_BRM_juntas_war` | `md2026_brm_focus.txt` | great power support, hold the heartland, dry season offensive |
+| Hungary (HUN) | `MD2026_HUN_sovereignty` | `md2026_hun_focus.txt` | eastern opening, Paks expansion, Visegrad cooperation |
+| Sudan (SUD) | `MD2026_SUD_generals_war` | `md2026_sud_focus.txt` | arms imports, Nile politics, humanitarian crisis |
+
+---
+
 ## Opinion Modifiers
 
 Focus tree effects use custom opinion modifiers (prefixed with `md2026_`) to avoid conflicts with base MD:

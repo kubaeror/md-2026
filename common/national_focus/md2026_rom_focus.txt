@@ -1,0 +1,86 @@
+###################################
+# MD2026 Romania (ROM) Focus Tree
+# 2026 Shared Focuses - Black Sea Bastion
+###################################
+
+shared_focus = {
+	id = MD2026_ROM_black_sea_bastion
+	icon = GFX_focus_generic_home_defense
+	x = 118
+	y = 0
+	cost = 3.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	allow_branch = {
+		original_tag = ROM
+		date > 2025.12.31
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_black_sea_bastion"
+		add_political_power = 75
+		add_war_support = 0.05
+		add_opinion_modifier = { target = MLV modifier = md2026_solidarity_opinion }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ROM_allied_presence
+	icon = GFX_goal_generic_defence
+	x = -2
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_ROM_black_sea_bastion }
+	relative_position_id = MD2026_ROM_black_sea_bastion
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_allied_presence"
+		army_experience = 20
+		add_opinion_modifier = { target = USA modifier = md2026_nato_deployment_opinion }
+		add_opinion_modifier = { target = ENG modifier = md2026_joint_exercises_opinion }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ROM_air_defense
+	icon = GFX_focus_generic_air_defense
+	x = 0
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_ROM_black_sea_bastion }
+	relative_position_id = MD2026_ROM_black_sea_bastion
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_air_defense"
+		air_experience = 25
+		add_political_power = 25
+		set_country_flag = md2026_rom_air_defense
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_ROM_moldova_support
+	icon = GFX_focus_generic_diplomatic_treaty
+	x = 2
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_ROM_black_sea_bastion }
+	relative_position_id = MD2026_ROM_black_sea_bastion
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_ROM_moldova_support"
+		add_political_power = 50
+		add_opinion_modifier = { target = MLV modifier = md2026_improved_relations }
+		MLV = { add_opinion_modifier = { target = ROM modifier = md2026_improved_relations } }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

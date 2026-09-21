@@ -8,6 +8,9 @@
   "australia_abbottgov_focus": [
     "MD2026_AST_pacific_partner"
   ],
+  "burma_focus": [
+    "MD2026_BRM_juntas_war"
+  ],
   "canada_focus": [
     "MD2026_CAN_northern_shield"
   ],
@@ -20,11 +23,16 @@
   "egypt_focus": [
     "MD2026_EGY_nile_power"
   ],
+  "finland_focus": [
+    "MD2026_FIN_arctic_shield"
+  ],
   "france_focus": [
     "MD2026_FRA_european_power"
   ],
   "generic_focus": [
-    "MD2026_TAI_porcupine_defense"
+    "MD2026_TAI_porcupine_defense",
+    "MD2026_HUN_sovereignty",
+    "MD2026_SUD_generals_war"
   ],
   "germany_focus": [
     "MD2026_GER_zeitenwende_2026"
@@ -34,6 +42,9 @@
   ],
   "gulf_focus": [
     "MD2026_SAU_vision_2030"
+  ],
+  "norway_focus": [
+    "MD2026_NRY_northern_flank"
   ],
   "howardgov_focus": [
     "MD2026_AST_pacific_partner"
@@ -71,8 +82,14 @@
   "russia_focus": [
     "MD2026_SOV_war_crossroads"
   ],
+  "romanian_focus": [
+    "MD2026_ROM_black_sea_bastion"
+  ],
   "saudi_focus_tree": [
     "MD2026_SAU_vision_2030"
+  ],
+  "sweden": [
+    "MD2026_SWE_total_defense"
   ],
   "turkey_focus": [
     "MD2026_TUR_new_era"

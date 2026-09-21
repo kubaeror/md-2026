@@ -17,7 +17,8 @@ that adds a **January 1, 2026** start date bookmark to Hearts of Iron IV.
 - **Updated borders** - Crimea, Donbas, Zaporizhzhia, Kherson, post-Assad Syria.
 - **NATO 2026** - post-2000 members receive Millennium Dawn's `NATO_member` idea and are
   registered in MD's `global.nato_members` array.
-- **23 focus tree branches** (`MD2026_*` shared focuses) injected into the current MD 2.0 trees.
+- **Focus tree branches**: **30** (`MD2026_*` shared focuses) injected into the current
+  MD 2.0 trees; every 2026 bookmark country now has one.
 - **67 orders of battle** for 2026, each with a No Step Back **and** a non-No-Step-Back variant.
 - **5-tier technology system**, generated from Millennium Dawn's own technology tree
   (all techs up to a year, with MD's DLC gating).
@@ -30,7 +31,7 @@ that adds a **January 1, 2026** start date bookmark to Hearts of Iron IV.
 |---|---|
 | Countries with a 2026 history patch | 68 |
 | 2026 bookmark entries | 30 |
-| Focus branches (`MD2026_*`) | 23 |
+| Focus branches (`MD2026_*`) | 30 |
 | 2026 orders of battle (NSB / non-NSB) | 67 / 67 |
 | Pre-completed focuses | 2118 |
 | Localisation keys (EN / PL) | 1720 / 1720 |

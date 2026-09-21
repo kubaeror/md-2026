@@ -1,0 +1,85 @@
+###################################
+# MD2026 Sudan (SUD) Focus Tree
+# 2026 Shared Focuses - The Generals' War
+# (injected into MD's generic focus tree, gated by allow_branch)
+###################################
+
+shared_focus = {
+	id = MD2026_SUD_generals_war
+	icon = GFX_focus_generic_africa_defense
+	x = 74
+	y = 0
+	cost = 3.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	allow_branch = {
+		original_tag = SUD
+		date > 2025.12.31
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SUD_generals_war"
+		add_political_power = 50
+		add_war_support = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_SUD_arms_imports
+	icon = GFX_focus_generic_arms_trade
+	x = -2
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_SUD_generals_war }
+	relative_position_id = MD2026_SUD_generals_war
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SUD_arms_imports"
+		army_experience = 25
+		add_opinion_modifier = { target = UAE modifier = md2026_trade_partner }
+		add_opinion_modifier = { target = TUR modifier = md2026_trade_partner }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_SUD_nile_politics
+	icon = GFX_focus_generic_diplomatic_treaty
+	x = 0
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	prerequisite = { focus = MD2026_SUD_generals_war }
+	relative_position_id = MD2026_SUD_generals_war
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SUD_nile_politics"
+		add_political_power = 25
+		add_opinion_modifier = { target = ETH modifier = md2026_diplomatic_disapproval }
+		set_country_flag = md2026_sud_nile_politics
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_SUD_humanitarian_crisis
+	icon = GFX_focus_generic_home_defense
+	x = 2
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_SUD_generals_war }
+	relative_position_id = MD2026_SUD_generals_war
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_SUD_humanitarian_crisis"
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
