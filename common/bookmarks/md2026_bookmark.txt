@@ -258,6 +258,18 @@ bookmarks = {
 			ideology = nationalist
 			version = base_game
 		}
+		"IND" = {
+			minor = yes
+			history = "IND_MD2026_DESC"
+			ideology = nationalist
+			version = base_game
+		}
+		"VEN" = {
+			minor = yes
+			history = "VEN_MD2026_DESC"
+			ideology = communism
+			version = base_game
+		}
 		"---" = {
 			minor = yes
 			history = "OTHER_MD2026_DESC"

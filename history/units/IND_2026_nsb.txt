@@ -1,0 +1,384 @@
+##### Division Templates #####
+# Indonesia 2026 - TNI: large territorial force, modernising with French, Turkish
+# and Chinese equipment; Kostrad as the strategic reserve.
+
+division_template = {
+	name = "Divisi Infanteri"		#Infantry Division (regional command)
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		Arty_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Brigade Infanteri Mekanis"		#Mechanised Infantry Brigade
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Arm_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Brigade Para Raider"		#Airborne Brigade (Kostrad)
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		air_assault_Arty_Battery = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Brigade Marinir"		#Marine Brigade (Korps Marinir)
+	regiments = {
+		L_Marine_Bat = { x = 0 y = 0 }
+		L_Marine_Bat = { x = 0 y = 1 }
+		L_Marine_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Kelompok Kopassus"		#Special Forces Group
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Batalyon Raider"		#Raider Battalion (light infantry)
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+	}
+}
+
+##### Units #####
+
+units = {
+	##### Kostrad (Strategic Reserve) #####
+
+	# 1st Infantry Division - Cilodong, West Java
+	division = {
+		name = "Divisi Infanteri 1 Kostrad"
+		location = 1386
+		division_template = "Divisi Infanteri"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	# 2nd Infantry Division - Malang, East Java
+	division = {
+		name = "Divisi Infanteri 2 Kostrad"
+		location = 1209
+		division_template = "Divisi Infanteri"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	# 3rd Infantry Division - Makassar, Sulawesi
+	division = {
+		name = "Divisi Infanteri 3 Kostrad"
+		location = 1098
+		division_template = "Divisi Infanteri"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.75
+	}
+	# 17th Airborne Brigade - Cijantung, Jakarta
+	division = {
+		name = "Brigade Para Raider 17"
+		location = 1425
+		division_template = "Brigade Para Raider"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.85
+	}
+	# Kopassus - Cijantung
+	division = {
+		name = "Kopassus"
+		location = 1425
+		division_template = "Kelompok Kopassus"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.9
+	}
+
+	##### Regional Military Commands (Kodam) #####
+
+	# Kodam I/Bukit Barisan - Medan, Northern Sumatra
+	division = {
+		name = "Brigade Infanteri 7 (Kodam I)"
+		location = 1648
+		division_template = "Divisi Infanteri"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# Kodam II/Sriwijaya - Palembang, Southern Sumatra
+	division = {
+		name = "Brigade Infanteri 9 (Kodam II)"
+		location = 4320
+		division_template = "Divisi Infanteri"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# Kodam III/Siliwangi - Bandung, West Java
+	division = {
+		name = "Brigade Infanteri 15 (Kodam III)"
+		location = 1386
+		division_template = "Divisi Infanteri"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.75
+	}
+	# Kodam IV/Diponegoro - Semarang, Central Java
+	division = {
+		name = "Brigade Infanteri 16 (Kodam IV)"
+		location = 1413
+		division_template = "Divisi Infanteri"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.75
+	}
+	# Kodam V/Brawijaya - Surabaya, East Java
+	division = {
+		name = "Brigade Infanteri 18 (Kodam V)"
+		location = 4306
+		division_template = "Brigade Infanteri Mekanis"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.8
+	}
+	# Kodam VI/Mulawarman - Balikpapan, Kalimantan
+	division = {
+		name = "Brigade Infanteri 22 (Kodam VI)"
+		location = 1230
+		division_template = "Divisi Infanteri"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# Kodam IX/Udayana - Denpasar, Bali
+	division = {
+		name = "Brigade Infanteri 21 (Kodam IX)"
+		location = 4320
+		division_template = "Brigade Infanteri Mekanis"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.75
+	}
+	# Kodam XII/Tanjungpura - Pontianak
+	division = {
+		name = "Brigade Infanteri 19 (Kodam XII)"
+		location = 1230
+		division_template = "Divisi Infanteri"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.65
+	}
+	# Kodam XVII/Cenderawasih - Jayapura, Papua
+	division = {
+		name = "Brigade Infanteri 20 (Kodam XVII)"
+		location = 1546
+		division_template = "Divisi Infanteri"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.7
+	}
+	# Kostrad mechanised brigade
+	division = {
+		name = "Brigade Infanteri Mekanis 1 Kostrad"
+		location = 1386
+		division_template = "Brigade Infanteri Mekanis"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+	# Raider battalions
+	division = {
+		name = "Batalyon Raider 300"
+		location = 1398
+		division_template = "Batalyon Raider"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Batalyon Raider 400"
+		location = 1209
+		division_template = "Batalyon Raider"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.8
+	}
+}
+
+##### TNI Angkatan Laut (Navy) #####
+fleet = {
+	name = "TNI Angkatan Laut"
+	naval_base = 4306		# Surabaya (Koarmada II)
+
+	task_force = {
+		name = "Koarmada II - Frigates"
+		location = 4306
+		# Martadinata class (SIGMA 10514)
+		ship = { name = "KRI Raden Eddy Martadinata (331)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = "IND" creator = "HOL" version_name = "Martadinata class" } } }
+		ship = { name = "KRI I Gusti Ngurah Rai (332)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = "IND" creator = "HOL" version_name = "Martadinata class" } } }
+		# Ahmad Yani class (Van Speijk)
+		ship = { name = "KRI Ahmad Yani (351)" definition = frigate equipment = { frigate_hull_1 = { amount = 1 owner = "IND" creator = "HOL" version_name = "Ahmad Yani class" } } }
+		ship = { name = "KRI Yos Sudarso (353)" definition = frigate equipment = { frigate_hull_1 = { amount = 1 owner = "IND" creator = "HOL" version_name = "Ahmad Yani class" } } }
+	}
+	task_force = {
+		name = "Koarmada II - Corvettes"
+		location = 4306
+		# Diponegoro class (SIGMA 9113)
+		ship = { name = "KRI Diponegoro (365)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = "IND" creator = "HOL" version_name = "Diponegoro class" } } }
+		ship = { name = "KRI Sultan Hasanuddin (366)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = "IND" creator = "HOL" version_name = "Diponegoro class" } } }
+		ship = { name = "KRI Sultan Iskandar Muda (367)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = "IND" creator = "HOL" version_name = "Diponegoro class" } } }
+		ship = { name = "KRI Frans Kaisiepo (368)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = "IND" creator = "HOL" version_name = "Diponegoro class" } } }
+		# Bung Tomo class (ex-Brunei)
+		ship = { name = "KRI Bung Tomo (357)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = "IND" creator = "ENG" version_name = "Bung Tomo class" } } }
+		ship = { name = "KRI John Lie (358)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = "IND" creator = "ENG" version_name = "Bung Tomo class" } } }
+	}
+	task_force = {
+		name = "Koarmada II - Submarines"
+		location = 4306
+		# Nagapasa class (Type 209/1400)
+		ship = { name = "KRI Nagapasa (403)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = "IND" creator = "KOR" version_name = "Nagapasa class" } } }
+		ship = { name = "KRI Ardadedali (404)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = "IND" creator = "KOR" version_name = "Nagapasa class" } } }
+		ship = { name = "KRI Alugoro (405)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = "IND" creator = "KOR" version_name = "Nagapasa class" } } }
+		ship = { name = "KRI Cakra (401)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = "IND" creator = "GER" version_name = "Cakra class" } } }
+	}
+	task_force = {
+		name = "Koarmada I - Jakarta"
+		location = 1386		# Jakarta (Koarmada I)
+		ship = { name = "KRI Bung Karno (369)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = "IND" creator = "IND" version_name = "Bung Karno class" } } }
+		# Makassar class landing platform dock
+		ship = { name = "KRI Makassar (590)" definition = helicopter_operator equipment = { helicopter_operator_hull_1 = { amount = 1 owner = "IND" creator = "KOR" version_name = "Makassar class" } } }
+		ship = { name = "KRI Surabaya (591)" definition = helicopter_operator equipment = { helicopter_operator_hull_1 = { amount = 1 owner = "IND" creator = "KOR" version_name = "Makassar class" } } }
+	}
+}
+
+##### TNI Angkatan Udara (Air Force) #####
+air_wings = {
+	# Iswahjudi Air Base - F-16C/D
+	634 = {
+		small_plane_airframe_2 = { owner = "IND" creator = "USA" amount = 20 version_name = "F-16C/D Block 52ID" }
+		name = "3rd Air Squadron (Iswahjudi)"
+		start_experience_factor = 0.5
+	}
+	# Roesmin Nurjadin Air Base - F-16 and T-50i
+	623 = {
+		small_plane_airframe_2 = { owner = "IND" creator = "USA" amount = 13 version_name = "F-16A/B Block 15 ADF" }
+		name = "16th Air Squadron (Pekanbaru)"
+		start_experience_factor = 0.45
+	}
+	623 = {
+		cas2 = { owner = "IND" creator = "KOR" amount = 13 version_name = "T-50i Golden Eagle" }
+		name = "15th Air Squadron (Pekanbaru)"
+		start_experience_factor = 0.4
+	}
+	# Sultan Hasanuddin Air Base - Su-27/Su-30
+	639 = {
+		MR_Fighter3 = { owner = "IND" creator = "SOV" amount = 5 version_name = "Su-27SK/SKM" }
+		name = "11th Air Squadron (Makassar)"
+		start_experience_factor = 0.45
+	}
+	639 = {
+		MR_Fighter4 = { owner = "IND" creator = "SOV" amount = 11 version_name = "Su-30MK/MK2" }
+		name = "12th Air Squadron (Makassar)"
+		start_experience_factor = 0.45
+	}
+	# Abdul Rachman Saleh Air Base - Super Tucano
+	634 = {
+		cas2 = { owner = "IND" creator = "BRA" amount = 13 version_name = "EMB-314 Super Tucano" }
+		name = "21st Air Squadron (Malang)"
+		start_experience_factor = 0.4
+	}
+	# Supadio Air Base - Hawk 200
+	640 = {
+		cas2 = { owner = "IND" creator = "ENG" amount = 21 version_name = "Hawk 200" }
+		name = "12th Air Squadron (Pontianak)"
+		start_experience_factor = 0.35
+	}
+	# Halim Perdanakusuma - transports
+	631 = {
+		transport_plane1 = { owner = "IND" creator = "USA" amount = 12 version_name = "C-130H Hercules" }
+		name = "31st Air Squadron (Halim)"
+		start_experience_factor = 0.4
+	}
+	631 = {
+		transport_plane1 = { owner = "IND" creator = "IND" amount = 9 version_name = "CN-295" }
+		name = "2nd Air Squadron (Halim)"
+		start_experience_factor = 0.4
+	}
+	# Natuna Islands - UAV surveillance
+	936 = {
+		Air_UAV2 = { owner = "IND" creator = "CHI" amount = 6 version_name = "CH-4 Rainbow" }
+		name = "UAV Squadron (Natuna)"
+		start_experience_factor = 0.3
+	}
+}
+
+##### Equipment stockpiles #####
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_5
+		amount = 25000
+		producer = IND
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_4
+		amount = 40000
+		producer = IND
+	}
+	add_equipment_to_stockpile = {
+		type = cnc_equipment_3
+		amount = 4000
+		producer = IND
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_2
+		amount = 900
+		producer = IND
+	}
+	add_equipment_to_stockpile = {
+		type = Anti_tank_1
+		amount = 600
+		producer = IND
+	}
+	add_equipment_to_stockpile = {
+		type = Anti_Air_1
+		amount = 400
+		producer = IND
+	}
+	add_equipment_to_stockpile = {
+		type = MBT_4
+		amount = 100
+		producer = IND
+	}
+	add_equipment_to_stockpile = {
+		type = util_vehicle_4
+		amount = 3000
+		producer = IND
+	}
+}

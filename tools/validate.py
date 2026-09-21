@@ -725,6 +725,7 @@ def check_stockpile_types(sets):
         targets.append((p, not os.path.basename(p).startswith("md2026_")))
     for p in files(os.path.join(REPO, "patches")):
         targets.append((p, False))
+    md_side_stockpiles = set()
     for p, md_side in targets:
         text = rebase.strip_comments(rebase.read(p))
         for m in re.finditer(r"add_equipment_to_stockpile\s*=\s*\{", text):
@@ -736,11 +737,19 @@ def check_stockpile_types(sets):
                 continue
             name = tm.group(1)
             if name in sets["equipment_archetype"]:
-                bucket = WARNINGS if md_side else ERRORS
-                bucket["stockpile of an archetype"].append(f"{name}  ({rel(p)})")
+                if md_side:
+                    md_side_stockpiles.add((name, rel(p)))
+                else:
+                    ERRORS["stockpile of an archetype"].append(f"{name}  ({rel(p)})")
             elif name not in sets["equipment_md"]:
-                bucket = WARNINGS if md_side else ERRORS
-                bucket["stockpile of an unknown equipment"].append(f"{name}  ({rel(p)})")
+                if md_side:
+                    md_side_stockpiles.add((name, rel(p)))
+                else:
+                    ERRORS["stockpile of an unknown equipment"].append(f"{name}  ({rel(p)})")
+    if md_side_stockpiles:
+        WARNINGS["MD-side stockpile references (MD rewards we now carry)"].append(
+            f"{len(md_side_stockpiles)} refs, e.g. "
+            + ", ".join(sorted({n for n, _ in md_side_stockpiles})[:4]))
 
 
 def check_oob_tech_order():

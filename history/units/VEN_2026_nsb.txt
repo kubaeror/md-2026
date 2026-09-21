@@ -1,0 +1,333 @@
+##### Division Templates #####
+# Venezuela 2026 - FANB: ~123k active, Soviet/Russian equipment, Bolivarian
+# militia as a mass reserve. Under US pressure during the 2025-2026 crisis.
+
+division_template = {
+	name = "Brigada Blindada"		#Armoured Brigade
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 0 }
+		Arm_Inf_Bat = { x = 1 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		Arm_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Brigada de Infanteria"		#Infantry Brigade
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Brigada de Paracaidistas"		#Airborne Brigade
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Brigada de Selva"		#Jungle Infantry Brigade
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Brigada de Infanteria de Marina"		#Marine Brigade
+	regiments = {
+		L_Marine_Bat = { x = 0 y = 0 }
+		L_Marine_Bat = { x = 0 y = 1 }
+		L_Marine_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Milicia Bolivariana"		#Bolivarian Militia
+	regiments = {
+		Militia_Bat = { x = 0 y = 0 }
+		Militia_Bat = { x = 0 y = 1 }
+		Militia_Bat = { x = 0 y = 2 }
+		Militia_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		combat_service_support_company = { x = 0 y = 0 }
+	}
+	priority = 0
+}
+
+##### Units #####
+
+units = {
+	##### Army (Ejercito) #####
+
+	# 1st Armoured Brigade - Maracay
+	division = {
+		name = "1ra Brigada Blindada"
+		location = 8113
+		division_template = "Brigada Blindada"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+	# 41st Armoured Brigade - Maracaibo
+	division = {
+		name = "41ra Brigada Blindada"
+		location = 1944
+		division_template = "Brigada Blindada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.55
+	}
+	# 11th Infantry Brigade - Caracas
+	division = {
+		name = "11ra Brigada de Infanteria"
+		location = 10855
+		division_template = "Brigada de Infanteria"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+	# 12th Infantry Brigade - Barquisimeto
+	division = {
+		name = "12da Brigada de Infanteria"
+		location = 12254
+		division_template = "Brigada de Infanteria"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.55
+	}
+	# 42nd Airborne Brigade - Maracay
+	division = {
+		name = "42da Brigada de Paracaidistas"
+		location = 8113
+		division_template = "Brigada de Paracaidistas"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+	# 9th Jungle Infantry Brigade - Ciudad Bolivar
+	division = {
+		name = "9na Brigada de Selva"
+		location = 10736
+		division_template = "Brigada de Selva"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+	# 51st Jungle Infantry Brigade - Amazonas
+	division = {
+		name = "51ra Brigada de Selva"
+		location = 7968
+		division_template = "Brigada de Selva"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.55
+	}
+	# 31st Infantry Brigade - Anzoategui
+	division = {
+		name = "31ra Brigada de Infanteria"
+		location = 5317
+		division_template = "Brigada de Infanteria"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.55
+	}
+	# 32nd Infantry Brigade - Llanos
+	division = {
+		name = "32da Brigada de Infanteria"
+		location = 4892
+		division_template = "Brigada de Infanteria"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	# 33rd Infantry Brigade - Falcon
+	division = {
+		name = "33ra Brigada de Infanteria"
+		location = 1981
+		division_template = "Brigada de Infanteria"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+
+	##### Marine Corps #####
+
+	# Marine Brigade - Puerto Cabello
+	division = {
+		name = "1ra Brigada de Infanteria de Marina"
+		location = 12254
+		division_template = "Brigada de Infanteria de Marina"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "2da Brigada de Infanteria de Marina"
+		location = 1944
+		division_template = "Brigada de Infanteria de Marina"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.55
+	}
+
+	##### Bolivarian Militia (reserve) #####
+
+	division = {
+		name = "Milicia Bolivariana - Distrito Capital"
+		location = 10855
+		division_template = "Milicia Bolivariana"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Milicia Bolivariana - Zulia"
+		location = 1944
+		division_template = "Milicia Bolivariana"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Milicia Bolivariana - Bolivar"
+		location = 10736
+		division_template = "Milicia Bolivariana"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.35
+	}
+	division = {
+		name = "Milicia Bolivariana - Llanos"
+		location = 4892
+		division_template = "Milicia Bolivariana"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.35
+	}
+}
+
+##### Armada Bolivariana (Navy) #####
+fleet = {
+	name = "Armada Bolivariana"
+	naval_base = 8113		# Puerto Cabello / Caracas
+
+	task_force = {
+		name = "Escuadron de Fragatas"
+		location = 8113
+		# Mariscal Sucre class (Lupo)
+		ship = { name = "F-21 Mariscal Sucre" definition = frigate equipment = { frigate_hull_1 = { amount = 1 owner = "VEN" creator = "ITA" version_name = "Mariscal Sucre class" } } }
+		ship = { name = "F-22 Almirante Brión" definition = frigate equipment = { frigate_hull_1 = { amount = 1 owner = "VEN" creator = "ITA" version_name = "Mariscal Sucre class" } } }
+	}
+	task_force = {
+		name = "Escuadron de Patrulleros"
+		location = 8113
+		# Guaiqueri class (POVZEE)
+		ship = { name = "PC-21 Guaiqueri" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = "VEN" creator = "SPR" version_name = "Guaiqueri class" } } }
+		ship = { name = "PC-22 Warao" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = "VEN" creator = "SPR" version_name = "Guaiqueri class" } } }
+		ship = { name = "PC-23 Yekuana" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = "VEN" creator = "SPR" version_name = "Guaiqueri class" } } }
+		ship = { name = "PC-24 Kariña" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = "VEN" creator = "SPR" version_name = "Guaiqueri class" } } }
+	}
+	task_force = {
+		name = "Escuadron de Submarinos"
+		location = 8113
+		# Sábalo class (Type 209/1300)
+		ship = { name = "S-31 Sabalo" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = "VEN" creator = "GER" version_name = "Sabalo class" } } }
+		ship = { name = "S-32 Caribe" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = "VEN" creator = "GER" version_name = "Sabalo class" } } }
+	}
+}
+
+##### Aviacion Militar Bolivariana (Air Force) #####
+air_wings = {
+	# Su-30MK2 - Barcelona (Anzoategui)
+	915 = {
+		MR_Fighter3 = { owner = "VEN" creator = "SOV" amount = 21 version_name = "Su-30MK2" }
+		name = "Escuadron de Caza 11"
+		start_experience_factor = 0.45
+	}
+	# F-16A/B - Maracay
+	875 = {
+		small_plane_airframe_2 = { owner = "VEN" creator = "USA" amount = 4 version_name = "F-16A/B Block 15" }
+		name = "Escuadron de Caza 16"
+		start_experience_factor = 0.35
+	}
+	# K-8 - Barquisimeto
+	874 = {
+		cas2 = { owner = "VEN" creator = "CHI" amount = 23 version_name = "K-8 Karakorum" }
+		name = "Escuadron de Entrenamiento 12"
+		start_experience_factor = 0.3
+	}
+	# F-5 - Ciudad Bolivar
+	876 = {
+		small_plane_airframe_1 = { owner = "VEN" creator = "USA" amount = 6 version_name = "F-5A/B Freedom Fighter" }
+		name = "Escuadron de Caza 17"
+		start_experience_factor = 0.3
+	}
+	# C-130 transports - Caracas
+	875 = {
+		transport_plane1 = { owner = "VEN" creator = "USA" amount = 6 version_name = "C-130H Hercules" }
+		name = "Escuadron de Transporte 6"
+		start_experience_factor = 0.3
+	}
+}
+
+##### Equipment stockpiles #####
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_4
+		amount = 30000
+		producer = VEN
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_weapons_3
+		amount = 20000
+		producer = VEN
+	}
+	add_equipment_to_stockpile = {
+		type = cnc_equipment_3
+		amount = 3000
+		producer = VEN
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_1
+		amount = 800
+		producer = VEN
+	}
+	add_equipment_to_stockpile = {
+		type = Anti_tank_1
+		amount = 400
+		producer = VEN
+	}
+	add_equipment_to_stockpile = {
+		type = Anti_Air_1
+		amount = 300
+		producer = VEN
+	}
+	add_equipment_to_stockpile = {
+		type = MBT_3
+		amount = 92
+		producer = VEN
+	}
+	add_equipment_to_stockpile = {
+		type = util_vehicle_3
+		amount = 2000
+		producer = VEN
+	}
+}

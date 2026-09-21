@@ -6,6 +6,15 @@
 	### Technology 2026 ###
 	md2026_tier3_2026_techs = yes
 
+	### OOB 2026 ###
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		set_oob = "IND_2026_nsb"
+		else = {
+			set_oob = "IND_2026_nonnsb"
+		}
+	}
+
 	### GDP & Economic Variables ###
 	set_variable = { gdp_per_capita = 5.000 }
 	set_variable = { var = debt value = 500.000 }
