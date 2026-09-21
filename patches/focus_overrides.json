@@ -1,0 +1,31 @@
+{
+  "_comment": [
+    "Per-focus adaptations for the 2026 start.",
+    "The generator applies these to our copies of Millennium Dawn's focus files.",
+    "  reward: replacement 'completion_reward' body (tab-indented, no outer braces)",
+    "  allow:  keep MD's reward but allow pre-completing the focus anyway",
+    "          (only for focuses verified to be correct in 2026)",
+    "Focuses that are not listed and would wreck the 2026 setup stay skipped and",
+    "are documented in docs/Known-Issues.md."
+  ],
+
+  "RAJ_bharatiya_janata_party": {
+    "allow": true,
+    "reason": "BJP is the ruling party in 2026 (our history sets its index); MD's reward only boosts its popularity and sets the RAJ_democratic cosmetic tag, which matches the 2026 state."
+  },
+
+  "SOV_putin": {
+    "reason": "Unlocks the Putin branch for a 2026 Russia. The original reward also fires the 2000-era event russia.104 and moves the ruling party to MD's 2000-era Conservative index, contradicting the 2026 United Russia government set by our history patch.",
+    "reward": "\t\t\tlog = \"[GetDateText]: [Root.GetName]: Focus SOV_putin\"\n\t\t\tadd_to_variable = { SOV_putin_politic_political_power_factor = 0.05 tooltip = political_power_factor_tt }\n\t\t\tadd_dynamic_modifier = { modifier = SOV_putin_politic_modifier }\n\t\t\tset_country_flag = sov_putin_econ\n\t\t\tclr_country_flag = sov_zug_econ\n\t\t\tclr_country_flag = sov_zir_econ"
+  },
+
+  "GEO_gergiandream2013": {
+    "reason": "Georgian Dream governs Georgia in 2026, so the branch should be open; the original reward re-sets the ruling party to MD's 2000-era democratic index instead of the 2026 government set by our history patch.",
+    "reward": "\t\t\tlog = \"[GetDateText]: [Root.GetName]: Focus GEO_gergiandream2013\"\n\t\t\tadd_to_variable = { party_pop_array^7 = 0.05 }\n\t\t\trecalculate_party = yes"
+  },
+
+  "EGY_al_sisi_rise": {
+    "reason": "el-Sisi is already the 2026 president (created by our history patch) and the ruling party is set there; the original reward would create a second el-Sisi leader and reset the ruling party.",
+    "reward": "\t\t\tlog = \"[GetDateText]: [Root.GetName]: Focus EGY_al_sisi_rise\"\n\t\t\tcustom_effect_tooltip = sisi_dem_tt\n\t\t\tset_country_flag = EGY_sisi_pisi"
+  }
+}

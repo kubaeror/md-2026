@@ -889,6 +889,32 @@ def check_localisation(md):
             ERRORS[f"missing {lang} translation"].append(k)
 
 
+def check_focus_overrides(md, sets):
+    """Focus overrides must reference real focuses, be safe for pre-completion,
+    and actually be used by a 2026 history patch."""
+    cfg = rebase.focus_overrides()
+    if not cfg:
+        return
+    effects = rebase._md_effect_bodies(md)
+    events = rebase._md_event_bodies(md)
+    precompleted = set()
+    for p in files(os.path.join(REPO, "patches", "history_countries")):
+        precompleted |= set(re.findall(r"complete_national_focus\s*=\s*([A-Za-z0-9_]+)",
+                                       rebase.read(p)))
+    for fid, c in sorted(cfg.items()):
+        if fid not in sets["focus"]:
+            ERRORS["focus override: unknown focus"].append(fid)
+            continue
+        if "reward" in c:
+            reason = rebase._scan_unsafe(c["reward"], effects, events)
+            if reason:
+                ERRORS["focus override: reward still unsafe"].append(f"{fid} ({reason})")
+        if not c.get("allow") and "reward" not in c:
+            WARNINGS["focus override without allow/reward"].append(fid)
+        if fid not in precompleted:
+            WARNINGS["focus override not pre-completed anywhere"].append(fid)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--md", default=os.environ.get("MD_PATH", rebase.DEFAULT_MD))
@@ -968,6 +994,7 @@ def main():
     check_equipment_dlc_paths(md)
     check_create_unit_templates(md)
     check_localisation(md)
+    check_focus_overrides(md, sets)
     check_installation()
 
     print()

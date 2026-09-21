@@ -130,6 +130,45 @@ def focus_inject_config():
         return json.load(f)
 
 
+FOCUS_OVERRIDES_FILE = os.path.join(REPO, "patches", "focus_overrides.json")
+
+
+def focus_overrides():
+    """focus id -> override config (see patches/focus_overrides.json)."""
+    if os.path.exists(FOCUS_OVERRIDES_FILE):
+        with open(FOCUS_OVERRIDES_FILE, encoding="utf-8") as f:
+            return {k: v for k, v in json.load(f).items() if not k.startswith("_")}
+    return {}
+
+
+def apply_focus_overrides(text, overrides):
+    """Replace completion_reward bodies of overridden focuses."""
+    applied = []
+    replacements = []
+    for m in re.finditer(r"(?m)^\s*(?:focus|shared_focus|joint_focus)\s*=\s*\{", text):
+        ob = text.index("{", m.end() - 1)
+        end = find_block(text, ob)
+        block = text[ob:end]
+        idm = re.search(r"(?m)^\s*id\s*=\s*([A-Za-z0-9_]+)", block[:400])
+        if not idm or idm.group(1) not in overrides:
+            continue
+        cfg = overrides[idm.group(1)]
+        applied.append(idm.group(1))
+        if "reward" not in cfg:
+            continue
+        rm = re.search(r"completion_reward\s*=\s*\{", block)
+        if not rm:
+            continue
+        rb = block.index("{", rm.start())
+        rend = find_block(block, rb)
+        indent = re.search(r"(?m)^(\s*)completion_reward", block).group(1)
+        new_body = f"{indent}completion_reward = {{\n{cfg['reward']}\n{indent}}}"
+        replacements.append((ob + rm.start(), ob + rend, new_body))
+    for start, end, body in sorted(replacements, reverse=True):
+        text = text[:start] + body + text[end:]
+    return text, applied
+
+
 def md_focus_file_by_tree_id(md, tree_id):
     """Find the MD national_focus file that defines focus_tree with this id."""
     root = os.path.join(md, "common", "national_focus")
@@ -203,13 +242,17 @@ def rebase_focus(md):
     cfg = {} if skip_branches else focus_inject_config()  # tree_id -> [shared focus ids]
     out_dir = os.path.join(REPO, "common", "national_focus")
     root = os.path.join(md, "common", "national_focus")
+    overrides = focus_overrides()
     generated = set()
+    total_overrides = 0
     for name in sorted(os.listdir(root)):
         if not name.endswith(".txt"):
             continue
         text = read(os.path.join(root, name))
-        text = apply_fixups(text, *md_reference_sets(md))
+        text = apply_fixups(text, *md_reference_sets(md), md=md)
         text = fix_portraits_auto(text, md)
+        text, applied = apply_focus_overrides(text, overrides)
+        total_overrides += len(applied)
         blocks = []
         for m in re.finditer(r"focus_tree\s*=\s*\{", text):
             ob = text.index("{", m.start())
@@ -219,7 +262,7 @@ def rebase_focus(md):
             if idm and idm.group(1) in cfg and cfg[idm.group(1)]:
                 indent = re.search(r"(?m)^(\s*)id", text[ob:ob + 400]).group(1)
                 blocks.append((ob + idm.start(), idm.group(1), indent))
-        if not blocks:
+        if not blocks and not applied:
             continue
         for abs_id, tree_id, ind in reversed(blocks):
             line_end = text.index("\n", abs_id)
@@ -227,7 +270,12 @@ def rebase_focus(md):
             text = text[:line_end] + ins + text[line_end:]
         write(os.path.join(out_dir, name), text)
         generated.add(name)
-        print(f"  generated {name} ({', '.join(t for _, t, _ in blocks)})")
+        if blocks:
+            print(f"  generated {name} ({', '.join(t for _, t, _ in blocks)})")
+        if applied:
+            print(f"  overridden focuses in {name}: {', '.join(applied)}")
+    if total_overrides:
+        print(f"  focus overrides: {total_overrides} focuses adapted for 2026")
     missing = [t for t in cfg if t not in sum((md_tree_ids_in_file(md, n) for n in os.listdir(root) if n.endswith('.txt')), [])]
     for t in missing:
         print(f"  !! tree id not found in MD: {t}")
@@ -598,6 +646,11 @@ def unsafe_precompleted_focuses(md):
             out[fid] = reason
     for fid, reason in manual_unsafe_focuses().items():
         out.setdefault(fid, f"manual: {reason}")
+    # focuses we have verified (or rewritten) for 2026 are pre-completed even
+    # though MD's reward uses an unsafe effect
+    for fid, cfg in focus_overrides().items():
+        if cfg.get("allow") or cfg.get("reward"):
+            out.pop(fid, None)
     _unsafe_cache[md] = out
     return out
 
@@ -662,6 +715,47 @@ def apply_debug_flags(patch, flags, tag=None):
 # --------------------------------------------------------------------------
 # fixups for known MD 2.0 bugs, applied to generated (overriding) files
 # --------------------------------------------------------------------------
+
+_ideology_cache = {}
+
+
+def md_ideology_names(md):
+    """Every ideology id (top-level and sub-ideology) defined by MD + vanilla."""
+    if md in _ideology_cache:
+        return _ideology_cache[md]
+    names = set()
+
+    def collect(body):
+        for name, sub in children(body):
+            if name.startswith("@"):
+                continue
+            names.add(name)
+            collect(sub)
+
+    for root in (os.path.join(md, "common", "ideologies"),
+                 os.path.join(VANILLA, "common", "ideologies")):
+        for name in sorted(os.listdir(root)) if os.path.isdir(root) else []:
+            if name.endswith(".txt"):
+                collect(strip_comments(read(os.path.join(root, name))))
+    _ideology_cache[md] = names
+    return names
+
+
+def fix_ideology_case(text, names):
+    """MD sometimes writes ideologies with the wrong case (Democratic, Nat_populism);
+    the game is case sensitive, so those rewards silently do nothing."""
+    low = {n.lower(): n for n in names}
+
+    def repl(m):
+        ref = m.group(2)
+        if ref in names:
+            return m.group(0)
+        if ref.lower() in low:
+            return m.group(1) + low[ref.lower()]
+        return m.group(0)
+
+    return re.sub(r"(?m)^(\s*(?:ideology|has_government)\s*=\s*)([A-Za-z_][A-Za-z0-9_]*)", repl, text)
+
 
 def md_reference_sets(md):
     techs, chars = set(), set()
@@ -794,6 +888,8 @@ def apply_fixups(text, techs, chars, md=None, tag=None):
 
     if md and tag:
         text = fix_portraits(text, md, tag)
+    if md:
+        text = fix_ideology_case(text, md_ideology_names(md))
 
     # MD 2.0 renamed the computing tech category
     text = text.replace("CAT_computing_tech", "CAT_computer_systems")

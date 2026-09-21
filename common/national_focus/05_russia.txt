@@ -122,28 +122,15 @@ focus_tree = {
 
 		available = { emerging_reactionaries_are_in_power = yes }
 
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SOV_putin"
-			country_event = { id = russia.104 days = 10 }
 			add_to_variable = { SOV_putin_politic_political_power_factor = 0.05 tooltip = political_power_factor_tt }
-			add_to_variable = { SOV_putin_politic_communism_drift = 0.05 tooltip = communism_drift_tt }
 			add_dynamic_modifier = { modifier = SOV_putin_politic_modifier }
 			set_country_flag = sov_putin_econ
-			if = {
-				limit = { has_country_flag = sov_putin_econ }
-				clr_country_flag = sov_zug_econ
-				clr_country_flag = sov_zir_econ
-			}
-			if = {
-				limit = { NOT = { check_variable = { ruling_party = 6 } } }
-				set_temp_variable = { rul_party_temp = 6 }
-				change_ruling_party_effect = yes
-			}
-			set_temp_variable = { party_index = 6 }
-			set_temp_variable = { party_popularity_increase = 0.10 }
-			set_temp_variable = { temp_outlook_increase = 0.10 }
-			change_relative_party_popularity = yes
-			hidden_effect = { if = { limit = { SOV = { is_ai = yes } } ai_russian_popularity_assistant = yes } }
+			clr_country_flag = sov_zug_econ
+			clr_country_flag = sov_zir_econ
+
 		}
 
 		ai_will_do = {

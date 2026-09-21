@@ -4632,34 +4632,12 @@ focus_tree = {
 			}
 		}
 
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus EGY_al_sisi_rise"
 			custom_effect_tooltip = sisi_dem_tt
 			set_country_flag = EGY_sisi_pisi
-			if = {
-				limit = { NOT = { western_autocrats_are_in_power = yes } }
-				set_temp_variable = { rul_party_temp = 0 }
-				set_temp_variable = { col_one = 22 }
-				change_ruling_party_effect = yes
-			}
-			set_temp_variable = { party_index = 22 }
-			set_temp_variable = { party_popularity_increase = 0.35 }
-			set_temp_variable = { temp_outlook_increase = 0.35 }
-			change_relative_party_popularity = yes
-			hidden_effect = {
-				create_country_leader = {
-					name = "Abdel Fattah el-Sisi"
-					picture = "EGY_Abdel_Fattah_el-Sisi.dds"
-					ideology = Western_Autocracy
-					traits = {
-						western_Western_Autocracy
-						military_career
-						smooth_talking_charmer
-						opposes_muslim_brotherhood
-						ruthless
-					}
-				}
-			}
+
 		}
 
 		ai_will_do = {
