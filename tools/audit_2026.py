@@ -246,7 +246,23 @@ def main():
     used = keys_used_in_our_files()
     external = all_loc_keys(MD)
     missing_loc = sorted(k for k in used if k not in loc and k not in external)
-    langs = sorted({l for v in loc.values() for l in v})
+    langs_present = sorted({l for v in loc.values() for l in v})
+    # the authoritative localisation check lives in tools/loc_keys.py
+    try:
+        import loc_keys as L
+        wanted = L.expected_keys()
+        wanted.update(L.idea_keys())
+        wanted.update(L.decision_keys())
+        en_keys = L.defined_keys().get("english", {})
+        pl_keys = L.defined_keys().get("polish", {})
+        loc_missing_exact = sorted(k for k, v in wanted.items()
+                                   if k not in en_keys and k not in external
+                                   and any(L.is_our_file(f) for f in v))
+        loc_untranslated = sorted(k for k in wanted if k in en_keys and k not in pl_keys)
+    except Exception as exc:  # pragma: no cover - tool must not fail the audit
+        print(f"  !! loc_keys.py unavailable: {exc}", file=sys.stderr)
+        loc_missing_exact, loc_untranslated = [], []
+    langs = langs_present
     en_only = sorted(k for k, v in loc.items() if v == {"english"} and k.startswith(("md2026", "MD2026")))
 
     lines = []
@@ -293,11 +309,13 @@ def main():
         ))
     lines.append("")
 
-    table("Localisation keys used in our files but not defined", missing_loc[:200])
-    lines.append(f"({len(missing_loc)} total)")
+    table("Localisation keys used in our files but not defined (approx.)", missing_loc[:60])
+    lines.append(f"({len(missing_loc)} total, of which most are identifiers, not loc keys;"
+                 f" see tools/loc_keys.py for the exact check)")
     lines.append("")
-    table("Our localisation keys without a Polish translation", en_only)
-    lines.append(f"({len(en_only)} total, languages present: {', '.join(langs)})")
+    lines.append(f"- Loc keys our content needs but that are missing in English: **{len(loc_missing_exact)}**")
+    lines.append(f"- Keys defined in English but missing in Polish: **{len(loc_untranslated)}**")
+    lines.append(f"- Languages present: {', '.join(langs)}")
     lines.append("")
 
     report = "\n".join(lines)
@@ -312,7 +330,7 @@ def main():
     print(f"\nsummary: {len(own_tags)} own-tree countries, "
           f"{len(missing_patch)} without patch, {len(missing_branch)} without branch, "
           f"{len(missing_oob)} without OOB, {len(missing_nonnsb)} without non-NSB, "
-          f"{len(missing_loc)} missing loc keys, {len(en_only)} untranslated keys",
+          f"{len(loc_missing_exact)} missing loc keys, {len(loc_untranslated)} untranslated keys",
           file=sys.stderr)
 
 

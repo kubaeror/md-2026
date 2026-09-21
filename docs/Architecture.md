@@ -27,14 +27,29 @@ are written by hand and use the `md2026_` prefix to avoid collisions.
 
 | Artifact | Source | Tool |
 |---|---|---|
-| `common/national_focus/<md file>` | MD file + `shared_focus = MD2026_*` lines | `rebase.py focus` |
+| `common/national_focus/<md file>` | MD file + `shared_focus = MD2026_*` lines + `patches/focus_overrides.json` | `rebase.py focus` |
 | `history/countries/<md file>` | MD file + `patches/history_countries/<TAG>.txt` | `rebase.py history` |
 | `history/states/<md file>` | MD file + `patches/history_states/<id>.txt` (inside `history = {}`) | `rebase.py history` |
+| `history/units/<TAG>_2026_nonnsb.txt` | `<TAG>_2026_nsb.txt` (DLC-neutral 2026 OOB) | `tools/make_nonnsb_oob.py` |
+| `common/units/MD_regimental_support.txt` | MD file + `support` added to the hidden `Light_*` sub-units | `rebase.py units` |
 | `common/scripted_effects/md2026_technology_effects.txt` | MD's technology tree (`start_year` + `allow_branch` DLC gating) | `rebase.py tech` |
 | `thumbnail.png` | - | `tools/make_thumbnail.py` |
 
-`python tools/rebase.py generate` runs all three steps. `tools/rebase.py extract` is a one-time
+`python tools/rebase.py generate` runs all steps. `tools/rebase.py extract` is a one-time
 helper that split the original full copies into patches (kept for reference).
+
+## Focus overrides
+
+`patches/focus_overrides.json` adapts single Millennium Dawn focuses for 2026:
+
+* `"allow": true` keeps MD's reward but lets the 2026 history pre-complete the
+  focus (for rewards that are verified to be correct in 2026),
+* `"reward": "..."` replaces the whole `completion_reward` body (for rewards
+  that touch 2000-era leaders, parties or events).
+
+The generator applies the override to our copy of the focus file before the
+pre-completion safety filter runs, so an overridden focus is no longer skipped.
+Focuses that are skipped on purpose are listed in `docs/Known-Issues.md`.
 
 ## Fixups
 
@@ -44,9 +59,26 @@ While generating, `rebase.py` repairs known Millennium Dawn 2.0 bugs inside the 
   `UKR_dmytro_kiva` → `UKR_Dmytro_Kiva`),
 - references to ids that no longer exist in MD 2.0 (commented out with a `MD2026:` note),
 - `original_tag = NOR` leftovers (MD renamed Norway's tag to `NRY`),
-- `CAT_computing_tech` → `CAT_computer_systems`, short doctrine categories → `CAT_*_doctrine`.
+- `CAT_computing_tech` → `CAT_computer_systems`, short doctrine categories → `CAT_*_doctrine`,
+- ideologies written with the wrong case (`Democratic`, `Nat_populism`,
+  `has_government = Democratic`) - the game is case sensitive, so those rewards
+  silently did nothing.
 
 The fixes are applied to *our* copies only and disappear automatically once MD fixes them.
+
+## Validation and audits
+
+| Tool | Purpose |
+|---|---|
+| `tools/validate.py` | reference/consistency checker (technologies, ideas, focuses, characters, OOB equipment and sub-units, tags, ideologies, events, sprites, loc keys, duplicates); the goal is 0 errors |
+| `tools/audit_2026.py` | coverage report -> `docs/Coverage.md` (patch/branch/OOB/loc coverage) |
+| `tools/loc_keys.py` | localisation key extraction, missing/unused/translation report |
+| `tools/check_leaders.py` | leader data in `patches/leaders_2026.json` vs generated histories |
+| `tools/economy_report.py` | GDP/debt table for review -> `docs/Economy-2026.md` |
+| `tools/make_nonnsb_oob.py` | non-NSB OOB variants |
+| `tools/fix_oob_equipment.py` | equipment name mapping for the OOB files |
+| `tools/fix_oob_tiers.py` | air wing generation tiers |
+| `tools/check_pl_part.py` / `assemble_pl.py` | Polish translation parts |
 
 ## Focus branches
 

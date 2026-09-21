@@ -1,101 +1,140 @@
 # Known Issues
 
-## Fixed in the 2.0.0 rebase (September 2026)
+## Fixed in 1.2.0 (September 2026)
 
-The previous version of this submod was built against Millennium Dawn 1.12.3 / HoI4 1.17 and
-was broken on MD 2.0.0 / HoI4 1.19. The rebase fixed, among others:
+The 2026 data and OOB pass:
 
-- the mod was not registered in the launcher at all (no `.mod` file, no thumbnail),
-- `replace_path="common/bookmarks"` replaced MD 2.0's bookmarks with a stale copy
-  (19 invalid ideas and 18 invalid focuses in the 2000 bookmark),
-- 22 stale focus tree copies duplicated ~8,000 focus ids instead of overriding MD's renamed
-  tree files, so the 2026 branches never appeared,
-- 12 stale character files removed 237 MD 2.0 characters (UKR alone lost 148),
-- 66 country history copies referenced 1,853 technologies and 394 ideas that no longer exist
-  in MD 2.0,
-- state files lost MD 2.0 resources, buildings and state variables,
-- Norway's content used the old `NOR` tag (MD 2.0 uses `NRY`),
-- 30 duplicate localisation keys, broken accent encoding,
-- war exhaustion counter was never initialised, NATO membership used the pre-2.0 system,
-- 134 pre-completed focuses referenced focus ids that no longer exist,
-- missing GFX sprites (event pictures, focus icons, idea pictures).
-
-`tools/validate.py` now reports **0 errors** against MD 2.0.0.
+- **Orders of battle** - every 2026 OOB now has a non-No-Step-Back variant
+  (`history/units/<TAG>_2026_nonnsb.txt`, see `tools/make_nonnsb_oob.py`); the
+  bookmark no longer falls back to Millennium Dawn's 2000 army. Indonesia and
+  Venezuela received their own 2026 OOB (`IND_2026_*`, `VEN_2026_*`).
+- **Stockpiles work** - MD's `set_oob` runs `instant_effect` with
+  `add_equipment_to_stockpile`, and an equipment version only exists after the
+  technology that unlocks it is granted. All 65 history patches now grant the
+  2026 technology tiers *before* `set_oob`, and stockpiles are produced by the
+  country itself (a foreign producer's history has not run yet at that point).
+- **Equipment names** - the 2026 OOBs used vanilla names that Millennium Dawn's
+  `replace_path` removes (`CAS_equipment_2`, `heavy_fighter_equipment_2`,
+  `artillery_equipment`) and MD 1.x names; they are mapped to MD 2.0 equipment
+  (`tools/fix_oob_equipment.py`). Air wings were silently empty before.
+- **Norway's tag** - `history/units/NRY_2026_nsb.txt` used `NOR`, which no
+  longer exists (21 "Unexpected token: owner" errors).
+- **Ukraine's territorial defence** - MD's `05_ukraine.txt` creates units with
+  `division_template = "Bryhada TRO"` without defining it; our UKR 2026 OOB now
+  provides the template, so the reward works.
+- **MD's hidden `Light_*` sub-units** - MD declares `group = support` without
+  listing `support` in the type, logging nine errors at startup. The generator
+  writes a fixed copy (`common/units/MD_regimental_support.txt`).
+- **Vanilla SIA operation** - MD replaces `common/scripted_effects`, so vanilla's
+  `SIA_plant_indochina_port_charges` was reported as an invalid effect;
+  `common/scripted_effects/md2026_vanilla_compat.txt` defines it (and its
+  detonation counterpart) as no-ops, since Siam has no Indochina tree under MD.
+- **China's air wings** - two wings used state 585 (Western Sichuan), which has
+  no air base; they moved to 586 (Sichuan).
+- **Ideology case** - MD writes `Democratic`, `Nat_populism` and
+  `has_government = Democratic` in several focus rewards; the game is case
+  sensitive, so those effects did nothing. The generator normalises the case in
+  the files we override.
+- **Focus overrides** - four 2026-relevant focuses that the safety filter used to
+  skip are adapted (`patches/focus_overrides.json`): `RAJ_bharatiya_janata_party`
+  (BJP rules in 2026), `SOV_putin` (Putin branch opens; the 2000-era election
+  event and the 2000-era party switch are removed), `GEO_gergiandream2013` and
+  `EGY_al_sisi_rise` (el-Sisi is already the 2026 president, so the reward no
+  longer creates a duplicate leader).
+- **Localisation** - English is complete (the bookmark referenced
+  `NRY_MD2026_DESC` while the file defined `NOR_MD2026_DESC`), a Polish
+  translation is included, and `tools/validate.py` now fails on missing or
+  duplicate keys.
+- **Indonesia and Venezuela** are selectable in the 2026 bookmark.
 
 ## Open issues
 
-### 2026 real-world data pass (September 2026)
+### Focuses that are deliberately not pre-completed
 
-A full audit against real January 2026 data corrected nine leaders (Japan, South Korea,
-Czechia, Belgium, Iceland, Lithuania, Serbia, Bulgaria, Romania), India's and Turkey's
-ideology, North Korea's leader ideology, Moldova's ruling party, the Japanese emperor
-idea, the BRICS membership list (Indonesia was missing), three GDP values and the
-US-Venezuela crisis (new `events/md2026_venezuela.txt`).
+37 path/political focuses are skipped by the pre-completion safety filter,
+because their rewards would rewrite the 2026 government, release countries,
+start civil wars or fire 2000-era events. They are grouped below; the intention
+is to keep the real 2026 starting position, not MD's 2000 branching.
 
-`MD`'s 2000-era wars are now settled at game start (`md2026_legacy_wars_settled` in
-`common/on_actions/md2026_on_actions.txt`): Chechnya, Aceh, Tamil Eelam, the Taliban
-state, the Eritrea/South Sudan wars and the defunct rebel movements (AFR, LUR, MLC,
-RCD, NPM, UNI) are resolved to their real 2026 state. The Somali civil war is left
-running because it is still ongoing in reality.
+- **Party path starters** (would change the 2026 ruling party):
+  `RAJ_indian_national_congress`, `RAJ_communist_party_of_india`,
+  `RAJ_communist_party_of_india_marxist`, `RAJ_bahujan_samaj_party`,
+  `RAJ_samajwadi_party`, `SOV_reign_of_yeltsin`, `SOV_zyuganov`,
+  `SOV_zhirinovsky`, `UKR_cpu_start`, `UKR_party_regions_start`,
+  `UKR_poroshenko_start`, `UKR_spu_start`, `UKR_ukraine_always_right`,
+  `UKR_vitrenko_party`, `UKR_ukraine_elections`, `ARM_echoes_of_1999`,
+  `ARM_triump_revolution_barhat`, `BLR_soviet_system` (an alt-history fascist
+  path with a fictional leader), `EST_estonias_future`, `HOL_gay`, `HOL_paars`,
+  `HOL_royal_wedding`, `HOL_threats_against_politicians`,
+  `HOL_un_mission_ehtiopia`, `SYR_bashar_al_assad`, `TUR_only_getting_started`
+  (an alt-history "Anatolian Syndicate" tag), `USA_focus_secretary_to_president`.
+- **Civil war / war starters**: `POL_betray_the_communists`,
+  `POL_socialdemocracy` (also fires `poland_news.34`, whose options are invalid
+  in 2026 - 148 log lines), `EGY_dontallow_copt_pol`, `PER_descend_on_iraq`,
+  `FRA_haitian_coup`, `USA_focus_congressional_chaos`.
+- **Country releases and alt-history**: `ETH_eritrea_federation`,
+  `ETH_eritrea_start`, `SYR_withdraw_from_lebanon`,
+  `SYR_assassinate_lebanese_prime_minister`.
 
-### Known limitations
+Adding more of them needs a hand-written 2026 reward in
+`patches/focus_overrides.json` (see `docs/Architecture.md`).
 
-- **Ukraine `create_unit` focuses**: MD's own rewards in `05_ukraine.txt` use a division
-  string the 1.19 parser rejects (`create_unit -- division string was not parsed
-  correctly`). The units are not created; the focuses are still pre-completed for their
-  other effects. This is an MD-side bug.
-- **OOB equipment tiers**: the equipment names in `history/units/*` are valid MD 2.0
-  names and 5th-generation air wings (F-35, F-22, Su-57, J-20) were upgraded to
-  year-appropriate airframes with `tools/fix_oob_tiers.py`. Lower tiers were left as they
-  were (the tier digits still follow MD 1.x), so an F-16 wing may field a 1995 airframe.
-- **Bulgaria**: at 2026-01-01 the country was run by Rosen Zhelyazkov's caretaker
-  government (the regular cabinet resigned in December 2025).
-- **Bookmark picture** still uses MD's 2000 selection picture (`GFX_select_date_2000`).
-- **IND (Indonesia) and VEN (Venezuela)** now have 2026 history patches but no 2026
-  order of battle; they use MD's 2000 OOB with 2026 tech levels.
+### MD-side entries that remain in `error.log`
 
-### Army orders of battle require No Step Back
+- `common/scripted_guis/02_conditional_peace_deals_scripted_gui.txt`:
+  `Unexpected token: context_type`. MD's own comment says the value is
+  intentional and that changing it breaks the diplomatic-action entry point.
+- `common/national_focus/05_netherlands.txt`: `complete_special_project:
+  project sp_space_program in already completed. do nothing.` - triggered by
+  the pre-completed `HOL_space_efforts`. MD completes the project during its own
+  startup pass; the message is informational and the other rewards still apply.
+- `Unknown equipment type: ship_hull_*` at startup: MD's own
+  `common/ai_equipment/*` files still reference vanilla ship hulls that MD
+  replaced. Only MD's AI design templates are affected; no 2026 content uses
+  those names.
+- `create_unit with unknown division template` for ~52 of MD's own focus
+  rewards (e.g. `Aidar Battalion`, `Albionis Special Forces Brigade`): MD never
+  defines those templates. Only MD's 2000-era rewards are affected.
 
-`history/units/<TAG>_2026_nsb.txt` exists only in the NSB variant. Without No Step Back the
-2026 bookmark uses MD's 2000 OOB for that country (the tech levels are still 2026). Generating
-non-NSB variants is on the to-do list.
+### OOB equipment tiers
 
-### MD-side issues (not caused by this submod)
+Lower-tier equipment names still use MD 1.x digits in places (an F-16 wing may
+field a 1985 airframe). 5th-generation air wings were upgraded with
+`tools/fix_oob_tiers.py`; a full generation mapping is future work
+(`docs/Order-of-Battle.md`).
 
-`tools/validate.py` reports one warning that lives inside Millennium Dawn's own content:
+### Bookmark picture
 
-- `has_government = ARM` in MD's `05_france.txt` (`ai_will_do` block) - invalid trigger.
+The 2026 bookmark uses `GFX_select_date_2000`, which is not defined by MD or
+vanilla; MD's own `blitzkrieg` bookmark uses the same sprite, so the game falls
+back to the default background. A 2026 date picture is future work.
 
-Millennium Dawn 2.0 additionally contains a few hundred of its own stale references
-(e.g. `Cat_missile`, `early_APC`, `UKR_dmytro_kiva`); where they appear in files this submod
-overrides, the generator repairs them automatically.
+### Economy data
 
-### Cosmetics
-
-- Leaders without a Millennium Dawn portrait use one of MD's generic politician portraits
-  (`gfx/leaders/generic_politicians/`); the generator marks those lines with a `MD2026:` comment.
-  Using a non-existent portrait file would crash the game at bookmark start.
-- Some event pictures fall back to a generic sprite when MD has no exact match.
-- The 2026 bookmark uses MD's `GFX_select_date_2000` date picture.
+`docs/Economy-2026.md` compares the shipped GDP/debt values with indicative 2025
+reference data. Two entries (North Korea, Syria) differ from the reference but
+are kept: both reference values are uncertain.
 
 ## Troubleshooting
 
 ### The mod does not appear in the launcher
 
-Run `pwsh -File tools/install_mod.ps1` - it creates the junction and the `md-2026.mod`
-descriptor. Then restart the launcher.
+Run `pwsh -File tools/install_mod.ps1` - it creates the junction and the
+`md-2026.mod` descriptor. Then restart the launcher.
 
 ### The 2026 bookmark does not appear
 
-Make sure both Millennium Dawn and this submod are enabled in the same playset, with MD loading
-first (the `dependencies` field handles that). Check `logs/error.log` for `md2026` entries.
+Make sure both Millennium Dawn and this submod are enabled in the same playset,
+with MD loading first (the `dependencies` field handles that). Check
+`logs/error.log` for `md2026` entries.
 
 ### Regenerating after a Millennium Dawn update
 
 ```bash
 python tools/rebase.py generate
 python tools/validate.py
+python tools/audit_2026.py --write
 ```
 
-Fix any errors reported by the validator (usually a rename in `patches/mappings/*.csv` or in
-`patches/history_countries/*`).
+Fix any errors reported by the validator (usually a rename in
+`patches/mappings/*.csv` or in `patches/history_countries/*`).

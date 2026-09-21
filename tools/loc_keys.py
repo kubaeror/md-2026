@@ -108,7 +108,7 @@ def defined_keys():
             with open(os.path.join(dirpath, n), encoding="utf-8-sig", errors="replace") as f:
                 for i, line in enumerate(f, 1):
                     m = re.match(r"^\s*([A-Za-z0-9_\.\-]+):\d*\s", line)
-                    if m:
+                    if m and not m.group(1).startswith("l_"):
                         out[lang][m.group(1)] = i
     return out
 
@@ -240,7 +240,7 @@ def duplicate_keys():
             with open(path, encoding="utf-8-sig", errors="replace") as f:
                 for i, line in enumerate(f, 1):
                     m = re.match(r"^\s*([A-Za-z0-9_\.\-]+):\d*\s", line)
-                    if not m:
+                    if not m or m.group(1).startswith("l_"):
                         continue
                     key = m.group(1)
                     if key in seen:
