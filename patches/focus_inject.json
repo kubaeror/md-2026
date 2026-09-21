@@ -52,6 +52,9 @@
   "india_focus": [
     "MD2026_RAJ_indias_century"
   ],
+  "indonesia_focus": [
+    "MD2026_IND_nusantara_rising"
+  ],
   "iran_focus": [
     "MD2026_PER_regime_survival"
   ],
@@ -102,5 +105,8 @@
   ],
   "united_states_focus": [
     "MD2026_USA_trump_second_term"
+  ],
+  "venezuela_focus": [
+    "MD2026_VEN_bolivarian_resistance"
   ]
 }

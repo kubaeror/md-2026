@@ -1,0 +1,85 @@
+###################################
+# MD2026 Indonesia (IND) Focus Tree
+# 2026 Shared Focuses - Nusantara Rising
+###################################
+
+shared_focus = {
+	id = MD2026_IND_nusantara_rising
+	icon = GFX_focus_generic_home_defense
+	x = 66
+	y = 0
+	cost = 3.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	allow_branch = {
+		original_tag = IND
+		date > 2025.12.31
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_IND_nusantara_rising"
+		add_political_power = 75
+		add_stability = 0.03
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_IND_defense_modernization
+	icon = GFX_focus_generic_large_navy
+	x = -2
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_IND_nusantara_rising }
+	relative_position_id = MD2026_IND_nusantara_rising
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_IND_defense_modernization"
+		navy_experience = 20
+		air_experience = 15
+		add_opinion_modifier = { target = FRA modifier = md2026_trade_partner }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_IND_downstream_industry
+	icon = GFX_focus_generic_modernize_industry
+	x = 0
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_IND_nusantara_rising }
+	relative_position_id = MD2026_IND_nusantara_rising
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_IND_downstream_industry"
+		add_political_power = 50
+		add_stability = 0.02
+		set_country_flag = md2026_ind_downstream_industry
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_IND_natuna_standoff
+	icon = GFX_focus_generic_navy_battleship2
+	x = 2
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_IND_nusantara_rising }
+	relative_position_id = MD2026_IND_nusantara_rising
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_IND_natuna_standoff"
+		add_war_support = 0.05
+		navy_experience = 15
+		add_opinion_modifier = { target = CHI modifier = md2026_diplomatic_disapproval }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

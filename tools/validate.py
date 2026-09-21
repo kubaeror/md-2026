@@ -924,6 +924,36 @@ def check_focus_overrides(md, sets):
             WARNINGS["focus override not pre-completed anywhere"].append(fid)
 
 
+def check_bookmark_coverage(md):
+    """Every playable 2026 bookmark country must have a history patch, a 2026
+    focus branch and both OOB variants."""
+    bookmark = os.path.join(REPO, "patches", "bookmark_md2026.txt")
+    text = rebase.strip_comments(rebase.read(bookmark))
+    tags = re.findall(r'(?m)^\s*"([A-Z]{3})"\s*=\s*\{', text)
+    rename = {"NOR": "NRY"}
+    patches = {rename.get(os.path.basename(p)[:3], os.path.basename(p)[:3])
+               for p in files(os.path.join(REPO, "patches", "history_countries"))}
+    units = os.path.join(REPO, "history", "units")
+    oob = {n[:3] + ("_nonnsb" if n.endswith("_nonnsb.txt") else "")
+           for n in os.listdir(units) if re.match(r"[A-Z]{3}_2026_(nsb|nonnsb)\.txt$", n)}
+    branch_tags = set()
+    for p in files(os.path.join(REPO, "common", "national_focus")):
+        if not os.path.basename(p).startswith("md2026_"):
+            continue
+        branch_tags |= set(re.findall(r"(?m)^\s*(?:original_tag|tag)\s*=\s*([A-Z]{3})\b",
+                                      rebase.strip_comments(rebase.read(p))))
+    for tag in tags:
+        md_tag = rename.get(tag, tag)
+        if md_tag not in patches:
+            ERRORS["bookmark country without history patch"].append(tag)
+        if md_tag not in oob:
+            ERRORS["bookmark country without NSB OOB"].append(tag)
+        if md_tag + "_nonnsb" not in oob:
+            ERRORS["bookmark country without non-NSB OOB"].append(tag)
+        if tag not in branch_tags:
+            ERRORS["bookmark country without focus branch"].append(tag)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--md", default=os.environ.get("MD_PATH", rebase.DEFAULT_MD))
@@ -1004,6 +1034,7 @@ def main():
     check_create_unit_templates(md)
     check_localisation(md)
     check_focus_overrides(md, sets)
+    check_bookmark_coverage(md)
     check_installation()
 
     print()

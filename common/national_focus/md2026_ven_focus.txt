@@ -1,0 +1,84 @@
+###################################
+# MD2026 Venezuela (VEN) Focus Tree
+# 2026 Shared Focuses - Bolivarian Resistance
+###################################
+
+shared_focus = {
+	id = MD2026_VEN_bolivarian_resistance
+	icon = GFX_focus_generic_military_dictatorship
+	x = 66
+	y = 0
+	cost = 3.6
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	allow_branch = {
+		original_tag = VEN
+		date > 2025.12.31
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_VEN_bolivarian_resistance"
+		add_political_power = 50
+		add_war_support = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_VEN_bolivarian_militia
+	icon = GFX_focus_generic_home_defense
+	x = -2
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_VEN_bolivarian_resistance }
+	relative_position_id = MD2026_VEN_bolivarian_resistance
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_VEN_bolivarian_militia"
+		add_war_support = 0.05
+		army_experience = 25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_VEN_oil_recovery
+	icon = GFX_focus_generic_energy
+	x = 0
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	prerequisite = { focus = MD2026_VEN_bolivarian_resistance }
+	relative_position_id = MD2026_VEN_bolivarian_resistance
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_VEN_oil_recovery"
+		add_political_power = 50
+		add_stability = 0.02
+		set_country_flag = md2026_ven_oil_recovery
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+shared_focus = {
+	id = MD2026_VEN_russian_support
+	icon = GFX_focus_generic_arms_trade
+	x = 2
+	y = 1
+	cost = 8.6
+	search_filters = { FOCUS_FILTER_MILITARY }
+	prerequisite = { focus = MD2026_VEN_bolivarian_resistance }
+	relative_position_id = MD2026_VEN_bolivarian_resistance
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MD2026_VEN_russian_support"
+		army_experience = 15
+		add_opinion_modifier = { target = SOV modifier = md2026_improved_relations }
+		SOV = { add_opinion_modifier = { target = VEN modifier = md2026_improved_relations } }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

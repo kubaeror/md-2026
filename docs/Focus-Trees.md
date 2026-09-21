@@ -749,6 +749,8 @@ gated by `allow_branch = { original_tag = ... }`.
 | Burma (BRM) | `MD2026_BRM_juntas_war` | `md2026_brm_focus.txt` | great power support, hold the heartland, dry season offensive |
 | Hungary (HUN) | `MD2026_HUN_sovereignty` | `md2026_hun_focus.txt` | eastern opening, Paks expansion, Visegrad cooperation |
 | Sudan (SUD) | `MD2026_SUD_generals_war` | `md2026_sud_focus.txt` | arms imports, Nile politics, humanitarian crisis |
+| Indonesia (IND) | `MD2026_IND_nusantara_rising` | `md2026_ind_focus.txt` | defence modernization, downstream industry, Natuna standoff |
+| Venezuela (VEN) | `MD2026_VEN_bolivarian_resistance` | `md2026_ven_focus.txt` | Bolivarian militia, oil recovery, Russian support |
 
 ---
 
