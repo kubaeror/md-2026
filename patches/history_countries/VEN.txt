@@ -44,12 +44,12 @@
 
 	start_politics_input = yes
 
-	set_variable = { party_pop_array^5 = 0.350 }    #anarchist_communism (PSUV)
-	set_variable = { party_pop_array^1 = 0.150 }    #conservatism (opposition)
-	set_variable = { party_pop_array^3 = 0.120 }    #socialism (opposition left)
-	set_variable = { party_pop_array^20 = 0.150 }   #Nat_Populism
-	set_variable = { party_pop_array^14 = 0.080 }   #Neutral_conservatism
-	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
+	set_variable = { party_pop_array^5 = 0.388 }    #anarchist_communism (PSUV)
+	set_variable = { party_pop_array^1 = 0.167 }    #conservatism (opposition)
+	set_variable = { party_pop_array^3 = 0.133 }    #socialism (opposition left)
+	set_variable = { party_pop_array^20 = 0.167 }   #Nat_Populism
+	set_variable = { party_pop_array^14 = 0.089 }   #Neutral_conservatism
+	set_variable = { party_pop_array^15 = 0.056 }   #oligarchism
 
 	set_variable = { ruling_party = 5 }
 

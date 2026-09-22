@@ -16,7 +16,7 @@
 	}
 
 	### GDP & Economic Variables ###
-	set_variable = { gdp_per_capita = 13.000 }
+	set_variable = { gdp_per_capita = 18.600 }
 	set_variable = { var = debt value = 480.000 }
 	set_variable = { var = treasury value = 40 }
 	set_variable = { var = corporate_tax_rate value = 25 }
@@ -44,15 +44,15 @@
 
 	start_politics_input = yes
 
-	set_variable = { party_pop_array^7 = 0.050 }   #Autocracy (AKP/Erdogan)
-	set_variable = { party_pop_array^1 = 0.100 }   #conservatism (CHP reform wing)
-	set_variable = { party_pop_array^3 = 0.100 }   #socialism (CHP left wing)
-	set_variable = { party_pop_array^20 = 0.350 }  #Nat_Populism (MHP)
-	set_variable = { party_pop_array^22 = 0.150 }  #Nat_Autocracy (Ulku Ocaklari)
-	set_variable = { party_pop_array^2 = 0.050 }   #liberalism (DEVA/IYI)
-	set_variable = { party_pop_array^14 = 0.050 }  #Neutral_conservatism (Saadet)
-	set_variable = { party_pop_array^4 = 0.050 }   #Communist-State (HDP/DEM)
-	set_variable = { party_pop_array^16 = 0.050 }  #libertarians
+	set_variable = { party_pop_array^7 = 0.053 }   #Autocracy (AKP/Erdogan)
+	set_variable = { party_pop_array^1 = 0.105 }   #conservatism (CHP reform wing)
+	set_variable = { party_pop_array^3 = 0.105 }   #socialism (CHP left wing)
+	set_variable = { party_pop_array^20 = 0.367 }  #Nat_Populism (MHP)
+	set_variable = { party_pop_array^22 = 0.158 }  #Nat_Autocracy (Ulku Ocaklari)
+	set_variable = { party_pop_array^2 = 0.053 }   #liberalism (DEVA/IYI)
+	set_variable = { party_pop_array^14 = 0.053 }  #Neutral_conservatism (Saadet)
+	set_variable = { party_pop_array^4 = 0.053 }   #Communist-State (HDP/DEM)
+	set_variable = { party_pop_array^16 = 0.053 }  #libertarians
 
 	set_variable = { ruling_party = 20 }             #Autocracy (AKP)
 	add_to_array = { gov_coalition_array = 20 }      #Nat_Populism (MHP)

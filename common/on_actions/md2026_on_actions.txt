@@ -14,6 +14,11 @@ on_actions = {
 				}
 				set_global_flag = md2026_initialized
 
+				# CSTO 2026: Armenia suspended its membership in 2024. MD's
+				# setup_global_arrays re-adds every CSTO tag (no clear_array), so
+				# the removal has to happen after it, here.
+				remove_from_array = { global.CSTO_member = ARM }
+
 				# Fire intro news event
 				every_country = {
 					limit = { is_ai = no }

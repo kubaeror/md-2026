@@ -1,0 +1,98 @@
+tag,severity,finding,oob_value,real_2026_value,source
+USA,BLOCKER,USS Anzio (CG-68) listed active,in service,decommissioned 22 Sep 2022,navy.mil / Wikipedia
+USA,BLOCKER,USS Vella Gulf (CG-72) listed active,in service,decommissioned 4 Aug 2022,navy.mil
+USA,BLOCKER,USS Lyndon B. Johnson (DDG-1002) listed active,in service,not commissioned (planned 2027),Wikipedia / navalnews.com
+USA,BLOCKER,2nd Infantry Division (Korea) location,"Sindh, Pakistan (state 426)","Camp Humphreys, Gyeonggi, South Korea (604)",2id.korea.army.mil
+SOV,BLOCKER,5 Far East formations location,"Yunnan, China (state 578)",Russian Far East: Primorye/Khabarovsk/Amur/Sakhalin,ww2.dk / Wikipedia
+SOV,BLOCKER,Admiral Kharlamov (Udaloy) listed active,in service,decommissioned 1 Dec 2020,Wikipedia (Udaloy class)
+SOV,BUG,Borei hull numbers/variants,K-552/K-553 labels,"K-553 = Generalissimus Suvorov, K-554 = Imperator Aleksandr III",Wikipedia (Borei class)
+SOV,BUG,Duplicated divisions,"2nd Gds MRD + Tamanskaya, 4th Gds Tank + Kantemirovskaya, 3rd MRD x2, 144th MRD x2",4 duplicates inflate the 45-division total,Wikipedia
+CHI,BLOCKER,76th Group Army brigades location,Hong Kong (FOREIGN),76th GA HQ Xining; HK is a separate garrison,"Wikipedia (PLAGF, HK Garrison)"
+CHI,BUG,Airborne brigade numbers,43rd/44th/45th/46th,127th/128th/130th/131st/133rd/134th,Wikipedia (PLAAF Airborne Corps)
+CHI,BUG,Ship name/hull mismatches,"Wuhu 539 (054B), Changzhou 156, Zibo 157, Nantong 133, Tangshan 164",Wuhu is 054A; 156=Zibo; 157=Lishui; 133=Baotou; 164=Guilin,navalnews.com / Wikipedia
+ENG,BUG,HMS Lancaster (F229) listed active,in service,decommissioned 5 Dec 2025,royalnavy.mod.uk
+ENG,BUG,HMS Northumberland (F238) listed active,in service,decommissioned (2024/25),forcesnews.com
+ENG,BUG,HMS Albion + HMS Bulwark listed active,Amphibious Ready Group,both retired March 2025,forcesnews.com / naval-technology.com
+ENG,BUG,7th Light Mech Brigade (Germany),brigade in Niedersachsen,BAOR-era artifact; 7th Bde is at Cottesmore,Wikipedia (British Army)
+RAJ,BUG,~10 invented army formations,corps/division reserve units,do not exist,Bharat Rakshak / globalsecurity.org
+RAJ,BUG,INS Chakra III (S72),in service,never delivered; India has no SSN,Wikipedia (Indian submarines)
+RAJ,BUG,INS Triput (F51),in service,not yet commissioned,navalnews.com
+SAU,BUG,Fleet homeports swapped,"Western Fleet at Jubail, Eastern at Jeddah","Western = Jeddah, Eastern = Jubail",Wikipedia (Royal Saudi Navy)
+SAU,BUG,Badr-class ship 'Al Yamamah',corvette,"Badr class: Badr, Al Yarmook, Hitteen, Tabuk",Wikipedia
+SAU,BUG,MQ-9A Reaper wing (12),in service,Saudi Arabia operates no MQ-9,breakingdefense.com
+PAK,BUG,Type 054A/P names,"PNS Badr F-263, PNS Hunain F-264","Tippu Sultan F-263, Shah Jahan F-264",Wikipedia (Tughril class)
+PAK,BUG,PNS Hangor (S-141) listed active,in service,commissioned 30 Apr 2026,Wikipedia / defensenews.com
+PAK,BUG,2nd Armoured Division,exists,Pakistan has 1st and 6th armoured divisions,globalsecurity.org
+UKR,BLOCKER,6 brigades in Crimea,Sevastopol/Simferopol/Kerch (SOV),front line in Donetsk/Zaporizhzhia; zero units there,mod state data + militaryland.net
+FIN,BLOCKER,FNS Pohjanmaa + Häme,in service,class commissioned 2027,Wikipedia / janes.com
+BRM,BUG,Air force inventory,"MiG-29B only, 36 aircraft","Su-30SME/JF-17/F-7M/A-5C/FTC-2000G/K-8, ~130",Irrawaddy / RFA
+KAZ,BLOCKER,MiG-29 wing,28 in service,retired 2023 (scrapped),aerospaceglobalnews.com
+KAZ,BLOCKER,MiG-31BS wing,14 in service,retired 2023 (auctioned),Wikipedia / kyivpost.com
+HOL,BUG,'13e Luchtmobiele Brigade' + '1e Gemechaniseerde Brigade',2 brigades,11 LMB; 1e Gemechaniseerde does not exist,globalsecurity.org
+HOL,BUG,HNLMS Walrus (S802),in service,retired 12 Oct 2023,marineschepen.nl
+BUL,BUG,BGS Gordi/Reshitelni/Bodri identity,"F42/F43 Wielingen, Poti corvette",F42=Verni; Reshitelni=Pauk 13; Bodri=Pauk 14 at Varna,Wikipedia (Bulgarian Navy)
+CRO,BUG,Omiš-class hulls OB-51/52/53,3 corvettes,only OOB-31 Omiš and OOB-32 Umag exist,Wikipedia (Croatian Navy)
+MLV,BLOCKER,MiG-29 squadron (6),in service,Moldova has no combat aircraft (sold 1997),Wikipedia (Moldovan Air Force)
+PER,BUG,1st Sarallah IRGC Division,Razavi Khorasan,Sarallah is the Tehran HQ; the 41st is in Kerman,Wikipedia (IRGC Ground Forces)
+PER,BUG,IRGC Navy location,Lorestan (landlocked),Bandar Abbas / Gulf islands / Caspian,Wikipedia (IRGC Navy)
+PER,BUG,IRIS Damavand (77),Caspian flagship,out of service since Jan 2018; Deylaman (78) is flagship,Wikipedia
+TAI,BUG,Kinmen + Penghu Defense Commands,Tainan / Hualien,Kinmen / Penghu islands,Wikipedia (ROC Army)
+TAI,BUG,ROCS An Chiang / Wan Chiang hulls,PGG-620 / PGG-621,PGG-625 / PGG-626,Wikipedia (Tuo Chiang class)
+TAI,BUG,ROCS Hai Kun (SS-711),in service,still in sea trials on 1 Jan 2026,Wikipedia / USNI News
+VEN,BUG,F-21 Mariscal Sucre,in service,partially sunk hulk at Puerto Cabello,Wikipedia (Lupo class)
+VEN,BUG,PC-22 Warao,in service,out of service since 2012 (interned in Brazil),Wikipedia (Bolivarian Navy)
+VEN,BUG,F-5A/B flight (6),in service,type retired 2010,Wikipedia (Bolivarian Aviation)
+BRA,BUG,Tamandaré (F200),in service,commissioned 24 Apr 2026,tkmsgroup.com
+BRA,BUG,Niterói (F40) + Tamoio (S31),in service,decommissioned 2019 / Sep 2023,defesaaereanaval.com.br
+BRA,BUG,1ª + 2ª Brigada de Cavalaria Blindada,exist,do not exist,pt.wikipedia / globalsecurity.org
+BRA,BUG,A-1M AMX fleet,40 at two bases,"fewer than 6 airworthy, one squadron at Santa Maria",tecnodefesa.com.br
+AST,BUG,HMAS Anzac (FFH-150),in service,decommissioned 18 May 2024,defence.gov.au
+AST,BUG,HMAS Pilbara (OPV-302),in service,"launched Oct 2025, not commissioned; pennant OPV 205",aidn.org.au / psnews.com.au
+TUR,BUG,TCG İzmir (F-516) + TCG Murat Reis (S-332),in service,on trials / not commissioned on 1 Jan 2026,navalnews.com / Wikipedia
+KOR,BUG,ROKS Jeongjo the Great hull,DDG-993,DDG-995 (993 = Seoae Ryu Seong-ryong),Wikipedia (Sejong the Great class)
+KOR,BUG,ROKS Gangwon/Chungnam hulls,FFG-820 / FFG-821,FFG-815 / FFG-828 (821 = Seoul),Wikipedia
+KOR,BUG,26th Mechanized Infantry Division,exists,disbanded 30 Nov 2018,Wikipedia
+POL,BUG,ORP Ślązak pennant,341,241,Wikipedia (ORP Ślązak)
+ISR,BUG,INS Drakon,in service,still in Germany on 1 Jan 2026 (delivery Aug 2026),Wikipedia (INS Drakon)
+ITA,BUG,FREMM/PPA/Sauro counts,8 / 3 / 4,10 / 4 / 8,navalnews.com / fincantieri.com
+EGY,BUG,23rd Armoured Division,exists,armoured divisions are 4th/6th/9th/21st,Wikipedia (Egyptian Army)
+NKO,ACCURACY,KPA troops in Russia,not modelled,"~11,000 in Kursk at start of 2026",kyivindependent.com
+FRA,BUG,1re Brigade Blindée + Légion brigade,exist,do not exist,Wikipedia (French Army)
+FRA,BUG,SSN Émeraude (S604),in service,decommissioned 12 Dec 2024,Wikipedia (Rubis class)
+GER,BUG,P-3C Orion wing,5 in service,type retired (P-8A replaced it),bundeswehr.de / flightglobal.com
+GER,BLOCKER,Panzerbrigade 42 (Lithuania) location,Kaliningrad (state 642),"Rūdninkai/Rukla, Lithuania; real name Panzerbrigade 45",bundeswehr.de / kam.lt
+JAP,ACCURACY,Submarines / P-1 fleet,12 SSK / 70 P-1,~22 SSK / ~35-38 P-1,Wikipedia / janes.com
+DEN,ACCURACY,F-35A count,27,21 delivered by late 2025,fmn.dk / defensenews.com
+BEL,BUG,F-35A basing,Kleine Brogel,Florennes (first arrivals Oct 2025),theaviationist.com
+ALB,BUG,P131/P132 class,Diciotti,Iliria class (Damen Stan 4207),Wikipedia (Albanian Naval Force)
+LIT,BUG,'Aitvaras Brigada' + naval pennants,"brigade / P12,M51,M52","Aitvaras is the SOF squadron; P12=Dzūkas, Kuršis=M54, Sūduvis=M55",Wikipedia (Lithuanian Land Forces/Navy)
+EST,BUG,EML Ugandi (M313) + Wambola (M315),Sandown class,"M313=Admiral Cowan, Ugandi=M315; Wambola is a Lindormen minelayer",Wikipedia (Estonian Navy)
+IND,ACCURACY,F-16 variant + ground basing,F-16A/B ADF; 5 brigades misplaced,Block 15 OCU/eMLU; brigades under different commands,Wikipedia (Indonesian Air Force)
+CAN,ACCURACY,Brigade basing + Latvia mission,"4 formations misplaced, no foreign unit","2 CMBG Petawawa, 5 CMBG Valcartier, 34/38 CBG Montreal/Winnipeg; NATO Bde Latvia",Wikipedia / NATO eFP
+SPR,BUG,P-3M Orion wing,in service,type retired,key.aero
+SWE,ACCURACY,Submarines + army basing,2 SSK; 4 units misplaced,5 SSK; Boden/Skövde/Gotland/marines swapped,nti.org / Wikipedia
+GRE,ACCURACY,Frigates + F-4E,"4 frigates, no F-4E",13-14 (incl. Elli class + FDI Kimon); ~30 F-4E,Wikipedia / navalnews.com
+ROM,BUG,MQ-9A squadron,4 in service,Romania owns no MQ-9,af.mil / airforce-technology.com
+HUN,ACCURACY,C-17A owned + KC-390 missing,1 C-17,no national C-17 (pooled SAC); 2 KC-390 in service,Wikipedia (SAC) / embraer.com
+CZE,ACCURACY,Brigade regions + C-295,"7th Mech Bohemia, 4th RDB Moravia; 4 C-295",swapped; 6 C-295,Wikipedia / mo.gov.cz
+NRY,BUG,KNM Odda (P966),6th Skjold corvette,does not exist; P960 Skjold omitted,Wikipedia (Skjold class)
+SAF,BUG,ANC ideology coding,communism / anarcho-communism,ANC is centrist/social-democratic,Wikipedia (ANC)
+KYR,ACCURACY,Turkish UCAV fleet,not modelled,TB2/Akinci/Aksungur/Anka (2021-2023),overtdefense.com / dailysabah.com
+TAJ,ACCURACY,Helicopters/transports,not modelled,"14 Mi-8, 6 Mi-24, An-26",Wikipedia (Tajik Air Force)
+UZB,BUG,C-130H wing (4),in service,Uzbekistan operates no C-130,Wikipedia (Uzbekistan Air Force)
+UAE,BUG,Baynunah P176 name,Shahama,Al Hili,Wikipedia (Baynunah class)
+SYR,BLOCKER,3 divisions in Lebanon,Bekaa/North Lebanon (LEB),no Syrian forces in Lebanon since 2005,mod state data
+SYR,BLOCKER,"Navy (Tishreen, Al Assad)",2 ships at Latakia,fleet destroyed by Israel Dec 2024; Petyas retired ~2018,navalnews.com / Wikipedia
+SYR,BLOCKER,Air force (6 MiG-29A + 10 L-39ZA),operational at Damascus,destroyed in Dec 2024 strikes; only a few refurbished L-39/Su-22 fly,Wikipedia / militarnyi.com
+SYR,ACCURACY,Ba'athist focuses pre-completed for post-Assad government,SYR_iranian_sponsorship grants iranian_aid; +9 more,should be unsafe/adapted for 2026,mod: md2026_precompleted_focuses.txt
+YEM,BUG,Houthi divisions under PLC leader,"Ansar Allah divisions, al-Alimi leader",faction mash-up; tag represents the PLC,CRS R48942
+YEM,BUG,4 divisions in STC-held territory,"Aden, Hadramaut, Al Mahrah, Socotra",STC-held on 1 Jan 2026,Wikipedia (2025-26 southern Yemen campaign)
+ETH,BUG,4 'Ye Fano Hayl' divisions in the ENDF OOB,government army,Fano is the Amhara insurgency at war with the ENDF,Wikipedia (Fano insurgency)
+ETH,ACCURACY,No ENDF unit in Amhara + no TDF units,0 in Amhara,Amhara is the active front; TDF holds Tigray,conflictzone.io / acleddata.com
+AFG,ACCURACY,9 of 11 divisions stacked in the north-east,Badakhshan/Nuristan/Kunar,real corps at Kabul/Kandahar/Herat/Mazar/Helmand/Kunduz,Wikipedia (Afghan Armed Forces)
+AFG,ACCURACY,No air element,0 aircraft,"~34 airframes in service (A-29, MD530F, Mi-17/25, UH-60, C-208)",Wikipedia (Afghan Air Force)
+SUD,BLOCKER,5 divisions in RSF-held Darfur,Darfur provinces,El Fasher fell 27 Oct 2025; RSF controls most of Darfur,armedconflicts.org / fews.net
+BLR,ACCURACY,6 of 7 garrisons wrong + airborne brigades swapped,"38th in Vitebsk, 103rd in Brest, etc.","38th Brest, 103rd Vitebsk; 120th Minsk, 19th Zaslonovo",Wikipedia (Belarus armed forces)
+BLR,ACCURACY,Russian military/nuclear presence not modelled,none,Russian troops + Iskander/Oreshnik in Belarus (2026),militarnyi.com / Wikipedia
+GEO,ACCURACY,2 divisions in Batumi,1st Bde + SOF at Batumi,only light battalions there; brigades are Tbilisi/Senaki/Kutaisi/Gori,Wikipedia (Georgian Land Forces)
+ARM,ACCURACY,Nothing in Syunik + Russian 102nd base missing,"3 units Gegharkunik-Tavush, 3 Yerevan-Gyumri",Syunik is the sensitive sector; Russian base at Gyumri (18 MiG-29),Wikipedia / armenpress.am

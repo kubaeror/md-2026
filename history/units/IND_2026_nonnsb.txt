@@ -238,7 +238,7 @@ units = {
 ##### TNI Angkatan Laut (Navy) #####
 fleet = {
 	name = "TNI Angkatan Laut"
-	naval_base = 4306		# Surabaya (Koarmada II)
+	naval_base = 4608		# Surabaya (Koarmada II)
 
 	task_force = {
 		name = "Koarmada II - Frigates"

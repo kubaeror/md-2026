@@ -526,16 +526,16 @@ capital = 51
 
 	start_politics_input = yes
 
-	set_variable = { party_pop_array^20 = 0.160 }   #Nat_Populism (Vlaams Belang)
-	set_variable = { party_pop_array^1 = 0.200 }   #conservatism (N-VA)
-	set_variable = { party_pop_array^3 = 0.120 }   #socialism (PS/sp.a)
-	set_variable = { party_pop_array^2 = 0.140 }   #liberalism (Open VLD/MR)
-	set_variable = { party_pop_array^17 = 0.070 }   #Neutral_green (Ecolo/Groen)
-	set_variable = { party_pop_array^4 = 0.050 }   #Communist-State (PTB)
-	set_variable = { party_pop_array^14 = 0.080 }   #Neutral_conservatism (cdH/CD&V)
-	set_variable = { party_pop_array^15 = 0.060 }   #oligarchism
-	set_variable = { party_pop_array^18 = 0.060 }   #neutral_Social
-	set_variable = { party_pop_array^21 = 0.030 }   #Nat_Fascism
+	set_variable = { party_pop_array^20 = 0.165 }   #Nat_Populism (Vlaams Belang)
+	set_variable = { party_pop_array^1 = 0.206 }   #conservatism (N-VA)
+	set_variable = { party_pop_array^3 = 0.124 }   #socialism (PS/sp.a)
+	set_variable = { party_pop_array^2 = 0.144 }   #liberalism (Open VLD/MR)
+	set_variable = { party_pop_array^17 = 0.072 }   #Neutral_green (Ecolo/Groen)
+	set_variable = { party_pop_array^4 = 0.052 }   #Communist-State (PTB)
+	set_variable = { party_pop_array^14 = 0.082 }   #Neutral_conservatism (cdH/CD&V)
+	set_variable = { party_pop_array^15 = 0.062 }   #oligarchism
+	set_variable = { party_pop_array^18 = 0.062 }   #neutral_Social
+	set_variable = { party_pop_array^21 = 0.031 }   #Nat_Fascism
 
 	set_variable = { ruling_party = 1 }             #ruling
 	add_to_array = { gov_coalition_array = 1 }       #conservatism (N-VA)

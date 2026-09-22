@@ -23,7 +23,10 @@ import sys
 from collections import Counter
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DEFAULT_MD = r"D:\SteamLibrary\steamapps\workshop\content\394360\2777392649"
+sys.path.insert(0, os.path.join(REPO, "tools"))
+import rebase  # noqa: E402
+
+DEFAULT_MD = rebase.DEFAULT_MD
 
 MD = None
 
@@ -195,7 +198,7 @@ def all_loc_keys(md):
         return _loc_key_cache
     keys = set()
     for root in (os.path.join(md, "localisation"),
-                 r"D:\SteamLibrary\steamapps\common\Hearts of Iron IV\localisation"):
+                 os.path.join(rebase.VANILLA, "localisation")):
         for p in files(root, ".yml"):
             for m in re.finditer(r"(?m)^\s*([A-Za-z0-9_\.]+)\s*:", read(p)):
                 keys.add(m.group(1))

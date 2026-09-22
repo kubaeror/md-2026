@@ -22,8 +22,85 @@ import sys
 from collections import Counter
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DEFAULT_MD = r"D:\SteamLibrary\steamapps\workshop\content\394360\2777392649"
-VANILLA = r"D:\SteamLibrary\steamapps\common\Hearts of Iron IV"
+
+MD_REL = os.path.join("steamapps", "workshop", "content", "394360", "2777392649")
+VANILLA_REL = os.path.join("steamapps", "common", "Hearts of Iron IV")
+
+
+def _steam_libraries():
+    """Steam library roots: STEAM_PATH/registry/libraryfolders.vdf + common paths.
+
+    Returns absolute, de-duplicated, existing directories, Steam's own first.
+    """
+    roots, seen = [], set()
+
+    def add(path):
+        if not path:
+            return
+        path = os.path.abspath(os.path.expanduser(path))
+        if path.lower() in seen or not os.path.isdir(path):
+            return
+        seen.add(path.lower())
+        roots.append(path)
+
+    if os.environ.get("STEAM_PATH"):
+        add(os.environ["STEAM_PATH"])
+    try:
+        import winreg
+    except ImportError:
+        winreg = None
+    if winreg is not None:
+        for hive, key in ((winreg.HKEY_CURRENT_USER, r"Software\Valve\Steam"),
+                          (winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\WOW6432Node\Valve\Steam"),
+                          (winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\Valve\Steam")):
+            try:
+                with winreg.OpenKey(hive, key) as k:
+                    for value in ("SteamPath", "InstallPath"):
+                        try:
+                            add(winreg.QueryValueEx(k, value)[0])
+                        except OSError:
+                            pass
+            except OSError:
+                pass
+    # Extra library folders declared by each found install.
+    for root in list(roots):
+        vdf = os.path.join(root, "steamapps", "libraryfolders.vdf")
+        if not os.path.isfile(vdf):
+            continue
+        try:
+            with open(vdf, encoding="utf-8", errors="replace") as f:
+                text = f.read()
+        except OSError:
+            continue
+        for m in re.finditer(r'"path"\s*"([^"]+)"', text):
+            add(m.group(1).replace("\\\\", "\\"))
+    for root in (r"C:\Program Files (x86)\Steam", r"C:\Program Files\Steam", r"C:\Steam"):
+        add(root)
+    for drive in "CDEFGHIJKLMNOPQRSTUVWXYZ":
+        for rel in ("SteamLibrary", "Steam", os.path.join("Games", "SteamLibrary"),
+                    os.path.join("Games", "Steam")):
+            add(f"{drive}:\\{rel}")
+    return roots
+
+
+def resolve_install(rel, marker, override=None, env=None):
+    """Locate an install by looking at an override, an env var and Steam libraries."""
+    candidates = []
+    if override:
+        candidates.append(override)
+    if env and os.environ.get(env):
+        candidates.append(os.environ[env])
+    for root in _steam_libraries():
+        candidates.append(os.path.join(root, rel))
+    for c in candidates:
+        if c and os.path.exists(os.path.join(c, marker)):
+            return os.path.abspath(c)
+    return os.path.abspath(candidates[-1]) if candidates else ""
+
+
+# Resolved once at import; callers can still pass --md or set MD_PATH/HOI4_PATH.
+DEFAULT_MD = resolve_install(MD_REL, "descriptor.mod", env="MD_PATH")
+VANILLA = resolve_install(VANILLA_REL, "launcher-settings.json", env="HOI4_PATH")
 
 MD = None
 
@@ -783,7 +860,7 @@ def md_reference_sets(md):
 
 def _portrait_replacement(ref, md, tag):
     """Return a resolvable portrait path for ref, or '' when nothing matches."""
-    van = r"D:\SteamLibrary\steamapps\common\Hearts of Iron IV"
+    van = VANILLA
     root = os.path.join(md, "gfx", "leaders", tag) if tag else ""
     files_ = os.listdir(root) if root and os.path.isdir(root) else []
 

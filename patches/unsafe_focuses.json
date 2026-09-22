@@ -1,3 +1,13 @@
 {
-  "POL_socialdemocracy": "fires news event poland_news.34 whose options are all invalid at 2026 (148 log errors)"
+  "POL_socialdemocracy": "fires news event poland_news.34 whose options are all invalid at 2026 (148 log errors)",
+  "SYR_iranian_sponsorship": "Ba'athist focus: grants iranian_aid to the post-Assad 2026 government",
+  "SYR_support_hezbollah": "Ba'athist focus: post-Assad Syria cut the Hezbollah supply line in 2024-25",
+  "SYR_expand_tartus_base": "Ba'athist focus: the Russian Tartus arrangement was terminated after Dec 2024",
+  "SYR_reaffirm_claims_on_hatay": "Ba'athist focus: post-Assad government dropped the Hatay claim",
+  "SYR_affirm_presence_in_lebanon": "Ba'athist focus: no Syrian forces in Lebanon since 2005",
+  "SYR_concentrate_on_lebanon": "Ba'athist focus: no Syrian forces in Lebanon since 2005",
+  "SYR_invest_in_lebanon": "Ba'athist focus: no Syrian forces in Lebanon since 2005",
+  "SYR_relocate_lebanese_industry": "Ba'athist focus: no Syrian forces in Lebanon since 2005",
+  "SYR_harbor_extremists": "Ba'athist focus: post-Assad government is fighting, not harbouring, extremists",
+  "SYR_reduced_political_liberty": "Ba'athist focus: the 2026 transitional government is not the Assad autocracy"
 }

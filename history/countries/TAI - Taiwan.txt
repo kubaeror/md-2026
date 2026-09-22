@@ -886,7 +886,7 @@ capital = 598
 
 	### GDP & Economic Variables ###
 	set_variable = { gdp_per_capita = 36.000 }
-	set_variable = { var = debt value = 30.000 }
+	set_variable = { var = debt value = 210.000 }
 	set_variable = { var = treasury value = 50 }
 	set_variable = { var = corporate_tax_rate value = 20 }
 	set_variable = { var = population_tax_rate value = 20 }

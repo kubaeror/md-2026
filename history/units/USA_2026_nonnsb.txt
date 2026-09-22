@@ -263,7 +263,7 @@ units = {
 	# Korea
 	division = {
 		name = "2nd Infantry Division (Korea)"
-		location = 1147
+		location = 7221
 		division_template = "Armored Brigade Combat Team"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.95

@@ -35,16 +35,16 @@
 
 	start_politics_input = yes
 
-	set_variable = { party_pop_array^1 = 0.245 }   #conservatism (Independence Party)
-	set_variable = { party_pop_array^3 = 0.155 }   #socialism (Social Democrats)
-	set_variable = { party_pop_array^17 = 0.075 }   #Neutral_green (Left-Green)
-	set_variable = { party_pop_array^2 = 0.100 }   #liberalism (Reform Party)
-	set_variable = { party_pop_array^14 = 0.110 }   #Neutral_conservatism (Progressive Party)
-	set_variable = { party_pop_array^18 = 0.060 }   #neutral_Social (Pirates)
-	set_variable = { party_pop_array^4 = 0.040 }   #Communist-State
-	set_variable = { party_pop_array^15 = 0.055 }   #oligarchism
-	set_variable = { party_pop_array^16 = 0.050 }   #Neutral_Libertarian (Centre Party)
-	set_variable = { party_pop_array^20 = 0.060 }   #Nat_Populism
+	set_variable = { party_pop_array^1 = 0.258 }   #conservatism (Independence Party)
+	set_variable = { party_pop_array^3 = 0.163 }   #socialism (Social Democrats)
+	set_variable = { party_pop_array^17 = 0.079 }   #Neutral_green (Left-Green)
+	set_variable = { party_pop_array^2 = 0.105 }   #liberalism (Reform Party)
+	set_variable = { party_pop_array^14 = 0.116 }   #Neutral_conservatism (Progressive Party)
+	set_variable = { party_pop_array^18 = 0.063 }   #neutral_Social (Pirates)
+	set_variable = { party_pop_array^4 = 0.042 }   #Communist-State
+	set_variable = { party_pop_array^15 = 0.058 }   #oligarchism
+	set_variable = { party_pop_array^16 = 0.053 }   #Neutral_Libertarian (Centre Party)
+	set_variable = { party_pop_array^20 = 0.063 }   #Nat_Populism
 
 	set_variable = { ruling_party = 3 }             #conservatism (Independence Party)
 	add_to_array = { gov_coalition_array = 3 }       #socialism (Social Democrats)

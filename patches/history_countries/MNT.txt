@@ -18,7 +18,7 @@
 	}
 
 	### GDP & Economic Variables ###
-	set_variable = { gdp_per_capita = 12.000 }
+	set_variable = { gdp_per_capita = 7.500 }
 	set_variable = { var = debt value = 6.000 }
 	set_variable = { var = treasury value = 3 }
 	set_variable = { var = corporate_tax_rate value = 15 }

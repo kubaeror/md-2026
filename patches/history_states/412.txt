@@ -1,0 +1,8 @@
+		# MD2026: Afghanistan is the Islamic Emirate under the Taliban; AFG (the
+		# tag our 2026 setup runs on) takes over TAL's states at the bookmark
+		# date. The TAL -> AFG annexation in md2026_on_actions.txt stays as a
+		# fallback for anything the transfer misses.
+		2026.1.1 = {
+			owner = AFG
+			add_core_of = AFG
+		}

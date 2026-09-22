@@ -869,15 +869,18 @@ capital = 275
 	set_variable = { overall_productivity = 400 }
 
 	### Politics & Parties ###
+	# 2026: ANC is a centre-left/social-democratic party; MD's own 2000 file
+	# coded it as anarchist_communism, which put South Africa in the communist
+	# family. Recoded to socialism (democratic family) as an audit fix.
 	set_popularities = {
-		democratic = 15.0
-		communism = 50.0
+		democratic = 64.0
+		communism = 10.0
 		fascism = 0.0
-		neutrality = 15.0
-		nationalist = 20.0
+		neutrality = 11.5
+		nationalist = 14.5
 	}
 	set_politics = {
-		ruling_party = communism
+		ruling_party = democratic
 		last_election = "2024.5.29"
 		election_frequency = 60
 		elections_allowed = yes
@@ -885,19 +888,18 @@ capital = 275
 
 	start_politics_input = yes
 
-	set_variable = { party_pop_array^5 = 0.400 }   #anarchist_communism (ANC)
+	set_variable = { party_pop_array^3 = 0.420 }   #socialism (ANC)
 	set_variable = { party_pop_array^1 = 0.220 }   #conservatism (DA)
 	set_variable = { party_pop_array^20 = 0.145 }   #Nat_Populism (MK Party)
 	set_variable = { party_pop_array^4 = 0.100 }   #Communist-State (EFF)
 	set_variable = { party_pop_array^14 = 0.040 }   #Neutral_conservatism (IFP)
 	set_variable = { party_pop_array^15 = 0.040 }   #oligarchism
 	set_variable = { party_pop_array^18 = 0.035 }   #neutral_Social
-	set_variable = { party_pop_array^3 = 0.020 }   #socialism
 
-	set_variable = { ruling_party = 5 }             #anarchist_communism (ANC)
+	set_variable = { ruling_party = 3 }             #socialism (ANC)
 	add_to_array = { gov_coalition_array = 1 }       #conservatism (DA)
 
-	set_variable = { party_pop_elect_array^5 = 0.401 }  #ANC
+	set_variable = { party_pop_elect_array^3 = 0.401 }  #ANC
 	set_variable = { party_pop_elect_array^1 = 0.217 }  #DA
 	set_variable = { party_pop_elect_array^20 = 0.147 }  #MK Party
 	set_variable = { party_pop_elect_array^4 = 0.095 }  #EFF
@@ -911,7 +913,7 @@ capital = 275
 		picture = "gfx/leaders/generic_politicians/black_002.dds"
 		# MD2026: placeholder portrait (MD 2.0 has no portrait for this leader)
 		expire = "2029.5.29"
-		ideology = anarchist_communism
+		ideology = socialism
 		traits = {
 			captain_of_industry
 			career_politician

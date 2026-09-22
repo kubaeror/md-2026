@@ -781,16 +781,16 @@ capital = 4
 
 	start_politics_input = yes
 
-	set_variable = { party_pop_array^3 = 0.270 }   #socialism (Socialdemokratiet)
-	set_variable = { party_pop_array^2 = 0.095 }   #liberalism (Venstre)
-	set_variable = { party_pop_array^1 = 0.105 }   #conservatism (Moderaterne)
-	set_variable = { party_pop_array^20 = 0.085 }   #Nat_Populism (Dansk Folkeparti)
-	set_variable = { party_pop_array^4 = 0.065 }   #Communist-State (SF)
-	set_variable = { party_pop_array^17 = 0.040 }   #Neutral_green (Alternativet)
-	set_variable = { party_pop_array^16 = 0.055 }   #Neutral_Libertarian (Liberal Alliance)
-	set_variable = { party_pop_array^15 = 0.050 }   #oligarchism
-	set_variable = { party_pop_array^14 = 0.060 }   #Neutral_conservatism (Konservative)
-	set_variable = { party_pop_array^18 = 0.040 }   #neutral_Social
+	set_variable = { party_pop_array^3 = 0.313 }   #socialism (Socialdemokratiet)
+	set_variable = { party_pop_array^2 = 0.110 }   #liberalism (Venstre)
+	set_variable = { party_pop_array^1 = 0.121 }   #conservatism (Moderaterne)
+	set_variable = { party_pop_array^20 = 0.098 }   #Nat_Populism (Dansk Folkeparti)
+	set_variable = { party_pop_array^4 = 0.075 }   #Communist-State (SF)
+	set_variable = { party_pop_array^17 = 0.046 }   #Neutral_green (Alternativet)
+	set_variable = { party_pop_array^16 = 0.064 }   #Neutral_Libertarian (Liberal Alliance)
+	set_variable = { party_pop_array^15 = 0.058 }   #oligarchism
+	set_variable = { party_pop_array^14 = 0.069 }   #Neutral_conservatism (Konservative)
+	set_variable = { party_pop_array^18 = 0.046 }   #neutral_Social
 
 	set_variable = { ruling_party = 3 }             #socialism (Socialdemokratiet)
 	add_to_array = { gov_coalition_array = 2 }       #liberalism (Venstre)

@@ -89,14 +89,14 @@ units = {
 	# Aleppo area
 	division = {
 		name = "3. Firqa Mushaat"
-		location = 6206
+		location = 4111
 		division_template = "Firqa Mushaat"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.45
 	}
 	division = {
 		name = "1. Firqa Miliishiya"
-		location = 6206
+		location = 6302
 		division_template = "Firqa Miliishiya"
 		start_experience_factor = 0.20
 		start_equipment_factor = 0.40
@@ -153,7 +153,7 @@ units = {
 	# Coastal / Latakia
 	division = {
 		name = "5. Firqa Miliishiya"
-		location = 1108
+		location = 12473
 		division_template = "Firqa Miliishiya"
 		start_experience_factor = 0.20
 		start_equipment_factor = 0.40

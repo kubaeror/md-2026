@@ -101,7 +101,7 @@ units = {
 	}
 	division = {
 		name = "1. Firqa Miliishiya"
-		location = 10877
+		location = 12881
 		division_template = "Firqa Miliishiya"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.40
@@ -167,14 +167,14 @@ units = {
 	# Darfur area
 	division = {
 		name = "7. Firqa Mushaat"
-		location = 10200
+		location = 12768
 		division_template = "Firqa Mushaat"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.40
 	}
 	division = {
 		name = "5. Firqa Miliishiya"
-		location = 12359
+		location = 4133
 		division_template = "Firqa Miliishiya"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.35
@@ -183,7 +183,7 @@ units = {
 	# Kassala / Red Sea
 	division = {
 		name = "2. Liwa' Motahirka"
-		location = 12454
+		location = 2088
 		division_template = "Liwa' Motahirka"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.40

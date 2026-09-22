@@ -300,14 +300,14 @@ units = {
 	### EASTERN MD ###
 	division = {
 		name = "5th Combined Arms Army"
-		location = 380
+		location = 3977
 		division_template = "Motor Rifle Brigade"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.55
 	}
 	division = {
 		name = "35th Combined Arms Army"
-		location = 380
+		location = 12654
 		division_template = "Motor Rifle Brigade"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.5
@@ -346,7 +346,7 @@ units = {
 	}
 	division = {
 		name = "155th Naval Infantry Brigade (Pacific)"
-		location = 380
+		location = 957
 		division_template = "Naval Infantry Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.55
@@ -463,14 +463,14 @@ units = {
 	### ADDITIONAL FAR EAST ###
 	division = {
 		name = "29th Combined Arms Army"
-		location = 380
+		location = 12641
 		division_template = "Motor Rifle Brigade"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.65
 	}
 	division = {
 		name = "68th Army Corps"
-		location = 380
+		location = 12446
 		division_template = "Motor Rifle Brigade"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.6

@@ -1,0 +1,48 @@
+state = {
+	id = 1152
+	name = "STATE_1152"
+
+
+	history = {
+		owner = TAL
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.979 }
+		victory_points = {
+			1948 1
+		}
+		victory_points = {
+			4949 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+		}
+		add_core_of = TAL
+		add_core_of = AFG
+		add_core_of = BLC
+		set_variable = { productivity_state_var = 351 }
+		add_province_modifier = {
+			static_modifiers = { terrain_zaranj }
+			province = { id = 1948 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_lashkar_gah }
+			province = { id = 4949 }
+		}
+
+		# MD2026: Afghanistan is the Islamic Emirate under the Taliban; AFG (the
+		# tag our 2026 setup runs on) takes over TAL's states at the bookmark
+		# date. The TAL -> AFG annexation in md2026_on_actions.txt stays as a
+		# fallback for anything the transfer misses.
+		2026.1.1 = {
+			owner = AFG
+			add_core_of = AFG
+		}
+}
+
+	provinces = {
+		1948 2101 4949 5020
+	}
+	manpower = 108965
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

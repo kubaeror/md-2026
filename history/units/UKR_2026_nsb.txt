@@ -223,7 +223,7 @@ units = {
 	# 93rd Mechanized Brigade 'Kholodny Yar'
 	division = {
 		name = "93rd Mechanized Brigade 'Kholodny Yar'"
-		location = 14328
+		location = 11437
 		division_template = "Mekhanizovana Bryhada"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.6
@@ -234,7 +234,7 @@ units = {
 	# 54th Motorized Brigade
 	division = {
 		name = "54th Motorized Brigade"
-		location = 9677
+		location = 9556
 		division_template = "Pikhota Bryhada"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.55
@@ -304,7 +304,7 @@ units = {
 	# 35th Marine Brigade
 	division = {
 		name = "35th Marine Brigade"
-		location = 705
+		location = 11683
 		division_template = "Bryhada Morskoyi Pikhoty"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.55
@@ -312,7 +312,7 @@ units = {
 	# 36th Marine Brigade
 	division = {
 		name = "36th Marine Brigade"
-		location = 3686
+		location = 6597
 		division_template = "Bryhada Morskoyi Pikhoty"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.55
@@ -370,7 +370,7 @@ units = {
 	}
 	division = {
 		name = "118th TDF Brigade"
-		location = 9680
+		location = 488
 		division_template = "Terytorialna Bryhada"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
@@ -397,7 +397,7 @@ units = {
 	# 55th Artillery Brigade
 	division = {
 		name = "55th Artillery Brigade"
-		location = 14328
+		location = 11405
 		division_template = "Artyleriiska Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.55

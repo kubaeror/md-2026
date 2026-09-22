@@ -1018,44 +1018,47 @@ capital = 46
 	set_variable = { overall_productivity = 1250 }
 
 	### Politics & Parties ###
+	# 2025 general election (2025.10.29); Schoof cabinet is a caretaker since
+	# the PVV left the coalition on 2025.6.3. Shares are the official vote shares.
 	set_popularities = {
-		democratic = 50.0
-		communism = 5.0
+		democratic = 51.0
+		communism = 1.9
 		fascism = 0.0
-		neutrality = 15.0
-		nationalist = 30.0
+		neutrality = 25.9
+		nationalist = 21.2
 	}
 	set_politics = {
 		ruling_party = democratic
-		last_election = "2023.11.22"
+		last_election = "2025.10.29"
 		election_frequency = 48
 		elections_allowed = yes
 	}
 
 	start_politics_input = yes
 
-	set_variable = { party_pop_array^20 = 0.235 }   #Nat_Populism (PVV)
-	set_variable = { party_pop_array^17 = 0.080 }   #Neutral_green (GL-PvdA)
-	set_variable = { party_pop_array^1 = 0.130 }   #conservatism (VVD)
-	set_variable = { party_pop_array^2 = 0.040 }   #liberalism (D66)
-	set_variable = { party_pop_array^3 = 0.100 }   #socialism (GL-PvdA labor)
-	set_variable = { party_pop_array^14 = 0.100 }   #Neutral_conservatism (NSC)
-	set_variable = { party_pop_array^18 = 0.060 }   #neutral_Social (BBB)
-	set_variable = { party_pop_array^15 = 0.055 }   #oligarchism
-	set_variable = { party_pop_array^4 = 0.030 }   #Communist-State (SP)
-	set_variable = { party_pop_array^21 = 0.020 }   #Nat_Fascism (FvD)
+	set_variable = { party_pop_array^20 = 0.167 }   #Nat_Populism (PVV)
+	set_variable = { party_pop_array^17 = 0.049 }   #Neutral_green (PvdD/DENK/Bij1)
+	set_variable = { party_pop_array^1 = 0.202 }   #conservatism (VVD/JA21)
+	set_variable = { party_pop_array^2 = 0.180 }   #liberalism (D66/Volt)
+	set_variable = { party_pop_array^3 = 0.128 }   #socialism (GL-PvdA)
+	set_variable = { party_pop_array^14 = 0.160 }   #Neutral_conservatism (CDA/CU/SGP)
+	set_variable = { party_pop_array^18 = 0.027 }   #neutral_Social (BBB)
+	set_variable = { party_pop_array^15 = 0.023 }   #oligarchism (50PLUS/BVNL)
+	set_variable = { party_pop_array^4 = 0.019 }   #Communist-State (SP)
+	set_variable = { party_pop_array^21 = 0.045 }   #Nat_Fascism (FvD)
 
 	set_variable = { ruling_party = 1 }             #ruling
-	add_to_array = { gov_coalition_array = 20 }       #Nat_Populism (PVV)
-	add_to_array = { gov_coalition_array = 14 }       #Neutral_conservatism (NSC)
+	add_to_array = { gov_coalition_array = 1 }       #conservatism (VVD)
+	add_to_array = { gov_coalition_array = 14 }       #Neutral_conservatism (NSC, caretaker)
 	add_to_array = { gov_coalition_array = 18 }       #neutral_Social (BBB)
 
-	set_variable = { party_pop_elect_array^20 = 0.234 }  #PVV
-	set_variable = { party_pop_elect_array^17 = 0.156 }  #GL-PvdA
-	set_variable = { party_pop_elect_array^1 = 0.152 }  #VVD
-	set_variable = { party_pop_elect_array^14 = 0.126 }  #NSC
-	set_variable = { party_pop_elect_array^2 = 0.062 }  #D66
-	set_variable = { party_pop_elect_array^18 = 0.048 }  #BBB
+	set_variable = { party_pop_elect_array^20 = 0.167 }  #PVV
+	set_variable = { party_pop_elect_array^1 = 0.202 }  #VVD/JA21
+	set_variable = { party_pop_elect_array^2 = 0.180 }  #D66/Volt
+	set_variable = { party_pop_elect_array^3 = 0.128 }  #GL-PvdA
+	set_variable = { party_pop_elect_array^14 = 0.160 }  #CDA/CU/SGP
+	set_variable = { party_pop_elect_array^21 = 0.045 }  #FvD
+	set_variable = { party_pop_elect_array^18 = 0.027 }  #BBB
 
 	startup_politics = yes
 

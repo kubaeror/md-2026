@@ -122,7 +122,7 @@ def load_sets(md):
     s["trait"] = set()
     for root in (os.path.join(md, "common", "country_leader"),
                  os.path.join(REPO, "common", "country_leader"),
-                 r"D:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\country_leader"):
+                 os.path.join(rebase.VANILLA, "common", "country_leader")):
         for p in files(root):
             text = rebase.strip_comments(rebase.read(p))
             for m in re.finditer(r"leader_traits\s*=\s*\{", text):
@@ -270,7 +270,7 @@ def check_sprites(md):
     """Focus icons, idea pictures and event/decision sprites must exist."""
     names = set()
     for root in (os.path.join(md, "interface"), os.path.join(REPO, "interface"),
-                 os.path.join(r"D:\SteamLibrary\steamapps\common\Hearts of Iron IV", "interface")):
+                 os.path.join(rebase.VANILLA, "interface")):
         for p in files(root, ".gfx"):
             text = rebase.read(p)
             names |= set(re.findall(r'name\s*=\s*"?([A-Za-z0-9_.\-]+)"?', text))
@@ -425,7 +425,7 @@ def check_portraits(md):
     """Leader portraits referenced by the submod must resolve (bare names resolve
     against gfx/leaders/<TAG>/). Only checks our own files/patches - Millennium
     Dawn's own files are its responsibility."""
-    van = r"D:\SteamLibrary\steamapps\common\Hearts of Iron IV"
+    van = rebase.VANILLA
     md_basenames = set()
     for sub in ("common", "events", "history"):
         root = os.path.join(md, sub)

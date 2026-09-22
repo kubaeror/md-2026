@@ -151,8 +151,8 @@ units = {
 
 	# Lithuania (NATO Enhanced Forward Presence)
 	division = {
-		name = "Panzerbrigade 42 (Lithuania)"
-		location = 395
+		name = "Panzerbrigade 45 (Lithuania)"
+		location = 3320
 		division_template = "Panzergrenadierbrigade"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.8

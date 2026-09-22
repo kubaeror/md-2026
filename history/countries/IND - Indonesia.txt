@@ -432,13 +432,13 @@ capital = 631
 
 	start_politics_input = yes
 
-	set_variable = { party_pop_array^20 = 0.300 }   #Nat_Populism (Gerindra/Prabowo)
-	set_variable = { party_pop_array^3 = 0.250 }    #socialism (PDI-P)
-	set_variable = { party_pop_array^1 = 0.150 }    #conservatism (Golkar/Demokrat)
-	set_variable = { party_pop_array^14 = 0.150 }   #Neutral_conservatism (Islamic parties)
-	set_variable = { party_pop_array^22 = 0.050 }   #Nat_Autocracy
-	set_variable = { party_pop_array^2 = 0.050 }    #liberalism
-	set_variable = { party_pop_array^4 = 0.020 }    #Communist-State
+	set_variable = { party_pop_array^20 = 0.307 }   #Nat_Populism (Gerindra/Prabowo)
+	set_variable = { party_pop_array^3 = 0.258 }    #socialism (PDI-P)
+	set_variable = { party_pop_array^1 = 0.155 }    #conservatism (Golkar/Demokrat)
+	set_variable = { party_pop_array^14 = 0.155 }   #Neutral_conservatism (Islamic parties)
+	set_variable = { party_pop_array^22 = 0.052 }   #Nat_Autocracy
+	set_variable = { party_pop_array^2 = 0.052 }    #liberalism
+	set_variable = { party_pop_array^4 = 0.021 }    #Communist-State
 
 	set_variable = { ruling_party = 20 }
 

@@ -59,8 +59,9 @@
 	### CSTO 2026 Update ###
 	# Armenia suspended membership in 2024
 	remove_from_faction = ARM
-	# Update CSTO global array - remove Armenia
-	remove_from_array = { global.CSTO_member = ARM }
+	# The array removal cannot happen here: MD's setup_global_arrays runs at
+	# on_startup (after history) and adds ARM back with no clear_array.
+	# The removal lives in common/on_actions/md2026_on_actions.txt instead.
 
 	### Updated Opinion Modifiers ###
 	# Western sanctions (post-2022 escalation)

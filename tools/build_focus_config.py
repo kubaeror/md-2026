@@ -11,9 +11,10 @@ import re
 import sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DEFAULT_MD = r"D:\SteamLibrary\steamapps\workshop\content\394360\2777392649"
 sys.path.insert(0, os.path.join(REPO, "tools"))
 import rebase  # noqa: E402
+
+DEFAULT_MD = rebase.DEFAULT_MD
 
 md = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_MD
 

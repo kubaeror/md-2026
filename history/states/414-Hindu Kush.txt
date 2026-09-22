@@ -1,0 +1,52 @@
+state = {
+	id = 414
+	name = "STATE_414"
+	resources = {
+		tungsten = 2.000
+	}
+
+	history = {
+		owner = TAL
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.888 }
+		victory_points = {
+			12769 5 #Ghazni
+		}
+		victory_points = { #Kabul
+			10737 10
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 6
+			fossil_powerplant = 2
+		}
+		add_core_of = AFG
+		add_core_of = TAL
+		set_variable = { productivity_state_var = 237 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_kabul }
+			province = { id = 10737 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_ghanzi }
+			province = { id = 12769 }
+		}
+
+		# MD2026: Afghanistan is the Islamic Emirate under the Taliban; AFG (the
+		# tag our 2026 setup runs on) takes over TAL's states at the bookmark
+		# date. The TAL -> AFG annexation in md2026_on_actions.txt stays as a
+		# fallback for anything the transfer misses.
+		2026.1.1 = {
+			owner = AFG
+			add_core_of = AFG
+		}
+}
+
+	provinces = {
+		5082 10737 12769 14687 14689 14697 16279
+	}
+	manpower = 9213280
+	buildings_max_level_factor = 1.000
+	state_category = state_08
+}

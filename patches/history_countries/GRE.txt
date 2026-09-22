@@ -43,16 +43,16 @@
 
 	start_politics_input = yes
 
-	set_variable = { party_pop_array^1 = 0.405 }   #conservatism (ND)
-	set_variable = { party_pop_array^3 = 0.180 }   #socialism (SYRIZA)
-	set_variable = { party_pop_array^4 = 0.070 }   #Communist-State (KKE)
-	set_variable = { party_pop_array^18 = 0.045 }   #neutral_Social (PASOK)
-	set_variable = { party_pop_array^20 = 0.060 }   #Nat_Populism (Elliniki Lysi)
-	set_variable = { party_pop_array^2 = 0.035 }   #liberalism
-	set_variable = { party_pop_array^15 = 0.055 }   #oligarchism
-	set_variable = { party_pop_array^14 = 0.050 }   #Neutral_conservatism
-	set_variable = { party_pop_array^17 = 0.030 }   #Neutral_green
-	set_variable = { party_pop_array^21 = 0.040 }   #Nat_Fascism (Spartiates)
+	set_variable = { party_pop_array^1 = 0.417 }   #conservatism (ND)
+	set_variable = { party_pop_array^3 = 0.186 }   #socialism (SYRIZA)
+	set_variable = { party_pop_array^4 = 0.072 }   #Communist-State (KKE)
+	set_variable = { party_pop_array^18 = 0.046 }   #neutral_Social (PASOK)
+	set_variable = { party_pop_array^20 = 0.062 }   #Nat_Populism (Elliniki Lysi)
+	set_variable = { party_pop_array^2 = 0.036 }   #liberalism
+	set_variable = { party_pop_array^15 = 0.057 }   #oligarchism
+	set_variable = { party_pop_array^14 = 0.052 }   #Neutral_conservatism
+	set_variable = { party_pop_array^17 = 0.031 }   #Neutral_green
+	set_variable = { party_pop_array^21 = 0.041 }   #Nat_Fascism (Spartiates)
 
 	set_variable = { ruling_party = 1 }             #conservatism (ND)
 

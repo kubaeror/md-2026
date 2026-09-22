@@ -1,0 +1,63 @@
+id,severity,category,tag,file,line,title,detail,recommendation,confidence
+O-02,ACCURACY,oob,AFG,history\units\AFG_2026_nonnsb.txt,129,Division '5. Loy Taliban' stationed in TAL (state 410),state file 410-Bactria.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,AFG,history\units\AFG_2026_nonnsb.txt,136,Division '5. Da Taliban Miliishiya' stationed in TAL (state 410),state file 410-Bactria.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,AFG,history\units\AFG_2026_nsb.txt,126,Division '5. Loy Taliban' stationed in TAL (state 410),state file 410-Bactria.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,AFG,history\units\AFG_2026_nsb.txt,133,Division '5. Da Taliban Miliishiya' stationed in TAL (state 410),state file 410-Bactria.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,GER,history\units\GER_2026_nonnsb.txt,153,Division 'Panzerbrigade 42 (Lithuania)' stationed in SOV (state 642),state file 642-Kaliningrad.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,GER,history\units\GER_2026_nsb.txt,150,Division 'Panzerbrigade 42 (Lithuania)' stationed in SOV (state 642),state file 642-Kaliningrad.txt,Move the unit to a home (or intentionally allied) state.,high
+O-03,ACCURACY,oob,IND,history\units\IND_2026_nonnsb.txt,241,naval_base 4306 has no naval base building in the state file,,,high
+O-03,ACCURACY,oob,IND,history\units\IND_2026_nsb.txt,238,naval_base 4306 has no naval base building in the state file,,,high
+O-02,ACCURACY,oob,SOV,history\units\SOV_2026_nonnsb.txt,304,Division '5th Combined Arms Army' stationed in CHI (state 578),state file 578-Yunnan.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SOV,history\units\SOV_2026_nonnsb.txt,311,Division '35th Combined Arms Army' stationed in CHI (state 578),state file 578-Yunnan.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SOV,history\units\SOV_2026_nonnsb.txt,350,Division '155th Naval Infantry Brigade (Pacific)' stationed in CHI (state 578),state file 578-Yunnan.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SOV,history\units\SOV_2026_nonnsb.txt,467,Division '29th Combined Arms Army' stationed in CHI (state 578),state file 578-Yunnan.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SOV,history\units\SOV_2026_nonnsb.txt,474,Division '68th Army Corps' stationed in CHI (state 578),state file 578-Yunnan.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SOV,history\units\SOV_2026_nsb.txt,301,Division '5th Combined Arms Army' stationed in CHI (state 578),state file 578-Yunnan.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SOV,history\units\SOV_2026_nsb.txt,308,Division '35th Combined Arms Army' stationed in CHI (state 578),state file 578-Yunnan.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SOV,history\units\SOV_2026_nsb.txt,347,Division '155th Naval Infantry Brigade (Pacific)' stationed in CHI (state 578),state file 578-Yunnan.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SOV,history\units\SOV_2026_nsb.txt,464,Division '29th Combined Arms Army' stationed in CHI (state 578),state file 578-Yunnan.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SOV,history\units\SOV_2026_nsb.txt,471,Division '68th Army Corps' stationed in CHI (state 578),state file 578-Yunnan.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SUD,history\units\SUD_2026_nonnsb.txt,102,Division '1. Firqa Miliishiya' stationed in SSU (state 924),state file 924-Jonglei.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SUD,history\units\SUD_2026_nonnsb.txt,168,Division '7. Firqa Mushaat' stationed in SSU (state 924),state file 924-Jonglei.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SUD,history\units\SUD_2026_nonnsb.txt,175,Division '5. Firqa Miliishiya' stationed in SSU (state 924),state file 924-Jonglei.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SUD,history\units\SUD_2026_nonnsb.txt,184,Division '2. Liwa' Motahirka' stationed in SSU (state 924),state file 924-Jonglei.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SUD,history\units\SUD_2026_nsb.txt,99,Division '1. Firqa Miliishiya' stationed in SSU (state 924),state file 924-Jonglei.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SUD,history\units\SUD_2026_nsb.txt,165,Division '7. Firqa Mushaat' stationed in SSU (state 924),state file 924-Jonglei.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SUD,history\units\SUD_2026_nsb.txt,172,Division '5. Firqa Miliishiya' stationed in SSU (state 924),state file 924-Jonglei.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SUD,history\units\SUD_2026_nsb.txt,181,Division '2. Liwa' Motahirka' stationed in SSU (state 924),state file 924-Jonglei.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SYR,history\units\SYR_2026_nonnsb.txt,90,Division '3. Firqa Mushaat' stationed in LEB (state 553),state file 553-Bekaa.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SYR,history\units\SYR_2026_nonnsb.txt,97,Division '1. Firqa Miliishiya' stationed in LEB (state 553),state file 553-Bekaa.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SYR,history\units\SYR_2026_nonnsb.txt,154,Division '5. Firqa Miliishiya' stationed in LEB (state 203),state file 203-North Lebanon.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SYR,history\units\SYR_2026_nsb.txt,87,Division '3. Firqa Mushaat' stationed in LEB (state 553),state file 553-Bekaa.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SYR,history\units\SYR_2026_nsb.txt,94,Division '1. Firqa Miliishiya' stationed in LEB (state 553),state file 553-Bekaa.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,SYR,history\units\SYR_2026_nsb.txt,151,Division '5. Firqa Miliishiya' stationed in LEB (state 203),state file 203-North Lebanon.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,UKR,history\units\UKR_2026_nonnsb.txt,227,Division '93rd Mechanized Brigade 'Kholodny Yar'' stationed in SOV (state 669),state file 669-Crimea.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,UKR,history\units\UKR_2026_nonnsb.txt,238,Division '54th Motorized Brigade' stationed in SOV (state 669),state file 669-Crimea.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,UKR,history\units\UKR_2026_nonnsb.txt,308,Division '35th Marine Brigade' stationed in SOV (state 669),state file 669-Crimea.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,UKR,history\units\UKR_2026_nonnsb.txt,316,Division '36th Marine Brigade' stationed in SOV (state 669),state file 669-Crimea.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,UKR,history\units\UKR_2026_nonnsb.txt,374,Division '118th TDF Brigade' stationed in SOV (state 669),state file 669-Crimea.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,UKR,history\units\UKR_2026_nonnsb.txt,401,Division '55th Artillery Brigade' stationed in SOV (state 669),state file 669-Crimea.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,UKR,history\units\UKR_2026_nsb.txt,224,Division '93rd Mechanized Brigade 'Kholodny Yar'' stationed in SOV (state 669),state file 669-Crimea.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,UKR,history\units\UKR_2026_nsb.txt,235,Division '54th Motorized Brigade' stationed in SOV (state 669),state file 669-Crimea.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,UKR,history\units\UKR_2026_nsb.txt,305,Division '35th Marine Brigade' stationed in SOV (state 669),state file 669-Crimea.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,UKR,history\units\UKR_2026_nsb.txt,313,Division '36th Marine Brigade' stationed in SOV (state 669),state file 669-Crimea.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,UKR,history\units\UKR_2026_nsb.txt,371,Division '118th TDF Brigade' stationed in SOV (state 669),state file 669-Crimea.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,UKR,history\units\UKR_2026_nsb.txt,398,Division '55th Artillery Brigade' stationed in SOV (state 669),state file 669-Crimea.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,USA,history\units\USA_2026_nonnsb.txt,264,Division '2nd Infantry Division (Korea)' stationed in PAK (state 426),state file 426-Sindh.txt,Move the unit to a home (or intentionally allied) state.,high
+O-02,ACCURACY,oob,USA,history\units\USA_2026_nsb.txt,261,Division '2nd Infantry Division (Korea)' stationed in PAK (state 426),state file 426-Sindh.txt,Move the unit to a home (or intentionally allied) state.,high
+H-04,ACCURACY,history,BEL,patches\history_countries\BEL.txt,46,"party_pop_array sums to 0.970, not 1.0",,,high
+H-06,NOTE,history,CHI,patches\history_countries\CHI.txt,45,elections_allowed = no with a real election_frequency,,,high
+H-04,ACCURACY,history,DEN,patches\history_countries\DEN.txt,46,"party_pop_array sums to 0.865, not 1.0",,,high
+H-04,ACCURACY,history,GRE,patches\history_countries\GRE.txt,46,"party_pop_array sums to 0.970, not 1.0",,,high
+H-04,ACCURACY,history,HOL,patches\history_countries\HOL.txt,46,"party_pop_array sums to 0.850, not 1.0",,,high
+H-04,ACCURACY,history,HUN,patches\history_countries\HUN.txt,46,"party_pop_array sums to 0.960, not 1.0",,,high
+H-04,ACCURACY,history,ICE,patches\history_countries\ICE.txt,38,"party_pop_array sums to 0.950, not 1.0",,,high
+H-04,ACCURACY,history,IND,patches\history_countries\IND.txt,47,"party_pop_array sums to 0.970, not 1.0",,,high
+H-04,ACCURACY,history,LAT,patches\history_countries\LAT.txt,49,"party_pop_array sums to 0.890, not 1.0",,,high
+H-04,ACCURACY,history,LIT,patches\history_countries\LIT.txt,49,"party_pop_array sums to 0.930, not 1.0",,,high
+H-04,ACCURACY,history,NOR,patches\history_countries\NOR.txt,46,"party_pop_array sums to 0.940, not 1.0",,,high
+H-04,ACCURACY,history,SLO,patches\history_countries\SLO.txt,49,"party_pop_array sums to 0.950, not 1.0",,,high
+H-04,ACCURACY,history,TUR,patches\history_countries\TUR.txt,47,"party_pop_array sums to 0.950, not 1.0",,,high
+H-04,ACCURACY,history,VEN,patches\history_countries\VEN.txt,47,"party_pop_array sums to 0.900, not 1.0",,,high
+C-01,ACCURACY,cross-mod,,patches\history_countries\USA.txt,,NATO array entries duplicated by MD's startup pass,"our patch adds ['ALB', 'BUL', 'CRO', 'EST', 'LAT', 'LIT', 'ROM', 'SLO', 'SLV']; MD's setup_global_arrays adds them too (no clear_array) -> duplicates in global.nato_members","Only add the tags MD's 2026 branch misses (MNT, FYR, FIN, SWE) or guard with is_in_array.",high
+C-02,BUG,cross-mod,,patches\history_countries\SOV.txt,,CSTO removal runs before MD re-adds Armenia at on_startup,"history (2026.1.1) runs before on_startup; MD's setup_global_arrays does add_to_array = { global.CSTO_member = ARM } with no clear_array, so the removal is undone.",Move the removal into our on_startup effect (which runs after MD's) or a decision.,high
