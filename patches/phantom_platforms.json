@@ -1,0 +1,46 @@
+{
+  "_comment": "Platforms and formations that did NOT exist on 1 January 2026. tools/validate.py fails if any of these strings appear in the 2026 OOB of the given tag. Sources are in docs/audit_findings_oob.csv and docs/Audit-2026.md.",
+  "ships": {
+    "USA": {"Anzio": "CG-68 decommissioned 22 Sep 2022", "Vella Gulf": "CG-72 decommissioned 4 Aug 2022", "Lyndon B. Johnson": "DDG-1002 not commissioned on 1 Jan 2026"},
+    "SOV": {"Kharlamov": "Udaloy-class decommissioned 1 Dec 2020"},
+    "ENG": {"Lancaster": "F229 decommissioned 5 Dec 2025", "Northumberland": "F238 decommissioned 2024/25", "Albion": "LPD retired Mar 2025", "Bulwark": "LPD retired Mar 2025", "Chiddingfold": "laid up in extended readiness", "Penzance": "Sandown-class retired"},
+    "FRA": {"\u00c9meraude": "SSN S604 decommissioned 12 Dec 2024"},
+    "GER": {"Emden": "K130 F266 still on trials on 1 Jan 2026"},
+    "HOL": {"Walrus": "S802 retired 12 Oct 2023"},
+    "NRY": {"Odda": "P966 does not exist (Skjold class is P960-P965)"},
+    "FIN": {"Pohjanmaa": "Pohjanmaa class commissioned 2027", "H\u00e4me": "Pohjanmaa class commissioned 2027"},
+    "TUR": {"\u0130zmir": "F-516 still on trials", "Murat Reis": "S-332 not commissioned"},
+    "ISR": {"Drakon": "still in Germany on 1 Jan 2026"},
+    "TAI": {"Hai Kun": "still in sea trials on 1 Jan 2026"},
+    "PAK": {"Hangor": "S-141 commissioned 30 Apr 2026"},
+    "PER": {"Damavand": "IRIS 77 out of service since Jan 2018"},
+    "VEN": {"Mariscal Sucre": "F-21 a partially sunk hulk at Puerto Cabello", "Warao": "PC-22 out of service since 2012"},
+    "SYR": {"Tishreen": "Syrian fleet destroyed at Latakia Dec 2024", "Al Assad": "Syrian fleet destroyed at Latakia Dec 2024"},
+    "RAJ": {"Chakra III": "never delivered; India has no SSN", "Triput": "not yet commissioned on 1 Jan 2026"},
+    "BRA": {"Tamandar\u00e9": "F200 commissioned 24 Apr 2026", "Niter\u00f3i": "F40 decommissioned 2019", "Tamoio": "S31 decommissioned Sep 2023"},
+    "AST": {"Anzac": "FFH-150 decommissioned 18 May 2024", "Pilbara": "launched Oct 2025, not commissioned on 1 Jan 2026"},
+    "CRO": {"OB-51": "phantom hull", "OB-52": "phantom hull", "OB-53": "phantom hull"}
+  },
+  "aircraft": {
+    "KAZ": {"MiG-29": "retired 2023", "MiG-31": "retired 2023"},
+    "MLV": {"MiG-29": "Moldova sold its MiG-29s in 1997"},
+    "UZB": {"C-130H": "Uzbekistan operates no C-130"},
+    "SAU": {"MQ-9A": "Saudi Arabia operates no MQ-9 (only negotiations)"},
+    "ROM": {"MQ-9A": "Romania owns no MQ-9"},
+    "SPR": {"P-3M": "type retired"},
+    "GER": {"P-3C": "type retired (P-8A replaced it)"},
+    "VEN": {"F-5": "type retired 2010"},
+    "HUN": {"C-17": "no national C-17 (NATO pooled SAC)"}
+  },
+  "formations": {
+    "KOR": {"26th Mechanized Infantry Division": "disbanded 30 Nov 2018"},
+    "HOL": {"13e Luchtmobiele Brigade": "the brigade is 11 Luchtmobiele", "1e Gemechaniseerde Brigade": "does not exist"},
+    "PAK": {"2nd Armoured Division": "Pakistan has 1st and 6th armoured divisions"},
+    "EGY": {"23rd Armoured Division": "armoured divisions are 4th/6th/9th/21st"},
+    "BRA": {"1a Brigada de Cavalaria Blindada": "does not exist", "2a Brigada de Cavalaria Blindada": "does not exist", "1\u00aa Brigada de Cavalaria Blindada": "does not exist", "2\u00aa Brigada de Cavalaria Blindada": "does not exist"},
+    "ETH": {"Ye Fano Hayl": "Fano is the Amhara insurgency, not an ENDF formation"},
+    "GER": {"J\u00e4gerbrigade 1": "does not exist"},
+    "LIT": {"Aitvaras Brigada": "Aitvaras is the SOF squadron, not a brigade"},
+    "FRA": {"1re Brigade Blind\u00e9e": "the armoured brigades are 7e BB and 2e BB", "Brigade de la L\u00e9gion \u00c9trang\u00e8re": "the Legion is a command, not a brigade"}
+  }
+}

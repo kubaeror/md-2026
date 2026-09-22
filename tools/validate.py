@@ -10,6 +10,7 @@ Exit code 1 when errors are found.
 """
 
 import argparse
+import json
 import os
 import re
 import sys
@@ -874,6 +875,42 @@ def check_create_unit_templates(md):
             f"{', '.join(sorted(md_side)[:3])}")
 
 
+def check_phantom_platforms():
+    """Ships, aircraft and formations that did not exist on 1 Jan 2026 must not
+    appear in any 2026 OOB (patches/phantom_platforms.json)."""
+    path = os.path.join(REPO, "patches", "phantom_platforms.json")
+    if not os.path.exists(path):
+        return
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    for p in files(os.path.join(REPO, "history", "units")):
+        base = os.path.basename(p)
+        if not re.match(r"^[A-Z]{3}_2026_", base):
+            continue
+        tag = base[:3]
+        text = rebase.strip_comments(rebase.read(p))
+        checks = (
+            ("ships", r"ship\s*=\s*\{", r'name\s*=\s*"([^"]+)"'),
+            ("aircraft", r"air_wings\s*=\s*\{", r'version_name\s*=\s*"([^"]+)"'),
+            ("formations", r"division\s*=\s*\{", r'name\s*=\s*"([^"]+)"'),
+        )
+        for kind, block_re, value_re in checks:
+            wanted = data.get(kind, {}).get(tag, {})
+            if not wanted:
+                continue
+            for m in re.finditer(block_re, text):
+                ob = text.index("{", m.end() - 1)
+                body = text[ob:rebase.find_block(text, ob)] if rebase.find_block(text, ob) else text[ob:]
+                for vm in re.finditer(value_re, body):
+                    value = vm.group(1)
+                    if "class" in value.lower():
+                        continue  # a class name is not a unit name
+                    for name, why in wanted.items():
+                        if name.lower() in value.lower():
+                            ERRORS["phantom platform (did not exist on 2026-01-01)"].append(
+                                f"{tag}: {value} - {why}  ({rel(p)})")
+
+
 def check_localisation(md):
     """Every loc key our content needs must be defined (in our file, MD's or the
     base game's); keys defined for one language should exist in all of ours."""
@@ -1032,6 +1069,7 @@ def main():
     check_air_wings_states(md)
     check_equipment_dlc_paths(md)
     check_create_unit_templates(md)
+    check_phantom_platforms()
     check_localisation(md)
     check_focus_overrides(md, sets)
     check_bookmark_coverage(md)

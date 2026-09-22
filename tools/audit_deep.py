@@ -453,7 +453,7 @@ FOREIGN_BASING_OK = {
     ("USA", "SPR"), ("USA", "ITA"), ("USA", "KOR"), ("USA", "ENG"),
     ("TUR", "NCY"), ("GER", "LIT"), ("USA", "POL"), ("USA", "ROM"),
     ("CHI", "HKG"),
-}
+} | rebase.foreign_basing_pairs()
 
 
 def oob_files():
@@ -697,6 +697,11 @@ def check_history(ctx, rep):
         if dm and float(dm.group(1)) > 200000:
             rep.add("H-07", "BUG", "history", f"debt = {dm.group(1)} (billions) is not plausible", p,
                     line_at(text, dm.start()), tag=tag, confidence="medium")
+        tm = re.search(r"var\s*=\s*treasury\s+value\s*=\s*([0-9.]+)", text)
+        if dm and tm and float(tm.group(1)) > float(dm.group(1)):
+            rep.add("H-07", "BUG", "history",
+                    f"treasury = {tm.group(1)} exceeds debt = {dm.group(1)} (billions)",
+                    p, line_at(text, tm.start()), tag=tag, confidence="medium")
         # wars
         for m in re.finditer(r"declare_war_on\s*=\s*\{", text):
             body = body_at(text, text.index("{", m.end() - 1))

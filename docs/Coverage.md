@@ -376,7 +376,7 @@ _none_
 - md2026_demographics_news.1
 - md2026_diplomatic_disapproval
 
-(291 total, of which most are identifiers, not loc keys; see tools/loc_keys.py for the exact check)
+(292 total, of which most are identifiers, not loc keys; see tools/loc_keys.py for the exact check)
 
 - Loc keys our content needs but that are missing in English: **0**
 - Keys defined in English but missing in Polish: **0**

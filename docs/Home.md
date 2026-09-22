@@ -32,12 +32,15 @@ Welcome to the comprehensive documentation for the **Millennium Dawn 2026 Rework
 | Aspect | Details |
 |--------|---------|
 | **Start Date** | January 1, 2026 |
-| **Countries Updated** | ~70 |
-| **Focus Trees** | 23 (7 compact + 16 expanded with 26 focuses each) |
-| **Events** | ~75 across 11 chains |
-| **National Spirits** | 45 |
-| **Decisions** | 20 across 5 categories |
-| **OOB Files** | 65 |
-| **Localisation Keys** | ~1,600 (English) |
-| **Base Mod Required** | Millennium Dawn v1.12.3+ |
-| **HoI4 Version** | 1.17.x |
+| **Countries Updated** | 68 (30 bookmark countries) |
+| **Focus Trees** | 30 `MD2026_*` branches injected into MD 2.0 trees |
+| **Events** | 15 `md2026_*` event chains |
+| **National Spirits** | per-country `md2026_*` spirits |
+| **OOB Files** | 67 countries × 2 variants (NSB / non-NSB) |
+| **Localisation Keys** | 1720 (English) + 1720 (Polish) |
+| **Base Mod Required** | Millennium Dawn 2.0.0 |
+| **HoI4 Version** | 1.19.x |
+
+The current numbers are maintained in [Coverage.md](Coverage.md) and the
+[README](../README.md). The 2026 audit and what was done about it are in
+[Audit-2026.md](Audit-2026.md) and [Audit-2026-Resolution.md](Audit-2026-Resolution.md).

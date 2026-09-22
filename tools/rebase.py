@@ -83,6 +83,24 @@ def _steam_libraries():
     return roots
 
 
+def foreign_basing_pairs():
+    """(oob tag, state owner) pairs where foreign basing is intentional.
+
+    Data lives in tools/foreign_basing.json so the country work can extend it
+    without touching the audit tools.
+    """
+    path = os.path.join(REPO, "tools", "foreign_basing.json")
+    pairs = set()
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        for item in data.get("pairs", []):
+            pairs.add((str(item["oob"]).upper(), str(item["owner"]).upper()))
+    except (OSError, ValueError, KeyError, TypeError):
+        pass
+    return pairs
+
+
 def resolve_install(rel, marker, override=None, env=None):
     """Locate an install by looking at an override, an env var and Steam libraries."""
     candidates = []

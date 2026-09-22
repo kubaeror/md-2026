@@ -45,7 +45,7 @@ FOREIGN_BASING_OK = {
     ("USA", "SPR"), ("USA", "ITA"), ("USA", "KOR"), ("USA", "ENG"),
     ("TUR", "NCY"), ("GER", "LIT"), ("USA", "POL"), ("USA", "ROM"),
     ("CHI", "HKG"),
-}
+} | {tuple(p) for p in rebase.foreign_basing_pairs()}
 
 
 def block(text, start):

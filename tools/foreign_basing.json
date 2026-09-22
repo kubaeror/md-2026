@@ -1,0 +1,20 @@
+{
+  "_comment": "Foreign basing that is intentional in the 2026 bookmark. Read by tools/oob_check.py and tools/audit_deep.py; (oob tag, state owner) pairs. Keep every entry justified in the reason field.",
+  "pairs": [
+    {"oob": "ENG", "owner": "GER", "reason": "British Army Germany (Sennelager/Bielefeld)"},
+    {"oob": "FRA", "owner": "GER", "reason": "French Army in Germany (Brigade franco-allemande)"},
+    {"oob": "USA", "owner": "GER", "reason": "US Army Europe (Kaiserslautern, Grafenwoehr, Baumholder)"},
+    {"oob": "USA", "owner": "JAP", "reason": "US Forces Japan (Okinawa, Yokosuka)"},
+    {"oob": "USA", "owner": "SPR", "reason": "US Naval Station Rota / Moron AB"},
+    {"oob": "USA", "owner": "ITA", "reason": "US Army Africa / Aviano AB / Naples"},
+    {"oob": "USA", "owner": "KOR", "reason": "USFK (Camp Humphreys, Daegu, Osan)"},
+    {"oob": "USA", "owner": "ENG", "reason": "US visiting forces in the UK"},
+    {"oob": "USA", "owner": "POL", "reason": "US Army Poland (Poznan, Drawsko)"},
+    {"oob": "USA", "owner": "ROM", "reason": "US Army Romania (Mihail Kogalniceanu)"},
+    {"oob": "TUR", "owner": "NCY", "reason": "Turkish Army Cyprus (28th Mech Inf Div)"},
+    {"oob": "GER", "owner": "LIT", "reason": "Panzerbrigade 45 (Rudninkai/Rukla)"},
+    {"oob": "CHI", "owner": "HKG", "reason": "PLA Hong Kong Garrison"},
+    {"oob": "NKO", "owner": "SOV", "reason": "KPA troops in Kursk oblast (2024-2026)"},
+    {"oob": "SOV", "owner": "BLR", "reason": "Russian military presence in Belarus (Iskander/Oreshnik)"}
+  ]
+}

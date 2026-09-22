@@ -8,17 +8,22 @@ and the technology tier (see docs/Technology-System.md).
 The reference column is the indicative 2025 IMF WEO / World Bank nominal GDP
 per capita; entries more than 35% away from it are flagged with a `review` note.
 
+**Debt convention:** `debt` is *central-government gross debt* in billions of
+USD - the convention MD's own 2000 history uses (MD Canada 2000 = 804 vs ~590
+general government; MD UK 2000 = 840 vs ~600). IMF general-government debt is
+therefore not directly comparable. `treasury` must not exceed `debt`.
+
 | Tag | Tier | GDP/capita | Reference | Diff | Debt | Treasury | Note |
 |---|---|---|---|---|---|---|---|
 | AFG | 5 | 0.4 | - | - | 2.0 | 1.0 |  |
-| ALB | 5 | 8.0 | - | - | 14.0 | 5.0 |  |
+| ALB | 5 | 12.7 | - | - | 14.0 | 5.0 |  |
 | ARM | 4 | 8.0 | - | - | 10.0 | 5.0 |  |
 | AST | 2 | 65.0 | 65.0 | +0% | 650.0 | 100.0 |  |
 | BEL | 3 | 52.0 | - | - | 550.0 | 60.0 |  |
 | BLR | 4 | 8.0 | - | - | 20.0 | 8.0 |  |
 | BOS | 5 | 8.0 | - | - | 10.0 | 3.0 |  |
 | BRA | 3 | 10.0 | 10.0 | +0% | 1700.0 | 60.0 |  |
-| BRM | 4 | 1.4 | 1.3 | +8% | 15.0 | 3.0 |  |
+| BRM | 4 | 1.4 | 1.3 | +8% | 15.0 | 3.0 | **debt: debt fell from MD's 2000 value 81.097 to 15 (-82%) - verify** |
 | BUL | 4 | 16.0 | - | - | 40.0 | 15.0 |  |
 | CAN | 2 | 54.0 | 54.0 | +0% | 1400.0 | 120.0 |  |
 | CHI | 1 | 13.5 | 13.5 | +0% | 14500.0 | 500.0 |  |
@@ -45,17 +50,17 @@ per capita; entries more than 35% away from it are flagged with a `review` note.
 | KAZ | 4 | 12.0 | - | - | 50.0 | 40.0 |  |
 | KOR | 2 | 35.0 | 36.0 | -3% | 900.0 | 100.0 |  |
 | KOS | 5 | 6.0 | - | - | 3.0 | 2.0 |  |
-| KYR | 5 | 1.7 | - | - | 5.0 | 2.0 |  |
+| KYR | 5 | 3.1 | - | - | 5.0 | 2.0 |  |
 | LAT | 4 | 22.0 | - | - | 18.0 | 8.0 |  |
 | LIT | 4 | 28.0 | - | - | 25.0 | 10.0 |  |
-| LUX | 5 | 128.0 | - | - | 20.0 | 25.0 |  |
+| LUX | 5 | 128.0 | - | - | 20.0 | 10.0 |  |
 | MLV | 5 | 7.0 | - | - | 5.0 | 3.0 |  |
-| MNT | 5 | 12.0 | - | - | 6.0 | 3.0 |  |
+| MNT | 5 | 7.5 | - | - | 6.0 | 3.0 |  |
 | NKO | 4 | 1.8 | 1.3 | +38% | 5.0 | 2.0 | accepted - North Korea's GDP per capita estimates range from 1.1 to 1.8k; the shipped value follows the higher end (military-heavy economy). |
 | NOR | 3 | 88.0 | 90.0 | -2% | 200.0 | 200.0 |  |
 | PAK | 3 | 1.7 | - | - | 250.0 | 15.0 |  |
 | PER | 4 | 4.5 | 4.7 | -4% | 45.0 | 15.0 |  |
-| POL | 3 | 22.0 | 24.5 | -10% | 380.0 | 60.0 |  |
+| POL | 3 | 28.4 | 24.5 | +16% | 380.0 | 60.0 |  |
 | POR | 3 | 28.0 | - | - | 270.0 | 30.0 |  |
 | RAJ | 2 | 2.8 | 2.9 | -3% | 2800.0 | 80.0 |  |
 | ROM | 4 | 20.0 | 20.5 | -2% | 180.0 | 30.0 |  |
@@ -69,13 +74,13 @@ per capita; entries more than 35% away from it are flagged with a `review` note.
 | SUD | 5 | 1.0 | 1.0 | +0% | 55.0 | 2.0 |  |
 | SWE | 3 | 58.0 | 57.0 | +2% | 200.0 | 60.0 |  |
 | SYR | 5 | 1.5 | 1.0 | +50% | 30.0 | 2.0 | accepted - Syria after the fall of Assad has no reliable 2025 GDP data; the shipped value is a post-war estimate. |
-| TAI | 3 | 36.0 | - | - | 30.0 | 50.0 |  |
-| TAJ | 5 | 1.1 | - | - | 4.0 | 1.0 |  |
-| TUR | 2 | 13.0 | 15.5 | -16% | 480.0 | 40.0 |  |
+| TAI | 3 | 36.0 | - | - | 210.0 | 50.0 |  |
+| TAJ | 5 | 1.7 | - | - | 4.0 | 1.0 |  |
+| TUR | 2 | 18.6 | 15.5 | +20% | 480.0 | 40.0 |  |
 | UAE | 3 | 50.0 | - | - | 200.0 | 200.0 |  |
 | UKR | 3 | 5.0 | 5.8 | -14% | 155.0 | 5.0 |  |
 | USA | 1 | 85.0 | 89.0 | -4% | 36100.0 | 350.0 |  |
-| UZB | 5 | 2.5 | - | - | 25.0 | 10.0 |  |
+| UZB | 5 | 4.0 | - | - | 25.0 | 10.0 |  |
 | VEN | 4 | 3.5 | - | - | 150.0 | 5.0 |  |
 | YEM | 5 | 0.7 | - | - | 10.0 | 1.0 |  |
 
@@ -85,3 +90,7 @@ per capita; entries more than 35% away from it are flagged with a `review` note.
 productivity variables set in the same history block. The reference values are
 indicative: they are not copied into the game, they only flag entries that may
 be off by an order of magnitude.
+
+The debt check flags non-positive or absurd `debt` values, a `treasury`
+larger than `debt`, and debt that collapsed to under a quarter of MD's own
+2000 value (shown against MD's history, not against IMF data).

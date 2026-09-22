@@ -60,10 +60,19 @@ lists) are in `docs/Coverage.md`.
 
 ### Focuses that are deliberately not pre-completed
 
-37 path/political focuses are skipped by the pre-completion safety filter,
+47 path/political focuses are skipped by the pre-completion safety filter,
 because their rewards would rewrite the 2026 government, release countries,
 start civil wars or fire 2000-era events. They are grouped below; the intention
 is to keep the real 2026 starting position, not MD's 2000 branching.
+
+- **Post-Assad Syria exclusions** (manual entries in
+  `patches/unsafe_focuses.json`): `SYR_iranian_sponsorship`,
+  `SYR_support_hezbollah`, `SYR_expand_tartus_base`,
+  `SYR_reaffirm_claims_on_hatay`, `SYR_affirm_presence_in_lebanon`,
+  `SYR_concentrate_on_lebanon`, `SYR_invest_in_lebanon`,
+  `SYR_relocate_lebanese_industry`, `SYR_harbor_extremists`,
+  `SYR_reduced_political_liberty` (the 2026 government is not the Ba'athist
+  autocracy and no longer has forces in Lebanon or a Russian base at Tartus).
 
 - **Party path starters** (would change the 2026 ruling party):
   `RAJ_indian_national_congress`, `RAJ_communist_party_of_india`,
@@ -123,6 +132,30 @@ back to the default background. A 2026 date picture is future work.
 `docs/Economy-2026.md` compares the shipped GDP/debt values with indicative 2025
 reference data. Two entries (North Korea, Syria) differ from the reference but
 are kept: both reference values are uncertain.
+
+## Pending runtime verification
+
+The 2026 audit (`docs/Audit-2026.md`, section 6) lists behaviour that cannot be
+verified statically. The matching checks are in `docs/Testing.md`:
+
+1. The AFG setup: TAL's states are transferred to AFG at `2026.1.1`
+   (`patches/history_states/409,410,412,414,415,1152,1207,1208.txt`) and the
+   `TAL` -> `AFG` annexation still runs at `on_startup` as a fallback - confirm
+   TAL does not exist on day 1 and no unit is destroyed on foreign soil.
+2. Duplicate `global.nato_members` entries: the USA patch now only adds MNT,
+   FYR, FIN and SWE (MD's `setup_global_arrays` adds the rest), and the CSTO
+   removal of ARM moved to `md2026_on_actions.txt` because MD re-adds it at
+   `on_startup` - spot-check the arrays in a save/console.
+3. `air_wings` inside a file loaded by `set_oob`: the layout is unusual (MD and
+   vanilla use separate `set_air_oob` files), but vanilla's `PAK_1936` uses the
+   same combined layout and the 1.2.0 history (empty wings before the equipment
+   fix) shows the loader parses the block. **Verify the air base screen on day 1**;
+   if the wings are missing they must move to `set_air_oob` files.
+4. The pre-completed focuses run on `on_startup`/`on_daily`; check `error.log`
+   for focus rewards that reference missing systems.
+5. Legacy-war settlement in `md2026_on_actions.txt` (Chechnya, Aceh, Tamil
+   Eelam, Afghanistan, Eritrea, South Sudan, African rebels) - verify no
+   leftover wars on day 1.
 
 ## Troubleshooting
 

@@ -5,8 +5,13 @@ Writes docs/Economy-2026.md from patches/history_countries/*: GDP per capita,
 debt, treasury and the technology tier, next to an indicative 2025 reference
 value.  Differences above REVIEW_THRESHOLD percent are flagged for review.
 
+Debt convention: `debt` is *central-government gross debt in billions of USD*
+(the convention MD's own 2000 history uses - e.g. MD Canada 2000 = 804 vs ~590
+general government), so IMF general-government figures are not directly
+comparable.  `debt` must be positive and must not be smaller than `treasury`.
+
 Usage:
-    python tools/economy_report.py [--write]
+    python tools/economy_report.py [--write] [--md PATH]
 """
 
 import argparse
@@ -20,6 +25,7 @@ import rebase  # noqa: E402
 REPO = rebase.REPO
 PATCH_DIR = os.path.join(REPO, "patches", "history_countries")
 REVIEW_THRESHOLD = 35
+MAX_DEBT = 200000.0  # billions of USD; above this the value is a typo
 
 # Entries where the reference data itself is uncertain: keep the shipped value
 # and explain it instead of flagging it for a change.
@@ -67,12 +73,48 @@ def patch_values():
     return out
 
 
+def md_2000_debt(md):
+    """tag -> MD's own 2000 debt value (last value in MD's history file)."""
+    out = {}
+    root = os.path.join(md, "history", "countries")
+    for name in sorted(os.listdir(root)) if os.path.isdir(root) else []:
+        if " - " not in name or not name.endswith(".txt"):
+            continue
+        tag = name[:3]
+        text = rebase.strip_comments(rebase.read(os.path.join(root, name)))
+        vals = re.findall(r"var\s*=\s*debt\s+value\s*=\s*([0-9.]+)", text)
+        if vals:
+            out[tag] = float(vals[-1])
+    return out
+
+
+def debt_sanity(tag, v, md_debt):
+    """Return (severity, message) for a debt/treasury problem, or None."""
+    debt = v.get("debt")
+    treasury = v.get("treasury")
+    if debt is None:
+        return None
+    if debt <= 0:
+        return "error", f"debt = {debt} must be positive"
+    if debt > MAX_DEBT:
+        return "error", f"debt = {debt} bn is not plausible (typo?)"
+    if treasury is not None and treasury > debt:
+        return "error", f"treasury ({treasury}) exceeds debt ({debt})"
+    base = md_debt.get(tag)
+    if base and base > 50 and debt < base * 0.25:
+        return "info", (f"debt fell from MD's 2000 value {base:g} to {debt:g} "
+                        f"(-{100 - debt / base * 100:.0f}%) - verify")
+    return None
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--write", action="store_true")
+    ap.add_argument("--md", default=os.environ.get("MD_PATH", rebase.DEFAULT_MD))
     args = ap.parse_args()
 
     data = patch_values()
+    md_debt = md_2000_debt(args.md)
     lines = [
         "# Economy 2026 - shipped numbers vs reference data",
         "",
@@ -85,10 +127,16 @@ def main():
         "per capita; entries more than "
         f"{REVIEW_THRESHOLD}% away from it are flagged with a `review` note.",
         "",
+        "**Debt convention:** `debt` is *central-government gross debt* in billions of",
+        "USD - the convention MD's own 2000 history uses (MD Canada 2000 = 804 vs ~590",
+        "general government; MD UK 2000 = 840 vs ~600). IMF general-government debt is",
+        "therefore not directly comparable. `treasury` must not exceed `debt`.",
+        "",
         "| Tag | Tier | GDP/capita | Reference | Diff | Debt | Treasury | Note |",
         "|---|---|---|---|---|---|---|---|",
     ]
     flagged = []
+    debt_flags = []
     for tag in sorted(data):
         v = data[tag]
         if "gdp" not in v:
@@ -105,6 +153,12 @@ def main():
                 else:
                     note = "**review**"
                     flagged.append((tag, v["gdp"], ref, d))
+        sanity = debt_sanity(tag, v, md_debt)
+        if sanity:
+            severity, message = sanity
+            note = (note + "; " if note else "") + f"**debt: {message}**"
+            if severity == "error":
+                debt_flags.append((tag, message))
         lines.append("| {} | {} | {} | {} | {} | {} | {} | {} |".format(
             tag,
             v.get("tier", "-"),
@@ -122,12 +176,22 @@ def main():
         for tag, got, ref, d in flagged:
             lines.append(f"- **{tag}**: gdp_per_capita {got} vs reference {ref} ({d:+.0f}%)")
         lines.append("")
+    if debt_flags:
+        lines.append("## Debt problems")
+        lines.append("")
+        for tag, message in debt_flags:
+            lines.append(f"- **{tag}**: {message}")
+        lines.append("")
     lines.append("## Method")
     lines.append("")
     lines.append("`gdp_per_capita` drives MD's economy systems together with the state")
     lines.append("productivity variables set in the same history block. The reference values are")
     lines.append("indicative: they are not copied into the game, they only flag entries that may")
     lines.append("be off by an order of magnitude.")
+    lines.append("")
+    lines.append("The debt check flags non-positive or absurd `debt` values, a `treasury`")
+    lines.append("larger than `debt`, and debt that collapsed to under a quarter of MD's own")
+    lines.append("2000 value (shown against MD's history, not against IMF data).")
     lines.append("")
 
     report = "\n".join(lines)
@@ -138,7 +202,7 @@ def main():
         print(f"wrote {os.path.relpath(out, REPO)}")
     else:
         print(report)
-    print(f"\nflags: {len(flagged)}", file=sys.stderr)
+    print(f"\nflags: {len(flagged)}, debt problems: {len(debt_flags)}", file=sys.stderr)
 
 
 if __name__ == "__main__":

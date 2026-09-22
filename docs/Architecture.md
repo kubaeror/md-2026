@@ -70,15 +70,24 @@ The fixes are applied to *our* copies only and disappear automatically once MD f
 
 | Tool | Purpose |
 |---|---|
-| `tools/validate.py` | reference/consistency checker (technologies, ideas, focuses, characters, OOB equipment and sub-units, tags, ideologies, events, sprites, loc keys, duplicates); the goal is 0 errors |
+| `tools/validate.py` | reference/consistency checker (technologies, ideas, focuses, characters, OOB equipment and sub-units, tags, ideologies, events, sprites, loc keys, duplicates, phantom platforms); the goal is 0 errors |
 | `tools/audit_2026.py` | coverage report -> `docs/Coverage.md` (patch/branch/OOB/loc coverage) |
+| `tools/audit_deep.py` | deep static audit (file integrity, OOB structure/basing, history, focus, events, loc, bookmark, cross-mod arrays, generator reproducibility); findings feed `docs/Audit-2026.md` |
+| `tools/oob_digest.py` | per-country OOB fact sheet (divisions, fleets, air wings, stockpiles) for review and audits |
+| `tools/oob_lookup.py` | province/state/equipment lookup for OOB editing (state owner, air/naval base, provinces) |
+| `tools/oob_check.py` | fast structural check of the 2026 OOBs (basing, naval/air bases, equipment, templates, ship names) |
 | `tools/loc_keys.py` | localisation key extraction, missing/unused/translation report |
 | `tools/check_leaders.py` | leader data in `patches/leaders_2026.json` vs generated histories |
-| `tools/economy_report.py` | GDP/debt table for review -> `docs/Economy-2026.md` |
+| `tools/economy_report.py` | GDP/debt table for review -> `docs/Economy-2026.md` (includes a debt/treasury sanity check) |
 | `tools/make_nonnsb_oob.py` | non-NSB OOB variants |
 | `tools/fix_oob_equipment.py` | equipment name mapping for the OOB files |
 | `tools/fix_oob_tiers.py` | air wing generation tiers |
 | `tools/check_pl_part.py` / `assemble_pl.py` | Polish translation parts |
+
+`patches/phantom_platforms.json` lists ships, aircraft and formations that did
+not exist on 1 January 2026; `validate.py` fails when one reappears in a 2026
+OOB. `tools/foreign_basing.json` holds the intentional foreign-basing pairs used
+by the OOB checks.
 
 ## Focus branches
 

@@ -28,16 +28,20 @@ Before testing:
 ### 2026 start
 - [ ] Countries have 2026 leaders, parties and national spirits (spot-check USA, POL, UKR, CHI, RUS).
 - [ ] Crimea/Donbas/Kherson/Zaporizhzhia belong to Russia, the rest of Ukraine to UKR.
+- [ ] Afghanistan is owned by AFG (the TAL annexation still runs as a fallback: TAL should not exist after startup).
 - [ ] NATO members (incl. FIN, SWE, POL, BAL states) have the `NATO_member` idea.
 - [ ] The 2026 focus branch is visible at the edge of the tree (USA, POL, UKR, CHI, JAP, GER, ...).
 - [ ] Pre-completed focuses do not show as available again; Russia's Putin branch is open.
 - [ ] Technology: a tier-1 country (USA) has modern equipment unlocked; a tier-5 country has less.
 - [ ] Army: units exist with 2026 names; no "invalid division template" errors.
+- [ ] Army: no 2026 division is teleported away at day 1 (spot-check USA 2nd ID in Korea, the German brigade in Lithuania, Ukrainian brigades outside Crimea).
 - [ ] Army: stockpiles are not empty (check Army -> Equipment; infantry weapons should show).
 - [ ] Air wings: 4th/4.5-generation aircraft exist (F-16, Eurofighter, Su-30) instead of empty wings.
+- [ ] Navy: ships exist in the right fleets and no ship is destroyed on day 1 (a naval base without a base building deletes its fleet).
 - [ ] Decisions: the `md2026_` decision categories are visible and open without errors.
 - [ ] Events: `event md2026_system.1` fires and displays text (not raw keys).
 - [ ] Ukraine's `Bryhada TRO` rewards create divisions (complete a TDF focus or check the pre-completed ones).
+- [ ] Console check `remove_from_array` state: `global.nato_members` has no duplicate entries (a country appears once) and `global.CSTO_member` does not contain ARM.
 - [ ] Save and reload the 2026 game.
 
 ### 2026 start without No Step Back (in the launcher, disable the DLC)
