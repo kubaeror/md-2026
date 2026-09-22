@@ -90,7 +90,7 @@ per-country notes list the substance.
 | CAN | 10→11 | 20→21 | 87→124 | SER | 7→7 | 0→0 | 20→31 |
 | CHI | 58→66 | 65→89 | 1083→1283 | SLO | 2→2 | 0→0 | 16→27 |
 | CRO | 5→3 | 5→8 | 12→12 | SLV | 2→3 | 0→0 | 0→0 |
-| CZE | 4→4 | 0→0 | 38→40 | SOV | 45→61 | 59→68 | 396→586 |
+| CZE | 4→4 | 0→0 | 38→40 | SOV | 45→61 | 59→68 | 396→600 |
 | DEN | 3→3 | 9→18 | 31→37 | SPR | 10→11 | 18→22 | 159→170 |
 | EGY | 20→23 | 16→27 | 285→353 | SUD | 15→13 | 0→0 | 22→22 |
 | ENG | 7→7 | 36→35 | 143→203 | SWE | 8→10 | 9→11 | 102→98 |
@@ -142,6 +142,10 @@ Substance per country (the audit row tags in brackets):
   abstraction) and MD's own naval hull families.
 - **Greece's "III Infantry Division"** and Serbia's legacy "72nd Special
   Brigade" are flagged in the subagent work but were outside the audit rows.
+- **MD-side anachronisms reachable in 2026**: MD's own focus trees still offer
+  some 2000-era rewards (e.g. `ENG_albion_class_lpd` builds HMS Albion, retired
+  in March 2025; it is not pre-completed and not overridden). These are MD's
+  content, not the 2026 OOB, and adapting each one is separate follow-up work.
 
 ### Verification
 

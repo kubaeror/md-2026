@@ -33,11 +33,11 @@ Welcome to the comprehensive documentation for the **Millennium Dawn 2026 Rework
 |--------|---------|
 | **Start Date** | January 1, 2026 |
 | **Countries Updated** | 68 (30 bookmark countries) |
-| **Focus Trees** | 30 `MD2026_*` branches injected into MD 2.0 trees |
+| **Focus Trees** | 32 `MD2026_*` branches injected into MD 2.0 trees (all 30 bookmark countries plus EGY and TAI) |
 | **Events** | 15 `md2026_*` event chains |
 | **National Spirits** | per-country `md2026_*` spirits |
 | **OOB Files** | 67 countries × 2 variants (NSB / non-NSB) |
-| **Localisation Keys** | 1720 (English) + 1720 (Polish) |
+| **Localisation Keys** | 1792 (English) + 1792 (Polish) |
 | **Base Mod Required** | Millennium Dawn 2.0.0 |
 | **HoI4 Version** | 1.19.x |
 

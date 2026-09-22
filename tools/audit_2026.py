@@ -222,7 +222,12 @@ def main():
     oob = oob_files()
     patches = set(history_patches())
     bookmark = bookmark_countries()
-    rename = {"NOR": "NRY"}
+    rename = {"NOR": "NRY"}                      # patch tag -> MD tag
+    unrename = {v: k for k, v in rename.items()}  # MD tag -> patch tag
+
+    def patch_tag(tag):
+        """The tag our patch directory uses for an MD tag (NRY is patched as NOR)."""
+        return unrename.get(tag, tag)
 
     # tag -> [tree files]
     tag_trees = {}
@@ -237,7 +242,7 @@ def main():
                       if not all(tid in generic for _, tid in v))
 
     def has_patch(tag):
-        return rename.get(tag, tag) in patches
+        return patch_tag(tag) in patches
 
     missing_patch = [t for t in own_tags if not has_patch(t)]
     missing_branch = [t for t in own_tags if t not in branches and rename.get(t, t) not in branches]
@@ -305,7 +310,7 @@ def main():
         md_t = rename.get(t, t)
         lines.append("| {} | {} | {} | {} | {} |".format(
             t,
-            "yes" if md_t in patches else "**NO**",
+            "yes" if patch_tag(md_t) in patches else "**NO**",
             "yes" if t in branches else "**NO**",
             "yes" if md_t in oob and "nsb" in oob[md_t] else "**NO**",
             "yes" if md_t in oob and "nonnsb" in oob[md_t] else "**NO**",

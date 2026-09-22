@@ -956,6 +956,13 @@ air_wings = {
 		name = "184th Guards Heavy Bomber Regiment"
 		start_experience_factor = 0.5
 	}
+	# 203rd Guards Air Refuelling Regiment - Engels (Il-78M)
+	# (the home base at Dyagilevo/Ryazan has no air base on the mod map)
+	1130 = {
+		transport_plane2 = { owner = "SOV" amount = 14 version_name = "Il-78M" }
+		name = "203rd Guards Air Refuelling Regiment"
+		start_experience_factor = 0.45
+	}
 	# 52nd Guards Heavy Bomber Regiment - Kaluga (Tu-22M3)
 	1181 = {
 		large_plane_airframe_1 = { owner = "SOV" amount = 28 version_name = "Tu-22M3" }

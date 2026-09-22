@@ -31,10 +31,10 @@ that adds a **January 1, 2026** start date bookmark to Hearts of Iron IV.
 |---|---|
 | Countries with a 2026 history patch | 68 |
 | 2026 bookmark entries | 30 |
-| Focus branches (`MD2026_*`) | 30 |
+| Focus branches (`MD2026_*`) | 32 |
 | 2026 orders of battle (NSB / non-NSB) | 67 / 67 |
 | Pre-completed focuses | 2108 |
-| Localisation keys (EN / PL) | 1720 / 1720 |
+| Localisation keys (EN / PL) | 1792 / 1792 |
 | Validator | 0 errors |
 
 `python tools/audit_2026.py --write` regenerates the full report in

@@ -142,6 +142,8 @@ def make_nonnsb(text, tag, avail):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--check", action="store_true",
+                    help="verify the on-disk non-NSB files match a fresh generation")
     ap.add_argument("--md", default=os.environ.get("MD_PATH", rebase.DEFAULT_MD))
     args = ap.parse_args()
 
@@ -150,7 +152,7 @@ def main():
                       if "nsb" in p and "nonsb" not in p and "both" not in p)
     print(f"NSB-only equipment in MD: {len(nsb_only)}")
 
-    total, problems = 0, 0
+    total, problems, stale = 0, 0, 0
     for fn in sorted(os.listdir(OOB_DIR)):
         m = re.match(r"^([A-Z]{3})_2026_nsb\.txt$", fn)
         if not m:
@@ -170,10 +172,21 @@ def main():
             new_text = header + body
         out = os.path.join(OOB_DIR, f"{tag}_2026_nonnsb.txt")
         total += 1
-        print(f"  {tag}: {len(replacements)} replacements -> {os.path.basename(out)}")
+        if args.check:
+            on_disk = rebase.read(out) if os.path.exists(out) else None
+            if on_disk != new_text:
+                stale += 1
+                print(f"  !! {tag}: non-NSB variant is stale (regenerate with --apply)")
+        else:
+            print(f"  {tag}: {len(replacements)} replacements -> {os.path.basename(out)}")
         if args.apply:
             rebase.write(out, new_text)
-    print(f"{total} variants" + ("" if args.apply else "  (dry-run, use --apply)"))
+    if args.check:
+        print(f"{total} variants checked, {stale} stale")
+        if stale:
+            sys.exit(1)
+    else:
+        print(f"{total} variants" + ("" if args.apply else "  (dry-run, use --apply)"))
     if problems:
         sys.exit(1)
 
