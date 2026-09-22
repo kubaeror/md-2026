@@ -108,6 +108,14 @@ units = {
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
+	# 6th Armoured Division
+	division = {
+		name = "6th Armoured Division"
+		location = 7144
+		division_template = "Firqa Moudar'a"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
 	# 9th Armoured Division
 	division = {
 		name = "9th Armoured Division"
@@ -120,14 +128,6 @@ units = {
 	division = {
 		name = "21st Armoured Division"
 		location = 4076
-		division_template = "Firqa Moudar'a"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.85
-	}
-	# 23rd Armoured Division
-	division = {
-		name = "23rd Armoured Division"
-		location = 4145
 		division_template = "Firqa Moudar'a"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
@@ -151,18 +151,18 @@ units = {
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
-	# 6th Mechanized Division
-	division = {
-		name = "6th Mechanized Division"
-		location = 7144
-		division_template = "Firqa Mechaniqui"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.85
-	}
 	# 7th Mechanized Division
 	division = {
 		name = "7th Mechanized Division"
 		location = 12049
+		division_template = "Firqa Mechaniqui"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 16th Mechanized Division
+	division = {
+		name = "16th Mechanized Division"
+		location = 10061
 		division_template = "Firqa Mechaniqui"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
@@ -179,6 +179,30 @@ units = {
 	division = {
 		name = "19th Mechanized Division"
 		location = 9947
+		division_template = "Firqa Mechaniqui"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 23rd Mechanized Division
+	division = {
+		name = "23rd Mechanized Division"
+		location = 4145
+		division_template = "Firqa Mechaniqui"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 33rd Mechanized Division
+	division = {
+		name = "33rd Mechanized Division"
+		location = 12071
+		division_template = "Firqa Mechaniqui"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 36th Mechanized Division
+	division = {
+		name = "36th Mechanized Division"
+		location = 10031
 		division_template = "Firqa Mechaniqui"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
@@ -284,13 +308,23 @@ units = {
 			ship = { name = "ENS Gamal Abdel Nasser (L1010)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Mistral Class" } } }
 			ship = { name = "ENS Tahya Misr (FFG-1001)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "FREMM Class" } } }
 			ship = { name = "ENS Al Galala (FFG-1002)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "FREMM Class" } } }
-			ship = { name = "ENS Sharm El Sheikh" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Oliver Hazard Perry Class" } } }
+			ship = { name = "ENS Bernees (FFG-1003)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "FREMM Class" } } }
+			# MEKO A-200 frigates
+			ship = { name = "ENS Al-Aziz (F-904)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_4 = { amount = 1 owner = EGY creator = EGY version_name = "MEKO A-200 Class" } } }
+			ship = { name = "ENS Al-Qahhar (F-905)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_4 = { amount = 1 owner = EGY creator = EGY version_name = "MEKO A-200 Class" } } }
+			ship = { name = "ENS Al-Qadeer (F-909)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_4 = { amount = 1 owner = EGY creator = EGY version_name = "MEKO A-200 Class" } } }
+			# Oliver Hazard Perry-class frigates (ex-US)
+			ship = { name = "ENS Sharm El-Sheik (F-901)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Oliver Hazard Perry Class" } } }
+			ship = { name = "ENS Toushka (F-906)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Oliver Hazard Perry Class" } } }
+			# Gowind 2500 corvettes
 			ship = { name = "ENS El Fateh (971)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "Gowind 2500 Class" } } }
-			ship = { name = "ENS Port Said (972)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "Gowind 2500 Class" } } }
+			ship = { name = "ENS Port Said (976)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "Gowind 2500 Class" } } }
 			ship = { name = "ENS S. Ezzat" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Ambassador Mk III Class" } } }
 			ship = { name = "ENS M. Fahmy" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Ambassador Mk III Class" } } }
-			ship = { name = "S-41" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Type 209/1400 Class" } } }
-			ship = { name = "S-42" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Type 209/1400 Class" } } }
+			ship = { name = "S41 (861)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Type 209/1400 Class" } } }
+			ship = { name = "S42 (864)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Type 209/1400 Class" } } }
+			ship = { name = "831" definition = attack_submarine start_experience_factor = 0.25 equipment = { attack_submarine_hull_1 = { amount = 1 owner = EGY creator = EGY version_name = "Romeo Class" } } }
+			ship = { name = "842" definition = attack_submarine start_experience_factor = 0.25 equipment = { attack_submarine_hull_1 = { amount = 1 owner = EGY creator = EGY version_name = "Romeo Class" } } }
 		}
 	}
 
@@ -301,11 +335,15 @@ units = {
 			name = "Red Sea Fleet"
 			location = 4073
 			ship = { name = "ENS Anwar El Sadat (L1020)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Mistral Class" } } }
-			ship = { name = "ENS Taba" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Oliver Hazard Perry Class" } } }
-			ship = { name = "ENS Al Moez (973)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "Gowind 2500 Class" } } }
-			ship = { name = "ENS Luxor (974)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "Gowind 2500 Class" } } }
-			ship = { name = "S-43" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Type 209/1400 Class" } } }
-			ship = { name = "S-44" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Type 209/1400 Class" } } }
+			ship = { name = "ENS Al-Jabbar (F-910)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_4 = { amount = 1 owner = EGY creator = EGY version_name = "MEKO A-200 Class" } } }
+			ship = { name = "ENS Alexandria (F-911)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Oliver Hazard Perry Class" } } }
+			ship = { name = "ENS Taba (F-916)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Oliver Hazard Perry Class" } } }
+			ship = { name = "ENS Al Moez (981)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "Gowind 2500 Class" } } }
+			ship = { name = "ENS Luxor (986)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = EGY creator = EGY version_name = "Gowind 2500 Class" } } }
+			ship = { name = "S43 (867)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Type 209/1400 Class" } } }
+			ship = { name = "S44 (870)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = EGY creator = EGY version_name = "Type 209/1400 Class" } } }
+			ship = { name = "852" definition = attack_submarine start_experience_factor = 0.25 equipment = { attack_submarine_hull_1 = { amount = 1 owner = EGY creator = EGY version_name = "Romeo Class" } } }
+			ship = { name = "858" definition = attack_submarine start_experience_factor = 0.25 equipment = { attack_submarine_hull_1 = { amount = 1 owner = EGY creator = EGY version_name = "Romeo Class" } } }
 		}
 	}
 }
@@ -323,12 +361,12 @@ instant_effect = {
 air_wings = {
 	# Cairo area air bases
 	215 = {
-		medium_plane_airframe_2 = { owner = "EGY" creator = "FRA" amount = 36 version_name = "Rafale EM" }
+		medium_plane_airframe_2 = { owner = "EGY" creator = "FRA" amount = 46 version_name = "Rafale DM/EM" }
 		name = "242nd Tactical Fighter Wing"
 		start_experience_factor = 0.5
 	}
 	215 = {
-		L_Strike_fighter2 = { owner = "EGY" creator = "USA" amount = 80 version_name = "F-16C Block 52" }
+		L_Strike_fighter2 = { owner = "EGY" creator = "USA" amount = 20 version_name = "F-16C Block 52" }
 		name = "232nd Tactical Fighter Wing"
 		start_experience_factor = 0.45
 	}
@@ -351,6 +389,17 @@ air_wings = {
 	216 = {
 		L_Strike_fighter2 = { owner = "EGY" creator = "USA" amount = 100 version_name = "F-16C Block 40" }
 		name = "252nd Tactical Fighter Wing"
+		start_experience_factor = 0.4
+	}
+	216 = {
+		small_plane_airframe_2 = { owner = "EGY" creator = "FRA" amount = 18 version_name = "Mirage 2000EM/BM" }
+		name = "82 Squadron"
+		start_experience_factor = 0.35
+	}
+	# Suez Canal area air bases - Abu Suweir
+	214 = {
+		L_Strike_fighter2 = { owner = "EGY" creator = "USA" amount = 100 version_name = "F-16C Block 40" }
+		name = "262nd Tactical Fighter Wing"
 		start_experience_factor = 0.4
 	}
 }

@@ -50,26 +50,26 @@ division_template = {
 }
 
 units = {
-	# 7th Mechanized Brigade (Hranice)
+	# 7th Mechanized Brigade (Hranice, Moravia)
 	division = {
 		name = "7. mechanizovaná brigáda"
-		location = 3418
+		location = 3553
 		division_template = "Mechanizovaná Brigáda"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.85
 	}
-	# 4th Rapid Deployment Brigade (Žatec)
+	# 4th Rapid Deployment Brigade (Žatec, Bohemia)
 	division = {
 		name = "4. brigáda rychlého nasazení"
-		location = 6590
+		location = 11542
 		division_template = "Lehká Brigáda"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.85
 	}
-	# 13th Artillery Regiment (as brigade equivalent)
+	# 13th Artillery Regiment (Jince, Central Bohemia)
 	division = {
 		name = "13. dělostřelecký pluk"
-		location = 9541
+		location = 3418
 		division_template = "Lehká Brigáda"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
@@ -108,7 +108,7 @@ air_wings = {
 	}
 	# 241st Transport Squadron — C-295M (Kbely, Prague)
 	117 = {
-		transport_plane1 = { owner = "CZE" creator = "SPR" amount = 4 version_name = "C-295M" }
+		transport_plane1 = { owner = "CZE" creator = "SPR" amount = 6 version_name = "C-295M" }
 		name = "241. dopravní letka"
 		start_experience_factor = 0.4
 	}

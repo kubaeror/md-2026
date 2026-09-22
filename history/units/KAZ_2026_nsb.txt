@@ -20,6 +20,23 @@ division_template = {
 }
 
 division_template = {
+	name = "Tankovaya Brigada"		# Tank Brigade
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		armor_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
 	name = "Motostrelkovaya Brigada"		# Motorized Rifle Brigade
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
@@ -36,7 +53,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Desantnaya Brigada"		# Airmobile Brigade
+	name = "Desantnaya Brigada"		# Air Assault Brigade
 	regiments = {
 		L_Air_Inf_Bat = { x = 0 y = 0 }
 		L_Air_Inf_Bat = { x = 0 y = 1 }
@@ -67,65 +84,121 @@ division_template = {
 }
 
 units = {
-	##### Kazakh Armed Forces #####
+	##### Kazakh Ground Forces #####
+	# Four regional commands (Astana, East, South, West), brigade structure
 
-	# Astana (Capital)
+	# Regional Command "East" (HQ Semey)
 	division = {
-		name = "1. Mekhanizirovannya Brigada"
-		location = 10308
+		name = "3rd Mechanized Brigade"
+		location = 7784
 		division_template = "Mekhanizirovannya Brigada"
-		start_experience_factor = 0.40
-		start_equipment_factor = 0.70
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
 	}
 	division = {
-		name = "Desantnaya Brigada"
+		name = "4th Mechanized Brigade"
+		location = 1864
+		division_template = "Mekhanizirovannya Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "8th Mechanized Brigade"
+		location = 12594
+		division_template = "Mekhanizirovannya Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "11th Tank Brigade"
+		location = 7784
+		division_template = "Tankovaya Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.60
+	}
+	# 3rd Motor Rifle Brigade - based at Usharal (mapped to Zharkent, Zhetisu)
+	division = {
+		name = "3rd Motor Rifle Brigade"
+		location = 4845
+		division_template = "Motostrelkovaya Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+
+	# Regional Command "Astana" (HQ Karaganda)
+	division = {
+		name = "7th Motor Rifle Brigade"
+		location = 4333
+		division_template = "Motostrelkovaya Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+	division = {
+		name = "36th Air Assault Brigade"
 		location = 10308
 		division_template = "Desantnaya Brigada"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.70
 	}
 
-	# Almaty (Southern)
+	# Regional Command "South" (HQ Taraz)
 	division = {
-		name = "1. Motostrelkovaya Brigada"
-		location = 1864
-		division_template = "Motostrelkovaya Brigada"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.65
+		name = "5th Mountain Rifle Brigade"
+		location = 12640
+		division_template = "Pehotnaya Brigada"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.60
 	}
 	division = {
-		name = "2. Motostrelkovaya Brigada"
-		location = 10603
-		division_template = "Motostrelkovaya Brigada"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.65
-	}
-
-	# Western (Caspian)
-	division = {
-		name = "2. Mekhanizirovannya Brigada"
-		location = 4333
+		name = "6th Mechanized Brigade"
+		location = 10148
 		division_template = "Mekhanizirovannya Brigada"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.65
 	}
-
-	# Eastern
 	division = {
-		name = "1. Pehotnaya Brigada"
+		name = "35th Guards Air Assault Brigade"
 		location = 10547
-		division_template = "Pehotnaya Brigada"
-		start_experience_factor = 0.30
-		start_equipment_factor = 0.60
+		division_template = "Desantnaya Brigada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.70
+	}
+	division = {
+		name = "37th Air Assault Brigade"
+		location = 10619
+		division_template = "Desantnaya Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.70
+	}
+	division = {
+		name = "38th Air Assault Brigade"
+		location = 13210
+		division_template = "Desantnaya Brigada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.70
 	}
 
-	# Southern border
+	# Regional Command "West" (HQ Atyrau) - Caspian sector
 	division = {
-		name = "2. Pehotnaya Brigada"
-		location = 10619
-		division_template = "Pehotnaya Brigada"
-		start_experience_factor = 0.30
-		start_equipment_factor = 0.60
+		name = "390th Guards Naval Infantry Brigade"
+		location = 11701
+		division_template = "Mekhanizirovannya Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.65
+	}
+
+	##### Kazakh Naval Forces (Caspian Flotilla) #####
+	fleet = {
+		name = "Caspian Flotilla"
+		naval_base = 11701
+		task_force = {
+			name = "Missile Boat Division"
+			location = 11701
+			ship = { name = "Kazakhstan (250)" definition = patrol_boat equipment = { patrol_boat_hull_2 = { amount = 1 owner = KAZ creator = KAZ version_name = "Kazakhstan Class" } } }
+			ship = { name = "Oral (251)" definition = patrol_boat equipment = { patrol_boat_hull_2 = { amount = 1 owner = KAZ creator = KAZ version_name = "Kazakhstan Class" } } }
+			ship = { name = "Saryarka (252)" definition = patrol_boat equipment = { patrol_boat_hull_2 = { amount = 1 owner = KAZ creator = KAZ version_name = "Kazakhstan Class" } } }
+			ship = { name = "Mangystau (253)" definition = patrol_boat equipment = { patrol_boat_hull_2 = { amount = 1 owner = KAZ creator = KAZ version_name = "Kazakhstan Class" } } }
+		}
 	}
 }
 
@@ -144,31 +217,37 @@ instant_effect = {
 
 ##### Kazakh Air Defence Forces #####
 air_wings = {
-	# Su-30SM (delivered from Russia)
+	# 604th Air Base - Taldykorgan (Su-30SM, delivered from Russia)
 	719 = {
-		MR_Fighter4 = { owner = "KAZ" creator = "SOV" amount = 12 version_name = "Su-30SM Flanker-H" }
+		MR_Fighter4 = { owner = "KAZ" creator = "SOV" amount = 30 version_name = "Su-30SM Flanker-H" }
 		name = "604th Air Base"
 		start_experience_factor = 0.4
 	}
-	# MiG-29 fighters
+	# 600th Guards Air Base - Zhetigen / Almaty (Su-27 and Su-27UB)
 	719 = {
-		small_plane_airframe_2 = { owner = "KAZ" creator = "SOV" amount = 28 version_name = "MiG-29 Fulcrum" }
-		name = "600th Air Base"
-		start_experience_factor = 0.35
+		MR_Fighter4 = { owner = "KAZ" creator = "SOV" amount = 24 version_name = "Su-27 Flanker-B" }
+		name = "600th Guards Air Base"
+		start_experience_factor = 0.4
 	}
-	# MiG-31 interceptors
-	715 = {
-		MR_Fighter4 = { owner = "KAZ" creator = "SOV" amount = 14 version_name = "MiG-31BS Foxhound" }
-		name = "356th Fighter Regiment"
-		start_experience_factor = 0.35
-	}
-	# Su-25 attack
-	719 = {
+	# 602nd Air Base - Shymkent (Su-25 attack)
+	717 = {
 		cas2 = { owner = "KAZ" creator = "SOV" amount = 12 version_name = "Su-25 Frogfoot" }
-		name = "Assault Aviation Squadron"
+		name = "602nd Air Base"
 		start_experience_factor = 0.35
 	}
-	# C-295M Transport
+	# 610th Air Base - Karaganda (Wing Loong I UCAV)
+	716 = {
+		Air_UAV2 = { owner = "KAZ" creator = "CHI" amount = 3 version_name = "Wing Loong I" }
+		name = "610th Air Base (UAV Squadron)"
+		start_experience_factor = 0.35
+	}
+	# 610th Air Base - Karaganda (TAI Anka UCAV)
+	716 = {
+		Air_UAV3 = { owner = "KAZ" creator = "TUR" amount = 4 version_name = "TAI Anka" }
+		name = "610th Air Base (Anka Squadron)"
+		start_experience_factor = 0.35
+	}
+	# Transport Aviation - Astana (C-295M)
 	716 = {
 		transport_plane1 = { owner = "KAZ" creator = "SPR" amount = 8 version_name = "C-295M" }
 		name = "Transport Aviation"

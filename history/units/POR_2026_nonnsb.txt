@@ -57,10 +57,10 @@ division_template = {
 units = {
 	##### Portuguese Army #####
 
-	# Mechanized Brigade - Santa Margarida
+	# Mechanized Brigade - Santa Margarida (Constância)
 	division = {
 		name = "Brigada Mecanizada"
-		location = 11805
+		location = 924
 		division_template = "Brigada Mecanizada"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
@@ -75,19 +75,19 @@ units = {
 		start_equipment_factor = 0.75
 	}
 
-	# Light Brigade - Lisbon area
+	# Intervention Brigade - Coimbra
 	division = {
-		name = "Brigada Ligeira de Intervencao"
-		location = 924
+		name = "Brigada de Intervenção"
+		location = 799
 		division_template = "Brigada Ligeira"
 		start_experience_factor = 0.40
 		start_equipment_factor = 0.70
 	}
 
-	# Northern garrison
+	# Northern Command - Porto
 	division = {
 		name = "Comando Norte"
-		location = 3118
+		location = 9817
 		division_template = "Brigada Ligeira"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.65
@@ -121,6 +121,8 @@ units = {
 			# Viana do Castelo-class OPVs
 			ship = { name = "NRP Viana do Castelo (P360)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = POR creator = POR version_name = "Viana do Castelo class" } } }
 			ship = { name = "NRP Figueira da Foz (P361)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = POR creator = POR version_name = "Viana do Castelo class" } } }
+			ship = { name = "NRP Sines (P362)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = POR creator = POR version_name = "Viana do Castelo class" } } }
+			ship = { name = "NRP Setúbal (P363)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = POR creator = POR version_name = "Viana do Castelo class" } } }
 		}
 	}
 }

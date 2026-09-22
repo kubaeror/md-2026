@@ -3,7 +3,7 @@
 # Rebuild with: python tools/make_nonnsb_oob.py --apply
 ##### Kyrgyzstan - 2026 OOB #####
 # Armed Forces of Kyrgyzstan - small post-Soviet military
-# Mountain infantry focus
+# Mountain infantry focus, Turkish drones from 2021
 
 division_template = {
 	name = "Motostrelkovaya Brigada"		# Motorized Rifle Brigade
@@ -34,20 +34,54 @@ division_template = {
 	}
 }
 
+division_template = {
+	name = "Brigada Spetsnaz"		# Special Forces Brigade
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
+		L_Ranger_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
 units = {
+	##### Kyrgyz Ground Forces #####
+
+	# Northern Group of Forces - Koy-Tash (Bishkek)
 	division = {
-		name = "1. Motostrelkovaya Brigada"
-		location = 7706
+		name = "2nd Motor Rifle Brigade"
+		location = 12583
 		division_template = "Motostrelkovaya Brigada"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.55
 	}
+	# Southern Group of Forces - Osh
 	division = {
-		name = "1. Pehotnaya Brigada"
-		location = 7706
+		name = "1st Motor Rifle Brigade (Mountain)"
+		location = 12370
+		division_template = "Pehotnaya Brigada"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.50
+	}
+	# 25th Special Forces Brigade "Scorpions"
+	division = {
+		name = "25th Special Forces Brigade"
+		location = 4224
+		division_template = "Brigada Spetsnaz"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.65
+	}
+	# Batken sector (Fergana Valley border)
+	division = {
+		name = "Independent Mountain Rifle Battalion"
+		location = 12581
 		division_template = "Pehotnaya Brigada"
 		start_experience_factor = 0.25
-		start_equipment_factor = 0.50
+		start_equipment_factor = 0.45
 	}
 }
 
@@ -57,14 +91,45 @@ instant_effect = {
 		amount = 1500
 		producer = KYR
 	}
+	# Army aviation (Mi-8MT / Mi-17V-5 transports and Mi-24V gunships)
+	add_equipment_to_stockpile = {
+		type = transport_helicopter_2
+		variant_name = "Mi-8MT / Mi-17V-5"
+		amount = 5
+		producer = SOV
+	}
+	add_equipment_to_stockpile = {
+		type = attack_helicopter_2
+		variant_name = "Mi-24V"
+		amount = 2
+		producer = SOV
+	}
 }
 
 ##### Kyrgyz Air Force #####
 air_wings = {
-	# Kant / Frunze (Tian Shan)
+	# Kant Air Base - Frunze-1 / Bishkek (L-39 trainers)
 	720 = {
-		L_Strike_fighter1 = { owner = "KYR" creator = "CZE" amount = 6 version_name = "Aero L-39 Albatros" }
-		name = "Training Aviation Regiment"
+		L_Strike_fighter1 = { owner = "KYR" creator = "CZE" amount = 4 version_name = "Aero L-39 Albatros" }
+		name = "Training Aviation Squadron"
 		start_experience_factor = 0.2
+	}
+	# Kant Air Base - An-26 transport
+	720 = {
+		transport_plane1 = { owner = "KYR" creator = "SOV" amount = 2 version_name = "An-26" }
+		name = "Transport Aviation Squadron"
+		start_experience_factor = 0.25
+	}
+	# Border Guard UCAV wing (Bayraktar TB2, delivered 2021-2022)
+	720 = {
+		Air_UAV2 = { owner = "KYR" creator = "TUR" amount = 4 version_name = "Bayraktar TB2" }
+		name = "Border Guard UAV Wing"
+		start_experience_factor = 0.3
+	}
+	# Border Guard UCAV wing (TAI Anka / Aksungur, Bayraktar Akinci - 2023)
+	720 = {
+		Air_UAV2 = { owner = "KYR" creator = "TUR" amount = 4 version_name = "TAI Anka / Aksungur / Akinci" }
+		name = "Border Guard UCAV Wing"
+		start_experience_factor = 0.3
 	}
 }

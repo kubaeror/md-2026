@@ -68,7 +68,7 @@ units = {
 	# 282nd Mechanized Brigade (Focșani)
 	division = {
 		name = "282 Brigada Mecanizata"
-		location = 9617
+		location = 11655
 		division_template = "Brigada Mecanizata"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
@@ -76,7 +76,7 @@ units = {
 	# 1st Mechanized Brigade (Bucharest)
 	division = {
 		name = "1 Brigada Mecanizata"
-		location = 723
+		location = 9617
 		division_template = "Brigada Mecanizata"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
@@ -84,7 +84,7 @@ units = {
 	# 9th Mechanized Brigade (Constanta)
 	division = {
 		name = "9 Brigada Mecanizata"
-		location = 11655
+		location = 657
 		division_template = "Brigada Mecanizata"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
@@ -95,7 +95,7 @@ units = {
 	# 2nd Infantry Brigade (Craiova)
 	division = {
 		name = "2 Brigada Infanterie"
-		location = 690
+		location = 6652
 		division_template = "Brigada Infanterie"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.75
@@ -103,15 +103,15 @@ units = {
 	# 15th Mechanized Brigade (Iași)
 	division = {
 		name = "15 Brigada Mecanizata"
-		location = 6652
+		location = 723
 		division_template = "Brigada Mecanizata"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
-	# 81st Mechanized Brigade (Buzău)
+	# 81st Mechanized Brigade (Bistrița)
 	division = {
 		name = "81 Brigada Mecanizata"
-		location = 9606
+		location = 3694
 		division_template = "Brigada Mecanizata"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
@@ -122,7 +122,7 @@ units = {
 	# 2nd Mountain Brigade (Curtea de Argeș)
 	division = {
 		name = "2 Brigada Vanatori de Munte"
-		location = 637
+		location = 690
 		division_template = "Brigada Vanatori de Munte"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
@@ -135,10 +135,10 @@ units = {
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
-	# 1st SOF Brigade
+	# 1st SOF Brigade (Târgu Mureș)
 	division = {
 		name = "1 Brigada Operatii Speciale"
-		location = 723
+		location = 522
 		division_template = "Brigada Operatii Speciale"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.85
@@ -200,12 +200,6 @@ air_wings = {
 	150 = {
 		transport_plane1 = { owner = "ROM" creator = "ITA" amount = 7 version_name = "C-27J Spartan" }
 		name = "Grupul Transport Tactic"
-		start_experience_factor = 0.35
-	}
-	# ISR Squadron — MQ-9A Reaper (Campia Turzii)
-	151 = {
-		Air_UAV2 = { owner = "ROM" creator = "USA" amount = 4 version_name = "MQ-9A Reaper" }
-		name = "Escadrila ISR"
 		start_experience_factor = 0.35
 	}
 }

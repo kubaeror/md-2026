@@ -95,38 +95,13 @@ division_template = {
 	}
 }
 
-# Foreign Legion Brigade
-division_template = {
-	name = "Brigade de la Legion Etrangere"
-	regiments = {
-		Mot_Inf_Bat = { x = 0 y = 0 }
-		Mot_Inf_Bat = { x = 0 y = 1 }
-		Mot_Inf_Bat = { x = 0 y = 2 }
-		L_Inf_Bat = { x = 0 y = 3 }
-		Arty_Bat = { x = 1 y = 0 }
-	}
-	support = {
-		H_Engi_Comp = { x = 0 y = 0 }
-		Mot_Recce_Comp = { x = 0 y = 1 }
-		combat_service_support_company = { x = 0 y = 2 }
-		SP_AA_Battery = { x = 0 y = 3 }
-	}
-}
-
 ## Unit Deployments ##
 
 units = {
 	# 1re Division - Northeast
 	division = {
-		name = "1re Brigade Blindee"
-		location = 6545
-		division_template = "Brigade Blindee"
-		start_experience_factor = 0.65
-		start_equipment_factor = 0.8
-	}
-	division = {
 		name = "2e Brigade Blindee"
-		location = 6698
+		location = 521
 		division_template = "Brigade Blindee"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.75
@@ -134,14 +109,14 @@ units = {
 	division = {
 		name = "7e Brigade Blindee"
 		location = 6698
-		division_template = "Brigade Interarmes"
+		division_template = "Brigade Blindee"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.75
 	}
 
 	# 3e Division
 	division = {
-		name = "9e Brigade Interarmes"
+		name = "9e Brigade d'Infanterie de Marine"
 		location = 3626
 		division_template = "Brigade Interarmes"
 		start_experience_factor = 0.55
@@ -156,7 +131,7 @@ units = {
 	}
 	division = {
 		name = "6e Brigade Legere Blindee"
-		location = 958
+		location = 9898
 		division_template = "Brigade Interarmes"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.7
@@ -167,15 +142,6 @@ units = {
 		name = "11e Brigade Parachutiste"
 		location = 6766
 		division_template = "Brigade Parachutiste"
-		start_experience_factor = 0.7
-		start_equipment_factor = 0.8
-	}
-
-	# Foreign Legion
-	division = {
-		name = "Brigade de la Legion Etrangere"
-		location = 521
-		division_template = "Brigade de la Legion Etrangere"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.8
 	}
@@ -259,7 +225,8 @@ units = {
 			location = 911
 			ship = { name = "Suffren (S635)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = FRA creator = FRA version_name = "Suffren Class" } } }
 			ship = { name = "Duguay-Trouin (S636)" definition = attack_submarine start_experience_factor = 0.7 equipment = { attack_submarine_hull_3 = { amount = 1 owner = FRA creator = FRA version_name = "Suffren Class" } } }
-			ship = { name = "Emeraude (S604)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Rubis Class" } } }
+			ship = { name = "Tourville (S637)" definition = attack_submarine start_experience_factor = 0.65 equipment = { attack_submarine_hull_3 = { amount = 1 owner = FRA creator = FRA version_name = "Suffren Class" } } }
+			ship = { name = "Amethyste (S605)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Rubis Class" } } }
 			ship = { name = "Perle (S606)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = FRA creator = FRA version_name = "Rubis Class" } } }
 		}
 		task_force = {
@@ -317,25 +284,25 @@ instant_effect = {
 air_wings = {
 	# BA 113 Saint-Dizier — Rafale (EC 4 Gascogne/La Fayette/Provence)
 	305 = {
-		medium_plane_airframe_2 = { owner = "FRA" amount = 45 version_name = "Dassault Rafale C/B" }
+		medium_plane_airframe_2 = { owner = "FRA" amount = 56 version_name = "Dassault Rafale C/B" }
 		name = "Escadre de Chasse 4 — Saint-Dizier"
 		start_experience_factor = 0.65
 	}
 	# BA 118 Mont-de-Marsan — Rafale (EC 30 Normandie-Niemen/Lorraine)
 	60 = {
-		medium_plane_airframe_2 = { owner = "FRA" amount = 30 version_name = "Dassault Rafale C/B" }
+		medium_plane_airframe_2 = { owner = "FRA" amount = 52 version_name = "Dassault Rafale C/B" }
 		name = "Escadre de Chasse 30 — Mont-de-Marsan"
 		start_experience_factor = 0.6
 	}
 	# BA 133 Nancy-Ochey — Mirage 2000D (EC 3 Ardennes)
 	57 = {
-		cas1 = { owner = "FRA" amount = 40 version_name = "Mirage 2000D" }
+		cas1 = { owner = "FRA" amount = 71 version_name = "Mirage 2000D" }
 		name = "Escadre de Chasse 3 — Nancy"
 		start_experience_factor = 0.55
 	}
 	# BA 116 Luxeuil — Mirage 2000-5F (EC 2 Cigognes)
 	963 = {
-		small_plane_airframe_2 = { owner = "FRA" amount = 18 version_name = "Mirage 2000-5F" }
+		small_plane_airframe_2 = { owner = "FRA" amount = 28 version_name = "Mirage 2000-5F" }
 		name = "Escadre de Chasse 2 — Luxeuil"
 		start_experience_factor = 0.5
 	}
@@ -359,7 +326,7 @@ air_wings = {
 	}
 	# BAN Landivisiau — Rafale M shore-based (Flottilles 11F/17F)
 	64 = {
-		medium_plane_airframe_2 = { owner = "FRA" amount = 20 version_name = "Dassault Rafale M" }
+		medium_plane_airframe_2 = { owner = "FRA" amount = 24 version_name = "Dassault Rafale M" }
 		name = "Flottilles 11F/17F — Landivisiau"
 		start_experience_factor = 0.65
 	}

@@ -115,6 +115,19 @@ division_template = {
 	priority = 2
 }
 division_template = {
+	name = "Security Brigade"
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 0 y = 3 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+division_template = {
 	name = "Reserve Infantry Division"
 	division_names_group = KOR_INF_01
 
@@ -144,21 +157,21 @@ units = {
 	### Special Warfare Command ###
 	division = {
 		name = "1st Special Forces Brigade"
-		location = 4126		#Icheon
+		location = 1100		#Icheon
 		division_template = "Special Forces Brigade"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.85
 	}
 	division = {
 		name = "3rd Special Forces Brigade"
-		location = 4126
+		location = 1100
 		division_template = "Special Forces Brigade"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.85
 	}
 	division = {
 		name = "7th Special Forces Brigade"
-		location = 4126
+		location = 1100
 		division_template = "Special Forces Brigade"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.85
@@ -188,9 +201,9 @@ units = {
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "30th Mechanized Infantry Division"
+		name = "30th Armored Brigade"
 		location = 3308
-		division_template = "Mechanized Infantry Division"
+		division_template = "Armored Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.8
 	}
@@ -211,8 +224,8 @@ units = {
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "27th Infantry Division 'Winning'"
-		location = 11958
+		name = "6th Infantry Division"
+		location = 10036
 		division_template = "Infantry Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
@@ -220,7 +233,7 @@ units = {
 
 	# III Corps
 	division = {
-		name = "2nd Infantry Division 'Loyal'"
+		name = "2nd Quick Response Division"
 		location = 4004
 		division_template = "Infantry Division"
 		start_experience_factor = 0.5
@@ -244,15 +257,15 @@ units = {
 	# VIII Corps
 	division = {
 		name = "22nd Infantry Division"
-		location = 3247
+		location = 7021
 		division_template = "Infantry Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
-		name = "23rd Infantry Division"
-		location = 12011
-		division_template = "Infantry Division"
+		name = "23rd Security Brigade"
+		location = 7021
+		division_template = "Security Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
@@ -296,15 +309,15 @@ units = {
 		start_equipment_factor = 0.85
 	}
 	division = {
-		name = "20th Mechanized Infantry Division"
-		location = 7221
+		name = "8th Maneuver Division"
+		location = 4004
 		division_template = "Mechanized Infantry Division"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "26th Mechanized Infantry Division"
-		location = 7125
+		name = "11th Maneuver Division"
+		location = 3310
 		division_template = "Mechanized Infantry Division"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.8
@@ -313,14 +326,14 @@ units = {
 	### Marines ###
 	division = {
 		name = "1st Marine Division 'Haeryong'"
-		location = 3308		#Pohang
+		location = 3276		#Pohang
 		division_template = "Marine Division"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "2nd Marine Division 'Blue Dragon'"
-		location = 10115
+		location = 3308
 		division_template = "Marine Division"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.8
@@ -358,10 +371,13 @@ units = {
 			name = "1st Fleet Surface Group"
 			location = 12011
 			ship = { name = "ROKS Sejong the Great (DDG-991)" definition = destroyer pride_of_the_fleet = yes start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Sejong the Great Class" } } }
+			ship = { name = "ROKS Gwanggaeto the Great (DDH-971)" definition = destroyer pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { destroyer_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Gwanggaeto the Great Class" } } }
+			ship = { name = "ROKS Eulji Mundeok (DDH-972)" definition = destroyer pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { destroyer_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Gwanggaeto the Great Class" } } }
 			ship = { name = "ROKS Chungmugong Yi Sun-sin (DDH-975)" definition = destroyer pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { destroyer_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Chungmugong Yi Sun-sin Class" } } }
 			ship = { name = "ROKS Munmu the Great (DDH-976)" definition = destroyer pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { destroyer_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Chungmugong Yi Sun-sin Class" } } }
 			ship = { name = "ROKS Incheon (FFG-811)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Incheon Class" } } }
 			ship = { name = "ROKS Gyeonggi (FFG-812)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Incheon Class" } } }
+			ship = { name = "ROKS Gangwon (FFG-815)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { frigate_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Incheon Class" } } }
 		}
 	}
 
@@ -373,10 +389,14 @@ units = {
 			name = "2nd Fleet Surface Group"
 			location = 3285
 			ship = { name = "ROKS Yulgok Yi I (DDG-992)" definition = destroyer pride_of_the_fleet = yes start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Sejong the Great Class" } } }
+			ship = { name = "ROKS Yang Man-chun (DDH-973)" definition = destroyer pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { destroyer_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Gwanggaeto the Great Class" } } }
 			ship = { name = "ROKS Wang Geon (DDH-978)" definition = destroyer pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { destroyer_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Chungmugong Yi Sun-sin Class" } } }
 			ship = { name = "ROKS Gang Gam-chan (DDH-979)" definition = destroyer pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { destroyer_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Chungmugong Yi Sun-sin Class" } } }
 			ship = { name = "ROKS Daegu (FFG-818)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Daegu Class" } } }
-			ship = { name = "ROKS Gyeongbuk (FFG-819)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Daegu Class" } } }
+			ship = { name = "ROKS Gyeongnam (FFG-819)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Daegu Class" } } }
+			ship = { name = "ROKS Seoul (FFG-821)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Daegu Class" } } }
+			ship = { name = "ROKS Jeonbuk (FFG-813)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Incheon Class" } } }
+			ship = { name = "ROKS Chungbuk (FFG-816)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Incheon Class" } } }
 		}
 	}
 
@@ -387,11 +407,17 @@ units = {
 		task_force = {
 			name = "3rd Fleet Surface Group"
 			location = 10110
-			ship = { name = "ROKS Jeongjo the Great (DDG-993)" definition = destroyer pride_of_the_fleet = yes start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Sejong the Great Class" } } }
+			ship = { name = "ROKS Jeongjo the Great (DDG-995)" definition = destroyer pride_of_the_fleet = yes start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Sejong the Great Class" } } }
+			ship = { name = "ROKS Seoae Ryu Seong-ryong (DDG-993)" definition = destroyer pride_of_the_fleet = no start_experience_factor = 0.7 equipment = { destroyer_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Sejong the Great Class" } } }
 			ship = { name = "ROKS Dae Joyeong (DDH-977)" definition = destroyer pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { destroyer_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Chungmugong Yi Sun-sin Class" } } }
 			ship = { name = "ROKS Choe Yeong (DDH-981)" definition = destroyer pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { destroyer_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Chungmugong Yi Sun-sin Class" } } }
-			ship = { name = "ROKS Gangwon (FFG-820)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Daegu Class" } } }
-			ship = { name = "ROKS Chungnam (FFG-821)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Daegu Class" } } }
+			ship = { name = "ROKS Gwangju (FFG-817)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Incheon Class" } } }
+			ship = { name = "ROKS Donghae (FFG-822)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { frigate_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Daegu Class" } } }
+			ship = { name = "ROKS Daejeon (FFG-823)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { frigate_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Daegu Class" } } }
+			ship = { name = "ROKS Pohang (FFG-825)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { frigate_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Daegu Class" } } }
+			ship = { name = "ROKS Cheonan (FFG-826)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { frigate_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Daegu Class" } } }
+			ship = { name = "ROKS Chuncheon (FFG-827)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { frigate_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Daegu Class" } } }
+			ship = { name = "ROKS Chungnam (FFG-828)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Chungnam Class" } } }
 		}
 		task_force = {
 			name = "Amphibious Squadron"
@@ -409,18 +435,26 @@ units = {
 			name = "9th Submarine Flotilla"
 			location = 4056
 			ship = { name = "ROKS Dosan Ahn Changho (SS-083)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.7 equipment = { attack_submarine_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Dosan Ahn Changho Class" } } }
-			ship = { name = "ROKS An Mu (SS-084)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { attack_submarine_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Dosan Ahn Changho Class" } } }
-			ship = { name = "ROKS Shin Chae-ho (SS-085)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Dosan Ahn Changho Class" } } }
+			ship = { name = "ROKS Ahn Mu (SS-085)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { attack_submarine_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Dosan Ahn Changho Class" } } }
+			ship = { name = "ROKS Shin Chae-ho (SS-086)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = KOR creator = KOR version_name = "Dosan Ahn Changho Class" } } }
 			ship = { name = "ROKS Son Won-il (SS-072)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Son Won-il Class" } } }
 			ship = { name = "ROKS Jeong Ji (SS-073)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Son Won-il Class" } } }
 			ship = { name = "ROKS An Jung-geun (SS-075)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Son Won-il Class" } } }
 			ship = { name = "ROKS Kim Jwa-jin (SS-076)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Son Won-il Class" } } }
 			ship = { name = "ROKS Yun Bong-gil (SS-077)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Son Won-il Class" } } }
 			ship = { name = "ROKS Yu Gwan-sun (SS-078)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Son Won-il Class" } } }
+			ship = { name = "ROKS Hong Beom-do (SS-079)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { attack_submarine_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Son Won-il Class" } } }
+			ship = { name = "ROKS Lee Beom-seok (SS-081)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { attack_submarine_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Son Won-il Class" } } }
+			ship = { name = "ROKS Shin Dol-seok (SS-082)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { attack_submarine_hull_2 = { amount = 1 owner = KOR creator = KOR version_name = "Son Won-il Class" } } }
+			ship = { name = "ROKS Jang Bogo (SS-061)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.45 equipment = { attack_submarine_hull_1 = { amount = 1 owner = KOR creator = GER version_name = "Jang Bogo Class" } } }
+			ship = { name = "ROKS Yi Cheon (SS-062)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.45 equipment = { attack_submarine_hull_1 = { amount = 1 owner = KOR creator = GER version_name = "Jang Bogo Class" } } }
+			ship = { name = "ROKS Choe Museon (SS-063)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.45 equipment = { attack_submarine_hull_1 = { amount = 1 owner = KOR creator = GER version_name = "Jang Bogo Class" } } }
+			ship = { name = "ROKS Park Wi (SS-065)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.45 equipment = { attack_submarine_hull_1 = { amount = 1 owner = KOR creator = GER version_name = "Jang Bogo Class" } } }
 			ship = { name = "ROKS Lee Jong-mu (SS-066)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.5 equipment = { attack_submarine_hull_1 = { amount = 1 owner = KOR creator = GER version_name = "Jang Bogo Class" } } }
 			ship = { name = "ROKS Jeong Un (SS-067)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.5 equipment = { attack_submarine_hull_1 = { amount = 1 owner = KOR creator = GER version_name = "Jang Bogo Class" } } }
 			ship = { name = "ROKS Lee Sun-sin (SS-068)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.5 equipment = { attack_submarine_hull_1 = { amount = 1 owner = KOR creator = GER version_name = "Jang Bogo Class" } } }
 			ship = { name = "ROKS Na Dae-yong (SS-069)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.5 equipment = { attack_submarine_hull_1 = { amount = 1 owner = KOR creator = GER version_name = "Jang Bogo Class" } } }
+			ship = { name = "ROKS Yi Eokgi (SS-071)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.5 equipment = { attack_submarine_hull_1 = { amount = 1 owner = KOR creator = GER version_name = "Jang Bogo Class" } } }
 		}
 	}
 }
@@ -450,37 +484,39 @@ instant_effect = {
 
 ### Republic of Korea Air Force ###
 air_wings = {
-	## Gyeonggi (Seoul/Cheongju/Suwon) ##
-	604 = {
+	## Chungcheong (Cheongju / Chungju / Seosan) ##
+	606 = {
 		L_Strike_fighter3 = { owner = "KOR" creator = "USA" amount = 40 version_name = "F-35A Lightning II" }
 		name = "17th Fighter Wing"
 		start_experience_factor = 0.7
 	}
-	604 = {
+	606 = {
 		L_Strike_fighter2 = { owner = "KOR" amount = 60 version_name = "KF-16C/D Block 52" }
-		name = "10th/39th Fighter Wing"
+		name = "19th Fighter Wing"
 		start_experience_factor = 0.6
 	}
+	606 = {
+		L_Strike_fighter2 = { owner = "KOR" amount = 60 version_name = "KF-16C/D Block 52" }
+		name = "20th Fighter Wing"
+		start_experience_factor = 0.6
+	}
+	## Gyeonggi (Wonju) ##
 	604 = {
 		small_plane_airframe_2 = { owner = "KOR" amount = 30 version_name = "FA-50 Fighting Eagle" }
 		name = "8th Fighter Wing"
 		start_experience_factor = 0.6
 	}
-	## Yeongnam (Daegu/Gimhae/Sacheon) ##
+	## Honam (Gwangju) ##
+	607 = {
+		small_plane_airframe_2 = { owner = "KOR" amount = 30 version_name = "FA-50 Fighting Eagle" }
+		name = "1st Fighter Wing"
+		start_experience_factor = 0.6
+	}
+	## Yeongnam (Daegu / Gimhae) ##
 	605 = {
 		medium_plane_airframe_2 = { owner = "KOR" creator = "USA" amount = 60 version_name = "F-15K Slam Eagle" }
 		name = "11th Fighter Wing"
 		start_experience_factor = 0.65
-	}
-	605 = {
-		L_Strike_fighter2 = { owner = "KOR" amount = 60 version_name = "KF-16C/D Block 52" }
-		name = "19th/20th Fighter Wing"
-		start_experience_factor = 0.6
-	}
-	605 = {
-		small_plane_airframe_2 = { owner = "KOR" amount = 30 version_name = "FA-50 Fighting Eagle" }
-		name = "1st Fighter Wing"
-		start_experience_factor = 0.6
 	}
 	605 = {
 		awacs_equipment_2 = { owner = "KOR" creator = "USA" amount = 4 version_name = "E-737 Peace Eye" }

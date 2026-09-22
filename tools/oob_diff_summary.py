@@ -54,7 +54,7 @@ def main():
     if not tags:
         out = subprocess.run(["git", "status", "--short", "history/units"],
                              cwd=REPO, capture_output=True, text=True).stdout
-        tags = sorted({line.split()[-1][:3] for line in out.splitlines()})
+        tags = sorted({os.path.basename(line.split()[-1])[:3] for line in out.splitlines()})
     tmp = tempfile.mkdtemp(prefix="oobdiff_")
     for tag in tags:
         rel = f"history/units/{tag}_2026_nsb.txt"

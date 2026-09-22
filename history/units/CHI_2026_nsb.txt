@@ -161,195 +161,234 @@ division_template = {
 
 units = {
 	### EASTERN THEATER COMMAND (Taiwan focus) ###
-	# 71st Group Army - Jiangsu
+	# 71st Group Army - Xuzhou (Jiangsu)
 	division = {
 		name = "71st Group Army - 1st CAB"
-		location = 10101
+		location = 11973
 		division_template = "Combined Arms Brigade (Heavy)"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "71st Group Army - 2nd CAB"
-		location = 10101
+		location = 11973
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.85
 	}
 	division = {
 		name = "71st Group Army - 3rd LCAB"
-		location = 10101
+		location = 11973
 		division_template = "Light Combined Arms Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.85
 	}
 
-	# 72nd Group Army - Zhejiang
+	# 72nd Group Army - Huzhou (Zhejiang)
 	division = {
 		name = "72nd Group Army - 1st CAB"
-		location = 11920
+		location = 10101
 		division_template = "Combined Arms Brigade (Heavy)"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "72nd Group Army - 2nd CAB"
-		location = 11920
+		location = 10101
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.85
 	}
 	division = {
-		name = "72nd Group Army - 3rd CAB"
-		location = 11920
+		name = "72nd Group Army - 3rd LCAB"
+		location = 10101
 		division_template = "Light Combined Arms Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.85
 	}
 
+	# 73rd Group Army - Xiamen (Fujian)
+	division = {
+		name = "73rd Group Army - 1st CAB"
+		location = 7071
+		division_template = "Combined Arms Brigade (Heavy)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "73rd Group Army - 2nd CAB"
+		location = 7071
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+	division = {
+		name = "73rd Group Army - Amphibious CAB"
+		location = 7071
+		division_template = "Combined Arms Brigade (Heavy)"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.85
+	}
+
 	### SOUTHERN THEATER COMMAND (SCS / Vietnam border) ###
-	# 74th Group Army - Guangdong
+	# 74th Group Army - Huizhou (Guangdong)
 	division = {
 		name = "74th Group Army - 1st CAB"
-		location = 7071
+		location = 1202
 		division_template = "Combined Arms Brigade (Heavy)"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.85
 	}
 	division = {
 		name = "74th Group Army - 2nd CAB"
-		location = 7071
+		location = 1202
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
 	}
 
-	# 75th Group Army - Yunnan
+	# 75th Group Army - Kunming (Yunnan)
 	division = {
 		name = "75th Group Army - 1st CAB"
-		location = 11986
+		location = 2992
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "75th Group Army - 2nd LCAB"
-		location = 11986
+		location = 2992
 		division_template = "Light Combined Arms Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.8
 	}
 
 	### WESTERN THEATER COMMAND (India border / Tibet) ###
-	# 76th Group Army - Xining
+	# 76th Group Army - Xining (Qinghai)
 	division = {
 		name = "76th Group Army - 1st CAB"
-		location = 10062
+		location = 10490
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "76th Group Army - Mountain"
-		location = 10062
+		location = 10490
 		division_template = "Mountain Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.85
 	}
 
-	# 77th Group Army - Chengdu
+	# 77th Group Army - Chengdu (Sichuan)
 	division = {
 		name = "77th Group Army - 1st LCAB"
-		location = 10404
+		location = 4925
 		division_template = "Light Combined Arms Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "77th Group Army - Mountain"
-		location = 10404
+		location = 4925
 		division_template = "Mountain Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.85
 	}
 
 	### NORTHERN THEATER COMMAND (Korea / Russia border) ###
-	# 78th Group Army - Shenyang
+	# 78th Group Army - Harbin (Heilongjiang)
 	division = {
 		name = "78th Group Army - 1st CAB"
-		location = 1038
+		location = 10433
 		division_template = "Combined Arms Brigade (Heavy)"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.85
 	}
 	division = {
 		name = "78th Group Army - 2nd CAB"
-		location = 1038
+		location = 10433
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
 	}
 
-	# 79th Group Army - Liaoning
+	# 79th Group Army - Shenyang (Liaoning)
 	division = {
 		name = "79th Group Army - 1st CAB"
-		location = 1038
+		location = 11771
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "79th Group Army - 2nd LCAB"
-		location = 1038
+		location = 11771
+		division_template = "Light Combined Arms Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.8
+	}
+
+	# 80th Group Army - Weifang (Shandong)
+	division = {
+		name = "80th Group Army - 1st CAB"
+		location = 7089
+		division_template = "Combined Arms Brigade (Medium)"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "80th Group Army - 2nd LCAB"
+		location = 7089
 		division_template = "Light Combined Arms Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.8
 	}
 
 	### CENTRAL THEATER COMMAND (Reserve / Beijing) ###
-	# 81st Group Army - Beijing/Hebei
+	# 81st Group Army - Shijiazhuang (Hebei)
 	division = {
 		name = "81st Group Army - 1st CAB"
-		location = 4619
+		location = 4190
 		division_template = "Combined Arms Brigade (Heavy)"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "81st Group Army - 2nd CAB"
-		location = 4619
+		location = 4190
 		division_template = "Combined Arms Brigade (Heavy)"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.85
 	}
 
-	# 82nd Group Army - Hebei
+	# 82nd Group Army - Baoding (Hebei)
 	division = {
 		name = "82nd Group Army - 1st CAB"
-		location = 994
+		location = 7109
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.85
 	}
 	division = {
 		name = "82nd Group Army - 2nd LCAB"
-		location = 994
+		location = 7109
 		division_template = "Light Combined Arms Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.8
 	}
 
-	# 83rd Group Army - Henan
+	# 83rd Group Army - Luoyang (Henan)
 	division = {
 		name = "83rd Group Army - 1st CAB"
-		location = 1146
+		location = 11931
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.85
 	}
 	division = {
 		name = "83rd Group Army - Air Assault"
-		location = 1146
+		location = 11931
 		division_template = "Air Assault Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.85
@@ -358,60 +397,60 @@ units = {
 	### XINJIANG MILITARY REGION ###
 	division = {
 		name = "Xinjiang Military Region - 1st"
-		location = 1597
+		location = 3167
 		division_template = "Light Combined Arms Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "Xinjiang Military Region - 2nd Mountain"
-		location = 1597
+		location = 3167
 		division_template = "Mountain Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
 	}
 
-	### PLA AIRBORNE CORPS ###
+	### PLA AIRBORNE CORPS (15th Airborne Corps - Xiaogan, Hubei) ###
 	division = {
-		name = "PLA Airborne Corps - 43rd Brigade"
-		location = 7191
+		name = "PLA Airborne Corps - 127th Brigade"
+		location = 7167
 		division_template = "PLA Airborne Brigade"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.85
 	}
 	division = {
-		name = "PLA Airborne Corps - 44th Brigade"
-		location = 7191
+		name = "PLA Airborne Corps - 128th Brigade"
+		location = 7167
 		division_template = "PLA Airborne Brigade"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.85
 	}
 	division = {
-		name = "PLA Airborne Corps - 45th Brigade"
-		location = 7191
+		name = "PLA Airborne Corps - 130th Brigade"
+		location = 7656
 		division_template = "PLA Airborne Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.8
 	}
 
-	### PLAN MARINE CORPS ###
+	### PLAN MARINE CORPS (Zhanjiang, Guangdong) ###
 	division = {
 		name = "PLAN 1st Marine Brigade"
-		location = 7071
+		location = 11981
 		division_template = "PLA Marine Brigade"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.85
 	}
 	division = {
 		name = "PLAN 2nd Marine Brigade"
-		location = 7071
+		location = 11981
 		division_template = "PLA Marine Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "PLAN 3rd Marine Brigade"
-		location = 7071
+		location = 1202
 		division_template = "PLA Marine Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.8
@@ -429,14 +468,14 @@ units = {
 	### INNER MONGOLIA / TIBET GARRISON ###
 	division = {
 		name = "Tibet Military District"
-		location = 9978
+		location = 5033
 		division_template = "Mountain Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "Inner Mongolia Garrison"
-		location = 1202
+		location = 10424
 		division_template = "Light Combined Arms Brigade"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.75
@@ -445,65 +484,72 @@ units = {
 	### ADDITIONAL EASTERN THEATER COMMAND ###
 	division = {
 		name = "71st Group Army - 4th CAB"
-		location = 10101
+		location = 11973
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.85
 	}
 	division = {
 		name = "71st Group Army - Amphibious CAB"
-		location = 10101
+		location = 11973
 		division_template = "Combined Arms Brigade (Heavy)"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.85
 	}
 	division = {
-		name = "72nd Group Army - 3rd CAB"
-		location = 11920
+		name = "72nd Group Army - 4th CAB"
+		location = 10101
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "72nd Group Army - Amphibious CAB"
-		location = 11920
+		location = 10101
 		division_template = "Combined Arms Brigade (Heavy)"
 		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "73rd Group Army - 3rd LCAB"
+		location = 7071
+		division_template = "Light Combined Arms Brigade"
+		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
 	}
 
 	### ADDITIONAL SOUTHERN THEATER COMMAND ###
 	division = {
 		name = "74th Group Army - 3rd LCAB"
-		location = 7071
+		location = 1202
 		division_template = "Light Combined Arms Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "75th Group Army - 2nd CAB"
-		location = 11986
+		location = 2992
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "75th Group Army - Mountain"
-		location = 11986
+		location = 2992
 		division_template = "Mountain Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "PLAN 4th Marine Brigade"
-		location = 7071
+		location = 11981
 		division_template = "PLA Marine Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "PLAN 5th Marine Brigade"
-		location = 7071
+		location = 1202
 		division_template = "PLA Marine Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
@@ -512,28 +558,28 @@ units = {
 	### ADDITIONAL WESTERN THEATER COMMAND ###
 	division = {
 		name = "76th Group Army - 2nd LCAB"
-		location = 10062
+		location = 10490
 		division_template = "Light Combined Arms Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "76th Group Army - 2nd Mountain"
-		location = 10062
+		location = 10490
 		division_template = "Mountain Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "77th Group Army - 2nd CAB"
-		location = 10404
+		location = 4925
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "77th Group Army - Air Assault"
-		location = 10404
+		location = 4925
 		division_template = "Air Assault Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
@@ -542,21 +588,21 @@ units = {
 	### ADDITIONAL NORTHERN THEATER COMMAND ###
 	division = {
 		name = "78th Group Army - 3rd LCAB"
-		location = 1038
+		location = 10433
 		division_template = "Light Combined Arms Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "79th Group Army - 2nd CAB"
-		location = 1038
+		location = 11771
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.7
 	}
 	division = {
-		name = "Northern Theater Reserve"
-		location = 1038
+		name = "80th Group Army - 3rd CAB"
+		location = 7089
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.7
@@ -565,28 +611,28 @@ units = {
 	### ADDITIONAL CENTRAL THEATER COMMAND ###
 	division = {
 		name = "81st Group Army - 3rd CAB"
-		location = 4619
+		location = 4190
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "82nd Group Army - 2nd CAB"
-		location = 994
+		location = 7109
 		division_template = "Combined Arms Brigade (Medium)"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "83rd Group Army - 2nd LCAB"
-		location = 1146
+		location = 11931
 		division_template = "Light Combined Arms Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "Strategic Reserve - 1st CAB"
-		location = 4619
+		location = 3160
 		division_template = "Combined Arms Brigade (Heavy)"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
@@ -595,7 +641,7 @@ units = {
 	### ADDITIONAL XINJIANG MILITARY REGION ###
 	division = {
 		name = "Xinjiang Military Region - 3rd"
-		location = 1597
+		location = 3167
 		division_template = "Light Combined Arms Brigade"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.65
@@ -612,10 +658,24 @@ units = {
 
 	### ADDITIONAL PLA AIRBORNE CORPS ###
 	division = {
-		name = "PLA Airborne Corps - 46th Brigade"
-		location = 7191
+		name = "PLA Airborne Corps - 131st Brigade"
+		location = 7656
 		division_template = "PLA Airborne Brigade"
 		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "PLA Airborne Corps - 133rd Brigade"
+		location = 7167
+		division_template = "PLA Airborne Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "PLA Airborne Corps - 134th Brigade"
+		location = 7656
+		division_template = "PLA Airborne Brigade"
+		start_experience_factor = 0.55
 		start_equipment_factor = 0.8
 	}
 
@@ -643,6 +703,7 @@ units = {
 			ship = { name = "CNS Rizhao (598)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
 			ship = { name = "CNS Linyi (547)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
 			ship = { name = "CNS Jining (537)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
+			ship = { name = "CNS Luohe (545)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054B" } } }
 		}
 		task_force = {
 			name = "潜艇第1支队"
@@ -651,13 +712,22 @@ units = {
 			ship = { name = "CNS 331" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039A" } } }
 			ship = { name = "CNS 332" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039B" } } }
 			ship = { name = "CNS 333" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039B" } } }
-			ship = { name = "CNS 405" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093A" } } }
-			ship = { name = "CNS 406" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093A" } } }
+			ship = { name = "CNS 407" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093" } } }
+			ship = { name = "CNS 408" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093" } } }
+			ship = { name = "CNS 409" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093A" } } }
+			ship = { name = "CNS 410" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093A" } } }
 		}
 		task_force = {
 			name = "辽宁号航母战斗群"
 			location = 10000
 			ship = { name = "CNS Liaoning (CV-16)" definition = carrier start_experience_factor = 0.55 equipment = { carrier_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 001" } } }
+		}
+		task_force = {
+			name = "两栖登陆支队"
+			location = 10000
+			ship = { name = "CNS Qilian Shan (985)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 071" } } }
+			ship = { name = "CNS Tianzhu Shan (911)" definition = helicopter_operator start_experience_factor = 0.4 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 072A" } } }
+			ship = { name = "CNS Daqing Shan (912)" definition = helicopter_operator start_experience_factor = 0.4 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 072A" } } }
 		}
 	}
 
@@ -672,9 +742,9 @@ units = {
 			ship = { name = "CNS Wuxi (104)" definition = cruiser start_experience_factor = 0.7 equipment = { cruiser_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 055" } } }
 			ship = { name = "CNS Taiyuan (131)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
 			ship = { name = "CNS Suzhou (132)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
-			ship = { name = "CNS Nantong (133)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
-			ship = { name = "CNS Changzhou (156)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
-			ship = { name = "CNS Zibo (157)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
+			ship = { name = "CNS Baotou (133)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
+			ship = { name = "CNS Zibo (156)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052DL" } } }
+			ship = { name = "CNS Lishui (157)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052DL" } } }
 		}
 		task_force = {
 			name = "护卫舰第22支队"
@@ -691,6 +761,19 @@ units = {
 			ship = { name = "CNS 335" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039B" } } }
 			ship = { name = "CNS 336" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039C" } } }
 			ship = { name = "CNS 337" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039C" } } }
+		}
+		task_force = {
+			name = "两栖登陆支队"
+			location = 9974
+			ship = { name = "CNS Anhui (33)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 075" } } }
+			ship = { name = "CNS Guangxi (32)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 075" } } }
+			ship = { name = "CNS Longhu Shan (980)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 071" } } }
+			ship = { name = "CNS Siming Shan (986)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 071" } } }
+			ship = { name = "CNS Wuzhi Shan (987)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 071" } } }
+			ship = { name = "CNS Baxian Shan (913)" definition = helicopter_operator start_experience_factor = 0.4 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 072A" } } }
+			ship = { name = "CNS Wuyi Shan (914)" definition = helicopter_operator start_experience_factor = 0.4 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 072A" } } }
+			ship = { name = "CNS Culai Shan (915)" definition = helicopter_operator start_experience_factor = 0.4 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 072A" } } }
+			ship = { name = "CNS Wutai Shan (917)" definition = helicopter_operator start_experience_factor = 0.4 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 072A" } } }
 		}
 	}
 
@@ -710,7 +793,7 @@ units = {
 			ship = { name = "CNS Hefei (174)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
 			ship = { name = "CNS Yinchuan (175)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052D" } } }
 			ship = { name = "CNS Nanning (162)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052DL" } } }
-			ship = { name = "CNS Tangshan (164)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052DL" } } }
+			ship = { name = "CNS Guilin (164)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 052DL" } } }
 		}
 		task_force = {
 			name = "护卫舰第17支队"
@@ -720,7 +803,7 @@ units = {
 			ship = { name = "CNS Huangshan (570)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
 			ship = { name = "CNS Liuzhou (573)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
 			ship = { name = "CNS Sanya (574)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054A" } } }
-			ship = { name = "CNS Wuhu (539)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054B" } } }
+			ship = { name = "CNS Qinzhou (555)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 054B" } } }
 		}
 		task_force = {
 			name = "潜艇第3支队"
@@ -729,20 +812,19 @@ units = {
 			ship = { name = "CNS 339" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039B" } } }
 			ship = { name = "CNS 340" definition = attack_submarine start_experience_factor = 0.55 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039C" } } }
 			ship = { name = "CNS 341" definition = attack_submarine start_experience_factor = 0.55 equipment = { attack_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 039C" } } }
-			ship = { name = "CNS 407" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093B" } } }
-			ship = { name = "CNS 408" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093B" } } }
-			ship = { name = "CNS 409" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093B" } } }
-			ship = { name = "CNS 410" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093B" } } }
+			ship = { name = "CNS 417" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093B" } } }
+			ship = { name = "CNS 418" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093B" } } }
+			ship = { name = "CNS 419" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 093B" } } }
 		}
 		task_force = {
 			name = "弹道导弹潜艇支队"
 			location = 994
-			ship = { name = "CNS 421" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094A" } } }
-			ship = { name = "CNS 422" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094A" } } }
-			ship = { name = "CNS 423" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094A" } } }
-			ship = { name = "CNS 424" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094A" } } }
-			ship = { name = "CNS 425" definition = missile_submarine start_experience_factor = 0.65 equipment = { missile_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094B" } } }
-			ship = { name = "CNS 426" definition = missile_submarine start_experience_factor = 0.65 equipment = { missile_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094B" } } }
+			ship = { name = "CNS 411" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094" } } }
+			ship = { name = "CNS 412" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094" } } }
+			ship = { name = "CNS 413" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094" } } }
+			ship = { name = "CNS 414" definition = missile_submarine start_experience_factor = 0.6 equipment = { missile_submarine_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094A" } } }
+			ship = { name = "CNS 415" definition = missile_submarine start_experience_factor = 0.65 equipment = { missile_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094A" } } }
+			ship = { name = "CNS 416" definition = missile_submarine start_experience_factor = 0.65 equipment = { missile_submarine_hull_3 = { amount = 1 owner = CHI creator = CHI version_name = "Type 094A" } } }
 		}
 		task_force = {
 			name = "山东号航母战斗群"
@@ -753,6 +835,20 @@ units = {
 			name = "福建号航母战斗群"
 			location = 994
 			ship = { name = "CNS Fujian (CV-18)" definition = carrier start_experience_factor = 0.5 equipment = { carrier_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 003" } } }
+		}
+		task_force = {
+			name = "两栖登陆支队"
+			location = 994
+			ship = { name = "CNS Hainan (31)" definition = helicopter_operator start_experience_factor = 0.55 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 075" } } }
+			ship = { name = "CNS Hubei (34)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = CHI creator = CHI version_name = "Type 075" } } }
+			ship = { name = "CNS Changbai Shan (989)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 071" } } }
+			ship = { name = "CNS Kunlun Shan (998)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 071" } } }
+			ship = { name = "CNS Jinggang Shan (999)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 071" } } }
+			ship = { name = "CNS Yimeng Shan (988)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 071" } } }
+			ship = { name = "CNS Huading Shan (992)" definition = helicopter_operator start_experience_factor = 0.4 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 072A" } } }
+			ship = { name = "CNS Luoxiao Shan (993)" definition = helicopter_operator start_experience_factor = 0.4 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 072A" } } }
+			ship = { name = "CNS Wanyang Shan (995)" definition = helicopter_operator start_experience_factor = 0.4 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 072A" } } }
+			ship = { name = "CNS Laotie Shan (996)" definition = helicopter_operator start_experience_factor = 0.4 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = CHI creator = CHI version_name = "Type 072A" } } }
 		}
 	}
 }
@@ -780,9 +876,15 @@ instant_effect = {
 air_wings = {
 	# J-20A Stealth Fighter (Wuhu / Anhui)
 	564 = {
-		AS_Fighter5 = { owner = "CHI" amount = 100 version_name = "J-20A" }
+		AS_Fighter5 = { owner = "CHI" amount = 150 version_name = "J-20A" }
 		name = "王牌歼击师"
 		start_experience_factor = 0.6
+	}
+	# J-20A Stealth Fighter (Anshan / Liaoning)
+	552 = {
+		AS_Fighter5 = { owner = "CHI" amount = 150 version_name = "J-20A" }
+		name = "歼击第1旅"
+		start_experience_factor = 0.55
 	}
 	# J-16 Strike Fighter (Shandong)
 	435 = {
@@ -834,7 +936,7 @@ air_wings = {
 	}
 	# PLAN J-15 carrier aviation (Hainan — shore training)
 	531 = {
-		medium_plane_airframe_2 = { owner = "CHI" amount = 50 version_name = "J-15B" }
+		medium_plane_airframe_2 = { owner = "CHI" amount = 50 version_name = "J-15T" }
 		name = "海军舰载航空兵旅"
 		start_experience_factor = 0.5
 	}
@@ -846,7 +948,7 @@ air_wings = {
 	}
 	# Carrier Air Wing — Shandong
 	"CNS Shandong (CV-17)" = {
-		cv_medium_plane_airframe_2 = { owner = "CHI" amount = 28 version_name = "J-15B" }
+		cv_medium_plane_airframe_2 = { owner = "CHI" amount = 28 version_name = "J-15" }
 		name = "山东舰舰载机联队"
 		start_experience_factor = 0.55
 	}

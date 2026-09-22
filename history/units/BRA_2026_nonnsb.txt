@@ -97,7 +97,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Brig. Operacoes Especiais"
+	name = "Cmd. Operacoes Especiais"
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
 		Special_Forces = { x = 0 y = 1 }
@@ -114,23 +114,23 @@ division_template = {
 units = {
 	##### Armored / Mechanized #####
 
-	# 1a Brigada de Cavalaria Blindada
+	# 6a Brigada de Infantaria Blindada - Santa Maria (RS)
 	division = {
-		name = "1a Brigada de Cavalaria Blindada"
-		location = 10980
+		name = "6a Brigada de Infantaria Blindada"
+		location = 1598
 		division_template = "Brig. Cavalaria Blindada"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
-	# 2a Brigada de Cavalaria Blindada
+	# 5a Brigada de Cavalaria Blindada - Ponta Grossa (PR)
 	division = {
-		name = "2a Brigada de Cavalaria Blindada"
-		location = 10432
+		name = "5a Brigada de Cavalaria Blindada"
+		location = 8239
 		division_template = "Brig. Cavalaria Blindada"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
-	# 3a Brigada de Infantaria Mecanizada
+	# 3a Brigada de Infantaria Mecanizada - Cristalina (GO)
 	division = {
 		name = "3a Brigada de Infantaria Mecanizada"
 		location = 920
@@ -138,107 +138,104 @@ units = {
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
-	# 5a Brigada de Cavalaria Blindada
+	# 1a Brigada de Cavalaria Mecanizada - Santiago (RS)
 	division = {
-		name = "5a Brigada de Cavalaria Blindada"
-		location = 5214
-		division_template = "Brig. Cavalaria Blindada"
+		name = "1a Brigada de Cavalaria Mecanizada"
+		location = 4589
+		division_template = "Brig. Infantaria Mec."
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 2a Brigada de Cavalaria Mecanizada - Uruguaiana (RS)
+	division = {
+		name = "2a Brigada de Cavalaria Mecanizada"
+		location = 4575
+		division_template = "Brig. Infantaria Mec."
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 11a Brigada de Infantaria Mecanizada - Campinas (SP)
+	division = {
+		name = "11a Brigada de Infantaria Mecanizada"
+		location = 10360
+		division_template = "Brig. Infantaria Mec."
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.8
+	}
+	# 15a Brigada de Infantaria Mecanizada - Cascavel (PR)
+	division = {
+		name = "15a Brigada de Infantaria Mecanizada"
+		location = 12466
+		division_template = "Brig. Infantaria Mec."
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
 
-	##### Motorized #####
+	##### Motorised / Light #####
 
-	# 4a Brigada de Infantaria Motorizada
-	division = {
-		name = "4a Brigada de Infantaria Motorizada"
-		location = 12919
-		division_template = "Brigada Inf. Motorizada"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.8
-	}
-	# 9a Brigada de Infantaria Motorizada
+	# 9a Brigada de Infantaria Motorizada - Rio de Janeiro (RJ)
 	division = {
 		name = "9a Brigada de Infantaria Motorizada"
-		location = 6651
+		location = 10980
 		division_template = "Brigada Inf. Motorizada"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
-	# 10a Brigada de Infantaria Motorizada
+	# 10a Brigada de Infantaria Motorizada - Recife (PE)
 	division = {
 		name = "10a Brigada de Infantaria Motorizada"
-		location = 12939
+		location = 5168
 		division_template = "Brigada Inf. Motorizada"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
-	# 11a Brigada de Infantaria Motorizada
+	# 4a Brigada de Infantaria Leve (Montanha) - Juiz de Fora (MG)
 	division = {
-		name = "11a Brigada de Infantaria Motorizada"
-		location = 4095
-		division_template = "Brigada Inf. Motorizada"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.8
-	}
-
-	##### Light Infantry #####
-
-	# 6a Brigada de Infantaria Leve
-	division = {
-		name = "6a Brigada de Infantaria Leve"
-		location = 8189
+		name = "4a Brigada de Infantaria Leve (Montanha)"
+		location = 12334
 		division_template = "Brigada Inf. Leve"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.75
-	}
-	# 15a Brigada de Infantaria Leve
-	division = {
-		name = "15a Brigada de Infantaria Leve"
-		location = 903
-		division_template = "Brigada Inf. Leve"
-		start_experience_factor = 0.25
+		start_experience_factor = 0.3
 		start_equipment_factor = 0.75
 	}
 
-	##### Jungle Brigades #####
+	##### Jungle Brigades (Amazonia) #####
 
-	# 1a Brigada de Infantaria de Selva
+	# 1a Brigada de Infantaria de Selva - Boa Vista (RR)
 	division = {
 		name = "1a Brigada de Infantaria de Selva"
-		location = 10933
+		location = 5214
 		division_template = "Brigada Inf. Selva"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.75
 	}
-	# 2a Brigada de Infantaria de Selva
+	# 2a Brigada de Infantaria de Selva - Sao Gabriel da Cachoeira (AM)
 	division = {
 		name = "2a Brigada de Infantaria de Selva"
-		location = 4436
+		location = 6975
 		division_template = "Brigada Inf. Selva"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.75
 	}
-	# 16a Brigada de Infantaria de Selva
+	# 16a Brigada de Infantaria de Selva - Tefe (AM)
 	division = {
 		name = "16a Brigada de Infantaria de Selva"
-		location = 5168
+		location = 6651
 		division_template = "Brigada Inf. Selva"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.75
 	}
-	# 17a Brigada de Infantaria de Selva
+	# 17a Brigada de Infantaria de Selva - Porto Velho (RO)
 	division = {
 		name = "17a Brigada de Infantaria de Selva"
-		location = 2111
+		location = 12939
 		division_template = "Brigada Inf. Selva"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.75
 	}
-	# 23a Brigada de Infantaria de Selva
+	# 23a Brigada de Infantaria de Selva - Maraba (PA)
 	division = {
 		name = "23a Brigada de Infantaria de Selva"
-		location = 10405
+		location = 4095
 		division_template = "Brigada Inf. Selva"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.75
@@ -246,19 +243,19 @@ units = {
 
 	##### Rapid Reaction #####
 
-	# Brigada de Infantaria Para-quedista
+	# Brigada de Infantaria Para-quedista - Rio de Janeiro (RJ)
 	division = {
 		name = "Brigada de Infantaria Para-quedista"
-		location = 10360
+		location = 10980
 		division_template = "Brigada Para-quedista"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.85
 	}
-	# Brigada de Operacoes Especiais
+	# Comando de Operacoes Especiais - Goiania (GO)
 	division = {
-		name = "Brigada de Operacoes Especiais"
-		location = 10432
-		division_template = "Brig. Operacoes Especiais"
+		name = "Comando de Operacoes Especiais"
+		location = 920
+		division_template = "Cmd. Operacoes Especiais"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.85
 	}
@@ -271,17 +268,18 @@ units = {
 		task_force = {
 			name = "Esquadra"
 			location = 10980
-			ship = { name = "PHM Atlântico (A140)" definition = helicopter_operator start_experience_factor = 0.4 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = BRA creator = BRA version_name = "Atlântico Class" } } }
-			ship = { name = "Tamandaré (F200)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = BRA creator = BRA version_name = "Tamandaré Class" } } }
-			ship = { name = "Niterói (F40)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = BRA creator = BRA version_name = "Niterói Class" } } }
+			ship = { name = "NAM Atlântico (A140)" definition = helicopter_operator start_experience_factor = 0.4 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = BRA creator = BRA version_name = "Atlântico Class" } } }
 			ship = { name = "Defensora (F41)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = BRA creator = BRA version_name = "Niterói Class" } } }
 			ship = { name = "Constituição (F42)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = BRA creator = BRA version_name = "Niterói Class" } } }
+			ship = { name = "Liberal (F43)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = BRA creator = BRA version_name = "Niterói Class" } } }
+			ship = { name = "Independência (F44)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = BRA creator = BRA version_name = "Niterói Class" } } }
+			ship = { name = "União (F45)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = BRA creator = BRA version_name = "Niterói Class" } } }
 			ship = { name = "Barroso (V34)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_2 = { amount = 1 owner = BRA creator = BRA version_name = "Barroso Class" } } }
 			ship = { name = "Riachuelo (S40)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = BRA creator = BRA version_name = "Riachuelo Class" } } }
 			ship = { name = "Humaitá (S41)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = BRA creator = BRA version_name = "Riachuelo Class" } } }
 			ship = { name = "Tonelero (S42)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = BRA creator = BRA version_name = "Riachuelo Class" } } }
 			ship = { name = "Tupi (S30)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = BRA creator = BRA version_name = "Tupi Class" } } }
-			ship = { name = "Tamoio (S31)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = BRA creator = BRA version_name = "Tupi Class" } } }
+			ship = { name = "Tikuna (S34)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = BRA creator = BRA version_name = "Tikuna Class" } } }
 		}
 	}
 }
@@ -299,7 +297,7 @@ instant_effect = {
 air_wings = {
 	# Anápolis (Goiás)
 	885 = {
-		L_Strike_fighter2 = { owner = "BRA" creator = "SWE" amount = 24 version_name = "JAS 39E/F Gripen" }
+		L_Strike_fighter2 = { owner = "BRA" creator = "SWE" amount = 11 version_name = "JAS 39E Gripen" }
 		name = "1º Grupo de Defesa Aérea"
 		start_experience_factor = 0.5
 	}
@@ -308,35 +306,31 @@ air_wings = {
 		name = "2º/6º Grupo de Aviação"
 		start_experience_factor = 0.45
 	}
+	885 = {
+		transport_plane2 = { owner = "BRA" amount = 8 version_name = "KC-390 Millennium" }
+		name = "1º Grupo de Transporte de Tropa"
+		start_experience_factor = 0.5
+	}
 	# Canoas (Rio Grande do Sul)
 	879 = {
 		small_plane_airframe_2 = { owner = "BRA" amount = 20 version_name = "F-5EM Tiger III" }
 		name = "1º/14º Grupo de Aviação"
 		start_experience_factor = 0.35
 	}
-	# Santa Cruz (Rio de Janeiro)
-	883 = {
-		cas2 = { owner = "BRA" amount = 20 version_name = "A-1M AMX" }
-		name = "1º/16º Grupo de Aviação"
-		start_experience_factor = 0.4
+	# Santa Maria (Rio Grande do Sul) - the AMX fleet was concentrated in the south
+	879 = {
+		cas2 = { owner = "BRA" amount = 5 version_name = "A-1M AMX" }
+		name = "1º/10º Grupo de Aviação"
+		start_experience_factor = 0.35
 	}
-	883 = {
-		transport_plane2 = { owner = "BRA" amount = 8 version_name = "KC-390 Millennium" }
-		name = "1º/15º Grupo de Aviação"
-		start_experience_factor = 0.5
-	}
+	# Galeão (Rio de Janeiro)
 	883 = {
 		transport_plane1 = { owner = "BRA" creator = "USA" amount = 10 version_name = "C-130H Hercules" }
 		name = "1º Grupo de Transporte"
 		start_experience_factor = 0.35
 	}
-	# Natal / Ceará area
-	889 = {
-		cas2 = { owner = "BRA" amount = 20 version_name = "A-1M AMX" }
-		name = "3º/10º Grupo de Aviação"
-		start_experience_factor = 0.4
-	}
-	889 = {
+	# Santa Cruz (Rio de Janeiro) - P-3AM squadron moved from Salvador in 2018
+	883 = {
 		naval_plane1 = { owner = "BRA" creator = "USA" amount = 8 version_name = "P-3AM Orion" }
 		name = "1º/7º Grupo de Aviação"
 		start_experience_factor = 0.4

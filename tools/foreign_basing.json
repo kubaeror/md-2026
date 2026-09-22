@@ -15,6 +15,13 @@
     {"oob": "GER", "owner": "LIT", "reason": "Panzerbrigade 45 (Rudninkai/Rukla)"},
     {"oob": "CHI", "owner": "HKG", "reason": "PLA Hong Kong Garrison"},
     {"oob": "NKO", "owner": "SOV", "reason": "KPA troops in Kursk oblast (2024-2026)"},
-    {"oob": "SOV", "owner": "BLR", "reason": "Russian military presence in Belarus (Iskander/Oreshnik)"}
+    {"oob": "SOV", "owner": "BLR", "reason": "Russian military presence in Belarus (Iskander/Oreshnik)"},
+    {"oob": "SOV", "owner": "ARM", "reason": "Russian 102nd Military Base at Gyumri (air wing included)"},
+    {"oob": "SOV", "owner": "TAJ", "reason": "Russian 201st Military Base at Dushanbe (~7,000 troops)"},
+    {"oob": "CAN", "owner": "LAT", "reason": "Canada-led NATO Multinational Brigade Latvia"},
+    {"oob": "SWE", "owner": "LAT", "reason": "Swedish battalion in NATO Multinational Brigade Latvia"},
+    {"oob": "SWE", "owner": "FIN", "reason": "Swedish battalion in the Finnish FLF framework"},
+    {"oob": "SPR", "owner": "SLO", "reason": "Spain-led NATO Battlegroup Slovakia"},
+    {"oob": "LUX", "owner": "BEL", "reason": "Luxembourg A400M in the bi-national unit at Melsbroek"}
   ]
 }

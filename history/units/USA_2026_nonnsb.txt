@@ -168,10 +168,10 @@ division_template = {
 ## Unit Deployments ##
 
 units = {
-	# III Corps - Fort Cavazos, Texas
+	# III Corps - Fort Cavazos / Fort Bliss, Texas
 	division = {
 		name = "1st Armored Division"
-		location = 15393
+		location = 10740
 		division_template = "Armored Brigade Combat Team"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.95
@@ -184,7 +184,7 @@ units = {
 		start_equipment_factor = 0.95
 	}
 	division = {
-		name = "3rd Armored Cavalry Regiment"
+		name = "3rd Cavalry Regiment"
 		location = 15393
 		division_template = "Stryker Brigade Combat Team"
 		start_experience_factor = 0.65
@@ -199,32 +199,52 @@ units = {
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.9
 	}
+	# Fort Campbell, Kentucky
 	division = {
 		name = "101st Airborne Division"
-		location = 7083
+		location = 4402
 		division_template = "Air Assault Brigade"
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.9
 	}
+	# Fort Drum, New York
 	division = {
 		name = "10th Mountain Division"
-		location = 7083
+		location = 6778
 		division_template = "Infantry Brigade Combat Team"
 		start_experience_factor = 0.65
 		start_equipment_factor = 0.9
 	}
+	# Fort Stewart, Georgia
 	division = {
 		name = "3rd Infantry Division"
-		location = 7083
+		location = 11975
 		division_template = "Armored Brigade Combat Team"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.95
 	}
+	# Schofield Barracks, Hawaii
+	division = {
+		name = "25th Infantry Division"
+		location = 4180
+		division_template = "Infantry Brigade Combat Team"
+		start_experience_factor = 0.65
+		start_equipment_factor = 0.9
+	}
+	# Fort Wainwright / JBER, Alaska
+	division = {
+		name = "11th Airborne Division"
+		location = 15058
+		division_template = "Airborne Brigade"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.9
+	}
 
 	# V Corps - Europe (Germany/Poland)
+	# Rose Barracks, Vilseck, Bavaria (Germany)
 	division = {
 		name = "2nd Cavalry Regiment"
-		location = 3397
+		location = 3705
 		division_template = "Stryker Brigade Combat Team"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.9
@@ -246,21 +266,21 @@ units = {
 
 	# I Corps - JBLM, Washington
 	division = {
-		name = "2nd Infantry Division"
-		location = 7583
+		name = "1st Stryker Brigade Combat Team (2nd Infantry Division)"
+		location = 7386
 		division_template = "Stryker Brigade Combat Team"
 		start_experience_factor = 0.65
 		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "7th Infantry Division"
-		location = 7583
+		location = 7386
 		division_template = "Infantry Brigade Combat Team"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.85
 	}
 
-	# Korea
+	# Korea - Camp Humphreys, Gyeonggi
 	division = {
 		name = "2nd Infantry Division (Korea)"
 		location = 7221
@@ -284,25 +304,28 @@ units = {
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.9
 	}
+	# Camp Courtney, Okinawa (Japan)
 	division = {
 		name = "3rd Marine Division"
-		location = 7386
+		location = 7115
 		division_template = "Marine Expeditionary Brigade"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.85
 	}
 
 	# Special Operations
+	# MacDill AFB, Tampa, Florida
 	division = {
 		name = "USSOCOM Task Force"
-		location = 788
+		location = 15930
 		division_template = "Special Operations Brigade"
 		start_experience_factor = 0.9
 		start_equipment_factor = 0.95
 	}
+	# Fort Moore, Georgia
 	division = {
 		name = "75th Ranger Regiment"
-		location = 788
+		location = 7583
 		division_template = "Special Operations Brigade"
 		start_experience_factor = 0.85
 		start_equipment_factor = 0.9
@@ -311,7 +334,7 @@ units = {
 	# National Guard (selected)
 	division = {
 		name = "28th Infantry Division (NG)"
-		location = 873
+		location = 16104
 		division_template = "National Guard Brigade"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
@@ -325,7 +348,7 @@ units = {
 	}
 	division = {
 		name = "34th Infantry Division (NG)"
-		location = 4865
+		location = 15594
 		division_template = "National Guard Brigade"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
@@ -346,7 +369,7 @@ units = {
 	}
 	division = {
 		name = "38th Infantry Division (NG)"
-		location = 4402
+		location = 15794
 		division_template = "National Guard Brigade"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
@@ -360,7 +383,7 @@ units = {
 	}
 	division = {
 		name = "42nd Infantry Division (NG)"
-		location = 10352
+		location = 9693
 		division_template = "National Guard Brigade"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
@@ -376,10 +399,10 @@ units = {
 			name = "Carrier Strike Group 1"
 			location = 1562
 			ship = { name = "USS Abraham Lincoln (CVN-72)" definition = carrier start_experience_factor = 0.75 equipment = { carrier_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Nimitz Class" } } }
-			ship = { name = "USS Anzio (CG-68)" definition = cruiser start_experience_factor = 0.75 equipment = { cruiser_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ticonderoga Class" } } }
-			ship = { name = "USS Dewey (DDG-105)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+			ship = { name = "USS Cape St. George (CG-71)" definition = cruiser start_experience_factor = 0.75 equipment = { cruiser_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ticonderoga Class" } } }
+			ship = { name = "USS Chosin (CG-65)" definition = cruiser start_experience_factor = 0.75 equipment = { cruiser_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ticonderoga Class" } } }
 			ship = { name = "USS William P. Lawrence (DDG-110)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
-			ship = { name = "USS Paul Ignatius (DDG-117)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+			ship = { name = "USS Mustin (DDG-89)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
 		}
 		task_force = {
 			name = "Carrier Strike Group 9"
@@ -388,6 +411,7 @@ units = {
 			ship = { name = "USS Lake Erie (CG-70)" definition = cruiser start_experience_factor = 0.75 equipment = { cruiser_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ticonderoga Class" } } }
 			ship = { name = "USS Kidd (DDG-100)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
 			ship = { name = "USS Stockdale (DDG-106)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+			ship = { name = "USS Chafee (DDG-90)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
 			ship = { name = "USS Ralph Johnson (DDG-114)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
 		}
 		task_force = {
@@ -396,14 +420,14 @@ units = {
 			ship = { name = "USS Carl Vinson (CVN-70)" definition = carrier start_experience_factor = 0.75 equipment = { carrier_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Nimitz Class" } } }
 			ship = { name = "USS Princeton (CG-59)" definition = cruiser start_experience_factor = 0.75 equipment = { cruiser_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ticonderoga Class" } } }
 			ship = { name = "USS Sampson (DDG-102)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
-			ship = { name = "USS John Finn (DDG-113)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+			ship = { name = "USS Sterett (DDG-104)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+			ship = { name = "USS Jack H. Lucas (DDG-125)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke Flight III" } } }
 		}
 		task_force = {
 			name = "Surface Development Squadron"
 			location = 1562
 			ship = { name = "USS Zumwalt (DDG-1000)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Zumwalt Class" } } }
 			ship = { name = "USS Michael Monsoor (DDG-1001)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Zumwalt Class" } } }
-			ship = { name = "USS Lyndon B. Johnson (DDG-1002)" definition = destroyer start_experience_factor = 0.6 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Zumwalt Class" } } }
 		}
 		task_force = {
 			name = "Expeditionary Strike Group 3"
@@ -411,14 +435,23 @@ units = {
 			ship = { name = "USS America (LHA-6)" definition = helicopter_operator start_experience_factor = 0.75 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = USA creator = USA version_name = "America Class" } } }
 			ship = { name = "USS Boxer (LHD-4)" definition = helicopter_operator start_experience_factor = 0.75 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Wasp Class" } } }
 			ship = { name = "USS Makin Island (LHD-8)" definition = helicopter_operator start_experience_factor = 0.75 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Wasp Class" } } }
+			ship = { name = "USS Essex (LHD-2)" definition = helicopter_operator start_experience_factor = 0.7 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Wasp Class" } } }
 		}
 		task_force = {
 			name = "LCS Squadron"
 			location = 1562
-			ship = { name = "USS Jackson (LCS-6)" definition = corvette start_experience_factor = 0.75 equipment = { corvette_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Freedom Class" } } }
+			ship = { name = "USS Jackson (LCS-6)" definition = corvette start_experience_factor = 0.75 equipment = { corvette_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Independence Class" } } }
 			ship = { name = "USS Gabrielle Giffords (LCS-10)" definition = corvette start_experience_factor = 0.75 equipment = { corvette_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Independence Class" } } }
 			ship = { name = "USS Kansas City (LCS-22)" definition = corvette start_experience_factor = 0.75 equipment = { corvette_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Independence Class" } } }
 			ship = { name = "USS Mobile (LCS-26)" definition = corvette start_experience_factor = 0.75 equipment = { corvette_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Independence Class" } } }
+		}
+		# Naval Surface Group Middle Pacific - Pearl Harbor
+		task_force = {
+			name = "Naval Surface Group Middle Pacific"
+			location = 4180
+			ship = { name = "USS Shiloh (CG-67)" definition = cruiser start_experience_factor = 0.75 equipment = { cruiser_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ticonderoga Class" } } }
+			ship = { name = "USS Michael Murphy (DDG-112)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+			ship = { name = "USS Frank E. Petersen Jr. (DDG-121)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
 		}
 	}
 
@@ -430,16 +463,16 @@ units = {
 			name = "Carrier Strike Group 5"
 			location = 9998
 			ship = { name = "USS George Washington (CVN-73)" definition = carrier start_experience_factor = 0.75 equipment = { carrier_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Nimitz Class" } } }
-			ship = { name = "USS Shiloh (CG-67)" definition = cruiser start_experience_factor = 0.75 equipment = { cruiser_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ticonderoga Class" } } }
+			ship = { name = "USS Robert Smalls (CG-62)" definition = cruiser start_experience_factor = 0.75 equipment = { cruiser_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ticonderoga Class" } } }
 			ship = { name = "USS John S. McCain (DDG-56)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Burke Flight I" } } }
 			ship = { name = "USS McCampbell (DDG-85)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
-			ship = { name = "USS Mustin (DDG-89)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
-			ship = { name = "USS Delbert D. Black (DDG-119)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+			ship = { name = "USS Dewey (DDG-105)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+			ship = { name = "USS John Finn (DDG-113)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+			ship = { name = "USS Rafael Peralta (DDG-115)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
 		}
 		task_force = {
 			name = "Expeditionary Strike Group 7"
 			location = 1158
-			ship = { name = "USS Essex (LHD-2)" definition = helicopter_operator start_experience_factor = 0.75 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Wasp Class" } } }
 			ship = { name = "USS Tripoli (LHA-7)" definition = helicopter_operator start_experience_factor = 0.75 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = USA creator = USA version_name = "America Class" } } }
 		}
 	}
@@ -453,25 +486,21 @@ units = {
 			location = 865
 			ship = { name = "USS Gerald R. Ford (CVN-78)" definition = carrier start_experience_factor = 0.75 equipment = { carrier_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Gerald R. Ford Class" } } }
 			ship = { name = "USS Daniel Inouye (DDG-118)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
-			ship = { name = "USS Frank E. Petersen Jr. (DDG-121)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke Flight III" } } }
-			ship = { name = "USS Jack H. Lucas (DDG-125)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke Flight III" } } }
 		}
 		task_force = {
 			name = "Carrier Strike Group 8"
 			location = 865
 			ship = { name = "USS Harry S. Truman (CVN-75)" definition = carrier start_experience_factor = 0.75 equipment = { carrier_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Nimitz Class" } } }
-			ship = { name = "USS Cape St. George (CG-71)" definition = cruiser start_experience_factor = 0.75 equipment = { cruiser_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ticonderoga Class" } } }
-			ship = { name = "USS Oscar Austin (DDG-79)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
-			ship = { name = "USS Roosevelt (DDG-80)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+			ship = { name = "USS Gettysburg (CG-64)" definition = cruiser start_experience_factor = 0.75 equipment = { cruiser_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ticonderoga Class" } } }
 			ship = { name = "USS Howard (DDG-83)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
 		}
 		task_force = {
 			name = "Carrier Strike Group 10"
 			location = 865
 			ship = { name = "USS George H.W. Bush (CVN-77)" definition = carrier start_experience_factor = 0.75 equipment = { carrier_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Nimitz Class" } } }
-			ship = { name = "USS Vella Gulf (CG-72)" definition = cruiser start_experience_factor = 0.75 equipment = { cruiser_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ticonderoga Class" } } }
+			ship = { name = "USS Ross (DDG-71)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Burke Flight I" } } }
 			ship = { name = "USS Shoup (DDG-86)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
-			ship = { name = "USS Chafee (DDG-90)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+			ship = { name = "USS Gravely (DDG-107)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
 		}
 		task_force = {
 			name = "Expeditionary Strike Group 2"
@@ -479,19 +508,26 @@ units = {
 			ship = { name = "USS Bataan (LHD-5)" definition = helicopter_operator start_experience_factor = 0.75 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Wasp Class" } } }
 			ship = { name = "USS Iwo Jima (LHD-7)" definition = helicopter_operator start_experience_factor = 0.75 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Wasp Class" } } }
 		}
+		# Naval Station Mayport
+		task_force = {
+			name = "DESRON 26 (Mayport)"
+			location = 12381
+			ship = { name = "USS Delbert D. Black (DDG-119)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+		}
 	}
 
-	# 6th Fleet - Rota, Spain
+	# 6th Fleet - Rota, Spain (FDNF-E)
 	fleet = {
 		name = "6th Fleet"
 		naval_base = 279
 		task_force = {
 			name = "DESRON 60"
 			location = 279
-			ship = { name = "USS Ross (DDG-71)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Burke Flight I" } } }
-			ship = { name = "USS Sterett (DDG-104)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
-			ship = { name = "USS Michael Murphy (DDG-112)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
-			ship = { name = "USS Rafael Peralta (DDG-115)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+			ship = { name = "USS Arleigh Burke (DDG-51)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Burke Flight I" } } }
+			ship = { name = "USS Oscar Austin (DDG-79)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+			ship = { name = "USS Roosevelt (DDG-80)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+			ship = { name = "USS Bulkeley (DDG-84)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
+			ship = { name = "USS Paul Ignatius (DDG-117)" definition = destroyer start_experience_factor = 0.75 equipment = { destroyer_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Burke IIA" } } }
 		}
 	}
 
@@ -513,6 +549,9 @@ units = {
 			location = 7386
 			ship = { name = "USS Seawolf (SSN-21)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Seawolf Class" } } }
 			ship = { name = "USS Connecticut (SSN-22)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Seawolf Class" } } }
+			ship = { name = "USS Jimmy Carter (SSN-23)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Seawolf Class" } } }
+			ship = { name = "USS Ohio (SSGN-726)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ohio Class" } } }
+			ship = { name = "USS Michigan (SSGN-727)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ohio Class" } } }
 		}
 		task_force = {
 			name = "SUBRON 17 Bangor"
@@ -527,7 +566,7 @@ units = {
 		}
 	}
 
-	# Submarine Force Atlantic - Norfolk, New London, Kings Bay
+	# Submarine Force Atlantic - Norfolk & Kings Bay
 	fleet = {
 		name = "Submarine Force Atlantic"
 		naval_base = 865
@@ -542,11 +581,6 @@ units = {
 			ship = { name = "USS Delaware (SSN-791)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Virginia Class" } } }
 		}
 		task_force = {
-			name = "SUBDEVRON New London"
-			location = 9832
-			ship = { name = "USS Jimmy Carter (SSN-23)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = USA creator = USA version_name = "Seawolf Class" } } }
-		}
-		task_force = {
 			name = "SUBRON 20 Kings Bay"
 			location = 1480
 			ship = { name = "USS Tennessee (SSBN-734)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ohio Class" } } }
@@ -559,8 +593,8 @@ units = {
 		task_force = {
 			name = "SSGN Division Kings Bay"
 			location = 1480
-			ship = { name = "USS Ohio (SSGN-726)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ohio Class" } } }
-			ship = { name = "USS Michigan (SSGN-727)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ohio Class" } } }
+			ship = { name = "USS Florida (SSGN-728)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ohio Class" } } }
+			ship = { name = "USS Georgia (SSGN-729)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = USA creator = USA version_name = "Ohio Class" } } }
 		}
 	}
 }
@@ -580,6 +614,18 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = util_vehicle_7
 		amount = 3000
+		producer = USA
+	}
+	# Army aviation (AH-64E Apache / UH-60M / CH-47F) - MD models helicopters as
+	# land equipment used by attack_helo_bat and the helo support companies.
+	add_equipment_to_stockpile = {
+		type = attack_helicopter_4
+		amount = 300
+		producer = USA
+	}
+	add_equipment_to_stockpile = {
+		type = transport_helicopter_4
+		amount = 500
 		producer = USA
 	}
 }
@@ -613,14 +659,14 @@ air_wings = {
 		name = "48th Fighter Wing"
 		start_experience_factor = 0.5
 	}
-	966 = {
-		L_Strike_fighter3 = { owner = "USA" amount = 24 version_name = "F-35A Lightning II" }
+	1061 = {
+		L_Strike_fighter2 = { owner = "USA" amount = 24 version_name = "F-16C" }
 		name = "31st Fighter Wing"
 		start_experience_factor = 0.5
 	}
 
 	# USAF F-22A Raptor Wings
-	772 = {
+	773 = {
 		AS_Fighter5 = { owner = "USA" amount = 24 version_name = "F-22A Raptor" }
 		name = "1st Fighter Wing"
 		start_experience_factor = 0.5
@@ -658,6 +704,13 @@ air_wings = {
 		start_experience_factor = 0.5
 	}
 
+	# USAF F-15EX Eagle II (142nd Wing, Oregon ANG - Portland ANGB)
+	810 = {
+		medium_plane_airframe_2 = { owner = "USA" amount = 8 version_name = "F-15EX Eagle II" }
+		name = "142nd Wing"
+		start_experience_factor = 0.4
+	}
+
 	# USAF F-16C ANG/Active Wings
 	772 = {
 		L_Strike_fighter2 = { owner = "USA" amount = 24 version_name = "F-16C" }
@@ -679,7 +732,7 @@ air_wings = {
 		name = "177th Fighter Wing"
 		start_experience_factor = 0.4
 	}
-	827 = {
+	607 = {
 		L_Strike_fighter2 = { owner = "USA" amount = 24 version_name = "F-16C" }
 		name = "8th Fighter Wing"
 		start_experience_factor = 0.5
@@ -709,12 +762,17 @@ air_wings = {
 		start_experience_factor = 0.5
 	}
 	797 = {
-		large_plane_airframe_1 = { owner = "USA" amount = 24 version_name = "B-52H Stratofortress" }
+		large_plane_airframe_1 = { owner = "USA" amount = 29 version_name = "B-52H Stratofortress" }
 		name = "2nd Bomb Wing"
 		start_experience_factor = 0.5
 	}
+	797 = {
+		large_plane_airframe_1 = { owner = "USA" amount = 18 version_name = "B-52H Stratofortress" }
+		name = "307th Bomb Wing (AFRC)"
+		start_experience_factor = 0.4
+	}
 	787 = {
-		large_plane_airframe_1 = { owner = "USA" amount = 24 version_name = "B-52H Stratofortress" }
+		large_plane_airframe_1 = { owner = "USA" amount = 29 version_name = "B-52H Stratofortress" }
 		name = "5th Bomb Wing"
 		start_experience_factor = 0.5
 	}
@@ -748,6 +806,18 @@ air_wings = {
 	797 = {
 		transport_plane1 = { owner = "USA" amount = 24 version_name = "C-130J Super Hercules" }
 		name = "19th Airlift Wing"
+		start_experience_factor = 0.5
+	}
+
+	# USAF Air Refueling Wings
+	795 = {
+		transport_plane2 = { owner = "USA" amount = 24 version_name = "KC-135R Stratotanker" }
+		name = "6th Air Refueling Wing"
+		start_experience_factor = 0.5
+	}
+	784 = {
+		transport_plane2 = { owner = "USA" amount = 24 version_name = "KC-46A Pegasus" }
+		name = "22nd Air Refueling Wing"
 		start_experience_factor = 0.5
 	}
 

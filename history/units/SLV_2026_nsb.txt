@@ -29,16 +29,26 @@ division_template = {
 }
 
 units = {
+	# 1st Brigade - Ljubljana
 	division = {
-		name = "72. Brigada"
+		name = "1. Brigada"
 		location = 9627
 		division_template = "Pehotna Brigada"
 		start_experience_factor = 0.40
 		start_equipment_factor = 0.70
 	}
+	# 72nd Brigade - Maribor (eastern Slovenia)
+	division = {
+		name = "72. Brigada"
+		location = 9596
+		division_template = "Pehotna Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.70
+	}
+	# Special Operations Unit - Kočevska Reka
 	division = {
 		name = "Enota za Specialno Delovanje"
-		location = 665
+		location = 6650
 		division_template = "Enota za Specialno Delovanje"
 		start_experience_factor = 0.50
 		start_equipment_factor = 0.75

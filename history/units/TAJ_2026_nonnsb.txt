@@ -3,7 +3,8 @@
 # Rebuild with: python tools/make_nonnsb_oob.py --apply
 ##### Tajikistan - 2026 OOB #####
 # Armed Forces of Tajikistan - post-Soviet, border security focus
-# Concerned with Afghan border, Russian base at 201st
+# Concerned with Afghan border, Russian 201st Military Base at Dushanbe
+# (Border Troops are a separate service of the State Committee for National Security)
 
 division_template = {
 	name = "Motostrelkovaya Brigada"		# Motorized Rifle Brigade
@@ -22,12 +23,12 @@ division_template = {
 }
 
 division_template = {
-	name = "Pogranichna Brigada"		# Border Guard Brigade
+	name = "Pehotnaya Brigada"		# Light / Mountain Infantry
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
 		L_Inf_Bat = { x = 0 y = 2 }
-		Militia_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 0 }
 	}
 	support = {
 		L_Recce_Comp = { x = 0 y = 0 }
@@ -35,37 +36,64 @@ division_template = {
 	}
 }
 
-units = {
-	# Dushanbe
-	division = {
-		name = "1. Motostrelkovaya Brigada"
-		location = 14205
-		division_template = "Motostrelkovaya Brigada"
-		start_experience_factor = 0.30
-		start_equipment_factor = 0.55
+division_template = {
+	name = "Artilleriyskaya Brigada"		# Artillery Brigade
+	regiments = {
+		SP_Arty_Bat = { x = 0 y = 0 }
+		SP_Arty_Bat = { x = 0 y = 1 }
+		SP_R_Arty_Bat = { x = 1 y = 0 }
+		SP_R_Arty_Bat = { x = 1 y = 1 }
 	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		combat_service_support_company = { x = 0 y = 1 }
+	}
+}
 
-	# Khujand (North)
+units = {
+	##### Tajik Ground Forces #####
+
+	# 1st Motor Rifle Brigade - Bokhtar (Khatlon)
 	division = {
-		name = "2. Motostrelkovaya Brigada"
+		name = "1st Motor Rifle Brigade"
 		location = 12218
 		division_template = "Motostrelkovaya Brigada"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.55
 	}
 
-	# Afghan border
+	# 3rd Motor Rifle Brigade - Khujand (Sughd)
 	division = {
-		name = "1. Pogranichna Brigada"
-		location = 12430
-		division_template = "Pogranichna Brigada"
+		name = "3rd Motor Rifle Brigade"
+		location = 14205
+		division_template = "Motostrelkovaya Brigada"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.55
+	}
+
+	# 12th Artillery Brigade - Dushanbe
+	division = {
+		name = "12th Artillery Brigade"
+		location = 1384
+		division_template = "Artilleriyskaya Brigada"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.50
 	}
+
+	# 7th Separate Rifle Battalion (Vose' / Kulob sector, Afghan border)
 	division = {
-		name = "2. Pogranichna Brigada"
-		location = 1384
-		division_template = "Pogranichna Brigada"
+		name = "7th Separate Rifle Battalion"
+		location = 7224
+		division_template = "Pehotnaya Brigada"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.50
+	}
+
+	# Military Unit 15426 - Gorno-Badakhshan (Murghob sector, Pamir)
+	division = {
+		name = "Military Unit 15426"
+		location = 10417
+		division_template = "Pehotnaya Brigada"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.45
 	}
@@ -77,14 +105,33 @@ instant_effect = {
 		amount = 2000
 		producer = TAJ
 	}
+	# The air force's real substance - Mi-8 transports and Mi-24 gunships
+	add_equipment_to_stockpile = {
+		type = transport_helicopter_2
+		variant_name = "Mi-8MT / Mi-8MTV"
+		amount = 14
+		producer = SOV
+	}
+	add_equipment_to_stockpile = {
+		type = attack_helicopter_2
+		variant_name = "Mi-24V"
+		amount = 6
+		producer = SOV
+	}
 }
 
 ##### Tajik Air Force #####
 air_wings = {
-	# Ayni Air Base (Tajik Bactria)
+	# Ayni Air Base (near Dushanbe) - L-39 light attack / trainer
 	724 = {
-		L_Strike_fighter1 = { owner = "TAJ" creator = "CZE" amount = 6 version_name = "Aero L-39 Albatros" }
+		L_Strike_fighter1 = { owner = "TAJ" creator = "CZE" amount = 4 version_name = "Aero L-39 Albatros" }
 		name = "Jet Training / Light Attack Squadron"
+		start_experience_factor = 0.25
+	}
+	# Ayni Air Base - An-26 transport
+	724 = {
+		transport_plane1 = { owner = "TAJ" creator = "SOV" amount = 1 version_name = "An-26" }
+		name = "Transport Aviation"
 		start_experience_factor = 0.25
 	}
 }

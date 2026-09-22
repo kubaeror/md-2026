@@ -1,6 +1,14 @@
 ##### Syria - 2026 OOB (Transitional Government, post-Assad) #####
-# Military fragmented after civil war; rebuilding under new transitional authority
-# Mix of remnant SAA equipment + militia forces being integrated
+# Military rebuilt during 2025 from the factions that won the war, organised in
+# numbered divisions grouped on the regions they came from. The five-corps
+# structure was only announced in late June 2026, so no corps HQs are shown for
+# 1 January 2026. The Ba'athist navy and air force no longer exist: the fleet
+# was sunk at Latakia on 9-10 December 2024 and the MiG-29/L-39 fleet destroyed
+# in the same strikes, leaving only a handful of restored Su-22 and L-39
+# airframes flying from Shayrat and Kuweires.
+# Sources: Wikipedia (Syrian Armed Forces/Army/Air Force/Navy), syriarevisited.com
+# (The New Syrian Army: Structure and Commanders), Alma Research (The New Syrian
+# Army), militarnyi.com, navalnews.com.
 
 division_template = {
 	name = "Firqa Mushaat"		# Infantry Division
@@ -35,7 +43,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Firqa Madra'a"		# Motorized Division (remnant)
+	name = "Firqa Madra'a"		# Motorized Division
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
 		Mot_Inf_Bat = { x = 0 y = 1 }
@@ -51,7 +59,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Liwa' Mudarra'"		# Armored Brigade (remnant)
+	name = "Liwa' Mudarra'"		# Armored Brigade
 	regiments = {
 		armor_Bat = { x = 0 y = 0 }
 		armor_Bat = { x = 0 y = 1 }
@@ -65,117 +73,125 @@ division_template = {
 }
 
 units = {
-	##### Transitional Syrian Military #####
+	##### Syrian Army — numbered divisions of the Ministry of Defence #####
 
-	# Damascus area
+	# Damascus and the south
 	division = {
-		name = "1. Firqa Mushaat"
+		name = "44th Division"
+		location = 4111
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.50
+	}
+	division = {
+		name = "70th Division"
+		location = 4111
+		division_template = "Firqa Madra'a"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name = "40th Division"
 		location = 1074
 		division_template = "Firqa Mushaat"
 		start_experience_factor = 0.25
-		start_equipment_factor = 0.50
-	}
-	division = {
-		name = "2. Firqa Mushaat"
-		location = 6302
-		division_template = "Firqa Mushaat"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.50
+		start_equipment_factor = 0.45
 	}
 
-	# Aleppo area
+	# Homs, Hama and the Badia
+	# 52nd Division - Homs
 	division = {
-		name = "3. Firqa Mushaat"
-		location = 4111
+		name = "52nd Division"
+		location = 6302
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.50
+	}
+	# 54th Division - Homs governorate
+	division = {
+		name = "54th Division"
+		location = 1450
+		division_template = "Firqa Madra'a"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.45
+	}
+	# 98th Armored Division - Homs governorate
+	division = {
+		name = "98th Armored Division"
+		location = 11118
+		division_template = "Liwa' Mudarra'"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.40
+	}
+	# 118th Division - Palmyra (the Badia)
+	division = {
+		name = "118th Division"
+		location = 6297
+		division_template = "Firqa Madra'a"
+		start_experience_factor = 0.20
+		start_equipment_factor = 0.35
+	}
+	# 25th Division - Hama
+	division = {
+		name = "25th Division"
+		location = 11124
 		division_template = "Firqa Mushaat"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.45
 	}
+
+	# Coast
+	# 50th Division - Latakia
 	division = {
-		name = "1. Firqa Miliishiya"
-		location = 6302
+		name = "50th Division"
+		location = 1088
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.45
+	}
+	# 56th Reserve Division - Tartus
+	division = {
+		name = "56th Reserve Division"
+		location = 10087
 		division_template = "Firqa Miliishiya"
 		start_experience_factor = 0.20
 		start_equipment_factor = 0.40
 	}
 
-	# Homs / Central
+	# Idlib
+	# 64th Division - Idlib
 	division = {
-		name = "4. Firqa Mushaat"
-		location = 1088
+		name = "64th Division"
+		location = 11127
 		division_template = "Firqa Mushaat"
-		start_experience_factor = 0.25
+		start_experience_factor = 0.30
 		start_equipment_factor = 0.45
 	}
-	division = {
-		name = "2. Firqa Miliishiya"
-		location = 4111
-		division_template = "Firqa Miliishiya"
-		start_experience_factor = 0.15
-		start_equipment_factor = 0.35
-	}
 
-	# Eastern Syria (Deir ez-Zor / SDF area)
+	# Aleppo and the northern countryside
+	# 60th Division - Aleppo
 	division = {
-		name = "3. Firqa Miliishiya"
-		location = 7140
-		division_template = "Firqa Miliishiya"
-		start_experience_factor = 0.30
-		start_equipment_factor = 0.40
-	}
-	division = {
-		name = "4. Firqa Miliishiya"
+		name = "60th Division"
 		location = 12473
-		division_template = "Firqa Miliishiya"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.35
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.50
 	}
-
-	# Motorized / Armor remnants
+	# 76th Division - Manbij
 	division = {
-		name = "1. Firqa Madra'a"
-		location = 1074
+		name = "76th Division"
+		location = 6367
 		division_template = "Firqa Madra'a"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.40
 	}
+	# 80th Division - Afrin
 	division = {
-		name = "1. Liwa' Mudarra'"
-		location = 6302
-		division_template = "Liwa' Mudarra'"
-		start_experience_factor = 0.20
-		start_equipment_factor = 0.30
-	}
-
-	# Coastal / Latakia
-	division = {
-		name = "5. Firqa Miliishiya"
-		location = 12473
+		name = "80th Division"
+		location = 6370
 		division_template = "Firqa Miliishiya"
 		start_experience_factor = 0.20
 		start_equipment_factor = 0.40
-	}
-
-	# Southern border
-	division = {
-		name = "5. Firqa Mushaat"
-		location = 6312
-		division_template = "Firqa Mushaat"
-		start_experience_factor = 0.20
-		start_equipment_factor = 0.45
-	}
-
-	##### Syrian Navy (remnant) #####
-	fleet = {
-		name = "Syrian Navy"
-		naval_base = 10087		# Latakia / Tartus
-		task_force = {
-			name = "Latakia Naval Detachment"
-			location = 10087
-			# Remnant patrol craft
-			ship = { name = "Tishreen" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = SYR creator = SYR version_name = "Petya class" } } }
-			ship = { name = "Al Assad" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = SYR creator = SYR version_name = "Osa class" } } }
-		}
 	}
 }
 
@@ -192,18 +208,18 @@ instant_effect = {
 	}
 }
 
-##### Syrian Air Force (remnant, minimal operational capability) #####
+##### Syrian Air Force (remnants, minimal operational capability) #####
 air_wings = {
-	# Surviving MiG-29 (very few operational)
-	186 = {
-		small_plane_airframe_2 = { owner = "SYR" creator = "SOV" amount = 6 version_name = "MiG-29A Fulcrum" }
-		name = "Remnant Fighter Squadron"
-		start_experience_factor = 0.2
+	# Shayrat AB (Homs) — first restored Su-22 flew again in September 2025
+	188 = {
+		cas1 = { owner = "SYR" creator = "SOV" amount = 2 version_name = "Su-22M3/M4" }
+		name = "Shayrat Fighter-Bomber Squadron"
+		start_experience_factor = 0.15
 	}
-	# L-39 Albatros (trainer/light attack, some still flying)
-	186 = {
-		cas2 = { owner = "SYR" creator = "SOV" amount = 10 version_name = "L-39ZA Albatros" }
-		name = "Training Squadron"
+	# Kuweires / Khalid bin al-Walid AB (Aleppo) — training flights with restored L-39s
+	566 = {
+		cas2 = { owner = "SYR" creator = "SOV" amount = 4 version_name = "L-39ZA Albatros" }
+		name = "Khalid bin al-Walid Training Squadron"
 		start_experience_factor = 0.15
 	}
 }

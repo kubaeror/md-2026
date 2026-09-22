@@ -49,27 +49,31 @@ division_template = {
 }
 
 units = {
+	# Mechanised Infantry Brigade "Iron Wolf" - Rukla
 	division = {
 		name = "Iron Wolf Brigada"
-		location = 3320
+		location = 6296
 		division_template = "Mehanizuota Brigada"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
+	# Infantry Brigade "Žemaitija" (Griffin) - Klaipeda
 	division = {
 		name = "Griffon Brigada"
-		location = 6296
+		location = 13258
 		division_template = "Motorizuota Brigada"
 		start_experience_factor = 0.40
 		start_equipment_factor = 0.70
 	}
+	# Reserve Infantry Brigade "Aukštaitija" - Pajuostis (Panevėžys)
 	division = {
-		name = "Aitvaras Brigada"
-		location = 3288
+		name = "Aukštaitija Brigada"
+		location = 9438
 		division_template = "Motorizuota Brigada"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.65
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.60
 	}
+	# Special Operations Force (YPT Aitvaras) - Vilnius
 	division = {
 		name = "Specialiuju Operaciju Pajegos"
 		location = 3320
@@ -83,12 +87,23 @@ units = {
 		name = "Lithuanian Naval Force"
 		naval_base = 13258
 		task_force = {
-			name = "Lithuanian Naval Force"
+			name = "Patrol Ships Squadron"
 			location = 13258
-			ship = { name = "P11 Zemaitis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT creator = LIT version_name = "Flyvefisken Class" } } }
-			ship = { name = "P12 Aukstaitis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT creator = LIT version_name = "Flyvefisken Class" } } }
-			ship = { name = "M51 Kursis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT creator = LIT version_name = "Hunt Class" } } }
-			ship = { name = "M52 Suduvis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LIT creator = LIT version_name = "Hunt Class" } } }
+			# Flyvefisken-class (Standard Flex 300) patrol vessels (ex-Danish)
+			ship = { name = "P11 Žemaitis" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = LIT creator = LIT version_name = "Flyvefisken class" } } }
+			ship = { name = "P12 Dzūkas" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = LIT creator = LIT version_name = "Flyvefisken class" } } }
+			ship = { name = "P14 Aukštaitis" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = LIT creator = LIT version_name = "Flyvefisken class" } } }
+			ship = { name = "P15 Sėlis" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = LIT creator = LIT version_name = "Flyvefisken class" } } }
+		}
+		task_force = {
+			name = "Mine Countermeasures Squadron"
+			location = 13258
+			# Vidar-class minelayer / command ship (ex-Norwegian)
+			ship = { name = "N42 Jotvingis" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = LIT creator = LIT version_name = "Vidar class" } } }
+			# Hunt-class mine countermeasures vessels (ex-UK)
+			ship = { name = "M53 Skalvis" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = LIT creator = LIT version_name = "Hunt class" } } }
+			ship = { name = "M54 Kuršis" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = LIT creator = LIT version_name = "Hunt class" } } }
+			ship = { name = "M55 Sūduvis" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = LIT creator = LIT version_name = "Hunt class" } } }
 		}
 	}
 }

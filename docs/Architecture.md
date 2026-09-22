@@ -76,6 +76,7 @@ The fixes are applied to *our* copies only and disappear automatically once MD f
 | `tools/oob_digest.py` | per-country OOB fact sheet (divisions, fleets, air wings, stockpiles) for review and audits |
 | `tools/oob_lookup.py` | province/state/equipment lookup for OOB editing (state owner, air/naval base, provinces) |
 | `tools/oob_check.py` | fast structural check of the 2026 OOBs (basing, naval/air bases, equipment, templates, ship names) |
+| `tools/oob_diff_summary.py` | before/after diff of the OOBs (HEAD vs working tree) used to review the audit fixes |
 | `tools/loc_keys.py` | localisation key extraction, missing/unused/translation report |
 | `tools/check_leaders.py` | leader data in `patches/leaders_2026.json` vs generated histories |
 | `tools/economy_report.py` | GDP/debt table for review -> `docs/Economy-2026.md` (includes a debt/treasury sanity check) |

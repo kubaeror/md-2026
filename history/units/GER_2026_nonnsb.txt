@@ -101,33 +101,33 @@ division_template = {
 ## Unit Deployments ##
 
 units = {
-	# 1st Panzer Division - Hannover
+	# 1st Panzer Division - Oldenburg
 	division = {
-		name = "9. Panzerbrigade"
-		location = 6469
+		name = "Panzerlehrbrigade 9"
+		location = 6377
 		division_template = "Panzerbrigade"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "21. Panzergrenadierbrigade"
-		location = 11560
+		name = "Panzerbrigade 21"
+		location = 9509
 		division_template = "Panzergrenadierbrigade"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.8
 	}
 
-	# 10th Armored Division - Stuttgart
+	# 10th Armored Division - Veitshoechheim
 	division = {
 		name = "12. Panzerbrigade"
-		location = 519
+		location = 3541
 		division_template = "Panzerbrigade"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "37. Panzergrenadierbrigade"
-		location = 3258
+		location = 9471
 		division_template = "Panzergrenadierbrigade"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.8
@@ -136,13 +136,13 @@ units = {
 	# Rapid Forces Division
 	division = {
 		name = "Luftlandebrigade 1"
-		location = 3312
+		location = 11531
 		division_template = "Luftlandebrigade"
 		start_experience_factor = 0.65
 		start_equipment_factor = 0.75
 	}
 	division = {
-		name = "Jaegerbrigade 1"
+		name = "Gebirgsjaegerbrigade 23"
 		location = 707
 		division_template = "Jaegerbrigade"
 		start_experience_factor = 0.55
@@ -174,20 +174,20 @@ units = {
 		task_force = {
 			name = "1. Fregattengeschwader"
 			location = 6389
-			ship = { name = "Sachsen (F219)" definition = destroyer start_experience_factor = 0.65 equipment = { destroyer_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Sachsen Class" } } }
-			ship = { name = "Hamburg (F220)" definition = destroyer start_experience_factor = 0.65 equipment = { destroyer_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Sachsen Class" } } }
-			ship = { name = "Hessen (F221)" definition = destroyer start_experience_factor = 0.65 equipment = { destroyer_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Sachsen Class" } } }
+			ship = { name = "Brandenburg (F215)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Brandenburg Class" } } }
+			ship = { name = "Schleswig-Holstein (F216)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Brandenburg Class" } } }
+			ship = { name = "Bayern (F217)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Brandenburg Class" } } }
+			ship = { name = "Mecklenburg-Vorpommern (F218)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Brandenburg Class" } } }
 		}
 		task_force = {
-			name = "5. Korvettengeschwader"
-			location = 6389
+			name = "1. Korvettengeschwader"
+			location = 321
 			ship = { name = "Braunschweig (F260)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Braunschweig Class" } } }
 			ship = { name = "Magdeburg (F261)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Braunschweig Class" } } }
 			ship = { name = "Erfurt (F262)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Braunschweig Class" } } }
 			ship = { name = "Oldenburg (F263)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Braunschweig Class" } } }
 			ship = { name = "Ludwigshafen am Rhein (F264)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Braunschweig Class" } } }
 			ship = { name = "Koeln (F265)" definition = corvette start_experience_factor = 0.55 equipment = { corvette_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Braunschweig Class Batch 2" } } }
-			ship = { name = "Emden (F266)" definition = corvette start_experience_factor = 0.55 equipment = { corvette_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Braunschweig Class Batch 2" } } }
 		}
 	}
 	fleet = {
@@ -204,10 +204,9 @@ units = {
 		task_force = {
 			name = "2. Fregattengeschwader"
 			location = 241
-			ship = { name = "Brandenburg (F215)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Brandenburg Class" } } }
-			ship = { name = "Schleswig-Holstein (F216)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Brandenburg Class" } } }
-			ship = { name = "Bayern (F217)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Brandenburg Class" } } }
-			ship = { name = "Mecklenburg-Vorpommern (F218)" definition = frigate start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Brandenburg Class" } } }
+			ship = { name = "Sachsen (F219)" definition = destroyer start_experience_factor = 0.65 equipment = { destroyer_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Sachsen Class" } } }
+			ship = { name = "Hamburg (F220)" definition = destroyer start_experience_factor = 0.65 equipment = { destroyer_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Sachsen Class" } } }
+			ship = { name = "Hessen (F221)" definition = destroyer start_experience_factor = 0.65 equipment = { destroyer_hull_2 = { amount = 1 owner = GER creator = GER version_name = "Sachsen Class" } } }
 		}
 	}
 	fleet = {
@@ -244,37 +243,43 @@ instant_effect = {
 air_wings = {
 	# TaktLwG 71 "Richthofen" — Wittmund (Niedersachsen)
 	38 = {
-		MR_Fighter4 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
+		MR_Fighter4 = { owner = "GER" amount = 36 version_name = "Eurofighter Typhoon" }
 		name = "TaktLwG 71 Richthofen — Wittmund"
 		start_experience_factor = 0.6
 	}
 	# TaktLwG 73 "Steinhoff" — Laage (Mecklenburg-Vorpommern)
 	539 = {
-		MR_Fighter4 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
+		MR_Fighter4 = { owner = "GER" amount = 34 version_name = "Eurofighter Typhoon" }
 		name = "TaktLwG 73 Steinhoff — Laage"
 		start_experience_factor = 0.6
 	}
 	# TaktLwG 74 — Neuburg an der Donau (Bayern)
 	43 = {
-		MR_Fighter4 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
+		MR_Fighter4 = { owner = "GER" amount = 34 version_name = "Eurofighter Typhoon" }
 		name = "TaktLwG 74 — Neuburg"
 		start_experience_factor = 0.6
 	}
 	# TaktLwG 31 "Boelcke" — Noervenich (NRW)
 	966 = {
-		MR_Fighter4 = { owner = "GER" amount = 24 version_name = "Eurofighter Typhoon" }
+		MR_Fighter4 = { owner = "GER" amount = 34 version_name = "Eurofighter Typhoon" }
 		name = "TaktLwG 31 Boelcke — Noervenich"
 		start_experience_factor = 0.6
 	}
 	# TaktLwG 33 — Buechel (nuclear sharing, Tornado IDS)
 	40 = {
-		cas1 = { owner = "GER" amount = 30 version_name = "Tornado IDS/ECR" }
+		cas1 = { owner = "GER" amount = 63 version_name = "Tornado IDS" }
 		name = "TaktLwG 33 — Buechel"
+		start_experience_factor = 0.55
+	}
+	# TaktLwG 51 "Immelmann" — Jagel (Tornado ECR)
+	37 = {
+		cas1 = { owner = "GER" amount = 21 version_name = "Tornado ECR" }
+		name = "TaktLwG 51 Immelmann — Jagel"
 		start_experience_factor = 0.55
 	}
 	# LTG 62 — Wunstorf (A400M transport)
 	38 = {
-		transport_plane2 = { owner = "GER" amount = 36 version_name = "A400M Atlas" }
+		transport_plane2 = { owner = "GER" amount = 50 version_name = "A400M Atlas" }
 		name = "LTG 62 — Wunstorf"
 		start_experience_factor = 0.6
 	}
@@ -289,9 +294,9 @@ air_wings = {
 		name = "Aufklaerungs MALE — Jagel"
 		start_experience_factor = 0.5
 	}
-	# MFG 3 — Nordholz (maritime patrol P-3C, last operational)
+	# MFG 3 — Nordholz (maritime patrol P-8A Poseidon)
 	38 = {
-		naval_plane1 = { owner = "GER" creator = "USA" amount = 5 version_name = "P-3C Orion" }
+		naval_plane1 = { owner = "GER" creator = "USA" amount = 5 version_name = "P-8A Poseidon" }
 		name = "MFG 3 — Nordholz"
 		start_experience_factor = 0.5
 	}

@@ -94,23 +94,23 @@ units = {
 	# XII Mechanized Division (Alexandroupoli)
 	division = {
 		name = "XII Michanokiniton Merarhia"
-		location = 863
+		location = 11905
 		division_template = "Michanokiniton Merarhia"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
-	# XVI Armoured Division
+	# XVI Mechanized Division (Didymoteicho)
 	division = {
-		name = "XVI Tethorikmeno Merarhia"
-		location = 895
-		division_template = "Tethorikmeno Taxiarchia"
+		name = "XVI Michanokiniton Merarhia"
+		location = 11774
+		division_template = "Michanokiniton Merarhia"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
-	# D Corps - Infantry
+	# D Corps (IV Army Corps, Xanthi)
 	division = {
 		name = "D Corps Pezikon Merarhia"
-		location = 3973
+		location = 11905
 		division_template = "Pezikon Merarhia"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
@@ -129,7 +129,7 @@ units = {
 	# Islands garrison brigades
 	division = {
 		name = "Aegean Islands Command"
-		location = 9837
+		location = 10007
 		division_template = "Pezikon Merarhia"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.75
@@ -144,18 +144,18 @@ units = {
 
 	##### Central/Thessaly #####
 
-	# I Armoured Division (Larissa)
+	# I Infantry Division (Veroia)
 	division = {
-		name = "I Tethorikmeno Merarhia"
+		name = "I Pezikon Merarhia"
 		location = 3844
-		division_template = "Tethorikmeno Taxiarchia"
+		division_template = "Pezikon Merarhia"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
-	# II Mechanized Division
+	# II Mechanized Division (Edessa)
 	division = {
 		name = "II Michanokiniton Merarhia"
-		location = 11905
+		location = 895
 		division_template = "Michanokiniton Merarhia"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
@@ -217,6 +217,16 @@ units = {
 			ship = { name = "HS Spetsai (F-453)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Hydra-class (MEKO 200HN)" } } }
 			ship = { name = "HS Psara (F-454)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Hydra-class (MEKO 200HN)" } } }
 			ship = { name = "HS Salamis (F-455)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Hydra-class (MEKO 200HN)" } } }
+			ship = { name = "HS Kimon (F-601)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = GRE creator = FRA version_name = "Kimon-class (FDI)" } } }
+			ship = { name = "HS Elli (F-450)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_1 = { amount = 1 owner = GRE creator = HOL version_name = "Elli-class (Kortenaer)" } } }
+			ship = { name = "HS Limnos (F-451)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_1 = { amount = 1 owner = GRE creator = HOL version_name = "Elli-class (Kortenaer)" } } }
+			ship = { name = "HS Adrias (F-459)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_1 = { amount = 1 owner = GRE creator = HOL version_name = "Elli-class (Kortenaer)" } } }
+			ship = { name = "HS Aigaion (F-460)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_1 = { amount = 1 owner = GRE creator = HOL version_name = "Elli-class (Kortenaer)" } } }
+			ship = { name = "HS Navarinon (F-461)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_1 = { amount = 1 owner = GRE creator = HOL version_name = "Elli-class (Kortenaer)" } } }
+			ship = { name = "HS Kountouriotis (F-462)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_1 = { amount = 1 owner = GRE creator = HOL version_name = "Elli-class (Kortenaer)" } } }
+			ship = { name = "HS Kanaris (F-464)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_1 = { amount = 1 owner = GRE creator = HOL version_name = "Elli-class (Kortenaer)" } } }
+			ship = { name = "HS Themistoklis (F-465)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_1 = { amount = 1 owner = GRE creator = HOL version_name = "Elli-class (Kortenaer)" } } }
+			ship = { name = "HS Nikiforos Fokas (F-466)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_1 = { amount = 1 owner = GRE creator = HOL version_name = "Elli-class (Kortenaer)" } } }
 		}
 		task_force = {
 			name = "Fast Attack Squadron"
@@ -225,9 +235,9 @@ units = {
 			ship = { name = "HS Daniolos (P-68)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
 			ship = { name = "HS Krystallidis (P-69)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
 			ship = { name = "HS Grigoropoulos (P-70)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
-			ship = { name = "HS Kavaloudis (P-71)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
-			ship = { name = "HS Degiannis (P-72)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
-			ship = { name = "HS Laskaridis (P-73)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Ritsos (P-71)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Karathanasis (P-78)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
+			ship = { name = "HS Vlahakos (P-79)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_2 = { amount = 1 owner = GRE creator = GRE version_name = "Roussen-class (Super Vita)" } } }
 		}
 		task_force = {
 			name = "Submarine Command"
@@ -279,6 +289,12 @@ air_wings = {
 	141 = {
 		small_plane_airframe_2 = { owner = "GRE" creator = "FRA" amount = 18 version_name = "Mirage 2000-5 Mk.2" }
 		name = "331 Mira"
+		start_experience_factor = 0.4
+	}
+	# 338 Mira "Ares" — F-4E AUP (Andravida/Peloponnese)
+	142 = {
+		L_Strike_fighter2 = { owner = "GRE" creator = "USA" amount = 30 version_name = "F-4E AUP Phantom II" }
+		name = "338 Mira"
 		start_experience_factor = 0.4
 	}
 	# 380 Mira — E-2C Hawkeye (Eleusis/Central Greece)

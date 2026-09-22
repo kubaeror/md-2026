@@ -38,6 +38,7 @@ SHIP_FAMILY = {
     "attack_submarine": "attack_submarine_hull_",
     "missile_submarine": "missile_submarine_hull_",
     "submarine": ("attack_submarine_hull_", "missile_submarine_hull_"),
+    "support_ship": "support_ship",
 }
 
 FOREIGN_BASING_OK = {
@@ -130,10 +131,13 @@ def check_tag(path, ref, equipment, subunits=None, verbose=False):
             print(f"FLEET {f['name']} state {f['base_state']} ({f['base_state_name']}) "
                   f"owner {f['base_owner']}")
 
+    div_names = []
     for m in re.finditer(r"division\s*=\s*\{", text):
         b = block(text, text.index("{", m.end() - 1))
         loc = re.search(r"location\s*=\s*(\d+)", b)
         nm = re.search(r'name\s*=\s*"([^"]+)"', b)
+        if nm:
+            div_names.append(nm.group(1))
         if not loc:
             continue
         sid, info = ref.prov(loc.group(1))
@@ -142,6 +146,9 @@ def check_tag(path, ref, equipment, subunits=None, verbose=False):
             add("O-02", f"division '{nm.group(1) if nm else '?'}' in unknown province {loc.group(1)}")
         elif owner != tag and (tag, owner) not in FOREIGN_BASING_OK:
             add("O-02", f"division '{nm.group(1) if nm else '?'}' stationed in {owner} (state {sid})")
+    for name, n in Counter(div_names).items():
+        if n > 1:
+            add("O-17", f"duplicate division name '{name}' ({n}x)")
 
     for m in re.finditer(r"naval_base\s*=\s*(\d+)", text):
         prov = m.group(1)

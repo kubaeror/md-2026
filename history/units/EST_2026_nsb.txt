@@ -37,13 +37,15 @@ division_template = {
 }
 
 units = {
+	# 1st Infantry Brigade - Tapa Army Base
 	division = {
 		name = "1. Jalaväebrigaad"
-		location = 9079
+		location = 11426
 		division_template = "Jalaväebrigaad"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
+	# 2nd Infantry Brigade - Tartu
 	division = {
 		name = "2. Jalaväebrigaad"
 		location = 9079
@@ -51,6 +53,7 @@ units = {
 		start_experience_factor = 0.40
 		start_equipment_factor = 0.70
 	}
+	# Defence League (Kaitseliit) territorial defence
 	division = {
 		name = "Kaitseliidu Brigaad"
 		location = 9079
@@ -59,16 +62,27 @@ units = {
 		start_equipment_factor = 0.60
 	}
 
-	##### Estonian Navy (Tallinn) #####
+	##### Estonian Navy (Tallinn / Miinisadam) #####
 	fleet = {
 		name = "Estonian Navy"
 		naval_base = 3152
 		task_force = {
-			name = "Mine Countermeasures Division"
+			name = "Mineships Division"
 			location = 3152
-			ship = { name = "EML Ugandi (M313)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = EST creator = EST version_name = "Sandown Class" } } }
-			ship = { name = "EML Sakala (M314)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = EST creator = EST version_name = "Sandown Class" } } }
-			ship = { name = "EML Wambola (M315)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = EST creator = EST version_name = "Sandown Class" } } }
+			# Lindormen-class minelayer
+			ship = { name = "EML Wambola (A433)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = EST creator = EST version_name = "Lindormen class" } } }
+			# Sandown-class minehunters
+			ship = { name = "EML Admiral Cowan (M313)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = EST creator = EST version_name = "Sandown class" } } }
+			ship = { name = "EML Sakala (M314)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = EST creator = EST version_name = "Sandown class" } } }
+			ship = { name = "EML Ugandi (M315)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = EST creator = EST version_name = "Sandown class" } } }
+		}
+		task_force = {
+			name = "Patrol Division"
+			location = 3152
+			# Kindral Kurvits-class patrol vessel (ex-Police and Border Guard Board)
+			ship = { name = "EML Kindral Kurvits (P101)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = EST creator = EST version_name = "Kindral Kurvits class" } } }
+			ship = { name = "EML Raju (P6732)" definition = patrol_boat equipment = { patrol_boat_hull_2 = { amount = 1 owner = EST creator = EST version_name = "Raju class" } } }
+			ship = { name = "EML Valve (P112)" definition = patrol_boat equipment = { patrol_boat_hull_1 = { amount = 1 owner = EST creator = EST version_name = "Valve class" } } }
 		}
 	}
 }

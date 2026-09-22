@@ -1,9 +1,19 @@
 # GENERATED FILE - do not edit by hand.
 # Non-No-Step-Back variant of YEM_2026_nsb.txt.
 # Rebuild with: python tools/make_nonnsb_oob.py --apply
-##### Yemen - 2026 OOB (Houthi-controlled government) #####
-# Ongoing civil conflict, Houthi forces dominate the north
-# Mix of militia and light infantry, limited heavy equipment
+##### Yemen - 2026 OOB (Presidential Leadership Council / IRG) #####
+# The tag is the internationally recognised government (PLC, chairman Rashad
+# al-Alimi). On 1 Jan 2026 the north-western highlands are held by Ansar Allah,
+# whose forces are the best organised part of the country's military; those
+# units are therefore placed inside Houthi-held territory only (Sana'a, Amran,
+# Sa'dah, Al Hudaydah, Dhamar, Ibb).
+# The PLC/IRG formations (military regions, numbered army brigades, the Giants
+# Brigade and the Hazm Brigades) sit in government-held areas: Ma'rib, Al Jawf,
+# Ta'izz and the Mocha sector of the west coast.
+# Aden, Hadramaut, Al Mahrah and Socotra were in STC hands after the December
+# 2025 southern offensive, so no YEM unit is placed there.
+# Sources: CRS R48942, Sanaa Center Yemen Review, Wikipedia (Yemeni military
+# regions), ACLED Yemen actor update (Jan 2026).
 
 division_template = {
 	name = "Firqa Ansar Allah"		# Houthi Infantry
@@ -14,6 +24,22 @@ division_template = {
 		Militia_Bat = { x = 1 y = 0 }
 		Militia_Bat = { x = 1 y = 1 }
 		Militia_Bat = { x = 1 y = 2 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Arty_Battery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Firqa Mushaat"		# IRG Regular Infantry Division
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+		Arty_Bat = { x = 2 y = 0 }
 	}
 	support = {
 		L_Engi_Comp = { x = 0 y = 0 }
@@ -50,6 +76,20 @@ division_template = {
 }
 
 division_template = {
+	name = "Liwa' Mudarra'"		# Armored Brigade
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
 	name = "Liwa' Sawarikh"		# Rocket/Missile Brigade
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
@@ -63,96 +103,112 @@ division_template = {
 }
 
 units = {
-	##### Yemeni Armed Forces #####
+	##### Ansar Allah forces — Houthi-held highlands #####
 
-	# Sana'a area
+	# Sana'a
 	division = {
 		name = "1. Firqa Ansar Allah"
-		location = 9141
+		location = 10840
 		division_template = "Firqa Ansar Allah"
 		start_experience_factor = 0.40
 		start_equipment_factor = 0.50
 	}
-	division = {
-		name = "2. Firqa Ansar Allah"
-		location = 9141
-		division_template = "Firqa Ansar Allah"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.45
-	}
+	# Sana'a — Houthi missile and rocket force
 	division = {
 		name = "1. Liwa' Sawarikh"
-		location = 9141
+		location = 10840
 		division_template = "Liwa' Sawarikh"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.40
 	}
-
-	# Saada (Houthi heartland)
+	# Amran
+	division = {
+		name = "2. Firqa Ansar Allah"
+		location = 9199
+		division_template = "Firqa Ansar Allah"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.45
+	}
+	# Sa'dah (Houthi heartland)
 	division = {
 		name = "3. Firqa Ansar Allah"
-		location = 9138
+		location = 14548
 		division_template = "Firqa Ansar Allah"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.50
 	}
+	# Al Hudaydah
+	division = {
+		name = "4. Firqa Ansar Allah"
+		location = 14564
+		division_template = "Firqa Ansar Allah"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.45
+	}
+	# Dhamar
+	division = {
+		name = "5. Firqa Ansar Allah"
+		location = 14580
+		division_template = "Firqa Ansar Allah"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.45
+	}
+	# Ibb — Houthi popular committees
 	division = {
 		name = "1. Firqa Miliishiya"
-		location = 9138
+		location = 14581
 		division_template = "Firqa Miliishiya"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.40
 	}
 
-	# Hodeidah coast
+	##### PLC / IRG forces — government-held areas #####
+
+	# Ma'rib — 3rd Military Region (Ma'rib and Shabwah)
 	division = {
-		name = "4. Firqa Ansar Allah"
-		location = 9150
-		division_template = "Firqa Ansar Allah"
-		start_experience_factor = 0.40
-		start_equipment_factor = 0.45
-	}
-	division = {
-		name = "1. Liwa' Mushaat Khafeef"
-		location = 9158
-		division_template = "Liwa' Mushaat Khafeef"
+		name = "3rd Military Region"
+		location = 9203
+		division_template = "Firqa Mushaat"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.45
 	}
-
-	# Aden / South
 	division = {
-		name = "2. Firqa Miliishiya"
-		location = 8000
-		division_template = "Firqa Miliishiya"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.35
+		name = "14th Armored Brigade"
+		location = 9203
+		division_template = "Liwa' Mudarra'"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.40
 	}
-
-	# Marib front
+	# Ma'rib governorate front
 	division = {
-		name = "5. Firqa Ansar Allah"
-		location = 9181
-		division_template = "Firqa Ansar Allah"
+		name = "107th Infantry Brigade"
+		location = 9207
+		division_template = "Liwa' Mushaat Khafeef"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.40
+	}
+	# Ta'izz — Taiz Military Axis (4th Military Region)
+	division = {
+		name = "Taiz Military Axis"
+		location = 10752
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.45
+	}
+	# Al-Mukha (Mocha) — west coast front
+	division = {
+		name = "1st Giants Brigade"
+		location = 14567
+		division_template = "Liwa' Mushaat Khafeef"
 		start_experience_factor = 0.40
 		start_equipment_factor = 0.45
 	}
-
-	# Eastern / Hadramaut
+	# Al-Hazm (Al Jawf)
 	division = {
-		name = "3. Firqa Miliishiya"
-		location = 10840
+		name = "Hazm Brigades"
+		location = 9192
 		division_template = "Firqa Miliishiya"
-		start_experience_factor = 0.20
-		start_equipment_factor = 0.30
-	}
-
-	# Taiz area
-	division = {
-		name = "2. Liwa' Mushaat Khafeef"
-		location = 9217
-		division_template = "Liwa' Mushaat Khafeef"
-		start_experience_factor = 0.30
+		start_experience_factor = 0.25
 		start_equipment_factor = 0.40
 	}
 }

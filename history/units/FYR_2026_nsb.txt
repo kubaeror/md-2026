@@ -1,14 +1,14 @@
 ##### North Macedonia - 2026 OOB #####
 # Army of North Macedonia - NATO member since 2020
-# Small light infantry force
+# Small mechanized force
 
 division_template = {
-	name = "Peshachka Brigada"		# Infantry Brigade
+	name = "Mehanizirana Peshachka Brigada"		# Mechanized Infantry Brigade
 	regiments = {
-		L_Inf_Bat = { x = 0 y = 0 }
-		L_Inf_Bat = { x = 0 y = 1 }
-		L_Inf_Bat = { x = 0 y = 2 }
-		L_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 1 y = 0 }
+		Mot_Inf_Bat = { x = 1 y = 1 }
 	}
 	support = {
 		L_Recce_Comp = { x = 0 y = 0 }
@@ -29,10 +29,11 @@ division_template = {
 }
 
 units = {
+	# 1st Mechanized Infantry Brigade - Skopje/Petrovec
 	division = {
-		name = "1. Peshachka Brigada"
-		location = 3882
-		division_template = "Peshachka Brigada"
+		name = "1. Mehanizirana Peshachka Brigada"
+		location = 11857
+		division_template = "Mehanizirana Peshachka Brigada"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.60
 	}

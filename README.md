@@ -33,7 +33,7 @@ that adds a **January 1, 2026** start date bookmark to Hearts of Iron IV.
 | 2026 bookmark entries | 30 |
 | Focus branches (`MD2026_*`) | 30 |
 | 2026 orders of battle (NSB / non-NSB) | 67 / 67 |
-| Pre-completed focuses | 2118 |
+| Pre-completed focuses | 2108 |
 | Localisation keys (EN / PL) | 1720 / 1720 |
 | Validator | 0 errors |
 

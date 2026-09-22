@@ -118,7 +118,7 @@ units = {
 	# 132a Brigata Corazzata 'Ariete'
 	division = {
 		name = "132a Brigata Corazzata 'Ariete'"
-		location = 6656
+		location = 3657
 		division_template = "Brigata Corazzata"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.9
@@ -204,7 +204,7 @@ units = {
 	# Brigata Paracadutisti 'Folgore'
 	division = {
 		name = "Brigata Paracadutisti 'Folgore'"
-		location = 6946
+		location = 11833
 		division_template = "Brigata Paracadutisti"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.9
@@ -228,7 +228,7 @@ units = {
 	# 9° Reggimento 'Col Moschin' (SOF)
 	division = {
 		name = "9° Reggimento 'Col Moschin'"
-		location = 6946
+		location = 11833
 		division_template = "Reggimento Forze Speciali"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.95
@@ -258,20 +258,26 @@ units = {
 			ship = { name = "ITS Luigi Rizzo (F595)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = ITA creator = ITA version_name = "FREMM Bergamini Class" } } }
 			ship = { name = "ITS Federico Martinengo (F596)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = ITA creator = ITA version_name = "FREMM Bergamini Class" } } }
 			ship = { name = "ITS Antonio Marceglia (F597)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = ITA creator = ITA version_name = "FREMM Bergamini Class" } } }
+			ship = { name = "ITS Spartaco Schergat (F598)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { frigate_hull_3 = { amount = 1 owner = ITA creator = ITA version_name = "FREMM Bergamini Class" } } }
+			ship = { name = "ITS Emilio Bianchi (F599)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { frigate_hull_3 = { amount = 1 owner = ITA creator = ITA version_name = "FREMM Bergamini Class" } } }
 		}
 	}
 
-	## Comando Flottiglia Sommergibili (Augusta) ##
+	## Comando Flottiglia Sommergibili (Taranto) ##
 	fleet = {
 		name = "Comando Flottiglia Sommergibili"
-		naval_base = 4014
+		naval_base = 11837
 		task_force = {
 			name = "Flottiglia Sommergibili"
-			location = 4014
+			location = 11837
 			ship = { name = "ITS Salvatore Todaro (S526)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { attack_submarine_hull_2 = { amount = 1 owner = ITA creator = ITA version_name = "Todaro Class" } } }
 			ship = { name = "ITS Scire (S527)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { attack_submarine_hull_2 = { amount = 1 owner = ITA creator = ITA version_name = "Todaro Class" } } }
 			ship = { name = "ITS Pietro Venuti (S528)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { attack_submarine_hull_2 = { amount = 1 owner = ITA creator = ITA version_name = "Todaro Class" } } }
 			ship = { name = "ITS Romeo Romei (S529)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { attack_submarine_hull_2 = { amount = 1 owner = ITA creator = ITA version_name = "Todaro Class" } } }
+			ship = { name = "ITS Salvatore Pelosi (S522)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.5 equipment = { attack_submarine_hull_1 = { amount = 1 owner = ITA creator = ITA version_name = "Sauro Class" } } }
+			ship = { name = "ITS Giuliano Prini (S523)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.5 equipment = { attack_submarine_hull_1 = { amount = 1 owner = ITA creator = ITA version_name = "Sauro Class" } } }
+			ship = { name = "ITS Primo Longobardo (S524)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.5 equipment = { attack_submarine_hull_1 = { amount = 1 owner = ITA creator = ITA version_name = "Sauro Class" } } }
+			ship = { name = "ITS Gianfranco Gazzana Priaroggia (S525)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.5 equipment = { attack_submarine_hull_1 = { amount = 1 owner = ITA creator = ITA version_name = "Sauro Class" } } }
 		}
 	}
 
@@ -285,6 +291,7 @@ units = {
 			ship = { name = "ITS Paolo Thaon di Revel (P430)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { corvette_hull_3 = { amount = 1 owner = ITA creator = ITA version_name = "Thaon di Revel Class" } } }
 			ship = { name = "ITS Francesco Morosini (P431)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { corvette_hull_3 = { amount = 1 owner = ITA creator = ITA version_name = "Thaon di Revel Class" } } }
 			ship = { name = "ITS Raimondo Montecuccoli (P432)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = ITA creator = ITA version_name = "Thaon di Revel Class" } } }
+			ship = { name = "ITS Giovanni delle Bande Nere (P434)" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = ITA creator = ITA version_name = "Thaon di Revel Class" } } }
 			ship = { name = "ITS San Giusto (L9894)" definition = helicopter_operator pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = ITA creator = ITA version_name = "San Giorgio Class" } } }
 		}
 	}
@@ -307,7 +314,7 @@ air_wings = {
 		start_experience_factor = 0.6
 	}
 	79 = {
-		transport_plane1 = { owner = "ITA" creator = "USA" amount = 22 version_name = "C-130J Super Hercules" }
+		transport_plane1 = { owner = "ITA" creator = "USA" amount = 13 version_name = "C-130J Super Hercules" }
 		name = "46a Brigata Aerea"
 		start_experience_factor = 0.6
 	}
@@ -324,6 +331,11 @@ air_wings = {
 	}
 	957 = {
 		CV_L_Strike_fighter4 = { owner = "ITA" amount = 7 version_name = "F-35B Lightning II" }
+		name = "32° Stormo - 101° Gruppo F-35B"
+		start_experience_factor = 0.55
+	}
+	957 = {
+		CV_L_Strike_fighter4 = { owner = "ITA" amount = 8 version_name = "F-35B Lightning II" }
 		name = "Marina Militare - GRUPAER"
 		start_experience_factor = 0.6
 	}
@@ -346,7 +358,7 @@ air_wings = {
 	}
 	## Lombardia (Ghedi) ##
 	80 = {
-		cas1 = { owner = "ITA" amount = 15 version_name = "Panavia Tornado IDS" }
+		cas1 = { owner = "ITA" amount = 35 version_name = "Panavia Tornado IDS" }
 		name = "6° Stormo"
 		start_experience_factor = 0.55
 	}

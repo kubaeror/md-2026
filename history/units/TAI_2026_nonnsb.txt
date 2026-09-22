@@ -22,24 +22,6 @@ division_template = {
 }
 
 division_template = {
-	name = "Mechanized Division"
-	regiments = {
-		Mech_Inf_Bat = { x = 0 y = 0 }
-		Mech_Inf_Bat = { x = 0 y = 1 }
-		Mech_Inf_Bat = { x = 0 y = 2 }
-		armor_Bat = { x = 1 y = 0 }
-		SP_Arty_Bat = { x = 2 y = 0 }
-		SP_Arty_Bat = { x = 2 y = 1 }
-	}
-	support = {
-		Mot_Recce_Comp = { x = 0 y = 0 }
-		H_Engi_Comp = { x = 0 y = 1 }
-		SP_AA_Battery = { x = 0 y = 2 }
-		combat_service_support_company = { x = 0 y = 3 }
-	}
-}
-
-division_template = {
 	name = "Infantry Division"
 	regiments = {
 		Mot_Inf_Bat = { x = 0 y = 0 }
@@ -59,7 +41,23 @@ division_template = {
 }
 
 division_template = {
-	name = "Marine Division"
+	name = "Mechanized Infantry Brigade"
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		SP_Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Marine Brigade"
 	regiments = {
 		Mot_Marine_Bat = { x = 0 y = 0 }
 		Mot_Marine_Bat = { x = 0 y = 1 }
@@ -103,7 +101,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Reserve Infantry Division"
+	name = "Reserve Infantry Brigade"
 	regiments = {
 		Militia_Bat = { x = 0 y = 0 }
 		Militia_Bat = { x = 0 y = 1 }
@@ -123,85 +121,85 @@ division_template = {
 units = {
 	##### Active Army #####
 
-	# 6th Army Corps — North
+	# 6th Army Corps — Northern Taiwan (Taoyuan)
 	division = {
-		name = "6th Army - Armored Brigade"
-		location = 7186
-		division_template = "Armored Brigade"
-		start_experience_factor = 0.4
+		name = "6th Army Corps - 269th Mechanized Infantry Brigade"
+		location = 14699
+		division_template = "Mechanized Infantry Brigade"
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.9
 	}
 	division = {
-		name = "6th Army - Mechanized Division"
-		location = 7186
-		division_template = "Mechanized Division"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.9
-	}
-	division = {
-		name = "6th Army - Infantry Division"
-		location = 7186
-		division_template = "Infantry Division"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.85
-	}
-
-	# 8th Army Corps — South
-	division = {
-		name = "8th Army - Armored Brigade"
+		name = "6th Army Corps - 542nd Armored Brigade"
 		location = 7214
 		division_template = "Armored Brigade"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.9
 	}
 	division = {
-		name = "8th Army - Mechanized Division"
-		location = 7214
-		division_template = "Mechanized Division"
-		start_experience_factor = 0.35
+		name = "6th Army Corps - 584th Armored Brigade"
+		location = 7186
+		division_template = "Armored Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9
+	}
+
+	# 8th Army Corps — Southern Taiwan (Kaohsiung)
+	division = {
+		name = "8th Army Corps - 333rd Mechanized Infantry Brigade"
+		location = 11914
+		division_template = "Mechanized Infantry Brigade"
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.9
 	}
 	division = {
-		name = "8th Army - Infantry Division"
-		location = 7214
-		division_template = "Infantry Division"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.85
+		name = "8th Army Corps - 564th Armored Brigade"
+		location = 12068
+		division_template = "Armored Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9
 	}
 
-	# 10th Army Corps — Central
+	# 10th Army Corps — Central Taiwan (Taichung)
 	division = {
-		name = "10th Army - Infantry Division"
+		name = "10th Army Corps - 234th Mechanized Infantry Brigade"
 		location = 11959
-		division_template = "Infantry Division"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.85
+		division_template = "Mechanized Infantry Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "10th Army Corps - 586th Armored Brigade"
+		location = 11959
+		division_template = "Armored Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9
 	}
 
 	##### Marines #####
 
-	# ROC Marine Corps
+	# ROC Marine Corps — Zuoying, Kaohsiung
 	division = {
 		name = "66th Marine Brigade"
-		location = 13274
-		division_template = "Marine Division"
+		location = 11914
+		division_template = "Marine Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "99th Marine Brigade"
-		location = 13275
-		division_template = "Marine Division"
+		location = 11914
+		division_template = "Marine Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.9
 	}
 
 	##### Rapid Reaction / SOF #####
 
-	# Air Cavalry Brigade
+	# Aviation and Special Forces Command — Taoyuan
 	division = {
 		name = "601st Air Cavalry Brigade"
-		location = 7186
+		location = 14699
 		division_template = "Air Cavalry Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.9
@@ -209,39 +207,88 @@ units = {
 	# Special Warfare Command
 	division = {
 		name = "Special Warfare Command"
-		location = 7214
+		location = 14699
 		division_template = "Special Warfare Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.9
 	}
 
-	##### Reserve Forces #####
+	##### Reserve Forces (Armed Force Reserve Command) #####
 
 	division = {
-		name = "Reserve Infantry Division (North)"
-		location = 7186
-		division_template = "Reserve Infantry Division"
-		start_experience_factor = 0.15
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "Reserve Infantry Division (South)"
-		location = 7214
-		division_template = "Reserve Infantry Division"
-		start_experience_factor = 0.15
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "Reserve Infantry Division (Central)"
+		name = "101st Reserve Infantry Brigade"
 		location = 11959
-		division_template = "Reserve Infantry Division"
+		division_template = "Reserve Infantry Brigade"
 		start_experience_factor = 0.15
 		start_equipment_factor = 0.5
 	}
 	division = {
-		name = "Reserve Infantry Division (East)"
-		location = 14608
-		division_template = "Reserve Infantry Division"
+		name = "104th Reserve Infantry Brigade"
+		location = 11959
+		division_template = "Reserve Infantry Brigade"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "109th Reserve Infantry Brigade"
+		location = 7186
+		division_template = "Reserve Infantry Brigade"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "117th Reserve Infantry Brigade"
+		location = 11914
+		division_template = "Reserve Infantry Brigade"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "137th Reserve Infantry Brigade"
+		location = 11914
+		division_template = "Reserve Infantry Brigade"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "153rd Reserve Infantry Brigade"
+		location = 14699
+		division_template = "Reserve Infantry Brigade"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "203rd Reserve Infantry Brigade"
+		location = 11914
+		division_template = "Reserve Infantry Brigade"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "206th Reserve Infantry Brigade"
+		location = 7186
+		division_template = "Reserve Infantry Brigade"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "249th Reserve Infantry Brigade"
+		location = 14699
+		division_template = "Reserve Infantry Brigade"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "257th Reserve Infantry Brigade"
+		location = 11959
+		division_template = "Reserve Infantry Brigade"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "302nd Reserve Infantry Brigade"
+		location = 11959
+		division_template = "Reserve Infantry Brigade"
 		start_experience_factor = 0.15
 		start_equipment_factor = 0.5
 	}
@@ -250,14 +297,14 @@ units = {
 
 	division = {
 		name = "Kinmen Defense Command"
-		location = 12068
+		location = 13275
 		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
 	division = {
 		name = "Penghu Defense Command"
-		location = 4096
+		location = 13274
 		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
@@ -280,10 +327,19 @@ units = {
 			ship = { name = "ROCS Kang Ding (PFG-1202)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Kang Ding Class" } } }
 			ship = { name = "ROCS Si Ning (PFG-1203)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Kang Ding Class" } } }
 			ship = { name = "ROCS Kun Ming (PFG-1205)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Kang Ding Class" } } }
-			ship = { name = "ROCS Yushan (LPD-1401)" definition = helicopter_operator start_experience_factor = 0.45 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = TAI creator = TAI version_name = "Yu Shan Class" } } }
+			ship = { name = "ROCS Fong Yang (FFG-933)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = TAI creator = "USA" version_name = "Chi Yang Class" } } }
+			ship = { name = "ROCS Fen Yang (FFG-934)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = TAI creator = "USA" version_name = "Chi Yang Class" } } }
+			ship = { name = "ROCS Hwai Yang (FFG-937)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = TAI creator = "USA" version_name = "Chi Yang Class" } } }
+			ship = { name = "ROCS Ning Yang (FFG-938)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = TAI creator = "USA" version_name = "Chi Yang Class" } } }
+			ship = { name = "ROCS Yi Yang (FFG-939)" definition = frigate start_experience_factor = 0.3 equipment = { frigate_hull_1 = { amount = 1 owner = TAI creator = "USA" version_name = "Chi Yang Class" } } }
 			ship = { name = "ROCS Ta Chiang (PGG-619)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Tuo Chiang Class" } } }
-			ship = { name = "ROCS An Chiang (PGG-620)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Tuo Chiang Class" } } }
+			ship = { name = "ROCS An Chiang (PGG-625)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Tuo Chiang Class" } } }
+			ship = { name = "ROCS Wan Chiang (PGG-626)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Tuo Chiang Class" } } }
+			ship = { name = "ROCS Yu Shan (LPD-1401)" definition = helicopter_operator start_experience_factor = 0.45 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = TAI creator = TAI version_name = "Yu Shan Class" } } }
+			ship = { name = "ROCS Chung Ho (LST-232)" definition = helicopter_operator start_experience_factor = 0.3 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = TAI creator = "USA" version_name = "Chung He Class" } } }
+			ship = { name = "ROCS Chung Ping (LST-233)" definition = helicopter_operator start_experience_factor = 0.3 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = TAI creator = "USA" version_name = "Chung He Class" } } }
 			ship = { name = "ROCS Hai Lung (SS-793)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_1 = { amount = 1 owner = TAI creator = TAI version_name = "Hai Lung Class" } } }
+			ship = { name = "ROCS Hai Hu (SS-794)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_1 = { amount = 1 owner = TAI creator = TAI version_name = "Hai Lung Class" } } }
 		}
 	}
 
@@ -298,13 +354,18 @@ units = {
 			ship = { name = "ROCS Tzu I (PFG-1107)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Cheng Kung Class" } } }
 			ship = { name = "ROCS Pan Chao (PFG-1108)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Cheng Kung Class" } } }
 			ship = { name = "ROCS Chang Chien (PFG-1109)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Cheng Kung Class" } } }
-			ship = { name = "ROCS Tien Tan (PFG-1110)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Cheng Kung Class" } } }
+			ship = { name = "ROCS Tian Dan (PFG-1110)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Cheng Kung Class" } } }
 			ship = { name = "ROCS Di Hua (PFG-1206)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Kang Ding Class" } } }
 			ship = { name = "ROCS Wu Chang (PFG-1207)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Kang Ding Class" } } }
-			ship = { name = "ROCS Cheng De (PFG-1208)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Kang Ding Class" } } }
-			ship = { name = "ROCS Wan Chiang (PGG-621)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Tuo Chiang Class" } } }
-			ship = { name = "ROCS Hai Hu (SS-794)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_1 = { amount = 1 owner = TAI creator = TAI version_name = "Hai Lung Class" } } }
-			ship = { name = "ROCS Hai Kun (SS-711)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Hai Kun Class" } } }
+			ship = { name = "ROCS Chen De (PFG-1208)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Kang Ding Class" } } }
+			ship = { name = "ROCS Ming Chuan (PFG-1112)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = "USA" version_name = "Oliver Hazard Perry Class" } } }
+			ship = { name = "ROCS Feng Jia (PFG-1115)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = TAI creator = "USA" version_name = "Oliver Hazard Perry Class" } } }
+			ship = { name = "ROCS Tuo Chiang (PGG-618)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Tuo Chiang Class" } } }
+			ship = { name = "ROCS Fu Chiang (PGG-620)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Tuo Chiang Class" } } }
+			ship = { name = "ROCS Hsu Chiang (PGG-621)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Tuo Chiang Class" } } }
+			ship = { name = "ROCS Wu Chiang (PGG-622)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = TAI creator = TAI version_name = "Tuo Chiang Class" } } }
+			ship = { name = "ROCS Jin Chiang (PGG-610)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_1 = { amount = 1 owner = TAI creator = TAI version_name = "Ching Chiang Class" } } }
+			ship = { name = "ROCS Hsu Hai (LSD-193)" definition = helicopter_operator start_experience_factor = 0.3 equipment = { helicopter_operator_hull_1 = { amount = 1 owner = TAI creator = "USA" version_name = "Hsu Hai Class" } } }
 		}
 	}
 }
@@ -320,54 +381,52 @@ instant_effect = {
 ##### Republic of China Air Force #####
 
 air_wings = {
-	# Hualien Air Base
+	# Hualien Air Base — 5th Tactical Fighter Wing (F-16V, ex-401st TFW)
 	600 = {
-		L_Strike_fighter2 = { owner = "TAI" creator = "USA" amount = 60 version_name = "F-16V Viper" }
-		name = "401st Tactical Fighter Wing"
+		L_Strike_fighter2 = { owner = "TAI" creator = "USA" amount = 69 version_name = "F-16V Viper" }
+		name = "5th Tactical Fighter Wing"
 		start_experience_factor = 0.5
 	}
-	# Chiayi / Kaohsiung area
-	599 = {
-		L_Strike_fighter2 = { owner = "TAI" creator = "USA" amount = 60 version_name = "F-16V Viper" }
-		name = "455th Tactical Fighter Wing"
+	# Chiayi Air Base — 4th Tactical Fighter Wing (F-16V, ex-455th TFW)
+	1157 = {
+		L_Strike_fighter2 = { owner = "TAI" creator = "USA" amount = 69 version_name = "F-16V Viper" }
+		name = "4th Tactical Fighter Wing"
 		start_experience_factor = 0.5
 	}
-	599 = {
-		naval_plane1 = { owner = "TAI" creator = "USA" amount = 12 version_name = "P-3C Orion" }
-		name = "439th Composite Wing"
+	# Tainan Air Base — 1st Tactical Fighter Wing (F-CK-1)
+	1157 = {
+		small_plane_airframe_2 = { owner = "TAI" amount = 65 version_name = "F-CK-1C/D Ching-kuo" }
+		name = "1st Tactical Fighter Wing"
 		start_experience_factor = 0.45
 	}
-	# Hsinchu Air Base
+	# Hsinchu Air Base — 2nd Tactical Fighter Wing (Mirage 2000-5)
 	1155 = {
-		small_plane_airframe_2 = { owner = "TAI" creator = "FRA" amount = 45 version_name = "Mirage 2000-5EI" }
+		small_plane_airframe_2 = { owner = "TAI" creator = "FRA" amount = 52 version_name = "Mirage 2000-5EI" }
 		name = "2nd Tactical Fighter Wing"
 		start_experience_factor = 0.4
 	}
-	1155 = {
-		L_Strike_fighter2 = { owner = "TAI" creator = "USA" amount = 30 version_name = "F-16V Viper" }
-		name = "1st Tactical Fighter Wing"
-		start_experience_factor = 0.5
-	}
-	# Ching Chuang Kang (Taichung)
+	# Ching Chuang Kang (Taichung) — 3rd Tactical Fighter Wing (F-CK-1)
 	1156 = {
-		small_plane_airframe_2 = { owner = "TAI" amount = 50 version_name = "F-CK-1C/D Ching-kuo" }
+		small_plane_airframe_2 = { owner = "TAI" amount = 64 version_name = "F-CK-1C/D Ching-kuo" }
 		name = "3rd Tactical Fighter Wing"
 		start_experience_factor = 0.45
 	}
-	1156 = {
+	# Pingtung — 6th Composite Wing (transport)
+	599 = {
 		transport_plane1 = { owner = "TAI" creator = "USA" amount = 16 version_name = "C-130H Hercules" }
 		name = "6th Composite Wing"
 		start_experience_factor = 0.4
 	}
-	1156 = {
-		awacs_equipment_1 = { owner = "TAI" creator = "USA" amount = 6 version_name = "E-2K Hawkeye" }
-		name = "AEW Squadron"
+	# Pingtung — Airborne Early Warning Squadron (E-2K)
+	599 = {
+		awacs_equipment_1 = { owner = "TAI" creator = "USA" amount = 5 version_name = "E-2K Hawkeye" }
+		name = "Airborne Early Warning Squadron"
 		start_experience_factor = 0.5
 	}
-	# Tainan Air Base
-	1157 = {
-		small_plane_airframe_2 = { owner = "TAI" amount = 50 version_name = "F-CK-1C/D Ching-kuo" }
-		name = "443rd Tactical Fighter Wing"
+	# Pingtung — 439th Composite Wing (maritime patrol)
+	599 = {
+		naval_plane1 = { owner = "TAI" creator = "USA" amount = 12 version_name = "P-3C Orion" }
+		name = "439th Composite Wing"
 		start_experience_factor = 0.45
 	}
 }

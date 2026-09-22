@@ -3,7 +3,7 @@
 # Expanding territorial defense + mechanized brigade
 
 division_template = {
-	name = "Mehanizeta Brigade"		# Mechanized Brigade
+	name = "Mehanizētā kājnieku brigāde"		# Mechanized Infantry Brigade
 	regiments = {
 		Mech_Inf_Bat = { x = 0 y = 0 }
 		Mech_Inf_Bat = { x = 0 y = 1 }
@@ -18,13 +18,11 @@ division_template = {
 }
 
 division_template = {
-	name = "Zemessardzes Brigade"		# National Guard Brigade
+	name = "Zemessardzes brigāde"		# National Guard (regional) Brigade
 	regiments = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
 		L_Inf_Bat = { x = 0 y = 2 }
-		L_Inf_Bat = { x = 1 y = 0 }
-		L_Inf_Bat = { x = 1 y = 1 }
 	}
 	support = {
 		L_Recce_Comp = { x = 0 y = 0 }
@@ -34,19 +32,43 @@ division_template = {
 }
 
 units = {
+	# Sauszemes spēku Mehanizētā kājnieku brigāde (Ādaži)
 	division = {
-		name = "Mehanizeta Kaujinieku Brigade"
+		name = "Mehanizētā kājnieku brigāde"
 		location = 9340
-		division_template = "Mehanizeta Brigade"
+		division_template = "Mehanizētā kājnieku brigāde"
 		start_experience_factor = 0.40
 		start_equipment_factor = 0.70
 	}
+
+	# Zemessardze - four regional brigades
 	division = {
-		name = "Zemessardzes Brigade"
+		name = "Zemessardzes 1. Rīgas brigāde"
 		location = 9340
-		division_template = "Zemessardzes Brigade"
+		division_template = "Zemessardzes brigāde"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.60
+	}
+	division = {
+		name = "Zemessardzes 2. Vidzemes brigāde"
+		location = 3388
+		division_template = "Zemessardzes brigāde"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.60
+	}
+	division = {
+		name = "Zemessardzes 3. Latgales brigāde"
+		location = 341
+		division_template = "Zemessardzes brigāde"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
+	}
+	division = {
+		name = "Zemessardzes 4. Kurzemes brigāde"
+		location = 9262
+		division_template = "Zemessardzes brigāde"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.55
 	}
 
 	##### Latvian Naval Forces (Liepaja) #####
@@ -56,11 +78,11 @@ units = {
 		task_force = {
 			name = "Mine Countermeasures Squadron"
 			location = 9262
-			ship = { name = "M-04 Imanta" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LAT creator = LAT version_name = "Alkmaar Class" } } }
-			ship = { name = "M-05 Viesturs" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LAT creator = LAT version_name = "Alkmaar Class" } } }
-			ship = { name = "M-06 Talivaldis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LAT creator = LAT version_name = "Alkmaar Class" } } }
-			ship = { name = "M-07 Visvaldis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LAT creator = LAT version_name = "Alkmaar Class" } } }
-			ship = { name = "M-08 Rusins" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LAT creator = LAT version_name = "Alkmaar Class" } } }
+			ship = { name = "M-04 Imanta" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LAT creator = LAT version_name = "Tripartite Class" } } }
+			ship = { name = "M-05 Viesturs" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LAT creator = LAT version_name = "Tripartite Class" } } }
+			ship = { name = "M-06 Tālivaldis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LAT creator = LAT version_name = "Tripartite Class" } } }
+			ship = { name = "M-07 Visvaldis" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LAT creator = LAT version_name = "Tripartite Class" } } }
+			ship = { name = "M-08 Rūsiņš" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = LAT creator = LAT version_name = "Tripartite Class" } } }
 		}
 	}
 }

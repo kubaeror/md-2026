@@ -238,7 +238,7 @@ units = {
 	# Pyongyang Defence Artillery
 	division = {
 		name = "Pyongyang Defence Artillery Division"
-		location = 6822
+		location = 4052
 		division_template = "Artillery Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.65
@@ -419,6 +419,15 @@ units = {
 		division_template = "Light Infantry Brigade"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.5
+	}
+
+	##### Foreign Deployment — Russia (Kursk oblast, ~11,000 troops at the start of 2026) #####
+	division = {
+		name = "KPA XI Corps (Storm) - Kursk Contingent"
+		location = 3580
+		division_template = "Infantry Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.6
 	}
 
 	##### Korean People's Navy #####

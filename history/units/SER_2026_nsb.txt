@@ -64,13 +64,26 @@ division_template = {
 	}
 }
 
+division_template = {
+	name = "Padobranska Brigada"		# Parachute Brigade
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		Special_Forces = { x = 1 y = 0 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
 units = {
 	##### Serbian Armed Forces #####
 
-	# Belgrade area
+	# 1st Army Brigade - Novi Sad
 	division = {
-		name = "1. Mehanizovana Brigada"
-		location = 388
+		name = "1. Brigada Kopnene Vojske"
+		location = 3617
 		division_template = "Mehanizovana Brigada"
 		start_experience_factor = 0.40
 		start_equipment_factor = 0.70
@@ -83,31 +96,31 @@ units = {
 		start_equipment_factor = 0.75
 	}
 
-	# Vojvodina (North)
+	# 3rd Army Brigade - Niš
 	division = {
-		name = "1. Pesadijska Brigada"
+		name = "3. Brigada Kopnene Vojske"
 		location = 11887
 		division_template = "Pesadijska Brigada"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.65
 	}
 
-	# Southern Serbia
+	# 4th Army Brigade - Vranje
 	division = {
-		name = "4. Pesadijska Brigada"
-		location = 937
+		name = "4. Brigada Kopnene Vojske"
+		location = 388
 		division_template = "Pesadijska Brigada"
 		start_experience_factor = 0.40
 		start_equipment_factor = 0.65
 	}
 
-	# Western Serbia
+	# 63rd Parachute Brigade - Niš
 	division = {
-		name = "3. Pesadijska Brigada"
-		location = 9621
-		division_template = "Pesadijska Brigada"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.65
+		name = "63. Padobranska Brigada"
+		location = 11887
+		division_template = "Padobranska Brigada"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.75
 	}
 
 	# Artillery
@@ -119,10 +132,10 @@ units = {
 		start_equipment_factor = 0.65
 	}
 
-	# Central
+	# 2nd Army Brigade - Kraljevo
 	division = {
-		name = "2. Mehanizovana Brigada"
-		location = 3617
+		name = "2. Brigada Kopnene Vojske"
+		location = 6970
 		division_template = "Mehanizovana Brigada"
 		start_experience_factor = 0.40
 		start_equipment_factor = 0.70
@@ -144,15 +157,15 @@ instant_effect = {
 
 ##### Ratno Vazduhoplovstvo (Serbian Air Force) #####
 air_wings = {
-	# MiG-29 (upgraded)
+	# MiG-29 (upgraded to SM standard, 11 single-seat + 3 UB)
 	131 = {
-		small_plane_airframe_2 = { owner = "SER" creator = "SOV" amount = 10 version_name = "MiG-29B/UB Fulcrum" }
+		small_plane_airframe_2 = { owner = "SER" creator = "SOV" amount = 14 version_name = "MiG-29SM/UB Fulcrum" }
 		name = "101. Lovačka Eskadrila"
 		start_experience_factor = 0.4
 	}
 	# J-22 Orao (ground attack)
 	131 = {
-		cas2 = { owner = "SER" amount = 10 version_name = "J-22 Orao" }
+		cas2 = { owner = "SER" amount = 17 version_name = "J-22 Orao" }
 		name = "241. Lovačko-Bombarderska Eskadrila"
 		start_experience_factor = 0.35
 	}

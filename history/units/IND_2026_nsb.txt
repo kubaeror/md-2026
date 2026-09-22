@@ -103,7 +103,7 @@ units = {
 	# 2nd Infantry Division - Malang, East Java
 	division = {
 		name = "Divisi Infanteri 2 Kostrad"
-		location = 1209
+		location = 10491
 		division_template = "Divisi Infanteri"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
@@ -143,10 +143,10 @@ units = {
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
 	}
-	# Kodam II/Sriwijaya - Palembang, Southern Sumatra
+	# 2nd Kostrad Division - Jember, East Java
 	division = {
-		name = "Brigade Infanteri 9 (Kodam II)"
-		location = 4320
+		name = "Brigade Infanteri 9 (Kostrad)"
+		location = 12472
 		division_template = "Divisi Infanteri"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
@@ -159,34 +159,34 @@ units = {
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.75
 	}
-	# Kodam IV/Diponegoro - Semarang, Central Java
+	# Brigif 16/Wira Yudha - Kediri, East Java (Kodam V/Brawijaya)
 	division = {
-		name = "Brigade Infanteri 16 (Kodam IV)"
-		location = 1413
+		name = "Brigade Infanteri 16 (Kodam V)"
+		location = 1209
 		division_template = "Divisi Infanteri"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.75
 	}
-	# Kodam V/Brawijaya - Surabaya, East Java
+	# Brigif 18/Trisula - Malang, East Java (2nd Kostrad Division)
 	division = {
-		name = "Brigade Infanteri 18 (Kodam V)"
+		name = "Brigade Infanteri 18 (Kostrad)"
 		location = 4306
 		division_template = "Brigade Infanteri Mekanis"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.8
 	}
-	# Kodam VI/Mulawarman - Balikpapan, Kalimantan
+	# Brigif 22/Ota Manasa - Gorontalo (Kodam XIII/Merdeka)
 	division = {
-		name = "Brigade Infanteri 22 (Kodam VI)"
-		location = 1230
+		name = "Brigade Infanteri 22 (Kodam XIII)"
+		location = 10153
 		division_template = "Divisi Infanteri"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
 	}
-	# Kodam IX/Udayana - Denpasar, Bali
+	# Brigif 21/Komodo - Kupang, West Timor (Kodam IX/Udayana)
 	division = {
 		name = "Brigade Infanteri 21 (Kodam IX)"
-		location = 4320
+		location = 1355
 		division_template = "Brigade Infanteri Mekanis"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.75
@@ -199,17 +199,17 @@ units = {
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.65
 	}
-	# Kodam XVII/Cenderawasih - Jayapura, Papua
+	# Brigif 20/Ima Jaya Keramo - Timika, Papua (3rd Kostrad Division)
 	division = {
-		name = "Brigade Infanteri 20 (Kodam XVII)"
+		name = "Brigade Infanteri 20 (Kostrad)"
 		location = 1546
 		division_template = "Divisi Infanteri"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.7
 	}
-	# Kostrad mechanised brigade
+	# Brigif Mekanis 1/Jaya Sakti - Jakarta (Kodam Jaya)
 	division = {
-		name = "Brigade Infanteri Mekanis 1 Kostrad"
+		name = "Brigade Infanteri Mekanis 1 Jaya Sakti"
 		location = 1386
 		division_template = "Brigade Infanteri Mekanis"
 		start_experience_factor = 0.55
@@ -218,14 +218,14 @@ units = {
 	# Raider battalions
 	division = {
 		name = "Batalyon Raider 300"
-		location = 1398
+		location = 10307
 		division_template = "Batalyon Raider"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Batalyon Raider 400"
-		location = 1209
+		location = 1413
 		division_template = "Batalyon Raider"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.8
@@ -282,13 +282,13 @@ fleet = {
 air_wings = {
 	# Iswahjudi Air Base - F-16C/D
 	634 = {
-		small_plane_airframe_2 = { owner = "IND" creator = "USA" amount = 20 version_name = "F-16C/D Block 52ID" }
+		small_plane_airframe_2 = { owner = "IND" creator = "USA" amount = 23 version_name = "F-16C/D Block 52ID" }
 		name = "3rd Air Squadron (Iswahjudi)"
 		start_experience_factor = 0.5
 	}
 	# Roesmin Nurjadin Air Base - F-16 and T-50i
 	623 = {
-		small_plane_airframe_2 = { owner = "IND" creator = "USA" amount = 13 version_name = "F-16A/B Block 15 ADF" }
+		small_plane_airframe_2 = { owner = "IND" creator = "USA" amount = 13 version_name = "F-16A/B Block 15 OCU/eMLU" }
 		name = "16th Air Squadron (Pekanbaru)"
 		start_experience_factor = 0.45
 	}
@@ -314,9 +314,9 @@ air_wings = {
 		name = "21st Air Squadron (Malang)"
 		start_experience_factor = 0.4
 	}
-	# Supadio Air Base - Hawk 200
+	# Supadio Air Base - Hawk 209
 	640 = {
-		cas2 = { owner = "IND" creator = "ENG" amount = 21 version_name = "Hawk 200" }
+		cas2 = { owner = "IND" creator = "ENG" amount = 21 version_name = "Hawk 209" }
 		name = "12th Air Squadron (Pontianak)"
 		start_experience_factor = 0.35
 	}

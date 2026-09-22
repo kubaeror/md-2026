@@ -94,33 +94,33 @@ division_template = {
 ## Unit Deployments ##
 
 units = {
-	# 3rd (UK) Division
+	# 3rd (UK) Division - warfighting division
 	division = {
-		name = "1st Armoured Infantry Brigade"
-		location = 11471
+		name = "12th Armoured Brigade Combat Team"
+		location = 6489
 		division_template = "Armoured Infantry Brigade"
 		start_experience_factor = 0.65
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "20th Armoured Infantry Brigade"
-		location = 11471
+		name = "20th Armoured Brigade Combat Team"
+		location = 9458
 		division_template = "Armoured Infantry Brigade"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "11th Security Force Assistance Brigade"
-		location = 11374
+		location = 3422
 		division_template = "Light Mechanised Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.7
 	}
 
-	# Germany (NATO FWD presence)
+	# 1st (UK) Division - light forces
 	division = {
-		name = "7th Light Mech Brigade (Germany)"
-		location = 6377
+		name = "7th Light Mechanised Brigade Combat Team"
+		location = 11279
 		division_template = "Light Mechanised Brigade"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.75
@@ -138,7 +138,7 @@ units = {
 	# 3 Commando Brigade RM
 	division = {
 		name = "3 Commando Brigade"
-		location = 9458
+		location = 540
 		division_template = "Commando Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.8
@@ -172,32 +172,26 @@ units = {
 		task_force = {
 			name = "Frigate Squadron — Portsmouth"
 			location = 9458
-			ship = { name = "HMS Lancaster (F229)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Type 23 Class" } } }
 			ship = { name = "HMS Iron Duke (F234)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Type 23 Class" } } }
 			ship = { name = "HMS Richmond (F239)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Type 23 Class" } } }
 			ship = { name = "HMS Somerset (F82)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Type 23 Class" } } }
+			ship = { name = "HMS St Albans (F83)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Type 23 Class" } } }
 		}
 		task_force = {
 			name = "Frigate Squadron — Devonport"
 			location = 540
 			ship = { name = "HMS Sutherland (F81)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Type 23 Class" } } }
-			ship = { name = "HMS Northumberland (F238)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Type 23 Class" } } }
 			ship = { name = "HMS Portland (F79)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Type 23 Class" } } }
 			ship = { name = "HMS Kent (F78)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Type 23 Class" } } }
-		}
-		task_force = {
-			name = "Amphibious Ready Group"
-			location = 540
-			ship = { name = "HMS Albion (L14)" definition = helicopter_operator start_experience_factor = 0.65 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Albion Class" } } }
-			ship = { name = "HMS Bulwark (L15)" definition = helicopter_operator start_experience_factor = 0.6 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Albion Class" } } }
 		}
 		task_force = {
 			name = "Mine Countermeasures Force"
 			location = 9458
 			ship = { name = "HMS Ledbury (M30)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Hunt Class" } } }
-			ship = { name = "HMS Chiddingfold (M37)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Hunt Class" } } }
 			ship = { name = "HMS Cattistock (M31)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Hunt Class" } } }
-			ship = { name = "HMS Penzance (M106)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Sandown Class" } } }
+			ship = { name = "HMS Middleton (M34)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Hunt Class" } } }
+			ship = { name = "HMS Hurworth (M39)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Hunt Class" } } }
+			ship = { name = "HMS Bangor (M109)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ENG creator = ENG version_name = "Sandown Class" } } }
 		}
 	}
 	fleet = {
@@ -215,6 +209,7 @@ units = {
 			ship = { name = "HMS Artful (S121)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = ENG creator = ENG version_name = "Astute Class" } } }
 			ship = { name = "HMS Audacious (S122)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = ENG creator = ENG version_name = "Astute Class" } } }
 			ship = { name = "HMS Anson (S123)" definition = attack_submarine start_experience_factor = 0.7 equipment = { attack_submarine_hull_3 = { amount = 1 owner = ENG creator = ENG version_name = "Astute Class" } } }
+			ship = { name = "HMS Agamemnon (S124)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = ENG creator = ENG version_name = "Astute Class" } } }
 		}
 	}
 	fleet = {
@@ -258,15 +253,21 @@ instant_effect = {
 air_wings = {
 	# RAF Coningsby — Typhoon QRA & Strike (No. 3(F), 11(F), 29 Sqn)
 	1191 = {
-		MR_Fighter4 = { owner = "ENG" amount = 36 version_name = "Eurofighter Typhoon FGR.4" }
+		MR_Fighter4 = { owner = "ENG" amount = 54 version_name = "Eurofighter Typhoon FGR.4" }
 		name = "No. 1 Group — Coningsby Wing"
 		start_experience_factor = 0.65
 	}
 	# RAF Lossiemouth — Typhoon (No. 1(F), 2, 6, 9(B) Sqn)
 	1195 = {
-		MR_Fighter4 = { owner = "ENG" amount = 36 version_name = "Eurofighter Typhoon FGR.4" }
+		MR_Fighter4 = { owner = "ENG" amount = 53 version_name = "Eurofighter Typhoon FGR.4" }
 		name = "No. 1 Group — Lossiemouth Wing"
 		start_experience_factor = 0.65
+	}
+	# RAF Mount Pleasant — Typhoon Tranche 1 (No. 1435 Flight)
+	26 = {
+		MR_Fighter4 = { owner = "ENG" amount = 4 version_name = "Eurofighter Typhoon FGR.4" }
+		name = "No. 1435 Flight — Falkland Islands"
+		start_experience_factor = 0.55
 	}
 	# RAF Lossiemouth — P-8A Poseidon MRA.1 (No. 120 Sqn)
 	1195 = {
@@ -274,9 +275,9 @@ air_wings = {
 		name = "No. 120 Squadron"
 		start_experience_factor = 0.55
 	}
-	# RAF Marham — F-35B Lightning (No. 617, 207 Sqn)
+	# RAF Marham — F-35B Lightning (No. 617, 207, 809 Sqn)
 	14 = {
-		L_Strike_fighter3 = { owner = "ENG" creator = "USA" amount = 24 version_name = "F-35B Lightning II" }
+		L_Strike_fighter3 = { owner = "ENG" creator = "USA" amount = 45 version_name = "F-35B Lightning II" }
 		name = "Lightning Force — RAF Marham"
 		start_experience_factor = 0.6
 	}

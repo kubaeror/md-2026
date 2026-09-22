@@ -53,34 +53,26 @@ units = {
 	# 25th György Klapka Mechanized Brigade (Tata)
 	division = {
 		name = "25. Klapka György Dandár"
-		location = 11659
+		location = 682
 		division_template = "Gépesített Dandár"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.85
 	}
-	# 2nd Vitéz Bertalan Árpád Brigade (Hódmezővásárhely)
-	division = {
-		name = "2. Vitéz Árpád Dandár"
-		location = 9676
-		division_template = "Lövész Dandár"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
-	}
-	# 5th Bocskai István Infantry Brigade (Debrecen)
+	# 5th István Bocskai Infantry Brigade (Debrecen)
 	division = {
 		name = "5. Bocskai István Dandár"
-		location = 682
+		location = 11659
 		division_template = "Lövész Dandár"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
-	# 86th Szolnok Helicopter Brigade (helo-converted to mech role)
+	# Special Operations Forces — Bertalan Árpád Brigade (Szolnok)
 	division = {
-		name = "86. Szolnok Dandár"
+		name = "MH Bertalan Árpád Különleges Műveleti Dandár"
 		location = 730
-		division_template = "Lövész Dandár"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
+		division_template = "Különleges Műveleti"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.85
 	}
 	# Special Operations Forces Command
 	division = {
@@ -108,10 +100,10 @@ air_wings = {
 		name = "MH 59. Szentgyörgyi Dezső Repülőbázis"
 		start_experience_factor = 0.45
 	}
-	# Transport Squadron — C-17 (SAC Pápa) + An-26
-	123 = {
-		transport_plane2 = { owner = "HUN" creator = "USA" amount = 1 version_name = "C-17A Globemaster III" }
-		name = "MH Pápa Bázisrepülőtér"
+	# Transport Squadron — KC-390 Millennium (Kecskemét)
+	999 = {
+		transport_plane2 = { owner = "HUN" creator = "BRA" amount = 2 version_name = "KC-390 Millennium" }
+		name = "Szállító Repülőszázad"
 		start_experience_factor = 0.4
 	}
 }

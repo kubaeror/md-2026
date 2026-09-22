@@ -117,33 +117,47 @@ units = {
 	## 36th Division "Ga'ash" ##
 	division = {
 		name = "1st 'Golani' Infantry Brigade"
-		location = 13205	#Haifa/N Israel
+		location = 1065	#Haifa/N Israel
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "7th Armored Brigade 'Saar me'Golan'"
-		location = 1065		#Golan Heights
+		location = 13205		#Golan Heights
 		division_template = "Armored Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "188th Armored Brigade 'Barak'"
-		location = 1065		#Golan Heights
+		location = 13205		#Golan Heights
 		division_template = "Armored Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "91st 'Ha-Galil' Division"
+		location = 12839	#N Israel/Lebanon border sector
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.75
 	}
 
 	## 210th Division "HaBashan" (Golan) ##
 	division = {
 		name = "474th Territorial Brigade 'Golan'"
-		location = 12839	#N Israel/Golan
+		location = 13205	#Golan
 		division_template = "Territorial Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "810th 'He-Harim' Mountain Brigade"
+		location = 13205	#Mount Hermon sector
+		division_template = "Territorial Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.7
 	}
 
 	### Central Command ###
@@ -187,6 +201,13 @@ units = {
 		start_equipment_factor = 0.8
 	}
 	division = {
+		name = "143rd 'Gaza' Division"
+		location = 4088		#Gaza envelope / ceasefire lines
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division = {
 		name = "401st Armored Brigade 'Ikvot HaBarzel'"
 		location = 11970
 		division_template = "Armored Brigade"
@@ -211,7 +232,7 @@ units = {
 	}
 	division = {
 		name = "Reserve Brigade 'Center'"
-		location = 13205
+		location = 1201
 		division_template = "Reserve Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
@@ -234,7 +255,7 @@ units = {
 	}
 	division = {
 		name = "Shayetet 13"
-		location = 13205
+		location = 1065
 		division_template = "Special Forces"
 		start_experience_factor = 0.9
 		start_equipment_factor = 0.9
@@ -243,7 +264,7 @@ units = {
 	### Territorial Brigades ###
 	division = {
 		name = "Judea and Samaria Territorial Brigade"
-		location = 4088		#West Bank
+		location = 1086		#Jerusalem/West Bank sector
 		division_template = "Territorial Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
@@ -261,7 +282,6 @@ units = {
 			ship = { name = "INS Tekumah" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.7 equipment = { attack_submarine_hull_2 = { amount = 1 owner = ISR creator = GER version_name = "Dolphin I Class" } } }
 			ship = { name = "INS Tanin" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = ISR creator = GER version_name = "Dolphin II Class" } } }
 			ship = { name = "INS Rahav" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = ISR creator = GER version_name = "Dolphin II Class" } } }
-			ship = { name = "INS Drakon" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.7 equipment = { attack_submarine_hull_3 = { amount = 1 owner = ISR creator = GER version_name = "Dolphin II Class" } } }
 		}
 		task_force = {
 			name = "3rd Flotilla"
@@ -269,7 +289,7 @@ units = {
 			ship = { name = "INS Magen" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.7 equipment = { corvette_hull_3 = { amount = 1 owner = ISR creator = GER version_name = "Sa'ar 6 Class" } } }
 			ship = { name = "INS Oz" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.7 equipment = { corvette_hull_3 = { amount = 1 owner = ISR creator = GER version_name = "Sa'ar 6 Class" } } }
 			ship = { name = "INS Atzmaut" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.7 equipment = { corvette_hull_3 = { amount = 1 owner = ISR creator = GER version_name = "Sa'ar 6 Class" } } }
-			ship = { name = "INS Nitzhon" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { corvette_hull_3 = { amount = 1 owner = ISR creator = GER version_name = "Sa'ar 6 Class" } } }
+			ship = { name = "INS Nitzachon" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.65 equipment = { corvette_hull_3 = { amount = 1 owner = ISR creator = GER version_name = "Sa'ar 6 Class" } } }
 			ship = { name = "INS Lahav" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ISR creator = USA version_name = "Sa'ar 5 Class" } } }
 			ship = { name = "INS Hanit" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ISR creator = USA version_name = "Sa'ar 5 Class" } } }
 			ship = { name = "INS Eilat" definition = corvette pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = ISR creator = USA version_name = "Sa'ar 5 Class" } } }
@@ -325,12 +345,12 @@ air_wings = {
 	}
 	## Judea (Hatzor/Tel Nof) ##
 	204 = {
-		L_Strike_fighter2 = { owner = "ISR" creator = "USA" amount = 50 version_name = "F-16C/D Barak" }
+		L_Strike_fighter2 = { owner = "ISR" creator = "USA" amount = 38 version_name = "F-16C/D Barak" }
 		name = "101/105 Squadron - 'Barak' Wing"
 		start_experience_factor = 0.65
 	}
 	204 = {
-		MR_Fighter4 = { owner = "ISR" creator = "USA" amount = 20 version_name = "F-15C/D Baz" }
+		MR_Fighter4 = { owner = "ISR" creator = "USA" amount = 41 version_name = "F-15C/D Baz" }
 		name = "106/133 Squadron - 'Baz' Wing"
 		start_experience_factor = 0.6
 	}
@@ -341,7 +361,7 @@ air_wings = {
 	}
 	## Galilee (Ramat David) ##
 	205 = {
-		L_Strike_fighter2 = { owner = "ISR" creator = "USA" amount = 50 version_name = "F-16C/D Barak" }
+		L_Strike_fighter2 = { owner = "ISR" creator = "USA" amount = 37 version_name = "F-16C/D Barak" }
 		name = "109/110/117 Squadron - 'Barak' Wing"
 		start_experience_factor = 0.65
 	}

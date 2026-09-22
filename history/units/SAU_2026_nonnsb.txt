@@ -178,111 +178,111 @@ units = {
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.9
 	}
-	# Royal Saudi Marines
+	# 1st Marine Brigade (Western Fleet, Jeddah)
 	division = {
-		name = "Royal Saudi Marines"
-		location = 8060
+		name = "1st Marine Brigade"
+		location = 12883
+		division_template = "Marine Regiment"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	# 2nd Marine Brigade (Eastern Fleet, Jubail)
+	division = {
+		name = "2nd Marine Brigade"
+		location = 6513
 		division_template = "Marine Regiment"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.9
 	}
 
-	##### Saudi Arabian National Guard #####
+	##### Saudi Arabian National Guard (named brigades) #####
 
-	# 1st SANG Brigade
+	# Imam Muhammad bin Saud Mechanized Brigade (Riyadh)
 	division = {
-		name = "1st SANG Brigade 'Imam Muhammad ibn Saud'"
-		location = 10923
-		division_template = "National Guard Brigade"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.8
-	}
-	# 2nd SANG Brigade
-	division = {
-		name = "2nd SANG Brigade 'King Abdul Aziz'"
-		location = 10923
-		division_template = "National Guard Brigade"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.8
-	}
-	# 3rd SANG Brigade
-	division = {
-		name = "3rd SANG Brigade"
+		name = "Imam Muhammad bin Saud Mechanized Brigade"
 		location = 3378
 		division_template = "National Guard Brigade"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
-	# 4th SANG Brigade
+	# King Abdulaziz Mechanized Brigade (Al Hofuf)
 	division = {
-		name = "4th SANG Brigade"
-		location = 5037
-		division_template = "National Guard Brigade"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.8
-	}
-	# 5th SANG Brigade
-	division = {
-		name = "5th SANG Brigade"
+		name = "King Abdulaziz Mechanized Brigade"
 		location = 10791
 		division_template = "National Guard Brigade"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
-	# 6th SANG Brigade
+	# Prince Saad bin Abdul Rahman Mechanized Brigade (Riyadh)
 	division = {
-		name = "6th SANG Brigade"
-		location = 10791
+		name = "Prince Saad bin Abdul Rahman Mechanized Brigade"
+		location = 10923
 		division_template = "National Guard Brigade"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
-	# 7th SANG Brigade
+	# Prince Turki bin Abdulaziz Mechanized Brigade (Buraydah)
 	division = {
-		name = "7th SANG Brigade"
-		location = 12702
+		name = "Prince Turki bin Abdulaziz Mechanized Brigade"
+		location = 14468
 		division_template = "National Guard Brigade"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
-	# 8th SANG Brigade
+	# King Khalid Light Infantry Brigade (Ha'il)
 	division = {
-		name = "8th SANG Brigade"
-		location = 12101
-		division_template = "National Guard Brigade"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.8
-	}
-	# 9th SANG Brigade
-	division = {
-		name = "9th SANG Brigade"
-		location = 12101
-		division_template = "National Guard Brigade"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.8
-	}
-	# 10th SANG Brigade
-	division = {
-		name = "10th SANG Brigade"
+		name = "King Khalid Light Infantry Brigade"
 		location = 5058
 		division_template = "National Guard Brigade"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
-	# 11th SANG Brigade
+	# King Saud Light Infantry Brigade (Jeddah)
 	division = {
-		name = "11th SANG Brigade"
-		location = 4981
+		name = "King Saud Light Infantry Brigade"
+		location = 12883
 		division_template = "National Guard Brigade"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
 	}
-	# 12th SANG Brigade
+	# King Faisal Light Infantry Brigade (Medina)
 	division = {
-		name = "12th SANG Brigade"
-		location = 4981
+		name = "King Faisal Light Infantry Brigade"
+		location = 12758
 		division_template = "National Guard Brigade"
 		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# Omar bin Khattab Light Infantry Brigade (Taif)
+	division = {
+		name = "Omar bin Khattab Light Infantry Brigade"
+		location = 3354
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# Prince Mohammad bin Abdulrahman Al Saud Light Infantry Brigade
+	division = {
+		name = "Prince Mohammad bin Abdulrahman Al Saud Light Infantry Brigade"
+		location = 12101
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	# 1st Special Security Brigade (Riyadh)
+	division = {
+		name = "1st Special Security Brigade"
+		location = 5093
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 1st Rapid Deployment Special Brigade
+	division = {
+		name = "1st Rapid Deployment Special Brigade"
+		location = 8060
+		division_template = "National Guard Brigade"
+		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
 
@@ -299,32 +299,39 @@ units = {
 
 	##### Royal Saudi Naval Forces #####
 
+	# Western Fleet — Red Sea, King Faisal Naval Base (Jeddah)
 	fleet = {
 		name = "Western Fleet"
-		naval_base = 12702
+		naval_base = 12883
 		task_force = {
 			name = "Western Fleet"
-			location = 12702
-			ship = { name = "Makkah (814)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Riyadh Class" } } }
+			location = 12883
 			ship = { name = "Al Madinah (702)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU creator = SAU version_name = "Al Madinah Class" } } }
 			ship = { name = "Hofouf (704)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU creator = SAU version_name = "Al Madinah Class" } } }
-			ship = { name = "Badr" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
-			ship = { name = "Al Yamamah" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
+			ship = { name = "Abha (706)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU creator = SAU version_name = "Al Madinah Class" } } }
+			ship = { name = "Taif (708)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU creator = SAU version_name = "Al Madinah Class" } } }
+			ship = { name = "Badr (612)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
+			ship = { name = "Al Yarmook (614)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
 		}
 	}
 
+	# Eastern Fleet — Persian Gulf, King Abdulaziz Naval Base (Jubail)
 	fleet = {
 		name = "Eastern Fleet"
-		naval_base = 12883
+		naval_base = 12702
 		task_force = {
 			name = "Eastern Fleet"
-			location = 12883
-			ship = { name = "Al Riyadh (812)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Riyadh Class" } } }
+			location = 12702
+			ship = { name = "Al Riyadh (812)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Riyadh Class" } } }
+			ship = { name = "Makkah (814)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Riyadh Class" } } }
 			ship = { name = "Al Dammam (816)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Riyadh Class" } } }
-			ship = { name = "Abha (706)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU creator = SAU version_name = "Al Madinah Class" } } }
-			ship = { name = "Taif (708)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = SAU creator = SAU version_name = "Al Madinah Class" } } }
-			ship = { name = "Hitteen" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
-			ship = { name = "Tabuk" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
+			ship = { name = "Hitteen (616)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
+			ship = { name = "Tabuk (618)" definition = corvette start_experience_factor = 0.3 equipment = { corvette_hull_1 = { amount = 1 owner = SAU creator = SAU version_name = "Badr Class" } } }
+			ship = { name = "Al Jubail (828)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Jubail Class" } } }
+			ship = { name = "Al Diriyah (830)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Jubail Class" } } }
+			ship = { name = "Hail (832)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Jubail Class" } } }
+			ship = { name = "Jazan (834)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Jubail Class" } } }
+			ship = { name = "Unayzah (836)" definition = corvette start_experience_factor = 0.4 equipment = { corvette_hull_3 = { amount = 1 owner = SAU creator = SAU version_name = "Al Jubail Class" } } }
 		}
 	}
 }
@@ -340,61 +347,67 @@ instant_effect = {
 ##### Royal Saudi Air Force #####
 
 air_wings = {
-	# King Khalid Air Base, Khamis Mushait
+	# King Khalid Air Base, Khamis Mushait — F-15SA
 	178 = {
 		medium_plane_airframe_2 = { owner = "SAU" creator = "USA" amount = 30 version_name = "F-15SA Strike Eagle" }
 		name = "No. 55 Squadron"
 		start_experience_factor = 0.5
 	}
-	178 = {
-		cas1 = { owner = "SAU" creator = "ENG" amount = 24 version_name = "Tornado IDS" }
-		name = "No. 83 Squadron"
-		start_experience_factor = 0.4
-	}
-	# Prince Sultan Air Base, Al Kharj
+	# Prince Sultan Air Base, Al Kharj — F-15S
 	176 = {
-		medium_plane_airframe_2 = { owner = "SAU" creator = "USA" amount = 30 version_name = "F-15S Eagle" }
+		medium_plane_airframe_2 = { owner = "SAU" creator = "USA" amount = 35 version_name = "F-15S Eagle" }
 		name = "No. 92 Squadron"
 		start_experience_factor = 0.45
 	}
+	# Prince Sultan Air Base, Al Kharj — Typhoon
 	176 = {
 		MR_Fighter4 = { owner = "SAU" creator = "ENG" amount = 36 version_name = "EF-2000 Typhoon" }
 		name = "No. 10 Squadron"
 		start_experience_factor = 0.45
 	}
+	# Prince Sultan Air Base, Al Kharj — E-3A Sentry
 	176 = {
 		awacs_equipment_2 = { owner = "SAU" creator = "USA" amount = 5 version_name = "E-3A Sentry" }
 		name = "No. 18 Squadron"
 		start_experience_factor = 0.5
 	}
-	176 = {
-		Air_UAV2 = { owner = "SAU" creator = "USA" amount = 12 version_name = "MQ-9A Reaper" }
-		name = "No. 91 Squadron"
-		start_experience_factor = 0.4
-	}
-	# King Abdulaziz Air Base, Dhahran
+	# King Abdulaziz Air Base, Dhahran — F-15SA
 	174 = {
 		medium_plane_airframe_2 = { owner = "SAU" creator = "USA" amount = 30 version_name = "F-15SA Strike Eagle" }
 		name = "No. 13 Squadron"
 		start_experience_factor = 0.5
 	}
+	# King Abdulaziz Air Base, Dhahran — F-15C/D
+	174 = {
+		medium_plane_airframe_2 = { owner = "SAU" creator = "USA" amount = 60 version_name = "F-15C/D Eagle" }
+		name = "No. 2 Squadron"
+		start_experience_factor = 0.4
+	}
+	# King Abdulaziz Air Base, Dhahran — Tornado IDS
+	174 = {
+		cas1 = { owner = "SAU" creator = "ENG" amount = 81 version_name = "Tornado IDS" }
+		name = "No. 7 Squadron"
+		start_experience_factor = 0.4
+	}
+	# King Abdulaziz Air Base, Dhahran — C-130H
 	174 = {
 		transport_plane1 = { owner = "SAU" creator = "USA" amount = 16 version_name = "C-130H Hercules" }
 		name = "No. 4 Squadron"
 		start_experience_factor = 0.4
 	}
-	# King Fahd Air Base, Taif
+	# King Fahd Air Base, Taif — F-15SA
 	177 = {
 		medium_plane_airframe_2 = { owner = "SAU" creator = "USA" amount = 24 version_name = "F-15SA Strike Eagle" }
 		name = "No. 5 Squadron"
 		start_experience_factor = 0.5
 	}
+	# King Fahd Air Base, Taif — F-15S
 	177 = {
-		medium_plane_airframe_2 = { owner = "SAU" creator = "USA" amount = 30 version_name = "F-15S Eagle" }
+		medium_plane_airframe_2 = { owner = "SAU" creator = "USA" amount = 35 version_name = "F-15S Eagle" }
 		name = "No. 6 Squadron"
 		start_experience_factor = 0.45
 	}
-	# King Faisal Air Base, Tabuk
+	# King Faisal Air Base, Tabuk — Typhoon
 	932 = {
 		MR_Fighter4 = { owner = "SAU" creator = "ENG" amount = 36 version_name = "EF-2000 Typhoon" }
 		name = "No. 11 Squadron"

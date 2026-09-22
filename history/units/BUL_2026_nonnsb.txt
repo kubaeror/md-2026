@@ -104,18 +104,33 @@ units = {
 		name = "Bulgarian Navy"
 		naval_base = 9783		# Varna
 		task_force = {
-			name = "Varna Naval Base"
-			location = 9783
-			# Wielingen-class frigates (ex-Belgian)
-			ship = { name = "BGS Drazki (F41)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Wielingen class" } } }
-			ship = { name = "BGS Gordi (F42)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Wielingen class" } } }
-			ship = { name = "BGS Reshitelni (F43)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Wielingen class" } } }
+			name = "1st Patrol Ships Division"
+			location = 9783		# Varna
+			# Koni-class ASW frigate
+			ship = { name = "BGS Smeli (11)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Koni class" } } }
+			# MMPV 90 multi-mission patrol vessel (commissioned 8 December 2025)
+			ship = { name = "BGS Hrabri (12)" definition = corvette equipment = { corvette_hull_4 = { amount = 1 owner = BUL creator = BUL version_name = "MMPV 90 class" } } }
+			# Pauk-class ASW corvettes
+			ship = { name = "BGS Reshitelni (13)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Pauk class" } } }
+			ship = { name = "BGS Bodri (14)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Pauk class" } } }
 		}
 		task_force = {
-			name = "Atia Naval Base"
-			location = 9902		# Burgas
-			# Corvette
-			ship = { name = "BGS Bodri (F13)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = BUL creator = BUL version_name = "Poti class" } } }
+			name = "4th Patrol Ships Division"
+			location = 9902		# Atia (Burgas)
+			# Wielingen-class frigates (ex-Belgian)
+			ship = { name = "BGS Drazki (F41)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Wielingen class" } } }
+			ship = { name = "BGS Verni (F42)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Wielingen class" } } }
+			ship = { name = "BGS Gordi (F43)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Wielingen class" } } }
+			# Tarantul-class missile corvette
+			ship = { name = "BGS Malniya (101)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = BUL creator = BUL version_name = "Tarantul class" } } }
+		}
+		task_force = {
+			name = "3rd Mine Counter-Measure Ships Division"
+			location = 9783		# Varna
+			# Tripartite-class minehunters
+			ship = { name = "BGS Mesta (31)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = BUL creator = BUL version_name = "Tripartite class" } } }
+			ship = { name = "BGS Tsibar (32)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = BUL creator = BUL version_name = "Tripartite class" } } }
+			ship = { name = "BGS Struma (33)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = BUL creator = BUL version_name = "Tripartite class" } } }
 		}
 	}
 }

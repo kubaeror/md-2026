@@ -59,19 +59,19 @@ units = {
 		start_equipment_factor = 0.80
 	}
 
-	# 2nd Brigade (light) - Zealand
+	# 2nd Brigade (light) - Slagelse
 	division = {
 		name = "2. Brigade"
-		location = 399
+		location = 3305
 		division_template = "Let Infanteri Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.80
 	}
 
-	# Jaeger Corps
+	# Jaeger Corps - Aalborg Air Station
 	division = {
 		name = "Jaegerkorpset"
-		location = 6287
+		location = 6235
 		division_template = "Jaegerkorpset"
 		start_experience_factor = 0.60
 		start_equipment_factor = 0.85
@@ -92,9 +92,9 @@ units = {
 		task_force = {
 			name = "2. Eskadre"
 			location = 14542		# Korsør
-			# Absalon-class support ships
-			ship = { name = "HDMS Absalon (L16)" definition = helicopter_operator equipment = { helicopter_operator_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Absalon class" } } }
-			ship = { name = "HDMS Esbern Snare (L17)" definition = helicopter_operator equipment = { helicopter_operator_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Absalon class" } } }
+			# Absalon-class frigates (reclassified from support ships, pennants F341/F342)
+			ship = { name = "HDMS Absalon (F341)" definition = helicopter_operator equipment = { helicopter_operator_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Absalon class" } } }
+			ship = { name = "HDMS Esbern Snare (F342)" definition = helicopter_operator equipment = { helicopter_operator_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Absalon class" } } }
 		}
 		task_force = {
 			name = "Arktisk Kommando"
@@ -104,6 +104,21 @@ units = {
 			ship = { name = "HDMS Triton (F358)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Thetis class" } } }
 			ship = { name = "HDMS Vaedderen (F359)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Thetis class" } } }
 			ship = { name = "HDMS Hvidbjørnen (F360)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Thetis class" } } }
+			# Knud Rasmussen-class Arctic patrol ships
+			ship = { name = "HDMS Knud Rasmussen (P570)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Knud Rasmussen class" } } }
+			ship = { name = "HDMS Ejnar Mikkelsen (P571)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Knud Rasmussen class" } } }
+			ship = { name = "HDMS Lauge Koch (P572)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = DEN creator = DEN version_name = "Knud Rasmussen class" } } }
+		}
+		task_force = {
+			name = "3. Eskadre"
+			location = 399
+			# Diana-class patrol vessels
+			ship = { name = "HDMS Diana (P520)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = DEN creator = DEN version_name = "Diana class" } } }
+			ship = { name = "HDMS Freja (P521)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = DEN creator = DEN version_name = "Diana class" } } }
+			ship = { name = "HDMS Havfruen (P522)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = DEN creator = DEN version_name = "Diana class" } } }
+			ship = { name = "HDMS Najaden (P523)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = DEN creator = DEN version_name = "Diana class" } } }
+			ship = { name = "HDMS Nymfen (P524)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = DEN creator = DEN version_name = "Diana class" } } }
+			ship = { name = "HDMS Rota (P525)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = DEN creator = DEN version_name = "Diana class" } } }
 		}
 	}
 }
@@ -120,12 +135,18 @@ instant_effect = {
 air_wings = {
 	# Skrydstrup - F-35A Lightning II
 	6 = {
-		L_Strike_fighter3 = { owner = "DEN" creator = "USA" amount = 27 version_name = "F-35A Lightning II" }
+		L_Strike_fighter3 = { owner = "DEN" creator = "USA" amount = 21 version_name = "F-35A Lightning II" }
 		name = "Fighter Wing Skrydstrup"
 		start_experience_factor = 0.5
 	}
-	# Transport - C-130J-30
-	4 = {
+	# Skrydstrup - F-16AM (last Vipers, still flying on 1 January 2026)
+	6 = {
+		L_Strike_fighter2 = { owner = "DEN" creator = "USA" amount = 12 version_name = "F-16AM Fighting Falcon" }
+		name = "Eskadrille 727"
+		start_experience_factor = 0.45
+	}
+	# Aalborg - C-130J-30
+	6 = {
 		transport_plane1 = { owner = "DEN" creator = "USA" amount = 4 version_name = "C-130J-30 Super Hercules" }
 		name = "Transport Wing Aalborg"
 		start_experience_factor = 0.5

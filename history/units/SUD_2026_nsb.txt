@@ -1,6 +1,7 @@
 ##### Sudan - 2026 OOB (Sudanese Armed Forces - SAF) #####
 # Civil war since April 2023 between SAF (al-Burhan) and RSF (Hemedti)
-# Military depleted, fighting ongoing; SAF controls Port Sudan and east
+# The SAF holds the Nile valley, the east (Port Sudan) and Kordofan's
+# garrison towns; Darfur was lost with El Fasher (27 October 2025)
 
 division_template = {
 	name = "Firqa Mushaat"		# Infantry Division (SAF)
@@ -19,7 +20,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Firqa Miliishiya"		# Militia / Popular Defense Forces
+	name = "Firqa Miliishiya"		# Militia / Popular Defence Forces
 	regiments = {
 		Militia_Bat = { x = 0 y = 0 }
 		Militia_Bat = { x = 0 y = 1 }
@@ -33,7 +34,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Firqa Mudarra'a"		# Armored Division (depleted)
+	name = "Firqa Mudarra'a"		# Armoured Division (depleted)
 	regiments = {
 		armor_Bat = { x = 0 y = 0 }
 		armor_Bat = { x = 0 y = 1 }
@@ -43,6 +44,22 @@ division_template = {
 	}
 	support = {
 		Mot_Recce_Comp = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Arty_Battery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Firqa Jawy"		# Airborne Division (9th Airborne)
+	regiments = {
+		L_Ranger_Bat = { x = 0 y = 0 }
+		L_Ranger_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 1 y = 0 }
+		L_Air_Inf_Bat = { x = 1 y = 1 }
+		L_Inf_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
 		L_Engi_Comp = { x = 0 y = 1 }
 		Arty_Battery = { x = 0 y = 2 }
 	}
@@ -65,125 +82,107 @@ division_template = {
 units = {
 	##### Sudanese Armed Forces (SAF) #####
 
-	# Khartoum front (contested)
+	# Khartoum Command - capital retaken in March 2025
 	division = {
-		name = "1. Firqa Mushaat"
-		location = 1960
-		division_template = "Firqa Mushaat"
-		start_experience_factor = 0.40
-		start_equipment_factor = 0.45
+		name = "7th Armoured Division"
+		location = 12881
+		division_template = "Firqa Mudarra'a"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.55
 	}
 	division = {
-		name = "2. Firqa Mushaat"
-		location = 1960
+		name = "9th Airborne Division"
+		location = 12881
+		division_template = "Firqa Jawy"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.60
+	}
+	division = {
+		name = "Republican Guard"
+		location = 12881
 		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.55
+	}
+	# Islamist-aligned Popular Resistance battalion (sanctioned, Khartoum front)
+	division = {
+		name = "Al-Bara' ibn Malik Battalion"
+		location = 12881
+		division_template = "Firqa Miliishiya"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.40
 	}
+
+	# Central Command - El Obeid (North Kordofan), road to Darfur
 	division = {
-		name = "1. Firqa Mudarra'a"
-		location = 1960
-		division_template = "Firqa Mudarra'a"
-		start_experience_factor = 0.30
+		name = "5th Infantry Division"
+		location = 4133
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.50
+	}
+	# 6th Infantry Division - reformed at El Obeid after El Fasher fell
+	division = {
+		name = "6th Infantry Division"
+		location = 4133
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.25
 		start_equipment_factor = 0.35
 	}
-
-	# Port Sudan (SAF HQ in exile)
 	division = {
-		name = "3. Firqa Mushaat"
-		location = 10851
+		name = "Popular Defence Forces"
+		location = 4133
+		division_template = "Firqa Miliishiya"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.30
+	}
+
+	# Eastern Command - Kassala / Port Sudan
+	division = {
+		name = "2nd Infantry Division"
+		location = 2088
 		division_template = "Firqa Mushaat"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.50
 	}
 	division = {
-		name = "1. Firqa Miliishiya"
-		location = 12881
-		division_template = "Firqa Miliishiya"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.40
-	}
-
-	# Eastern front
-	division = {
-		name = "4. Firqa Mushaat"
-		location = 2088
+		name = "Eastern Regional Command"
+		location = 12725
 		division_template = "Firqa Mushaat"
-		start_experience_factor = 0.35
+		start_experience_factor = 0.30
 		start_equipment_factor = 0.45
 	}
+
+	# Northern Command - Shendi / Nile valley
 	division = {
-		name = "1. Liwa' Motahirka"
+		name = "3rd Infantry Division"
 		location = 10900
-		division_template = "Liwa' Motahirka"
-		start_experience_factor = 0.30
-		start_equipment_factor = 0.40
-	}
-
-	# Northern (Egyptian border)
-	division = {
-		name = "5. Firqa Mushaat"
-		location = 1140
 		division_template = "Firqa Mushaat"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.45
 	}
 
-	# Central / Gezira
+	# Gezira / White Nile / Blue Nile commands
 	division = {
-		name = "2. Firqa Miliishiya"
-		location = 4133
-		division_template = "Firqa Miliishiya"
-		start_experience_factor = 0.30
-		start_equipment_factor = 0.35
-	}
-	division = {
-		name = "3. Firqa Miliishiya"
-		location = 11044
-		division_template = "Firqa Miliishiya"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.35
-	}
-
-	# Southern / Blue Nile
-	division = {
-		name = "6. Firqa Mushaat"
-		location = 10739
-		division_template = "Firqa Mushaat"
-		start_experience_factor = 0.30
-		start_equipment_factor = 0.40
-	}
-	division = {
-		name = "4. Firqa Miliishiya"
-		location = 11049
-		division_template = "Firqa Miliishiya"
-		start_experience_factor = 0.20
-		start_equipment_factor = 0.30
-	}
-
-	# Darfur area
-	division = {
-		name = "7. Firqa Mushaat"
+		name = "Sudan Shield Forces"
 		location = 12768
-		division_template = "Firqa Mushaat"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.40
-	}
-	division = {
-		name = "5. Firqa Miliishiya"
-		location = 4133
 		division_template = "Firqa Miliishiya"
 		start_experience_factor = 0.30
-		start_equipment_factor = 0.35
-	}
-
-	# Kassala / Red Sea
-	division = {
-		name = "2. Liwa' Motahirka"
-		location = 2088
-		division_template = "Liwa' Motahirka"
-		start_experience_factor = 0.30
 		start_equipment_factor = 0.40
+	}
+	division = {
+		name = "White Nile Regional Command"
+		location = 11951
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name = "Blue Nile Regional Command"
+		location = 11058
+		division_template = "Firqa Mushaat"
+		start_experience_factor = 0.30
+		start_equipment_factor = 0.45
 	}
 }
 
@@ -202,7 +201,7 @@ instant_effect = {
 
 ##### Sudanese Air Force (depleted by civil war) #####
 air_wings = {
-	# MiG-29 (surviving fighters)
+	# MiG-29 (surviving fighters) - Port Sudan
 	221 = {
 		small_plane_airframe_2 = { owner = "SUD" creator = "SOV" amount = 8 version_name = "MiG-29SE Fulcrum" }
 		name = "SAF Fighter Squadron"

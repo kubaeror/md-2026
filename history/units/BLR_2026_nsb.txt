@@ -69,61 +69,75 @@ division_template = {
 units = {
 	##### Belarusian Armed Forces #####
 
-	# Minsk area (Western Operational Command)
-	division = {
-		name = "11. Mekhanizavanaya Bryhada"
-		location = 6359
-		division_template = "Mekhanizavanaya Bryhada"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.75
-	}
-	division = {
-		name = "120. Mekhanizavanaya Bryhada"
-		location = 3392
-		division_template = "Mekhanizavanaya Bryhada"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.75
-	}
-
-	# Western border (Grodno/Brest)
+	# Western Operational Command (HQ Grodno)
 	division = {
 		name = "6. Mekhanizavanaya Bryhada"
-		location = 11241
+		location = 3393
 		division_template = "Mekhanizavanaya Bryhada"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.70
 	}
 	division = {
+		name = "11. Mekhanizavanaya Bryhada"
+		location = 3366
+		division_template = "Mekhanizavanaya Bryhada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+	division = {
 		name = "111. Artyleryiskaya Bryhada"
-		location = 11370
+		location = 3392
 		division_template = "Artyleryiskaya Bryhada"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.70
 	}
 
-	# North-west (NW Operational Command)
+	# North-Western Operational Command (HQ Barysaw)
 	division = {
-		name = "19. Mataryzavanaya Bryhada"
-		location = 3393
-		division_template = "Mataryzavanaya Bryhada"
+		name = "120. Mekhanizavanaya Bryhada"
+		location = 11370
+		division_template = "Mekhanizavanaya Bryhada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "19. Mekhanizavanaya Bryhada"
+		location = 6359
+		division_template = "Mekhanizavanaya Bryhada"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.70
 	}
 
-	# Airborne / SOF
+	# Airborne / Special Operations Forces
 	division = {
 		name = "38. Desantnaya Bryhada"
-		location = 699
+		location = 3392
 		division_template = "Desantnaya Bryhada"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "103. Desantnaya Bryhada"
-		location = 9304
+		location = 11241
 		division_template = "Desantnaya Bryhada"
 		start_experience_factor = 0.40
 		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "5. Bryhada Spetsnaz"
+		location = 3759
+		division_template = "Desantnaya Bryhada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.75
+	}
+
+	# Missile Troops and Artillery - Osipovichi (Asipovichy)
+	division = {
+		name = "465. Raketnaya Bryhada (Iskander-M)"
+		location = 6233
+		division_template = "Artyleryiskaya Bryhada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.80
 	}
 }
 
@@ -142,34 +156,34 @@ instant_effect = {
 
 ##### Belarusian Air Force & Air Defence #####
 air_wings = {
-	# Su-30SM (delivered from Russia 2019-2023)
-	703 = {
+	# 61st Fighter Air Base - Baranovichi (Su-30SM delivered from Russia 2019-2023)
+	1093 = {
 		MR_Fighter4 = { owner = "BLR" creator = "SOV" amount = 12 version_name = "Su-30SM Flanker-H" }
 		name = "61st Fighter Air Base"
 		start_experience_factor = 0.45
 	}
-	# MiG-29 fighters
+	# 61st Fighter Air Base - Baranovichi (MiG-29 fighters)
 	1093 = {
 		small_plane_airframe_2 = { owner = "BLR" creator = "SOV" amount = 32 version_name = "MiG-29BM Fulcrum" }
-		name = "927th Fighter Air Base"
+		name = "61st Fighter Air Base (MiG-29 Squadron)"
 		start_experience_factor = 0.4
 	}
-	# Su-25 attack aircraft
+	# 116th Guards Assault Air Base - Lida
 	702 = {
 		cas2 = { owner = "BLR" creator = "SOV" amount = 30 version_name = "Su-25SM Frogfoot" }
-		name = "206th Assault Air Base"
+		name = "116th Guards Assault Air Base"
 		start_experience_factor = 0.4
 	}
-	# Yak-130 trainer/light attack
+	# 116th Guards Assault Air Base - Lida (Yak-130 trainer/light attack)
 	702 = {
 		cas2 = { owner = "BLR" creator = "SOV" amount = 12 version_name = "Yak-130 Mitten" }
-		name = "116th Assault Air Base"
+		name = "116th Guards Assault Air Base (Yak-130)"
 		start_experience_factor = 0.35
 	}
-	# Il-76MD transport
+	# 50th Mixed Air Base - Machulishchi (Il-76MD transport)
 	703 = {
 		transport_plane2 = { owner = "BLR" creator = "SOV" amount = 4 version_name = "Il-76MD" }
-		name = "50th Transport Air Base"
+		name = "50th Mixed Air Base"
 		start_experience_factor = 0.4
 	}
 }

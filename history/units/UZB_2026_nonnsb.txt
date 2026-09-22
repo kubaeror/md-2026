@@ -3,7 +3,8 @@
 # Rebuild with: python tools/make_nonnsb_oob.py --apply
 ##### Uzbekistan - 2026 OOB #####
 # Armed Forces of Uzbekistan - largest Central Asian military
-# Modernizing with Russian and Turkish equipment
+# Modernizing with Russian, Turkish and Chinese equipment
+# (J-10CE deliveries only began in 2026, so they are not present)
 
 division_template = {
 	name = "Motostrelkovaya Brigada"		# Motorized Rifle Brigade
@@ -23,16 +24,15 @@ division_template = {
 }
 
 division_template = {
-	name = "Pehotnaya Brigada"		# Infantry Brigade
+	name = "Desantnaya Brigada"		# Air Assault Brigade
 	regiments = {
-		L_Inf_Bat = { x = 0 y = 0 }
-		L_Inf_Bat = { x = 0 y = 1 }
-		L_Inf_Bat = { x = 0 y = 2 }
-		L_Inf_Bat = { x = 1 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Ranger_Bat = { x = 1 y = 0 }
 		L_Inf_Bat = { x = 1 y = 1 }
 	}
 	support = {
-		L_Recce_Comp = { x = 0 y = 0 }
+		L_Ranger_Recce_Comp = { x = 0 y = 0 }
 		L_Engi_Comp = { x = 0 y = 1 }
 		Arty_Battery = { x = 0 y = 2 }
 	}
@@ -52,73 +52,90 @@ division_template = {
 	}
 }
 
+division_template = {
+	name = "Artilleriyskaya Brigada"		# Artillery Brigade
+	regiments = {
+		SP_Arty_Bat = { x = 0 y = 0 }
+		SP_Arty_Bat = { x = 0 y = 1 }
+		SP_R_Arty_Bat = { x = 1 y = 0 }
+		SP_R_Arty_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		combat_service_support_company = { x = 0 y = 1 }
+	}
+}
+
 units = {
-	##### Uzbek Armed Forces #####
+	##### Uzbek Ground Forces #####
+	# Five military districts, motor rifle brigades at their peacetime garrisons
 
-	# Tashkent Military District
+	# Tashkent Military District - 1st Motor Rifle Brigade (Chirchiq)
 	division = {
-		name = "1. Motostrelkovaya Brigada"
-		location = 11687
-		division_template = "Motostrelkovaya Brigada"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.65
-	}
-	division = {
-		name = "1. Spetsnaz Brigada"
-		location = 11687
-		division_template = "Spetsnaz Brigada"
-		start_experience_factor = 0.45
-		start_equipment_factor = 0.70
-	}
-
-	# Samarkand
-	division = {
-		name = "2. Motostrelkovaya Brigada"
-		location = 1216
+		name = "1st Motor Rifle Brigade"
+		location = 1459
 		division_template = "Motostrelkovaya Brigada"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.65
 	}
 
-	# Fergana Valley
+	# Central Military District (HQ Jizzakh) - 2nd Motor Rifle Brigade (Samarkand)
 	division = {
-		name = "3. Motostrelkovaya Brigada"
-		location = 1479
+		name = "2nd Motor Rifle Brigade"
+		location = 10671
 		division_template = "Motostrelkovaya Brigada"
 		start_experience_factor = 0.35
-		start_equipment_factor = 0.60
+		start_equipment_factor = 0.65
 	}
+	# 13th Artillery Brigade (Kattakurgan, Samarkand region)
 	division = {
-		name = "1. Pehotnaya Brigada"
-		location = 7775
-		division_template = "Pehotnaya Brigada"
+		name = "13th Artillery Brigade"
+		location = 10671
+		division_template = "Artilleriyskaya Brigada"
 		start_experience_factor = 0.30
-		start_equipment_factor = 0.60
+		start_equipment_factor = 0.55
 	}
 
-	# Afghan border (Termez)
+	# Southwest Special Military District (HQ Karshi)
 	division = {
-		name = "4. Motostrelkovaya Brigada"
+		name = "25th Motor Rifle Brigade"
+		location = 7639
+		division_template = "Motostrelkovaya Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.65
+	}
+	# 3rd Motor Rifle Brigade (Termez, Afghan border)
+	division = {
+		name = "3rd Motor Rifle Brigade"
 		location = 12239
 		division_template = "Motostrelkovaya Brigada"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.65
 	}
+
+	# Eastern Military District (HQ Fergana)
 	division = {
-		name = "2. Pehotnaya Brigada"
-		location = 12722
-		division_template = "Pehotnaya Brigada"
-		start_experience_factor = 0.30
-		start_equipment_factor = 0.55
+		name = "37th Motor Rifle Brigade"
+		location = 1483
+		division_template = "Motostrelkovaya Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.60
+	}
+	division = {
+		name = "17th Air Assault Brigade"
+		location = 13216
+		division_template = "Desantnaya Brigada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.70
 	}
 
-	# Bukhara/Western
+	# 15th Independent Special Forces Brigade - Tashkent
 	division = {
-		name = "3. Pehotnaya Brigada"
-		location = 2058
-		division_template = "Pehotnaya Brigada"
-		start_experience_factor = 0.30
-		start_equipment_factor = 0.55
+		name = "15th Special Forces Brigade"
+		location = 1459
+		division_template = "Spetsnaz Brigada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.70
 	}
 }
 
@@ -132,35 +149,42 @@ instant_effect = {
 
 ##### Uzbek Air and Air Defence Forces #####
 air_wings = {
-	# Karshi-Khanabad / Chirchik (Transoxiana)
+	# 60th Separate Mixed Aviation Brigade - Karshi-Khanabad (Su-30SM)
 	726 = {
 		MR_Fighter4 = { owner = "UZB" creator = "SOV" amount = 12 version_name = "Su-30SM Flanker-H" }
-		name = "Fighter Aviation Regiment"
+		name = "60th Mixed Aviation Brigade"
 		start_experience_factor = 0.4
 	}
+	# Separate Mixed Aviation Brigade - Jizzakh (MiG-29)
 	726 = {
-		small_plane_airframe_2 = { owner = "UZB" creator = "SOV" amount = 20 version_name = "MiG-29 Fulcrum" }
-		name = "61st Guards Fighter Aviation Regiment"
+		small_plane_airframe_2 = { owner = "UZB" creator = "SOV" amount = 38 version_name = "MiG-29 Fulcrum" }
+		name = "Separate Mixed Aviation Brigade"
 		start_experience_factor = 0.35
 	}
-	726 = {
+	# Separate Mixed Aviation Regiment - Fergana (Su-25)
+	725 = {
 		cas2 = { owner = "UZB" creator = "SOV" amount = 20 version_name = "Su-25 Frogfoot" }
-		name = "372nd Assault Aviation Squadron"
+		name = "Separate Mixed Aviation Regiment"
 		start_experience_factor = 0.3
 	}
-	726 = {
-		cas1 = { owner = "UZB" creator = "SOV" amount = 20 version_name = "Su-24M Fencer" }
-		name = "735th Bomber Aviation Regiment"
-		start_experience_factor = 0.3
+	# Separate Mixed Aviation Squadron - Tashkent (An-26 / C-295M)
+	725 = {
+		transport_plane1 = { owner = "UZB" creator = "SOV" amount = 4 version_name = "An-26" }
+		transport_plane1 = { owner = "UZB" creator = "SPR" amount = 4 version_name = "C-295M" }
+		name = "Military Transport Aviation Squadron"
+		start_experience_factor = 0.35
 	}
-	726 = {
+	# Military Transport Aviation - Tashkent (Il-76MD / An-12)
+	725 = {
+		transport_plane2 = { owner = "UZB" creator = "SOV" amount = 3 version_name = "Il-76MD" }
+		transport_plane2 = { owner = "UZB" creator = "SOV" amount = 2 version_name = "An-12" }
+		name = "Military Transport Aviation"
+		start_experience_factor = 0.35
+	}
+	# UAV Squadron - Chirchiq (Bayraktar TB2)
+	725 = {
 		Air_UAV2 = { owner = "UZB" creator = "TUR" amount = 6 version_name = "Bayraktar TB2" }
 		name = "UAV Squadron"
 		start_experience_factor = 0.3
-	}
-	726 = {
-		transport_plane1 = { owner = "UZB" creator = "USA" amount = 4 version_name = "C-130H Hercules" }
-		name = "Military Transport Aviation Squadron"
-		start_experience_factor = 0.35
 	}
 }

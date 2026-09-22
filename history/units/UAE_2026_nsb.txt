@@ -53,47 +53,56 @@ division_template = {
 }
 
 units = {
-	##### UAE Armed Forces #####
+	##### UAE Land Forces #####
+	# Union force: Royal Guard Brigade, 2 Armoured Brigades, 3 Mechanized Infantry Brigades
 
 	# Abu Dhabi
 	division = {
-		name = "1. Liwa' Mudarra'"
-		location = 3725
+		name = "Royal Guard Brigade"
+		location = 3689
+		division_template = "Liwa' Mushaat Mikaniki"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.90
+	}
+	division = {
+		name = "Presidential Guard"
+		location = 3689
+		division_template = "Quwat Khassa"
+		start_experience_factor = 0.60
+		start_equipment_factor = 0.90
+	}
+	division = {
+		name = "1st Armoured Brigade"
+		location = 7960
 		division_template = "Liwa' Mudarra'"
 		start_experience_factor = 0.50
 		start_equipment_factor = 0.90
 	}
 	division = {
-		name = "Haras al-Ri'asa"
-		location = 3725
-		division_template = "Quwat Khassa"
-		start_experience_factor = 0.60
-		start_equipment_factor = 0.90
+		name = "2nd Armoured Brigade"
+		location = 3683
+		division_template = "Liwa' Mudarra'"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.85
 	}
-
-	# Dubai area
 	division = {
-		name = "1. Liwa' Mushaat Mikaniki"
+		name = "1st Mechanized Infantry Brigade"
 		location = 3689
 		division_template = "Liwa' Mushaat Mikaniki"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.85
 	}
-
-	# Northern Emirates
 	division = {
-		name = "2. Liwa' Mushaat Mikaniki"
-		location = 3585
+		name = "2nd Mechanized Infantry Brigade"
+		location = 3725
 		division_template = "Liwa' Mushaat Mikaniki"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.85
 	}
-
-	# Western region
 	division = {
-		name = "2. Liwa' Mudarra'"
-		location = 7960
-		division_template = "Liwa' Mudarra'"
+		name = "3rd Mechanized Infantry Brigade"
+		location = 10904
+		division_template = "Liwa' Mushaat Mikaniki"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.85
 	}
@@ -105,13 +114,16 @@ units = {
 		task_force = {
 			name = "Corvette Squadron"
 			location = 3689
+			# Bani Yas-class (Gowind 2500) corvettes
+			ship = { name = "UAES Bani Yas (P110)" definition = corvette equipment = { corvette_hull_4 = { amount = 1 owner = UAE creator = UAE version_name = "Bani Yas class" } } }
+			ship = { name = "UAES Al Emarat (P111)" definition = corvette equipment = { corvette_hull_4 = { amount = 1 owner = UAE creator = UAE version_name = "Bani Yas class" } } }
 			# Baynunah-class corvettes
 			ship = { name = "UAES Baynunah (P171)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE creator = UAE version_name = "Baynunah class" } } }
 			ship = { name = "UAES Al Hesen (P172)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE creator = UAE version_name = "Baynunah class" } } }
 			ship = { name = "UAES Al Dhafra (P173)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE creator = UAE version_name = "Baynunah class" } } }
 			ship = { name = "UAES Mezyad (P174)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE creator = UAE version_name = "Baynunah class" } } }
 			ship = { name = "UAES Al Jahili (P175)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE creator = UAE version_name = "Baynunah class" } } }
-			ship = { name = "UAES Shahama (P176)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE creator = UAE version_name = "Baynunah class" } } }
+			ship = { name = "UAES Al Hili (P176)" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = UAE creator = UAE version_name = "Baynunah class" } } }
 		}
 		task_force = {
 			name = "Patrol Squadron"
@@ -119,6 +131,8 @@ units = {
 			# Falaj 2-class patrol vessels
 			ship = { name = "UAES Ghantoot (P251)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = UAE creator = UAE version_name = "Falaj 2 class" } } }
 			ship = { name = "UAES Salahah (P252)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = UAE creator = UAE version_name = "Falaj 2 class" } } }
+			# Falaj 3-class patrol vessel
+			ship = { name = "UAES Altaf (P163)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = UAE creator = UAE version_name = "Falaj 3 class" } } }
 		}
 	}
 }
@@ -146,26 +160,32 @@ air_wings = {
 	}
 	# Mirage 2000-9
 	180 = {
-		MR_Fighter4 = { owner = "UAE" creator = "FRA" amount = 55 version_name = "Mirage 2000-9" }
+		MR_Fighter4 = { owner = "UAE" creator = "FRA" amount = 59 version_name = "Mirage 2000-9" }
 		name = "Al Minhad Fighter Wings"
 		start_experience_factor = 0.5
 	}
 	# GlobalEye AEW&C
 	180 = {
-		awacs_equipment_2 = { owner = "UAE" creator = "SWE" amount = 3 version_name = "GlobalEye AEW&C" }
+		awacs_equipment_2 = { owner = "UAE" creator = "SWE" amount = 5 version_name = "GlobalEye AEW&C" }
 		name = "AEW Squadron"
 		start_experience_factor = 0.5
 	}
 	# C-17A Globemaster III
 	180 = {
-		transport_plane2 = { owner = "UAE" creator = "USA" amount = 6 version_name = "C-17A Globemaster III" }
+		transport_plane2 = { owner = "UAE" creator = "USA" amount = 8 version_name = "C-17A Globemaster III" }
 		name = "Transport Wing"
 		start_experience_factor = 0.5
 	}
-	# Wing Loong II + MQ-1 drones
+	# Wing Loong II
 	180 = {
 		Air_UAV2 = { owner = "UAE" creator = "CHI" amount = 10 version_name = "Wing Loong II" }
 		name = "UAV Squadron"
 		start_experience_factor = 0.55
+	}
+	# Bayraktar TB2 (delivered 2022)
+	180 = {
+		Air_UAV2 = { owner = "UAE" creator = "TUR" amount = 20 version_name = "Bayraktar TB2" }
+		name = "TB2 Squadron"
+		start_experience_factor = 0.5
 	}
 }

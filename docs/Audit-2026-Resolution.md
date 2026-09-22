@@ -64,9 +64,109 @@ full `tools/make_nonnsb_oob.py --apply` regeneration.
 | `tools/economy_report.py` | now checks debt bounds, `treasury > debt` and collapsed debt; documents the central-government debt convention |
 | `patches/phantom_platforms.json` + `tools/validate.py` | regression net: ships/aircraft/formations that did not exist on 1 Jan 2026 fail the validator when they reappear |
 | `tools/foreign_basing.json` | intentional foreign-basing allowlist shared by `oob_check.py` and `audit_deep.py` |
+| `tools/oob_diff_summary.py` | before/after summary of the OOB changes (HEAD vs working tree) used to review the country work |
 | `tools/fix_oob_locations.py`, `tools/fix_politics_2026.py`, `tools/fix_party_arrays.py` | the migration scripts that applied the O-02 and politics fixes |
 | `tools/check_oob_layout.py` | diagnostic for the D-02 combined-OOB layout |
 
 ## 5. OOB reality audit (section 4)
 
-<!-- filled in after the country work -->
+All 67 orders of battle were reworked against the section 4 findings and the
+97 rows of `docs/audit_findings_oob.csv`, with web-checked 1 January 2026
+sources. The table shows divisions / ships / aircraft before → after; the
+per-country notes list the substance.
+
+| Tag | Div | Ships | Aircraft | Tag | Div | Ships | Aircraft |
+|---|---|---|---|---|---|---|---|
+| AFG | 11→12 | 0→0 | 0→34 | NKO | 40→41 | 26→26 | 233→233 |
+| ALB | 3→2 | 2→5 | 0→0 | NRY | 4→4 | 16→17 | 47→61 |
+| ARM | 6→5 | 0→0 | 12→19 | PAK | 30→31 | 13→19 | 245→455 |
+| AST | 10→10 | 21→21 | 124→146 | PER | 22→27 | 11→9 | 159→309 |
+| BEL | 3→2 | 2→9 | 44→44 | POL | 14→14 | 8→11 | 117→119 |
+| BLR | 7→9 | 0→0 | 90→90 | POR | 4→4 | 9→11 | 38→38 |
+| BOS | 4→4 | 0→0 | 0→0 | RAJ | 44→53 | 42→66 | 558→580 |
+| BRA | 17→17 | 11→12 | 115→67 | ROM | 9→9 | 6→6 | 47→43 |
+| BRM | 18→18 | 7→8 | 36→135 | SAF | 6→6 | 10→10 | 43→43 |
+| BUL | 5→5 | 4→11 | 23→23 | SAU | 22→22 | 11→16 | 273→388 |
+| CAN | 10→11 | 20→21 | 87→124 | SER | 7→7 | 0→0 | 20→31 |
+| CHI | 58→66 | 65→89 | 1083→1283 | SLO | 2→2 | 0→0 | 16→27 |
+| CRO | 5→3 | 5→8 | 12→12 | SLV | 2→3 | 0→0 | 0→0 |
+| CZE | 4→4 | 0→0 | 38→40 | SOV | 45→61 | 59→68 | 396→586 |
+| DEN | 3→3 | 9→18 | 31→37 | SPR | 10→11 | 18→22 | 159→170 |
+| EGY | 20→23 | 16→27 | 285→353 | SUD | 15→13 | 0→0 | 22→22 |
+| ENG | 7→7 | 36→35 | 143→203 | SWE | 8→10 | 9→11 | 102→98 |
+| EST | 3→3 | 3→7 | 0→0 | SYR | 12→14 | 2→0 | 16→6 |
+| ETH | 14→11 | 0→0 | 32→36 | TAI | 17→24 | 25→39 | 329→352 |
+| FIN | 9→9 | 9→8 | 65→65 | TAJ | 4→5 | 0→0 | 6→5 |
+| FRA | 11→9 | 33→34 | 209→287 | TUR | 24→25 | 30→36 | 351→469 |
+| FYR | 2→2 | 0→0 | 0→0 | UAE | 5→7 | 8→11 | 153→181 |
+| GEO | 6→9 | 0→0 | 20→20 | UKR | 29→63 | 6→6 | 89→94 |
+| GER | 8→8 | 24→23 | 176→286 | USA | 26→28 | 80→85 | 1055→1139 |
+| GRE | 13→13 | 15→25 | 174→204 | UZB | 8→8 | 0→0 | 82→89 |
+| HOL | 4→4 | 11→20 | 60→56 | VEN | 16→15 | 8→5 | 60→52 |
+| HUN | 5→4 | 0→0 | 15→16 | YEM | 11→13 | 0→0 | 20→20 |
+| IND | 17→17 | 17→17 | 123→126 | KAZ | 7→13 | 0→4 | 74→81 |
+| ISR | 17→20 | 13→12 | 335→331 | KOR | 27→27 | 30→51 | 304→304 |
+| ITA | 14→14 | 20→27 | 185→204 | KOS | 2→4 | 0→0 | 0→5 |
+| JAP | 14→18 | 44→68 | 348→416 | KYR | 2→4 | 0→0 | 6→14 |
+| LAT | 2→5 | 5→5 | 0→0 | LIT | 4→4 | 4→8 | 3→3 |
+| LUX | 1→1 | 0→0 | 1→1 | MLV | 3→3 | 0→0 | 8→5 |
+| MNT | 2→3 | 0→2 | 0→0 | | | | |
+
+Substance per country (the audit row tags in brackets):
+
+- **USA [USA]** - removed the three phantom ships (Anzio, Vella Gulf, Lyndon B. Johnson), rebuilt cruiser/DDG flotillas and homeports, fixed 3rd ACR, 25th ID and 11th Airborne added, divisions rebased to their real states, 3rd MarDiv to Okinawa, B-52H 76, F-15EX/tankers/helicopters added.
+- **SOV/BLR [SOV, BLR]** - Far East formations kept at their fixed bases; duplicate divisions removed and Tamanskaya/Kantemirovskaya renamed; Borei/Yasen hull identities fixed, Kharlamov removed, new ships added; ground forces in occupied Donbas/Crimea, the Oreshnik brigade in Belarus, the 102nd/201st bases; Su-57, Tu-95MS, Tu-22M3 counts and Kinzhal/Geran units added. Belarus: garrisons fixed, airborne brigades unswapped, Iskander and Su-30SM basing corrected.
+- **CHI [CHI]** - 76th Group Army out of Hong Kong, 73rd/80th added, every group army at its HQ, airborne brigades renumbered, ship name/hull mismatches fixed, Type 093/094 renumbered, the whole amphibious force added, J-20A 300.
+- **TAI [TAI]** - Kinmen/Penghu commands on their islands, 8th Corps south, reserve brigades real, An Chiang/Wan Chiang pennants, 5 Knox + 2 Perrys + Tuo Chiangs added, Hai Kun removed, aircraft counts corrected.
+- **JAP [JAP]** - divisions at their real garrisons, Mogami 8, Murasame 9, submarines 22, F-15J 199, F-2 85, F-35A 47, P-1 37.
+- **KOR [KOR]** - 26th Mech removed, 2nd QR/23rd Security/30th Armoured corrected, hull numbers fixed (DDG-995, FFG-815/828, SS-085/086), the missing KDX-I/Incheon/Daegu frigates and KSS-I/II boats added.
+- **NKO [NKO]** - the Kursk contingent (~11,000 troops) added, Pyongyang artillery division moved home. Choe Hyon/Hero Kim Kun Ok correctly absent.
+- **ENG/FRA/GER/ITA/POL/ISR [ENG, FRA, GER, ITA, POL, ISR]** - all phantom ships removed (Lancaster, Northumberland, Albion, Bulwark, Chiddingfold, Penzance, Émeraude, Emden, Drakon), Agamemnon/St Albans/Hunt MCMVs/Améthyste/Tourville/Schergat/Bianchi added; BAOR "7th Light Mech (Germany)" and the phantom French/Legion brigades/Jägerbrigade 1 replaced with real formations; aircraft counts raised to real totals (Typhoon 111, F-35B 45, Rafale 108, Eurofighter 138, Tornado 84, F-15 66, F-16 173); Golan/Galilee/Negev and Gaza/Lebanon/Hermon deployments added (ISR).
+- **HOL/BEL/DEN/NRY/CAN/SPR/POR [HOL, BEL, DEN, NRY, CAN, SPR, POR]** - non-existent brigades removed/renamed, Walrus/Odda/P-3M phantoms removed, missing M-frigates/LPDs/CSS Den Helder/Alkmaar MCMs/AOPVs/OPVs/F-100 subs/Knud Rasmussen/Diana/Skjold/Uthaug/Harry DeWolf added, F-35A basing (Florennes) and counts fixed, Canada's MNB Latvia and Spain's NATO Battlegroup Slovakia added, army regions corrected.
+- **FIN/SWE/TUR/GRE/ROM/HUN/CZE [FIN, SWE, TUR, GRE, ROM, HUN, CZE]** - Pohjanmaa class and İzmir/Murat Reis removed, TCG/Yavuz/Atılay fleet made real, Swedish NATO battalions (Latvia, Finland) added, Gripen/Södermanland subs and army regions fixed, Elli class + Kimon + F-4E added (GRE), MQ-9 phantom squadrons removed (ROM), C-17 removed and KC-390 added (HUN), brigade regions and C-295 fixed (CZE).
+- **BUL/CRO/ALB/LIT/EST/SLO/SAF/EGY [BUL, CRO, ALB, LIT, EST, SLO, SAF, EGY]** - Bulgarian identities/pennants fixed, Croatian phantom hulls replaced by the real missile boats and minehunter, Aitvaras brigade replaced by Aukštaitija, Estonian pennants/Wambola fixed, Slovak inventory corrected, SAF readiness lowered to reality, Egyptian armoured/mech divisions and the missing frigates/submarines/Mirage 2000s fixed.
+- **MLV/BRA/VEN/AST/IND/BRM [MLV, BRA, VEN, AST, IND, BRM]** - Moldova's phantom MiG-29 squadron removed, Brazil's phantom ships/brigades removed and the jungle brigades moved to Amazonia, Venezuela's hulk/retired ships and F-5 flight removed, Australian Anzac/Pilbara removed with 1st/3rd Bdes unswapped and the Fires brigade added, Indonesian chains of command/basing and F-16 blocks fixed, Myanmar's air force rebuilt (~130 aircraft incl. Su-30SME) and the second submarine added.
+- **RAJ/PAK/SAU/UAE/PER [RAJ, PAK, SAU, UAE, PER]** - India's ~10 invented formations replaced by the real corps/division/brigade structure, Chakra III/Triput removed and Surat/Tushil/Tamal/Himgiri added, Tejas 30/Mirage 2000 added; Pakistan's 054A/P names, Babur-class corvettes and Hangor removal, army rebased to real garrisons, F-16 75/Mirages 170; Saudi fleet homeports unswapped, Badr class fixed, Avante 2200 class added, MQ-9 phantom removed, Tornado 81; UAE P176 renamed, Gowind/Falaj/TB2 added; Iran's Artesh/IRGC order of battle rebased per ISW/CTP, IRGC Navy out of Lorestan, Damavand removed and Deylaman added, missing air types and the IRGC UAV force added.
+- **KAZ/KYR/TAJ/UZB/SUD/ETH [KAZ, KYR, TAJ, UZB, SUD, ETH]** - Kazakh MiG-29/MiG-31 wings (retired 2023) removed, real brigades + Caspian flotilla added; Kyrgyz/Tajik Turkish drones and helicopters added; Uzbek C-130H phantom removed, MiG-29 38, wings spread over real bases; Sudanese units out of RSF-held Darfur into army-held commands; Fano divisions removed from the ENDF OOB and Amhara garrisoned; Ethiopian air inventory corrected.
+- **UKR/SYR/YEM/AFG [UKR, SYR, YEM, AFG]** - Ukraine expanded to the 2025 corps structure (63 units), Mirage 2000-5F added, naval pennants fixed, no units in Russian-held territory; Syria's navy deleted, air reduced to 6 real airframes, ground rebuilt on the numbered divisions; Yemen's province IDs aligned, Houthi units confined to the highlands and PLC/IRG formations added; Afghanistan's divisions moved to the real corps HQs and its ~34 airframes modelled.
+- **LAT/SLV/SER/BOS/KOS/FYR/MNT/LUX [report section 4.8]** - Latvian MCM class and brigade name fixed, National Guard regionalised; Slovenian 1st Brigade added and 72nd moved to Maribor; Serbian MiG-29/Orao counts, real army brigades and the 63rd Parachute Brigade; Bosnian Tactical Support Brigade to Sarajevo and helicopters added; Kosovo's three regiments + National Guard + TB2; FYR's 1st Mechanized Infantry Brigade; Montenegro shrunk to one active battalion with Durmitor and Jadran added; Luxembourg's A400M moved to Melsbroek and H145M added.
+
+### Deliberately not changed
+
+- **ETH TDF** is not modelled: the Tigray Defence Forces existed on 1 Jan 2026
+  but were not fighting the ENDF (clashes resumed 26 January 2026) and there is
+  no separate Tigray tag in MD to put them on.
+- **SAF ANC ideology** was fixed in the politics pass (section 3), not the OOB.
+- **MD-side abstractions kept**: the mod's generic division templates, the
+  "12 mobilized brigades" in the Russian OOB (MD's stated 2022+ mobilisation
+  abstraction) and MD's own naval hull families.
+- **Greece's "III Infantry Division"** and Serbia's legacy "72nd Special
+  Brigade" are flagged in the subagent work but were outside the audit rows.
+
+### Verification
+
+```text
+python tools/make_nonnsb_oob.py --apply     # 67 non-NSB variants rebuilt
+python tools/oob_check.py --all             # 67 files, 0 findings
+python tools/validate.py                    # 0 errors, 4 known warnings
+python tools/audit_deep.py                  # 0 non-informational findings (incl. G-01 reproducibility)
+```
+
+## 6. What remains (runtime only)
+
+The audit's section 6 and recommendation 13 list checks that need a running
+game; they are documented in `docs/Testing.md` and `docs/Known-Issues.md`:
+
+1. AFG/TAL: states transfer at 2026.1.1 with the annexation as fallback.
+2. `global.nato_members` / `global.CSTO_member` contents in a save or console.
+3. Air wings spawning from the combined `set_oob` files (D-02); the layout is
+   kept on precedent, but if day 1 shows no wings they must move to
+   `set_air_oob` files.
+4. Pre-completed focus rewards in `error.log`.
+5. Legacy-war settlement (Chechnya, Aceh, Tamil Eelam, Afghanistan, Eritrea,
+   South Sudan, African rebels).
+
+Everything else from the audit - tooling (T-01), static bugs (O-02, O-03,
+C-01, C-02), the informational items (H-04, H-06, S-05), the design item
+(D-01), politics/economy (section 5) and the 67-country OOB reality audit -
+is fixed and verified statically.

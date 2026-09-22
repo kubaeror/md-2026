@@ -79,7 +79,7 @@ units = {
 	# Karjalan Prikaati (Karelian Brigade)
 	division = {
 		name = "Karjalan Prikaati"
-		location = 6087
+		location = 16269
 		division_template = "Jääkäriprikaati"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.85
@@ -103,7 +103,7 @@ units = {
 	# Jääkäriprikaati (Sodankylä)
 	division = {
 		name = "Jääkäriprikaati"
-		location = 16269
+		location = 6087
 		division_template = "Jääkäriprikaati"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
@@ -143,13 +143,6 @@ units = {
 	fleet = {
 		name = "Merivoimat"
 		naval_base = 11105
-		# 1st Corvette Squadron — Pohjanmaa-class
-		task_force = {
-			name = "1. Korvettidivisioona"
-			location = 11105
-			ship = { name = "FNS Pohjanmaa" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = FIN creator = FIN version_name = "Pohjanmaa Class" } } }
-			ship = { name = "FNS Häme" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_3 = { amount = 1 owner = FIN creator = FIN version_name = "Pohjanmaa Class" } } }
-		}
 		# Hamina-class missile boats
 		task_force = {
 			name = "Ohjusvenelaivue"
@@ -165,6 +158,7 @@ units = {
 			location = 3122
 			ship = { name = "FNS Rauma (70)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_1 = { amount = 1 owner = FIN creator = FIN version_name = "Rauma Class" } } }
 			ship = { name = "FNS Raahe (71)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_1 = { amount = 1 owner = FIN creator = FIN version_name = "Rauma Class" } } }
+			ship = { name = "FNS Porvoo (72)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_1 = { amount = 1 owner = FIN creator = FIN version_name = "Rauma Class" } } }
 			ship = { name = "FNS Naantali (73)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_1 = { amount = 1 owner = FIN creator = FIN version_name = "Rauma Class" } } }
 		}
 	}

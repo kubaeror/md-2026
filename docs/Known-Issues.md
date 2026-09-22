@@ -130,8 +130,10 @@ back to the default background. A 2026 date picture is future work.
 ### Economy data
 
 `docs/Economy-2026.md` compares the shipped GDP/debt values with indicative 2025
-reference data. Two entries (North Korea, Syria) differ from the reference but
-are kept: both reference values are uncertain.
+reference data and runs a debt sanity check (`tools/economy_report.py`): `debt`
+is central-government gross debt, must be positive and must not be smaller than
+`treasury`. Two GDP entries (North Korea, Syria) differ from the reference but
+are kept because both reference values are uncertain.
 
 ## Pending runtime verification
 

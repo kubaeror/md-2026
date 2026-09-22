@@ -153,31 +153,45 @@ division_template = {
 	}
 }
 
+# Corps headquarters (brigade reform of 2025). The AFU moved from ad-hoc
+# operational-tactical groups to permanent army corps in 2025.
+division_template = {
+	name = "Shtab Korpusu"
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		combat_service_support_company = { x = 0 y = 1 }
+	}
+}
+
 ##### Units #####
 # Frontline forces — depleted experience/equipment reflects 3 years of war
 
 units = {
 	##### Mechanized Brigades — Front Line #####
 
-	# 1st Separate Tank Brigade
+	# 1st Heavy Mechanized Brigade (ex-1st Tank Brigade, redesignated 2025)
 	division = {
-		name = "1st Separate Tank Brigade"
+		name = "1st Heavy Mechanized Brigade"
 		location = 11670
 		division_template = "Tankova Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.6
 	}
-	# 3rd Separate Tank Brigade
+	# 3rd Heavy Mechanized Brigade (ex-3rd Tank Brigade, redesignated 2025)
 	division = {
-		name = "3rd Separate Tank Brigade"
+		name = "3rd Heavy Mechanized Brigade"
 		location = 6593
 		division_template = "Tankova Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.55
 	}
-	# 4th Tank Brigade
+	# 4th Heavy Mechanized Brigade (ex-4th Tank Brigade, redesignated 2025)
 	division = {
-		name = "4th Tank Brigade"
+		name = "4th Heavy Mechanized Brigade"
 		location = 11452
 		division_template = "Tankova Bryhada"
 		start_experience_factor = 0.45
@@ -234,23 +248,23 @@ units = {
 
 	##### Infantry Brigades — Front Line #####
 
-	# 54th Motorized Brigade
+	# 54th Mechanized Brigade
 	division = {
-		name = "54th Motorized Brigade"
+		name = "54th Mechanized Brigade"
 		location = 9556
 		division_template = "Pikhota Bryhada"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.55
 	}
-	# 63rd Motorized Brigade
+	# 63rd Mechanized Brigade
 	division = {
-		name = "63rd Motorized Brigade"
+		name = "63rd Mechanized Brigade"
 		location = 11691
 		division_template = "Pikhota Bryhada"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.55
 	}
-	# 110th Motorized Brigade
+	# 110th Mechanized Brigade
 	division = {
 		name = "110th Mechanized Brigade"
 		location = 9548
@@ -258,7 +272,7 @@ units = {
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.55
 	}
-	# 115th Motorized Brigade
+	# 115th Mechanized Brigade
 	division = {
 		name = "115th Mechanized Brigade"
 		location = 11683
@@ -406,19 +420,303 @@ units = {
 		start_equipment_factor = 0.55
 	}
 
+	##### Additional brigades of the 2026 order of battle #####
+	# Cadre/garrison locations follow the brigades' peacetime bases; the mod's
+	# Donetsk, Luhansk and Crimea are Russian-held, so no unit is placed there.
+
+	# 5th Heavy Mechanized Brigade - Kryvyi Rih
+	division = {
+		name = "5th Heavy Mechanized Brigade"
+		location = 6423
+		division_template = "Tankova Bryhada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+	# 17th Heavy Mechanized Brigade - Kryvyi Rih
+	division = {
+		name = "17th Heavy Mechanized Brigade"
+		location = 6423
+		division_template = "Tankova Bryhada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+	# 28th Mechanized Brigade - Chornomorsk
+	division = {
+		name = "28th Mechanized Brigade"
+		location = 16525
+		division_template = "Mekhanizovana Bryhada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+	# 30th Mechanized Brigade - Novohrad-Volynskyi
+	division = {
+		name = "30th Mechanized Brigade"
+		location = 6593
+		division_template = "Mekhanizovana Bryhada"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+	# 72nd Mechanized Brigade - Bila Tserkva
+	division = {
+		name = "72nd Mechanized Brigade"
+		location = 504
+		division_template = "Mekhanizovana Bryhada"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+	# 92nd Assault Brigade - Chuhuiv (Kharkiv oblast)
+	division = {
+		name = "92nd Assault Brigade"
+		location = 16502
+		division_template = "Mekhanizovana Bryhada"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.6
+	}
+	# 117th Heavy Mechanized Brigade - Sumy
+	division = {
+		name = "117th Heavy Mechanized Brigade"
+		location = 3520
+		division_template = "Tankova Bryhada"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	# 125th Heavy Mechanized Brigade - Lviv
+	division = {
+		name = "125th Heavy Mechanized Brigade"
+		location = 11479
+		division_template = "Tankova Bryhada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	# 127th Heavy Mechanized Brigade - Kharkiv
+	division = {
+		name = "127th Heavy Mechanized Brigade"
+		location = 9556
+		division_template = "Tankova Bryhada"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	# 10th Mountain Assault Brigade - Kolomyia
+	division = {
+		name = "10th Mountain Assault Brigade"
+		location = 11550
+		division_template = "Pikhota Bryhada"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.6
+	}
+	# 128th Mountain Assault Brigade - Mukacheve
+	division = {
+		name = "128th Mountain Assault Brigade"
+		location = 16477
+		division_template = "Pikhota Bryhada"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.6
+	}
+	# 79th Air Assault Brigade - Mykolaiv
+	division = {
+		name = "79th Air Assault Brigade"
+		location = 11683
+		division_template = "Desantno-Shturmova Bryhada"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.6
+	}
+	# 80th Air Assault Brigade - Lviv
+	division = {
+		name = "80th Air Assault Brigade"
+		location = 11479
+		division_template = "Desantno-Shturmova Bryhada"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.6
+	}
+	# 81st Airmobile Brigade - Poltava
+	division = {
+		name = "81st Airmobile Brigade"
+		location = 511
+		division_template = "Desantno-Shturmova Bryhada"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+	# 95th Air Assault Brigade - Zhytomyr
+	division = {
+		name = "95th Air Assault Brigade"
+		location = 9533
+		division_template = "Desantno-Shturmova Bryhada"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.6
+	}
+	# 38th Marine Brigade - Horishni Plavni (Poltava oblast)
+	division = {
+		name = "38th Marine Brigade"
+		location = 6495
+		division_template = "Bryhada Morskoyi Pikhoty"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+	# 26th Artillery Brigade - Berdychiv
+	division = {
+		name = "26th Artillery Brigade"
+		location = 11464
+		division_template = "Artyleriiska Bryhada"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+	# 27th Rocket Artillery Brigade - Sumy
+	division = {
+		name = "27th Rocket Artillery Brigade"
+		location = 3520
+		division_template = "Artyleriiska Bryhada"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+	# 107th Rocket Artillery Brigade - Kremenchuk
+	division = {
+		name = "107th Rocket Artillery Brigade"
+		location = 6495
+		division_template = "Artyleriiska Bryhada"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.55
+	}
+
+	##### Army corps headquarters (corps-brigade reform of 2025) #####
+
+	# 3rd Army Corps (North grouping) - Kharkiv
+	division = {
+		name = "3rd Army Corps"
+		location = 9556
+		division_template = "Shtab Korpusu"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	# 9th Army Corps (East grouping) - Dnipro
+	division = {
+		name = "9th Army Corps"
+		location = 11437
+		division_template = "Shtab Korpusu"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	# 10th Army Corps (North grouping) - Sumy
+	division = {
+		name = "10th Army Corps"
+		location = 3520
+		division_template = "Shtab Korpusu"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	# 11th Army Corps (East grouping) - Zaporizhzhia
+	division = {
+		name = "11th Army Corps"
+		location = 11405
+		division_template = "Shtab Korpusu"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	# 12th Army Corps (West grouping) - Lviv
+	division = {
+		name = "12th Army Corps"
+		location = 11479
+		division_template = "Shtab Korpusu"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	# 14th Army Corps (West grouping) - Rivne
+	division = {
+		name = "14th Army Corps"
+		location = 6435
+		division_template = "Shtab Korpusu"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	# 15th Army Corps (West grouping) - Berdychiv
+	division = {
+		name = "15th Army Corps"
+		location = 11464
+		division_template = "Shtab Korpusu"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	# 16th Army Corps (North grouping) - Chernihiv
+	division = {
+		name = "16th Army Corps"
+		location = 3568
+		division_template = "Shtab Korpusu"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	# 17th Army Corps (South grouping) - Mykolaiv
+	division = {
+		name = "17th Army Corps"
+		location = 11683
+		division_template = "Shtab Korpusu"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	# 18th Army Corps (West grouping) - Kyiv
+	division = {
+		name = "18th Army Corps"
+		location = 16512
+		division_template = "Shtab Korpusu"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	# 19th Army Corps (East grouping) - Pavlohrad
+	division = {
+		name = "19th Army Corps"
+		location = 11452
+		division_template = "Shtab Korpusu"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	# 20th Army Corps (East grouping) - Dnipropetrovsk
+	division = {
+		name = "20th Army Corps"
+		location = 16481
+		division_template = "Shtab Korpusu"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	# 21st Army Corps (North grouping) - Poltava
+	division = {
+		name = "21st Army Corps"
+		location = 511
+		division_template = "Shtab Korpusu"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.5
+	}
+	# 7th Air Assault Corps (Air Assault Forces) - Zhytomyr
+	division = {
+		name = "7th Air Assault Corps"
+		location = 9533
+		division_template = "Shtab Korpusu"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+	# 30th Marine Corps (Navy) - Odesa
+	division = {
+		name = "30th Marine Corps"
+		location = 11670
+		division_template = "Shtab Korpusu"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+
 	### Ukrainian Navy — Viiskovo-Morski Syly ###
+	# The two Sandown-class minehunters (Chernihiv M310, Cherkasy M311) are still
+	# kept in the UK because the Montreux Convention bars them from the Black Sea;
+	# shown at their nominal home port. Slavyansk (P190) was sunk in March 2022 and
+	# is replaced by the in-service Gyurza-M gunboat Bucha (P181).
 	fleet = {
 		name = "Viiskovo-Morski Syly Ukrainy"
 		naval_base = 11670
 		task_force = {
 			name = "Bryhada Nadvodnyh Korabliv"
 			location = 11670
-			ship = { name = "Slavyansk (P190)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_1 = { amount = 1 owner = UKR creator = USA version_name = "Island Class" } } }
+			ship = { name = "Bucha (P181)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_1 = { amount = 1 owner = UKR creator = UKR version_name = "Gyurza-M Class" } } }
 			ship = { name = "Starobilsk (P191)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_1 = { amount = 1 owner = UKR creator = USA version_name = "Island Class" } } }
 			ship = { name = "Sumy (P192)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_1 = { amount = 1 owner = UKR creator = USA version_name = "Island Class" } } }
 			ship = { name = "Fastiv (P193)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_1 = { amount = 1 owner = UKR creator = USA version_name = "Island Class" } } }
-			ship = { name = "Chernihiv (P311)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = UKR creator = ENG version_name = "Sandown Class" } } }
-			ship = { name = "Cherkasy (P312)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = UKR creator = ENG version_name = "Sandown Class" } } }
+			ship = { name = "Chernihiv (M310)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = UKR creator = ENG version_name = "Sandown Class" } } }
+			ship = { name = "Cherkasy (M311)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = UKR creator = ENG version_name = "Sandown Class" } } }
 		}
 	}
 }
@@ -477,6 +775,13 @@ air_wings = {
 	694 = {
 		transport_plane1 = { owner = "UKR" creator = "UKR" amount = 6 version_name = "An-26" }
 		name = "25-a Bryhada Transportnoyi Aviatsiyi"
+		start_experience_factor = 0.4
+	}
+	# French-supplied Mirage 2000-5F (first batch February 2025; ~5 airframes left
+	# after the July 2025 loss), used for air defence in the west of the country.
+	1247 = {
+		L_Strike_fighter2 = { owner = "UKR" creator = "FRA" amount = 5 version_name = "Mirage 2000-5F" }
+		name = "Mirage 2000-5F Eskadrylia"
 		start_experience_factor = 0.4
 	}
 }

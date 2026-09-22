@@ -102,10 +102,10 @@ division_template = {
 }
 
 units = {
-	# Brigada Acorazada 'Guadarrama' XII
+	# Brigada Acorazada 'Guadarrama' XII - El Goloso (Madrid)
 	division = {
 		name = "Brigada 'Guadarrama' XII"
-		location = 6734
+		location = 9767
 		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.85
@@ -126,61 +126,69 @@ units = {
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
-	# Brigada 'Aragón' I
+	# Brigada 'Aragón' I - Zaragoza
 	division = {
 		name = "Brigada 'Aragón' I"
-		location = 9767
+		location = 3816
 		division_template = "Brigada de Infanteria Ligera"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
-	# Brigada 'Galicia' VII
+	# Brigada 'Galicia' VII - Pontevedra
 	division = {
 		name = "Brigada 'Galicia' VII"
-		location = 3938
+		location = 6734
 		division_template = "Brigada de Infanteria Ligera"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
-	# Brigada 'Rey Alfonso XIII' II de la Legion
+	# Brigada 'Rey Alfonso XIII' II de la Legion - Viator (Almería)
 	division = {
 		name = "Brigada 'Rey Alfonso XIII' II (Legión)"
-		location = 3816
+		location = 12038
 		division_template = "Legion"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.9
 	}
-	# Brigada Paracaidista
+	# Brigada Paracaidista - Paracuellos del Jarama (Madrid)
 	division = {
 		name = "Brigada Paracaidista 'Almogávares' VI"
-		location = 6734
+		location = 9767
 		division_template = "Brigada Paracaidista"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.9
 	}
-	# BRIMAR
+	# BRIMAR - San Fernando (Cádiz)
 	division = {
 		name = "Brigada de Infantería de Marina"
-		location = 3799
+		location = 279
 		division_template = "Infanteria de Marina"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.9
 	}
-	# MOE
+	# MOE - Alicante
 	division = {
 		name = "Mando de Operaciones Especiales"
-		location = 6734
+		location = 962
 		division_template = "MOE"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.9
 	}
-	# Canarias Command
+	# Mando de Canarias - Santa Cruz de Tenerife
 	division = {
 		name = "Mando de Canarias"
-		location = 1176
+		location = 13071
 		division_template = "Brigada de Infanteria Ligera"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.8
+	}
+	# NATO Battlegroup Slovakia (Spain framework nation) - Lešť area
+	division = {
+		name = "NATO Battlegroup Slovakia"
+		location = 6573
+		division_template = "Brigada de Infanteria"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.85
 	}
 
 	### Armada Española ###
@@ -198,6 +206,9 @@ units = {
 		task_force = {
 			name = "Grupo de Escolta"
 			location = 279
+			ship = { name = "SPS Santa Maria (F81)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Santa Maria Class" } } }
+			ship = { name = "SPS Victoria (F82)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Santa Maria Class" } } }
+			ship = { name = "SPS Numancia (F83)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Santa Maria Class" } } }
 			ship = { name = "SPS Reina Sofia (F84)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Santa Maria Class" } } }
 			ship = { name = "SPS Navarra (F85)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Santa Maria Class" } } }
 			ship = { name = "SPS Canarias (F86)" definition = frigate pride_of_the_fleet = no start_experience_factor = 0.55 equipment = { frigate_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Santa Maria Class" } } }
@@ -227,6 +238,7 @@ units = {
 			name = "Escuadrilla de Submarinos"
 			location = 6906
 			ship = { name = "SPS Isaac Peral (S81)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = SPR creator = SPR version_name = "Isaac Peral Class" } } }
+			ship = { name = "SPS Galerna (S71)" definition = attack_submarine pride_of_the_fleet = no start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SPR creator = SPR version_name = "Galerna Class" } } }
 		}
 		task_force = {
 			name = "Buques de Acción Marítima"
@@ -257,10 +269,11 @@ air_wings = {
 		name = "Ala 11"
 		start_experience_factor = 0.6
 	}
+	## Andalucía (Rota) - Armada fixed wing ##
 	93 = {
-		naval_plane1 = { owner = "SPR" creator = "USA" amount = 5 version_name = "P-3M Orion" }
-		name = "Grupo 22"
-		start_experience_factor = 0.55
+		CV_L_Strike_fighter2 = { owner = "SPR" creator = "USA" amount = 12 version_name = "EAV-8B+ Harrier II" }
+		name = "9a Escuadrilla"
+		start_experience_factor = 0.6
 	}
 	## Castilla-La Mancha (Albacete/Los Llanos) ##
 	970 = {
@@ -289,5 +302,11 @@ air_wings = {
 		transport_plane1 = { owner = "SPR" creator = "USA" amount = 7 version_name = "C-130H Hercules" }
 		name = "Ala 31 - Transporte"
 		start_experience_factor = 0.55
+	}
+	## Extremadura (Talavera la Real) - RPAS ##
+	968 = {
+		Air_UAV2 = { owner = "SPR" creator = "USA" amount = 4 version_name = "MQ-9A Predator B" }
+		name = "233 Escuadrón (Ala 23)"
+		start_experience_factor = 0.5
 	}
 }

@@ -49,54 +49,81 @@ division_template = {
 
 units = {
 	##### Georgian Defense Forces #####
+	# Land Forces - East Command (Tbilisi) and West Command (Kutaisi)
 
-	# Tbilisi
+	# 1st Infantry Brigade - Tbilisi
 	division = {
 		name = "1. Sakmanebi Brigada"
-		location = 3653
+		location = 1599
 		division_template = "Sakmanebi Brigada"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.70
 	}
+	# 4th Mechanized Brigade - Vaziani
 	division = {
-		name = "1. Spetsrazmeli Brigada"
-		location = 3653
-		division_template = "Spetsrazmeli Brigada"
-		start_experience_factor = 0.50
+		name = "4. Mekhanizebuli Brigada"
+		location = 14158
+		division_template = "Sakmanebi Brigada"
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.70
 	}
-
-	# Western Georgia (Kutaisi)
-	division = {
-		name = "2. Sakmanebi Brigada"
-		location = 3658
-		division_template = "Sakmanebi Brigada"
-		start_experience_factor = 0.40
-		start_equipment_factor = 0.65
-	}
-
-	# Gori (near South Ossetia)
-	division = {
-		name = "3. Sakmanebi Brigada"
-		location = 1599
-		division_template = "Sakmanebi Brigada"
-		start_experience_factor = 0.40
-		start_equipment_factor = 0.65
-	}
+	# 1st Artillery Brigade - Vaziani
 	division = {
 		name = "1. Artileriis Brigada"
-		location = 1599
+		location = 14158
 		division_template = "Artileriis Brigada"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.60
 	}
 
-	# Eastern (Batumi area)
+	# 2nd Infantry Brigade - Senaki
 	division = {
-		name = "4. Sakmanebi Brigada"
+		name = "2. Sakmanebi Brigada"
 		location = 772
 		division_template = "Sakmanebi Brigada"
 		start_experience_factor = 0.40
+		start_equipment_factor = 0.65
+	}
+	# 3rd Infantry Brigade - Kutaisi
+	division = {
+		name = "3. Sakmanebi Brigada"
+		location = 3658
+		division_template = "Sakmanebi Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.65
+	}
+	# 2nd Artillery Brigade - Khoni
+	division = {
+		name = "2. Artileriis Brigada"
+		location = 654
+		division_template = "Artileriis Brigada"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.60
+	}
+
+	# 5th Infantry Brigade - Gori
+	division = {
+		name = "5. Sakmanebi Brigada"
+		location = 3667
+		division_template = "Sakmanebi Brigada"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.65
+	}
+
+	# Special Operations Forces - Tbilisi
+	division = {
+		name = "1. Spetsrazmeli Brigada"
+		location = 1599
+		division_template = "Spetsrazmeli Brigada"
+		start_experience_factor = 0.50
+		start_equipment_factor = 0.70
+	}
+	# 12th Light Infantry Battalion "Commando" - Adlia (Batumi)
+	division = {
+		name = "12. Msubuki Batallioni (Commando)"
+		location = 3653
+		division_template = "Sakmanebi Brigada"
+		start_experience_factor = 0.45
 		start_equipment_factor = 0.65
 	}
 }

@@ -41,9 +41,9 @@ units = {
 		start_equipment_factor = 0.70
 	}
 	division = {
-		name = "2. Pehotna Brigada"
+		name = "2. Mechanizovana Brigada"
 		location = 6573
-		division_template = "Pehotna Brigada"
+		division_template = "Mechanizovana Brigada"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.65
 	}
@@ -55,14 +55,38 @@ instant_effect = {
 		amount = 1500
 		producer = SLO
 	}
+	# 46th Wing - Mi-17 transport helicopters
+	add_equipment_to_stockpile = {
+		type = transport_helicopter_3
+		amount = 4
+		producer = SLO
+	}
+	# 46th Wing - UH-60M Black Hawk helicopters
+	add_equipment_to_stockpile = {
+		type = transport_helicopter_4
+		amount = 9
+		producer = SLO
+	}
 }
 
 ##### Slovak Air Force #####
 air_wings = {
-	# Sliac Air Base (Western Slovakia)
+	# Sliac Air Base (Western Slovakia) - 10 of 14 F-16V in country; last 4 in the US until 2027
 	119 = {
-		L_Strike_fighter2 = { owner = "SLO" creator = "USA" amount = 14 version_name = "F-16V Block 70" }
+		L_Strike_fighter2 = { owner = "SLO" creator = "USA" amount = 10 version_name = "F-16V Block 70" }
 		name = "1st Tactical Squadron"
+		start_experience_factor = 0.35
+	}
+	# L-39 Albatros trainers / light attack
+	119 = {
+		cas2 = { owner = "SLO" creator = "CZE" amount = 9 version_name = "L-39CM/ZAM Albatros" }
+		name = "Training Squadron"
+		start_experience_factor = 0.35
+	}
+	# L-410 Turbolet light transports
+	119 = {
+		transport_plane1 = { owner = "SLO" creator = "CZE" amount = 6 version_name = "L-410 Turbolet" }
+		name = "Light Transport Squadron"
 		start_experience_factor = 0.35
 	}
 	119 = {

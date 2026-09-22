@@ -71,7 +71,7 @@ units = {
 	# 2 Canadian Mechanized Brigade Group — Petawawa
 	division = {
 		name = "2 Canadian Mechanized Brigade Group"
-		location = 4872
+		location = 3661
 		division_template = "Mechanized Brigade Group"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.9
@@ -79,7 +79,7 @@ units = {
 	# 5 Canadian Mechanized Brigade Group — Valcartier
 	division = {
 		name = "5 Canadian Mechanized Brigade Group"
-		location = 1408
+		location = 12149
 		division_template = "Mechanized Brigade Group"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.9
@@ -87,51 +87,59 @@ units = {
 	# 3rd Canadian Division — Light
 	division = {
 		name = "3rd Canadian Division (Light)"
-		location = 3706
+		location = 3010
 		division_template = "Light Infantry Battalion Group"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.85
 	}
-	# CANSOFCOM
+	# CANSOFCOM — Ottawa
 	division = {
 		name = "CANSOFCOM"
-		location = 4872
+		location = 3778
 		division_template = "CANSOF"
 		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	# NATO Multinational Brigade Latvia — Canadian framework nation, Ādaži
+	division = {
+		name = "Multinational Brigade Latvia"
+		location = 9340
+		division_template = "Mechanized Brigade Group"
+		start_experience_factor = 0.5
 		start_equipment_factor = 0.9
 	}
 	# Reserve Brigades
 	division = {
 		name = "31 Canadian Brigade Group (Reserve)"
-		location = 3706
-		division_template = "Reserve Brigade Group"
-		start_experience_factor = 0.15
-		start_equipment_factor = 0.6
-	}
-	division = {
-		name = "32 Canadian Brigade Group (Reserve)"
-		location = 9634
-		division_template = "Reserve Brigade Group"
-		start_experience_factor = 0.15
-		start_equipment_factor = 0.6
-	}
-	division = {
-		name = "33 Canadian Brigade Group (Reserve)"
 		location = 722
 		division_template = "Reserve Brigade Group"
 		start_experience_factor = 0.15
 		start_equipment_factor = 0.6
 	}
 	division = {
-		name = "34 Canadian Brigade Group (Reserve)"
+		name = "32 Canadian Brigade Group (Reserve)"
 		location = 3775
 		division_template = "Reserve Brigade Group"
 		start_experience_factor = 0.15
 		start_equipment_factor = 0.6
 	}
 	division = {
+		name = "33 Canadian Brigade Group (Reserve)"
+		location = 3778
+		division_template = "Reserve Brigade Group"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "34 Canadian Brigade Group (Reserve)"
+		location = 4345
+		division_template = "Reserve Brigade Group"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.6
+	}
+	division = {
 		name = "38 Canadian Brigade Group (Reserve)"
-		location = 3010
+		location = 4872
 		division_template = "Reserve Brigade Group"
 		start_experience_factor = 0.15
 		start_equipment_factor = 0.6
@@ -156,6 +164,8 @@ units = {
 			ship = { name = "HMCS Corner Brook (SSK-878)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = CAN creator = CAN version_name = "Victoria Class" } } }
 			ship = { name = "HMCS Harry DeWolf (AOPV-430)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Harry DeWolf Class" } } }
 			ship = { name = "HMCS Margaret Brooke (AOPV-431)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Harry DeWolf Class" } } }
+			ship = { name = "HMCS William Hall (AOPV-433)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Harry DeWolf Class" } } }
+			ship = { name = "HMCS Frédérick Rolette (AOPV-434)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Harry DeWolf Class" } } }
 		}
 	}
 
@@ -173,7 +183,6 @@ units = {
 			ship = { name = "HMCS Victoria (SSK-876)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = CAN creator = CAN version_name = "Victoria Class" } } }
 			ship = { name = "HMCS Chicoutimi (SSK-879)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = CAN creator = CAN version_name = "Victoria Class" } } }
 			ship = { name = "HMCS Max Bernays (AOPV-432)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Harry DeWolf Class" } } }
-			ship = { name = "HMCS William Hall (AOPV-433)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = CAN creator = CAN version_name = "Harry DeWolf Class" } } }
 		}
 	}
 }
@@ -191,13 +200,13 @@ instant_effect = {
 air_wings = {
 	# CFB Cold Lake (Alberta)
 	755 = {
-		L_Strike_fighter2 = { owner = "CAN" creator = "USA" amount = 30 version_name = "CF-188 Hornet" }
+		L_Strike_fighter2 = { owner = "CAN" creator = "USA" amount = 44 version_name = "CF-188 Hornet" }
 		name = "4 Wing Cold Lake"
 		start_experience_factor = 0.45
 	}
 	# CFB Bagotville (Quebec)
 	762 = {
-		L_Strike_fighter2 = { owner = "CAN" creator = "USA" amount = 25 version_name = "CF-188 Hornet" }
+		L_Strike_fighter2 = { owner = "CAN" creator = "USA" amount = 44 version_name = "CF-188 Hornet" }
 		name = "3 Wing Bagotville"
 		start_experience_factor = 0.45
 	}
@@ -214,13 +223,13 @@ air_wings = {
 	}
 	# CFB Greenwood (Nova Scotia)
 	760 = {
-		naval_plane1 = { owner = "CAN" creator = "USA" amount = 5 version_name = "CP-140 Aurora" }
+		naval_plane1 = { owner = "CAN" creator = "USA" amount = 7 version_name = "CP-140 Aurora" }
 		name = "14 Wing Greenwood"
 		start_experience_factor = 0.45
 	}
 	# CFB Comox (British Columbia)
 	754 = {
-		naval_plane1 = { owner = "CAN" creator = "USA" amount = 5 version_name = "CP-140 Aurora" }
+		naval_plane1 = { owner = "CAN" creator = "USA" amount = 7 version_name = "CP-140 Aurora" }
 		name = "19 Wing Comox"
 		start_experience_factor = 0.45
 	}

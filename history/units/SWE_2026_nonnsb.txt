@@ -79,7 +79,7 @@ units = {
 	# Norrbottens Mekaniserade Brigad (MekB 19)
 	division = {
 		name = "MekB 19 Norrbotten"
-		location = 6050
+		location = 6165
 		division_template = "Mekaniserad Brigad"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.85
@@ -87,7 +87,7 @@ units = {
 	# Skaraborgs Mekaniserade Brigad (MekB 4)
 	division = {
 		name = "MekB 4 Skaraborg"
-		location = 6208
+		location = 383
 		division_template = "Mekaniserad Brigad"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.85
@@ -95,7 +95,7 @@ units = {
 	# Gotlands Regemente (Inf)
 	division = {
 		name = "P 18 Gotland"
-		location = 383
+		location = 408
 		division_template = "Infanteribrigad"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
@@ -103,7 +103,7 @@ units = {
 	# Amfibieregementet
 	division = {
 		name = "Amf 1 Amfibieregementet"
-		location = 161
+		location = 6050
 		division_template = "Amfibiebataljon"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.85
@@ -138,6 +138,22 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.6
 	}
+	# NATO Multinational Brigade Latvia — 71st Mechanized Battalion (Camp Adazi)
+	division = {
+		name = "71. mekaniserade bataljonen"
+		location = 9340
+		division_template = "Mekaniserad Brigad"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.9
+	}
+	# NATO Forward Land Forces Finland (Rovaniemi) — Swedish framework contingent
+	division = {
+		name = "Svenska bataljonen (FLF Finland)"
+		location = 16273
+		division_template = "Mekaniserad Brigad"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.9
+	}
 
 	##### Fleet — Svenska Marinen #####
 	fleet = {
@@ -165,7 +181,9 @@ units = {
 			name = "1. Ubåtsflottiljen"
 			location = 11215
 			ship = { name = "HMS Gotland (Gtd)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SWE creator = SWE version_name = "Gotland Class" } } }
-			ship = { name = "HMS Uppland (Upd)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SWE creator = SWE version_name = "Gotland Class" } } }
+			ship = { name = "HMS Halland (Hnd)" definition = attack_submarine start_experience_factor = 0.55 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SWE creator = SWE version_name = "Gotland Class" } } }
+			ship = { name = "HMS Uppland (Upd)" definition = attack_submarine start_experience_factor = 0.55 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SWE creator = SWE version_name = "Gotland Class" } } }
+			ship = { name = "HMS Södermanland (Söd)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SWE creator = SWE version_name = "Södermanland Class" } } }
 		}
 	}
 }
@@ -200,7 +218,7 @@ air_wings = {
 	}
 	# ASC 890 — S 100D Argus (Saab 340 AEW&C) — Linköping
 	35 = {
-		awacs_equipment_2 = { owner = "SWE" amount = 4 version_name = "S 100D Argus" }
+		awacs_equipment_2 = { owner = "SWE" amount = 2 version_name = "S 100D Argus" }
 		name = "Flygbasjägarkompaniet AEW"
 		start_experience_factor = 0.5
 	}
@@ -209,11 +227,5 @@ air_wings = {
 		transport_plane1 = { owner = "SWE" creator = "USA" amount = 6 version_name = "C-130H Hercules" }
 		name = "Transportflygdivisionen"
 		start_experience_factor = 0.45
-	}
-	# Maritime Surveillance — S 102B Korpen (GlobalEye on order, use Argus equivalent)
-	34 = {
-		awacs_equipment_1 = { owner = "SWE" amount = 2 version_name = "S 102B Korpen" }
-		name = "Spaningsflygdivisionen"
-		start_experience_factor = 0.4
 	}
 }

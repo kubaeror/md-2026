@@ -193,15 +193,15 @@ units = {
 
 	### Territorial Defense (WOT) - representative brigades ###
 	division = {
-		name = "1. Brygada Obrony Terytorialnej"
-		location = 362		#Gdansk
+		name = "1. Podlaska Brygada Obrony Terytorialnej"
+		location = 347		#Bialystok
 		division_template = "Brygada WOT"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.5
 	}
 	division = {
-		name = "2. Brygada Obrony Terytorialnej"
-		location = 6512		#Nysa/SE Poland
+		name = "2. Lubelska Brygada Obrony Terytorialnej"
+		location = 6484		#Lublin
 		division_template = "Brygada WOT"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.5
@@ -210,28 +210,28 @@ units = {
 	### Additional Forces ###
 	division = {
 		name = "19. Lubelska Brygada Zmechanizowana"
-		location = 6499
+		location = 6484
 		division_template = "Dywizja Zmechanizowana"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "3. Brygada Obrony Terytorialnej"
-		location = 524
+		name = "3. Podkarpacka Brygada Obrony Terytorialnej"
+		location = 6499		#Rzeszow
 		division_template = "Brygada WOT"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
 	}
 	division = {
-		name = "4. Brygada Obrony Terytorialnej"
-		location = 3380
+		name = "4. Warminsko-Mazurska Brygada Obrony Terytorialnej"
+		location = 3380		#Elblag
 		division_template = "Brygada WOT"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
 	}
 	division = {
-		name = "5. Brygada Obrony Terytorialnej"
-		location = 6282
+		name = "14. Zachodniopomorska Brygada Obrony Terytorialnej"
+		location = 6282		#Szczecin
 		division_template = "Brygada WOT"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
@@ -244,11 +244,14 @@ units = {
 		task_force = {
 			name = "Dywizjon Okretow Bojowych"
 			location = 362
-			ship = { name = "ORP Slazak (341)" definition = corvette start_experience_factor = 0.7 equipment = { corvette_hull_2 = { amount = 1 owner = POL creator = POL version_name = "Slazak Class" } } }
+			ship = { name = "ORP Gen. K. Pulaski (272)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = POL creator = USA version_name = "Oliver Hazard Perry Class" } } }
+			ship = { name = "ORP Gen. T. Kosciuszko (273)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_2 = { amount = 1 owner = POL creator = USA version_name = "Oliver Hazard Perry Class" } } }
+			ship = { name = "ORP Slazak (241)" definition = corvette start_experience_factor = 0.7 equipment = { corvette_hull_2 = { amount = 1 owner = POL creator = POL version_name = "Slazak Class" } } }
 			ship = { name = "ORP Orkan (421)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = POL creator = POL version_name = "Orkan Class" } } }
 			ship = { name = "ORP Piorun (422)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = POL creator = POL version_name = "Orkan Class" } } }
 			ship = { name = "ORP Grom (423)" definition = corvette start_experience_factor = 0.6 equipment = { corvette_hull_2 = { amount = 1 owner = POL creator = POL version_name = "Orkan Class" } } }
 			ship = { name = "ORP Kaszub (240)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_1 = { amount = 1 owner = POL creator = POL version_name = "Kaszub Class" } } }
+			ship = { name = "ORP Orzel (291)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = POL creator = SOV version_name = "Kilo Class" } } }
 		}
 		task_force = {
 			name = "Dywizjon Okretow Minowych"
@@ -276,12 +279,6 @@ instant_effect = {
 		amount = 5000
 		producer = POL
 	}
-	add_equipment_to_stockpile = {
-		type = L_Strike_fighter2
-		variant_name = "F-35A Lightning II"
-		amount = 8
-		producer = POL
-	}
 }
 
 air_wings = {
@@ -304,7 +301,7 @@ air_wings = {
 		start_experience_factor = 0.6
 	}
 	114 = {
-		small_plane_airframe_2 = { owner = "POL" creator = "KOR" amount = 20 version_name = "FA-50 Fighting Eagle" }
+		small_plane_airframe_2 = { owner = "POL" creator = "KOR" amount = 12 version_name = "FA-50 Fighting Eagle" }
 		name = "23. Baza Lotnictwa Taktycznego"
 		start_experience_factor = 0.5
 	}
@@ -312,6 +309,11 @@ air_wings = {
 		naval_plane1 = { owner = "POL" amount = 8 version_name = "M-28B Bryza" }
 		name = "Brygada Lotnictwa Marynarki Wojennej"
 		start_experience_factor = 0.5
+	}
+	113 = {
+		small_plane_airframe_2 = { owner = "POL" creator = "SOV" amount = 10 version_name = "MiG-29A/UB Fulcrum" }
+		name = "22. Baza Lotnictwa Taktycznego (Malbork)"
+		start_experience_factor = 0.4
 	}
 	628 = {
 		Air_UAV2 = { owner = "POL" creator = "USA" amount = 4 version_name = "MQ-9A Reaper" }

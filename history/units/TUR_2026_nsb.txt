@@ -82,10 +82,10 @@ division_template = {
 }
 
 units = {
-	### Armored Brigades (6) ###
+	### Armored Brigades (5) + Cyprus garrison (2 Divisions) ###
 	division = {
 		name = "1. Zırhlı Tugay"
-		location = 3893		#Thrace
+		location = 9833		#Hadımköy, Istanbul
 		division_template = "Zırhlı Tugay"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.7
@@ -105,9 +105,16 @@ units = {
 		start_equipment_factor = 0.7
 	}
 	division = {
-		name = "28. Zırhlı Tugay"
-		location = 7193
-		division_template = "Zırhlı Tugay"
+		name = "28. Mekanize Piyade Tümeni"
+		location = 7193		#Northern Cyprus
+		division_template = "Mekanize Tugay"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "39. Mekanize Piyade Tümeni"
+		location = 7193		#Northern Cyprus
+		division_template = "Mekanize Tugay"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.7
 	}
@@ -270,7 +277,6 @@ units = {
 			name = "1. Firkateyn Filosu"
 			location = 4112
 			ship = { name = "TCG İstanbul (F-515)" definition = frigate start_experience_factor = 0.7 equipment = { frigate_hull_3 = { amount = 1 owner = TUR creator = TUR version_name = "Istanbul Class" } } }
-			ship = { name = "TCG İzmir (F-516)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = TUR creator = TUR version_name = "Istanbul Class" } } }
 		}
 		# Ada-class (MILGEM) corvettes
 		task_force = {
@@ -308,13 +314,21 @@ units = {
 			ship = { name = "TCG Gökova (F-496)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = TUR creator = TUR version_name = "Gabya Class" } } }
 			ship = { name = "TCG Göksu (F-497)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = TUR creator = TUR version_name = "Gabya Class" } } }
 		}
+		# Yavuz-class (MEKO 200TN Track I) frigates
+		task_force = {
+			name = "Yavuz Firkateyn Grubu"
+			location = 11811
+			ship = { name = "TCG Yavuz (F-240)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = TUR creator = TUR version_name = "Yavuz Class" } } }
+			ship = { name = "TCG Turgutreis (F-241)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = TUR creator = TUR version_name = "Yavuz Class" } } }
+			ship = { name = "TCG Fatih (F-242)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = TUR creator = TUR version_name = "Yavuz Class" } } }
+			ship = { name = "TCG Yıldırım (F-243)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_2 = { amount = 1 owner = TUR creator = TUR version_name = "Yavuz Class" } } }
+		}
 		# Submarines — Reis-class (Type 214TN) + Preveze/Gür-class (Type 209)
 		task_force = {
 			name = "Denizaltı Filosu"
 			location = 11811
 			ship = { name = "TCG Piri Reis (S-330)" definition = attack_submarine start_experience_factor = 0.65 equipment = { attack_submarine_hull_3 = { amount = 1 owner = TUR creator = TUR version_name = "Reis Class" } } }
 			ship = { name = "TCG Hızır Reis (S-331)" definition = attack_submarine start_experience_factor = 0.65 equipment = { attack_submarine_hull_3 = { amount = 1 owner = TUR creator = TUR version_name = "Reis Class" } } }
-			ship = { name = "TCG Murat Reis (S-332)" definition = attack_submarine start_experience_factor = 0.6 equipment = { attack_submarine_hull_3 = { amount = 1 owner = TUR creator = TUR version_name = "Reis Class" } } }
 			ship = { name = "TCG Preveze (S-353)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = TUR creator = TUR version_name = "Preveze Class" } } }
 			ship = { name = "TCG Sakarya (S-354)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = TUR creator = TUR version_name = "Preveze Class" } } }
 			ship = { name = "TCG 18 Mart (S-355)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = TUR creator = TUR version_name = "Preveze Class" } } }
@@ -323,6 +337,10 @@ units = {
 			ship = { name = "TCG Çanakkale (S-358)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = TUR creator = TUR version_name = "Gür Class" } } }
 			ship = { name = "TCG Burakreis (S-359)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = TUR creator = TUR version_name = "Gür Class" } } }
 			ship = { name = "TCG Birinci İnönü (S-360)" definition = attack_submarine start_experience_factor = 0.5 equipment = { attack_submarine_hull_2 = { amount = 1 owner = TUR creator = TUR version_name = "Gür Class" } } }
+			ship = { name = "TCG Batıray (S-349)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_1 = { amount = 1 owner = TUR creator = TUR version_name = "Atılay Class" } } }
+			ship = { name = "TCG Yıldıray (S-350)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_1 = { amount = 1 owner = TUR creator = TUR version_name = "Atılay Class" } } }
+			ship = { name = "TCG Doğanay (S-351)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_1 = { amount = 1 owner = TUR creator = TUR version_name = "Atılay Class" } } }
+			ship = { name = "TCG Dolunay (S-352)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_1 = { amount = 1 owner = TUR creator = TUR version_name = "Atılay Class" } } }
 		}
 		# TCG Anadolu (LHD / light carrier)
 		task_force = {
@@ -389,6 +407,24 @@ air_wings = {
 		name = "9. Ana Jet Üs Komutanlığı"
 		start_experience_factor = 0.5
 	}
+	# 1st Main Jet Base (Eskişehir) — F-4E 2020 Terminator
+	159 = {
+		L_Strike_fighter2 = { owner = "TUR" creator = "USA" amount = 30 version_name = "F-4E 2020 Terminator" }
+		name = "111. Filo"
+		start_experience_factor = 0.4
+	}
+	# 101st Aerial Refueling Squadron — KC-135R (Incirlik)
+	161 = {
+		transport_plane2 = { owner = "TUR" creator = "USA" amount = 7 version_name = "KC-135R Stratotanker" }
+		name = "101. Filo"
+		start_experience_factor = 0.45
+	}
+	# 12th Air Transportation Main Base (Kayseri) — CN-235
+	1246 = {
+		transport_plane1 = { owner = "TUR" amount = 45 version_name = "CN-235" }
+		name = "12. Hava Ulaştırma Ana Üs Komutanlığı"
+		start_experience_factor = 0.4
+	}
 	# E-7T Wedgetail AEW&C (Konya)
 	159 = {
 		awacs_equipment_2 = { owner = "TUR" creator = "AST" amount = 4 version_name = "E-7T Wedgetail" }
@@ -401,7 +437,7 @@ air_wings = {
 		name = "221. Filo"
 		start_experience_factor = 0.45
 	}
-	# C-130 Hercules + CN-235
+	# C-130 Hercules
 	159 = {
 		transport_plane1 = { owner = "TUR" creator = "USA" amount = 13 version_name = "C-130E/H Hercules" }
 		name = "222. Filo"
@@ -418,6 +454,18 @@ air_wings = {
 		Air_UAV2 = { owner = "TUR" amount = 24 version_name = "Bayraktar Akıncı" }
 		name = "Akıncı Filosu"
 		start_experience_factor = 0.55
+	}
+	# TAI Anka-S (14th UAV Systems Command, Batman)
+	162 = {
+		Air_UAV2 = { owner = "TUR" amount = 30 version_name = "TAI Anka-S" }
+		name = "341. İHA Filo"
+		start_experience_factor = 0.5
+	}
+	# TAI Aksungur
+	162 = {
+		Air_UAV2 = { owner = "TUR" amount = 6 version_name = "TAI Aksungur" }
+		name = "Aksungur Filosu"
+		start_experience_factor = 0.5
 	}
 	# TCG Anadolu carrier air wing — Bayraktar TB3
 	"TCG Anadolu (L-408)" = {

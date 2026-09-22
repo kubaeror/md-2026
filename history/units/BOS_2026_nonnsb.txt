@@ -41,7 +41,7 @@ units = {
 	# 4th Infantry Brigade - Sarajevo
 	division = {
 		name = "4. Pjesadijska Brigada"
-		location = 9922
+		location = 11899
 		division_template = "Pjesadijska Brigada"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.60
@@ -50,7 +50,7 @@ units = {
 	# 5th Infantry Brigade - Tuzla
 	division = {
 		name = "5. Pjesadijska Brigada"
-		location = 6942
+		location = 6799
 		division_template = "Pjesadijska Brigada"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.60
@@ -59,16 +59,16 @@ units = {
 	# 6th Infantry Brigade - Banja Luka (RS)
 	division = {
 		name = "6. Pjesadijska Brigada"
-		location = 11899
+		location = 9588
 		division_template = "Pjesadijska Brigada"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.55
 	}
 
-	# Tactical reserve
+	# Tactical Support Brigade - Sarajevo (armour in Tuzla)
 	division = {
 		name = "Taktichka Poddrshka"
-		location = 9586
+		location = 11899
 		division_template = "Taktichka Grupa"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.55
@@ -79,6 +79,18 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = infantry_weapons_4
 		amount = 2000
+		producer = BOS
+	}
+	# Helicopter squadron (Huey II)
+	add_equipment_to_stockpile = {
+		type = transport_helicopter_1
+		amount = 3
+		producer = BOS
+	}
+	# Helicopter squadron (Mi-8MTV / Mi-17)
+	add_equipment_to_stockpile = {
+		type = transport_helicopter_2
+		amount = 5
 		producer = BOS
 	}
 }

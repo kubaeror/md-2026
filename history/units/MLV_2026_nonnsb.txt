@@ -4,6 +4,8 @@
 ##### Moldova - 2026 OOB #####
 # Moldovan National Army - small, neutral, poorly equipped
 # Security concerns with Transnistria
+# No combat aircraft since the MiG-29s were sold in 1997 - air force is
+# transports and helicopters only
 
 division_template = {
 	name = "Brigada de Infanterie"		# Infantry Brigade
@@ -34,27 +36,27 @@ division_template = {
 }
 
 units = {
-	# Chisinau
+	# Chisinau - 1st Motorised Infantry Brigade "Moldova"
 	division = {
-		name = "1. Brigada de Infanterie"
+		name = "Brigada 1 Infanterie Motorizata Moldova"
 		location = 11686
 		division_template = "Brigada de Infanterie"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.55
 	}
 
-	# Central
+	# Balti - 2nd Motorised Infantry Brigade "Stefan cel Mare"
 	division = {
-		name = "2. Brigada de Infanterie"
+		name = "Brigada 2 Infanterie Motorizata Stefan cel Mare"
 		location = 6600
 		division_template = "Brigada de Infanterie"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.50
 	}
 
-	# SOF
+	# Chisinau - Independent Special Forces Battalion "Fulger"
 	division = {
-		name = "Batalioane Fortele Speciale"
+		name = "Batalionul cu Destinatie Speciala Fulger"
 		location = 3724
 		division_template = "Fortele Speciale"
 		start_experience_factor = 0.40
@@ -71,16 +73,27 @@ instant_effect = {
 }
 
 ##### Moldovan Air Force #####
+# Baza de Aviatie "Decebal" (Marculesti) - no combat aircraft; the MiG-29s
+# were sold in 1997 and the remaining airframes are stored/scrapped.
 air_wings = {
-	# Marculesti Air Base
 	147 = {
-		small_plane_airframe_2 = { owner = "MLV" creator = "SOV" amount = 6 version_name = "MiG-29 Fulcrum" }
-		name = "Fighter Aviation Squadron"
+		transport_plane1 = { owner = "MLV" creator = "SOV" amount = 1 version_name = "An-26" }
+		name = "Transport Aviation Squadron"
+		start_experience_factor = 0.3
+	}
+	147 = {
+		transport_plane1 = { owner = "MLV" creator = "SOV" amount = 2 version_name = "An-2" }
+		name = "Light Transport Flight"
 		start_experience_factor = 0.25
 	}
 	147 = {
-		transport_plane1 = { owner = "MLV" creator = "UKR" amount = 2 version_name = "An-26" }
-		name = "Transport Aviation Squadron"
-		start_experience_factor = 0.3
+		transport_helicopter_1 = { owner = "MLV" creator = "SOV" amount = 1 version_name = "Mi-8" }
+		name = "Helicopter Squadron"
+		start_experience_factor = 0.25
+	}
+	147 = {
+		transport_helicopter_1 = { owner = "MLV" creator = "SOV" amount = 1 version_name = "Mi-2" }
+		name = "Light Helicopter Flight"
+		start_experience_factor = 0.2
 	}
 }

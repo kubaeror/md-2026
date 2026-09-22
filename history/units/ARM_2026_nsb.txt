@@ -50,54 +50,49 @@ division_template = {
 units = {
 	##### Armenian Armed Forces #####
 
-	# Yerevan
+	# 1st Army Corps - HQ Goris (Syunik)
 	division = {
-		name = "1. Hramanayin Brigad"
-		location = 6642
+		name = "1. Banaki Korpus"
+		location = 13920
+		division_template = "Hramanayin Brigad"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.60
+	}
+
+	# 2nd Army Corps - HQ Khachaghbyur (Gegharkunik)
+	division = {
+		name = "2. Banaki Korpus"
+		location = 1254
+		division_template = "Hramanayin Brigad"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.60
+	}
+
+	# 3rd Army Corps - HQ Vanadzor
+	division = {
+		name = "3. Banaki Korpus"
+		location = 12380
+		division_template = "Motohroch Brigad"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.60
+	}
+
+	# 5th Army Corps - HQ Nubarashen (Yerevan)
+	division = {
+		name = "5. Banaki Korpus"
+		location = 12320
 		division_template = "Hramanayin Brigad"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.65
 	}
+
+	# 1st Special Forces Brigade - Nubarashen (Yerevan)
 	division = {
 		name = "1. Hatuk Nshanakayin Brigad"
-		location = 6642
+		location = 12320
 		division_template = "Hatuk Nshanakayin Brigad"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.65
-	}
-
-	# Southern border (Syunik / near Azerbaijan)
-	division = {
-		name = "2. Hramanayin Brigad"
-		location = 12380
-		division_template = "Hramanayin Brigad"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.60
-	}
-	division = {
-		name = "1. Motohroch Brigad"
-		location = 12450
-		division_template = "Motohroch Brigad"
-		start_experience_factor = 0.30
-		start_equipment_factor = 0.55
-	}
-
-	# Northern (Gyumri / Turkish border)
-	division = {
-		name = "3. Hramanayin Brigad"
-		location = 1210
-		division_template = "Hramanayin Brigad"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.60
-	}
-
-	# Eastern (Vardenis)
-	division = {
-		name = "4. Hramanayin Brigad"
-		location = 12320
-		division_template = "Hramanayin Brigad"
-		start_experience_factor = 0.30
-		start_equipment_factor = 0.55
 	}
 }
 
@@ -122,8 +117,9 @@ air_wings = {
 		name = "Fighter Squadron"
 		start_experience_factor = 0.4
 	}
+	# Attack Aviation Squadron (Su-25)
 	709 = {
-		cas2 = { owner = "ARM" creator = "SOV" amount = 8 version_name = "Su-25" }
+		cas2 = { owner = "ARM" creator = "SOV" amount = 15 version_name = "Su-25" }
 		name = "Attack Aviation Squadron"
 		start_experience_factor = 0.35
 	}

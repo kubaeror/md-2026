@@ -30,14 +30,21 @@ instant_effect = {
 		amount = 500
 		producer = LUX
 	}
+	# 2 x H145M light utility helicopters (air component, Findel)
+	add_equipment_to_stockpile = {
+		type = transport_helicopter_4
+		amount = 2
+		producer = FRA
+	}
 }
 
 ##### Luxembourg Air Component #####
 air_wings = {
-	# Luxembourg (NATO EATC contribution)
-	53 = {
+	# CT-01 is operated from Melsbroek, Belgium, in the Belgian-Luxembourg
+	# binational A400M unit (15th Air Transport Wing) - foreign basing
+	51 = {
 		transport_plane2 = { owner = "LUX" creator = "FRA" amount = 1 version_name = "A400M Atlas" }
-		name = "NATO Heavy Airlift Wing"
+		name = "20 Squadron (Binational A400M Unit)"
 		start_experience_factor = 0.5
 	}
 }

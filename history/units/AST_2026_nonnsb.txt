@@ -63,28 +63,43 @@ division_template = {
 	}
 }
 
+division_template = {
+	name = "Fires Brigade"
+	regiments = {
+		SP_Arty_Bat = { x = 0 y = 0 }
+		SP_Arty_Bat = { x = 0 y = 1 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		Mot_Recce_Comp = { x = 0 y = 0 }
+		SP_AA_Battery = { x = 0 y = 1 }
+		L_Engi_Comp = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
 ##### Units #####
 
 units = {
 	##### Regular Army #####
 
-	# 1st Brigade (Mechanized) — Darwin
+	# 1st Brigade (light) — Darwin
 	division = {
 		name = "1st Brigade"
-		location = 12406
-		division_template = "Armoured Regiment"
-		start_experience_factor = 0.45
-		start_equipment_factor = 0.9
-	}
-	# 3rd Brigade (Parachute/Littoral) — Townsville
-	division = {
-		name = "3rd Brigade"
 		location = 7669
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.9
 	}
-	# 7th Brigade — Brisbane
+	# 3rd Brigade (armoured) — Townsville
+	division = {
+		name = "3rd Brigade"
+		location = 10936
+		division_template = "Armoured Regiment"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.9
+	}
+	# 7th Brigade (motorised) — Brisbane
 	division = {
 		name = "7th Brigade"
 		location = 7566
@@ -92,13 +107,21 @@ units = {
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.9
 	}
+	# 10th Brigade (Fires/HIMARS) — Edinburgh, Adelaide
+	division = {
+		name = "10th Brigade"
+		location = 13131
+		division_template = "Fires Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.85
+	}
 
 	##### SOF #####
 
-	# Special Operations Command
+	# Special Operations Command - Canberra
 	division = {
 		name = "Special Operations Command"
-		location = 4520
+		location = 7859
 		division_template = "Commando Regiment"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.95
@@ -106,7 +129,7 @@ units = {
 
 	##### Reserves #####
 
-	# 2nd Division (Reserve) — NSW
+	# 2nd Division (Reserve)
 	division = {
 		name = "4th Brigade (Reserve)"
 		location = 7798
@@ -114,30 +137,26 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.7
 	}
+	# 5th Brigade (Reserve, NSW) - Sydney
 	division = {
 		name = "5th Brigade (Reserve)"
-		location = 7798
+		location = 12406
 		division_template = "Reserve Brigade"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.7
 	}
+	# 9th Brigade (Reserve, SA) - Adelaide
 	division = {
-		name = "8th Brigade (Reserve)"
+		name = "9th Brigade (Reserve)"
 		location = 12910
 		division_template = "Reserve Brigade"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.7
 	}
-	division = {
-		name = "9th Brigade (Reserve)"
-		location = 7566
-		division_template = "Reserve Brigade"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
-	}
+	# 11th Brigade (Reserve, Qld) - Townsville
 	division = {
 		name = "11th Brigade (Reserve)"
-		location = 7669
+		location = 10936
 		division_template = "Reserve Brigade"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.7
@@ -161,11 +180,12 @@ units = {
 			ship = { name = "HMAS Canberra (L02)" definition = helicopter_operator start_experience_factor = 0.5 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Canberra Class" } } }
 			ship = { name = "HMAS Hobart (DDG-39)" definition = destroyer start_experience_factor = 0.5 equipment = { destroyer_hull_3 = { amount = 1 owner = AST creator = AST version_name = "Hobart Class" } } }
 			ship = { name = "HMAS Brisbane (DDG-41)" definition = destroyer start_experience_factor = 0.5 equipment = { destroyer_hull_3 = { amount = 1 owner = AST creator = AST version_name = "Hobart Class" } } }
-			ship = { name = "HMAS Anzac (FFH-150)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
 			ship = { name = "HMAS Arunta (FFH-151)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
 			ship = { name = "HMAS Stuart (FFH-153)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
 			ship = { name = "HMAS Parramatta (FFH-154)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
 			ship = { name = "HMAS Ballarat (FFH-155)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
+			ship = { name = "HMAS Supply (A195)" definition = support_ship start_experience_factor = 0.35 equipment = { support_ship_1 = { amount = 1 owner = AST creator = AST version_name = "Supply Class" } } }
+			ship = { name = "HMAS Stalwart (A304)" definition = support_ship start_experience_factor = 0.35 equipment = { support_ship_1 = { amount = 1 owner = AST creator = AST version_name = "Supply Class" } } }
 		}
 	}
 
@@ -180,8 +200,7 @@ units = {
 			ship = { name = "HMAS Warramunga (FFH-152)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
 			ship = { name = "HMAS Toowoomba (FFH-156)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
 			ship = { name = "HMAS Perth (FFH-157)" definition = frigate start_experience_factor = 0.35 equipment = { frigate_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Anzac Class" } } }
-			ship = { name = "HMAS Arafura (OPV-301)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Arafura Class" } } }
-			ship = { name = "HMAS Pilbara (OPV-302)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Arafura Class" } } }
+			ship = { name = "HMAS Arafura (OPV 203)" definition = corvette start_experience_factor = 0.5 equipment = { corvette_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Arafura Class" } } }
 			ship = { name = "HMAS Collins (SSG-73)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Collins Class" } } }
 			ship = { name = "HMAS Farncomb (SSG-74)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Collins Class" } } }
 			ship = { name = "HMAS Waller (SSG-75)" definition = attack_submarine start_experience_factor = 0.4 equipment = { attack_submarine_hull_2 = { amount = 1 owner = AST creator = AST version_name = "Collins Class" } } }
@@ -205,18 +224,13 @@ instant_effect = {
 air_wings = {
 	# RAAF Williamtown (NSW)
 	1221 = {
-		L_Strike_fighter3 = { owner = "AST" creator = "USA" amount = 30 version_name = "F-35A Lightning II" }
+		L_Strike_fighter3 = { owner = "AST" creator = "USA" amount = 26 version_name = "F-35A Lightning II" }
 		name = "No. 3 Squadron RAAF"
 		start_experience_factor = 0.5
 	}
 	1221 = {
-		medium_plane_airframe_2 = { owner = "AST" creator = "USA" amount = 24 version_name = "F/A-18F Super Hornet" }
-		name = "No. 1 Squadron RAAF"
-		start_experience_factor = 0.45
-	}
-	1221 = {
-		medium_plane_airframe_2 = { owner = "AST" creator = "USA" amount = 12 version_name = "EA-18G Growler" }
-		name = "No. 6 Squadron RAAF"
+		L_Strike_fighter3 = { owner = "AST" creator = "USA" amount = 26 version_name = "F-35A Lightning II" }
+		name = "No. 77 Squadron RAAF"
 		start_experience_factor = 0.5
 	}
 	1221 = {
@@ -224,18 +238,30 @@ air_wings = {
 		name = "No. 2 Squadron RAAF"
 		start_experience_factor = 0.5
 	}
+	# RAAF Richmond (NSW)
+	1221 = {
+		transport_plane1 = { owner = "AST" creator = "USA" amount = 12 version_name = "C-130J Super Hercules" }
+		name = "No. 37 Squadron RAAF"
+		start_experience_factor = 0.4
+	}
 	# RAAF Amberley (Queensland)
+	741 = {
+		medium_plane_airframe_2 = { owner = "AST" creator = "USA" amount = 24 version_name = "F/A-18F Super Hornet" }
+		name = "No. 1 Squadron RAAF"
+		start_experience_factor = 0.45
+	}
+	741 = {
+		medium_plane_airframe_2 = { owner = "AST" creator = "USA" amount = 12 version_name = "EA-18G Growler" }
+		name = "No. 6 Squadron RAAF"
+		start_experience_factor = 0.5
+	}
 	741 = {
 		transport_plane2 = { owner = "AST" creator = "USA" amount = 8 version_name = "C-17A Globemaster III" }
 		name = "No. 36 Squadron RAAF"
 		start_experience_factor = 0.45
 	}
-	741 = {
-		transport_plane1 = { owner = "AST" creator = "USA" amount = 12 version_name = "C-130J Super Hercules" }
-		name = "No. 37 Squadron RAAF"
-		start_experience_factor = 0.4
-	}
-	741 = {
+	# RAAF Edinburgh (South Australia)
+	745 = {
 		naval_plane1 = { owner = "AST" creator = "USA" amount = 12 version_name = "P-8A Poseidon" }
 		name = "No. 11 Squadron RAAF"
 		start_experience_factor = 0.5

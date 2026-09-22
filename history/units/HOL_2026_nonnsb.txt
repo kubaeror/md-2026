@@ -55,28 +55,28 @@ division_template = {
 units = {
 	##### Royal Netherlands Army #####
 
-	# 13th Light Brigade (air mobile) - Oirschot
+	# 11th Air Mobile Brigade - Schaarsbergen (Arnhem)
 	division = {
-		name = "13e Luchtmobiele Brigade"
-		location = 6500
+		name = "11 Luchtmobiele Brigade"
+		location = 9363
 		division_template = "Luchtmobiele Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.85
 	}
 
-	# 43rd Mechanized Brigade - Havelte
+	# 43rd Mechanized Brigade - Havelte (Drenthe)
 	division = {
 		name = "43e Gemechaniseerde Brigade"
-		location = 3262
+		location = 9309
 		division_template = "Gemechaniseerde Brigade"
 		start_experience_factor = 0.50
 		start_equipment_factor = 0.85
 	}
 
-	# German-Netherlands Corps contribution
+	# 13th Light Brigade - Oirschot (to be re-equipped with CV90s, announced December 2025)
 	division = {
-		name = "1e Gemechaniseerde Brigade"
-		location = 6241
+		name = "13 Lichte Brigade"
+		location = 6500
 		division_template = "Gemechaniseerde Brigade"
 		start_experience_factor = 0.50
 		start_equipment_factor = 0.80
@@ -103,8 +103,20 @@ units = {
 			ship = { name = "HNLMS Tromp (F803)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = HOL creator = HOL version_name = "De Zeven Provinciën class" } } }
 			ship = { name = "HNLMS De Ruyter (F804)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = HOL creator = HOL version_name = "De Zeven Provinciën class" } } }
 			ship = { name = "HNLMS Evertsen (F805)" definition = frigate equipment = { frigate_hull_3 = { amount = 1 owner = HOL creator = HOL version_name = "De Zeven Provinciën class" } } }
+			# Karel Doorman-class multipurpose frigates
+			ship = { name = "HNLMS Van Speijk (F828)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Karel Doorman class" } } }
+			ship = { name = "HNLMS Van Amstel (F831)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Karel Doorman class" } } }
 			# Karel Doorman JSS
 			ship = { name = "HNLMS Karel Doorman (A833)" definition = helicopter_operator equipment = { helicopter_operator_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Karel Doorman class" } } }
+			# Den Helder-class combat support ship (in service 1 October 2025)
+			ship = { name = "HNLMS Den Helder (A834)" definition = helicopter_operator equipment = { helicopter_operator_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Den Helder class" } } }
+		}
+		task_force = {
+			name = "Amfibische Groep"
+			location = 14945
+			# Rotterdam-class landing platform docks
+			ship = { name = "HNLMS Rotterdam (L800)" definition = helicopter_operator equipment = { helicopter_operator_hull_1 = { amount = 1 owner = HOL creator = HOL version_name = "Rotterdam class" } } }
+			ship = { name = "HNLMS Johan de Witt (L801)" definition = helicopter_operator equipment = { helicopter_operator_hull_1 = { amount = 1 owner = HOL creator = HOL version_name = "Rotterdam class" } } }
 		}
 		task_force = {
 			name = "Holland-klasse Patrouilleschepen"
@@ -116,11 +128,20 @@ units = {
 			ship = { name = "HNLMS Groningen (P843)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Holland class" } } }
 		}
 		task_force = {
+			name = "Mijnendienst"
+			location = 14945
+			# Alkmaar-class mine countermeasures vessels
+			ship = { name = "HNLMS Schiedam (M860)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = HOL creator = HOL version_name = "Alkmaar class" } } }
+			ship = { name = "HNLMS Zierikzee (M862)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = HOL creator = HOL version_name = "Alkmaar class" } } }
+			ship = { name = "HNLMS Willemstad (M864)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = HOL creator = HOL version_name = "Alkmaar class" } } }
+		}
+		task_force = {
 			name = "Onderzeedienst"
 			location = 14945
 			# Walrus-class submarines
-			ship = { name = "HNLMS Walrus (S802)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Walrus class" } } }
 			ship = { name = "HNLMS Zeeleeuw (S803)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Walrus class" } } }
+			ship = { name = "HNLMS Dolfijn (S808)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Walrus class" } } }
+			ship = { name = "HNLMS Bruinvis (S810)" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = HOL creator = HOL version_name = "Walrus class" } } }
 		}
 	}
 }
@@ -137,13 +158,13 @@ instant_effect = {
 air_wings = {
 	# Leeuwarden Air Base - F-35A
 	1169 = {
-		L_Strike_fighter3 = { owner = "HOL" creator = "USA" amount = 26 version_name = "F-35A Lightning II" }
+		L_Strike_fighter3 = { owner = "HOL" creator = "USA" amount = 24 version_name = "F-35A Lightning II" }
 		name = "322 & 323 Squadron"
 		start_experience_factor = 0.55
 	}
 	# Volkel Air Base - F-35A
 	47 = {
-		L_Strike_fighter3 = { owner = "HOL" creator = "USA" amount = 26 version_name = "F-35A Lightning II" }
+		L_Strike_fighter3 = { owner = "HOL" creator = "USA" amount = 24 version_name = "F-35A Lightning II" }
 		name = "312 & 313 Squadron"
 		start_experience_factor = 0.55
 	}

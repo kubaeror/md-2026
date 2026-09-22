@@ -20,21 +20,6 @@ division_template = {
 }
 
 division_template = {
-	name = "Paracommando Brigade"		# Para-Commando Brigade
-	regiments = {
-		L_Air_Inf_Bat = { x = 0 y = 0 }
-		L_Air_Inf_Bat = { x = 0 y = 1 }
-		L_Ranger_Bat = { x = 1 y = 0 }
-		L_Inf_Bat = { x = 1 y = 1 }
-	}
-	support = {
-		L_Ranger_Recce_Comp = { x = 0 y = 0 }
-		L_Engi_Comp = { x = 0 y = 1 }
-		Arty_Battery = { x = 0 y = 2 }
-	}
-}
-
-division_template = {
 	name = "Speciale Eenheden"		# Special Forces Group
 	regiments = {
 		Special_Forces = { x = 0 y = 0 }
@@ -49,28 +34,19 @@ division_template = {
 units = {
 	##### Belgian Land Component #####
 
-	# Motorized Brigade - Leopoldsburg
+	# Motorised Brigade - Leopoldsburg
 	division = {
-		name = "1e Gemotoriseerde Brigade"
+		name = "Gemotoriseerde Brigade"
 		location = 9574
 		division_template = "Gemotoriseerde Brigade"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.80
 	}
 
-	# Para-Commando Brigade - Marche-en-Famenne
-	division = {
-		name = "Paracommando Brigade"
-		location = 3488
-		division_template = "Paracommando Brigade"
-		start_experience_factor = 0.55
-		start_equipment_factor = 0.80
-	}
-
-	# SOF - Heverlee
+	# Special Operations Regiment - Heverlee (Leuven)
 	division = {
 		name = "Speciale Operaties Regiment"
-		location = 11407
+		location = 11419
 		division_template = "Speciale Eenheden"
 		start_experience_factor = 0.60
 		start_equipment_factor = 0.85
@@ -87,6 +63,24 @@ units = {
 			ship = { name = "BNS Leopold I (F930)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BEL creator = BEL version_name = "Leopold I class" } } }
 			ship = { name = "BNS Louise-Marie (F931)" definition = frigate equipment = { frigate_hull_2 = { amount = 1 owner = BEL creator = BEL version_name = "Leopold I class" } } }
 		}
+		task_force = {
+			name = "Mijnenbestrijdingseskader"
+			location = 6560
+			# Oostende-class (City class) mine countermeasures vessel (in service 3 November 2025)
+			ship = { name = "BNS Oostende (M940)" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = BEL creator = BEL version_name = "City class" } } }
+			# Tripartite-class minehunters
+			ship = { name = "BNS Bellis (M916)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = BEL creator = BEL version_name = "Tripartite class" } } }
+			ship = { name = "BNS Crocus (M917)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = BEL creator = BEL version_name = "Tripartite class" } } }
+			ship = { name = "BNS Lobelia (M921)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = BEL creator = BEL version_name = "Tripartite class" } } }
+			ship = { name = "BNS Primula (M924)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = BEL creator = BEL version_name = "Tripartite class" } } }
+		}
+		task_force = {
+			name = "Patrouille Divisie"
+			location = 6560
+			# Castor-class coastal patrol vessels
+			ship = { name = "BNS Castor (P901)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = BEL creator = BEL version_name = "Castor class" } } }
+			ship = { name = "BNS Pollux (P902)" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = BEL creator = BEL version_name = "Castor class" } } }
+		}
 	}
 }
 
@@ -100,19 +94,20 @@ instant_effect = {
 
 ##### Luchtcomponent (Belgian Air Component) #####
 air_wings = {
-	# Kleine Brogel - F-35A (early deliveries) + remaining F-16AM
-	50 = {
+	# Florennes - F-35A (first in-country arrivals 13 October 2025, 1 Squadron / 2 Wing)
+	52 = {
 		L_Strike_fighter3 = { owner = "BEL" creator = "USA" amount = 10 version_name = "F-35A Lightning II" }
-		name = "10 Tactical Wing"
-		start_experience_factor = 0.5
-	}
-	50 = {
-		L_Strike_fighter2 = { owner = "BEL" creator = "USA" amount = 30 version_name = "F-16AM Fighting Falcon" }
 		name = "2 Tactical Wing"
 		start_experience_factor = 0.5
 	}
-	# A400M Transport
-	52 = {
+	# Kleine Brogel - F-16AM (last Belgian Vipers, retired in 2026)
+	50 = {
+		L_Strike_fighter2 = { owner = "BEL" creator = "USA" amount = 30 version_name = "F-16AM Fighting Falcon" }
+		name = "10 Tactical Wing"
+		start_experience_factor = 0.5
+	}
+	# Melsbroek - A400M Transport
+	50 = {
 		transport_plane2 = { owner = "BEL" amount = 4 version_name = "A400M Atlas" }
 		name = "15 Transport Wing"
 		start_experience_factor = 0.45

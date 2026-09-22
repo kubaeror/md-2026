@@ -93,44 +93,68 @@ division_template = {
 ##### Units #####
 
 units = {
-	##### Strike Corps #####
+	##### Strike Corps (I Corps / II Corps) #####
 
-	# 1st Armoured Division
+	# 1st Armoured Division (Multan, II Corps)
 	division = {
 		name = "1st Armoured Division"
+		location = 8007
+		division_template = "Armoured Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.85
+	}
+	# 6th Armoured Division (Gujranwala, I Corps)
+	division = {
+		name = "6th Armoured Division"
 		location = 10887
 		division_template = "Armoured Division"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.85
 	}
-	# 6th Armoured Division
-	division = {
-		name = "6th Armoured Division"
-		location = 6424
-		division_template = "Armoured Division"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.85
-	}
-	# 8th Independent Armoured Brigade
+	# 8th Independent Armoured Brigade (Kharian)
 	division = {
 		name = "8th Independent Armoured Brigade"
-		location = 12763
+		location = 4979
+		division_template = "Armoured Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 25th Mechanized Division (Malir, V Corps)
+	division = {
+		name = "25th Mechanized Division"
+		location = 3866
 		division_template = "Mechanized Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
-	# 35th Mechanized Division
+	# 26th Mechanized Division (Bahawalpur, XXXI Corps)
 	division = {
-		name = "35th Mechanized Division"
+		name = "26th Mechanized Division"
+		location = 10843
+		division_template = "Mechanized Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.85
+	}
+	# 37th Mechanized Division (Kharian, I Corps)
+	division = {
+		name = "37th Mechanized Division"
 		location = 4979
 		division_template = "Mechanized Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.85
 	}
 
-	##### Holding Corps — India Border #####
+	##### Punjab / Kashmir Corps (IV, XXX, XXXI, X Corps) #####
 
-	# 10th Infantry Division
+	# 8th Infantry Division (Sialkot, XXX Corps)
+	division = {
+		name = "8th Infantry Division"
+		location = 12005
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 10th Infantry Division (Lahore, IV Corps)
 	division = {
 		name = "10th Infantry Division"
 		location = 6197
@@ -138,147 +162,173 @@ units = {
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
-	# 11th Infantry Division
+	# 11th Infantry Division (Lahore, IV Corps)
 	division = {
 		name = "11th Infantry Division"
-		location = 10821
+		location = 6197
 		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
-	# 14th Infantry Division
-	division = {
-		name = "14th Infantry Division"
-		location = 2084
-		division_template = "Infantry Division"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
-	}
-	# 15th Infantry Division
-	division = {
-		name = "15th Infantry Division"
-		location = 6921
-		division_template = "Infantry Division"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
-	}
-	# 16th Infantry Division
-	division = {
-		name = "16th Infantry Division"
-		location = 8007
-		division_template = "Infantry Division"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
-	}
-	# 17th Infantry Division
-	division = {
-		name = "17th Infantry Division"
-		location = 1107
-		division_template = "Infantry Division"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
-	}
-	# 18th Infantry Division
-	division = {
-		name = "18th Infantry Division"
-		location = 6097
-		division_template = "Infantry Division"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
-	}
-	# 19th Infantry Division
-	division = {
-		name = "19th Infantry Division"
-		location = 4136
-		division_template = "Infantry Division"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
-	}
-	# 25th Mechanized Division
-	division = {
-		name = "25th Mechanized Division"
-		location = 1971
-		division_template = "Mechanized Division"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.85
-	}
-	# 37th Infantry Division
-	division = {
-		name = "37th Infantry Division"
-		location = 10108
-		division_template = "Infantry Division"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
-	}
-
-	##### Western / Frontier Corps #####
-
-	# 7th Infantry Division
-	division = {
-		name = "7th Infantry Division"
-		location = 3866
-		division_template = "Light Infantry Division"
-		start_experience_factor = 0.4
-		start_equipment_factor = 0.8
-	}
-	# 9th Infantry Division
-	division = {
-		name = "9th Infantry Division"
-		location = 7975
-		division_template = "Light Infantry Division"
-		start_experience_factor = 0.4
-		start_equipment_factor = 0.8
-	}
-	# 12th Infantry Division
+	# 12th Infantry Division (Murree, X Corps)
 	division = {
 		name = "12th Infantry Division"
-		location = 5105
+		location = 14586
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 14th Infantry Division (Okara, XXXI Corps)
+	division = {
+		name = "14th Infantry Division"
+		location = 10066
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 15th Infantry Division (Sialkot, XXX Corps)
+	division = {
+		name = "15th Infantry Division"
+		location = 6107
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 17th Infantry Division (Kharian, I Corps)
+	division = {
+		name = "17th Infantry Division"
+		location = 4979
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 19th Infantry Division (Mangla, X Corps)
+	division = {
+		name = "19th Infantry Division"
+		location = 14587
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 23rd Infantry Division (Jhelum, X Corps)
+	division = {
+		name = "23rd Infantry Division"
+		location = 6379
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 35th Infantry Division (Bahawalpur, XXXI Corps)
+	division = {
+		name = "35th Infantry Division"
+		location = 10843
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 40th Infantry Division (Okara, II Corps)
+	division = {
+		name = "40th Infantry Division"
+		location = 10066
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75
+	}
+
+	##### Sindh / Balochistan / KP Corps (V, XI, XII Corps) #####
+
+	# 7th Infantry Division (Miranshah, XI Corps)
+	division = {
+		name = "7th Infantry Division"
+		location = 1978
 		division_template = "Light Infantry Division"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}
-	# 26th Mechanized Division
+	# 9th Infantry Division (Kohat, XI Corps)
 	division = {
-		name = "26th Mechanized Division"
-		location = 8066
-		division_template = "Mechanized Division"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.85
+		name = "9th Infantry Division"
+		location = 4558
+		division_template = "Light Infantry Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
 	}
-
-	##### Internal / Reserve #####
-
-	# 40th Infantry Division
+	# 16th Infantry Division (Pano Aqil, V Corps)
 	division = {
-		name = "40th Infantry Division"
-		location = 10843
+		name = "16th Infantry Division"
+		location = 1971
 		division_template = "Infantry Division"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.75
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
 	}
-	# 41st Infantry Division
+	# 18th Infantry Division (Hyderabad, V Corps)
+	division = {
+		name = "18th Infantry Division"
+		location = 4110
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 33rd Infantry Division (Khuzdar, XII Corps)
+	division = {
+		name = "33rd Infantry Division"
+		location = 8066
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 41st Infantry Division (Quetta, XII Corps)
 	division = {
 		name = "41st Infantry Division"
-		location = 8022
+		location = 5105
 		division_template = "Infantry Division"
-		start_experience_factor = 0.25
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# 34th Light Infantry Division (Chilas, X Corps)
+	division = {
+		name = "34th Light Infantry Division"
+		location = 14472
+		division_template = "Light Infantry Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	# 44th Light Infantry Division (Gwadar, XII Corps)
+	division = {
+		name = "44th Light Infantry Division"
+		location = 12774
+		division_template = "Light Infantry Division"
+		start_experience_factor = 0.35
 		start_equipment_factor = 0.75
 	}
-
-	##### Kashmir #####
-
-	# Force Command Northern Areas
+	# Force Command Northern Areas (Gilgit)
 	division = {
 		name = "Force Command Northern Areas"
-		location = 1910
+		location = 6832
 		division_template = "Light Infantry Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.8
+	}
+	# 111th Infantry Brigade (Rawalpindi, X Corps)
+	division = {
+		name = "111th Infantry Brigade"
+		location = 6515
+		division_template = "Light Infantry Division"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.75
+	}
+	# Special Security Division (CPEC security, Islamabad/Rawalpindi)
+	division = {
+		name = "Special Security Division"
+		location = 14589
+		division_template = "Infantry Division"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.8
 	}
 
 	##### Special Forces #####
 
-	# Special Services Group
+	# Special Services Group (Cherat)
 	division = {
 		name = "Special Services Group"
 		location = 6492
@@ -286,64 +336,21 @@ units = {
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.9
 	}
-	# SSG (Navy)
+	# SSG (Navy) / SEALs (Karachi)
 	division = {
 		name = "SSG (Navy)"
-		location = 4998
+		location = 3866
 		division_template = "SSG Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.9
 	}
-
-	##### Additional Forces #####
-	division = {
-		name = "2nd Armoured Division"
-		location = 6424
-		division_template = "Armoured Division"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.7
-	}
-	division = {
-		name = "20th Infantry Division"
-		location = 10821
-		division_template = "Infantry Division"
-		start_experience_factor = 0.45
-		start_equipment_factor = 0.65
-	}
-	division = {
-		name = "23rd Infantry Division"
-		location = 2084
-		division_template = "Infantry Division"
-		start_experience_factor = 0.45
-		start_equipment_factor = 0.65
-	}
-	division = {
-		name = "27th Infantry Division"
-		location = 8007
-		division_template = "Infantry Division"
-		start_experience_factor = 0.4
-		start_equipment_factor = 0.6
-	}
-	division = {
-		name = "33rd Infantry Division"
-		location = 1107
-		division_template = "Infantry Division"
-		start_experience_factor = 0.4
-		start_equipment_factor = 0.6
-	}
-	division = {
-		name = "111th Brigade (Bajaur)"
-		location = 3866
-		division_template = "Light Infantry Division"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.55
-	}
+	# SSG (Air) / Special Service Wing (Sargodha)
 	division = {
 		name = "SSG (Air)"
-		location = 6492
+		location = 8106
 		division_template = "SSG Brigade"
-		start_experience_factor = 0.65
-		start_equipment_factor = 0.75
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
 	}
 
 	##### Pakistan Navy #####
@@ -357,11 +364,18 @@ units = {
 			location = 3866
 			ship = { name = "PNS Tughril (F-261)" definition = frigate pride_of_the_fleet = yes start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = PAK creator = PAK version_name = "Type 054A/P" } } }
 			ship = { name = "PNS Taimur (F-262)" definition = frigate start_experience_factor = 0.5 equipment = { frigate_hull_3 = { amount = 1 owner = PAK creator = PAK version_name = "Type 054A/P" } } }
-			ship = { name = "PNS Badr (F-263)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_3 = { amount = 1 owner = PAK creator = PAK version_name = "Type 054A/P" } } }
-			ship = { name = "PNS Hunain (F-264)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_3 = { amount = 1 owner = PAK creator = PAK version_name = "Type 054A/P" } } }
+			ship = { name = "PNS Tippu Sultan (F-263)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_3 = { amount = 1 owner = PAK creator = PAK version_name = "Type 054A/P" } } }
+			ship = { name = "PNS Shah Jahan (F-264)" definition = frigate start_experience_factor = 0.45 equipment = { frigate_hull_3 = { amount = 1 owner = PAK creator = PAK version_name = "Type 054A/P" } } }
 			ship = { name = "PNS Zulfiquar (F-251)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "F-22P Zulfiquar-class" } } }
 			ship = { name = "PNS Shamsheer (F-252)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "F-22P Zulfiquar-class" } } }
-			ship = { name = "PNS Aslat (F-253)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "F-22P Zulfiquar-class" } } }
+			ship = { name = "PNS Saif (F-253)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "F-22P Zulfiquar-class" } } }
+			ship = { name = "PNS Aslat (F-254)" definition = frigate start_experience_factor = 0.4 equipment = { frigate_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "F-22P Zulfiquar-class" } } }
+			ship = { name = "PNS Babur (F-280)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = PAK creator = PAK version_name = "Babur-class (MILGEM)" } } }
+			ship = { name = "PNS Khaibar (F-282)" definition = corvette start_experience_factor = 0.45 equipment = { corvette_hull_3 = { amount = 1 owner = PAK creator = PAK version_name = "Babur-class (MILGEM)" } } }
+			ship = { name = "PNS Yarmook (F-271)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "Yarmook-class" } } }
+			ship = { name = "PNS Tabuk (F-272)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "Yarmook-class" } } }
+			ship = { name = "PNS Hunain (F-273)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "Yarmook-class" } } }
+			ship = { name = "PNS Yamama (F-274)" definition = corvette start_experience_factor = 0.35 equipment = { corvette_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "Yarmook-class" } } }
 		}
 		task_force = {
 			name = "Submarine Flotilla"
@@ -371,7 +385,6 @@ units = {
 			ship = { name = "PNS Hamza (S-139)" definition = attack_submarine start_experience_factor = 0.45 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "Agosta-90B" } } }
 			ship = { name = "PNS Hashmat (S-135)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = PAK creator = PAK version_name = "Agosta-70" } } }
 			ship = { name = "PNS Hurmat (S-136)" definition = attack_submarine start_experience_factor = 0.3 equipment = { attack_submarine_hull_1 = { amount = 1 owner = PAK creator = PAK version_name = "Agosta-70" } } }
-			ship = { name = "PNS Hangor (S-141)" definition = attack_submarine start_experience_factor = 0.35 equipment = { attack_submarine_hull_2 = { amount = 1 owner = PAK creator = PAK version_name = "Hangor-class (Type 039B)" } } }
 		}
 	}
 }
@@ -407,7 +420,7 @@ air_wings = {
 	}
 	# No. 2 Squadron "Minhasians" — JF-17 Thunder (Rafiqui)
 	563 = {
-		L_Strike_fighter2 = { owner = "PAK" amount = 40 version_name = "JF-17 Thunder" }
+		L_Strike_fighter2 = { owner = "PAK" amount = 60 version_name = "JF-17 Thunder" }
 		name = "No. 2 Squadron"
 		start_experience_factor = 0.4
 	}
@@ -419,13 +432,13 @@ air_wings = {
 	}
 	# No. 5 Squadron "Falcons" — F-16A/B MLU (Masroor/Karachi)
 	426 = {
-		L_Strike_fighter2 = { owner = "PAK" creator = "USA" amount = 27 version_name = "F-16A/B MLU" }
+		L_Strike_fighter2 = { owner = "PAK" creator = "USA" amount = 57 version_name = "F-16A/B MLU" }
 		name = "No. 5 Squadron"
 		start_experience_factor = 0.45
 	}
-	# No. 8 Squadron "Haiders" — Mirage V (Masroor)
+	# No. 8 Squadron "Haiders" — Mirage III/V ROSE (Masroor)
 	426 = {
-		cas2 = { owner = "PAK" creator = "FRA" amount = 30 version_name = "Mirage IIIEP/V" }
+		cas2 = { owner = "PAK" creator = "FRA" amount = 170 version_name = "Mirage IIIEP/V (ROSE)" }
 		name = "No. 8 Squadron"
 		start_experience_factor = 0.3
 	}
@@ -449,7 +462,7 @@ air_wings = {
 	}
 	# No. 23 Squadron — JF-17 Thunder (Samungli/Quetta)
 	416 = {
-		L_Strike_fighter2 = { owner = "PAK" amount = 20 version_name = "JF-17 Thunder" }
+		L_Strike_fighter2 = { owner = "PAK" amount = 40 version_name = "JF-17 Thunder" }
 		name = "No. 23 Squadron"
 		start_experience_factor = 0.35
 	}

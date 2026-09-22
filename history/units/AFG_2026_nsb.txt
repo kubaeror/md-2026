@@ -1,7 +1,14 @@
 ##### Afghanistan - 2026 OOB (Taliban Islamic Emirate) #####
-# Taliban-controlled since August 2021
-# Mix of captured US/NATO equipment and older Soviet-era gear
-# Large militia force, limited conventional capability
+# Taliban-controlled since August 2021. The 2021 ANA corps were renamed and kept
+# as the Islamic Emirate Army's eight regional corps; the units below sit at the
+# corps headquarters their comments describe (Kabul, Jalalabad, Khost, Kandahar,
+# Herat, Mazar-i-Sharif, Lashkar Gah, Kunduz) instead of being massed in the
+# north-east. "Badri 313" is the special forces battalion based in Kabul, not a
+# division. The air element reflects the ~34 airframes the Islamic Emirate Air
+# Force can still fly (A-29, MD530F, Mi-17/25, UH-60, C-208, An-26/32, L-39).
+# Sources: Wikipedia (Afghan Armed Forces, 205 Al-Badr/215 Azam/313 Central
+# Corps, Afghan Air Force), pajhwok.com/khaama.com (2021 corps rename decree),
+# globalmilitary.net Afghan Air Force inventory 2026.
 
 division_template = {
 	name = "Loy Taliban"		# Taliban Infantry Corps
@@ -35,12 +42,10 @@ division_template = {
 }
 
 division_template = {
-	name = "Badri 313"		# Taliban Special Forces (captured US equipment)
+	name = "Badri 313"		# Taliban Special Forces battalion (captured US equipment)
 	regiments = {
 		L_Ranger_Bat = { x = 0 y = 0 }
 		L_Ranger_Bat = { x = 0 y = 1 }
-		L_Inf_Bat = { x = 1 y = 0 }
-		L_Inf_Bat = { x = 1 y = 1 }
 	}
 	support = {
 		L_Ranger_Recce_Comp = { x = 0 y = 0 }
@@ -51,91 +56,108 @@ division_template = {
 units = {
 	##### Islamic Emirate Armed Forces #####
 
-	# Kabul
+	# 313 Central Corps - Kabul
 	division = {
-		name = "1. Loy Taliban"
-		location = 10781
+		name = "313 Central Corps"
+		location = 10737
 		division_template = "Loy Taliban"
 		start_experience_factor = 0.40
 		start_equipment_factor = 0.55
 	}
+	# Badri 313 Battalion - Kabul
 	division = {
-		name = "1. Badri 313"
-		location = 10781
+		name = "Badri 313 Battalion"
+		location = 10737
 		division_template = "Badri 313"
 		start_experience_factor = 0.50
 		start_equipment_factor = 0.60
 	}
+	# Local militia - Ghazni
 	division = {
 		name = "1. Da Taliban Miliishiya"
-		location = 10781
+		location = 12769
 		division_template = "Da Taliban Miliishiya"
 		start_experience_factor = 0.30
 		start_equipment_factor = 0.45
 	}
 
-	# Kandahar (Taliban heartland)
+	# 201 Khalid Ibn Walid Corps - Laghman/Nangarhar (eastern corps)
 	division = {
-		name = "2. Loy Taliban"
-		location = 10826
-		division_template = "Loy Taliban"
-		start_experience_factor = 0.45
-		start_equipment_factor = 0.55
-	}
-	division = {
-		name = "2. Da Taliban Miliishiya"
-		location = 10826
-		division_template = "Da Taliban Miliishiya"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.50
-	}
-
-	# Herat (Western)
-	division = {
-		name = "3. Loy Taliban"
-		location = 14683
-		division_template = "Loy Taliban"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.50
-	}
-	division = {
-		name = "3. Da Taliban Miliishiya"
-		location = 14683
-		division_template = "Da Taliban Miliishiya"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.40
-	}
-
-	# Mazar-i-Sharif (Northern)
-	division = {
-		name = "4. Loy Taliban"
-		location = 14685
-		division_template = "Loy Taliban"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.50
-	}
-	division = {
-		name = "4. Da Taliban Miliishiya"
-		location = 14685
-		division_template = "Da Taliban Miliishiya"
-		start_experience_factor = 0.25
-		start_equipment_factor = 0.40
-	}
-
-	# Eastern (Nangarhar / Jalalabad)
-	division = {
-		name = "5. Loy Taliban"
-		location = 12314
+		name = "201 Khalid Ibn Walid Corps"
+		location = 12831
 		division_template = "Loy Taliban"
 		start_experience_factor = 0.40
 		start_equipment_factor = 0.50
 	}
+
+	# 203 Mansouri Corps - Gardez (Paktia/Khost)
 	division = {
-		name = "5. Da Taliban Miliishiya"
-		location = 12314
+		name = "203 Mansouri Corps"
+		location = 6114
+		division_template = "Loy Taliban"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.50
+	}
+
+	# 205 Al-Badr Corps - Kandahar
+	division = {
+		name = "205 Al-Badr Corps"
+		location = 5064
+		division_template = "Loy Taliban"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.55
+	}
+	# 2nd Brigade, 205 Al-Badr Corps - Zabul
+	division = {
+		name = "2nd Brigade, 205 Al-Badr Corps"
+		location = 8090
+		division_template = "Loy Taliban"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.50
+	}
+
+	# 207 Al-Farooq Corps - Herat
+	division = {
+		name = "207 Al-Farooq Corps"
+		location = 4893
+		division_template = "Loy Taliban"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.50
+	}
+	# Local militia - Farah
+	division = {
+		name = "2. Da Taliban Miliishiya"
+		location = 2017
 		division_template = "Da Taliban Miliishiya"
-		start_experience_factor = 0.30
-		start_equipment_factor = 0.45
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.40
+	}
+
+	# 209 Al-Fatah Corps - Mazar-i-Sharif
+	division = {
+		name = "209 Al-Fatah Corps"
+		location = 6186
+		division_template = "Loy Taliban"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.50
+	}
+
+	# 217 Omari Corps - Kunduz
+	division = {
+		name = "217 Omari Corps"
+		location = 12248
+		division_template = "Loy Taliban"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.50
+	}
+
+	# 215 Azam Corps - Lashkar Gah (Helmand)
+	division = {
+		name = "215 Azam Corps"
+		location = 4949
+		division_template = "Loy Taliban"
+		start_experience_factor = 0.40
+		start_equipment_factor = 0.50
 	}
 }
 
@@ -154,5 +176,49 @@ instant_effect = {
 		type = infantry_weapons_2
 		amount = 3000
 		producer = AFG
+	}
+}
+
+##### Islamic Emirate Air Force (~34 airframes still flyable) #####
+air_wings = {
+	# Kabul - main air base
+	414 = {
+		cas2 = { owner = "AFG" creator = "BRA" amount = 1 version_name = "A-29 Super Tucano" }
+		name = "1st Air Wing (Kabul)"
+		start_experience_factor = 0.3
+		#
+		cas2 = { owner = "AFG" creator = "CZE" amount = 1 version_name = "L-39C Albatros" }
+		name = "Kabul Training Flight"
+		start_experience_factor = 0.2
+		#
+		attack_helicopter_2 = { owner = "AFG" creator = "USA" amount = 5 version_name = "MD530F" }
+		name = "Kabul Scout Helicopter Squadron"
+		start_experience_factor = 0.25
+		#
+		transport_helicopter_2 = { owner = "AFG" creator = "USA" amount = 7 version_name = "UH-60A Black Hawk" }
+		name = "Kabul Helicopter Squadron"
+		start_experience_factor = 0.25
+		#
+		transport_plane1 = { owner = "AFG" creator = "USA" amount = 6 version_name = "C-208B Caravan" }
+		name = "Kabul Light Transport Squadron"
+		start_experience_factor = 0.25
+		#
+		transport_plane2 = { owner = "AFG" creator = "SOV" amount = 1 version_name = "An-26" }
+		name = "Kabul Transport Flight"
+		start_experience_factor = 0.2
+	}
+	# Herat / Shindand - western air base
+	409 = {
+		transport_helicopter_2 = { owner = "AFG" creator = "SOV" amount = 7 version_name = "Mi-17" }
+		name = "3rd Air Wing (Herat)"
+		start_experience_factor = 0.25
+		#
+		attack_helicopter_2 = { owner = "AFG" creator = "SOV" amount = 4 version_name = "Mi-24/35" }
+		name = "Herat Attack Helicopter Squadron"
+		start_experience_factor = 0.25
+		#
+		transport_plane2 = { owner = "AFG" creator = "SOV" amount = 2 version_name = "An-32" }
+		name = "Herat Transport Flight"
+		start_experience_factor = 0.2
 	}
 }

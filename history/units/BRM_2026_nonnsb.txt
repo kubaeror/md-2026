@@ -145,7 +145,7 @@ units = {
 	}
 	division = {
 		name = "Southern Command Infantry"
-		location = 1330
+		location = 12127
 		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.55
@@ -158,7 +158,7 @@ units = {
 		start_equipment_factor = 0.55
 	}
 	division = {
-		name = "Eastern Command Infantry"
+		name = "Southwestern Command Infantry"
 		location = 7254
 		division_template = "Infantry Division"
 		start_experience_factor = 0.25
@@ -173,14 +173,14 @@ units = {
 	}
 	division = {
 		name = "Yangon Command Infantry"
-		location = 141
+		location = 1330
 		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
 	}
 	division = {
 		name = "Naypyidaw Command Infantry"
-		location = 12256
+		location = 4626
 		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
@@ -190,7 +190,7 @@ units = {
 
 	division = {
 		name = "Armoured Brigade"
-		location = 4454
+		location = 139
 		division_template = "Armoured Brigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
@@ -215,7 +215,8 @@ units = {
 		task_force = {
 			name = "Submarine Group"
 			location = 1330
-			ship = { name = "UMS Minye Theinkhathu (S-1)" definition = attack_submarine start_experience_factor = 0.25 equipment = { attack_submarine_hull_2 = { amount = 1 owner = BRM creator = BRM version_name = "Kilo-class (Type 877EKM)" } } }
+			ship = { name = "UMS Minye Theinkhathu (71)" definition = attack_submarine start_experience_factor = 0.25 equipment = { attack_submarine_hull_2 = { amount = 1 owner = BRM creator = BRM version_name = "Kilo-class (Type 877EKM)" } } }
+			ship = { name = "UMS Minye Kyaw Htin (72)" definition = attack_submarine start_experience_factor = 0.25 equipment = { attack_submarine_hull_1 = { amount = 1 owner = BRM creator = BRM version_name = "Type 035B Ming-class" } } }
 		}
 	}
 }
@@ -229,24 +230,54 @@ instant_effect = {
 }
 
 ##### Myanmar Air Force #####
-
+# 2026: Su-30SME (4 delivered by early 2026), MiG-29, JF-17M (largely grounded
+# through structural problems), F-7M, A-5C, FTC-2000G and K-8W in service.
 air_wings = {
-	# Fighter Squadron — MiG-29 (Mingaladon/Yangon)
+	# Mingaladon/Yangon (Lower Burma)
 	504 = {
-		small_plane_airframe_2 = { owner = "BRM" creator = "SOV" amount = 20 version_name = "MiG-29B Fulcrum" }
-		name = "Fighter Squadron"
+		small_plane_airframe_2 = { owner = "BRM" creator = "SOV" amount = 20 version_name = "MiG-29B/SE Fulcrum" }
+		name = "Fighter Squadron (Mingaladon)"
 		start_experience_factor = 0.25
 	}
-	# Attack Squadron — Yak-130 (Meiktila/Upper Burma)
-	505 = {
-		cas2 = { owner = "BRM" creator = "SOV" amount = 12 version_name = "Yak-130" }
-		name = "Attack Squadron"
+	504 = {
+		cas1 = { owner = "BRM" creator = "CHI" amount = 19 version_name = "A-5C Fantan" }
+		name = "Attack Squadron (Mingaladon)"
 		start_experience_factor = 0.2
 	}
-	# Transport Squadron — Y-8 (Meiktila)
+	504 = {
+		cas2 = { owner = "BRM" creator = "CHI" amount = 6 version_name = "FTC-2000G" }
+		name = "Light Attack Squadron (Mingaladon)"
+		start_experience_factor = 0.25
+	}
+	# Meiktila / Naypyidaw (Upper Burma)
+	505 = {
+		MR_Fighter4 = { owner = "BRM" creator = "SOV" amount = 4 version_name = "Su-30SME" }
+		name = "Su-30SME Squadron (Meiktila)"
+		start_experience_factor = 0.3
+	}
+	505 = {
+		L_Strike_fighter2 = { owner = "BRM" creator = "PAK" amount = 16 version_name = "JF-17 Thunder" }
+		name = "JF-17 Squadron (Meiktila)"
+		start_experience_factor = 0.2
+	}
+	505 = {
+		small_plane_airframe_1 = { owner = "BRM" creator = "CHI" amount = 24 version_name = "F-7M Airguard" }
+		name = "Interceptor Squadron (Meiktila)"
+		start_experience_factor = 0.2
+	}
+	505 = {
+		cas2 = { owner = "BRM" creator = "CHI" amount = 30 version_name = "K-8W Karakorum" }
+		name = "Training Squadron (Meiktila)"
+		start_experience_factor = 0.2
+	}
+	505 = {
+		cas2 = { owner = "BRM" creator = "SOV" amount = 12 version_name = "Yak-130" }
+		name = "Attack Squadron (Meiktila)"
+		start_experience_factor = 0.2
+	}
 	505 = {
 		transport_plane1 = { owner = "BRM" creator = "CHI" amount = 4 version_name = "Y-8 Transport" }
-		name = "Transport Squadron"
+		name = "Transport Squadron (Meiktila)"
 		start_experience_factor = 0.2
 	}
 }

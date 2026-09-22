@@ -1,6 +1,8 @@
 ##### Division Templates #####
 # Venezuela 2026 - FANB: ~123k active, Soviet/Russian equipment, Bolivarian
 # militia as a mass reserve. Under US pressure during the 2025-2026 crisis.
+# Army: six divisions (1st/2nd/3rd Inf, 4th Armd, 5th Jungle, 9th Cavalry) plus the
+# 6th Engineer Corps; the units below are their manoeuvre brigades.
 
 division_template = {
 	name = "Brigada Blindada"		#Armoured Brigade
@@ -92,94 +94,87 @@ division_template = {
 
 units = {
 	##### Army (Ejercito) #####
+	# The army has six divisions (1st Inf, 2nd Inf, 3rd Inf, 4th Armd, 5th Jungle,
+	# 9th Cavalry) plus the 6th Engineer Corps. Modelled below are their principal
+	# manoeuvre brigades; the 33rd is a signals formation, not manoeuvre.
 
-	# 1st Armoured Brigade - Maracay
+	# 11th Armored Brigade "Brigadier Pedro Ruiz Rondon" - Fuerte Mara, Zulia
 	division = {
-		name = "1ra Brigada Blindada"
-		location = 8113
+		name = "11ra Brigada Blindada"
+		location = 12285
 		division_template = "Brigada Blindada"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.6
 	}
-	# 41st Armoured Brigade - Maracaibo
+	# 41st Armored Brigade - Fuerte Paramacay, Naguanagua (Carabobo)
 	division = {
 		name = "41ra Brigada Blindada"
-		location = 1944
+		location = 10855
 		division_template = "Brigada Blindada"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.55
 	}
-	# 11th Infantry Brigade - Caracas
+	# 42nd Airborne Brigade "Aragua" - Maracay (Aragua)
 	division = {
-		name = "11ra Brigada de Infanteria"
+		name = "42da Brigada de Paracaidistas"
+		location = 10855
+		division_template = "Brigada de Paracaidistas"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.7
+	}
+	# 13th Infantry Brigade - 1st Infantry Division
+	division = {
+		name = "13ra Brigada de Infanteria"
 		location = 10855
 		division_template = "Brigada de Infanteria"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.6
 	}
-	# 12th Infantry Brigade - Barquisimeto
+	# 12th Caribbean Ranger Brigade - eastern Venezuela
 	division = {
-		name = "12da Brigada de Infanteria"
-		location = 12254
-		division_template = "Brigada de Infanteria"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.55
+		name = "12da Brigada de Cazadores Caribes"
+		location = 7968
+		division_template = "Brigada de Selva"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
 	}
-	# 42nd Airborne Brigade - Maracay
+	# 32nd Ranger Brigade - Llanos
 	division = {
-		name = "42da Brigada de Paracaidistas"
-		location = 8113
-		division_template = "Brigada de Paracaidistas"
-		start_experience_factor = 0.55
-		start_equipment_factor = 0.7
+		name = "32da Brigada de Cazadores Caribes"
+		location = 5056
+		division_template = "Brigada de Selva"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
-	# 9th Jungle Infantry Brigade - Ciudad Bolivar
+	# 51st, 52nd and 53rd Jungle Infantry Brigades - 5th Jungle Infantry Division
 	division = {
-		name = "9na Brigada de Selva"
+		name = "51ra Brigada de Infanteria de Selva"
 		location = 10736
 		division_template = "Brigada de Selva"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.6
 	}
-	# 51st Jungle Infantry Brigade - Amazonas
 	division = {
-		name = "51ra Brigada de Selva"
-		location = 7968
+		name = "52da Brigada de Infanteria de Selva"
+		location = 10879
 		division_template = "Brigada de Selva"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.55
 	}
-	# 31st Infantry Brigade - Anzoategui
 	division = {
-		name = "31ra Brigada de Infanteria"
+		name = "53ra Brigada de Infanteria de Selva"
 		location = 5317
-		division_template = "Brigada de Infanteria"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.55
-	}
-	# 32nd Infantry Brigade - Llanos
-	division = {
-		name = "32da Brigada de Infanteria"
-		location = 4892
-		division_template = "Brigada de Infanteria"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	# 33rd Infantry Brigade - Falcon
-	division = {
-		name = "33ra Brigada de Infanteria"
-		location = 1981
-		division_template = "Brigada de Infanteria"
+		division_template = "Brigada de Selva"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
 
 	##### Marine Corps #####
 
-	# Marine Brigade - Puerto Cabello
+	# 1st Marine Infantry Brigade - Puerto Cabello (Carabobo)
 	division = {
 		name = "1ra Brigada de Infanteria de Marina"
-		location = 12254
+		location = 10855
 		division_template = "Brigada de Infanteria de Marina"
 		start_experience_factor = 0.45
 		start_equipment_factor = 0.6
@@ -227,62 +222,53 @@ units = {
 ##### Armada Bolivariana (Navy) #####
 fleet = {
 	name = "Armada Bolivariana"
-	naval_base = 8113		# Puerto Cabello / Caracas
+	naval_base = 8113		# La Guaira (Caracas); other bases: Puerto Cabello and Punto Fijo
 
 	task_force = {
 		name = "Escuadron de Fragatas"
 		location = 8113
-		# Mariscal Sucre class (Lupo)
-		ship = { name = "F-21 Mariscal Sucre" definition = frigate equipment = { frigate_hull_1 = { amount = 1 owner = "VEN" creator = "ITA" version_name = "Mariscal Sucre class" } } }
+		# Mariscal Sucre class (Lupo); F-21 Mariscal Sucre is a non-operational hulk at Puerto Cabello
 		ship = { name = "F-22 Almirante Brión" definition = frigate equipment = { frigate_hull_1 = { amount = 1 owner = "VEN" creator = "ITA" version_name = "Mariscal Sucre class" } } }
 	}
 	task_force = {
 		name = "Escuadron de Patrulleros"
 		location = 8113
-		# Guaiqueri class (POVZEE)
+		# Guaiqueri class (POVZEE); PC-22 Warao is out of service since 2012
 		ship = { name = "PC-21 Guaiqueri" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = "VEN" creator = "SPR" version_name = "Guaiqueri class" } } }
-		ship = { name = "PC-22 Warao" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = "VEN" creator = "SPR" version_name = "Guaiqueri class" } } }
 		ship = { name = "PC-23 Yekuana" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = "VEN" creator = "SPR" version_name = "Guaiqueri class" } } }
 		ship = { name = "PC-24 Kariña" definition = corvette equipment = { corvette_hull_3 = { amount = 1 owner = "VEN" creator = "SPR" version_name = "Guaiqueri class" } } }
 	}
 	task_force = {
 		name = "Escuadron de Submarinos"
 		location = 8113
-		# Sábalo class (Type 209/1300)
+		# Sábalo class (Type 209/1300) - only one boat is considered usable
 		ship = { name = "S-31 Sabalo" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = "VEN" creator = "GER" version_name = "Sabalo class" } } }
-		ship = { name = "S-32 Caribe" definition = attack_submarine equipment = { attack_submarine_hull_2 = { amount = 1 owner = "VEN" creator = "GER" version_name = "Sabalo class" } } }
 	}
 }
 
 ##### Aviacion Militar Bolivariana (Air Force) #####
 air_wings = {
-	# Su-30MK2 - Barcelona (Anzoategui)
+	# Su-30MK2 - Base Aerea Capitan Manuel Rios, El Sombrero (Guarico/Llanos)
 	915 = {
 		MR_Fighter3 = { owner = "VEN" creator = "SOV" amount = 21 version_name = "Su-30MK2" }
 		name = "Escuadron de Caza 11"
 		start_experience_factor = 0.45
 	}
-	# F-16A/B - Maracay
+	# F-16A/B - El Libertador AB, Maracay (Aragua)
 	875 = {
 		small_plane_airframe_2 = { owner = "VEN" creator = "USA" amount = 4 version_name = "F-16A/B Block 15" }
 		name = "Escuadron de Caza 16"
 		start_experience_factor = 0.35
 	}
-	# K-8 - Barquisimeto
+	# K-8W - Barquisimeto (Lara)
 	874 = {
-		cas2 = { owner = "VEN" creator = "CHI" amount = 23 version_name = "K-8 Karakorum" }
+		cas2 = { owner = "VEN" creator = "CHI" amount = 23 version_name = "K-8W Karakorum" }
 		name = "Escuadron de Entrenamiento 12"
 		start_experience_factor = 0.3
 	}
-	# F-5 - Ciudad Bolivar
-	876 = {
-		small_plane_airframe_1 = { owner = "VEN" creator = "USA" amount = 6 version_name = "F-5A/B Freedom Fighter" }
-		name = "Escuadron de Caza 17"
-		start_experience_factor = 0.3
-	}
-	# C-130 transports - Caracas
+	# C-130H transports - El Libertador AB, Maracay (Aragua)
 	875 = {
-		transport_plane1 = { owner = "VEN" creator = "USA" amount = 6 version_name = "C-130H Hercules" }
+		transport_plane1 = { owner = "VEN" creator = "USA" amount = 4 version_name = "C-130H Hercules" }
 		name = "Escuadron de Transporte 6"
 		start_experience_factor = 0.3
 	}

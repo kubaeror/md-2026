@@ -38,18 +38,11 @@ units = {
 	##### Albanian Armed Forces #####
 
 	division = {
-		name = "1. Brigada e Kembesorise"
+		name = "Brigada e Kembesorise"
 		location = 9914
 		division_template = "Brigada e Kembesorise"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.65
-	}
-	division = {
-		name = "2. Brigada e Kembesorise"
-		location = 9780
-		division_template = "Brigada e Kembesorise"
-		start_experience_factor = 0.35
-		start_equipment_factor = 0.60
 	}
 	division = {
 		name = "Komanda Forcave Speciale"
@@ -59,15 +52,24 @@ units = {
 		start_equipment_factor = 0.70
 	}
 
-	##### Albanian Naval Force (Durres) #####
+	##### Albanian Naval Force (Durres / Pasha Liman) #####
 	fleet = {
 		name = "Albanian Naval Force"
 		naval_base = 9780
 		task_force = {
-			name = "Patrol Vessel Squadron"
+			name = "Kepi Palit Naval Flotilla"
 			location = 9780
-			ship = { name = "P131 Iliria" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = ALB creator = ALB version_name = "Diciotti Class" } } }
-			ship = { name = "P132 Oriku" definition = corvette equipment = { corvette_hull_1 = { amount = 1 owner = ALB creator = ALB version_name = "Diciotti Class" } } }
+			# Iliria-class (Damen Stan 4207) patrol vessels
+			ship = { name = "P131 Iliria" definition = patrol_boat equipment = { patrol_boat_hull_1 = { amount = 1 owner = ALB creator = ALB version_name = "Iliria class" } } }
+			ship = { name = "P133 Lissus" definition = patrol_boat equipment = { patrol_boat_hull_1 = { amount = 1 owner = ALB creator = ALB version_name = "Iliria class" } } }
+			# Cassiopea-class corvette (ex-Italian Libra, delivered 2025)
+			ship = { name = "P133 Libra" definition = corvette equipment = { corvette_hull_2 = { amount = 1 owner = ALB creator = ITA version_name = "Cassiopea class" } } }
+		}
+		task_force = {
+			name = "Pasha Liman Naval Flotilla"
+			location = 914
+			ship = { name = "P132 Oriku" definition = patrol_boat equipment = { patrol_boat_hull_1 = { amount = 1 owner = ALB creator = ALB version_name = "Iliria class" } } }
+			ship = { name = "P134 Butrinti" definition = patrol_boat equipment = { patrol_boat_hull_1 = { amount = 1 owner = ALB creator = ALB version_name = "Iliria class" } } }
 		}
 	}
 }
